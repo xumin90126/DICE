@@ -1,0 +1,71 @@
+{
+  "experiment": "Human Boundary Review Round 1",
+  "sample_size": 20,
+  "total_ambiguous_pool": 43,
+  "reviewer": "reviewer_1 (single reviewer)",
+  "inter_reviewer_agreement": "NOT MEASURED (single-reviewer empirical validation)",
+  "M1_completion_rate": "20/20 = 100%",
+  "M2_decision_distribution": {
+    "MERGE": 13,
+    "KEEP_SEPARATE": 7,
+    "CANNOT_DETERMINE": 0
+  },
+  "M3_median_decision_time": {
+    "original_duration_ms_broken": true,
+    "original_duration_note": "submitDecision() calls /api/case before /api/submit, resetting start_time_ms. Recorded durations (1-6ms) are network round-trip only.",
+    "reconstructed_median_inter_gap_ms": 5492,
+    "reconstructed_median_inter_gap_s": 5.5,
+    "note": "Inter-decision gap includes navigation time, not pure thinking time. Sample size 19 too small for stable percentile estimates."
+  },
+  "M4_p75_decision_time": {
+    "reconstructed_p75_ms": 28601,
+    "reconstructed_p75_s": 28.6
+  },
+  "M5_p95_decision_time": {
+    "reconstructed_p95_ms": 51003,
+    "reconstructed_p95_s": 51.0
+  },
+  "total_session_time_s": 307.1,
+  "total_session_time_min": 5.1,
+  "average_per_case_s": 15.4,
+  "M6_cannot_determine_rate": "0/20 = 0%",
+  "M7_agreement": {
+    "resolved_cases": 20,
+    "unresolved_cases": 0,
+    "correct": 19,
+    "incorrect": 1,
+    "resolved_accuracy": "19/20 = 95.0%",
+    "error_cases": [
+      {
+        "case_id": "AMB-026",
+        "human_decision": "KEEP_SEPARATE",
+        "ground_truth": "SHOULD_MERGE",
+        "mode": "BODY_TEXT_CONTINUATION",
+        "doc": "arxiv_bio_body",
+        "text_a": "transition form factor of primary interest to us.",
+        "text_b": "Its normalization is"
+      }
+    ]
+  },
+  "adversarial_cases": {
+    "AMB-018": {
+      "text": "6.1 → SMEFT",
+      "human": "MERGE",
+      "gt": "SHOULD_MERGE",
+      "correct": true
+    },
+    "AMB-040": {
+      "text": "( ) → cos(",
+      "human": "KEEP_SEPARATE",
+      "gt": "SHOULD_NOT_MERGE",
+      "correct": true
+    }
+  },
+  "data_integrity_issues": [
+    "DURATION_BROKEN: submitDecision() in boundary_review.html calls /api/case before /api/submit, which resets start_time_ms. All recorded duration_ms values (1-6ms) are network round-trip time, not human thinking time.",
+    "DURATION_RECONSTRUCTED: Inter-decision gaps used as approximation. Includes navigation time between cases.",
+    "SINGLE_REVIEWER: Only one reviewer (reviewer_1). Inter-reviewer agreement not measured.",
+    "TEST_RECORD_EXCLUDED: 1 test submission (reviewer_id='test') excluded from analysis."
+  ],
+  "frozen_baseline": "INTACT (all frozen files verified unchanged)"
+}

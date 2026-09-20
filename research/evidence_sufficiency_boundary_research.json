@@ -1,0 +1,256 @@
+{
+  "research_id": "evidence_sufficiency_boundary_research",
+  "date": "2026-09-18",
+  "mode": "READ_ONLY_RESEARCH",
+  "governance": {
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true,
+    "NEW_CAPABILITY": "NONE"
+  },
+  "research_questions": [
+    "RQ1: What is Evidence Sufficient / Insufficient / Boundary?",
+    "RQ2: Is Sufficiency just 'evidence exists' or an independent concept?",
+    "RQ3: What is the G1-G5 to Sufficiency relationship?",
+    "RQ4: Does evidence-complete-but-still-cannot-judge exist?",
+    "RQ5: Can object-independent Minimum Sufficient Evidence be defined?"
+  ],
+  "three_concept_distinction": {
+    "evidence_availability": "Does the needed information exist? (binary per observation surface)",
+    "evidence_sufficiency": "Can the Human complete the task with available evidence? (task-relative)",
+    "evidence_boundary": "Evidence supports a weaker claim but not a stronger claim. (claim-level ceiling)",
+    "key_distinction": "Availability ≠ Sufficiency ≠ Boundary. Availability is necessary but not sufficient for Sufficiency."
+  },
+  "case_universe": {
+    "total_cases": 149,
+    "sources": {
+      "G1G5_VALIDATION": 70,
+      "MA_HUMAN_VALIDATION": 79
+    },
+    "sufficiency_distribution": {
+      "SUFFICIENT": 65,
+      "INSUFFICIENT": 55,
+      "BOUNDARY": 13,
+      "INDETERMINATE": 16
+    },
+    "boundary_breakdown": {
+      "CONFIRMED_EVIDENCE_BOUNDARY": 9,
+      "CONDITIONAL_EVIDENCE_BOUNDARY": 4
+    }
+  },
+  "g1_g5_sufficiency_matrix": {
+    "file": "tmp/g1_g5_sufficiency_matrix.csv",
+    "matrix": {
+      "G1": { "SUFFICIENT": 0, "INSUFFICIENT": 12, "BOUNDARY": 0, "INDETERMINATE": 0, "TOTAL": 12 },
+      "G2": { "SUFFICIENT": 0, "INSUFFICIENT": 28, "BOUNDARY": 0, "INDETERMINATE": 0, "TOTAL": 28 },
+      "G3": { "SUFFICIENT": 0, "INSUFFICIENT": 15, "BOUNDARY": 0, "INDETERMINATE": 0, "TOTAL": 15 },
+      "G4": { "SUFFICIENT": 0, "INSUFFICIENT": 0, "BOUNDARY": 0, "INDETERMINATE": 7, "TOTAL": 7 },
+      "G5": { "SUFFICIENT": 0, "INSUFFICIENT": 0, "BOUNDARY": 13, "INDETERMINATE": 0, "TOTAL": 13 },
+      "L5_SUFFICIENT": { "SUFFICIENT": 65, "INSUFFICIENT": 0, "BOUNDARY": 0, "INDETERMINATE": 9, "TOTAL": 74 }
+    },
+    "key_finding": "Clean separation: G1-G3=INSUFFICIENT, G4=INDETERMINATE, G5=BOUNDARY, L5=SUFFICIENT. Each gap maps to exactly one sufficiency status."
+  },
+  "evidence_boundary_analysis": {
+    "total_boundary_candidates": 13,
+    "B1_B6_criteria": {
+      "all_pass": true,
+      "B1_evidence_exists": "YES for all 13",
+      "B2_meets_minimum": "YES for all 13",
+      "B3_no_gap_blocking": "YES for all 13",
+      "B4_supports_weaker_claim": "YES for all 13",
+      "B5_stronger_needs_new": "YES for all 13",
+      "B6_reorganization_cannot_solve": "YES for all 13"
+    },
+    "counterfactual_checks": {
+      "C1_reorganization_helps": "NO for all 13 (not G2/G3)",
+      "C2_consumer_delivery_helps": "NO for all 13 (not G4)",
+      "C3_more_same_evidence_helps": "NO for 9, PARTIAL for 4",
+      "C4_new_function_needed": "YES — semantic understanding functions required"
+    },
+    "boundary_mechanisms": [
+      {
+        "mechanism": "caption_vs_reference_identity",
+        "cases": 9,
+        "weaker_claim": "Text and Drawing have spatial/structural association",
+        "stronger_claim": "Text IS the semantic caption/label of this Drawing",
+        "new_function_needed": "CAPTION_IDENTITY_FUNCTION",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "mechanism": "column_type_identity",
+        "cases": 2,
+        "weaker_claim": "Numeric atoms form an aligned column",
+        "stronger_claim": "Column is specifically a row-number column (not a value column)",
+        "new_function_needed": "COLUMN_SEMANTIC_IDENTITY",
+        "verdict": "CONFIRMED"
+      },
+      {
+        "mechanism": "sentence_unit_vs_reference_continuation",
+        "cases": 4,
+        "weaker_claim": "Text pair has period+capital boundary signal",
+        "stronger_claim": "Text pair is definitively sentence boundary vs reference continuation",
+        "new_function_needed": "REFERENCE_CONTEXT_FUNCTION (partially) + AUTHOR_NAME_RECOGNITION (for sub-cases)",
+        "verdict": "CONDITIONAL (might resolve with page_context for some sub-cases)"
+      },
+      {
+        "mechanism": "author_name_recognition",
+        "cases": 2,
+        "weaker_claim": "Text pair has period+capital boundary signal",
+        "stronger_claim": "'Le.' is a surname → reference list author→title continuation",
+        "new_function_needed": "AUTHOR_NAME_RECOGNITION (requires world knowledge)",
+        "verdict": "CONFIRMED (cannot resolve with any current evidence)"
+      }
+    ]
+  },
+  "claim_levels": {
+    "L1_structural_existence": {
+      "description": "These two objects have a spatial/geometric relationship",
+      "evidence_required": "TARGET + REFERENCE + SPATIAL_RELATION",
+      "supported_by": "65 SUFFICIENT + 13 BOUNDARY cases"
+    },
+    "L2_structural_classification": {
+      "description": "This text is structurally associated/separated from this object",
+      "evidence_required": "L1 + LEXICAL + CONTEXT + STRUCTURAL_MEMBERSHIP",
+      "supported_by": "L5 cases (definitive judgment) + G5 cases (structural claim)"
+    },
+    "L3_semantic_identity": {
+      "description": "This text IS a caption / label / row-number / author name / reference",
+      "evidence_required": "L2 + SEMANTIC_INTERPRETATION (not in current evidence)",
+      "supported_by": "NONE — never supported by current evidence → Evidence Boundary"
+    },
+    "boundary_location": "Between L2 (structural) and L3 (semantic identity)"
+  },
+  "minimum_sufficient_evidence": {
+    "status": "PARTIALLY_SUPPORTED",
+    "supported_for_structural_claims": "TARGET + REFERENCE + RELATION + CONTEXT (4 function categories, object-independent)",
+    "not_supported_for_semantic_identity": "No amount of structural evidence supports semantic identity; requires SEMANTIC FUNCTION not in current evidence surface",
+    "proof": "65 SUFFICIENT cases have all 4 categories; 55 INSUFFICIENT cases are missing at least one (G1-G3)"
+  },
+  "cross_task_convergence": {
+    "status": "SUPPORTED",
+    "pattern": "All 3 tasks show the SAME boundary mechanism: structural evidence → semantic identity interpretation gap",
+    "task_1_text_drawing": "structural association → semantic caption identity (9+4 boundary cases)",
+    "task_2_text_text": "structural column membership → semantic column type (2+4 boundary cases)",
+    "task_3_graphic": "structural figure-text proximity → semantic tick label identity (0 boundary — insufficient cases dominate)",
+    "conclusion": "The boundary is ALWAYS at L2→L3 transition. Not task-specific, not object-specific."
+  },
+  "evidence_function_requirement": {
+    "file": "tmp/evidence_function_requirement_table.csv",
+    "task_1": {
+      "sufficient_for_structural": "F1+F2+F3+F4+F5+F6",
+      "insufficient_for_semantic": "CAPTION_IDENTITY_FUNCTION",
+      "cases": "65 SUFFICIENT + 9 BOUNDARY + 4 CONDITIONAL"
+    },
+    "task_2": {
+      "sufficient_for_structural": "F1+F6+F12+F14",
+      "insufficient_for_semantic": "COLUMN_SEMANTIC_IDENTITY + SENTENCE_UNIT_STANDARD + AUTHOR_NAME_RECOGNITION",
+      "cases": "26 KEEP resolved + 18 ABSTAIN (G2) + 1 FP (G4) + 2 BOUNDARY + 4 CONDITIONAL"
+    },
+    "task_3": {
+      "sufficient_for_structural": "F1+F2+F7+F15",
+      "insufficient_for_semantic": "TICK_LABEL_IDENTITY",
+      "cases": "13 (mostly G1/G2)"
+    }
+  },
+  "over_design_audit": {
+    "O1_new_module": false,
+    "O2_modified_system": false,
+    "O3_new_fields": false,
+    "O4_new_detector": false,
+    "O5_new_score_confidence": false,
+    "O6_new_runtime_authority": false,
+    "O7_new_capability": false,
+    "O8_G5_expanded_to_all_uncertain": false,
+    "O9_boundary_became_automatic_decision": false,
+    "O10_object_specific_framework": false,
+    "overall_risk": "LOW"
+  },
+  "stop_criteria_check": {
+    "STOP_1_data_insufficient": false,
+    "STOP_2_subjective_boundary": "PARTIAL (claim levels are researcher-induced but grounded in cases)",
+    "STOP_3_case_specific": false,
+    "STOP_4_new_human_review_needed": false,
+    "STOP_5_evidence_pack_modification": false,
+    "STOP_6_dice_modification": false,
+    "STOP_7_object_specific_framework": false,
+    "conclusion": "No stop criteria triggered. Research can conclude."
+  },
+  "final_questions": {
+    "Q1_availability_vs_sufficiency_distinct": {
+      "answer": "SUPPORTED",
+      "proof": "55 cases have available evidence but are insufficient (G1-G3); 13 have available but boundary (G5); only 65 have available AND sufficient (L5)"
+    },
+    "Q2_minimum_sufficient_evidence_identifiable": {
+      "answer": "PARTIALLY_SUPPORTED",
+      "supported": "For structural claims: TARGET+REFERENCE+RELATION+CONTEXT (65 SUFFICIENT cases prove this pattern)",
+      "not_supported": "For semantic identity claims: no amount of structural evidence is sufficient (13 BOUNDARY cases prove the ceiling)"
+    },
+    "Q3_evidence_boundary_exists": {
+      "answer": "SUPPORTED",
+      "proof": "13 cases pass all B1-B6 criteria; 9 CONFIRMED (C3=NO) + 4 CONDITIONAL (C3=PARTIAL). Boundary is real and stable."
+    },
+    "Q4_boundary_distinguishable_from_G1G5": {
+      "answer": "SUPPORTED",
+      "proof": "G1-G3=INSUFFICIENT (not boundary), G4=INDETERMINATE (not boundary), G5=BOUNDARY. Clean separation: 0 G1-G4 cases are boundary, 0 G5 cases are non-boundary. Evidence Boundary = G5."
+    },
+    "Q5_cross_task_convergence": {
+      "answer": "SUPPORTED",
+      "proof": "All 3 tasks show same boundary mechanism: structural evidence → semantic identity gap. Stable across 13 documents, 8 types, multiple problem types."
+    },
+    "Q6_enough_evidence_for_boundary_module": {
+      "answer": "NO",
+      "missing": [
+        "Non-academic document types NOT_TESTED",
+        "Single-researcher classification (no inter-rater validation)",
+        "4/13 boundary cases are CONDITIONAL",
+        "G4 consumer behavior NOT_OBSERVABLE",
+        "No automatic boundary detection mechanism",
+        "Required semantic functions have no implementation path"
+      ]
+    },
+    "Q7_should_modify_dice": {
+      "answer": "NO",
+      "evidence": [
+        "Framework stable (100% coverage, 0 new gap)",
+        "Evidence Boundary = G5 (already in framework)",
+        "Minimum Sufficient Evidence already in E1 Pack",
+        "Semantic boundary is legitimate (not fixable)",
+        "G1-G4 fixes require IMPLEMENTATION (not authorized)"
+      ]
+    }
+  },
+  "limitations": [
+    "ACADEMIC-ONLY CORPUS: 149 cases all from academic papers",
+    "SINGLE-RESEARCHER CLASSIFICATION: no inter-rater reliability",
+    "G4 NOT_OBSERVABLE: 7 cases indeterminate (consumer behavior unknown)",
+    "CONDITIONAL BOUNDARIES: 4/13 might resolve with context",
+    "CLAIM_LEVELS are researcher-induced (not pre-registered)",
+    "C1-C4 counterfactuals are READ-ONLY reasoning (not live experiments)"
+  ],
+  "files_created": [
+    "tmp/evidence_sufficiency_boundary_research.md",
+    "tmp/evidence_sufficiency_boundary_research.json",
+    "tmp/evidence_sufficiency_case_table.csv",
+    "tmp/g1_g5_sufficiency_matrix.csv",
+    "tmp/evidence_function_requirement_table.csv"
+  ],
+  "files_modified": 0,
+  "conclusion": {
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  }
+}

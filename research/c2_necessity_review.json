@@ -1,0 +1,179 @@
+{
+ "coverage": {
+  "GT_confirmed_positive": 1,
+  "POSITIVE_COVERAGE": "INSUFFICIENT",
+  "document_count": 1,
+  "manual_candidates": 0,
+  "page_count": 1,
+  "rejected_candidates": 8,
+  "unique_structural_settings": 1
+ },
+ "document": "tmp/c2_necessity_review.md",
+ "governance": {
+  "ATOMIC_OBSERVATION_MODIFICATION": "NONE",
+  "C2_DESIGN": "REVIEWED",
+  "DESIGN_STATUS": "INSUFFICIENT_COVERAGE",
+  "EXPERIMENT": "NOT AUTHORIZED",
+  "FROZEN_BASELINE": "INTACT",
+  "GT_MODIFICATION": "NONE",
+  "IMPLEMENTATION": "NOT AUTHORIZED",
+  "PERCEPTION_PRODUCTION_MODIFICATION": "NONE",
+  "PH02": "REJECTED",
+  "PH02B": "NOT AUTHORIZED",
+  "PREREGISTRATION": "NOT READY",
+  "PRODUCTION": "FALSE",
+  "STOP": "TRUE"
+ },
+ "m5_family_check": {
+  "AXIS_TICK": {
+   "clusters_sampled": 8,
+   "clusters_with_any_long_alpha": 0,
+   "mean_long_alpha_rate": 0.0
+  },
+  "DIGIT_GRID": {
+   "clusters_sampled": 8,
+   "clusters_with_any_long_alpha": 0,
+   "mean_long_alpha_rate": 0.0
+  },
+  "MIXED_ARTIFACT": {
+   "clusters_sampled": 8,
+   "clusters_with_any_long_alpha": 2,
+   "mean_long_alpha_rate": 0.175
+  },
+  "ROW_INDEX_LIKE": {
+   "clusters_sampled": 1,
+   "clusters_with_any_long_alpha": 1,
+   "mean_long_alpha_rate": 0.1
+  },
+  "VALUE_COLUMN": {
+   "clusters_sampled": 8,
+   "clusters_with_any_long_alpha": 1,
+   "mean_long_alpha_rate": 0.062
+  }
+ },
+ "m_review": {
+  "M1": {
+   "notes": "definitional; alignment-reference choice (x0/center/x1) = undeclared preregistration decision; FN face: right-aligned columns",
+   "origin": "FROZEN_EVIDENCE_DERIVED",
+   "status": "NECESSARY_CANDIDATE"
+  },
+  "M2": {
+   "notes": "sole exclusion of 38 MIXED_ARTIFACT clusters; FN risk: section-gapped/cross-page/sparse tables; geometry-continuity not value/semantic continuity",
+   "origin": "MECHANISM_DERIVED",
+   "status": "NECESSARY_CANDIDATE"
+  },
+  "M3": {
+   "notes": "VALUE_COLUMNs equally homogeneous (resnet p6 w=20.17 exact) -> zero discrimination; mixed-width clusters already excluded by M2",
+   "origin": "NEGATIVE-DRIVEN",
+   "status": "POSSIBLY_REDUNDANT"
+  },
+  "M4": {
+   "notes": "sole exclusion of sib=0 isolated stacks; counterexample: med p19 dual-figure ticks sib=2 pass; FN: single-column tables; not a semantic classifier (pure geometric co-occurrence)",
+   "origin": "NEGATIVE-DRIVEN",
+   "status": "USEFUL_BUT_NOT_PROVEN"
+  },
+  "M5": {
+   "notes": "cluster-level form FAILS its own only positive (GT cluster long-alpha rate=0.1 due to its contaminating member); family corroboration weak (MIXED 0.175 vs VALUE 0.062 vs clean 0.0); reformulation required: member-level pruning + re-test (M5-prime diagnostic, not cluster criterion)",
+   "origin": "CASE_MOTIVATED",
+   "status": "UNRESOLVED"
+  }
+ },
+ "phase": "C2 necessity review + positive coverage audit (READ/AUDIT/COMPARE/ABLATE/ENUMERATE/REPORT)",
+ "supplementary_positive_sweep": {
+  "hits": [
+   {
+    "doc": "is11_efficientnet",
+    "n": 2,
+    "page": 5,
+    "values": [
+     2,
+     3
+    ],
+    "x0": 163.2
+   },
+   {
+    "doc": "is11_med_001",
+    "n": 5,
+    "page": 8,
+    "values": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "x0": 516.3
+   },
+   {
+    "doc": "is11_med_001",
+    "n": 2,
+    "page": 13,
+    "values": [
+     1,
+     2
+    ],
+    "x0": 330.5
+   },
+   {
+    "doc": "is11_med_001",
+    "n": 2,
+    "page": 17,
+    "values": [
+     4,
+     5
+    ],
+    "x0": 323.0
+   },
+   {
+    "doc": "is11_cs_001",
+    "n": 2,
+    "page": 1,
+    "values": [
+     -1,
+     0
+    ],
+    "x0": 230.2
+   },
+   {
+    "doc": "is11_cs_001",
+    "n": 2,
+    "page": 1,
+    "values": [
+     2,
+     3
+    ],
+    "x0": 398.1
+   },
+   {
+    "doc": "is11_cs_001",
+    "n": 2,
+    "page": 2,
+    "values": [
+     1,
+     2
+    ],
+    "x0": 108.0
+   },
+   {
+    "doc": "is11_cs_001",
+    "n": 2,
+    "page": 3,
+    "values": [
+     2,
+     3
+    ],
+    "x0": 120.7
+   }
+  ],
+  "method": "all >=2-member ascending-consecutive INT clusters (instrument) + manual re-review of OTHER_INT_STRUCT/AXIS_TICK",
+  "rejected_candidates": 8,
+  "rejection_reasons": "n<k (6) / isolated tick context sib=0 (1) / same-page non-independent (1)"
+ },
+ "verdicts": {
+  "C2": "REQUIRES_REDESIGN",
+  "PREREGISTRATION": "NOT READY (blocked by redesign x coverage)",
+  "next_step": "corpus discovery/expansion, not more predicates",
+  "patch_accumulation_risk": "REAL (3/5 weak origins, disclosed)",
+  "redesign_direction": "C2' = M1 + M2 + M4 (defining) + M5-prime (member-level diagnostic)"
+ }
+}

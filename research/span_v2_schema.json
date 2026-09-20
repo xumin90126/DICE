@@ -1,0 +1,61 @@
+{
+  "schema_name": "ExperimentalSpan",
+  "version": "v2",
+  "description": "Organization of P1 Atomic Observations into continuous spans. Derived, not copied. Traceable, splittable, deterministic. NO semantic classification.",
+  "design_principles": [
+    "Span = derived organization; Observation = source of truth.",
+    "Merge based on P1/P2/P3 facts only (geometry, style, source order).",
+    "No text-content rules, no semantic classification, no case-specific patches.",
+    "Every span retains source_observation_ids for reverse traceability.",
+    "Position(x513) and Step(x77) must remain in separate spans.",
+    "No column_id, no reading-order engine (P5 territory)."
+  ],
+  "fields": {
+    "span_id": "str",
+    "document_id": "str",
+    "page_number": "int",
+    "text": "str",
+    "source_observation_ids": "List[str]",
+    "source_observation_types": "List[str]",
+    "observation_count": "int",
+    "first_observation_id": "str",
+    "last_observation_id": "str",
+    "bbox": "List[float]",
+    "width": "float",
+    "height": "float",
+    "center_x": "float",
+    "center_y": "float",
+    "dominant_style_signature": "Optional[str]",
+    "style_count": "int",
+    "style_signatures": "List[str]",
+    "construction_method": "str",
+    "construction_version": "str",
+    "construction_reason": "str",
+    "merge_decision_trace": "List[Dict[str, Any]]",
+    "provenance": "Dict[str, Any]"
+  },
+  "merge_decision_fields": {
+    "observation_a_id": "str",
+    "observation_b_id": "str",
+    "same_y_band": "bool",
+    "same_x_band": "bool",
+    "horizontal_distance": "float",
+    "vertical_distance": "float",
+    "horizontal_overlap": "float",
+    "vertical_overlap": "float",
+    "same_page": "bool",
+    "same_style_signature": "bool",
+    "style_difference": "Optional[str]",
+    "source_order_adjacent": "bool",
+    "decision": "str",
+    "reason": "str",
+    "facts_summary": "Dict[str, Any]"
+  },
+  "five_concept_distinction": {
+    "A_CandidateSpan_Schema": "data contract (frozen)",
+    "B_Legacy_Generator": "historical block-based algorithm (frozen)",
+    "C_Frozen_730_Pool": "historical baseline instances (frozen)",
+    "D_Experimental_Span_v2": "current evolvable algorithm output (P4 operates here)",
+    "E_Future_Validated_Span": "post-human-validation promotion candidate (future)"
+  }
+}

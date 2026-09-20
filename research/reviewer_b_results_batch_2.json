@@ -1,0 +1,92 @@
+[
+  {
+    "case_id": "IND-AMB-016",
+    "decision": "KEEP_SEPARATE",
+    "reason": "VLCS and OfficeHome are separate dataset names serving as independent column headers in a results table (PACS, VLCS, OfficeHome, TerraInc, DomainNet, Avg.). Each is its own column header."
+  },
+  {
+    "case_id": "IND-AMB-034",
+    "decision": "MERGE",
+    "reason": "In the references section, 'Randaugment:' and 'Practical automated data augmen-' form one continuous paper title ('Randaugment: Practical automated data augmentation...'). The colon connects the main title to its subtitle; the second part is a line-wrapped continuation."
+  },
+  {
+    "case_id": "IND-AMB-009",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'eralization for classification.' is the end of a sentence (the word 'generalization' was hyphenated across lines), and 'During training, we as-' begins a new sentence. These are two separate sentences."
+  },
+  {
+    "case_id": "IND-AMB-057",
+    "decision": "KEEP_SEPARATE",
+    "reason": "The ']' is a closing bracket belonging to the preceding column header 'Wide [33]'. 'Wider (Ours)' is a separate, independent column header in the table. The bracket does not belong with 'Wider (Ours)'."
+  },
+  {
+    "case_id": "IND-AMB-030",
+    "decision": "MERGE",
+    "reason": "'[7] Junbum Cha,' and 'Sanghyuk Chun,' are consecutive author names within the same reference entry [7], forming a continuous author list. They belong together as one text unit."
+  },
+  {
+    "case_id": "IND-AMB-049",
+    "decision": "MERGE",
+    "reason": "In the references section, 'Levine.' is the last author name and 'Bitrate-constrained dro:' is the paper title of the same reference entry. They flow continuously as parts of one reference, matching the pattern seen in other entries (e.g., '...Sungrae Park. Swad: Domain generalization...')."
+  },
+  {
+    "case_id": "IND-AMB-104",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Infograph and Painting are separate domain names serving as independent column headers in a results table (DomainNet domains). Each is its own column header."
+  },
+  {
+    "case_id": "IND-AMB-010",
+    "decision": "KEEP_SEPARATE",
+    "reason": "The '.' is a period ending one sentence, and 'Here,' begins a new sentence (capital H, introductory adverb). These are separate sentences belonging to different text units."
+  },
+  {
+    "case_id": "IND-AMB-101",
+    "decision": "KEEP_SEPARATE",
+    "reason": "L38 and L43 are separate domain identifiers serving as independent column headers in a results table (L100, L38, L43, L46, Avg.). Each is its own column header."
+  },
+  {
+    "case_id": "IND-AMB-005",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'distribution.' ends a sentence ('...follow the same distribution.') and 'For the out-of-domain case, where the test' begins a new sentence. These are two separate sentences."
+  },
+  {
+    "case_id": "IND-AMB-093",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Art and Clipart are separate domain names serving as independent column headers in a results table (OfficeHome domains). Each is its own column header."
+  },
+  {
+    "case_id": "IND-AMB-154",
+    "decision": "MERGE",
+    "reason": "'[20]' is a reference number and 'Nezha S Benabdallah et al...' is the corresponding reference content (authors and title). The number and its content belong together, analogous to a heading with its number, as seen consistently across all reference entries on the page."
+  },
+  {
+    "case_id": "IND-AMB-109",
+    "decision": "MERGE",
+    "reason": "'brain, we performed Hi-M imaging in brain cryosections at' and '3kb resolution (Figs.' form one continuous sentence that was split across lines: '...brain cryosections at 3kb resolution (Figs...' They are parts of the same sentence."
+  },
+  {
+    "case_id": "IND-AMB-113",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Label and Post-processed table are separate column headers in a table (Raw Trace file, Label, Post-processed table). Each is an independent column header."
+  },
+  {
+    "case_id": "IND-AMB-114",
+    "decision": "KEEP_SEPARATE",
+    "reason": "In the table, 'non-KCs' is a value in the Label column and 'traces non KCs.ecsv' is a value in the Post-processed table column. They are independent data cells in different columns of the same row."
+  },
+  {
+    "case_id": "IND-AMB-115",
+    "decision": "KEEP_SEPARATE",
+    "reason": "In the table, 'KCs' is a value in the Label column and 'traces KCs.ecsv' is a value in the Post-processed table column. They are independent data cells in different columns of the same row."
+  },
+  {
+    "case_id": "IND-AMB-116",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Trace table and Cell-type are separate column headers in a table (Trace table, Cell-type, N unique traces, ROIs, Figures used). Each is an independent column header."
+  },
+  {
+    "case_id": "IND-AMB-117",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Cell-type and N unique traces are separate column headers in the same table. Each is an independent column header."
+  }
+]

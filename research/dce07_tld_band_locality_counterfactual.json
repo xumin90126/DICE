@@ -1,0 +1,593 @@
+{
+  "metadata": {
+    "audit_name": "DCE-07 TLD Band Locality Counterfactual Audit",
+    "date": "2026-09-15",
+    "mode": "READ-ONLY / COUNTERFACTUAL AUDIT / NO MODIFICATION / FROZEN INTACT / STOP",
+    "predecessor": "DCE-06 TLD Failure Mechanism Audit",
+    "cases_analyzed": 12
+  },
+  "executive_summary": {
+    "final_status": "LOCALITY_IS_PLAUSIBLE_BUT_UNSAFE",
+    "route_status": "CLOSED",
+    "key_finding": "Local isolation (DCE-06) proves table CAN pass TLD checks when isolated, but no geometry-only method can safely derive local table boundaries. Prose with citations has same geometric properties as table data. Locality creates false positives on prose pages.",
+    "classification": "L1 = PLAUSIBLE_BUT_UNSAFE",
+    "l1_correct_recovery": "0/3 (0%)",
+    "l1_correct_regression": "0/7 (0%)",
+    "l1_modified_recovery": "1/3 (33%) — AMB-262 only",
+    "l1_modified_regression": "2/3 negative controls become FP",
+    "l1_modified_validity": "INVALID — changes TLD anchor definition, not just band scope",
+    "l2_recovery": "0/3 (0%)",
+    "l2_regression": "4/7 (splits success tables + creates FP)",
+    "l3_status": "NOT_SUPPORTED (= actual TLD)",
+    "mechanism_2_amb462": "Still fails (text_ratio=0.163 inherent, locality does not help)",
+    "llm_needed": false,
+    "new_observation_needed": false,
+    "new_module_needed": false,
+    "true_reusable_signal_found": false,
+    "stop": true
+  },
+  "cases": {
+    "failures": [
+      "IS11-AMB-135",
+      "IS11-AMB-262",
+      "IS11-AMB-313",
+      "IS11-AMB-462"
+    ],
+    "successes": [
+      "IS11-AMB-032",
+      "IS11-AMB-074",
+      "IS11-AMB-346"
+    ],
+    "negatives": [
+      "IS11-AMB-008",
+      "IS11-AMB-042",
+      "IS11-AMB-397"
+    ],
+    "partials": [
+      "IS11-AMB-519",
+      "IS11-AMB-414"
+    ],
+    "negative_control_rationale": "AMB-008 (resnet p3, 29 MC, 0 WT), AMB-042 (resnet p7, 22 MC, 0 WT), AMB-397 (med p19, 29 MC, 0 WT) — all have high multicol content with 0 wide_text breakers, same conditions as failure cases"
+  },
+  "counterfactual_methods": {
+    "L1_candidate_centered": {
+      "principle": "Only allow rows within proximity of candidate y-position to participate in band",
+      "evidence_basis": "P2 geometry (candidate bbox y, row y-continuity, multicol classification)",
+      "variants": {
+        "L1_correct": "Uses TLD exact anchor definition (len>=2)",
+        "L1_modified": "Uses is_multicol for anchors (changes TLD internal logic)"
+      }
+    },
+    "L2_geometry_locality": {
+      "principle": "Break band when row alignment to current column centers drops below 50%",
+      "evidence_basis": "P2 geometry (x-positions, column clustering, alignment ratio)"
+    },
+    "L3_existing_tld": {
+      "principle": "Use TLD existing band formation (wide_text breaker only)",
+      "status": "NOT_SUPPORTED for failure cases (no wide_text breakers on failure pages)"
+    }
+  },
+  "actual_results": {
+    "AMB-135": {
+      "tables": 0,
+      "align": 0.268,
+      "text_ratio": 0.382,
+      "fail_stage": "E"
+    },
+    "AMB-262": {
+      "tables": 0,
+      "align": 0.226,
+      "text_ratio": 0.518,
+      "fail_stage": "E"
+    },
+    "AMB-313": {
+      "tables": 0,
+      "align": 0.538,
+      "text_ratio": 0.585,
+      "fail_stage": "E"
+    },
+    "AMB-462": {
+      "tables": 1,
+      "align": 1.0,
+      "text_ratio": 0.163,
+      "fail_stage": "F",
+      "note": "wrong table detected"
+    },
+    "AMB-032": {
+      "tables": 1,
+      "align": 0.986,
+      "text_ratio": 0.76,
+      "fail_stage": "NONE"
+    },
+    "AMB-074": {
+      "tables": 1,
+      "align": 0.75,
+      "text_ratio": 0.694,
+      "fail_stage": "NONE"
+    },
+    "AMB-346": {
+      "tables": 1,
+      "align": 0.995,
+      "text_ratio": 0.909,
+      "fail_stage": "NONE"
+    },
+    "AMB-008": {
+      "tables": 0,
+      "align": 0.41,
+      "text_ratio": 0.524,
+      "fail_stage": "E"
+    },
+    "AMB-042": {
+      "tables": 0,
+      "align": 0.717,
+      "text_ratio": 0.617,
+      "fail_stage": "E"
+    },
+    "AMB-397": {
+      "tables": 0,
+      "align": 0.814,
+      "text_ratio": 0.159,
+      "fail_stage": "F"
+    },
+    "AMB-519": {
+      "tables": 1,
+      "align": 1.0,
+      "text_ratio": 0.611,
+      "fail_stage": "NONE",
+      "note": "FP on prose"
+    },
+    "AMB-414": {
+      "tables": 0,
+      "align": 1.0,
+      "text_ratio": 0.386,
+      "fail_stage": "F"
+    }
+  },
+  "counterfactual_results": {
+    "L1_correct": {
+      "AMB-135": {
+        "tables": 0,
+        "align": 0.268,
+        "text_ratio": 0.382,
+        "fail": "E",
+        "band_size": 81,
+        "recovered": false,
+        "regression": false
+      },
+      "AMB-262": {
+        "tables": 0,
+        "align": 0.226,
+        "text_ratio": 0.518,
+        "fail": "E",
+        "band_size": 79,
+        "recovered": false,
+        "regression": false
+      },
+      "AMB-313": {
+        "tables": 0,
+        "align": 0.538,
+        "text_ratio": 0.585,
+        "fail": "E",
+        "band_size": 61,
+        "recovered": false,
+        "regression": false
+      },
+      "AMB-462": {
+        "tables": 0,
+        "align": 1.0,
+        "text_ratio": 0.163,
+        "fail": "F",
+        "band_size": 8,
+        "recovered": false,
+        "regression": false
+      },
+      "AMB-032": {
+        "tables": 1,
+        "align": 0.986,
+        "text_ratio": 0.76,
+        "fail": "NONE",
+        "band_size": 86,
+        "tp_preserved": true
+      },
+      "AMB-074": {
+        "tables": 1,
+        "align": 0.973,
+        "text_ratio": 0.772,
+        "fail": "NONE",
+        "band_size": 63,
+        "tp_preserved": true
+      },
+      "AMB-346": {
+        "tables": 1,
+        "align": 0.995,
+        "text_ratio": 0.909,
+        "fail": "NONE",
+        "band_size": 66,
+        "tp_preserved": true
+      },
+      "AMB-008": {
+        "tables": 0,
+        "align": 0.41,
+        "text_ratio": 0.524,
+        "fail": "E",
+        "band_size": 82,
+        "fp": false
+      },
+      "AMB-042": {
+        "tables": 0,
+        "align": 0.717,
+        "text_ratio": 0.617,
+        "fail": "E",
+        "band_size": 85,
+        "fp": false
+      },
+      "AMB-397": {
+        "tables": 0,
+        "align": 0.814,
+        "text_ratio": 0.159,
+        "fail": "F",
+        "band_size": 36,
+        "fp": false
+      },
+      "AMB-519": {
+        "tables": 1,
+        "align": 1.0,
+        "text_ratio": 0.611,
+        "fail": "NONE",
+        "band_size": 8
+      },
+      "AMB-414": {
+        "tables": 0,
+        "align": 1.0,
+        "text_ratio": 0.386,
+        "fail": "F",
+        "band_size": 26
+      },
+      "summary": "L1_correct = actual TLD. Band extends to page boundary (no wide_text breakers). No recovery, no regression."
+    },
+    "L1_modified": {
+      "AMB-135": {
+        "tables": 0,
+        "align": 0.512,
+        "text_ratio": 0.382,
+        "fail": "E",
+        "recovered": false
+      },
+      "AMB-262": {
+        "tables": 1,
+        "align": 0.755,
+        "text_ratio": 0.518,
+        "fail": "NONE",
+        "recovered": true
+      },
+      "AMB-313": {
+        "tables": 0,
+        "align": 0.616,
+        "text_ratio": 0.585,
+        "fail": "E",
+        "recovered": false
+      },
+      "AMB-462": {
+        "tables": 0,
+        "align": 1.0,
+        "text_ratio": 0.163,
+        "fail": "F",
+        "recovered": false
+      },
+      "AMB-032": {
+        "tables": 1,
+        "tp_preserved": true
+      },
+      "AMB-074": {
+        "tables": 1,
+        "tp_preserved": true
+      },
+      "AMB-346": {
+        "tables": 1,
+        "tp_preserved": true
+      },
+      "AMB-008": {
+        "tables": 1,
+        "align": 0.805,
+        "text_ratio": 0.524,
+        "fail": "NONE",
+        "fp": true,
+        "note": "PROSE accepted as table"
+      },
+      "AMB-042": {
+        "tables": 1,
+        "align": 1.0,
+        "text_ratio": 0.617,
+        "fail": "NONE",
+        "fp": true,
+        "note": "PROSE accepted as table"
+      },
+      "AMB-397": {
+        "tables": 0,
+        "align": 0.888,
+        "text_ratio": 0.159,
+        "fail": "F",
+        "fp": false
+      },
+      "summary": "L1_modified recovers 1/3 but creates 2 false positives on prose. INVALID counterfactual (changes anchor definition).",
+      "invalid_reason": "Uses is_multicol for anchors instead of TLD len>=2. This removes TLD formula rejection mechanism, allowing prose to pass."
+    },
+    "L2_geometry": {
+      "AMB-135": {
+        "tables": 0,
+        "bands": 1,
+        "recovered": false,
+        "note": "column-pattern break did not trigger"
+      },
+      "AMB-262": {
+        "tables": 0,
+        "bands": 1,
+        "recovered": false,
+        "note": "column-pattern break did not trigger"
+      },
+      "AMB-313": {
+        "tables": 0,
+        "bands": 1,
+        "recovered": false
+      },
+      "AMB-462": {
+        "tables": 1,
+        "bands": 2,
+        "recovered": false
+      },
+      "AMB-032": {
+        "tables": 3,
+        "bands": 3,
+        "regression": true,
+        "note": "table split into 3"
+      },
+      "AMB-074": {
+        "tables": 1,
+        "bands": 1,
+        "tp_preserved": true
+      },
+      "AMB-346": {
+        "tables": 2,
+        "bands": 2,
+        "regression": true,
+        "note": "table split into 2"
+      },
+      "AMB-008": {
+        "tables": 2,
+        "bands": 2,
+        "fp": true,
+        "note": "prose accepted as 2 tables"
+      },
+      "AMB-042": {
+        "tables": 1,
+        "bands": 1,
+        "fp": true,
+        "note": "prose accepted as table"
+      },
+      "AMB-397": {
+        "tables": 0,
+        "bands": 2,
+        "fp": false
+      },
+      "summary": "L2 does not recover any failures. Creates regressions: splits success tables, creates FP on prose."
+    },
+    "L3_existing_tld": {
+      "status": "NOT_SUPPORTED",
+      "summary": "L3 = actual TLD. wide_text breaker is only locality mechanism. NOT_SUPPORTED for failure cases."
+    }
+  },
+  "recovery_analysis": {
+    "L1_correct": {
+      "recovery_count": 0,
+      "recovery_rate": 0.0,
+      "note": "band = page-global (same as actual)"
+    },
+    "L1_modified": {
+      "recovery_count": 1,
+      "recovery_rate": 0.33,
+      "recovered_cases": [
+        "AMB-262"
+      ],
+      "note": "INVALID counterfactual + creates FP"
+    },
+    "L2": {
+      "recovery_count": 0,
+      "recovery_rate": 0.0,
+      "note": "column-pattern break does not trigger"
+    },
+    "L3": {
+      "recovery_count": 0,
+      "recovery_rate": 0.0,
+      "note": "= actual TLD"
+    },
+    "counterfactual_recovery_rate_valid": "0% (L1_correct only valid counterfactual)"
+  },
+  "regression_analysis": {
+    "L1_correct": {
+      "regression_count": 0,
+      "tp_preserved": "3/3",
+      "fp_created": "0/3"
+    },
+    "L1_modified": {
+      "regression_count": 2,
+      "tp_preserved": "3/3",
+      "fp_created": "2/3",
+      "fp_cases": [
+        "AMB-008",
+        "AMB-042"
+      ]
+    },
+    "L2": {
+      "regression_count": 4,
+      "tp_preserved": "1/3",
+      "fp_created": "2/3",
+      "tp_split": "2/3",
+      "split_cases": [
+        "AMB-032",
+        "AMB-346"
+      ]
+    }
+  },
+  "mechanism_comparison": {
+    "mechanism_1": {
+      "locality_result": "FAILED",
+      "reason": "Locality cannot safely solve page-global contamination. No geometric signal distinguishes table from prose."
+    },
+    "mechanism_2": {
+      "locality_result": "NOT_APPLICABLE",
+      "reason": "AMB-462 text_ratio=0.163 is inherent (numeric table). Locality cannot fix text_ratio.",
+      "amb462_still_fails": true
+    }
+  },
+  "negative_control_analysis": {
+    "AMB-008": {
+      "content": "Prose with citations + formulas (resnet page 3)",
+      "mc_rows": 29,
+      "wide_text": 0,
+      "actual_tld": "0 tables (align=0.410, FAIL)",
+      "l1_correct": "0 tables (align=0.410, FAIL) — correct",
+      "l1_modified": "1 table (align=0.805, PASS) — FALSE POSITIVE",
+      "l2": "2 tables — FALSE POSITIVE",
+      "prose_like_rows": "27/29 multicol rows are prose-like"
+    },
+    "AMB-042": {
+      "content": "Prose + table-like content (resnet page 7)",
+      "mc_rows": 22,
+      "wide_text": 0,
+      "actual_tld": "0 tables (align=0.717, FAIL)",
+      "l1_correct": "0 tables (align=0.717, FAIL) — correct",
+      "l1_modified": "1 table (align=1.000, PASS) — FALSE POSITIVE",
+      "l2": "1 table — FALSE POSITIVE",
+      "prose_like_rows": "22/22 multicol rows are prose-like"
+    },
+    "AMB-397": {
+      "content": "Formulas + prose (med page 19)",
+      "mc_rows": 29,
+      "wide_text": 0,
+      "actual_tld": "0 tables (text_ratio=0.159, FAIL)",
+      "l1_correct": "0 tables (text_ratio=0.159, FAIL) — correct",
+      "l1_modified": "0 tables (text_ratio=0.159, FAIL) — correct",
+      "l2": "0 tables — correct",
+      "note": "Survives because formula-heavy content has low text_ratio (Mechanism 2 protection)"
+    }
+  },
+  "mechanism_2_control": {
+    "AMB-462": {
+      "actual": "1 table (wrong table, Band 1 text_ratio=0.163 FAIL)",
+      "l1_correct": "0 tables (text_ratio=0.163 FAIL)",
+      "l1_modified": "0 tables (text_ratio=0.163 FAIL)",
+      "l2": "1 table (same as actual)",
+      "verdict": "Locality does NOT help. text_ratio is inherent (67/80 numeric cells). Band already properly isolated.",
+      "mechanism": "M2 (Inherent Low Text Ratio)"
+    }
+  },
+  "locality_safety_analysis": {
+    "core_finding": "Locality ≠ Table. Prose with citations has same geometric properties as table data.",
+    "prose_properties": {
+      "same_y_band": "YES (multiple fragments on same y)",
+      "x_gaps": "YES (citation formatting = column gaps ≥ 12pt)",
+      "column_alignment": "YES (prose has regular x-positions across paragraphs)",
+      "text_ratio": "YES (prose contains text words)",
+      "y_spacing_regularity": "PARTIAL (some prose regions have regular spacing)"
+    },
+    "geometric_signals_tested": {
+      "column_pattern_break": "FAILS (prose and table share x-positions)",
+      "y_spacing_cv": "FAILS (AMB-042 negative has CV=0.01, lower than actual table AMB-262 CV=0.16)",
+      "fragment_count_cv": "FAILS (no clear distinction)"
+    },
+    "conclusion": "No geometric signal safely distinguishes prose with citations from table data. Without semantic content understanding, locality is unsafe."
+  },
+  "why_l1_correct_fails": {
+    "reason": "Candidate-centered extension uses same absorption logic as TLD band formation (multicol=anchor, short_single=absorb, wide_text=break). Since failure pages have no wide_text breakers below table, extension goes to page bottom. Changing starting point does not change band scope.",
+    "band_sizes": {
+      "AMB-135": "81 rows (vs 82 total = entire page)",
+      "AMB-262": "79 rows (vs 82 total = entire page)",
+      "AMB-313": "61 rows (vs 62 total = entire page)",
+      "AMB-008": "82 rows (entire page)",
+      "AMB-042": "85 rows (entire page)"
+    }
+  },
+  "why_l1_modified_unsafe": {
+    "reason": "Modified anchor definition (is_multicol instead of len>=2) removes TLD formula rejection mechanism. Formula fragments (e.g., \"F | ( | x | )+\") have x-positions that destabilize column centers. When excluded, prose columns cluster nicely and alignment passes. But this also allows prose to be accepted as table.",
+    "amb008_detail": "TLD anchors (len>=2): 45 rows, align=0.410. Modified anchors (is_multicol): 29 rows, align=0.805. The 16 excluded non-multicol 2+ fragment rows are formula fragments that were deliberately included by TLD to destabilize non-table regions.",
+    "validity": "INVALID counterfactual — changes TLD internal logic (anchor definition), not just band scope"
+  },
+  "classification": {
+    "L0_NOT_SUPPORTED": false,
+    "L1_PLAUSIBLE_BUT_UNSAFE": true,
+    "L2_COUNTERFACTUAL_SUPPORTED": false,
+    "L3_COUNTERFACTUAL_SUPPORTED_WITH_LOW_REGRESSION": false,
+    "L4_READY_FOR_MINIMAL_DESIGN": false,
+    "result": "L1 = PLAUSIBLE_BUT_UNSAFE. Route CLOSED."
+  },
+  "anti_overdesign_gate": {
+    "new_observation_needed": false,
+    "new_module_needed": false,
+    "new_engine_needed": false,
+    "llm_needed": false,
+    "forbidden_escalations": [
+      "Table Understanding Engine",
+      "Document Understanding Engine",
+      "Discourse Engine",
+      "LLM Table Reasoner",
+      "Evidence Organization Engine",
+      "Relation Engine",
+      "Pattern Engine",
+      "Learning Engine"
+    ]
+  },
+  "learning_signal_gate": {
+    "true_reusable_signal_found": false,
+    "observed_phenomena": [
+      "local isolation passes (requires GT)",
+      "prose looks like table (limitation)",
+      "y-spacing regularity (not generalizable)"
+    ],
+    "reason": "Observed phenomena are not generalizable learning signals"
+  },
+  "final_verdict": {
+    "q1_recovery": "NO (L1-correct: 0/3 recovered. L1-modified: 1/3 but invalid + unsafe)",
+    "q2_tp_preserved": "YES (L1-correct: 3/3 preserved)",
+    "q3_false_positives": "YES (L1-modified: 2/3 negative controls. L2: 2/3 + splits)",
+    "q4_amb462": "YES (still fails, Mechanism 2 inherent)",
+    "q5_locality Assessment": "PLAUSIBLE_BUT_UNSAFE — local isolation proves table CAN pass, but no geometry-only method can safely find table boundaries",
+    "q6_next_step": "UNKNOWN — all routes closed (Band Locality unsafe, Column/Text Ratio = threshold tuning forbidden)",
+    "route_status": "CLOSED",
+    "bottleneck_primary": "D (Evidence Perception / TLD Detection) — unchanged",
+    "bottleneck_secondary": null,
+    "true_reusable_signal_found": false,
+    "current_learning_level": "L3",
+    "recommended_next_step": "READ_ONLY_AUDIT",
+    "stop": true
+  },
+  "governance_gate": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "P2_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "IS11_MODIFICATION": false,
+    "M_B_MODIFICATION": false,
+    "GT_MODIFICATION": false,
+    "SIGNAL_MODIFICATION": false,
+    "EVIDENCE_CUE_MODIFICATION": false,
+    "LLM": false,
+    "NEW_OBSERVATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "RUNTIME_CHANGE": false,
+    "CAPABILITY_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "FROZEN_EXPERIMENT": "INTACT",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "FORMAL_EXPERIMENT": "NOT_STARTED",
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  }
+}

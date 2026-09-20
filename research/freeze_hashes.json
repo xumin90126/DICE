@@ -1,0 +1,23 @@
+{
+  "experiment_cases.json": "f63800ce969ff260eadc3e032151ce687055d027507cba89dff6a1ba385427d5",
+  "experiment_cases_embedded.json": "683ba10801ff2a54855d3f86ecedb6241bc6650773aaa1ed64f0f69535060fc4",
+  "experiment_ui.html": "16a95a34d229e6b1d1e3fcac3f36ff64c9bc315d3290222eafce6f7bd0056857",
+  "experiment_server.py": "a0eb2f374725da587b311d6c6b5199e0374c17207ce86f1355d73e239ce10fbc",
+  "analysis_contract.md": "aea8dbbb92db83f0628504e0abd57e9d17c8a626ec9890389dfe1847f8601ff7",
+  "case_exposure_matrix.json": "23dc6c0f16969472dc28d3080464265f7e44120f43e9fdecfef094933a157128",
+  "case_exposure_matrix.md": "9a40bc8ac831cfb302ea1c629369e6cb4cffa633fe2357a4330dd425a3bfed45",
+  "experiment_design_md": "221e67417a0927b99f3f77e6062956a48d00d37f75714ada305ca651b9d4830c",
+  "experiment_design_json": "50a1f50bf0301cbd9c7ed37a9af4becae8046c6fc2e30ae1912613507e578ede",
+  "correction_log": "14f6c6c239615f5fff71643671309a589e8553549255c15525dac7d755c292be",
+  "implementation_report_md": "cbb3ef80272367aef1881897311cbb303cc9aaae444e183c3702e0b2ae3fb621",
+  "implementation_report_json": "f3516726c1a6a20a6a6f6693c36d3245b407dd6cf72399b89045f0d8c7b29c17",
+  "case_exposure_audit_md": "f14c1236521db022445e72cd1bd21cabdfd2126eb4b674c0c027558b79bd6029",
+  "case_exposure_audit_json": "a3e58e41d5cda90b331336b3ae5de225b13966a2258cfa76273b05f7ee70983a",
+  "gt": "7349963d0d23b5efc8c092ad45b8f301c39ca13a9c3bef8952aff809d0286959",
+  "tld": "022f5c21e872ad9e737ddadb10a3f9eb8ff0ddd31333dacd6f30610cfbd8d79b",
+  "frozen_sources_drift": 0,
+  "bug_fix_date": "2026-09-12",
+  "bug_fix_description": "UI rendering fixes: (1) progressive disclosure hidden class removed so expandable fields actually display; (2) generated page images for 9 cases that were missing them; (3) extracted line context for cases lacking it",
+  "bug_fix_v2_date": "2026-09-12",
+  "bug_fix_v2_description": "UI redesign + image fix: correct 0-indexed pages, 3x zoom, image-first layout, progressive disclosure fixed, A/B legend"
+}

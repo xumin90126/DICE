@@ -1,0 +1,260 @@
+{
+  "audit_type": "evaluation_case_construction_audit",
+  "audit_date": "2026-09-12",
+  "mode": "READ-ONLY, DESIGN-ONLY, AUDIT-ONLY",
+  "trigger": "P722 formal experiment revealed ceiling effect — 84% of cases are trivially separable",
+  "current_state": {
+    "pipeline": "4 PDFs → P1-P6 → 9397 same-Y pairs → geometric filter (h_gap 8-50pt) → 545 candidates → stratified random → 45 cases → Human GT",
+    "selection_objective": "geometry-only stratification (h_gap bin, w_b bin, line_obs bin, doc_id)",
+    "selection_note": "ALL stratification dimensions are geometric. NO text content or human intuition used.",
+    "ambiguous_criteria": {
+      "gap_min": 8.0,
+      "gap_max": 50.0,
+      "line_obs_max": 15,
+      "wb_min": 15.0
+    },
+    "gt_distribution": {
+      "KEEP_SEPARATE": 43,
+      "MERGE": 2
+    },
+    "case_families": {
+      "TABLE_CELL": 28,
+      "TABLE_HEADER": 7,
+      "AXIS_LABEL": 3,
+      "PROSE_SENTENCE": 4,
+      "FIGURE_CAPTION": 2,
+      "OTHER": 1
+    }
+  },
+  "failure_diagnosis": {
+    "root_cause": "Geometric ambiguity filter selects geometrically close pairs, not semantically ambiguous pairs. Tables have many closely-spaced cells, so 84% of candidates are table-adjacent (trivially separable).",
+    "candidate_pool_545": {
+      "TABLE_CELL": 252,
+      "TABLE_HEADER": 205,
+      "PROSE": 66,
+      "FIGURE": 11,
+      "OTHER": 11
+    },
+    "selection_objective_mismatch": true,
+    "mismatch_explanation": "System difficulty (geometric proximity) ≠ Human difficulty (semantic ambiguity). Table cells are geometrically close but semantically trivial."
+  },
+  "p722_experiment_evidence": {
+    "total_judgments": 55,
+    "accuracy": {
+      "A": "93%",
+      "B1": "100%",
+      "B2": "93%"
+    },
+    "avg_time": {
+      "A": 2.2,
+      "B1": 1.7,
+      "B2": 5.9
+    },
+    "trivial_decisions_under_3s": {
+      "A": "87%",
+      "B1": "100%",
+      "B2": "50%"
+    },
+    "ceiling_effect": true,
+    "ceiling_effect_evidence": "B1: 100% accuracy, 100% under 3s → cases too easy, Cue cannot reduce effort",
+    "unknown_usage": {
+      "A": 0,
+      "B1": 0,
+      "B2": 2
+    },
+    "interpretation": "Ceiling effect makes B1-vs-B2 comparison largely uninterpretable. B2 slower may indicate Cue added processing load without benefit on easy cases."
+  },
+  "evaluation_case_definition": {
+    "candidate_vs_evaluation_case": "Candidate = system-flagged pair worth considering. Evaluation Case = research-question-aligned experimental unit.",
+    "requirements": [
+      "Research question relevance",
+      "Decision boundary proximity (not obvious to all participants)",
+      "Evidence sufficiency",
+      "Plausible alternative interpretation exists",
+      "Independence (not near-duplicate)"
+    ],
+    "high_eval_value_when": [
+      "Structural evidence ambiguous or conflicting",
+      "Plausible alternative exists",
+      "Cue could help or mislead",
+      "Decision boundary genuinely tested"
+    ]
+  },
+  "case_quality_dimensions": {
+    "dimensions": [
+      "Case Validity",
+      "Case Relevance",
+      "Structural Ambiguity",
+      "Evidence Sufficiency",
+      "Case Independence",
+      "Plausible Alternative"
+    ],
+    "tiers": [
+      "HIGH",
+      "MEDIUM",
+      "LOW",
+      "UNKNOWN"
+    ],
+    "current_assessment": {
+      "Case Validity": "HIGH (45/45)",
+      "Case Relevance": "LOW (38/45)",
+      "Structural Ambiguity": "LOW (34/45)",
+      "Evidence Sufficiency": "MIXED (21 full, 9 missing, 15 partial)",
+      "Case Independence": "MIXED (30 unique, 10 same-page, 5 near-duplicate)",
+      "Plausible Alternative": "LOW (34/45 no alternative)"
+    }
+  },
+  "coverage_matrix": {
+    "current": {
+      "MERGE": {
+        "covered": false,
+        "count": 2,
+        "gap": "severe"
+      },
+      "KEEP_SEPARATE": {
+        "covered": true,
+        "count": 43,
+        "gap": "over-represented, mostly trivial"
+      },
+      "UNKNOWN": {
+        "covered": false,
+        "count": 0,
+        "gap": "severe"
+      },
+      "Boundary": {
+        "covered": false,
+        "count": 6,
+        "gap": "insufficient"
+      },
+      "Negative": {
+        "covered": false,
+        "count": 0,
+        "gap": "severe"
+      },
+      "Conflict": {
+        "covered": true,
+        "count": 2,
+        "gap": "minimal"
+      },
+      "Table": {
+        "covered": true,
+        "count": 35,
+        "gap": "over-represented"
+      },
+      "Prose": {
+        "covered": false,
+        "count": 4,
+        "gap": "insufficient"
+      },
+      "Figure": {
+        "covered": false,
+        "count": 2,
+        "gap": "insufficient"
+      }
+    },
+    "target": {
+      "MERGE": "20-30%",
+      "KEEP_SEPARATE_nontrivial": "30-40%",
+      "UNKNOWN": "10-15%",
+      "Boundary": "15-20%",
+      "Conflict": "5-10%",
+      "Table": "20-30% (reduced)",
+      "Prose": "20-30% (increased)",
+      "Figure": "10-15%"
+    }
+  },
+  "difficulty_discovery": {
+    "structural_vs_human": "Structural Difficulty = observable from evidence. Human Difficulty = observable through behavior only.",
+    "circular_reasoning_prohibited": "Cannot pre-label difficulty then use it to prove Cue is needed.",
+    "discovery_loop": "Candidate Pool → Structural Coverage Selection → Pilot → Human Behavior → Observed Difficulty → Future Set Refinement",
+    "type": "Evaluation Methodology (NOT Learning Engine)"
+  },
+  "future_pipeline": {
+    "steps": [
+      "1. Candidate Pool (existing, frozen P1-P6)",
+      "2. Structural Family Classification (system groups by family)",
+      "3. Research-Question Filter (exclude trivial table cells, keep ambiguous)",
+      "4. Coverage Filter (target distribution, NOT GT-based)",
+      "5. Evidence Sufficiency Check (record availability per case)",
+      "6. Diversity/Independence Check (no page concentration, near-duplicate detection)",
+      "7. Pilot (small initial set, behavioral observation)",
+      "8. Human Difficulty Observation (time, expansion, disagreement, UNKNOWN)",
+      "9. Final Evaluation Set (frozen, pre-registered, separate from development)"
+    ],
+    "principles": [
+      "Structural coverage is controllable; Human difficulty is discovered",
+      "GT assigned AFTER selection, not used FOR selection",
+      "No case fabrication — only filtering of real candidates",
+      "Pilot before formal — discover difficulty behaviorally",
+      "Development ≠ Evaluation — prevent same-set iteration"
+    ]
+  },
+  "anti_overdesign": {
+    "case_builder_module": "NOT NEEDED — existing scripts + better filter criteria sufficient",
+    "difficulty_engine": "NOT NEEDED — Human difficulty is behavioral, discovered through pilot",
+    "semantic_difficulty_classifier": "NOT NEEDED — structural family + plausible-alternative check sufficient",
+    "pattern_engine": "NOT NEEDED — not relevant to case construction",
+    "learning_engine": "NOT NEEDED — case construction is evaluation methodology, not system learning",
+    "what_is_needed": [
+      "Better filter criteria",
+      "Structural family classification (script-level)",
+      "Coverage accounting (script-level)",
+      "Near-duplicate detection (script-level)",
+      "Pilot-then-formal protocol (methodology)"
+    ]
+  },
+  "human_role": {
+    "human_tasks": [
+      "GT adjudication",
+      "Semantic validity check",
+      "Boundary interpretation",
+      "Case relevance judgment"
+    ],
+    "system_tasks": [
+      "Candidate enumeration",
+      "Coverage accounting",
+      "Duplication detection",
+      "Document/page diversity",
+      "Evidence availability check",
+      "Structural grouping",
+      "Sampling bookkeeping"
+    ],
+    "principle": "Human validates Cases, does not reconstruct entire set from raw candidates. System proposes, Human validates."
+  },
+  "open_questions": [
+    "What structural features distinguish trivially separable from genuinely ambiguous table cases?",
+    "How many genuinely ambiguous cases exist in the 545-candidate pool? (estimated ~77)",
+    "Should corpus be expanded for more MERGE-relevant structures?",
+    "Is 4-PDF corpus sufficient for generalization? (NO — exploratory only)",
+    "Can Human feedback inform future case selection without becoming Learning Engine? (YES — as Evaluation Design Feedback)",
+    "Should UNKNOWN cases come from evidence-poor or genuinely ambiguous cases? (Prefer genuinely ambiguous)",
+    "What minimum n for meaningful B1-vs-B2 given case difficulty? (Very large with current 84% trivial)"
+  ],
+  "final_gate": {
+    "CANDIDATE_CASE_SEPARATION": "PASS (conceptually defined; existing pipeline conflates them)",
+    "SELECTION_OBJECTIVE_ALIGNMENT": "FAIL (geometric proximity ≠ semantic difficulty)",
+    "CASE_DISTRIBUTION_AUDIT": "FAIL (84% trivial, 96% KEEP_SEPARATE)",
+    "GT_BALANCE_ASSESSMENT": "FAIL (43/2, cannot test MERGE boundary)",
+    "BOUNDARY_COVERAGE": "FAIL (only 6/45 genuine boundary cases)",
+    "NEGATIVE_COVERAGE": "FAIL (0 cue-relevant negatives)",
+    "CONFLICT_COVERAGE": "PARTIAL (2 genuine conflicts, minimum met)",
+    "UNKNOWN_COVERAGE": "FAIL (0 UNKNOWN-eligible in formal analysis)",
+    "EVIDENCE_AVAILABILITY": "PARTIAL (21/30 full, 9 missing)",
+    "CASE_INDEPENDENCE": "PARTIAL (page concentration in cs_001 p3: 8 cases)",
+    "DOCUMENT_DIVERSITY": "PARTIAL (4 docs, but efficientnet over-represented at 40%)",
+    "CASE_LEAKAGE": "PASS (GT not used for selection; selection was geometric only)",
+    "CEILING_EFFECT_AUDIT": "FAIL (P722: B1 100% accuracy, 100% under 3s)",
+    "FLOOR_EFFECT_AUDIT": "PASS (evidence sufficient for most cases)",
+    "HUMAN_ROLE_BOUNDARY": "PASS (Human validates, system proposes — design defined)",
+    "SYSTEM_ROLE_BOUNDARY": "PASS (no runtime authority, no new modules needed)",
+    "EVALUATION_CASE_CONSTRUCTION_STATUS": "INSUFFICIENT_EVIDENCE",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "PRODUCTION": false,
+    "RUNTIME_AUTHORITY": "ZERO",
+    "ITERATIVE_LEARNING": "INSUFFICIENT_EVIDENCE",
+    "STOP": true
+  },
+  "status_rationale": "INSUFFICIENT_EVIDENCE because: (1) current case set has severe ceiling effect (84% trivial, P722 B1=100% accuracy); (2) selection objective mismatch confirmed (geometric ≠ semantic); (3) future pipeline is designed but not implemented; (4) no new case set has been constructed; (5) open questions remain about genuinely ambiguous case availability in existing corpus. The design principles and pipeline are defined, but the evaluation case construction has not been demonstrated to produce a valid set."
+}

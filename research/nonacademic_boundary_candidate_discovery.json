@@ -1,0 +1,226 @@
+{
+  "gate_id": "NONACADEMIC_BOUNDARY_CANDIDATE_DISCOVERY_GATE",
+  "date": "2026-09-18",
+  "mode": "READ_ONLY_RESEARCH",
+  "predecessor": "DICE Research Baseline v1 + 2 Domain Generalization Gates + Evidence Boundary Structure Research",
+  "governance": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true,
+    "NEW_CAPABILITY": "NONE"
+  },
+
+  "data_scope": {
+    "domains": ["biotech_manuals", "finance_education"],
+    "total_cases": 72,
+    "biotech_cases": 37,
+    "finance_education_cases": 35,
+    "no_new_documents": true,
+    "no_new_domains": true,
+    "no_data_modified": true
+  },
+
+  "screening_methodology": {
+    "conditions_checked": ["C1_core_evidence_exists", "C2_no_G1", "C3_no_G2", "C4_no_G3", "C5_consumer_not_obstacle", "C6_structural_claim_supported", "C7_semantic_claim_needed"],
+    "more_structural_evidence_check": true,
+    "classification_categories": ["NOT_G5", "G1_G4_DOMINATED", "POTENTIAL_G5", "INDETERMINATE"]
+  },
+
+  "screening_results": {
+    "total_screened": 72,
+    "potential_g5": 0,
+    "g1_g4_dominated": 72,
+    "indeterminate": 0,
+    "not_g5": 0,
+    "result": "NO_POTENTIAL_G5_FOUND"
+  },
+
+  "by_domain": {
+    "biotech": {"total": 37, "G1": 4, "G2": 28, "G3": 5, "G4": 0, "potential_G5": 0, "indeterminate": 0},
+    "finance_education": {"total": 35, "G1": 8, "G2": 17, "G3": 10, "G4": 0, "potential_G5": 0, "indeterminate": 0}
+  },
+
+  "more_structural_evidence_analysis": {
+    "g2_resolution_completes_task": 32,
+    "g2_resolution_may_solve": 20,
+    "observation_missing_g1_blocks": 12,
+    "report_provides_comparison_g2_resolvable": 5,
+    "g3_resolution_completes_task": 2,
+    "section_context_restoration_solves": 1,
+    "more_structural_not_sufficient": 0,
+    "interpretation": "ALL 60 non-G1 cases would be resolved by structural evidence. 0 cases require MORE_STRUCTURAL_EVIDENCE_NOT_SUFFICIENT."
+  },
+
+  "detailed_analysis": {
+    "G1_cases": {
+      "count": 12,
+      "pattern": "Raster images/charts not observable",
+      "if_g1_resolved": "Tasks would remain structural (observe diagram), not semantic (interpret identity). Would NOT become G5.",
+      "more_structural": "OBSERVATION_MISSING"
+    },
+    "G2_cases": {
+      "count": 45,
+      "pattern": "Table structure not organized",
+      "if_g2_resolved": "Values are self-defining (component names, vote counts, specifications). No semantic identity question remains.",
+      "table_types_analyzed": {
+        "component_tables": "Names are self-defining — no identity ambiguity",
+        "ranking_tables": "Vote counts define ranking — no semantic gap",
+        "multi_year_comparison": "Report provides side-by-side mapping — structurally resolvable",
+        "specification_tables": "Specs are self-defining — function is in separate section",
+        "faq_tables": "Cause-solution correspondence IS the task — no semantic dimension",
+        "instrument_program_tables": "Program values are self-defining — no identity question"
+      },
+      "more_structural": "MORE_STRUCTURAL_EVIDENCE_MAY_SOLVE (all 45)"
+    },
+    "G3_cases": {
+      "count": 15,
+      "pattern": "Reading order / hierarchy / boundary lost",
+      "if_g3_resolved": "Content is self-defining once correctly presented. No semantic identity question.",
+      "more_structural": "MORE_STRUCTURAL_EVIDENCE_MAY_SOLVE (all 15)"
+    }
+  },
+
+  "borderline_cases": {
+    "count": 6,
+    "cases": [
+      {"case_id": "DG2-FIN-005 and 4 similar", "reason": "Multi-year technology name similarity — report provides side-by-side mapping", "resolution": "G2_DOMINATED (structurally resolvable)"},
+      {"case_id": "DG2-AUD-002", "reason": "Case study pedagogical purpose — section title provides purpose", "resolution": "G3_DOMINATED (structurally resolvable)"}
+    ],
+    "genuine_g5": 0
+  },
+
+  "root_cause_analysis": {
+    "academic_vs_nonacademic": {
+      "academic_tasks": "Have BOTH structural AND semantic dimensions (e.g., 'Fig. 9' can be caption OR reference — structural similarity, different semantics)",
+      "non_academic_tasks": "Are PURELY structural (organize tables, fix reading order, observe diagrams). Values are self-defining.",
+      "key_pattern": "Structural-similarity-different-semantics pattern exists in academic papers but NOT in non-academic corpus",
+      "conclusion": "G5 is genuinely absent in current non-academic corpus, not merely masked"
+    },
+    "masked_vs_absent": {
+      "masked_test": "Tested 60 non-G1 cases for residual semantic question after structural fix → 0 found",
+      "absent_test": "Analyzed task types for semantic dimension → none found",
+      "conclusion": "G5 is genuinely absent (not merely masked) in current non-academic corpus",
+      "caveat": "Applies to current corpus only; other domains might differ"
+    }
+  },
+
+  "outlier_audit": {
+    "file": "tmp/nonacademic_boundary_candidate_outlier_audit.csv",
+    "total_audited": 72,
+    "borderline_cases": 6,
+    "resolved_to_g2_g3": 6,
+    "genuine_g5_candidates": 0,
+    "new_gap_needed": false
+  },
+
+  "cross_domain_comparison": {
+    "file": "tmp/nonacademic_boundary_candidate_comparison.csv",
+    "biotech": {"total": 37, "G1": 4, "G2": 28, "G3": 5, "potential_G5": 0, "dominant_reason": "G2_DOMINATES"},
+    "finance_education": {"total": 35, "G1": 8, "G2": 17, "G3": 10, "potential_G5": 0, "dominant_reason": "G2_DOMINATES + G3"},
+    "cumulative_all_domains": {
+      "academic": {"cases": 70, "G5": 13, "boundary_structure_tested": true},
+      "non_academic": {"cases": 72, "G5": 0, "boundary_structure_tested": false},
+      "total": 142,
+      "G5_academic_only": true
+    }
+  },
+
+  "over_design_audit": {
+    "O1_SYSTEM_MODIFIED": false,
+    "O2_NEW_FIELD": false,
+    "O3_NEW_MODULE": false,
+    "O4_NEW_DETECTOR": false,
+    "O5_NEW_EVIDENCE_FUNCTION": false,
+    "O6_NEW_GAP_TYPE": false,
+    "O7_NEW_CAPABILITY": false,
+    "O8_HUMAN_VALIDATION_ADDED": false,
+    "O9_THRESHOLD_TUNING": false,
+    "O10_NEW_DOCUMENT_DOMAIN": false,
+    "all_false": true,
+    "over_design_risk": "NONE"
+  },
+
+  "limitations": [
+    {"id": "NB-L-01", "limitation": "NO HUMAN VALIDATION — all RESEARCHER_ASSESSMENT", "impact": "Human might identify semantic questions researcher missed"},
+    {"id": "NB-L-02", "limitation": "NO G4 TEST — consumer behavior unknown", "impact": "Cannot determine if consumer would face G5"},
+    {"id": "NB-L-03", "limitation": "LIMITED DOMAIN DIVERSITY — only 2 non-academic domains", "impact": "Other domains might have G5"},
+    {"id": "NB-L-04", "limitation": "NO STRUCTURAL RESOLUTION TEST — reasoning only, no live test", "impact": "Live test would be more definitive but not authorized"},
+    {"id": "NB-L-05", "limitation": "RESEARCHER-INDUCED SEMANTIC CLAIMS — 'no semantic question' is researcher judgment", "impact": "Different researcher might find semantic questions"},
+    {"id": "NB-L-06", "limitation": "ACADEMIC-ONLY BOUNDARY STRUCTURE — Structure A not tested cross-domain", "impact": "Cross-domain structure validation requires non-academic G5"}
+  ],
+
+  "interpretation_rules": {
+    "correct": "Current tested non-academic corpus does not contain Potential G5 candidates.",
+    "incorrect_forbidden": [
+      "Evidence Boundary only exists in academic documents.",
+      "G5 is an academic-only phenomenon.",
+      "Non-academic documents don't have semantic boundaries."
+    ],
+    "what_we_can_say": "In the current tested non-academic corpus, no Potential G5 was found. The tasks are predominantly structural. Further domain testing is needed to determine if this is corpus-specific or domain-inherent."
+  },
+
+  "final_questions": {
+    "Q1_biotech_potential_g5": {
+      "answer": "NO",
+      "evidence": "37 cases screened; 0 POTENTIAL_G5; all G1_G4_DOMINATED; structural resolution completes all tasks"
+    },
+    "Q2_finance_education_potential_g5": {
+      "answer": "NO",
+      "evidence": "35 cases screened; 0 POTENTIAL_G5; all G1_G4_DOMINATED; 6 borderline cases resolved to G2/G3"
+    },
+    "Q3_cumulative_72_cases_potential_g5": {
+      "answer": "NO",
+      "evidence": "72 cases screened; 0 POTENTIAL_G5; NO_POTENTIAL_G5_FOUND; honest finding, not forced"
+    },
+    "Q4_structure_a_if_found": {
+      "answer": "NOT_APPLICABLE",
+      "reason": "0 Potential G5 found; Structure A cannot be tested on non-academic cases"
+    },
+    "Q5_main_reason_no_g5": {
+      "answer": "G2_DOMINATES",
+      "detail": "G2=45/72 (62.5%); G3=15/72 (20.8%); G1=12/72 (16.7%); combined G1+G2+G3=100%. Root cause: non-academic tasks are purely structural, no semantic identity dimension."
+    },
+    "Q6_modify_g1_g5": {
+      "answer": "NO",
+      "evidence": "100% coverage; 0 new gap; framework correctly identifies structural dominance"
+    },
+    "Q7_cross_domain_boundary_structure_ready": {
+      "answer": "NOT_READY",
+      "reason": "Requires non-academic G5 cases for cross-domain testing; 0 exist in current corpus",
+      "conditions_for_readiness": [
+        "Find non-academic domain where G5 genuinely emerges",
+        "OR resolve G2/G3 in existing corpus and test for emergent G5 (requires IMPLEMENTATION — not authorized)"
+      ]
+    }
+  },
+
+  "files_created": [
+    "tmp/nonacademic_boundary_candidate_discovery.md",
+    "tmp/nonacademic_boundary_candidate_discovery.json",
+    "tmp/nonacademic_boundary_candidate_table.csv",
+    "tmp/nonacademic_boundary_candidate_outlier_audit.csv",
+    "tmp/nonacademic_boundary_candidate_comparison.csv"
+  ],
+  "files_modified": 0,
+
+  "conclusion": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  }
+}

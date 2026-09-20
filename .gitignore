@@ -1,0 +1,33 @@
+# Secrets
+*.env
+.env*
+*.key
+*.pem
+*credentials*
+*cookie*
+
+# Enterprise data
+*.pdf
+!examples/synthetic/*.pdf
+!examples/public/*.pdf
+*.xlsx
+*.docx
+!docs/*.docx
+
+# System
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Backups
+*.bak
+*.bak_*

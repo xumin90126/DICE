@@ -1,0 +1,165 @@
+{
+ "phase": "L5 Human Experiment Authorization Preparation",
+ "status": "READY",
+ "objective": "Prepare all execution conditions for real Human Pilot so it can begin immediately upon authorization; no execution, no simulation, no fabricated data",
+
+ "principle": {
+  "real_human_data_over_ai_simulation": true,
+  "no_ai_as_human": true,
+  "no_synthetic_data": true,
+  "no_simulated_cognitive_load": true,
+  "no_fabricated_results": true},
+
+ "protocol": {
+  "status": "READY",
+  "research_question": "RQ-L5.7: Compared with Instance Validation (A) and Naive Pattern Validation (B), does Evidence Aggregation + Evidence Compression + Semantic Claim Validation (C) reduce Human cognitive burden while preserving or improving validation quality?",
+  "hypothesis": {
+   "H0_null": "No difference in cognitive burden or quality between A/B/C",
+   "H1_C_effective": "C reduces cognitive burden (time + abstraction) without materially degrading quality",
+   "H2_burden_transfer": "C reduces judgment count but increases abstraction/exposure = burden transfer",
+   "H3_C_failure": "C does not reduce cognitive burden or degrades quality",
+   "all_allowed": true,
+   "preset_C_must_win": false},
+  "participants": {
+   "pilot_n": "3-5",
+   "type": "exploratory pilot sample",
+   "claim_level": "PILOT / EXPLORATORY / NON-CONFIRMATORY",
+   "not_claimed": ["confirmatory statistical inference", "C universal superiority", "large-scale scalability", "cognitive load significantly decreased", "automation bias resolved"]},
+  "workflows": {
+   "A": {"items": 21, "human_sees": "per-instance structural evidence", "human_does": "independent judgment (no abstraction)"},
+   "B": {"items": 3, "human_sees": "per-group all members no compression", "human_does": "commonality + comparison + prototype + boundary + judgment"},
+   "C": {"items": 3, "human_sees": "per-claim candidate + summary + progressive disclosure", "human_does": "claim validation only (no abstraction)"}},
+  "materials": {"source": "frozen mb_phase3_2_isolated_replay_results.json", "total_cases": 21, "gt": "19:2 (hidden)", "generated_by": "l5_7_experiment_harness.py"},
+  "judgment_options": ["KEEP_SEPARATE", "MERGE", "UNKNOWN"],
+  "counterbalancing": {"method": "Latin square", "orders": [["A","B","C"],["B","C","A"],["C","A","B"]], "auto_assigned": true},
+  "timing": {"per_item": "recorded (start/end/duration)", "per_workflow": "derived", "per_participant": "derived", "time_limit": "none (self-paced)"},
+  "recording": {"required": ["participant_id","item_id","workflow","case_id_or_group_id","decision","time_seconds","start_timestamp","end_timestamp"], "optional": ["difficulty","confidence","order_position","expansion_count","levels_viewed"]},
+  "stopping": "participant may withdraw; self-paced; ends at 27 items or withdrawal",
+  "limitations": ["L1 GT imbalance 19:2", "L2 conflict=0", "L3 automation bias 0 System!=GT", "L4 positive all KS", "L5 n=21 pilot", "L6 learning effect counterbalanced", "L7 cross-document NO", "L8 single corpus"]},
+
+ "abc_fairness": {
+  "verified": true,
+  "same_task": true,
+  "same_material": true,
+  "same_gt_hidden": true,
+  "same_judgment_options": true,
+  "C_claim_is_candidate": true,
+  "C_no_answer_leak": true,
+  "UI_no_recommendation_scoring": true},
+
+ "ui": {
+  "status": "READY",
+  "file": "tmp/l5_7_pilot_ui.html",
+  "size_bytes": 45823,
+  "standalone": true,
+  "no_server_needed": true,
+  "functions": {
+   "display_material": true,
+   "display_evidence": true,
+   "record_decision": true,
+   "record_time": true,
+   "record_difficulty": true,
+   "record_confidence": true,
+   "record_expansion_behavior": true,
+   "progressive_disclosure": true,
+   "latin_square_auto": true,
+   "export_results_json": true},
+  "prohibitions_verified": {
+   "show_correct_answer": false,
+   "recommend": false,
+   "rank": false,
+   "score": false,
+   "predict": false},
+  "gt_stripped": true},
+
+ "recording": {
+  "status": "READY",
+  "schema_file": "tmp/l5_7_pilot_recording_schema.json",
+  "schema_version": "L5.7_v1",
+  "output_format": "JSON (downloaded per participant)",
+  "behavioral_indicators": ["ABSTRACTION_BEHAVIOR", "REVISIT_BEHAVIOR", "EXPANSION_BEHAVIOR"],
+  "workload_proxy_warning": "review_count/evidence_exposure != cognitive_load; true burden = time+difficulty+abstraction+behavior"},
+
+ "consent_ethics": {
+  "consent_form_template": "READY (in preparation report §7.1)",
+  "participant_info_sheet": "READY (in preparation report §7.1)",
+  "ethics_irb_approval": "REQUIREMENT IDENTIFIED (institutional process pending)",
+  "risk_assessment": "LOW (computer judgment task, no sensitive data)",
+  "vulnerable_population": "N/A"},
+
+ "privacy": {
+  "status": "READY",
+  "collected": ["anonymous participant ID", "workflow order", "decisions", "time", "optional difficulty/confidence", "C expansion behavior"],
+  "not_collected": ["name", "real ID", "phone", "email", "address", "demographics", "audio/video", "physiological", "IP address"],
+  "storage": "researcher secure storage; offline; no cloud upload",
+  "anonymity": "P01/P02/...; no linkage in experiment data",
+  "retention": "per institutional policy"},
+
+ "observation_plan": {
+  "status": "READY",
+  "four_layer_analysis": {
+   "L1_operational": "judgment_count, time, interaction_count, evidence_exposure",
+   "L2_cognitive_behavior": "abstraction_behavior, revisit_behavior, expansion_behavior, difficulty",
+   "L3_validation_quality": "correctness vs GT, false acceptance/rejection, UNKNOWN usage",
+   "L4_reusability_potential": "instance→group→claim→boundary (qualitative)"},
+  "human_cognitive_type": {"H1_instance_recognition": "A primarily", "H2_group_recognition": "B primarily", "H3_boundary_judgment": "C ideally", "H4_capability_authorization": "post-pilot"},
+  "key_question": "Does C move Human from H1/H2 toward H3?",
+  "n_to_claims_to_work": "observe N_instances→N_groups→N_claims→N_judgments→Human effort"},
+
+ "failure_rules": {
+  "status": "READY",
+  "C_failure_conditions": "judgment_count↓ BUT time↑ OR exposure↑ OR abstraction↑ OR revisit↑ OR difficulty↑ OR quality↓",
+  "on_failure_record": "BURDEN_TRANSFER=OBSERVED or C_DID_NOT_REDUCE_HUMAN_COGNITIVE_BURDEN",
+  "on_failure_do_not": ["modify Aggregation", "modify Compression", "modify UI", "modify Claim wording", "modify workflow/task", "modify GT/TLD/Atomic/IS-11/production", "fix C to succeed"],
+  "on_failure_do": ["record as observed failure", "report honestly", "identify failure mode", "note as potential future research"],
+  "quality_caution": "GT 19:2; if all agree with GT, write 'no material degradation observed', NOT 'C improves accuracy'"},
+
+ "remaining_blockers": {
+  "count": 3,
+  "all_authorization_related": true,
+  "items": [
+   {"id": "B1", "type": "Ethics/IRB approval", "status": "REQUIREMENT IDENTIFIED", "blocking": true, "design_technical": false},
+   {"id": "B2", "type": "Participant recruitment", "status": "NOT STARTED (requires authorization)", "blocking": true, "design_technical": false},
+   {"id": "B3", "type": "Experiment execution", "status": "NOT STARTED (requires authorization)", "blocking": true, "design_technical": false}]},
+
+ "gate": {
+  "HUMAN_EXPERIMENT_PREPARATION": "READY",
+  "Protocol": "READY",
+  "Materials": "READY",
+  "UI": "READY",
+  "Recording": "READY",
+  "Counterbalancing": "READY",
+  "Privacy": "READY",
+  "Consent": "TEMPLATE READY (ethics approval = institutional requirement)",
+  "Observation_Plan": "READY",
+  "Failure_Rules": "READY",
+  "BLOCKER_COUNT": 3,
+  "BLOCKERS_ALL_AUTHORIZATION_RELATED": true,
+  "SIMULATED_HUMAN_DATA": 0,
+  "FABRICATED_HUMAN_DATA": 0,
+  "L5_ARCHITECTURE": "CLOSED",
+  "NEW_PRIMITIVE": 0,
+  "NEW_CONTRACT": 0,
+  "NEW_ARCHITECTURE": 0,
+  "NEW_DESIGN": 0,
+  "PRODUCTION": false,
+  "FROZEN_BASELINE": "INTACT",
+  "PRODUCTION_MODIFICATIONS": 0,
+  "EXPERIMENT_AUTHORIZATION": "NOT AUTHORIZED",
+  "NEXT": "Human Experiment Authorization → Ethics/IRB → Recruit → Consent → Execute → Collect → Score → Analyze → Real Human Evidence (A-class)",
+  "STOP": true},
+
+ "deliverables": {
+  "tmp/l5_7_experiment_harness.py": {"size": 19936, "status": "COMPLETE"},
+  "tmp/l5_7_pilot_materials.json": {"size": 50715, "status": "COMPLETE"},
+  "tmp/l5_7_pilot_recording_schema.json": {"size": 2262, "status": "COMPLETE"},
+  "tmp/l5_7_pilot_ui.html": {"size": 45823, "status": "COMPLETE"},
+  "tmp/l5_7_pilot_harness_preparation_report.md": {"size": 9750, "status": "COMPLETE"},
+  "tmp/l5_human_experiment_authorization_preparation.md": {"status": "COMPLETE"}},
+
+ "frozen_baseline_verify": {
+  "gt_modified": false, "tld_modified": false, "atomic_observation_modified": false,
+  "is11_decision_modified": false, "production_code_modified": false,
+  "l5.5_modified": false, "schema_modified": false, "html_production_modified": false,
+  "capability_registry_modified": false, "runtime_modified": false}
+}

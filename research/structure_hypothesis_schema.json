@@ -1,0 +1,90 @@
+{
+  "schema_name": "StructureHypothesis",
+  "version": "p7.1",
+  "description": "Structure candidate — Layer C hypothesis, not final structure. Deterministic from P1-P6 facts. No semantic classification.",
+  "design_principles": [
+    "P7.1 emits only StructureHypothesis (Layer C) and StructuralRelation (Layer B).",
+    "No final semantic classification (is_heading/is_table/… forbidden).",
+    "All thresholds in structure_config.py; no magic numbers.",
+    "Supporting facts REFERENCE P1-P6 (not copy).",
+    "Confidence = min(upstream, structural); downstream cannot silently erase upstream uncertainty.",
+    "Status stays PROPOSED until Human Validation.",
+    "Runtime Authority = ZERO."
+  ],
+  "hypothesis_fields": {
+    "hypothesis_id": "str",
+    "document_id": "str",
+    "page_number": "int",
+    "hypothesis_type": "str",
+    "span_ids": "List[str]",
+    "region_ids": "List[str]",
+    "supporting_relation_ids": "List[str]",
+    "supporting_fact_refs": "List[Dict[str, Any]]",
+    "geometry": "Dict[str, Any]",
+    "confidence": "str",
+    "status": "str",
+    "construction_method": "str",
+    "construction_version": "str",
+    "decision_trace": "List[Dict[str, Any]]",
+    "provenance": "Dict[str, Any]",
+    "coord_origin": "str"
+  },
+  "relation_fields": {
+    "relation_id": "str",
+    "document_id": "str",
+    "page_number": "int",
+    "relation_type": "str",
+    "source_id": "str",
+    "target_id": "str",
+    "source_kind": "str",
+    "target_kind": "str",
+    "supporting_fact_refs": "List[Dict[str, Any]]",
+    "confidence": "str",
+    "decision_trace": "List[Dict[str, Any]]",
+    "provenance": "Dict[str, Any]",
+    "coord_origin": "str"
+  },
+  "bundle_fields": {
+    "document_id": "str",
+    "page_number": "int",
+    "page_width": "float",
+    "page_height": "float",
+    "coord_origin": "str",
+    "hypotheses": "List[Dict[str, Any]]",
+    "relations": "List[Dict[str, Any]]",
+    "provenance": "Dict[str, Any]"
+  },
+  "hypothesis_types": [
+    "HEADING_CANDIDATE",
+    "PARAGRAPH_GROUP_CANDIDATE",
+    "SECTION_CANDIDATE",
+    "LIST_CANDIDATE",
+    "HEADER_CANDIDATE",
+    "FOOTER_CANDIDATE",
+    "MULTI_COLUMN_CONTINUATION_CANDIDATE"
+  ],
+  "relation_types": [
+    "STYLE_CONTRAST",
+    "VERTICAL_SEPARATION",
+    "ADJACENT_TO",
+    "LEFT_ALIGNED_WITH",
+    "PRECEDES",
+    "SHARES_REGION",
+    "CONTINUES_FROM",
+    "REPEATS_ACROSS_PAGES"
+  ],
+  "blocked_types": {
+    "TABLE": "waits for Table Cell Geometry observation.",
+    "TABLE_CELL": "waits for Table Cell Geometry observation.",
+    "FIGURE": "waits for Visual Object Observation (P1 skips non-text blocks).",
+    "IMAGE": "waits for Visual Object Observation.",
+    "CHART": "waits for Visual Object Observation.",
+    "FLOWCHART": "waits for Graphic/Vector Observation (shapes/arrows/connectivity).",
+    "RELIABLE_FORMULA": "waits for baseline/subscript/symbol-class observation.",
+    "RELIABLE_CAPTION": "waits for a reliable object reference (Visual/Table).",
+    "PAGE_NUMBER": "human-first; textual pattern not introduced.",
+    "REFERENCE": "human-first; textual content not introduced.",
+    "FOOTNOTE": "human-first; weak signal only."
+  },
+  "coord_origin": "PDF_TOP_LEFT"
+}

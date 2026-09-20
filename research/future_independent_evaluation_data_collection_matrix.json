@@ -1,0 +1,407 @@
+{
+  "document": "Future Independent Evaluation Data Collection Matrix",
+  "type": "READ-ONLY design matrix",
+  "version": "1.0",
+  "frozen_baseline": "INTACT",
+  "corpus_independence_audit": {
+    "total_pdfs": 7,
+    "independent": 4,
+    "partially_contaminated": 3,
+    "contaminated": 0,
+    "correction_from_previous_stage": "Previous stage claimed all 7 PDFs truly independent. Audit reveals 3/7 have metadata-level contamination from p7_evidence_gap_analysis.md. No boundary-level contamination found.",
+    "pdfs": [
+      {
+        "pdf_name": "arxiv_2310.16825.pdf",
+        "size_bytes": 27109777,
+        "document_family": "arxiv",
+        "independence_status": "PARTIALLY_CONTAMINATED",
+        "contamination_vectors": [
+          "evidence_gap_analysis",
+          "p1_processed",
+          "researcher_saw_text",
+          "researcher_saw_metadata"
+        ],
+        "contamination_level": "METADATA + PARTIAL P1",
+        "contamination_detail": "Analyzed in p7_evidence_gap_analysis.md (19 pages, 83 images, 963 vector objects). P1 processed as 'arxiv_single' in p7_test_results.json (text extracted including paper header). No boundary pairs analyzed, no IS computed.",
+        "eligible_for_candidate_generation": "CONDITIONAL — blind sampling required to mitigate metadata knowledge",
+        "eligible_for_independent_evaluation": "CONDITIONAL"
+      },
+      {
+        "pdf_name": "arxiv_2401.00047.pdf",
+        "size_bytes": 369878,
+        "document_family": "arxiv",
+        "independence_status": "PARTIALLY_CONTAMINATED",
+        "contamination_vectors": [
+          "evidence_gap_analysis",
+          "researcher_saw_metadata"
+        ],
+        "contamination_level": "METADATA ONLY",
+        "contamination_detail": "Analyzed in p7_evidence_gap_analysis.md (18 pages, 0 images, 0 tables). Not P1 processed. No boundary pairs, no IS computed.",
+        "eligible_for_candidate_generation": "CONDITIONAL — low metadata contamination",
+        "eligible_for_independent_evaluation": "CONDITIONAL"
+      },
+      {
+        "pdf_name": "arxiv_2402.18619.pdf",
+        "size_bytes": 950709,
+        "document_family": "arxiv",
+        "independence_status": "INDEPENDENT",
+        "contamination_vectors": [],
+        "contamination_level": "NONE",
+        "contamination_detail": "Zero references in any P7 artifact",
+        "eligible_for_candidate_generation": true,
+        "eligible_for_independent_evaluation": true
+      },
+      {
+        "pdf_name": "arxiv_bio2.pdf",
+        "size_bytes": 3022746,
+        "document_family": "arxiv",
+        "independence_status": "INDEPENDENT",
+        "contamination_vectors": [],
+        "contamination_level": "NONE",
+        "contamination_detail": "Zero references in any P7 artifact",
+        "eligible_for_candidate_generation": true,
+        "eligible_for_independent_evaluation": true
+      },
+      {
+        "pdf_name": "qbio_cell.pdf",
+        "size_bytes": 5048501,
+        "document_family": "qbio",
+        "independence_status": "PARTIALLY_CONTAMINATED",
+        "contamination_vectors": [
+          "evidence_gap_analysis",
+          "researcher_saw_metadata"
+        ],
+        "contamination_level": "METADATA + FONTS",
+        "contamination_detail": "Analyzed in p7_evidence_gap_analysis.md (7 pages, 5 images, 7 figures, 4 tables, 13 vector objects, CMMI9/CMSY7 fonts). Not P1 processed. No boundary pairs, no IS computed.",
+        "eligible_for_candidate_generation": "CONDITIONAL — font metadata may imply formula content",
+        "eligible_for_independent_evaluation": "CONDITIONAL"
+      },
+      {
+        "pdf_name": "qbio_genomics.pdf",
+        "size_bytes": 4616086,
+        "document_family": "qbio",
+        "independence_status": "INDEPENDENT",
+        "contamination_vectors": [],
+        "contamination_level": "NONE",
+        "contamination_detail": "Zero references in any P7 artifact",
+        "eligible_for_candidate_generation": true,
+        "eligible_for_independent_evaluation": true
+      },
+      {
+        "pdf_name": "qbio_rna.pdf",
+        "size_bytes": 2384627,
+        "document_family": "qbio",
+        "independence_status": "INDEPENDENT",
+        "contamination_vectors": [],
+        "contamination_level": "NONE",
+        "contamination_detail": "Zero references in any P7 artifact",
+        "eligible_for_candidate_generation": true,
+        "eligible_for_independent_evaluation": true
+      }
+    ]
+  },
+  "processing_boundary": {
+    "layer_a_corpus_preprocessing": {
+      "description": "Frozen P1-P6 pipeline processing",
+      "allowed": true,
+      "includes": [
+        "P1 text extraction",
+        "P2 geometry",
+        "P3 style",
+        "P4 span",
+        "P5 reading order",
+        "P6 region"
+      ],
+      "breaks_independence": false
+    },
+    "layer_b_experimental_feature_observation": {
+      "description": "IS-01/IS-02 computation",
+      "allowed": "ONLY AFTER Evaluation Set Freeze",
+      "includes": [
+        "IS-01 number pattern",
+        "IS-02 readable title",
+        "IS-07 visual context"
+      ],
+      "breaks_independence": "YES if computed before Human GT"
+    },
+    "layer_c_decision_leakage": {
+      "description": "Using IS results to filter/adjust sampling or GT",
+      "allowed": false,
+      "includes": [
+        "IS-based case selection",
+        "IS-based GT modification",
+        "Feature modification after results"
+      ],
+      "breaks_independence": true
+    }
+  },
+  "workflow_stages": [
+    {
+      "stage": "Phase A: Corpus Processing",
+      "actions": [
+        "Process PDFs through frozen P1-P6",
+        "Extract same-y unmerged pairs",
+        "Apply AMBIGUOUS criteria"
+      ],
+      "machine_features_visible": false,
+      "reviewer_blind": "N/A",
+      "semantic_gt_required": false,
+      "freeze_required": false,
+      "stop_condition": "If no AMBIGUOUS cases found"
+    },
+    {
+      "stage": "Phase B: Candidate Sampling",
+      "actions": [
+        "Stratified sampling (geometric only)",
+        "Record sampling frame",
+        "NO IS computation"
+      ],
+      "machine_features_visible": false,
+      "reviewer_blind": "N/A",
+      "semantic_gt_required": false,
+      "freeze_required": false,
+      "stop_condition": "If < 20 TOC/APPENDIX candidates"
+    },
+    {
+      "stage": "Phase C: Blind Human GT",
+      "actions": [
+        "Reviewer A blind review",
+        "Reviewer B blind review",
+        "Compute kappa",
+        "Adjudicate disagreements"
+      ],
+      "machine_features_visible": false,
+      "reviewer_blind": true,
+      "semantic_gt_required": true,
+      "second_reviewer_required": true,
+      "adjudication_required": "If disagreement",
+      "freeze_required": false,
+      "stop_condition": "If kappa < 0.60"
+    },
+    {
+      "stage": "Phase D: Evaluation Set Freeze",
+      "actions": [
+        "Freeze sample",
+        "Freeze GT",
+        "Freeze inclusion criteria"
+      ],
+      "machine_features_visible": false,
+      "reviewer_blind": "N/A (frozen)",
+      "semantic_gt_required": true,
+      "freeze_required": true,
+      "stop_condition": "N/A"
+    },
+    {
+      "stage": "Phase E: Frozen Feature Observation",
+      "actions": [
+        "Compute IS-01 (frozen)",
+        "Compute IS-02 (frozen)",
+        "NO modification"
+      ],
+      "machine_features_visible": true,
+      "reviewer_blind": "N/A",
+      "semantic_gt_required": true,
+      "freeze_required": true,
+      "stop_condition": "If feature modification attempted"
+    },
+    {
+      "stage": "Phase F: Machine Assessment",
+      "actions": [
+        "Output MACHINE_DECISION",
+        "Compare against frozen GT"
+      ],
+      "machine_features_visible": true,
+      "reviewer_blind": "N/A",
+      "semantic_gt_required": true,
+      "freeze_required": true,
+      "stop_condition": "If GT modification attempted"
+    },
+    {
+      "stage": "Phase G: Metrics & Gate",
+      "actions": [
+        "Compute Precision/Recall/FP/Shrinkage",
+        "Evaluate G1-G12"
+      ],
+      "machine_features_visible": true,
+      "reviewer_blind": "N/A",
+      "semantic_gt_required": true,
+      "freeze_required": true,
+      "stop_condition": "If feature modification based on results"
+    }
+  ],
+  "sample_size_scenarios": {
+    "minimum": {
+      "toc_appendix_cases": 20,
+      "total_ambiguous": 35,
+      "precision_ci": "±15%",
+      "fp_detection_power": "LOW",
+      "use_case": "quick feasibility check"
+    },
+    "recommended": {
+      "toc_appendix_cases": 40,
+      "total_ambiguous": 70,
+      "precision_ci": "±10%",
+      "fp_detection_power": "MEDIUM",
+      "use_case": "formal evaluation"
+    },
+    "strong": {
+      "toc_appendix_cases": 60,
+      "total_ambiguous": 100,
+      "precision_ci": "±8%",
+      "fp_detection_power": "HIGH",
+      "use_case": "strong conclusion"
+    }
+  },
+  "semantic_gt_authority": {
+    "level_0_geometry": {
+      "description": "P4 geometric feature derived label",
+      "reliability": "INSUFFICIENT (AMB-026 proved mismatch)",
+      "usable_as_semantic_gt": false
+    },
+    "level_1_single_reviewer": {
+      "description": "Single independent reviewer judgment",
+      "reliability": "MODERATE (no agreement validation)",
+      "usable_as_semantic_gt": "CONDITIONAL"
+    },
+    "level_2_adjudicated": {
+      "description": "Dual reviewer agreement + adjudication",
+      "reliability": "HIGH",
+      "usable_as_semantic_gt": true,
+      "kappa_threshold": 0.6,
+      "adjudication_for": "MERGE vs KEEP_SEPARATE disagreements"
+    }
+  },
+  "pre_registered_gates": {
+    "G1_independent_corpus": {
+      "threshold": "≥ 4 INDEPENDENT PDFs",
+      "current": "PASS (4 independent)",
+      "pre_registered": true
+    },
+    "G2_independent_evaluation_set": {
+      "threshold": "≥ 20 TOC/APPENDIX with semantic GT",
+      "current": "NOT YET",
+      "pre_registered": true
+    },
+    "G3_feature_freeze": {
+      "threshold": "IS-01/IS-02 frozen",
+      "current": "PASS",
+      "pre_registered": true
+    },
+    "G4_no_leakage": {
+      "threshold": "No IS/Machine/GT cross-contamination",
+      "current": "NOT YET (cannot verify)",
+      "pre_registered": true
+    },
+    "G5_semantic_gt_validity": {
+      "threshold": "Level 2 GT (dual reviewer + adjudication)",
+      "current": "NOT YET",
+      "pre_registered": true
+    },
+    "G6_inter_rater_agreement": {
+      "threshold": "Cohen's kappa ≥ 0.60",
+      "current": "NOT YET",
+      "pre_registered": true
+    },
+    "G7_precision": {
+      "threshold": "Precision ≥ 95%",
+      "current": "PRE-REGISTERED",
+      "pre_registered": true,
+      "note": "MUST be set before results"
+    },
+    "G8_recall": {
+      "threshold": "Recall ≥ 80%",
+      "current": "PRE-REGISTERED",
+      "pre_registered": true,
+      "note": "MUST be set before results"
+    },
+    "G9_cross_document": {
+      "threshold": "Consistent across ≥ 2 document families",
+      "current": "NOT YET",
+      "pre_registered": true
+    },
+    "G10_adversarial": {
+      "threshold": "0 FP on independent adversarial",
+      "current": "NOT YET",
+      "pre_registered": true
+    },
+    "G11_insufficient_evidence_safety": {
+      "threshold": "Machine outputs INSUFFICIENT_EVIDENCE when appropriate",
+      "current": "DESIGNED",
+      "pre_registered": true
+    },
+    "G12_provenance": {
+      "threshold": "Every decision traceable",
+      "current": "PASS (protocol designed)",
+      "pre_registered": true
+    }
+  },
+  "stop_conditions": [
+    {
+      "id": "SC1",
+      "condition": "No independent corpus",
+      "action": "STOP, cannot claim generalization"
+    },
+    {
+      "id": "SC2",
+      "condition": "Reviewer saw machine result",
+      "action": "STOP, evaluation invalidated"
+    },
+    {
+      "id": "SC3",
+      "condition": "Feature modified after evaluation",
+      "action": "STOP, evaluation invalidated"
+    },
+    {
+      "id": "SC4",
+      "condition": "GT modified after machine prediction",
+      "action": "STOP, GT invalidated"
+    },
+    {
+      "id": "SC5",
+      "condition": "Case selection based on IS results",
+      "action": "STOP, selection bias"
+    },
+    {
+      "id": "SC6",
+      "condition": "Provenance unclear",
+      "action": "STOP, cannot claim result"
+    },
+    {
+      "id": "SC7",
+      "condition": "Geometry GT used as semantic GT",
+      "action": "STOP, GT invalidated"
+    },
+    {
+      "id": "SC8",
+      "condition": "Single reviewer without adjudication",
+      "action": "STOP, GT reliability insufficient"
+    },
+    {
+      "id": "SC9",
+      "condition": "Evaluation set < 20 TOC/APPENDIX",
+      "action": "STOP, statistical power insufficient"
+    },
+    {
+      "id": "SC10",
+      "condition": "Inter-rater kappa < 0.60",
+      "action": "STOP, GT reliability insufficient"
+    }
+  ],
+  "boundary_shrinkage_definition": {
+    "level_1_baseline_ambiguous": "Independent Evaluation Set cases needing Human",
+    "level_2_potential_machine_resolvable": "Frozen feature evidence suggests machine can decide",
+    "level_3_actual_machine_resolvable": "Machine outputs stable MERGE/KEEP_SEPARATE",
+    "level_4_independently_validated": "Machine decision matches independent semantic GT + Gate passed",
+    "actual_shrinkage_rate": "Level 4 / Level 1",
+    "current_value": "UNKNOWN — cannot compute without independent set + semantic GT"
+  },
+  "authorization": {
+    "implementation": "NOT AUTHORIZED",
+    "p7_3": "NOT AUTHORIZED",
+    "pdf_processing": "NOT AUTHORIZED (design only)",
+    "human_validation": "NOT AUTHORIZED (design only)",
+    "is_computation": "NOT AUTHORIZED (design only)",
+    "feature_modification": "NOT AUTHORIZED (frozen)",
+    "frozen_baseline": "INTACT"
+  }
+}

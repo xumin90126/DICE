@@ -1,0 +1,265 @@
+{
+  "audit_metadata": {
+    "date": "2026-09-14",
+    "mode": "READ-ONLY / AUDIT / RESEARCH ONLY / NO IMPLEMENTATION / FROZEN INTACT / STOP",
+    "data_sources": [
+      "document_perception_failure_analysis.md (CC-01..CC-06, 显微镜实测)",
+      "structural_object_failure_decomposition_audit.md (45-case TLD coverage)",
+      "dce06_tld_failure_mechanism_audit.md (TLD Mechanism 1+2)",
+      "slicing_failure_impact_ranking.md (M-A..M-I ranking)",
+      "failure_case_independence_audit.md",
+      "is11_machine_evaluation_results.json",
+      "independent_evaluation_failure_matrix.json (P7 69 cases)",
+      "phase3_is14_incident_log.md",
+      "ph02_failure_mechanism_review.json (REJECTED)"
+    ],
+    "evidence_labels": ["OBSERVED", "INFERRED", "INSUFFICIENT_EVIDENCE"],
+    "corpus_scope": "IS-11 4-doc (45 cases) + P7 4-doc (69 cases) + Phase3 IS-14 (54 samples) + Phase3 corpus (1299 spans)"
+  },
+
+  "mechanism_taxonomy": {
+    "A_perception_missing": "机器根本没有观察到必要对象（无 detector）",
+    "B_perception_incorrect": "机器观察到了对象但观察错误（wrong band / wrong region）",
+    "C_evidence_representation_loss": "底层 Evidence 已存在但在中间表示中丢失（TLD 有 cell 但 consumer 只收 different_cell）",
+    "D_evidence_organization_failure": "Evidence 已存在但未以 human/consumer 可利用的结构组织（证据查询缺口）",
+    "E_interpretation_decision_logic_failure": "Evidence 足够但当前解释逻辑错误（IS-01/IS-02 false-trigger）",
+    "F_genuine_semantic_boundary": "现有 Evidence 不足以确定，需 Human semantic judgment",
+    "G_unknown": "证据不足无法分类"
+  },
+
+  "structure_categories": {
+    "TABLE": {
+      "evidence_status": "OBSERVED",
+      "frequency": "HIGH (IS-11: TCC 26/45=57.8% + TABLE_HEADER 7/45=15.6%; IS-11 content 88% table-biased; P7: 15/69=22%)",
+      "observed_failures": {
+        "TLD_MISS_TABLE": "23/45 (51%) — TLD 未检测到表格（page-global contamination, Mechanism B）",
+        "TLD_PARTIAL": "7/45 (16%) — TLD 检测到错误表格（all is11_cs_001 p3, wrong table boundary）",
+        "TLD_CORRECT": "13/45 (29%) — 正确",
+        "FP": "1/45 (AMB-135) — IS-01 false-trigger on table cell value '4'",
+        "P7_FP": "3/69 (IND-AMB-247/223/235) — IS-01 false-trigger on numeric cell values"
+      },
+      "mechanism_classification": {
+        "primary": "B_perception_incorrect (TLD page-global contamination → column stability fail)",
+        "secondary": "D_evidence_organization_failure (IS-11 no P2 fallback when TLD fails, 32/45)",
+        "tertiary": "E_interpretation_decision_logic_failure (IS-01 false-trigger on numeric cell)"
+      },
+      "root_cause_chain": "small table (11-15% page) + PDF splits prose into multicol fragments → TLD band extends page-global (no locality constraint, only breaks on is_wide_text) → non-table multicol rows pollute column centers → avg_alignment < 0.75 → table rejected at Stage E",
+      "evidence_sufficient": "YES (P2 geometry 45/45=100% sufficient; DCE-06 local isolation: align 0.23→0.96-1.00)",
+      "reusability": "MEDIUM (cross 2-3 docs, ≥6 page settings; but TCC document-concentrated HHI 0.421)"
+    },
+
+    "FIGURE": {
+      "evidence_status": "OBSERVED",
+      "frequency": "LOW (IS-11: 2/45=4%; P7: 2/69=3%)",
+      "observed_failures": {
+        "AMB-414": "FIG. 9: + Left: — GT=MERGE, machine ABSTAIN (no figure detector)",
+        "AMB-422": "FIG. 12: + Distribution... — GT=MERGE, machine ABSTAIN"
+      },
+      "mechanism_classification": {
+        "primary": "A_perception_missing (no figure detector; TLD is table-only)",
+        "secondary": "D_evidence_organization_failure (has_fig_prefix derivable from P1 but IS-11 does not compute it)"
+      },
+      "root_cause_chain": "no figure structural detection → IS-11 is_in_table=False → ABSTAIN; FIG prefix exists in P1 text but never queried",
+      "evidence_sufficient": "YES (FIG prefix in P1; pairwise same_y_band + h_gap for caption association)",
+      "reusability": "LOW (2 cases, single doc med_001; but Phase3 prevalence 6.08% cross-framework)"
+    },
+
+    "CAPTION": {
+      "evidence_status": "OBSERVED",
+      "frequency": "LOW in IS-11 (2/45=4%, only MERGE-class GT), MEDIUM cross-framework (Phase3: 79/1299=6.08%)",
+      "observed_failures": {
+        "CC-01a": "FIG. 9: + Left: over-split (P4 8pt threshold < real gap 18.11pt)",
+        "CC-01b": "FIG. 12: + Distribution... over-split (gap 10.47pt)"
+      },
+      "mechanism_classification": {
+        "primary": "A_perception_missing (no caption association evidence class)",
+        "secondary": "E_interpretation_decision_logic_failure (P4 frozen 8pt merge threshold < real caption gap 10.5-18.1pt → stays AMBIGUOUS)"
+      },
+      "root_cause_chain": "caption label↔continuation gap (10.5-18.1pt) > P4 frozen 8pt → not merged → AMBIGUOUS → no caption association evidence class queries the (8,50] gap band + column-first alignment + FIG-prefix",
+      "evidence_sufficient": "YES (CC-01 microscope: same_y_band + h_gap∈(8,50] + left_alignment x≈85.04 + NTB presence — all expressible)",
+      "reusability": "MEDIUM (cross-framework 6.08% prevalence observed; single-doc concentrated in IS-11)"
+    },
+
+    "FLOWCHART": {
+      "evidence_status": "INSUFFICIENT_EVIDENCE",
+      "frequency": "NONE (no cases in any corpus)",
+      "observed_failures": {},
+      "mechanism_classification": {"primary": "A_perception_missing (C4 Graphic Reconstruction not started; vector drawing not on any surface)"},
+      "root_cause_chain": "UNKNOWN — no cases observed",
+      "evidence_sufficient": "INSUFFICIENT_EVIDENCE",
+      "reusability": "UNKNOWN"
+    },
+
+    "READING_ORDER": {
+      "evidence_status": "PARTIAL (mechanism observed, frequency NOT YET QUANTIFIED)",
+      "frequency": "UNKNOWN (CC-04 mechanism instance on efficientnet p5; no chunk-level quantification)",
+      "observed_failures": {
+        "CC-04": "same_y_band y≈161.95 同时含左栏正文 (x139-182) 与右栏表格 (x322-523) → 伪行混合"
+      },
+      "mechanism_classification": {
+        "primary": "B_perception_incorrect (P2 same_y_band ignores x → cross-column mixing)",
+        "secondary": "D_evidence_organization_failure (P5 column groups exist but not joined with band)"
+      },
+      "root_cause_chain": "band = 'row' assumption → same_y_band members form double-x-cluster (139-182 vs 322-523) → any band-based reasoning mixes two columns → CC-02 over-merge happens here",
+      "evidence_sufficient": "YES (P5 column groups / center_x cluster directly observable)",
+      "reusability": "MEDIUM-HIGH (affects all two-column docs; frequency UNCERTAIN)"
+    },
+
+    "MULTI_COLUMN": {
+      "evidence_status": "PARTIAL (same as READING_ORDER; CC-04)",
+      "frequency": "UNKNOWN",
+      "observed_failures": {"CC-04": "见 READING_ORDER（同一机制实例）"},
+      "mechanism_classification": {"primary": "D_evidence_organization_failure (P5 column groups not joined with P2 band)"},
+      "root_cause_chain": "P2 band 与 P5 列结构未联合使用",
+      "evidence_sufficient": "YES",
+      "reusability": "MEDIUM-HIGH"
+    },
+
+    "NUMBERING": {
+      "evidence_status": "OBSERVED",
+      "frequency": "LOW (CC-02: 1/45 IS-11; P7 FP: 3/69 numeric cell false-trigger)",
+      "observed_failures": {
+        "CC-02": "'4' (行号列) + 'MBConv6,k5x5' (同行cell) → IS-01∧IS-02 → 误 MERGE (唯一 IS-11 FP)",
+        "P7_FP": "IND-AMB-247('121'+'40mM Hepes'), 223('5.'+'SARS-CoV-2'), 235('6.'+'RNA')"
+      },
+      "mechanism_classification": {
+        "primary": "E_interpretation_decision_logic_failure (IS-01 false-triggers on table cell values that look like numbered list items)",
+        "secondary": "D_evidence_organization_failure (left_alignment_group with 7 numeric neighbors exists but IS-11 never queries it)"
+      },
+      "root_cause_chain": "numeric atom '4' has full left_alignment_group (7 numeric neighbors equidistant) proving column membership, but IS-11 evidence class never queries it → IS-01 sees '4' as numeric prefix → MERGE",
+      "evidence_sufficient": "YES (CC-02 microscope: left_alignment_group 10 members, same_x_band 16 members — 100% expressible)",
+      "reusability": "LOW (PH-02 whole-group predicate route REJECTED: 15/15 params failed; C2 REQUIRES_REDESIGN; patch accumulation HIGH)"
+    },
+
+    "LIST": {
+      "evidence_status": "INSUFFICIENT_EVIDENCE",
+      "frequency": "NONE (no independent LIST category; DIAGRAM_LIST_ITEM 1例 PARTIAL)",
+      "observed_failures": {},
+      "mechanism_classification": {"primary": "G_unknown"},
+      "root_cause_chain": "UNKNOWN",
+      "evidence_sufficient": "INSUFFICIENT_EVIDENCE",
+      "reusability": "UNKNOWN"
+    },
+
+    "HEADER_FOOTER": {
+      "evidence_status": "OBSERVED (cross-frame; in-frame NOT YET QUANTIFIED)",
+      "frequency": "0 in IS-11 frame; Phase3 incident: 30/54 in_table samples contain header FP",
+      "observed_failures": {
+        "CC-03": "PH3-ASTRO-001 p6: 'P H Y S I C A L / R E V I E W' letter-spaced header → line detector判为 table row"
+      },
+      "mechanism_classification": {
+        "primary": "B_perception_incorrect (header enters table/structure evidence as pseudo-row)",
+        "secondary": "A_perception_missing (no header/footer detector; P6 PAGE_TOP_REGION exists but not used as exclusion)"
+      },
+      "root_cause_chain": "page-top y-position + cross-page repetition + letter-spaced morphology — all three observable, but no evidence class combines them to exclude header from table/body structure",
+      "evidence_sufficient": "YES (CC-03 microscope: 页顶 y 21.96-39.56 + P7.1 REPEATS_ACROSS_PAGES + letter-spaced —三元组全部可表达)",
+      "reusability": "MEDIUM (only cross-corpus mechanism; Phase3 frame; in-frame frequency NOT YET QUANTIFIED)"
+    },
+
+    "CROSS_PAGE": {
+      "evidence_status": "INSUFFICIENT_EVIDENCE",
+      "frequency": "NONE (CC-06 blank; all GT/case single-page sampling)",
+      "observed_failures": {},
+      "mechanism_classification": {"primary": "G_unknown (P7.1 REPEATS_ACROSS_PAGES exists but no cases calibrated)"},
+      "root_cause_chain": "UNKNOWN — observation gap",
+      "evidence_sufficient": "PARTIAL (P2/P7.1 relation exists, but no real cases)",
+      "reusability": "UNKNOWN"
+    },
+
+    "EQUATION": {
+      "evidence_status": "INSUFFICIENT_EVIDENCE",
+      "frequency": "NONE (no equation cases; equations appear as multicol fragments contaminating TLD)",
+      "observed_failures": {},
+      "mechanism_classification": {"primary": "A_perception_missing (no equation detector)"},
+      "root_cause_chain": "UNKNOWN; equations split into fragments (depth: + d + = + α + φ) → TLD sees as multicol anchor → contamination source",
+      "evidence_sufficient": "INSUFFICIENT_EVIDENCE",
+      "reusability": "UNKNOWN"
+    },
+
+    "MIXED_LAYOUT": {
+      "evidence_status": "OBSERVED",
+      "frequency": "MEDIUM (TLD failure cases: small table on mixed-content page)",
+      "observed_failures": {
+        "AMB-135/262/313": "table 11-15% of page + formulas + prose-with-citations → page-global band contamination"
+      },
+      "mechanism_classification": {
+        "primary": "B_perception_incorrect (TLD band no locality constraint)",
+        "secondary": "D_evidence_organization_failure (no locality pre-filter feeding TLD)"
+      },
+      "root_cause_chain": "见 TABLE root_cause_chain（同一机制：page-global contamination is a mixed-layout phenomenon）",
+      "evidence_sufficient": "YES",
+      "reusability": "MEDIUM (affects any small-table-on-mixed-page; 2-3 docs observed)"
+    },
+
+    "OTHER": {
+      "evidence_status": "OBSERVED (P7 only; not in IS-11)",
+      "frequency": "P7: BODY_TEXT_CONTINUATION 27/69, REFERENCE_LIST_ENTRY 16/69, OTHER_AMBIGUOUS 9/69",
+      "observed_failures": {
+        "P7_FN_BODY_TEXT": "IND-AMB-201 ('al.,'+'2025).'), IND-AMB-200 ('et'+'al.,') — IS-01/IS-02 both False → default KEEP → GT=MERGE (reference/citation continuation)",
+        "P7_REFERENCE": "16 cases — reference list boundary, IS-11 has 0",
+        "SC-05_period_capital": "period+capital → KEEP_SEPARATE rule; 38.5% FP on P7 (5 FP: IND-AMB-003/002/052/033/049); 3 TP (008/005/134)"
+      },
+      "mechanism_classification": {
+        "primary": "F_genuine_semantic_boundary (reference/citation continuation requires semantic judgment; period+capital is a weak proxy)",
+        "secondary": "E_interpretation_decision_logic_failure (SC-05 frozen rule over-applies on P7)"
+      },
+      "root_cause_chain": "IS-01/IS-02 binary heuristics cannot detect reference/citation continuation → default KEEP → FN; or SC-05 period+capital rule over-triggers → FP",
+      "evidence_sufficient": "PARTIAL (period/capital detectable but insufficient; citation format requires semantic boundary)",
+      "reusability": "MEDIUM (cross-doc: P7 27 body + 16 reference; but genuine semantic boundary = Human-owned per IS-10 frozen)"
+    }
+  },
+
+  "failure_mechanism_summary": {
+    "A_perception_missing": {
+      "structures": ["FIGURE", "CAPTION", "FLOWCHART", "EQUATION", "HEADER_FOOTER(secondary)"],
+      "verdict": "Visual branch 完全缺失；figure/caption/flowchart/equation 无 detector。这是比 TLD 失败更根本的缺口，只是因为没有真实案例暴露而被低估。"
+    },
+    "B_perception_incorrect": {
+      "structures": ["TABLE(71% miss)", "READING_ORDER(column-blind)", "HEADER_FOOTER(pseudo-row)", "MIXED_LAYOUT"],
+      "verdict": "TLD page-global contamination 是当前唯一被真实数据量化的 perception-incorrect 失败。"
+    },
+    "C_evidence_representation_loss": {
+      "structures": ["TABLE(human-side: AMB-032 TLD cell info not exposed to human)"],
+      "verdict": "Representation 本身 OK（TLD data model 可表达 different_cell, DCE-06 Case B）。Loss 发生在 Organization 层（未暴露给 human/consumer）。"
+    },
+    "D_evidence_organization_failure": {
+      "structures": ["TABLE(no P2 fallback)", "CAPTION(no evidence class queries gap-band)", "NUMBERING(left_alignment_group never queried)", "MULTI_COLUMN(band×column not joined)", "FIGURE(has_fig_prefix not computed)"],
+      "verdict": "共同根因 [INFERRED]: 不是 observation 缺失，而是'证据查询缺口'。判别性证据已存在于冻结 P1/P2/P5/P7.1，现有 evidence classes 只查询极小子集。这是最高频的失败层。"
+    },
+    "E_interpretation_decision_logic_failure": {
+      "structures": ["NUMBERING(IS-01 false-trigger)", "TABLE(secondary)", "OTHER(SC-05 over-apply)"],
+      "verdict": "IS-01/IS-02 binary heuristics + SC-05 frozen rule 在 table cell / reference 上 false-trigger。决策逻辑问题，非感知问题。"
+    },
+    "F_genuine_semantic_boundary": {
+      "structures": ["OTHER(reference/citation continuation)", "period+capital adjudicated cases (AMB-375/005/418/519)"],
+      "verdict": "IS-10 冻结为 HUMAN_OWNED。这些是真正需要 Human semantic judgment 的边界，但当前 selection 把大量 Type A（machine 已正确）也送给人审 → 87% 低价值。"
+    },
+    "G_unknown": {
+      "structures": ["CROSS_PAGE", "FLOWCHART", "EQUATION", "LIST"],
+      "verdict": "观察空白。无真实案例。不得补数据伪造。"
+    }
+  },
+
+  "cross_structure_common_root_cause": {
+    "finding": "D_evidence_organization_failure 是跨结构共同根因 [INFERRED, 4份审计一致]",
+    "evidence": [
+      "document_perception_failure_analysis: '不是 observation 缺失，而是证据查询缺口'",
+      "structural_object_failure_decomposition: 'D (Consumer/Integration Gap) common across IS-11, H2, M-B'",
+      "dce06: 'P2 provides ALL L1/L2 geometry; failure in TLD organization'",
+      "slicing_failure_impact_ranking: M-B verdict '缺的只是区域可用性'"
+    ],
+    "implication": "下一阶段不应全面重写 Parser 或新增 Observation，而应优先打通'已有证据 → consumer/human 可用结构'的组织层。"
+  },
+
+  "governance_gate": {
+    "DICE_CORE_MODIFICATION": "NO",
+    "P1_P7_MODIFICATION": "NO",
+    "TLD_MODIFICATION": "NO",
+    "GT_MODIFICATION": "NO",
+    "FROZEN_BASELINE": "INTACT (drift=0/7, TLD=022f5c21, GT=7349963d)",
+    "NEW_OBSERVATION_NEEDED": "NO (4 audits一致)",
+    "LLM_NEEDED": "NO (all failures deterministic/structural)",
+    "IMPLEMENTATION_AUTHORIZED": "FALSE",
+    "STOP": "TRUE"
+  }
+}

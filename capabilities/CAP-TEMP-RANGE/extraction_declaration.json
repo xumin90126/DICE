@@ -1,0 +1,11 @@
+{
+  "capability_id": "CAP-TEMP-RANGE",
+  "attribute_name": "storage_temperature",
+  "strategy": {
+    "kind": "deterministic_regex",
+    "pattern": "(?P<value>-?\\d+(?:\\.\\d+)?(?:\\s*[-~]\\s*\\d+(?:\\.\\d+)?)?)\\s*(?P<unit>\\u00b0C|\\u2103)",
+    "capture_value_group": "value",
+    "capture_unit_group": "unit",
+    "unit_normalization": "unit_canon"
+  }
+}

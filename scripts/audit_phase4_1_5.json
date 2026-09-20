@@ -1,0 +1,94 @@
+{
+  "audit": "Phase 4.1.5 Zero Hardcoded Routing",
+  "total_violations": 9,
+  "results": [
+    {
+      "file": "matching",
+      "path": "C:\\Users\\10811\\cow\\dice\\runtime\\matching.py",
+      "total_lines": 571,
+      "violation_count": 0,
+      "violations": [],
+      "status": "CLEAN"
+    },
+    {
+      "file": "ranking",
+      "path": "C:\\Users\\10811\\cow\\dice\\runtime\\ranking.py",
+      "total_lines": 424,
+      "violation_count": 0,
+      "violations": [],
+      "status": "CLEAN"
+    },
+    {
+      "file": "executor",
+      "path": "C:\\Users\\10811\\cow\\dice\\runtime\\executor.py",
+      "total_lines": 704,
+      "violation_count": 2,
+      "violations": [
+        {
+          "line": 100,
+          "pattern": "hardcoded capability_id routing",
+          "content": "if capability_id == \"CAP-COMP-TABLE\":"
+        },
+        {
+          "line": 100,
+          "pattern": "CAP- prefixed hardcoding",
+          "content": "if capability_id == \"CAP-COMP-TABLE\":"
+        }
+      ],
+      "status": "VIOLATIONS_FOUND"
+    },
+    {
+      "file": "nodes",
+      "path": "C:\\Users\\10811\\cow\\dice\\graph\\nodes.py",
+      "total_lines": 589,
+      "violation_count": 1,
+      "violations": [
+        {
+          "line": 241,
+          "pattern": "doc_class equality check",
+          "content": "\"if doc_class == 'plasmid_extraction' then ...\""
+        }
+      ],
+      "status": "VIOLATIONS_FOUND"
+    },
+    {
+      "file": "selector",
+      "path": "C:\\Users\\10811\\cow\\dice\\runtime\\selector.py",
+      "total_lines": 354,
+      "violation_count": 6,
+      "violations": [
+        {
+          "line": 191,
+          "pattern": "hardcoded pattern_id routing",
+          "content": "if pattern.id == \"PAT-COMP-TABLE-COLLAPSE\":"
+        },
+        {
+          "line": 239,
+          "pattern": "hardcoded pattern_id routing",
+          "content": "if pattern.id == \"PAT-COMP-NAME-DENSITY\":"
+        },
+        {
+          "line": 269,
+          "pattern": "hardcoded pattern_id routing",
+          "content": "if pattern.id == \"PAT-COMP-QUANTITY-PAIRING\":"
+        },
+        {
+          "line": 191,
+          "pattern": "PAT- prefixed hardcoding",
+          "content": "if pattern.id == \"PAT-COMP-TABLE-COLLAPSE\":"
+        },
+        {
+          "line": 239,
+          "pattern": "PAT- prefixed hardcoding",
+          "content": "if pattern.id == \"PAT-COMP-NAME-DENSITY\":"
+        },
+        {
+          "line": 269,
+          "pattern": "PAT- prefixed hardcoding",
+          "content": "if pattern.id == \"PAT-COMP-QUANTITY-PAIRING\":"
+        }
+      ],
+      "status": "VIOLATIONS_FOUND"
+    }
+  ]
+}

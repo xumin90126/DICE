@@ -1,0 +1,876 @@
+{
+  "metadata": {
+    "description": "IS-11 Semantic Ground Truth (Level-2)",
+    "type": "FROZEN semantic ground truth (Stage 3)",
+    "creation_timestamp": "2026-09-09T23:17:17",
+    "total_cases": 45,
+    "merge_count": 2,
+    "keep_separate_count": 43,
+    "level_2_agreed": 41,
+    "level_2_adjudicated": 4,
+    "agreement_rate": 0.9111,
+    "cohens_kappa": 0.4643,
+    "source_sampling_frame": "tmp/is11_independent_sampling_frame.json",
+    "sampling_seed": 20240909,
+    "is11_computed": false,
+    "machine_prediction_used": false,
+    "freeze_status": "FROZEN"
+  },
+  "gt_records": [
+    {
+      "case_id": "IS11-AMB-005",
+      "document_id": "is11_resnet",
+      "page": 1,
+      "text_a": "unsurprising) and then degrades rapidly.",
+      "text_b": "Unexpectedly,",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "MERGE",
+      "reviewer_a_rationale": "text_a ends a sentence with a period after 'degrades rapidly' and text_b starts a new sentence with 'Unexpectedly,'; these are two different sentences in running prose, not parts of the same semantic unit.",
+      "reviewer_b_rationale": "Both fragments are from the same paragraph in the introduction discussing the degradation problem; 'degrades rapidly.' ends one sentence and 'Unexpectedly,' begins the next within the same continuous text flow, not a structural break.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_ADJUDICATED",
+      "adjudication_rationale": "Text_a ends with sentence-ending punctuation and text_b starts with capital — likely separate sentences.",
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-024",
+      "document_id": "is11_resnet",
+      "page": 6,
+      "text_a": "28.54",
+      "text_b": "10.02",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In the error-rate table, '28.54' is the top-1 error and '10.02' is the top-5 error for plain-34, occupying two different table columns.",
+      "reviewer_b_rationale": "'28.54' (top-1 err.) and '10.02' (top-5 err.) are values in different columns of the same table row for plain-34; they belong to distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-032",
+      "document_id": "is11_resnet",
+      "page": 6,
+      "text_a": "-",
+      "text_b": "8.43",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 3, '-' is the missing top-1 error and '8.43' is the top-5 error for VGG, two distinct table cells in different columns.",
+      "reviewer_b_rationale": "'-' (top-1 err.) and '8.43' (top-5 err.) are values in different columns of the VGG row in Table 3; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-034",
+      "document_id": "is11_resnet",
+      "page": 6,
+      "text_a": "21.59",
+      "text_b": "5.71",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "'21.59' and '5.71' are the top-1 and top-5 error values for a ResNet row, residing in two separate table columns.",
+      "reviewer_b_rationale": "'21.59' and '5.71' are numeric values in different table cells, representing different error metrics in adjacent columns of a results table.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-052",
+      "document_id": "is11_resnet",
+      "page": 7,
+      "text_a": "0.46M",
+      "text_b": "7.51",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 6, '0.46M' is the #params column and '7.51' is the error (%) column for ResNet-32, two different table columns.",
+      "reviewer_b_rationale": "'0.46M' (# params) and '7.51' (error) are values in different columns of the ResNet-32 row in the CIFAR-10 results table.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-064",
+      "document_id": "is11_resnet",
+      "page": 8,
+      "text_a": "training data",
+      "text_b": "07+12",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "'training data' is a column header label and '07+12' is a data value in an adjacent column; they belong to different table cells.",
+      "reviewer_b_rationale": "'training data' is a column header and '07+12' is a sub-header/value in a different cell of Table 7; they are structurally separate table elements.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-074",
+      "document_id": "is11_resnet",
+      "page": 8,
+      "text_a": "41.5",
+      "text_b": "21.2",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 8, '41.5' is the mAP@.5 value and '21.2' is the mAP@[.5,.95] value for VGG-16, two separate table columns.",
+      "reviewer_b_rationale": "'41.5' (mAP@.5) and '21.2' (mAP@[.5,.95]) are values in different columns of the VGG-16 row in Table 8; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-101",
+      "document_id": "is11_resnet",
+      "page": 11,
+      "text_a": "-",
+      "text_b": "43.9",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "'-' is a missing-value placeholder in one table cell and '43.9' is a numeric metric in an adjacent cell, belonging to different columns.",
+      "reviewer_b_rationale": "'-' and '43.9' are values in different table cells representing different metrics or different rows in a COCO results table.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-102",
+      "document_id": "is11_resnet",
+      "page": 11,
+      "text_a": "our single model (ILSVRC’15)",
+      "text_b": "60.5",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "'our single model (ILSVRC'15)' is a method/system label in one column and '60.5' is a numeric result metric in an adjacent column; different table cells.",
+      "reviewer_b_rationale": "'our single model (ILSVRC'15)' is a row label and '60.5' is a numeric value in a different cell of the same table row.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-130",
+      "document_id": "is11_efficientnet",
+      "page": 5,
+      "text_a": "Resolution",
+      "text_b": "#Channels",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "'Resolution' and '#Channels' are two distinct column headers in the Table 1 header row, representing different table columns.",
+      "reviewer_b_rationale": "'Resolution' and '#Channels' are two distinct column headers in Table 1 of the EfficientNet architecture table; they represent different attributes.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-135",
+      "document_id": "is11_efficientnet",
+      "page": 5,
+      "text_a": "4",
+      "text_b": "MBConv6, k5x5",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 1, '4' is the stage index and 'MBConv6, k5x5' is the operator type, two separate columns in the architecture table.",
+      "reviewer_b_rationale": "'4' (stage index) and 'MBConv6, k5x5' (operator) are values in different columns of the same row in Table 1; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-163",
+      "document_id": "is11_efficientnet",
+      "page": 6,
+      "text_a": "93.9%",
+      "text_b": "34M",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 2, '93.9%' is the Top-5 accuracy and '34M' is the #Params for DenseNet-264, two different table columns.",
+      "reviewer_b_rationale": "'93.9%' (Top-5 Acc.) and '34M' (#Params) are values in different columns of the DenseNet-264 row in Table 2; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-168",
+      "document_id": "is11_efficientnet",
+      "page": 6,
+      "text_a": "3.0x",
+      "text_b": "5.7B",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 2, '3.0x' is the param ratio-to-EfficientNet and '5.7B' is the #FLOPs for Inception-v3, two separate table columns.",
+      "reviewer_b_rationale": "'3.0x' (param ratio) and '5.7B' (#FLOPs) are values in different columns of the Inception-v3 row in Table 2; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-198",
+      "document_id": "is11_efficientnet",
+      "page": 6,
+      "text_a": "82.9%",
+      "text_b": "96.2%",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "'82.9%' is the Top-1 accuracy and '96.2%' is the Top-5 accuracy in Table 2, two distinct table columns for the same model row.",
+      "reviewer_b_rationale": "'82.9%' (Top-1 Acc.) and '96.2%' (Top-5 Acc.) are values in different columns of a model row in Table 2; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-205",
+      "document_id": "is11_efficientnet",
+      "page": 6,
+      "text_a": "96.5%",
+      "text_b": "155M",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 2, '96.5%' is the Top-5 accuracy and '155M' is the #Params for AmoebaNet-C, two different table columns.",
+      "reviewer_b_rationale": "'96.5%' (Top-5 Acc.) and '155M' (#Params) are values in different columns of the AmoebaNet-C row in Table 2; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-218",
+      "document_id": "is11_efficientnet",
+      "page": 6,
+      "text_a": "1.2B",
+      "text_b": "76.8%",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "'1.2B' is a #FLOPs value and '76.8%' is a Top-1 accuracy; these belong to different table columns (and likely different rows), not the same cell.",
+      "reviewer_b_rationale": "'1.2B' (#FLOPs) and '76.8%' (accuracy) are values in different columns of a model row in the ImageNet performance table; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-257",
+      "document_id": "is11_efficientnet",
+      "page": 7,
+      "text_a": "Gpipe",
+      "text_b": "91.3%",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 5, 'Gpipe' is a model name and '91.3%' is its accuracy value, occupying two separate table columns.",
+      "reviewer_b_rationale": "'Gpipe' (model name) and '91.3%' (accuracy) are values in different columns of the CIFAR-100 row in Table 5; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-261",
+      "document_id": "is11_efficientnet",
+      "page": 7,
+      "text_a": "Inception-v4",
+      "text_b": "81.8%",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 5, 'Inception-v4' is a model name and '81.8%' is its accuracy value, two distinct table columns.",
+      "reviewer_b_rationale": "'Inception-v4' (model name) and '81.8%' (accuracy) are values in different columns of the Birdsnap row in Table 5; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-262",
+      "document_id": "is11_efficientnet",
+      "page": 7,
+      "text_a": "41M",
+      "text_b": "EfﬁcientNet-B5",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "'41M' is the #Param value for Inception-v4 in the comparison column group and 'EfficientNet-B5' is a model name in the adjacent 'Our Model' column group; different table cells.",
+      "reviewer_b_rationale": "'41M' (#Param for Inception-v4) and 'EfficientNet-B5' (Our Model name) are values in different columns of the Birdsnap row; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-267",
+      "document_id": "is11_efficientnet",
+      "page": 7,
+      "text_a": "83.6%",
+      "text_b": "556M",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 5, '83.6%' is the accuracy and '556M' is the #Params for GPipe, two separate table columns.",
+      "reviewer_b_rationale": "'83.6%' (accuracy) and '556M' (#Param) are values in different columns of the GPipe row in Table 5; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-279",
+      "document_id": "is11_efficientnet",
+      "page": 7,
+      "text_a": "EfﬁcientNet-B5",
+      "text_b": "98.5%",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "'EfficientNet-B5' is a model name and '98.5%' is its accuracy value in Table 5, two distinct table columns.",
+      "reviewer_b_rationale": "'EfficientNet-B5' (Our Model name) and '98.5%' (accuracy) are values in different columns of the Flowers row in Table 5; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-313",
+      "document_id": "is11_efficientnet",
+      "page": 8,
+      "text_a": "Test Size",
+      "text_b": "#Classes",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "'Test Size' and '#Classes' are two different column headers in the Table 6 header row, representing separate table columns.",
+      "reviewer_b_rationale": "'Test Size' and '#Classes' are two distinct column headers in Table 6; they represent different dataset attributes.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-318",
+      "document_id": "is11_efficientnet",
+      "page": 8,
+      "text_a": ")",
+      "text_b": "47,386",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "')' is the closing parenthesis of the dataset citation 'Birdsnap (Berg et al., 2014)' in the Dataset column, while '47,386' is the Train Size value in an adjacent column; different table cells.",
+      "reviewer_b_rationale": "')' is the closing parenthesis of the dataset name cell 'Birdsnap (Berg et al., 2014)' and '47,386' is the Train Size value in a different cell of Table 6.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-321",
+      "document_id": "is11_efficientnet",
+      "page": 8,
+      "text_a": "8,144",
+      "text_b": "8,041",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 6 (Transfer Learning Datasets), '8,144' is the Train Size and '8,041' is the Test Size for Stanford Cars — two different table cells/columns in the same row.",
+      "reviewer_b_rationale": "'8,144' (Train Size) and '8,041' (Test Size) are values in different columns of the Stanford Cars row in Table 6; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-323",
+      "document_id": "is11_efficientnet",
+      "page": 8,
+      "text_a": "2,040",
+      "text_b": "6,149",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 6, '2,040' is the Train Size and '6,149' is the Test Size for Flowers — two different table cells/columns.",
+      "reviewer_b_rationale": "'2,040' (Train Size) and '6,149' (Test Size) are values in different columns of the Flowers row in Table 6; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-346",
+      "document_id": "is11_efficientnet",
+      "page": 9,
+      "text_a": "83.95",
+      "text_b": "84.26",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "83.95 and 84.26 are two distinct accuracy values (differ by only 0.31, too small for a top-1/top-5 pair) representing separate model results in adjacent table cells.",
+      "reviewer_b_rationale": "'83.95' and '84.26' are numeric values in different table cells of an appendix results table; they represent distinct data points in adjacent cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-350",
+      "document_id": "is11_efficientnet",
+      "page": 9,
+      "text_a": "80.16",
+      "text_b": "81.72",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "80.16 and 81.72 are two distinct accuracy values for separate models, occupying different table cells in the appendix results table.",
+      "reviewer_b_rationale": "'80.16' and '81.72' are numeric values in different table cells of an appendix results table; they represent distinct data points in adjacent cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-375",
+      "document_id": "is11_med_001",
+      "page": 6,
+      "text_a": "[23].",
+      "text_b": "Each",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "MERGE",
+      "reviewer_a_rationale": "'[23].' is the terminal fragment of the sentence ending 'developed by Rupp et al. [23].', while 'Each' begins the next sentence 'Each molecule is represented...' — a sentence boundary, hence different semantic units.",
+      "reviewer_b_rationale": "'[23].' and 'Each' are in the same paragraph of body text; the citation reference ends one sentence and 'Each' begins the next sentence within the same continuous text flow about Coulomb matrices.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_ADJUDICATED",
+      "adjudication_rationale": "Text_a ends with sentence-ending punctuation and text_b starts with capital — likely separate sentences.",
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-380",
+      "document_id": "is11_med_001",
+      "page": 13,
+      "text_a": "RBF",
+      "text_b": "Matérn",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In the FIG. 4 kernel-construction diagram, 'RBF' and 'Matérn' are two distinct base-kernel list items in Layer 1, not a single phrase.",
+      "reviewer_b_rationale": "'RBF' and 'Matérn' are different kernel names listed as separate items in the FIG. 4 kernel construction diagram; they are distinct list entries, not parts of the same text unit.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-401",
+      "document_id": "is11_med_001",
+      "page": 19,
+      "text_a": "0.70",
+      "text_b": "0.75",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "0.70 and 0.75 are two adjacent axis tick labels on the AUC axis of FIG. 8 — separate tick marks, not one label.",
+      "reviewer_b_rationale": "'0.70' and '0.75' are different axis tick labels on the AUC axis of FIG. 8; they are distinct labeled values on the figure, not parts of the same text unit.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-407",
+      "document_id": "is11_med_001",
+      "page": 19,
+      "text_a": "1.35",
+      "text_b": "1.40",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "1.35 and 1.40 are two adjacent axis tick labels on the fC axis of FIG. 8 — separate tick marks.",
+      "reviewer_b_rationale": "'1.35' and '1.40' are different axis tick labels on the fC axis of FIG. 8; they are distinct labeled values, not parts of the same text unit.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-409",
+      "document_id": "is11_med_001",
+      "page": 19,
+      "text_a": "0.65",
+      "text_b": "0.70",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "0.65 and 0.70 are two adjacent axis tick labels on the fO axis of FIG. 8 — separate tick marks.",
+      "reviewer_b_rationale": "'0.65' and '0.70' are different axis tick labels on the fO axis of FIG. 8; they are distinct labeled values, not parts of the same text unit.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-414",
+      "document_id": "is11_med_001",
+      "page": 20,
+      "text_a": "FIG. 9:",
+      "text_b": "Left:",
+      "reviewer_a_label": "MERGE",
+      "reviewer_b_label": "MERGE",
+      "reviewer_a_rationale": "'FIG. 9:' and 'Left:' are both prefix fragments of the same figure caption ('FIG. 9: Left: BIC values for models with different kernels. Right: ...'), forming one continuous caption unit.",
+      "reviewer_b_rationale": "'FIG. 9:' and 'Left:' are parts of the same figure caption; the figure label and its sub-description ('Left: BIC values...') form one continuous caption text that was split by extraction.",
+      "final_label": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-418",
+      "document_id": "is11_med_001",
+      "page": 20,
+      "text_a": "), but with the different kernels illustrated in the left panel.",
+      "text_b": "The",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "MERGE",
+      "reviewer_a_rationale": "'...illustrated in the left panel.' ends one sentence, while 'The' starts the next sentence 'The shaded area is the standard deviation...' — a sentence boundary between different semantic units.",
+      "reviewer_b_rationale": "'...left panel.' and 'The' are in the same figure caption paragraph; one sentence ends and the next begins ('The shaded area...') within the same continuous caption text flow.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_ADJUDICATED",
+      "adjudication_rationale": "Text_a ends with sentence-ending punctuation and text_b starts with capital — likely separate sentences.",
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-422",
+      "document_id": "is11_med_001",
+      "page": 24,
+      "text_a": "FIG. 12:",
+      "text_b": "Distribution of errors for predictions of entropy (upper) and ZPVE (lower)",
+      "reviewer_a_label": "MERGE",
+      "reviewer_b_label": "MERGE",
+      "reviewer_a_rationale": "'FIG. 12:' and 'Distribution of errors for predictions of entropy (upper) and ZPVE (lower)' are the label and body of the same figure caption, forming one continuous caption unit.",
+      "reviewer_b_rationale": "'FIG. 12:' and 'Distribution of errors for predictions of entropy (upper) and ZPVE (lower)' are parts of the same figure caption; the label and description form one continuous caption text that was split by extraction.",
+      "final_label": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-440",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "700M",
+      "text_b": "0.80 (2.60x)",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 1, '700M' is the Size column value and '0.80 (2.60x)' is the Memory column value — two different cells/columns in the BitNet b1.58 row.",
+      "reviewer_b_rationale": "'700M' (Size) and '0.80 (2.60x)' (Memory) are values in different columns of the BitNet b1.58 row in Table 1; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-457",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "Models",
+      "text_b": "Size",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "'Models' and 'Size' are two adjacent column headers in Table 1/Table 2 — different columns.",
+      "reviewer_b_rationale": "'Models' and 'Size' are two distinct column headers in Table 2; they represent different attributes of the benchmark results table.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-462",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "WGe",
+      "text_b": "Avg.",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "'WGe' and 'Avg.' are two adjacent column headers in Table 2 — different columns.",
+      "reviewer_b_rationale": "'WGe' and 'Avg.' are two distinct column headers in Table 2; they represent different evaluation benchmarks, not parts of the same header.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-467",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "37.0",
+      "text_b": "60.0",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 2, '37.0' is the HS score and '60.0' is the BQ score for LLaMA 700M — two different cells/columns.",
+      "reviewer_b_rationale": "'37.0' (HS) and '60.0' (BQ) are values in different columns of the LLaMA LLM 700M row in Table 2; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-483",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "23.5",
+      "text_b": "38.5",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 2, '23.5' is the ARCc score and '38.5' is the HS score for LLaMA 1.3B — two different cells/columns.",
+      "reviewer_b_rationale": "'23.5' (ARCc) and '38.5' (HS) are values in different columns of the LLaMA LLM 1.3B row in Table 2; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-505",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "61.4",
+      "text_b": "28.3",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 2, '61.4' is the ARCe score and '28.3' is the ARCc score for BitNet 3B — two different cells/columns.",
+      "reviewer_b_rationale": "'61.4' (ARCe) and '28.3' (ARCc) are values in different columns of the BitNet b1.58 3B row in Table 2; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-514",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "44.2",
+      "text_b": "63.5",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "In Table 2, '44.2' is the HS score and '63.5' is the BQ score for BitNet 3.9B — two different cells/columns.",
+      "reviewer_b_rationale": "'44.2' (HS) and '63.5' (BQ) are values in different columns of the BitNet b1.58 3.9B row in Table 2; they are distinct table cells.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-519",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "facto backbone for open-source LLMs.",
+      "text_b": "To embrace the open-source community, our design",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "MERGE",
+      "reviewer_a_rationale": "'facto backbone for open-source LLMs.' ends the sentence about LLaMA architecture, while 'To embrace the open-source community, our design' begins the next sentence — a sentence boundary between different semantic units.",
+      "reviewer_b_rationale": "'facto backbone for open-source LLMs.' and 'To embrace the open-source community, our design' are in the same paragraph; one sentence ends and the next begins within the same continuous text flow under the 'LLaMA-alike Components' heading.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_ADJUDICATED",
+      "adjudication_rationale": "Text_a ends with sentence-ending punctuation and text_b starts with capital — likely separate sentences.",
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-522",
+      "document_id": "is11_cs_001",
+      "page": 4,
+      "text_a": "Size",
+      "text_b": "Max Batch Size",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "'Size' and 'Max Batch Size' are two adjacent column headers in Table 3 — different columns.",
+      "reviewer_b_rationale": "'Size' and 'Max Batch Size' are two distinct column headers in Table 3; they represent different attributes of the throughput comparison table.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    },
+    {
+      "case_id": "IS11-AMB-530",
+      "document_id": "is11_cs_001",
+      "page": 5,
+      "text_a": "PIQA",
+      "text_b": "SciQ",
+      "reviewer_a_label": "KEEP_SEPARATE",
+      "reviewer_b_label": "KEEP_SEPARATE",
+      "reviewer_a_rationale": "'PIQA' and 'SciQ' are two adjacent benchmark column headers in Table 4 — different columns.",
+      "reviewer_b_rationale": "'PIQA' and 'SciQ' are two distinct column headers in Table 4; they represent different evaluation benchmarks, not parts of the same header.",
+      "final_label": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "adjudication_rationale": null,
+      "provenance": {
+        "sampling_frame": "tmp/is11_independent_sampling_frame.json",
+        "sampling_seed": 20240909,
+        "blind_package": "tmp/is11_blind_review_packages.json"
+      }
+    }
+  ]
+}

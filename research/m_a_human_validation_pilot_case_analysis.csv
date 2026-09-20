@@ -1,0 +1,80 @@
+case_id,document_id,page_reference,case_type,final_judgment,revision_count,fig_prefix,distance_pt,vertical_relation,x_overlap,drawing_extent_present,semantic_boundary_assessment,evidence_sufficiency_assessment,analysis_note
+is11_efficientnet_p4_55_218,is11_efficientnet,4,caption_like,yes,0,True,33.7,below,False,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_efficientnet_p8_55_213,is11_efficientnet,8,caption_like,yes,0,True,19.9,above,False,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_resnet_p6_478_168,is11_resnet,6,ambiguous_fragment,yes,0,True,25.1,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_med_001_p13_85_307,is11_med_001,13,caption_like,yes,0,True,32.1,below,False,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_resnet_p2_87_158,is11_resnet,2,caption_like,yes,0,True,16.1,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_efficientnet_p8_328_261,is11_efficientnet,8,Type_B_negative,yes,0,False,0,inside,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_efficientnet_p3_319_69,is11_efficientnet,3,Type_A_negative,uncertain,0,True,-1,none,False,False,NO (no drawing extent — cannot assess),INSUFFICIENT,Type A: FIG-prefix on page with no aggregated drawing extent. Human cannot assess spatial relation.
+arxiv_2402.18619_p15_498_182,arxiv_2402.18619,15,Type_B_negative,uncertain,0,False,0,inside,False,True,POSSIBLE (non-FIG text near drawing — role ambiguous),PARTIALLY_SUFFICIENT,"Type B: "", with"" near drawing — could be axis label, annotation, or body text. Semantic role unclear."
+is11_med_001_p16_85_484,is11_med_001,16,caption_like,yes,0,True,15.3,below,False,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p14_72_243,arxiv_2402.18619,14,caption_like,yes,0,True,8.5,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p17_184_561,arxiv_2402.18619,17,Type_B_negative,yes,0,False,5.1,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p24_72_646,arxiv_2402.18619,24,caption_like,yes,0,True,53.1,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_resnet_p8_50_328,is11_resnet,8,caption_like,yes,0,True,-265.2,above,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p28_457_234,arxiv_2402.18619,28,ambiguous_fragment,yes,0,True,55.2,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p17_121_581,arxiv_2402.18619,17,caption_like,yes,0,True,24.5,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p18_346_73,arxiv_2402.18619,18,Type_B_negative,uncertain,0,False,-9.7,above,True,True,POSSIBLE (non-FIG text near drawing — role ambiguous),PARTIALLY_SUFFICIENT,"Type B: ""scaling"" near drawing — could be axis label, annotation, or body text. Semantic role unclear."
+is11_efficientnet_p8_307_390,is11_efficientnet,8,caption_like,yes,0,True,-156.6,above,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p28_479_214,arxiv_2402.18619,28,ambiguous_fragment,yes,0,True,35.7,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_efficientnet_p4_66_331,is11_efficientnet,4,Type_A_negative,uncertain,0,True,-1,none,False,False,NO (no drawing extent — cannot assess),INSUFFICIENT,Type A: FIG-prefix on page with no aggregated drawing extent. Human cannot assess spatial relation.
+is11_cs_001_p5_292_225,is11_cs_001,5,Type_B_negative,yes,0,False,7.1,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_efficientnet_p6_511_629,is11_efficientnet,6,ambiguous_fragment,yes,0,True,3.2,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p10_132_629,arxiv_2402.18619,10,ambiguous_fragment,yes,0,True,56.9,below,False,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_resnet_p1_309_305,is11_resnet,1,caption_like,yes,0,True,2.5,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p19_147_496,arxiv_2402.18619,19,ambiguous_fragment,uncertain,0,True,56.4,above,True,True,"YES (standalone ""Fig."" fragment — context suggests in-text reference, not caption)",PARTIALLY_SUFFICIENT,"Ambiguous fragment: ""Fig."" near drawing but context suggests reference (""in Fig. 9"", ""cf. Fig. 3b""). Could be caption or reference — semantic ambiguity."
+arxiv_2402.18619_p28_256_214,arxiv_2402.18619,28,ambiguous_fragment,yes,0,True,35.7,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p12_180_706,arxiv_2402.18619,12,caption_like,yes,0,True,45.7,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p26_327_253,arxiv_2402.18619,26,ambiguous_fragment,uncertain,0,True,38.8,above,True,True,"YES (standalone ""Fig."" fragment — context suggests in-text reference, not caption)",PARTIALLY_SUFFICIENT,"Ambiguous fragment: ""Fig."" near drawing but context suggests reference (""in Fig. 9"", ""cf. Fig. 3b""). Could be caption or reference — semantic ambiguity."
+arxiv_2402.18619_p19_339_297,arxiv_2402.18619,19,ambiguous_fragment,no,0,True,56.8,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: NO
+is11_efficientnet_p8_467_415,is11_efficientnet,8,ambiguous_fragment,no,0,True,25.5,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: NO
+is11_efficientnet_p4_307_448,is11_efficientnet,4,caption_like,yes,0,True,6.9,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p18_432_93,arxiv_2402.18619,18,ambiguous_fragment,yes,0,True,0,inside,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_cs_001_p4_108_225,is11_cs_001,4,caption_like,yes,0,True,7.0,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_resnet_p6_309_157,is11_resnet,6,caption_like,yes,0,True,14.1,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_resnet_p5_50_392,is11_resnet,5,caption_like,yes,0,True,2.7,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p28_207_82,arxiv_2402.18619,28,subfigure_label,yes,0,True,0,inside,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p10_72_581,arxiv_2402.18619,10,caption_like,yes,0,True,8.3,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_resnet_p4_309_134,is11_resnet,4,reference_like,yes,0,True,32.1,above,False,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_efficientnet_p7_55_455,is11_efficientnet,7,caption_like,yes,0,True,-220.6,above,False,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_cs_001_p5_108_225,is11_cs_001,5,caption_like,yes,0,True,7.1,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p28_458_160,arxiv_2402.18619,28,subfigure_label,yes,0,True,0,inside,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_resnet_p4_464_620,is11_resnet,4,ambiguous_fragment,uncertain,0,True,38.4,below,False,True,"YES (standalone ""Fig."" fragment — context suggests in-text reference, not caption)",PARTIALLY_SUFFICIENT,"Ambiguous fragment: ""Fig."" near drawing but context suggests reference (""in Fig. 9"", ""cf. Fig. 3b""). Could be caption or reference — semantic ambiguity."
+is11_med_001_p9_85_321,is11_med_001,9,caption_like,yes,0,True,40.4,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_med_001_p19_85_454,is11_med_001,19,caption_like,yes,0,True,40.0,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_med_001_p20_85_340,is11_med_001,20,caption_like,yes,0,True,34.6,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_med_001_p18_325_655,is11_med_001,18,Type_A_negative,uncertain,0,True,-1,none,False,False,NO (no drawing extent — cannot assess),INSUFFICIENT,Type A: FIG-prefix on page with no aggregated drawing extent. Human cannot assess spatial relation.
+arxiv_2402.18619_p28_152_82,arxiv_2402.18619,28,subfigure_label,yes,1,True,0,inside,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_med_001_p11_85_291,is11_med_001,11,caption_like,yes,0,True,15.3,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_efficientnet_p2_158_372,is11_efficientnet,2,Type_A_negative,uncertain,0,True,-1,none,False,False,NO (no drawing extent — cannot assess),INSUFFICIENT,Type A: FIG-prefix on page with no aggregated drawing extent. Human cannot assess spatial relation.
+is11_efficientnet_p6_307_629,is11_efficientnet,6,caption_like,yes,0,True,3.3,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p18_134_293,arxiv_2402.18619,18,caption_like,yes,0,True,49.4,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_med_001_p15_498_107,is11_med_001,15,Type_A_negative,uncertain,0,True,-1,none,False,False,NO (no drawing extent — cannot assess),INSUFFICIENT,Type A: FIG-prefix on page with no aggregated drawing extent. Human cannot assess spatial relation.
+arxiv_2402.18619_p28_107_234,arxiv_2402.18619,28,caption_like,yes,0,True,55.2,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_efficientnet_p6_79_415,is11_efficientnet,6,Type_B_negative,uncertain,0,False,21.9,above,False,True,NO (text fragment too short to determine role),INSUFFICIENT,"Type B: short text ""omit"" near drawing — cannot determine if axis label, annotation, or body text fragment."
+is11_efficientnet_p1_307_364,is11_efficientnet,1,caption_like,yes,0,True,3.3,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p10_183_252,arxiv_2402.18619,10,ambiguous_fragment,yes,0,True,18.4,above,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_med_001_p15_85_574,is11_med_001,15,caption_like,yes,0,True,46.0,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p19_72_733,arxiv_2402.18619,19,caption_like,yes,0,True,33.1,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_efficientnet_p4_188_461,is11_efficientnet,4,ambiguous_fragment,no,0,True,20.1,below,False,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: NO
+arxiv_2402.18619_p28_152_95,arxiv_2402.18619,28,subfigure_label,yes,0,True,0,inside,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_med_001_p8_85_211,is11_med_001,8,caption_like,yes,0,True,22.9,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_med_001_p23_85_395,is11_med_001,23,caption_like,yes,0,True,15.3,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_resnet_p4_50_633,is11_resnet,4,caption_like,yes,0,True,51.6,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p17_72_184,arxiv_2402.18619,17,caption_like,yes,0,True,8.5,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_resnet_p7_321_545,is11_resnet,7,Type_A_negative,uncertain,0,True,-1,none,False,False,NO (no drawing extent — cannot assess),INSUFFICIENT,Type A: FIG-prefix on page with no aggregated drawing extent. Human cannot assess spatial relation.
+arxiv_2402.18619_p11_72_651,arxiv_2402.18619,11,Type_A_negative,uncertain,0,True,-1,none,False,False,NO (no drawing extent — cannot assess),INSUFFICIENT,Type A: FIG-prefix on page with no aggregated drawing extent. Human cannot assess spatial relation.
+is11_resnet_p4_320_146,is11_resnet,4,ambiguous_fragment,yes,0,True,20.1,above,False,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_resnet_p5_359_225,is11_resnet,5,ambiguous_fragment,no,0,True,17.8,above,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: NO
+is11_resnet_p1_435_316,is11_resnet,1,Type_B_negative,yes,0,False,13.5,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p16_172_568,arxiv_2402.18619,16,caption_like,yes,0,True,30.2,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p15_74_275,arxiv_2402.18619,15,caption_like,yes,0,True,44.4,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p10_72_729,arxiv_2402.18619,10,Type_A_negative,yes,0,True,-1,none,False,False,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+arxiv_2402.18619_p19_72_248,arxiv_2402.18619,19,caption_like,yes,0,True,8.5,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_med_001_p14_85_386,is11_med_001,14,caption_like,yes,0,True,15.3,below,False,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_resnet_p1_412_338,is11_resnet,1,ambiguous_fragment,yes,0,True,35.4,below,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_med_001_p15_244_342,is11_med_001,15,Type_B_negative,uncertain,0,False,33.1,above,True,True,NO (text fragment too short to determine role),INSUFFICIENT,"Type B: short text ""max"" near drawing — cannot determine if axis label, annotation, or body text fragment."
+arxiv_2402.18619_p19_83_745,arxiv_2402.18619,19,ambiguous_fragment,yes,0,True,45.1,below,False,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_med_001_p24_85_572,is11_med_001,24,caption_like,yes,0,True,54.8,below,False,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_cs_001_p1_108_651,is11_cs_001,1,caption_like,yes,0,True,0,inside,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES
+is11_med_001_p15_261_316,is11_med_001,15,ambiguous_fragment,yes,0,True,55.0,above,True,True,N/A (not UNCERTAIN),SUFFICIENT (Human made definitive judgment),Final judgment: YES

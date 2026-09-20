@@ -1,0 +1,3348 @@
+{
+  "test_set": [
+    {
+      "case": "single_column",
+      "type": "synthetic",
+      "spans": 5,
+      "columns": 1,
+      "region_count": 2,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 1,
+      "hierarchy_valid": true,
+      "region_types": {
+        "COLUMN_REGION": 1,
+        "DENSE_REGION": 1
+      },
+      "regions_detail": {
+        "page_number": 1,
+        "page_width": 612.0,
+        "page_height": 792.0,
+        "coord_origin": "PDF_TOP_LEFT",
+        "regions": [
+          {
+            "region_id": "85509a9a387279f1",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ],
+            "source_span_ids": [
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ],
+            "region_geometry": {
+              "bbox": [
+                80,
+                100,
+                300,
+                195
+              ],
+              "width": 220,
+              "height": 95,
+              "center_x": 190.0,
+              "center_y": 147.5
+            },
+            "geometry_summary": {
+              "area": 20900,
+              "span_count": 5,
+              "density": 2.3923,
+              "avg_width": 220.0,
+              "avg_height": 15.0,
+              "x_span": 220,
+              "y_span": 95
+            },
+            "region_features": {
+              "column_group_id": "col_0",
+              "column_center_x": 190.0,
+              "column_x_min": 80,
+              "column_x_max": 300
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 5,
+                  "column_group_id": "col_0",
+                  "column_center_x": 190.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "S1",
+                "S2",
+                "S3",
+                "S4",
+                "S5"
+              ],
+              "source_observation_ids": [
+                "o_S1",
+                "o_S2",
+                "o_S3",
+                "o_S4",
+                "o_S5"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "71c8183b5d689dcb",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ],
+            "source_span_ids": [
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ],
+            "region_geometry": {
+              "bbox": [
+                80,
+                100,
+                300,
+                195
+              ],
+              "width": 220,
+              "height": 95,
+              "center_x": 190.0,
+              "center_y": 147.5
+            },
+            "geometry_summary": {
+              "area": 20900,
+              "span_count": 5,
+              "density": 2.3923,
+              "avg_width": 220.0,
+              "avg_height": 15.0,
+              "x_span": 220,
+              "y_span": 95
+            },
+            "region_features": {
+              "parent_column_group_id": "col_0",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 5,
+                  "parent_column_group_id": "col_0",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "S1",
+                "S2",
+                "S3",
+                "S4",
+                "S5"
+              ],
+              "source_observation_ids": [
+                "o_S1",
+                "o_S2",
+                "o_S3",
+                "o_S4",
+                "o_S5"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "85509a9a387279f1"
+          }
+        ],
+        "region_count": 2,
+        "orphan_span_ids": [],
+        "provenance": {
+          "config_version": "v1",
+          "source_p5_confidence": "HIGH",
+          "column_count": 1
+        }
+      },
+      "overlap": 0
+    },
+    {
+      "case": "two_column_dense",
+      "type": "synthetic",
+      "spans": 8,
+      "columns": 2,
+      "region_count": 4,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 2,
+      "hierarchy_valid": true,
+      "region_types": {
+        "COLUMN_REGION": 2,
+        "DENSE_REGION": 2
+      },
+      "regions_detail": {
+        "page_number": 1,
+        "page_width": 612.0,
+        "page_height": 792.0,
+        "coord_origin": "PDF_TOP_LEFT",
+        "regions": [
+          {
+            "region_id": "5e6aa175e1ce9cb6",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "A1",
+              "A2",
+              "A3",
+              "A4"
+            ],
+            "source_span_ids": [
+              "A1",
+              "A2",
+              "A3",
+              "A4"
+            ],
+            "region_geometry": {
+              "bbox": [
+                80,
+                100,
+                240,
+                175
+              ],
+              "width": 160,
+              "height": 75,
+              "center_x": 160.0,
+              "center_y": 137.5
+            },
+            "geometry_summary": {
+              "area": 12000,
+              "span_count": 4,
+              "density": 3.3333,
+              "avg_width": 160.0,
+              "avg_height": 15.0,
+              "x_span": 160,
+              "y_span": 75
+            },
+            "region_features": {
+              "column_group_id": "col_0",
+              "column_center_x": 160.0,
+              "column_x_min": 80,
+              "column_x_max": 240
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 4,
+                  "column_group_id": "col_0",
+                  "column_center_x": 160.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "A1",
+                "A2",
+                "A3",
+                "A4"
+              ],
+              "source_observation_ids": [
+                "o_A1",
+                "o_A2",
+                "o_A3",
+                "o_A4"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "45044532ccd2519c",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "A1",
+              "A2",
+              "A3",
+              "A4"
+            ],
+            "source_span_ids": [
+              "A1",
+              "A2",
+              "A3",
+              "A4"
+            ],
+            "region_geometry": {
+              "bbox": [
+                80,
+                100,
+                240,
+                175
+              ],
+              "width": 160,
+              "height": 75,
+              "center_x": 160.0,
+              "center_y": 137.5
+            },
+            "geometry_summary": {
+              "area": 12000,
+              "span_count": 4,
+              "density": 3.3333,
+              "avg_width": 160.0,
+              "avg_height": 15.0,
+              "x_span": 160,
+              "y_span": 75
+            },
+            "region_features": {
+              "parent_column_group_id": "col_0",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 4,
+                  "parent_column_group_id": "col_0",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "A1",
+                "A2",
+                "A3",
+                "A4"
+              ],
+              "source_observation_ids": [
+                "o_A1",
+                "o_A2",
+                "o_A3",
+                "o_A4"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "5e6aa175e1ce9cb6"
+          },
+          {
+            "region_id": "37b4575f0847f739",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "B1",
+              "B2",
+              "B3",
+              "B4"
+            ],
+            "source_span_ids": [
+              "B1",
+              "B2",
+              "B3",
+              "B4"
+            ],
+            "region_geometry": {
+              "bbox": [
+                360,
+                100,
+                520,
+                175
+              ],
+              "width": 160,
+              "height": 75,
+              "center_x": 440.0,
+              "center_y": 137.5
+            },
+            "geometry_summary": {
+              "area": 12000,
+              "span_count": 4,
+              "density": 3.3333,
+              "avg_width": 160.0,
+              "avg_height": 15.0,
+              "x_span": 160,
+              "y_span": 75
+            },
+            "region_features": {
+              "column_group_id": "col_1",
+              "column_center_x": 440.0,
+              "column_x_min": 360,
+              "column_x_max": 520
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 4,
+                  "column_group_id": "col_1",
+                  "column_center_x": 440.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "B1",
+                "B2",
+                "B3",
+                "B4"
+              ],
+              "source_observation_ids": [
+                "o_B1",
+                "o_B2",
+                "o_B3",
+                "o_B4"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "9fbf2ef9138dba62",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "B1",
+              "B2",
+              "B3",
+              "B4"
+            ],
+            "source_span_ids": [
+              "B1",
+              "B2",
+              "B3",
+              "B4"
+            ],
+            "region_geometry": {
+              "bbox": [
+                360,
+                100,
+                520,
+                175
+              ],
+              "width": 160,
+              "height": 75,
+              "center_x": 440.0,
+              "center_y": 137.5
+            },
+            "geometry_summary": {
+              "area": 12000,
+              "span_count": 4,
+              "density": 3.3333,
+              "avg_width": 160.0,
+              "avg_height": 15.0,
+              "x_span": 160,
+              "y_span": 75
+            },
+            "region_features": {
+              "parent_column_group_id": "col_1",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 4,
+                  "parent_column_group_id": "col_1",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "B1",
+                "B2",
+                "B3",
+                "B4"
+              ],
+              "source_observation_ids": [
+                "o_B1",
+                "o_B2",
+                "o_B3",
+                "o_B4"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "37b4575f0847f739"
+          }
+        ],
+        "region_count": 4,
+        "orphan_span_ids": [],
+        "provenance": {
+          "config_version": "v1",
+          "source_p5_confidence": "HIGH",
+          "column_count": 2
+        }
+      },
+      "overlap": 0
+    },
+    {
+      "case": "three_column",
+      "type": "synthetic",
+      "spans": 9,
+      "columns": 3,
+      "region_count": 6,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 3,
+      "hierarchy_valid": true,
+      "region_types": {
+        "COLUMN_REGION": 3,
+        "DENSE_REGION": 3
+      },
+      "regions_detail": {
+        "page_number": 1,
+        "page_width": 800.0,
+        "page_height": 792.0,
+        "coord_origin": "PDF_TOP_LEFT",
+        "regions": [
+          {
+            "region_id": "0060980376d10d28",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "A1",
+              "A2",
+              "A3"
+            ],
+            "source_span_ids": [
+              "A1",
+              "A2",
+              "A3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                60,
+                100,
+                210,
+                155
+              ],
+              "width": 150,
+              "height": 55,
+              "center_x": 135.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 8250,
+              "span_count": 3,
+              "density": 3.6364,
+              "avg_width": 150.0,
+              "avg_height": 15.0,
+              "x_span": 150,
+              "y_span": 55
+            },
+            "region_features": {
+              "column_group_id": "col_0",
+              "column_center_x": 135.0,
+              "column_x_min": 60,
+              "column_x_max": 210
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 3,
+                  "column_group_id": "col_0",
+                  "column_center_x": 135.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "A1",
+                "A2",
+                "A3"
+              ],
+              "source_observation_ids": [
+                "o_A1",
+                "o_A2",
+                "o_A3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "fcdd3bcb7b3f94f8",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "A1",
+              "A2",
+              "A3"
+            ],
+            "source_span_ids": [
+              "A1",
+              "A2",
+              "A3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                60,
+                100,
+                210,
+                155
+              ],
+              "width": 150,
+              "height": 55,
+              "center_x": 135.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 8250,
+              "span_count": 3,
+              "density": 3.6364,
+              "avg_width": 150.0,
+              "avg_height": 15.0,
+              "x_span": 150,
+              "y_span": 55
+            },
+            "region_features": {
+              "parent_column_group_id": "col_0",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 3,
+                  "parent_column_group_id": "col_0",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "A1",
+                "A2",
+                "A3"
+              ],
+              "source_observation_ids": [
+                "o_A1",
+                "o_A2",
+                "o_A3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "0060980376d10d28"
+          },
+          {
+            "region_id": "80771d7c12f96ebb",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "B1",
+              "B2",
+              "B3"
+            ],
+            "source_span_ids": [
+              "B1",
+              "B2",
+              "B3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                280,
+                100,
+                430,
+                155
+              ],
+              "width": 150,
+              "height": 55,
+              "center_x": 355.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 8250,
+              "span_count": 3,
+              "density": 3.6364,
+              "avg_width": 150.0,
+              "avg_height": 15.0,
+              "x_span": 150,
+              "y_span": 55
+            },
+            "region_features": {
+              "column_group_id": "col_1",
+              "column_center_x": 355.0,
+              "column_x_min": 280,
+              "column_x_max": 430
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 3,
+                  "column_group_id": "col_1",
+                  "column_center_x": 355.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "B1",
+                "B2",
+                "B3"
+              ],
+              "source_observation_ids": [
+                "o_B1",
+                "o_B2",
+                "o_B3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "0f38339c71686a2a",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "B1",
+              "B2",
+              "B3"
+            ],
+            "source_span_ids": [
+              "B1",
+              "B2",
+              "B3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                280,
+                100,
+                430,
+                155
+              ],
+              "width": 150,
+              "height": 55,
+              "center_x": 355.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 8250,
+              "span_count": 3,
+              "density": 3.6364,
+              "avg_width": 150.0,
+              "avg_height": 15.0,
+              "x_span": 150,
+              "y_span": 55
+            },
+            "region_features": {
+              "parent_column_group_id": "col_1",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 3,
+                  "parent_column_group_id": "col_1",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "B1",
+                "B2",
+                "B3"
+              ],
+              "source_observation_ids": [
+                "o_B1",
+                "o_B2",
+                "o_B3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "80771d7c12f96ebb"
+          },
+          {
+            "region_id": "dc9751655c29706a",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "C1",
+              "C2",
+              "C3"
+            ],
+            "source_span_ids": [
+              "C1",
+              "C2",
+              "C3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                500,
+                100,
+                650,
+                155
+              ],
+              "width": 150,
+              "height": 55,
+              "center_x": 575.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 8250,
+              "span_count": 3,
+              "density": 3.6364,
+              "avg_width": 150.0,
+              "avg_height": 15.0,
+              "x_span": 150,
+              "y_span": 55
+            },
+            "region_features": {
+              "column_group_id": "col_2",
+              "column_center_x": 575.0,
+              "column_x_min": 500,
+              "column_x_max": 650
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 3,
+                  "column_group_id": "col_2",
+                  "column_center_x": 575.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "C1",
+                "C2",
+                "C3"
+              ],
+              "source_observation_ids": [
+                "o_C1",
+                "o_C2",
+                "o_C3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "ce6209ecf8b001b0",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "C1",
+              "C2",
+              "C3"
+            ],
+            "source_span_ids": [
+              "C1",
+              "C2",
+              "C3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                500,
+                100,
+                650,
+                155
+              ],
+              "width": 150,
+              "height": 55,
+              "center_x": 575.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 8250,
+              "span_count": 3,
+              "density": 3.6364,
+              "avg_width": 150.0,
+              "avg_height": 15.0,
+              "x_span": 150,
+              "y_span": 55
+            },
+            "region_features": {
+              "parent_column_group_id": "col_2",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 3,
+                  "parent_column_group_id": "col_2",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "C1",
+                "C2",
+                "C3"
+              ],
+              "source_observation_ids": [
+                "o_C1",
+                "o_C2",
+                "o_C3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "dc9751655c29706a"
+          }
+        ],
+        "region_count": 6,
+        "orphan_span_ids": [],
+        "provenance": {
+          "config_version": "v1",
+          "source_p5_confidence": "HIGH",
+          "column_count": 3
+        }
+      },
+      "overlap": 0
+    },
+    {
+      "case": "top_full_width_two_column",
+      "type": "synthetic",
+      "spans": 7,
+      "columns": 2,
+      "region_count": 5,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 2,
+      "hierarchy_valid": true,
+      "region_types": {
+        "PAGE_TOP_REGION": 1,
+        "COLUMN_REGION": 2,
+        "DENSE_REGION": 2
+      },
+      "regions_detail": {
+        "page_number": 1,
+        "page_width": 612.0,
+        "page_height": 792.0,
+        "coord_origin": "PDF_TOP_LEFT",
+        "regions": [
+          {
+            "region_id": "3733d3b7b15c0120",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "PAGE_TOP_REGION",
+            "span_ids": [
+              "TOP"
+            ],
+            "source_span_ids": [
+              "TOP"
+            ],
+            "region_geometry": {
+              "bbox": [
+                80,
+                60,
+                530,
+                80
+              ],
+              "width": 450,
+              "height": 20,
+              "center_x": 305.0,
+              "center_y": 70.0
+            },
+            "geometry_summary": {
+              "area": 9000,
+              "span_count": 1,
+              "density": 1.1111,
+              "avg_width": 450.0,
+              "avg_height": 20.0,
+              "x_span": 450,
+              "y_span": 20
+            },
+            "region_features": {
+              "full_width_band": "top"
+            },
+            "confidence": "HIGH",
+            "construction_method": "top_band",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "FULL_WIDTH_IN_TOP_BAND",
+                "facts": {
+                  "span_count": 1,
+                  "inherited_from_p5": "top_region_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "TOP"
+              ],
+              "source_observation_ids": [
+                "o_TOP"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "0060980376d10d28",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "A1",
+              "A2",
+              "A3"
+            ],
+            "source_span_ids": [
+              "A1",
+              "A2",
+              "A3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                80,
+                150,
+                240,
+                205
+              ],
+              "width": 160,
+              "height": 55,
+              "center_x": 160.0,
+              "center_y": 177.5
+            },
+            "geometry_summary": {
+              "area": 8800,
+              "span_count": 3,
+              "density": 3.4091,
+              "avg_width": 160.0,
+              "avg_height": 15.0,
+              "x_span": 160,
+              "y_span": 55
+            },
+            "region_features": {
+              "column_group_id": "col_0",
+              "column_center_x": 160.0,
+              "column_x_min": 80,
+              "column_x_max": 240
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 3,
+                  "column_group_id": "col_0",
+                  "column_center_x": 160.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "A1",
+                "A2",
+                "A3"
+              ],
+              "source_observation_ids": [
+                "o_A1",
+                "o_A2",
+                "o_A3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "fcdd3bcb7b3f94f8",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "A1",
+              "A2",
+              "A3"
+            ],
+            "source_span_ids": [
+              "A1",
+              "A2",
+              "A3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                80,
+                150,
+                240,
+                205
+              ],
+              "width": 160,
+              "height": 55,
+              "center_x": 160.0,
+              "center_y": 177.5
+            },
+            "geometry_summary": {
+              "area": 8800,
+              "span_count": 3,
+              "density": 3.4091,
+              "avg_width": 160.0,
+              "avg_height": 15.0,
+              "x_span": 160,
+              "y_span": 55
+            },
+            "region_features": {
+              "parent_column_group_id": "col_0",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 3,
+                  "parent_column_group_id": "col_0",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "A1",
+                "A2",
+                "A3"
+              ],
+              "source_observation_ids": [
+                "o_A1",
+                "o_A2",
+                "o_A3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "0060980376d10d28"
+          },
+          {
+            "region_id": "80771d7c12f96ebb",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "B1",
+              "B2",
+              "B3"
+            ],
+            "source_span_ids": [
+              "B1",
+              "B2",
+              "B3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                360,
+                150,
+                520,
+                205
+              ],
+              "width": 160,
+              "height": 55,
+              "center_x": 440.0,
+              "center_y": 177.5
+            },
+            "geometry_summary": {
+              "area": 8800,
+              "span_count": 3,
+              "density": 3.4091,
+              "avg_width": 160.0,
+              "avg_height": 15.0,
+              "x_span": 160,
+              "y_span": 55
+            },
+            "region_features": {
+              "column_group_id": "col_1",
+              "column_center_x": 440.0,
+              "column_x_min": 360,
+              "column_x_max": 520
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 3,
+                  "column_group_id": "col_1",
+                  "column_center_x": 440.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "B1",
+                "B2",
+                "B3"
+              ],
+              "source_observation_ids": [
+                "o_B1",
+                "o_B2",
+                "o_B3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "0f38339c71686a2a",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "B1",
+              "B2",
+              "B3"
+            ],
+            "source_span_ids": [
+              "B1",
+              "B2",
+              "B3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                360,
+                150,
+                520,
+                205
+              ],
+              "width": 160,
+              "height": 55,
+              "center_x": 440.0,
+              "center_y": 177.5
+            },
+            "geometry_summary": {
+              "area": 8800,
+              "span_count": 3,
+              "density": 3.4091,
+              "avg_width": 160.0,
+              "avg_height": 15.0,
+              "x_span": 160,
+              "y_span": 55
+            },
+            "region_features": {
+              "parent_column_group_id": "col_1",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 3,
+                  "parent_column_group_id": "col_1",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "B1",
+                "B2",
+                "B3"
+              ],
+              "source_observation_ids": [
+                "o_B1",
+                "o_B2",
+                "o_B3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "80771d7c12f96ebb"
+          }
+        ],
+        "region_count": 5,
+        "orphan_span_ids": [],
+        "provenance": {
+          "config_version": "v1",
+          "source_p5_confidence": "HIGH",
+          "column_count": 2
+        }
+      },
+      "overlap": 0
+    },
+    {
+      "case": "bottom_full_width",
+      "type": "synthetic",
+      "spans": 7,
+      "columns": 2,
+      "region_count": 5,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 2,
+      "hierarchy_valid": true,
+      "region_types": {
+        "COLUMN_REGION": 2,
+        "DENSE_REGION": 2,
+        "PAGE_BOTTOM_REGION": 1
+      },
+      "regions_detail": {
+        "page_number": 1,
+        "page_width": 612.0,
+        "page_height": 792.0,
+        "coord_origin": "PDF_TOP_LEFT",
+        "regions": [
+          {
+            "region_id": "0060980376d10d28",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "A1",
+              "A2",
+              "A3"
+            ],
+            "source_span_ids": [
+              "A1",
+              "A2",
+              "A3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                80,
+                100,
+                240,
+                155
+              ],
+              "width": 160,
+              "height": 55,
+              "center_x": 160.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 8800,
+              "span_count": 3,
+              "density": 3.4091,
+              "avg_width": 160.0,
+              "avg_height": 15.0,
+              "x_span": 160,
+              "y_span": 55
+            },
+            "region_features": {
+              "column_group_id": "col_0",
+              "column_center_x": 160.0,
+              "column_x_min": 80,
+              "column_x_max": 240
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 3,
+                  "column_group_id": "col_0",
+                  "column_center_x": 160.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "A1",
+                "A2",
+                "A3"
+              ],
+              "source_observation_ids": [
+                "o_A1",
+                "o_A2",
+                "o_A3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "fcdd3bcb7b3f94f8",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "A1",
+              "A2",
+              "A3"
+            ],
+            "source_span_ids": [
+              "A1",
+              "A2",
+              "A3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                80,
+                100,
+                240,
+                155
+              ],
+              "width": 160,
+              "height": 55,
+              "center_x": 160.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 8800,
+              "span_count": 3,
+              "density": 3.4091,
+              "avg_width": 160.0,
+              "avg_height": 15.0,
+              "x_span": 160,
+              "y_span": 55
+            },
+            "region_features": {
+              "parent_column_group_id": "col_0",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 3,
+                  "parent_column_group_id": "col_0",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "A1",
+                "A2",
+                "A3"
+              ],
+              "source_observation_ids": [
+                "o_A1",
+                "o_A2",
+                "o_A3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "0060980376d10d28"
+          },
+          {
+            "region_id": "80771d7c12f96ebb",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "B1",
+              "B2",
+              "B3"
+            ],
+            "source_span_ids": [
+              "B1",
+              "B2",
+              "B3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                360,
+                100,
+                520,
+                155
+              ],
+              "width": 160,
+              "height": 55,
+              "center_x": 440.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 8800,
+              "span_count": 3,
+              "density": 3.4091,
+              "avg_width": 160.0,
+              "avg_height": 15.0,
+              "x_span": 160,
+              "y_span": 55
+            },
+            "region_features": {
+              "column_group_id": "col_1",
+              "column_center_x": 440.0,
+              "column_x_min": 360,
+              "column_x_max": 520
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 3,
+                  "column_group_id": "col_1",
+                  "column_center_x": 440.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "B1",
+                "B2",
+                "B3"
+              ],
+              "source_observation_ids": [
+                "o_B1",
+                "o_B2",
+                "o_B3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "0f38339c71686a2a",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "B1",
+              "B2",
+              "B3"
+            ],
+            "source_span_ids": [
+              "B1",
+              "B2",
+              "B3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                360,
+                100,
+                520,
+                155
+              ],
+              "width": 160,
+              "height": 55,
+              "center_x": 440.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 8800,
+              "span_count": 3,
+              "density": 3.4091,
+              "avg_width": 160.0,
+              "avg_height": 15.0,
+              "x_span": 160,
+              "y_span": 55
+            },
+            "region_features": {
+              "parent_column_group_id": "col_1",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 3,
+                  "parent_column_group_id": "col_1",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "B1",
+                "B2",
+                "B3"
+              ],
+              "source_observation_ids": [
+                "o_B1",
+                "o_B2",
+                "o_B3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "80771d7c12f96ebb"
+          },
+          {
+            "region_id": "8e5cc7c53eef19ea",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "PAGE_BOTTOM_REGION",
+            "span_ids": [
+              "BOTTOM"
+            ],
+            "source_span_ids": [
+              "BOTTOM"
+            ],
+            "region_geometry": {
+              "bbox": [
+                80,
+                700,
+                530,
+                720
+              ],
+              "width": 450,
+              "height": 20,
+              "center_x": 305.0,
+              "center_y": 710.0
+            },
+            "geometry_summary": {
+              "area": 9000,
+              "span_count": 1,
+              "density": 1.1111,
+              "avg_width": 450.0,
+              "avg_height": 20.0,
+              "x_span": 450,
+              "y_span": 20
+            },
+            "region_features": {
+              "full_width_band": "bottom"
+            },
+            "confidence": "HIGH",
+            "construction_method": "bottom_band",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "FULL_WIDTH_IN_BOTTOM_BAND",
+                "facts": {
+                  "span_count": 1,
+                  "inherited_from_p5": "bottom_region_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "BOTTOM"
+              ],
+              "source_observation_ids": [
+                "o_BOTTOM"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          }
+        ],
+        "region_count": 5,
+        "orphan_span_ids": [],
+        "provenance": {
+          "config_version": "v1",
+          "source_p5_confidence": "HIGH",
+          "column_count": 2
+        }
+      },
+      "overlap": 0
+    },
+    {
+      "case": "sparse_layout",
+      "type": "synthetic",
+      "spans": 3,
+      "columns": 1,
+      "region_count": 4,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 1,
+      "hierarchy_valid": true,
+      "region_types": {
+        "COLUMN_REGION": 1,
+        "SPARSE_REGION": 3
+      },
+      "regions_detail": {
+        "page_number": 1,
+        "page_width": 612.0,
+        "page_height": 792.0,
+        "coord_origin": "PDF_TOP_LEFT",
+        "regions": [
+          {
+            "region_id": "5b648a23f0b14cd9",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "X1",
+              "X2",
+              "X3"
+            ],
+            "source_span_ids": [
+              "X1",
+              "X2",
+              "X3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                100,
+                100,
+                300,
+                275
+              ],
+              "width": 200,
+              "height": 175,
+              "center_x": 200.0,
+              "center_y": 187.5
+            },
+            "geometry_summary": {
+              "area": 35000,
+              "span_count": 3,
+              "density": 0.8571,
+              "avg_width": 200.0,
+              "avg_height": 15.0,
+              "x_span": 200,
+              "y_span": 175
+            },
+            "region_features": {
+              "column_group_id": "col_0",
+              "column_center_x": 200.0,
+              "column_x_min": 100,
+              "column_x_max": 300
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 3,
+                  "column_group_id": "col_0",
+                  "column_center_x": 200.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "X1",
+                "X2",
+                "X3"
+              ],
+              "source_observation_ids": [
+                "o_X1",
+                "o_X2",
+                "o_X3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "14aa08329509686c",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "SPARSE_REGION",
+            "span_ids": [
+              "X1"
+            ],
+            "source_span_ids": [
+              "X1"
+            ],
+            "region_geometry": {
+              "bbox": [
+                100,
+                100,
+                300,
+                115
+              ],
+              "width": 200,
+              "height": 15,
+              "center_x": 200.0,
+              "center_y": 107.5
+            },
+            "geometry_summary": {
+              "area": 3000,
+              "span_count": 1,
+              "density": 3.3333,
+              "avg_width": 200.0,
+              "avg_height": 15.0,
+              "x_span": 200,
+              "y_span": 15
+            },
+            "region_features": {
+              "parent_column_group_id": "col_0",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": 65
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_sparse",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "ISOLATED_SPARSE",
+                "facts": {
+                  "span_count": 1,
+                  "parent_column_group_id": "col_0",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": 65
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "X1"
+              ],
+              "source_observation_ids": [
+                "o_X1"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "5b648a23f0b14cd9"
+          },
+          {
+            "region_id": "1d90f0b5ca8789f5",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "SPARSE_REGION",
+            "span_ids": [
+              "X2"
+            ],
+            "source_span_ids": [
+              "X2"
+            ],
+            "region_geometry": {
+              "bbox": [
+                100,
+                180,
+                300,
+                195
+              ],
+              "width": 200,
+              "height": 15,
+              "center_x": 200.0,
+              "center_y": 187.5
+            },
+            "geometry_summary": {
+              "area": 3000,
+              "span_count": 1,
+              "density": 3.3333,
+              "avg_width": 200.0,
+              "avg_height": 15.0,
+              "x_span": 200,
+              "y_span": 15
+            },
+            "region_features": {
+              "parent_column_group_id": "col_0",
+              "block_index_in_column": 1,
+              "leading_gap": 65,
+              "trailing_gap": 65
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_sparse",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "ISOLATED_SPARSE",
+                "facts": {
+                  "span_count": 1,
+                  "parent_column_group_id": "col_0",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": 65,
+                  "trailing_gap": 65
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "X2"
+              ],
+              "source_observation_ids": [
+                "o_X2"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "5b648a23f0b14cd9"
+          },
+          {
+            "region_id": "fdb2f386d0360ad1",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "SPARSE_REGION",
+            "span_ids": [
+              "X3"
+            ],
+            "source_span_ids": [
+              "X3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                100,
+                260,
+                300,
+                275
+              ],
+              "width": 200,
+              "height": 15,
+              "center_x": 200.0,
+              "center_y": 267.5
+            },
+            "geometry_summary": {
+              "area": 3000,
+              "span_count": 1,
+              "density": 3.3333,
+              "avg_width": 200.0,
+              "avg_height": 15.0,
+              "x_span": 200,
+              "y_span": 15
+            },
+            "region_features": {
+              "parent_column_group_id": "col_0",
+              "block_index_in_column": 2,
+              "leading_gap": 65,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_sparse",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "ISOLATED_SPARSE",
+                "facts": {
+                  "span_count": 1,
+                  "parent_column_group_id": "col_0",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": 65,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "X3"
+              ],
+              "source_observation_ids": [
+                "o_X3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "5b648a23f0b14cd9"
+          }
+        ],
+        "region_count": 4,
+        "orphan_span_ids": [],
+        "provenance": {
+          "config_version": "v1",
+          "source_p5_confidence": "HIGH",
+          "column_count": 1
+        }
+      },
+      "overlap": 0
+    },
+    {
+      "case": "dense_layout",
+      "type": "synthetic",
+      "spans": 8,
+      "columns": 1,
+      "region_count": 2,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 1,
+      "hierarchy_valid": true,
+      "region_types": {
+        "COLUMN_REGION": 1,
+        "DENSE_REGION": 1
+      },
+      "regions_detail": {
+        "page_number": 1,
+        "page_width": 612.0,
+        "page_height": 792.0,
+        "coord_origin": "PDF_TOP_LEFT",
+        "regions": [
+          {
+            "region_id": "6c9434c696dc88b1",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7",
+              "D8"
+            ],
+            "source_span_ids": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7",
+              "D8"
+            ],
+            "region_geometry": {
+              "bbox": [
+                100,
+                100,
+                300,
+                192
+              ],
+              "width": 200,
+              "height": 92,
+              "center_x": 200.0,
+              "center_y": 146.0
+            },
+            "geometry_summary": {
+              "area": 18400,
+              "span_count": 8,
+              "density": 4.3478,
+              "avg_width": 200.0,
+              "avg_height": 8.0,
+              "x_span": 200,
+              "y_span": 92
+            },
+            "region_features": {
+              "column_group_id": "col_0",
+              "column_center_x": 200.0,
+              "column_x_min": 100,
+              "column_x_max": 300
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 8,
+                  "column_group_id": "col_0",
+                  "column_center_x": 200.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "D1",
+                "D2",
+                "D3",
+                "D4",
+                "D5",
+                "D6",
+                "D7",
+                "D8"
+              ],
+              "source_observation_ids": [
+                "o_D1",
+                "o_D2",
+                "o_D3",
+                "o_D4",
+                "o_D5",
+                "o_D6",
+                "o_D7",
+                "o_D8"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "9d574fd955d61466",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7",
+              "D8"
+            ],
+            "source_span_ids": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7",
+              "D8"
+            ],
+            "region_geometry": {
+              "bbox": [
+                100,
+                100,
+                300,
+                192
+              ],
+              "width": 200,
+              "height": 92,
+              "center_x": 200.0,
+              "center_y": 146.0
+            },
+            "geometry_summary": {
+              "area": 18400,
+              "span_count": 8,
+              "density": 4.3478,
+              "avg_width": 200.0,
+              "avg_height": 8.0,
+              "x_span": 200,
+              "y_span": 92
+            },
+            "region_features": {
+              "parent_column_group_id": "col_0",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 8,
+                  "parent_column_group_id": "col_0",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "D1",
+                "D2",
+                "D3",
+                "D4",
+                "D5",
+                "D6",
+                "D7",
+                "D8"
+              ],
+              "source_observation_ids": [
+                "o_D1",
+                "o_D2",
+                "o_D3",
+                "o_D4",
+                "o_D5",
+                "o_D6",
+                "o_D7",
+                "o_D8"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "6c9434c696dc88b1"
+          }
+        ],
+        "region_count": 2,
+        "orphan_span_ids": [],
+        "provenance": {
+          "config_version": "v1",
+          "source_p5_confidence": "HIGH",
+          "column_count": 1
+        }
+      },
+      "overlap": 0
+    },
+    {
+      "case": "boundary_ambiguous",
+      "type": "synthetic",
+      "spans": 7,
+      "columns": 2,
+      "region_count": 4,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 2,
+      "hierarchy_valid": true,
+      "region_types": {
+        "COLUMN_REGION": 2,
+        "DENSE_REGION": 2
+      },
+      "regions_detail": {
+        "page_number": 1,
+        "page_width": 612.0,
+        "page_height": 792.0,
+        "coord_origin": "PDF_TOP_LEFT",
+        "regions": [
+          {
+            "region_id": "6f0f13950c8ac495",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "L1",
+              "L2",
+              "L3",
+              "MID"
+            ],
+            "source_span_ids": [
+              "L1",
+              "L2",
+              "L3",
+              "MID"
+            ],
+            "region_geometry": {
+              "bbox": [
+                80,
+                100,
+                320,
+                155
+              ],
+              "width": 240,
+              "height": 55,
+              "center_x": 200.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 13200,
+              "span_count": 4,
+              "density": 3.0303,
+              "avg_width": 127.5,
+              "avg_height": 15.0,
+              "x_span": 240,
+              "y_span": 55
+            },
+            "region_features": {
+              "column_group_id": "col_0",
+              "column_center_x": 196.25,
+              "column_x_min": 80,
+              "column_x_max": 320
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 4,
+                  "column_group_id": "col_0",
+                  "column_center_x": 196.25,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "L1",
+                "L2",
+                "L3",
+                "MID"
+              ],
+              "source_observation_ids": [
+                "o_L1",
+                "o_L2",
+                "o_L3",
+                "o_MID"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "e41bee631fd40754",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "L1",
+              "L2",
+              "L3",
+              "MID"
+            ],
+            "source_span_ids": [
+              "L1",
+              "L2",
+              "L3",
+              "MID"
+            ],
+            "region_geometry": {
+              "bbox": [
+                80,
+                100,
+                320,
+                155
+              ],
+              "width": 240,
+              "height": 55,
+              "center_x": 200.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 13200,
+              "span_count": 4,
+              "density": 3.0303,
+              "avg_width": 127.5,
+              "avg_height": 15.0,
+              "x_span": 240,
+              "y_span": 55
+            },
+            "region_features": {
+              "parent_column_group_id": "col_0",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 4,
+                  "parent_column_group_id": "col_0",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "L1",
+                "L2",
+                "MID",
+                "L3"
+              ],
+              "source_observation_ids": [
+                "o_L1",
+                "o_L2",
+                "o_MID",
+                "o_L3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "6f0f13950c8ac495"
+          },
+          {
+            "region_id": "a60f183556cae32f",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "R1",
+              "R2",
+              "R3"
+            ],
+            "source_span_ids": [
+              "R1",
+              "R2",
+              "R3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                400,
+                100,
+                560,
+                155
+              ],
+              "width": 160,
+              "height": 55,
+              "center_x": 480.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 8800,
+              "span_count": 3,
+              "density": 3.4091,
+              "avg_width": 160.0,
+              "avg_height": 15.0,
+              "x_span": 160,
+              "y_span": 55
+            },
+            "region_features": {
+              "column_group_id": "col_1",
+              "column_center_x": 480.0,
+              "column_x_min": 400,
+              "column_x_max": 560
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 3,
+                  "column_group_id": "col_1",
+                  "column_center_x": 480.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "R1",
+                "R2",
+                "R3"
+              ],
+              "source_observation_ids": [
+                "o_R1",
+                "o_R2",
+                "o_R3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "53c7930342ffc414",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "R1",
+              "R2",
+              "R3"
+            ],
+            "source_span_ids": [
+              "R1",
+              "R2",
+              "R3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                400,
+                100,
+                560,
+                155
+              ],
+              "width": 160,
+              "height": 55,
+              "center_x": 480.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 8800,
+              "span_count": 3,
+              "density": 3.4091,
+              "avg_width": 160.0,
+              "avg_height": 15.0,
+              "x_span": 160,
+              "y_span": 55
+            },
+            "region_features": {
+              "parent_column_group_id": "col_1",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 3,
+                  "parent_column_group_id": "col_1",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "R1",
+                "R2",
+                "R3"
+              ],
+              "source_observation_ids": [
+                "o_R1",
+                "o_R2",
+                "o_R3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "a60f183556cae32f"
+          }
+        ],
+        "region_count": 4,
+        "orphan_span_ids": [],
+        "provenance": {
+          "config_version": "v1",
+          "source_p5_confidence": "HIGH",
+          "column_count": 2
+        }
+      },
+      "overlap": 0
+    },
+    {
+      "case": "region_overlap",
+      "type": "synthetic",
+      "spans": 3,
+      "columns": 1,
+      "region_count": 2,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 1,
+      "hierarchy_valid": true,
+      "region_types": {
+        "COLUMN_REGION": 1,
+        "DENSE_REGION": 1
+      },
+      "regions_detail": {
+        "page_number": 1,
+        "page_width": 612.0,
+        "page_height": 792.0,
+        "coord_origin": "PDF_TOP_LEFT",
+        "regions": [
+          {
+            "region_id": "00c66411b927b536",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "O1",
+              "O2",
+              "O3"
+            ],
+            "source_span_ids": [
+              "O1",
+              "O2",
+              "O3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                200,
+                200,
+                400,
+                240
+              ],
+              "width": 200,
+              "height": 40,
+              "center_x": 300.0,
+              "center_y": 220.0
+            },
+            "geometry_summary": {
+              "area": 8000,
+              "span_count": 3,
+              "density": 3.75,
+              "avg_width": 190.0,
+              "avg_height": 32.67,
+              "x_span": 200,
+              "y_span": 40
+            },
+            "region_features": {
+              "column_group_id": "col_0",
+              "column_center_x": 300.0,
+              "column_x_min": 200,
+              "column_x_max": 400
+            },
+            "confidence": "LOW",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 3,
+                  "column_group_id": "col_0",
+                  "column_center_x": 300.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "O1",
+                "O2",
+                "O3"
+              ],
+              "source_observation_ids": [
+                "o_O1",
+                "o_O2",
+                "o_O3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "896a3824aa6bb924",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "O1",
+              "O2",
+              "O3"
+            ],
+            "source_span_ids": [
+              "O1",
+              "O2",
+              "O3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                200,
+                200,
+                400,
+                240
+              ],
+              "width": 200,
+              "height": 40,
+              "center_x": 300.0,
+              "center_y": 220.0
+            },
+            "geometry_summary": {
+              "area": 8000,
+              "span_count": 3,
+              "density": 3.75,
+              "avg_width": 190.0,
+              "avg_height": 32.67,
+              "x_span": 200,
+              "y_span": 40
+            },
+            "region_features": {
+              "parent_column_group_id": "col_0",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "LOW",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 3,
+                  "parent_column_group_id": "col_0",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "O1",
+                "O2",
+                "O3"
+              ],
+              "source_observation_ids": [
+                "o_O1",
+                "o_O2",
+                "o_O3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "00c66411b927b536"
+          }
+        ],
+        "region_count": 2,
+        "orphan_span_ids": [],
+        "provenance": {
+          "config_version": "v1",
+          "source_p5_confidence": "LOW",
+          "column_count": 1
+        }
+      },
+      "overlap": 0
+    },
+    {
+      "case": "irregular_asymmetric",
+      "type": "synthetic",
+      "spans": 6,
+      "columns": 2,
+      "region_count": 4,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 2,
+      "hierarchy_valid": true,
+      "region_types": {
+        "COLUMN_REGION": 2,
+        "DENSE_REGION": 2
+      },
+      "regions_detail": {
+        "page_number": 1,
+        "page_width": 612.0,
+        "page_height": 792.0,
+        "coord_origin": "PDF_TOP_LEFT",
+        "regions": [
+          {
+            "region_id": "ac631164bc1c313f",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "L1",
+              "L2",
+              "L3"
+            ],
+            "source_span_ids": [
+              "L1",
+              "L2",
+              "L3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                60,
+                100,
+                330,
+                155
+              ],
+              "width": 270,
+              "height": 55,
+              "center_x": 195.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 14850,
+              "span_count": 3,
+              "density": 2.0202,
+              "avg_width": 270.0,
+              "avg_height": 15.0,
+              "x_span": 270,
+              "y_span": 55
+            },
+            "region_features": {
+              "column_group_id": "col_0",
+              "column_center_x": 195.0,
+              "column_x_min": 60,
+              "column_x_max": 330
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 3,
+                  "column_group_id": "col_0",
+                  "column_center_x": 195.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "L1",
+                "L2",
+                "L3"
+              ],
+              "source_observation_ids": [
+                "o_L1",
+                "o_L2",
+                "o_L3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "43ccdec4785ca5f8",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "L1",
+              "L2",
+              "L3"
+            ],
+            "source_span_ids": [
+              "L1",
+              "L2",
+              "L3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                60,
+                100,
+                330,
+                155
+              ],
+              "width": 270,
+              "height": 55,
+              "center_x": 195.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 14850,
+              "span_count": 3,
+              "density": 2.0202,
+              "avg_width": 270.0,
+              "avg_height": 15.0,
+              "x_span": 270,
+              "y_span": 55
+            },
+            "region_features": {
+              "parent_column_group_id": "col_0",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 3,
+                  "parent_column_group_id": "col_0",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "L1",
+                "L2",
+                "L3"
+              ],
+              "source_observation_ids": [
+                "o_L1",
+                "o_L2",
+                "o_L3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "ac631164bc1c313f"
+          },
+          {
+            "region_id": "a60f183556cae32f",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "COLUMN_REGION",
+            "span_ids": [
+              "R1",
+              "R2",
+              "R3"
+            ],
+            "source_span_ids": [
+              "R1",
+              "R2",
+              "R3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                420,
+                100,
+                470,
+                155
+              ],
+              "width": 50,
+              "height": 55,
+              "center_x": 445.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 2750,
+              "span_count": 3,
+              "density": 10.9091,
+              "avg_width": 50.0,
+              "avg_height": 15.0,
+              "x_span": 50,
+              "y_span": 55
+            },
+            "region_features": {
+              "column_group_id": "col_1",
+              "column_center_x": 445.0,
+              "column_x_min": 420,
+              "column_x_max": 470
+            },
+            "confidence": "HIGH",
+            "construction_method": "column_group",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "P5_COLUMN_GROUP_MEMBERSHIP",
+                "facts": {
+                  "span_count": 3,
+                  "column_group_id": "col_1",
+                  "column_center_x": 445.0,
+                  "inherited_from_p5": "column_groups.member_span_ids"
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "R1",
+                "R2",
+                "R3"
+              ],
+              "source_observation_ids": [
+                "o_R1",
+                "o_R2",
+                "o_R3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": null
+          },
+          {
+            "region_id": "53c7930342ffc414",
+            "document_id": "SYNTH",
+            "page_number": 1,
+            "region_type": "DENSE_REGION",
+            "span_ids": [
+              "R1",
+              "R2",
+              "R3"
+            ],
+            "source_span_ids": [
+              "R1",
+              "R2",
+              "R3"
+            ],
+            "region_geometry": {
+              "bbox": [
+                420,
+                100,
+                470,
+                155
+              ],
+              "width": 50,
+              "height": 55,
+              "center_x": 445.0,
+              "center_y": 127.5
+            },
+            "geometry_summary": {
+              "area": 2750,
+              "span_count": 3,
+              "density": 10.9091,
+              "avg_width": 50.0,
+              "avg_height": 15.0,
+              "x_span": 50,
+              "y_span": 55
+            },
+            "region_features": {
+              "parent_column_group_id": "col_1",
+              "block_index_in_column": 0,
+              "leading_gap": null,
+              "trailing_gap": null
+            },
+            "confidence": "HIGH",
+            "construction_method": "density_cluster_dense",
+            "construction_version": "v1",
+            "decision_trace": [
+              {
+                "rule": "VERTICAL_CONTIGUITY_DENSE",
+                "facts": {
+                  "span_count": 3,
+                  "parent_column_group_id": "col_1",
+                  "dense_gap_threshold": 18.0,
+                  "min_dense_span_count": 3,
+                  "leading_gap": null,
+                  "trailing_gap": null
+                }
+              }
+            ],
+            "provenance": {
+              "source_span_ids": [
+                "R1",
+                "R2",
+                "R3"
+              ],
+              "source_observation_ids": [
+                "o_R1",
+                "o_R2",
+                "o_R3"
+              ],
+              "source_observation_types": [
+                "span"
+              ]
+            },
+            "coord_origin": "PDF_TOP_LEFT",
+            "parent_region_id": "a60f183556cae32f"
+          }
+        ],
+        "region_count": 4,
+        "orphan_span_ids": [],
+        "provenance": {
+          "config_version": "v1",
+          "source_p5_confidence": "HIGH",
+          "column_count": 2
+        }
+      },
+      "overlap": 0
+    },
+    {
+      "case": "rm501_p2",
+      "type": "real",
+      "page": 2,
+      "spans": 44,
+      "columns": 1,
+      "region_count": 14,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 1,
+      "overlap": 6,
+      "region_types": {
+        "PAGE_TOP_REGION": 1,
+        "COLUMN_REGION": 1,
+        "SPARSE_REGION": 9,
+        "DENSE_REGION": 1,
+        "FULL_WIDTH_REGION": 1,
+        "PAGE_BOTTOM_REGION": 1
+      }
+    },
+    {
+      "case": "dc201_p5",
+      "type": "real",
+      "page": 5,
+      "spans": 38,
+      "columns": 1,
+      "region_count": 12,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 1,
+      "overlap": 7,
+      "region_types": {
+        "PAGE_TOP_REGION": 1,
+        "COLUMN_REGION": 1,
+        "SPARSE_REGION": 8,
+        "DENSE_REGION": 1,
+        "FULL_WIDTH_REGION": 1
+      }
+    },
+    {
+      "case": "arxiv_single",
+      "type": "real",
+      "page": 1,
+      "spans": 21,
+      "columns": 1,
+      "region_count": 7,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 1,
+      "overlap": 3,
+      "region_types": {
+        "PAGE_TOP_REGION": 1,
+        "COLUMN_REGION": 1,
+        "DENSE_REGION": 1,
+        "SPARSE_REGION": 2,
+        "FULL_WIDTH_REGION": 1,
+        "PAGE_BOTTOM_REGION": 1
+      }
+    },
+    {
+      "case": "arxiv_double_toc",
+      "type": "real",
+      "page": 2,
+      "spans": 90,
+      "columns": 2,
+      "region_count": 5,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 2,
+      "overlap": 0,
+      "region_types": {
+        "COLUMN_REGION": 2,
+        "DENSE_REGION": 2,
+        "SPARSE_REGION": 1
+      }
+    },
+    {
+      "case": "arxiv_sparse",
+      "type": "real",
+      "page": 1,
+      "spans": 51,
+      "columns": 1,
+      "region_count": 6,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 1,
+      "overlap": 4,
+      "region_types": {
+        "PAGE_TOP_REGION": 1,
+        "COLUMN_REGION": 1,
+        "SPARSE_REGION": 1,
+        "DENSE_REGION": 2,
+        "FULL_WIDTH_REGION": 1
+      }
+    },
+    {
+      "case": "complex_visual",
+      "type": "real",
+      "page": 1,
+      "spans": 12,
+      "columns": 1,
+      "region_count": 5,
+      "coverage": 1.0,
+      "orphan": 0,
+      "dup": 0,
+      "nested": 1,
+      "overlap": 2,
+      "region_types": {
+        "PAGE_TOP_REGION": 1,
+        "COLUMN_REGION": 1,
+        "SPARSE_REGION": 1,
+        "DENSE_REGION": 1,
+        "FULL_WIDTH_REGION": 1
+      }
+    }
+  ],
+  "metrics": {
+    "total_regions": 87,
+    "total_spans": 319,
+    "span_assignment_count": 319,
+    "orphan_span_count": 0,
+    "duplicate_span_assignment_count": 0,
+    "overlap_count": 22,
+    "nested_region_count": 24,
+    "confidence_distribution": {
+      "HIGH": 45,
+      "LOW": 2,
+      "MEDIUM": 17
+    },
+    "ambiguous_region_count": 2,
+    "unknown_region_count": 0,
+    "provenance_completeness": 1.0,
+    "decision_trace_completeness": 1.0,
+    "deterministic_reproducibility": true,
+    "p5_integrity": true,
+    "p1_p4_regression": true,
+    "frozen_baseline_integrity": true
+  }
+}

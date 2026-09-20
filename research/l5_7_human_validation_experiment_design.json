@@ -1,0 +1,157 @@
+{
+ "phase": "L5.7 Human Validation Experiment Design",
+ "status": "DESIGN-READY (design complete; no execution; no recruitment; no production modification)",
+ "objective": "Design minimal human experiment to answer RQ-L5.7; audit material feasibility; request authorization",
+
+ "inherited_state": {
+  "L5.6_status": "CONDITIONAL PASS",
+  "L5_architecture_status": "CLOSED",
+  "next_step": "HUMAN_VALIDATION_EXPERIMENT",
+  "L5.3_claim": "Workflow C scoped minimum (B, not universal)",
+  "L5.5_evidence_level": "ENGINEERING_PROXY (3/21, not human-subject)"},
+
+ "research_question": {
+  "id": "RQ-L5.7",
+  "question": "Compared with Instance Validation (A) and Naive Pattern Validation (B), does Evidence Aggregation + Evidence Compression + Semantic Claim Validation (C) reduce Human cognitive burden while preserving or improving validation quality?",
+  "answerable": true,
+  "answerable_with_limitations": true},
+
+ "material_audit": {
+  "total_cases": 21,
+  "source": "mb_phase3_2_isolated_replay_results.json (frozen)",
+  "groups": {"admitted": 11, "region_not_formed": 6, "partition_unresolvable": 4},
+  "evidence_types": {"positive": 11, "negative": 6, "UNKNOWN": 4, "boundary": 2, "conflict": 0},
+  "gt_distribution": {"KEEP_SEPARATE": 19, "MERGE": 2},
+  "gt_balance": "SEVERELY_IMBALANCED (19:2)",
+  "automation_bias_material": {"system_candidate_cases": 11, "system_ne_gt_cases": 0, "coverage": "LIMITED"},
+  "sufficient_for_pilot": true,
+  "sufficient_for_confirmatory": false,
+  "five_necessary_materials": {
+   "positive": {"present": true, "count": 11, "assessment": "sufficient"},
+   "negative": {"present": true, "count": 6, "assessment": "sufficient"},
+   "UNKNOWN": {"present": true, "count": 4, "assessment": "sufficient"},
+   "boundary": {"present": "partial", "count": 2, "assessment": "limited (MERGE cases in region_not_formed)"},
+   "conflict": {"present": false, "count": 0, "assessment": "missing"}}},
+
+ "experiment_material_limitation": {
+  "limitations": [
+   {"id": 1, "type": "GT imbalance", "detail": "KEEP_SEPARATE=19, MERGE=2", "impact": "quality statistical inference not feasible; pilot only", "blocking": false},
+   {"id": 2, "type": "Conflict coverage", "detail": "0 conflict cases", "impact": "conflict-preservation Human judgment not testable", "blocking": false},
+   {"id": 3, "type": "Automation bias coverage", "detail": "0 System!=GT cases; System candidate all correct", "impact": "cannot test Human accepting System misleading claim", "blocking": "partial"},
+   {"id": 4, "type": "Positive scope", "detail": "all positive=KEEP_SEPARATE", "impact": "C false-acceptance not testable", "blocking": "partial"},
+   {"id": 5, "type": "Cross-document", "detail": "all from DICE IS-11 sampling frame", "impact": "generalization not claimable", "blocking": false},
+   {"id": 6, "type": "n=21", "detail": "pilot/exploratory only", "impact": "non-confirmatory", "blocking": false}],
+  "approach": "recorded as limitations, NOT designed-away; NOT architecture-expanded"},
+
+ "workflows": {
+  "A_instance_validation": {"human_sees": "Evidence Instance + structural context + task", "judgments": 21, "evidence_exposure": 21, "abstraction_burden": 0, "cognitive_cost": "21 x (read + decide)"},
+  "B_naive_pattern_validation": {"human_sees": "3 groups (pre-grouped, no compression) + all member instances", "judgments": 3, "evidence_exposure": 21, "abstraction_burden": "HIGH (commonality + comparison + prototype + boundary + negative + UNKNOWN)", "cognitive_cost": "3 judgments + 21 instance reading + abstraction work"},
+  "C_minimal_semantic_validation": {"human_sees": "3 Semantic Claim Candidates + summary + grouping criteria + provenance pointer", "judgments": 3, "evidence_exposure": "3 default / 21 on-demand Level 4", "abstraction_burden": 0, "cognitive_cost": "3 x (read claim + validate)"}},
+
+ "concept_distinction": {
+  "validation_count": {"A": 21, "B": 3, "C": 3},
+  "evidence_exposure": {"A": 21, "B": 21, "C": "3 default + N on-demand"},
+  "cognitive_cost": {"A": "21x(read+decide)", "B": "3 judgments + abstraction", "C": "3x(read claim+validate)"},
+  "rule": "must NOT infer cognitive load down from 21->3; must measure cost+burden"},
+
+ "variables": {
+  "primary": [
+   {"name": "cognitive_cost", "measure": "completion time per workflow", "A": "21xt_inst", "B": "t_group+t_abstraction", "C": "3xt_claim"},
+   {"name": "evidence_exposure", "measure": "instances reviewed count", "A": 21, "B": 21, "C": "3 + on-demand"},
+   {"name": "validation_quality", "measure": "correctness vs GT", "A": "21 judgments vs GT", "B": "3 vs GT", "C": "3 vs GT"}],
+  "quality_submetrics": [
+   {"name": "correctness", "definition": "judgment == GT", "material_limit": "21 cases (19 KS + 2 MERGE)"},
+   {"name": "false_acceptance", "definition": "Human KEEP_SEPARATE but GT=MERGE", "material_limit": "2 MERGE cases only"},
+   {"name": "false_rejection", "definition": "Human MERGE but GT=KEEP_SEPARATE", "material_limit": "19 KS cases"},
+   {"name": "unknown_handling", "definition": "Human UNKNOWN when evidence insufficient", "material_limit": "4 partition_unresolvable + 6 region_not_formed"}],
+  "secondary": [
+   {"name": "perceived_difficulty", "measure": "5-point Likert per workflow", "required": false},
+   {"name": "confidence", "measure": "5-point Likert per judgment", "required": false},
+   {"name": "error_detection", "measure": "Human detects System misjudgment", "required": false, "note": "automation bias coverage LIMITED"}]},
+
+ "burden_transfer_detection": {
+  "A_vs_C": {"if": "C.count<A.count AND C.quality>=A.quality AND C.time<A.time", "then": "C > A (cost down, quality preserved)", "else_if": "C.count<A.count AND C.quality<A.quality", "then": "C sacrifices quality (FAIL C2)"},
+  "B_vs_C": {"if": "B.count==C.count==3 AND B.time>C.time AND B.quality<=C.quality", "then": "C > B (same count, less burden)", "else_if": "B.count==C.count AND B.abstraction_burden>C.abstraction_burden", "then": "burden transfer in B confirmed"},
+  "automation_bias": {"coverage": "LIMITED (0 System!=GT)", "detection": "if Human accepts 100% AND GT=100% consistent, result=INCONCLUSIVE", "recorded_as": "limitation"}},
+
+ "unknown_handling": {
+  "legal_judgments": ["KEEP_SEPARATE", "MERGE", "UNKNOWN"],
+  "unknown_acceptable_for": ["partition_unresolvable (4)", "region_not_formed (6)"],
+  "over_compression_risk": "Human all UNKNOWN for region_not_formed (2 GT=MERGE + 4 GT=KS); all UNKNOWN = correctness drop; possible over-compression (Human relies on System 'no candidate')"},
+
+ "negative_evidence_preservation": {
+  "C_must_show": ["Group 1 admitted (11, candidate)", "Group 2 region_not_formed (6, UNKNOWN)", "Group 3 partition_unresolvable (4, UNKNOWN)"],
+  "rule": "C must NOT only show Group 1",
+  "provenance_recoverable": "Level 4 on-demand; record expansion count"},
+
+ "experiment_structure": {
+  "design": "within-subject, 3 conditions (A/B/C), 21 cases, counterbalanced Latin square",
+  "participant_count": "pilot n=3-5, exploratory",
+  "task": "semantic validation (KEEP_SEPARATE / MERGE / UNKNOWN)",
+  "order_effect_mitigation": "Latin square (3 conditions x 3 orders)",
+  "learning_effect_mitigation": "counterbalancing + record order; same material repeated = LIMITATION",
+  "not_added": ["between-subject design", "complex ANOVA", "causal inference", "blinding"]},
+
+ "data_supplement_plan": {
+  "needed": true,
+  "for_limited_scope": true,
+  "items": [
+   {"type": "System!=GT cases", "reason": "0 cases; cannot test automation bias", "target": "+3-5 cases", "method": "from DICE corpus, structural similarity high but GT=MERGE"},
+   {"type": "Conflict cases", "reason": "0 cases; cannot test conflict preservation", "target": "+2-3 cases", "method": "two evidence sources disagree"},
+   {"type": "GT balance", "reason": "19:2 severely imbalanced", "target": "+5-8 MERGE cases", "method": "same EIC-1 pipeline, same GT annotation"}],
+  "constraints": ["NOT modify EIC-1/GT/TLD/production code", "NOT modify System architecture for supplement"],
+  "status": "PROPOSED (requires separate authorization; not executed in this phase)"},
+
+ "success_criteria": {
+  "C1_cognitive_cost": "C.time < A.time OR C.time not materially higher than A.time",
+  "C2_quality": "C.correctness >= A.correctness (descriptive, non-statistical)",
+  "C3_burden_transfer": "C.abstraction_burden(0) < B.abstraction_burden(HIGH); B.time > C.time AND B.difficulty > C.difficulty = burden transfer in B",
+  "C4_evidence_integrity": "UNKNOWN/negative/conflict/provenance preserved in C"},
+
+ "authority_boundary": {
+  "system": {"aggregation": 0, "compression": 0, "semantic_claim": "candidate"},
+  "human": {"semantic_validation": "authority (SUPPORTED/UNSUPPORTED/UNKNOWN)"},
+  "capability": "human-controlled",
+  "runtime": 0,
+  "rule": "experiment does not change Authority Boundary; C claim is candidate, Human can reject"},
+
+ "anti_overdesign_audit": {
+  "Q1_need_ABC": "YES (RQ requires Instance vs Naive-Pattern vs Compressed-Claim comparison)",
+  "Q2_deletable_metrics": "Secondary (difficulty, confidence) deletable; Primary (cost, quality, burden) not",
+  "Q3_deletable_conditions": "NO (3 conditions = RQ minimum)",
+  "Q4_added_for_completeness": "NO (all variables serve RQ directly)",
+  "Q5_new_primitive": "NO (direct use L5.5 {Aggregation, Compression})",
+  "Q6_new_contract": "NO (L5.4 Contract applicable)",
+  "Q7_reopen_pattern": "NO (Pattern = compression+reuse layer, closed)",
+  "Q8_recursion": "NO (design serves RQ, no added design layer for potential risk)",
+  "Q9_increase_for_risk": "NO (limitations recorded not designed-away)",
+  "EXPERIMENT_DESIGN_MINIMALITY": "PASS"},
+
+ "next_step_decision": {
+  "path_1_pilot_now": {"use": "current 21 cases", "answers": "cost + quality (descriptive) + burden transfer", "does_not_answer": "automation bias, false-acceptance, conflict", "mark": "PILOT / EXPLORATORY / LIMITED_SCOPE"},
+  "path_2_supplement_first": {"use": "21 + supplemented cases", "answers": "full experiment including automation bias", "requires": "DATA_SUPPLEMENT + EXPERIMENT authorization"},
+  "recommended": "PATH 1 (PILOT NOW, LIMITED SCOPE)",
+  "rationale": ["current material answers RQ core (cost + burden transfer)", "pilot results inform data supplement needs", "not waiting for supplement (more efficient)", "honestly mark PILOT / LIMITED_SCOPE"]},
+
+ "gate": {
+  "L5_7_STATUS": "DESIGN-READY",
+  "EXPERIMENT_DESIGN_MINIMALITY": "PASS",
+  "L5_ARCHITECTURE": "CLOSED",
+  "NEW_PRIMITIVE": 0,
+  "NEW_CONTRACT": 0,
+  "NEW_DESIGN": 0,
+  "RQ_ANSWERABLE": true,
+  "RQ_LIMITATIONS": ["automation_bias: LIMITED", "false_acceptance: LIMITED", "conflict: LIMITED", "quality_statistical: LIMITED (GT imbalance)"],
+  "EXPERIMENT_MATERIAL_LIMITATION": "RECORDED",
+  "MATERIAL_AUDIT_PASS": true,
+  "NEXT": "HUMAN EXPERIMENT AUTHORIZATION REQUEST (PILOT, LIMITED SCOPE)",
+  "RECOMMENDED_PATH": "PATH 1 (PILOT NOW)",
+  "IMPLEMENTATION_AUTHORIZATION": "NOT AUTHORIZED",
+  "EXPERIMENT_AUTHORIZATION": "NOT AUTHORIZED (requires separate human-subject authorization)",
+  "DATA_SUPPLEMENT_AUTHORIZATION": "NOT AUTHORIZED (requires separate)",
+  "PRODUCTION": false,
+  "FROZEN_BASELINE": "INTACT",
+  "STOP": true},
+
+ "frozen_baseline_verify": {"gt_modified": false, "tld_modified": false, "atomic_observation_modified": false, "is11_decision_modified": false, "production_code_modified": false, "l5_5_modified": false, "schema_modified": false, "html_modified": false}
+}

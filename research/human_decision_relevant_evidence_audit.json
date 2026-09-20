@@ -1,0 +1,1323 @@
+{
+  "metadata": {
+    "audit_type": "human_decision_relevant_evidence_audit",
+    "date": "2026-09-12",
+    "mode": "READ-ONLY / NO IMPLEMENTATION / NO UI CHANGE",
+    "objective": "Identify what Evidence truly helps Human make Semantic Judgment"
+  },
+  "executive_summary": {
+    "finding": "DICE has sufficient Evidence FACTS but lacks Evidence RELATIONS. Human reconstructs relations from page image every time.",
+    "key_evidence": "P722 B1 (no Cue, fields+image) = 100% accuracy, 1.7s; B2 (with Cue) = 93%, 5.9s — Cue added cognitive load without decision value",
+    "gap_type": "RELATION GAP — not Observation Gap, not Evidence Gap, not Distillation Gap",
+    "recommendation": "Organize existing Evidence into RELATIONS, not new Observations"
+  },
+  "data_sources": {
+    "experiment_cases": 30,
+    "p722_judgments": 55,
+    "free_text_feedbacks": 4,
+    "reviewer_rationales": 90,
+    "gt_adjudication_rationales": 93,
+    "total_feedback_instances": 187
+  },
+  "p722_results": {
+    "A": {
+      "accuracy": "93% (14/15)",
+      "avg_time": "2.2s",
+      "max_time": "8.1s",
+      "slow_gt10s": 0
+    },
+    "B1": {
+      "accuracy": "100% (10/10)",
+      "avg_time": "1.7s",
+      "max_time": "2.9s",
+      "slow_gt10s": 0
+    },
+    "B2": {
+      "accuracy": "93% (28/30)",
+      "avg_time": "5.9s",
+      "max_time": "45.9s",
+      "slow_gt10s": 3
+    },
+    "key_finding": "B2 (with Cue) is 3.5x SLOWER than B1 (no Cue), with no accuracy improvement"
+  },
+  "error_cases": [
+    {
+      "case_id": "IS11-AMB-005",
+      "condition": "A",
+      "decision": "MERGE",
+      "gt": "KEEP_SEPARATE",
+      "time": 1.6,
+      "has_tld": true,
+      "missing": "Sentence boundary detection (no Cue in A)"
+    },
+    {
+      "case_id": "IS11-AMB-032",
+      "condition": "B2",
+      "decision": "UNKNOWN",
+      "gt": "KEEP_SEPARATE",
+      "time": 45.9,
+      "has_tld": false,
+      "missing": "Table structure context (TLD unavailable)"
+    },
+    {
+      "case_id": "IS11-AMB-375",
+      "condition": "B2",
+      "decision": "UNKNOWN",
+      "gt": "KEEP_SEPARATE",
+      "time": 31.3,
+      "has_tld": false,
+      "missing": "Paragraph membership (no TLD, only period+capital)"
+    }
+  ],
+  "error_pattern": "All B2 errors occurred on NON-TLD pages — Human had Cue but Cue lacked structural relations",
+  "evidence_necessity": {
+    "text_a_text_b": "NECESSARY",
+    "page_image": "NECESSARY",
+    "h_gap": "HELPFUL",
+    "dy": "HELPFUL",
+    "same_style": "REDUNDANT",
+    "width_a_b": "REDUNDANT",
+    "style_sig": "IRRELEVANT",
+    "line_obs_count": "HELPFUL",
+    "line_spans": "NECESSARY",
+    "tld_is_in_table": "HELPFUL",
+    "tld_different_cell": "NECESSARY (table cases)",
+    "cue1_cue7": "HELPFUL_TO_REDUNDANT"
+  },
+  "evidence_type_classification": {
+    "RAW_FACT": [
+      "text_a",
+      "text_b",
+      "same_style",
+      "width",
+      "style_sig"
+    ],
+    "GEOMETRIC_RELATION": [
+      "h_gap",
+      "dy"
+    ],
+    "STRUCTURAL_RELATION": [
+      "TLD is_in_table",
+      "TLD different_cell",
+      "line_obs_count"
+    ],
+    "LOCAL_CONTEXT": [
+      "line_spans",
+      "page image"
+    ],
+    "CROSS_INSTANCE_PATTERN": "MISSING",
+    "COUNTEREVIDENCE": "MISSING",
+    "BOUNDARY_EVIDENCE": "MISSING",
+    "PROVENANCE": [
+      "doc_id",
+      "page_number"
+    ]
+  },
+  "evidence_vs_interpretation_vs_judgment": {
+    "NUMERIC_PAIR": {
+      "evidence": "text_a=\"28.54\", text_b=\"10.02\", TLD different_cell=True",
+      "interpretation": "Two numeric values in same table row, different columns",
+      "judgment": "Different table columns → KEEP_SEPARATE",
+      "gap": "Missing column header identification"
+    },
+    "SENTENCE_BOUNDARY": {
+      "evidence": "text_a ends period, text_b starts capital",
+      "interpretation": "text_a ends sentence, text_b starts new sentence",
+      "judgment": "Separate sentences → KEEP_SEPARATE (or MERGE if same paragraph)",
+      "gap": "Missing paragraph membership — caused Reviewer A/B disagreement"
+    },
+    "FIGURE_CAPTION": {
+      "evidence": "text_a=\"FIG. 9:\", text_b=\"Left:\"",
+      "interpretation": "Caption label + caption body",
+      "judgment": "Same caption → MERGE",
+      "gap": "Missing caption boundary"
+    },
+    "TABLE_HEADER": {
+      "evidence": "text_a=\"Resolution\", text_b=\"#Channels\", TLD different_cell=True",
+      "interpretation": "Two column headers in same table",
+      "judgment": "Different headers → KEEP_SEPARATE",
+      "gap": "Missing header hierarchy"
+    },
+    "MIXED": {
+      "evidence": "text_a=\"41M\", text_b=\"EfficientNet-B5\"",
+      "interpretation": "Parameter count + model name in different columns",
+      "judgment": "Different columns → KEEP_SEPARATE",
+      "gap": "Missing content type classification"
+    }
+  },
+  "decision_relevant_evidence": {
+    "high_relevance": [
+      "text_a",
+      "text_b",
+      "page image",
+      "line_spans",
+      "TLD different_cell"
+    ],
+    "medium_relevance": [
+      "TLD is_in_table",
+      "line_obs_count"
+    ],
+    "low_relevance": [
+      "h_gap",
+      "dy",
+      "same_style",
+      "width",
+      "style_sig",
+      "Cue1-Cue7"
+    ],
+    "missing_high_relevance": [
+      "Column header identification",
+      "Paragraph membership",
+      "Caption boundary",
+      "Counterevidence"
+    ],
+    "missing_medium_relevance": [
+      "Content type classification",
+      "Cross-instance pattern"
+    ]
+  },
+  "missing_evidence": {
+    "COLUMN_HEADER_IDENTIFICATION": {
+      "cases": 9,
+      "severity": "HIGH",
+      "impact": "Human must infer column meaning from image"
+    },
+    "CONTENT_TYPE_CLASSIFICATION": {
+      "cases": 13,
+      "severity": "MEDIUM",
+      "impact": "Human must infer content type from text"
+    },
+    "PARAGRAPH_MEMBERSHIP": {
+      "cases": 4,
+      "severity": "HIGH",
+      "impact": "Caused Reviewer A/B disagreement"
+    },
+    "CAPTION_BOUNDARY": {
+      "cases": 2,
+      "severity": "HIGH",
+      "impact": "Human must infer caption scope from image"
+    },
+    "HEADER_HIERARCHY": {
+      "cases": 2,
+      "severity": "MEDIUM",
+      "impact": "Human must infer header relationship from image"
+    },
+    "CROSS_INSTANCE_PATTERN": {
+      "cases": "ALL",
+      "severity": "MEDIUM",
+      "impact": "Human reconstructs alignment patterns from image"
+    },
+    "COUNTEREVIDENCE": {
+      "cases": "ALL",
+      "severity": "HIGH",
+      "impact": "No evidence that might contradict primary interpretation"
+    }
+  },
+  "compression_vs_distillation": {
+    "l5_5_compression": "A: 15 fields → B1: 8 fields = removed style_sig, doc_id, page_number. IS compression, NOT distillation.",
+    "l5_10_cue": "B2 adds 4-7 Cues. IS a form of distillation (transforms raw evidence to text), but INCOMPLETE: Cues are binary/text patterns, not structural relations; duplicate field info; dont provide what Human needs.",
+    "p722_proof": "B2 (5.9s) is 3.5x slower than B1 (1.7s) with no accuracy improvement → Cue added cognitive load without decision value",
+    "true_distillation_would_be": [
+      "STRUCTURAL_SUMMARY: \"A and B are in row 3, columns top-1 error and top-5 error\"",
+      "CONTEXT_RELATION: \"A ends sentence S1 in paragraph P1; B starts sentence S2 in P1\"",
+      "CAPTION_CONTEXT: \"A is caption label FIG. 9:; B is caption body\"",
+      "BOUNDARY_INDICATOR: \"A and B are at a sentence boundary within same paragraph\""
+    ]
+  },
+  "evidence_value_matrix": [
+    {
+      "evidence": "text_a, text_b",
+      "type": "RAW_FACT",
+      "decision_relevance": "HIGH",
+      "necessity": "NECESSARY",
+      "traceable": true,
+      "semantic_leakage": false
+    },
+    {
+      "evidence": "page image",
+      "type": "LOCAL_CONTEXT",
+      "decision_relevance": "HIGH",
+      "necessity": "NECESSARY",
+      "traceable": true,
+      "semantic_leakage": false
+    },
+    {
+      "evidence": "h_gap",
+      "type": "GEOMETRIC_RELATION",
+      "decision_relevance": "LOW",
+      "necessity": "HELPFUL",
+      "traceable": true,
+      "semantic_leakage": false
+    },
+    {
+      "evidence": "dy",
+      "type": "GEOMETRIC_RELATION",
+      "decision_relevance": "LOW",
+      "necessity": "HELPFUL",
+      "traceable": true,
+      "semantic_leakage": false
+    },
+    {
+      "evidence": "same_style",
+      "type": "RAW_FACT",
+      "decision_relevance": "LOW",
+      "necessity": "REDUNDANT",
+      "traceable": true,
+      "semantic_leakage": false
+    },
+    {
+      "evidence": "width_a/b",
+      "type": "RAW_FACT",
+      "decision_relevance": "LOW",
+      "necessity": "REDUNDANT",
+      "traceable": true,
+      "semantic_leakage": false
+    },
+    {
+      "evidence": "style_sig",
+      "type": "RAW_FACT",
+      "decision_relevance": "LOW",
+      "necessity": "IRRELEVANT",
+      "traceable": true,
+      "semantic_leakage": false
+    },
+    {
+      "evidence": "line_obs_count",
+      "type": "STRUCTURAL_RELATION",
+      "decision_relevance": "MEDIUM",
+      "necessity": "HELPFUL",
+      "traceable": true,
+      "semantic_leakage": false
+    },
+    {
+      "evidence": "line_spans",
+      "type": "LOCAL_CONTEXT",
+      "decision_relevance": "HIGH",
+      "necessity": "NECESSARY",
+      "traceable": true,
+      "semantic_leakage": "PARTIAL — no paragraph/table context"
+    },
+    {
+      "evidence": "TLD is_in_table",
+      "type": "STRUCTURAL_RELATION",
+      "decision_relevance": "MEDIUM",
+      "necessity": "HELPFUL",
+      "traceable": true,
+      "semantic_leakage": false
+    },
+    {
+      "evidence": "TLD different_cell",
+      "type": "STRUCTURAL_RELATION",
+      "decision_relevance": "HIGH",
+      "necessity": "NECESSARY (table)",
+      "traceable": true,
+      "semantic_leakage": false
+    },
+    {
+      "evidence": "Cue1-Cue7",
+      "type": "INTERPRETATION_TEXT",
+      "decision_relevance": "LOW",
+      "necessity": "REDUNDANT",
+      "traceable": true,
+      "semantic_leakage": false
+    },
+    {
+      "evidence": "Column header ID",
+      "type": "MISSING",
+      "decision_relevance": "HIGH",
+      "necessity": "NECESSARY",
+      "traceable": false,
+      "semantic_leakage": true
+    },
+    {
+      "evidence": "Paragraph membership",
+      "type": "MISSING",
+      "decision_relevance": "HIGH",
+      "necessity": "NECESSARY",
+      "traceable": false,
+      "semantic_leakage": true
+    },
+    {
+      "evidence": "Caption boundary",
+      "type": "MISSING",
+      "decision_relevance": "HIGH",
+      "necessity": "NECESSARY",
+      "traceable": false,
+      "semantic_leakage": true
+    },
+    {
+      "evidence": "Content type classification",
+      "type": "MISSING",
+      "decision_relevance": "MEDIUM",
+      "necessity": "HELPFUL",
+      "traceable": false,
+      "semantic_leakage": true
+    },
+    {
+      "evidence": "Cross-instance pattern",
+      "type": "MISSING",
+      "decision_relevance": "MEDIUM",
+      "necessity": "HELPFUL",
+      "traceable": false,
+      "semantic_leakage": true
+    },
+    {
+      "evidence": "Counterevidence",
+      "type": "MISSING",
+      "decision_relevance": "HIGH",
+      "necessity": "NECESSARY",
+      "traceable": false,
+      "semantic_leakage": true
+    }
+  ],
+  "gap_classification": {
+    "type": "RELATION_GAP",
+    "description": "DICE has sufficient Evidence FACTS but lacks Evidence RELATIONS between items",
+    "not_observation_gap": "P1-P6 + TLD observe enough raw facts",
+    "not_evidence_gap": "Evidence exists, just not organized into relations",
+    "not_distillation_gap": "Cue is a form of distillation, but incomplete (provides facts not relations)",
+    "not_presentation_gap": "UI shows evidence but does not organize it",
+    "not_human_validation_gap": "Validation is about signal, not evidence",
+    "what_is_missing": [
+      "Evidence RELATIONS between items (A in column X, B in column Y)",
+      "CONTEXT RELATIONS (A and B in paragraph P / caption C / table T)",
+      "CROSS-INSTANCE patterns (A aligns with [X,Y,Z], B aligns with [W,V])",
+      "COUNTEREVIDENCE (evidence contradicting primary interpretation)"
+    ]
+  },
+  "anti_overdesign": {
+    "G1_new_observation": false,
+    "G2_new_evidence_type": false,
+    "G3_just_evidence_organization": true,
+    "G4_just_ui_presentation": "PARTIAL",
+    "G5_modify_compression": false,
+    "G6_modify_cue": false,
+    "G7_modify_validation_workflow": false,
+    "G8_new_architecture_layer": false,
+    "conclusion": "NO NEW MODULE — gap is Evidence Organization, not Evidence Observation"
+  },
+  "recommended_minimal_change": {
+    "change": "Organize existing Evidence into RELATIONS, not new Observations",
+    "examples": [
+      "\"A and B are in row 3 of Table 2, columns top-1 error and top-5 error\"",
+      "\"A ends sentence S1 in paragraph P1; B starts sentence S2 in P1\"",
+      "\"A is caption label FIG. 9:; B is caption body\""
+    ],
+    "roi": "HIGH — reduces Human reconstruction work, enables true Distillation",
+    "not_implementation": true,
+    "read_only": true
+  },
+  "confidence": {
+    "B1_better_than_B2": "HIGH — P722 data: 1.7s vs 5.9s",
+    "cue_increases_cognitive_load": "HIGH — B2 3.5x slower, no accuracy gain",
+    "relation_gap_is_main_issue": "MEDIUM-HIGH — based on error cases + rationale analysis",
+    "missing_context_evidence": "HIGH — 3/3 errors lack structural context",
+    "no_new_observation_needed": "MEDIUM — based on existing evidence coverage"
+  },
+  "limitations": [
+    "n=1 participant (P722), cross-participant stability unverified",
+    "4 documents (3 tech + 1 medical), limited document diversity",
+    "TLD coverage 41%, non-TLD page analysis based on limited sample",
+    "Reviewer rationales are post-hoc explanations, may not reflect real-time judgment",
+    "No interaction trace (eye tracking, clicks), cannot directly verify what Human viewed"
+  ],
+  "cases": [
+    {
+      "case_id": "IS11-AMB-005",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "unsurprising) and then degrades rapidly.",
+      "text_b": "Unexpectedly,",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "SENTENCE_BOUNDARY",
+      "human_needed": "SENTENCE_CONTINUITY — is text_b a new sentence or a continuation?",
+      "evidence_type": "TEXT_PATTERN",
+      "system_provides": "text_a period + text_b capital (cue5, cue6)",
+      "missing": "PARAGRAPH_MEMBERSHIP — are they in the same paragraph?",
+      "tld_necessity": "IRRELEVANT",
+      "line_obs_count": 3,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 3.422,
+          "correct": true
+        },
+        {
+          "condition": "A",
+          "decision": "MERGE",
+          "time": 1.554,
+          "correct": false
+        },
+        {
+          "condition": "B1",
+          "decision": "KEEP_SEPARATE",
+          "time": 2.524,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "Both fragments are from the same paragraph in the introduction discussing the degradation problem; '"
+    },
+    {
+      "case_id": "IS11-AMB-024",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "28.54",
+      "text_b": "10.02",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "NUMERIC_PAIR",
+      "human_needed": "TABLE_COLUMN_RELATION — which columns do these values belong to?",
+      "evidence_type": "STRUCTURAL_RELATION",
+      "system_provides": "TLD is_in_table + different_cell (if TLD available)",
+      "missing": "COLUMN_HEADER_IDENTIFICATION — what do the columns mean?",
+      "tld_necessity": "HELPFUL",
+      "line_obs_count": 3,
+      "p722_performance": [
+        {
+          "condition": "A",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.449,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'28.54' (top-1 err.) and '10.02' (top-5 err.) are values in different columns of the same table row "
+    },
+    {
+      "case_id": "IS11-AMB-034",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "21.59",
+      "text_b": "5.71",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "NUMERIC_PAIR",
+      "human_needed": "TABLE_COLUMN_RELATION — which columns do these values belong to?",
+      "evidence_type": "STRUCTURAL_RELATION",
+      "system_provides": "TLD is_in_table + different_cell (if TLD available)",
+      "missing": "COLUMN_HEADER_IDENTIFICATION — what do the columns mean?",
+      "tld_necessity": "HELPFUL",
+      "line_obs_count": 4,
+      "p722_performance": [
+        {
+          "condition": "A",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.174,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'21.59' and '5.71' are numeric values in different table cells, representing different error metrics"
+    },
+    {
+      "case_id": "IS11-AMB-074",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "41.5",
+      "text_b": "21.2",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "NUMERIC_PAIR",
+      "human_needed": "TABLE_COLUMN_RELATION — which columns do these values belong to?",
+      "evidence_type": "STRUCTURAL_RELATION",
+      "system_provides": "TLD is_in_table + different_cell (if TLD available)",
+      "missing": "COLUMN_HEADER_IDENTIFICATION — what do the columns mean?",
+      "tld_necessity": "HELPFUL",
+      "line_obs_count": 10,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 3.069,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'41.5' (mAP@.5) and '21.2' (mAP@[.5,.95]) are values in different columns of the VGG-16 row in Table"
+    },
+    {
+      "case_id": "IS11-AMB-130",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "Resolution",
+      "text_b": "#Channels",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "MIXED",
+      "human_needed": "CONTENT_TYPE_IDENTIFICATION — what type of content are these?",
+      "evidence_type": "SEMANTIC_CONTENT",
+      "system_provides": "text content (implicit)",
+      "missing": "CONTENT_TYPE_CLASSIFICATION — what semantic category?",
+      "tld_necessity": "UNKNOWN",
+      "line_obs_count": 8,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.128,
+          "correct": true
+        },
+        {
+          "condition": "B1",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.161,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'Resolution' and '#Channels' are two distinct column headers in Table 1 of the EfficientNet architec"
+    },
+    {
+      "case_id": "IS11-AMB-135",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "4",
+      "text_b": "MBConv6, k5x5",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "MIXED",
+      "human_needed": "CONTENT_TYPE_IDENTIFICATION — what type of content are these?",
+      "evidence_type": "SEMANTIC_CONTENT",
+      "system_provides": "text content (implicit)",
+      "missing": "CONTENT_TYPE_CLASSIFICATION — what semantic category?",
+      "tld_necessity": "UNKNOWN",
+      "line_obs_count": 12,
+      "p722_performance": [
+        {
+          "condition": "A",
+          "decision": "KEEP_SEPARATE",
+          "time": 2.236,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'4' (stage index) and 'MBConv6, k5x5' (operator) are values in different columns of the same row in "
+    },
+    {
+      "case_id": "IS11-AMB-262",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "41M",
+      "text_b": "EfﬁcientNet-B5",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "MIXED",
+      "human_needed": "CONTENT_TYPE_IDENTIFICATION — what type of content are these?",
+      "evidence_type": "SEMANTIC_CONTENT",
+      "system_provides": "text content (implicit)",
+      "missing": "CONTENT_TYPE_CLASSIFICATION — what semantic category?",
+      "tld_necessity": "UNKNOWN",
+      "line_obs_count": 13,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 2.616,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'41M' (#Param for Inception-v4) and 'EfficientNet-B5' (Our Model name) are values in different colum"
+    },
+    {
+      "case_id": "IS11-AMB-313",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "Test Size",
+      "text_b": "#Classes",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "MIXED",
+      "human_needed": "CONTENT_TYPE_IDENTIFICATION — what type of content are these?",
+      "evidence_type": "SEMANTIC_CONTENT",
+      "system_provides": "text content (implicit)",
+      "missing": "CONTENT_TYPE_CLASSIFICATION — what semantic category?",
+      "tld_necessity": "UNKNOWN",
+      "line_obs_count": 5,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 3.861,
+          "correct": true
+        },
+        {
+          "condition": "B1",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.665,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'Test Size' and '#Classes' are two distinct column headers in Table 6; they represent different data"
+    },
+    {
+      "case_id": "IS11-AMB-346",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "83.95",
+      "text_b": "84.26",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "NUMERIC_PAIR",
+      "human_needed": "TABLE_COLUMN_RELATION — which columns do these values belong to?",
+      "evidence_type": "STRUCTURAL_RELATION",
+      "system_provides": "TLD is_in_table + different_cell (if TLD available)",
+      "missing": "COLUMN_HEADER_IDENTIFICATION — what do the columns mean?",
+      "tld_necessity": "HELPFUL",
+      "line_obs_count": 9,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 4.045,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'83.95' and '84.26' are numeric values in different table cells of an appendix results table; they r"
+    },
+    {
+      "case_id": "IS11-AMB-350",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "80.16",
+      "text_b": "81.72",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "NUMERIC_PAIR",
+      "human_needed": "TABLE_COLUMN_RELATION — which columns do these values belong to?",
+      "evidence_type": "STRUCTURAL_RELATION",
+      "system_provides": "TLD is_in_table + different_cell (if TLD available)",
+      "missing": "COLUMN_HEADER_IDENTIFICATION — what do the columns mean?",
+      "tld_necessity": "HELPFUL",
+      "line_obs_count": 10,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 6.202,
+          "correct": true
+        },
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 3.287,
+          "correct": true
+        },
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.158,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'80.16' and '81.72' are numeric values in different table cells of an appendix results table; they r"
+    },
+    {
+      "case_id": "IS11-AMB-414",
+      "gt": "MERGE",
+      "text_a": "FIG. 9:",
+      "text_b": "Left:",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "FIGURE_CAPTION",
+      "human_needed": "CAPTION_CONTINUITY — is text_b a continuation of the caption started by text_a?",
+      "evidence_type": "LOCAL_CONTEXT",
+      "system_provides": "text_a \"FIG\" pattern (cue7)",
+      "missing": "CAPTION_BOUNDARY — where does the caption end?",
+      "tld_necessity": "IRRELEVANT",
+      "line_obs_count": 5,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "MERGE",
+          "time": 9.715,
+          "correct": true
+        },
+        {
+          "condition": "B2",
+          "decision": "MERGE",
+          "time": 2.181,
+          "correct": true
+        },
+        {
+          "condition": "A",
+          "decision": "MERGE",
+          "time": 1.572,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'FIG. 9:' and 'Left:' are parts of the same figure caption; the figure label and its sub-description"
+    },
+    {
+      "case_id": "IS11-AMB-422",
+      "gt": "MERGE",
+      "text_a": "FIG. 12:",
+      "text_b": "Distribution of errors for predictions of entropy ",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "FIGURE_CAPTION",
+      "human_needed": "CAPTION_CONTINUITY — is text_b a continuation of the caption started by text_a?",
+      "evidence_type": "LOCAL_CONTEXT",
+      "system_provides": "text_a \"FIG\" pattern (cue7)",
+      "missing": "CAPTION_BOUNDARY — where does the caption end?",
+      "tld_necessity": "IRRELEVANT",
+      "line_obs_count": 2,
+      "p722_performance": [
+        {
+          "condition": "A",
+          "decision": "MERGE",
+          "time": 2.537,
+          "correct": true
+        },
+        {
+          "condition": "B2",
+          "decision": "MERGE",
+          "time": 1.307,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'FIG. 12:' and 'Distribution of errors for predictions of entropy (upper) and ZPVE (lower)' are part"
+    },
+    {
+      "case_id": "IS11-AMB-457",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "Models",
+      "text_b": "Size",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "TABLE_HEADER",
+      "human_needed": "HEADER_RELATION — are these headers from the same or different columns?",
+      "evidence_type": "STRUCTURAL_RELATION",
+      "system_provides": "TLD is_in_table + different_cell (if TLD available)",
+      "missing": "HEADER_HIERARCHY — are these sibling headers or parent-child?",
+      "tld_necessity": "UNKNOWN",
+      "line_obs_count": 10,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 3.677,
+          "correct": true
+        },
+        {
+          "condition": "A",
+          "decision": "KEEP_SEPARATE",
+          "time": 0.992,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'Models' and 'Size' are two distinct column headers in Table 2; they represent different attributes "
+    },
+    {
+      "case_id": "IS11-AMB-462",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "WGe",
+      "text_b": "Avg.",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "MIXED",
+      "human_needed": "CONTENT_TYPE_IDENTIFICATION — what type of content are these?",
+      "evidence_type": "SEMANTIC_CONTENT",
+      "system_provides": "text content (implicit)",
+      "missing": "CONTENT_TYPE_CLASSIFICATION — what semantic category?",
+      "tld_necessity": "UNKNOWN",
+      "line_obs_count": 10,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 4.744,
+          "correct": true
+        },
+        {
+          "condition": "A",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.482,
+          "correct": true
+        },
+        {
+          "condition": "B1",
+          "decision": "KEEP_SEPARATE",
+          "time": 0.713,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'WGe' and 'Avg.' are two distinct column headers in Table 2; they represent different evaluation ben"
+    },
+    {
+      "case_id": "IS11-AMB-467",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "37.0",
+      "text_b": "60.0",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "NUMERIC_PAIR",
+      "human_needed": "TABLE_COLUMN_RELATION — which columns do these values belong to?",
+      "evidence_type": "STRUCTURAL_RELATION",
+      "system_provides": "TLD is_in_table + different_cell (if TLD available)",
+      "missing": "COLUMN_HEADER_IDENTIFICATION — what do the columns mean?",
+      "tld_necessity": "HELPFUL",
+      "line_obs_count": 10,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 2.898,
+          "correct": true
+        },
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.109,
+          "correct": true
+        },
+        {
+          "condition": "A",
+          "decision": "KEEP_SEPARATE",
+          "time": 2.004,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'37.0' (HS) and '60.0' (BQ) are values in different columns of the LLaMA LLM 700M row in Table 2; th"
+    },
+    {
+      "case_id": "IS11-AMB-483",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "23.5",
+      "text_b": "38.5",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "NUMERIC_PAIR",
+      "human_needed": "TABLE_COLUMN_RELATION — which columns do these values belong to?",
+      "evidence_type": "STRUCTURAL_RELATION",
+      "system_provides": "TLD is_in_table + different_cell (if TLD available)",
+      "missing": "COLUMN_HEADER_IDENTIFICATION — what do the columns mean?",
+      "tld_necessity": "HELPFUL",
+      "line_obs_count": 10,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 7.658,
+          "correct": true
+        },
+        {
+          "condition": "A",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.562,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'23.5' (ARCc) and '38.5' (HS) are values in different columns of the LLaMA LLM 1.3B row in Table 2; "
+    },
+    {
+      "case_id": "IS11-AMB-505",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "61.4",
+      "text_b": "28.3",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "NUMERIC_PAIR",
+      "human_needed": "TABLE_COLUMN_RELATION — which columns do these values belong to?",
+      "evidence_type": "STRUCTURAL_RELATION",
+      "system_provides": "TLD is_in_table + different_cell (if TLD available)",
+      "missing": "COLUMN_HEADER_IDENTIFICATION — what do the columns mean?",
+      "tld_necessity": "HELPFUL",
+      "line_obs_count": 10,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 7.639,
+          "correct": true
+        },
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 2.166,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'61.4' (ARCe) and '28.3' (ARCc) are values in different columns of the BitNet b1.58 3B row in Table "
+    },
+    {
+      "case_id": "IS11-AMB-514",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "44.2",
+      "text_b": "63.5",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "NUMERIC_PAIR",
+      "human_needed": "TABLE_COLUMN_RELATION — which columns do these values belong to?",
+      "evidence_type": "STRUCTURAL_RELATION",
+      "system_provides": "TLD is_in_table + different_cell (if TLD available)",
+      "missing": "COLUMN_HEADER_IDENTIFICATION — what do the columns mean?",
+      "tld_necessity": "HELPFUL",
+      "line_obs_count": 10,
+      "p722_performance": [
+        {
+          "condition": "A",
+          "decision": "KEEP_SEPARATE",
+          "time": 4.067,
+          "correct": true
+        },
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 0.962,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'44.2' (HS) and '63.5' (BQ) are values in different columns of the BitNet b1.58 3.9B row in Table 2;"
+    },
+    {
+      "case_id": "IS11-AMB-519",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "facto backbone for open-source LLMs.",
+      "text_b": "To embrace the open-source community, our design",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "SENTENCE_BOUNDARY",
+      "human_needed": "SENTENCE_CONTINUITY — is text_b a new sentence or a continuation?",
+      "evidence_type": "TEXT_PATTERN",
+      "system_provides": "text_a period + text_b capital (cue5, cue6)",
+      "missing": "PARAGRAPH_MEMBERSHIP — are they in the same paragraph?",
+      "tld_necessity": "IRRELEVANT",
+      "line_obs_count": 2,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 2.021,
+          "correct": true
+        },
+        {
+          "condition": "A",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.555,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'facto backbone for open-source LLMs.' and 'To embrace the open-source community, our design' are in"
+    },
+    {
+      "case_id": "IS11-AMB-522",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "Size",
+      "text_b": "Max Batch Size",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "MIXED",
+      "human_needed": "CONTENT_TYPE_IDENTIFICATION — what type of content are these?",
+      "evidence_type": "SEMANTIC_CONTENT",
+      "system_provides": "text content (implicit)",
+      "missing": "CONTENT_TYPE_CLASSIFICATION — what semantic category?",
+      "tld_necessity": "UNKNOWN",
+      "line_obs_count": 4,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.996,
+          "correct": true
+        },
+        {
+          "condition": "A",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.508,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'Size' and 'Max Batch Size' are two distinct column headers in Table 3; they represent different att"
+    },
+    {
+      "case_id": "IS11-AMB-530",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "PIQA",
+      "text_b": "SciQ",
+      "has_tld": true,
+      "has_image": true,
+      "content_type": "TABLE_HEADER",
+      "human_needed": "HEADER_RELATION — are these headers from the same or different columns?",
+      "evidence_type": "STRUCTURAL_RELATION",
+      "system_provides": "TLD is_in_table + different_cell (if TLD available)",
+      "missing": "HEADER_HIERARCHY — are these sibling headers or parent-child?",
+      "tld_necessity": "UNKNOWN",
+      "line_obs_count": 8,
+      "p722_performance": [
+        {
+          "condition": "B1",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.285,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'PIQA' and 'SciQ' are two distinct column headers in Table 4; they represent different evaluation be"
+    },
+    {
+      "case_id": "IS11-AMB-052",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "0.46M",
+      "text_b": "7.51",
+      "has_tld": false,
+      "has_image": true,
+      "content_type": "MIXED",
+      "human_needed": "CONTENT_TYPE_IDENTIFICATION — what type of content are these?",
+      "evidence_type": "SEMANTIC_CONTENT",
+      "system_provides": "text content (implicit)",
+      "missing": "CONTENT_TYPE_CLASSIFICATION — what semantic category?",
+      "tld_necessity": "UNKNOWN",
+      "line_obs_count": 5,
+      "p722_performance": [
+        {
+          "condition": "B1",
+          "decision": "KEEP_SEPARATE",
+          "time": 2.895,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'0.46M' (# params) and '7.51' (error) are values in different columns of the ResNet-32 row in the CI"
+    },
+    {
+      "case_id": "IS11-AMB-163",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "93.9%",
+      "text_b": "34M",
+      "has_tld": false,
+      "has_image": true,
+      "content_type": "MIXED",
+      "human_needed": "CONTENT_TYPE_IDENTIFICATION — what type of content are these?",
+      "evidence_type": "SEMANTIC_CONTENT",
+      "system_provides": "text content (implicit)",
+      "missing": "CONTENT_TYPE_CLASSIFICATION — what semantic category?",
+      "tld_necessity": "UNKNOWN",
+      "line_obs_count": 3,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 2.045,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'93.9%' (Top-5 Acc.) and '34M' (#Params) are values in different columns of the DenseNet-264 row in "
+    },
+    {
+      "case_id": "IS11-AMB-168",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "3.0x",
+      "text_b": "5.7B",
+      "has_tld": false,
+      "has_image": true,
+      "content_type": "MIXED",
+      "human_needed": "CONTENT_TYPE_IDENTIFICATION — what type of content are these?",
+      "evidence_type": "SEMANTIC_CONTENT",
+      "system_provides": "text content (implicit)",
+      "missing": "CONTENT_TYPE_CLASSIFICATION — what semantic category?",
+      "tld_necessity": "UNKNOWN",
+      "line_obs_count": 6,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 0.97,
+          "correct": true
+        },
+        {
+          "condition": "B1",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.025,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'3.0x' (param ratio) and '5.7B' (#FLOPs) are values in different columns of the Inception-v3 row in "
+    },
+    {
+      "case_id": "IS11-AMB-198",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "82.9%",
+      "text_b": "96.2%",
+      "has_tld": false,
+      "has_image": true,
+      "content_type": "MIXED",
+      "human_needed": "CONTENT_TYPE_IDENTIFICATION — what type of content are these?",
+      "evidence_type": "SEMANTIC_CONTENT",
+      "system_provides": "text content (implicit)",
+      "missing": "CONTENT_TYPE_CLASSIFICATION — what semantic category?",
+      "tld_necessity": "UNKNOWN",
+      "line_obs_count": 7,
+      "p722_performance": [
+        {
+          "condition": "B1",
+          "decision": "KEEP_SEPARATE",
+          "time": 2.949,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'82.9%' (Top-1 Acc.) and '96.2%' (Top-5 Acc.) are values in different columns of a model row in Tabl"
+    },
+    {
+      "case_id": "IS11-AMB-205",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "96.5%",
+      "text_b": "155M",
+      "has_tld": false,
+      "has_image": true,
+      "content_type": "MIXED",
+      "human_needed": "CONTENT_TYPE_IDENTIFICATION — what type of content are these?",
+      "evidence_type": "SEMANTIC_CONTENT",
+      "system_provides": "text content (implicit)",
+      "missing": "CONTENT_TYPE_CLASSIFICATION — what semantic category?",
+      "tld_necessity": "UNKNOWN",
+      "line_obs_count": 5,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.387,
+          "correct": true
+        },
+        {
+          "condition": "B1",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.146,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'96.5%' (Top-5 Acc.) and '155M' (#Params) are values in different columns of the AmoebaNet-C row in "
+    },
+    {
+      "case_id": "IS11-AMB-375",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "[23].",
+      "text_b": "Each",
+      "has_tld": false,
+      "has_image": true,
+      "content_type": "SENTENCE_BOUNDARY",
+      "human_needed": "SENTENCE_CONTINUITY — is text_b a new sentence or a continuation?",
+      "evidence_type": "TEXT_PATTERN",
+      "system_provides": "text_a period + text_b capital (cue5, cue6)",
+      "missing": "PARAGRAPH_MEMBERSHIP — are they in the same paragraph?",
+      "tld_necessity": "IRRELEVANT",
+      "line_obs_count": 0,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "UNKNOWN",
+          "time": 31.291,
+          "correct": false
+        },
+        {
+          "condition": "A",
+          "decision": "KEEP_SEPARATE",
+          "time": 8.147,
+          "correct": true
+        },
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 3.517,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'[23].' and 'Each' are in the same paragraph of body text; the citation reference ends one sentence "
+    },
+    {
+      "case_id": "IS11-AMB-418",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "), but with the different kernels illustrated in t",
+      "text_b": "The",
+      "has_tld": false,
+      "has_image": true,
+      "content_type": "SENTENCE_BOUNDARY",
+      "human_needed": "SENTENCE_CONTINUITY — is text_b a new sentence or a continuation?",
+      "evidence_type": "TEXT_PATTERN",
+      "system_provides": "text_a period + text_b capital (cue5, cue6)",
+      "missing": "PARAGRAPH_MEMBERSHIP — are they in the same paragraph?",
+      "tld_necessity": "IRRELEVANT",
+      "line_obs_count": 0,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 12.225,
+          "correct": true
+        },
+        {
+          "condition": "B1",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.852,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'...left panel.' and 'The' are in the same figure caption paragraph; one sentence ends and the next "
+    },
+    {
+      "case_id": "IS11-AMB-032",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "-",
+      "text_b": "8.43",
+      "has_tld": false,
+      "has_image": true,
+      "content_type": "MIXED",
+      "human_needed": "CONTENT_TYPE_IDENTIFICATION — what type of content are these?",
+      "evidence_type": "SEMANTIC_CONTENT",
+      "system_provides": "text content (implicit)",
+      "missing": "CONTENT_TYPE_CLASSIFICATION — what semantic category?",
+      "tld_necessity": "UNKNOWN",
+      "line_obs_count": 3,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "UNKNOWN",
+          "time": 45.892,
+          "correct": false
+        },
+        {
+          "condition": "A",
+          "decision": "KEEP_SEPARATE",
+          "time": 1.828,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'-' (top-1 err.) and '8.43' (top-5 err.) are values in different columns of the VGG row in Table 3; "
+    },
+    {
+      "case_id": "IS11-AMB-064",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "training data",
+      "text_b": "07+12",
+      "has_tld": false,
+      "has_image": true,
+      "content_type": "MIXED",
+      "human_needed": "CONTENT_TYPE_IDENTIFICATION — what type of content are these?",
+      "evidence_type": "SEMANTIC_CONTENT",
+      "system_provides": "text content (implicit)",
+      "missing": "CONTENT_TYPE_CLASSIFICATION — what semantic category?",
+      "tld_necessity": "UNKNOWN",
+      "line_obs_count": 5,
+      "p722_performance": [
+        {
+          "condition": "B2",
+          "decision": "KEEP_SEPARATE",
+          "time": 2.574,
+          "correct": true
+        }
+      ],
+      "reviewer_rationale": "'training data' is a column header and '07+12' is a sub-header/value in a different cell of Table 7;"
+    }
+  ],
+  "governance": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P6_MODIFICATION": false,
+    "ATOMIC_OBSERVATION_CHANGE": false,
+    "AGGREGATION_CHANGE": false,
+    "COMPRESSION_CHANGE": false,
+    "EVIDENCE_CUE_CHANGE": false,
+    "TLD_MODIFICATION": false,
+    "SIGNAL_MODIFICATION": false,
+    "UI_MODIFICATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "RUNTIME_CHANGE": false,
+    "ML_TRAINING": false,
+    "FROZEN_BASELINE": "INTACT",
+    "FROZEN_EXPERIMENT": "INTACT",
+    "FORMAL_EXPERIMENT": "NOT_STARTED",
+    "CS1_REUSE": "BLOCKED",
+    "HUMAN_VALIDATION": "BLOCKED",
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e (expected 022f5c21e872ad9e)",
+    "gt_hash": "7349963d0d23b5ef (expected 7349963d0d23b5ef)",
+    "l5_5_aggregation_hash": "d017bddceb9a512a",
+    "l5_5_compression_hash": "79c8d5f079f43882"
+  }
+}

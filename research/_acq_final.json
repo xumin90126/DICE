@@ -1,0 +1,31 @@
+{
+  "total_candidates": 192,
+  "tier_distribution": {
+    "Tier 2": 15,
+    "Tier 4": 29,
+    "Tier 1b": 6,
+    "Tier 1a": 12,
+    "Tier 3": 130
+  },
+  "tier1_count": 18,
+  "tier1_mixed": 12,
+  "mixed_config_cases": [
+    "arxiv_2402.18619_p28_457_234",
+    "arxiv_2402.18619_p28_479_214",
+    "is11_efficientnet_p6_511_629",
+    "arxiv_2402.18619_p10_132_629",
+    "arxiv_2402.18619_p28_256_214",
+    "arxiv_2402.18619_p19_339_297",
+    "arxiv_2402.18619_p10_183_252",
+    "is11_efficientnet_p4_188_461",
+    "is11_resnet_p5_359_225",
+    "is11_resnet_p1_412_338",
+    "arxiv_2402.18619_p19_83_745",
+    "is11_med_001_p15_261_316"
+  ],
+  "expected_g5_conservative": 2,
+  "expected_g5_moderate": 4,
+  "expected_g5_optimistic": 6,
+  "random_expected": 0,
+  "targeted_vs_random": "CONDITIONAL (2-6x efficiency, but small sample)"
+}

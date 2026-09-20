@@ -1,0 +1,217 @@
+{
+  "gate_id": "new_g5_human_validation",
+  "date": "2026-09-19",
+  "mode": "READ_ONLY_HUMAN_VALIDATION_ONLY",
+  "governance": {
+    "STATUS": "COMPLETE",
+    "GATE": "NEW_G5_HUMAN_VALIDATION",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "MODEL_TRAINING": false,
+    "EXTERNAL_DATASET_IMPORTED": false,
+    "CAPABILITY_CREATED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_FIELD": "NONE",
+    "NEW_SCHEMA": "NONE",
+    "NEW_OBSERVATION": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_SIGNAL": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  },
+
+  "human_validation_task": {
+    "question": "现有 Evidence 是否已经足够让机器完成该任务？",
+    "options": {
+      "A": "MACHINE_RESOLVABLE",
+      "B": "FALSE_G5 (G1/G2/G3/G4)",
+      "C": "TRUE_G5",
+      "D": "INDETERMINATE"
+    },
+    "human_does_not": ["write YES/NO", "write rules", "write explanations", "modify system", "modify evidence"]
+  },
+
+  "metrics": {
+    "HUMAN_CASE_COUNT": 18,
+    "TIER_1A_COUNT": 12,
+    "TIER_1B_COUNT": 6,
+    "TRUE_G5_COUNT": 16,
+    "FALSE_G5_COUNT": 1,
+    "MACHINE_RESOLVABLE_COUNT": 1,
+    "INDETERMINATE_COUNT": 0,
+    "G5_YIELD": 88.9,
+    "NEW_TRUE_G5_COUNT": 16,
+    "CE2_LIKE_TRUE_G5_COUNT": 12,
+    "DOCUMENT_COUNT": 5,
+    "CASE_DISTRIBUTION": {
+      "arxiv_2402.18619": 8,
+      "is11_efficientnet": 3,
+      "is11_resnet": 3,
+      "is11_med_001": 1,
+      "is11_cs_001": 1
+    }
+  },
+
+  "gate_check": {
+    "TARGET_NEW_TRUE_G5_COUNT_3": {"target": 3, "actual": 16, "result": "PASS"},
+    "MIN_NEW_TRUE_G5_COUNT_1": {"target": 1, "actual": 16, "result": "PASS"},
+    "TARGET_G5_YIELD_17": {"target": 17, "actual": 88.9, "result": "PASS"},
+    "MIN_G5_YIELD_6": {"target": 6, "actual": 88.9, "result": "PASS"},
+    "ALL_GATES_PASSED": true
+  },
+
+  "results_summary": {
+    "tier_1a_ce2_like": {
+      "count": 12,
+      "true_g5": 12,
+      "false_g5": 0,
+      "machine_resolvable": 0,
+      "g5_rate": "100%",
+      "pattern": "CAPTION_VS_REFERENCE_CE2_LIKE (same evidence → different judgment)"
+    },
+    "tier_1b_type_b_negative": {
+      "count": 4,
+      "true_g5": 4,
+      "false_g5": 0,
+      "machine_resolvable": 0,
+      "g5_rate": "100%",
+      "pattern": "TEXT_ROLE_WITHOUT_LEXICAL_SIGNAL (no 'Fig.' prefix, semantic role needed)",
+      "note": "G2 was present initially (context missing) but fixed; semantic boundary remains after G2 fix"
+    },
+    "tier_1b_ambiguous_fragment": {
+      "count": 2,
+      "true_g5": 0,
+      "false_g5": 1,
+      "machine_resolvable": 1,
+      "g5_rate": "0%",
+      "note": "Both had FIG=True; one had strongest structural evidence (MACHINE_RESOLVABLE), one had G3 issue (FALSE_G5)"
+    }
+  },
+
+  "ce2_like_analysis": {
+    "ce2_like_total": 12,
+    "ce2_like_true_g5": 12,
+    "ce2_like_rate": "100%",
+    "finding": "CE2 pattern (same structural evidence → different Human judgment) is a PERFECT G5 indicator. All 12 CE2-like cases confirmed as TRUE_G5.",
+    "implication": "Validates CE2 theoretical finding and screening approach"
+  },
+
+  "cross_document_analysis": {
+    "documents": 5,
+    "cross_document": true,
+    "distribution": {
+      "arxiv_2402.18619": 8,
+      "is11_efficientnet": 3,
+      "is11_resnet": 3,
+      "is11_med_001": 1,
+      "is11_cs_001": 1
+    },
+    "finding": "G5 boundary is cross-document, not document-specific"
+  },
+
+  "boundary_pattern_analysis": {
+    "new_patterns": [
+      {
+        "id": "NP1",
+        "name": "CAPTION_VS_REFERENCE_CE2_LIKE",
+        "cases": 12,
+        "documents": 4,
+        "matches_historical": "P1 (CAPTION_VS_REFERENCE)",
+        "cross_document": true
+      },
+      {
+        "id": "NP2",
+        "name": "TEXT_ROLE_WITHOUT_LEXICAL_SIGNAL",
+        "cases": 4,
+        "documents": 4,
+        "matches_historical": "P2 variant (TEXT_ROLE_AMBIGUITY)",
+        "cross_document": true,
+        "note": "New variant: Type_B_negative with fig_prefix=False (no lexical signal at all)"
+      }
+    ],
+    "new_pattern_discovered": false,
+    "all_fit_existing_patterns": true,
+    "combined_g5_set": {
+      "original_true_g5": 18,
+      "new_true_g5": 16,
+      "combined": 34,
+      "P1_NP1_caption_vs_reference": 22,
+      "P2_NP2_text_role": 8,
+      "P3_author_name": 2,
+      "P4_column_type": 2
+    }
+  },
+
+  "false_g5_analysis": {
+    "count": 1,
+    "case": "is11_resnet_p4_320_146",
+    "gap_type": "G3_EVIDENCE_PRESENTATION",
+    "reason": "EVIDENCE_CORRECTED: evidence had presentation issue. After correction, structural evidence (FIG=True + proximity) may be sufficient.",
+    "primary_issue": "G3 (presentation), not semantic boundary"
+  },
+
+  "machine_resolvable_analysis": {
+    "count": 1,
+    "case": "arxiv_2402.18619_p18_432_93",
+    "reason": "FIG=True + VR=inside + XO=True + dist=0: strongest possible structural evidence. Machine can determine based on structural pattern alone.",
+    "note": "No semantic boundary: structural evidence is sufficient"
+  },
+
+  "combined_g5_set": {
+    "original_true_g5": 18,
+    "new_true_g5": 16,
+    "combined_total": 34,
+    "generalization_possible": true,
+    "generalization_data": "16 new TRUE_G5 + 14 original UNCERTAIN = 30 cases for Signal re-test"
+  },
+
+  "over_design_audit": {
+    "all_false": true,
+    "result": "PASS",
+    "checks": 20
+  },
+
+  "limitations": [
+    {"id": "HV-L-01", "limitation": "SINGLE REVIEWER — inter-rater reliability unknown"},
+    {"id": "HV-L-02", "limitation": "HIGH G5 YIELD (88.9%) — expected due to targeted screening, NOT random sample"},
+    {"id": "HV-L-03", "limitation": "DEFINITIVE CASES — all 18 were definitive (YES/NO), not UNCERTAIN; different context from original"},
+    {"id": "HV-L-04", "limitation": "1 MACHINE + 1 FALSE_G5 — screening not perfect (88.9%), provides negative examples"},
+    {"id": "HV-L-05", "limitation": "ACADEMIC DOMAIN ONLY — cross-domain G5 untested"},
+    {"id": "HV-L-06", "limitation": "NO SYSTEM CHANGE — results based on existing evidence + Human assessment only"}
+  ],
+
+  "final_questions": {
+    "Q1_all_completed": "YES — 18/18 Tier 1 cases completed",
+    "Q2_new_true_g5": "16 new TRUE_G5 cases",
+    "Q3_min_gate": "YES — ALL gates passed (16 ≥ 3, 88.9% ≥ 17%)",
+    "Q4_ce2_like_true_g5": "YES — 12/12 CE2-like = TRUE_G5 (100%)",
+    "Q5_cross_document": "YES — 5 documents, not concentrated",
+    "Q6_new_pattern": "NO — all fit existing P1/P2 patterns (NP1 matches P1, NP2 is P2 variant)",
+    "Q7_false_g5_type": "G3_EVIDENCE_PRESENTATION (1 case)",
+    "Q8_indeterminate": "NO — 0 INDETERMINATE",
+    "Q9_generalization_ready": "YES — 16 new TRUE_G5 available, combined 34 total",
+    "Q10_next_phase": "G5_BOUNDARY_GENERALIZATION (re-run with 16 new TRUE_G5)"
+  },
+
+  "files_created": [
+    "tmp/g5_boundary_case_acquisition_results.md",
+    "tmp/g5_boundary_case_acquisition_results.json",
+    "tmp/g5_boundary_case_acquisition_results.csv"
+  ],
+  "files_modified": 0,
+
+  "final_status": {
+    "STATUS": "COMPLETE",
+    "GATE": "NEW_G5_HUMAN_VALIDATION",
+    "NEW_TRUE_G5_COUNT": 16,
+    "G5_YIELD": "88.9%",
+    "GENERALIZATION_READY": "YES",
+    "SYSTEM_MODIFIED": false,
+    "FROZEN_BASELINE_INTACT": true,
+    "STOP": true
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "research_question": "Can Signal 3 form a signal with clear applicability boundary, capable of retaining UNKNOWN/CONFLICT, worthy of formal Human Validation (L4)?",
+  "signal_3_frozen_description": {
+    "definition": "line_obs_count >= 3 AND NOT has_fig_prefix → KEEP_SEPARATE",
+    "feature_1": {
+      "name": "line_obs_count",
+      "source": "NOT in P2, DERIVABLE from P1",
+      "threshold": ">= 3"
+    },
+    "feature_2": {
+      "name": "has_fig_prefix",
+      "source": "NOT computed, DERIVABLE from P1 text",
+      "condition": "NOT has_fig_prefix"
+    },
+    "composite_rule": "IF line_obs_count >= 3 AND NOT has_fig_prefix THEN KEEP_SEPARATE",
+    "coverage": "42/45 (93%)",
+    "accuracy_on_covered": "42/42 (100%)",
+    "uncovered": [
+      "IS11-AMB-414",
+      "IS11-AMB-422",
+      "IS11-AMB-519"
+    ],
+    "output_space": [
+      "KEEP_SEPARATE (triggers)",
+      "UNCOVERED (does not trigger)"
+    ],
+    "definition_ambiguous": false,
+    "modified": false
+  },
+  "case_classification": {
+    "CLEARLY_SUPPORTED": {
+      "count": 38,
+      "pct": 84,
+      "description": "S3 triggers, GT=KEEP, reviewer agreement"
+    },
+    "CLEARLY_UNSUPPORTED": {
+      "count": 2,
+      "pct": 4,
+      "description": "S3 correctly does NOT trigger (FIG), GT=MERGE"
+    },
+    "BOUNDARY": {
+      "count": 4,
+      "pct": 9,
+      "description": "Reviewer disagreement or P722 UNKNOWN"
+    },
+    "CONFLICT": {
+      "count": 0,
+      "pct": 0,
+      "description": "No S3→KEEP vs GT=MERGE"
+    },
+    "UNKNOWN": {
+      "count": 1,
+      "pct": 2,
+      "description": "P722 UNKNOWN, reviewer agreement"
+    }
+  },
+  "supported_cases": {
+    "count": 38,
+    "all_have": [
+      "line_obs >= 3",
+      "NOT has_fig_prefix",
+      "GT=KEEP_SEPARATE",
+      "reviewer agreement"
+    ],
+    "cross_document": 4,
+    "documents": [
+      "is11_resnet",
+      "is11_efficientnet",
+      "is11_med_001",
+      "is11_cs_001"
+    ],
+    "line_obs_range": "3-13",
+    "near_boundary_line_obs_3": 4,
+    "p722_b2_available": 17,
+    "p722_b2_correct": "17/17 (100%)",
+    "p722_b2_avg_time": "3.4s"
+  },
+  "unsupported_cases": {
+    "count": 2,
+    "cases": [
+      {
+        "case_id": "IS11-AMB-414",
+        "gt": "MERGE",
+        "line_obs": 5,
+        "has_fig": true,
+        "s3_triggers": false,
+        "reason": "FIG prefix → correctly excluded"
+      },
+      {
+        "case_id": "IS11-AMB-422",
+        "gt": "MERGE",
+        "line_obs": 2,
+        "has_fig": true,
+        "s3_triggers": false,
+        "reason": "FIG prefix → correctly excluded"
+      }
+    ],
+    "finding": "Signal 3 FIG exclusion works correctly — both MERGE cases have FIG prefix"
+  },
+  "boundary_cases": {
+    "count": 4,
+    "cases": [
+      {
+        "case_id": "IS11-AMB-519",
+        "gt": "KEEP",
+        "line_obs": 2,
+        "has_fig": false,
+        "s3_triggers": false,
+        "reviewer_a": "KEEP",
+        "reviewer_b": "MERGE",
+        "p722_b2": "KEEP (2.0s)",
+        "overcommit": false,
+        "note": "Uncovered — S3 correctly does not trigger but cannot say UNKNOWN"
+      },
+      {
+        "case_id": "IS11-AMB-005",
+        "gt": "KEEP",
+        "line_obs": 3,
+        "has_fig": false,
+        "s3_triggers": true,
+        "s3_predicts": "KEEP",
+        "reviewer_a": "KEEP",
+        "reviewer_b": "MERGE",
+        "p722_b2": "KEEP (3.4s)",
+        "overcommit": true,
+        "severity": "MODERATE"
+      },
+      {
+        "case_id": "IS11-AMB-375",
+        "gt": "KEEP",
+        "line_obs": 3,
+        "has_fig": false,
+        "s3_triggers": true,
+        "s3_predicts": "KEEP",
+        "reviewer_a": "KEEP",
+        "reviewer_b": "MERGE",
+        "p722_b2": "UNKNOWN (31.3s)",
+        "overcommit": true,
+        "severity": "SEVERE",
+        "note": "Both reviewer disagreement AND P722 UNKNOWN"
+      },
+      {
+        "case_id": "IS11-AMB-418",
+        "gt": "KEEP",
+        "line_obs": 7,
+        "has_fig": false,
+        "s3_triggers": true,
+        "s3_predicts": "KEEP",
+        "reviewer_a": "KEEP",
+        "reviewer_b": "MERGE",
+        "p722_b2": "KEEP (12.2s)",
+        "overcommit": true,
+        "severity": "MODERATE"
+      }
+    ],
+    "overcommit_count": 3,
+    "finding": "3/4 boundary cases get DECISIVE KEEP where Human judgment is split 50/50"
+  },
+  "conflict_analysis": {
+    "direct_conflict": 0,
+    "boundary_level_conflict": 3,
+    "finding": "No direct S3→KEEP vs GT=MERGE. But 3 boundary-level conflicts where S3→KEEP (decisive) vs Human→DISAGREEMENT (uncertain)."
+  },
+  "unknown_analysis": {
+    "p722_unknown_cases": [
+      {
+        "case_id": "IS11-AMB-032",
+        "text": "'-'/'8.43'",
+        "line_obs": 3,
+        "reviewer": "A=B=KEEP",
+        "p722_b2": "UNKNOWN (45.9s)",
+        "root_cause": "A. Evidence Missing — TLD missed table",
+        "s3_issue": "NO — Consumer/Integration Gap, not S3 boundary"
+      },
+      {
+        "case_id": "IS11-AMB-375",
+        "text": "'[23].'/'Each'",
+        "line_obs": 3,
+        "reviewer": "A=KEEP, B=MERGE",
+        "p722_b2": "UNKNOWN (31.3s)",
+        "root_cause": "C. Semantic Ambiguity — sentence vs paragraph",
+        "s3_issue": "YES — S3 overcommits"
+      }
+    ],
+    "root_cause_distribution": {
+      "A_Evidence_Missing": 1,
+      "C_Semantic_Ambiguity": 1,
+      "D_Human_Disagreement": 3
+    },
+    "finding": "S3 true gap is not better KEEP/MERGE prediction, but correctly identifying when it cannot make a decisive judgment."
+  },
+  "boundary_overcommit_test": {
+    "question": "Can S3 express \"I see pattern but Evidence insufficient\"?",
+    "answer": "NO",
+    "boundary_capability": "FAIL",
+    "output_space": [
+      "KEEP_SEPARATE (always when triggers)",
+      "UNCOVERED (no prediction)"
+    ],
+    "has_unknown_output": false,
+    "has_conflict_output": false,
+    "overcommit_cases": [
+      "IS11-AMB-005",
+      "IS11-AMB-375",
+      "IS11-AMB-418",
+      "IS11-AMB-032"
+    ],
+    "core_problem": "AMB-024 (clear, line_obs=3) and AMB-375 (boundary, line_obs=3) have IDENTICAL S3 features — S3 cannot distinguish clear from boundary."
+  },
+  "boundary_distinguishing_feature": {
+    "feature": "TEXT_CONTENT_TYPE",
+    "pattern": "numeric → clear (table values), short_label → clear (table headers), prose → boundary (sentence vs paragraph)",
+    "evidence_category": "E5 (Human Semantic Interpretation)",
+    "in_signal_3": false,
+    "note": "Adding text type would be MODIFYING Signal 3 — forbidden. This is a structural limitation, not a threshold issue."
+  },
+  "counterfactual_boundary_test": {
+    "state_a": "Machine has features but no boundary info — cannot identify boundary (same features as clear)",
+    "state_b": "Human reveals ambiguity (disagreement / UNKNOWN)",
+    "results": [
+      {
+        "case_id": "IS11-AMB-005",
+        "state_a_boundary": false,
+        "state_b_reveals": "disagreement",
+        "boundary_info_gain": "> 0",
+        "classification": "POTENTIALLY_REUSABLE_BOUNDARY_SIGNAL"
+      },
+      {
+        "case_id": "IS11-AMB-032",
+        "state_a_boundary": false,
+        "state_b_reveals": "P722 UNKNOWN",
+        "boundary_info_gain": "> 0",
+        "classification": "POTENTIALLY_REUSABLE_BOUNDARY_SIGNAL"
+      },
+      {
+        "case_id": "IS11-AMB-375",
+        "state_a_boundary": false,
+        "state_b_reveals": "disagreement + UNKNOWN",
+        "boundary_info_gain": "> 0",
+        "classification": "PERSISTENT_HUMAN_SEMANTIC_BOUNDARY"
+      },
+      {
+        "case_id": "IS11-AMB-418",
+        "state_a_boundary": false,
+        "state_b_reveals": "disagreement",
+        "boundary_info_gain": "> 0",
+        "classification": "POTENTIALLY_REUSABLE_BOUNDARY_SIGNAL"
+      }
+    ],
+    "finding": "Machine cannot identify boundary from existing features. Human provides boundary info Machine cannot derive. Boundary Info Gain > 0."
+  },
+  "reviewer_disagreement_analysis": {
+    "count": 4,
+    "all_pattern": "A=KEEP_SEPARATE, B=MERGE, final=KEEP_SEPARATE",
+    "all_text_type": "prose (sentence vs paragraph boundary)",
+    "s3_overcommit": 3,
+    "s3_uncovered": 1,
+    "finding": "Human disagreement exists + S3 produces deterministic KEEP → BOUNDARY_OVERCOMMIT = TRUE"
+  },
+  "l4_gate": {
+    "criteria_count": 17,
+    "passes": 10,
+    "partials": 5,
+    "fails": 2,
+    "critical_failures": [
+      "#8 Can retain UNKNOWN",
+      "#9 Can expose CONFLICT"
+    ],
+    "details": [
+      {
+        "num": 1,
+        "name": "Evidence-grounded",
+        "result": "PASS"
+      },
+      {
+        "num": 2,
+        "name": "Human info gain > 0",
+        "result": "PASS"
+      },
+      {
+        "num": 3,
+        "name": "Non-pure keyword recurrence",
+        "result": "PARTIAL"
+      },
+      {
+        "num": 4,
+        "name": "Non post-hoc threshold",
+        "result": "PARTIAL"
+      },
+      {
+        "num": 5,
+        "name": "Non case-specific",
+        "result": "PARTIAL"
+      },
+      {
+        "num": 6,
+        "name": "Has clear supported cases",
+        "result": "PASS"
+      },
+      {
+        "num": 7,
+        "name": "Has clear unsupported/boundary",
+        "result": "PASS"
+      },
+      {
+        "num": 8,
+        "name": "Can retain UNKNOWN",
+        "result": "FAIL",
+        "reason": "No UNKNOWN output — always KEEP when triggers"
+      },
+      {
+        "num": 9,
+        "name": "Can expose CONFLICT",
+        "result": "FAIL",
+        "reason": "No CONFLICT output — ignores disagreement"
+      },
+      {
+        "num": 10,
+        "name": "Doesn't force all-case coverage",
+        "result": "PASS"
+      },
+      {
+        "num": 11,
+        "name": "No semantic authority",
+        "result": "PARTIAL"
+      },
+      {
+        "num": 12,
+        "name": "No Runtime Authority",
+        "result": "PASS"
+      },
+      {
+        "num": 13,
+        "name": "No LLM dependency",
+        "result": "PASS"
+      },
+      {
+        "num": 14,
+        "name": "No new Observation",
+        "result": "PASS"
+      },
+      {
+        "num": 15,
+        "name": "No new Architecture Layer",
+        "result": "PASS"
+      },
+      {
+        "num": 16,
+        "name": "No Frozen modification",
+        "result": "PASS"
+      },
+      {
+        "num": 17,
+        "name": "Minimal Human Validation",
+        "result": "PARTIAL"
+      }
+    ],
+    "decision": "FALSE",
+    "reason": "Fails #8 (UNKNOWN) and #9 (CONFLICT) — core boundary criteria. S3 cannot express uncertainty or expose conflict."
+  },
+  "human_validation_requirement": {
+    "minimal_feedback": "[suitable / unsuitable / uncertain]",
+    "current_status": "S3 cannot use this — it cannot express uncertain itself. When Human says uncertain, S3 already gave KEEP.",
+    "verdict": "S3 cannot complete validation with minimal feedback → L4_CANDIDATE = FALSE"
+  },
+  "future_validation_requirement": {
+    "required": true,
+    "minimum_independence": "Level B (different document)",
+    "preferred": "different page + no near-duplicate",
+    "minimum_count": 10,
+    "prohibited": [
+      "same-page",
+      "near-duplicate",
+      "same-table duplicate",
+      "GT leakage",
+      "experiment-result leakage"
+    ],
+    "note": "Only needed if L4 reached. Not constructing future cases now."
+  },
+  "final_output_matrix": {
+    "Evidence Grounding": "PASS",
+    "Information Gain": ">0 (rule level)",
+    "Novelty": "PARTIAL",
+    "Supported Cases": "38 (84%)",
+    "Unsupported Cases": "2 (4%)",
+    "Boundary Cases": "4 (9%)",
+    "Conflict Cases": "0 direct, 3 boundary-level",
+    "UNKNOWN Cases": "1 (2%) + 1 dual",
+    "Boundary Overcommit": "TRUE (4 cases)",
+    "Cross-document support": "YES (4 docs)",
+    "Reviewer consistency": "FAIL (3/4 disagreement overcommitted)",
+    "Reusability potential": "MODERATE (if boundary resolved)",
+    "L4 Candidate": "FALSE"
+  },
+  "final_questions": {
+    "q1_evidence_grounded_novelty": "PARTIAL — rule-level novelty, feature-level zero",
+    "q2_supervised_pattern_fitting": "YES — primarily supervised pattern fitting",
+    "q3_clear_boundary": "NO — no built-in boundary mechanism",
+    "q4_can_produce_unknown": "NO — output space lacks UNKNOWN",
+    "q5_boundary_overcommit": "YES — 4 cases overcommitted",
+    "q6_worthy_of_human_validation": "NO — lacks boundary capability",
+    "q7_minimal_feedback": "N/A — [suitable/unsuitable/uncertain] if L4 reached",
+    "q8_future_cases": "N/A — Level B, 10 cases if L4 reached",
+    "q9_close_or_retain": "RETAIN_AS_L3_CANDIDATE — 38/38 clear correct, boundary issue solvable",
+    "q10_need_llm_architecture": "NO — all NO"
+  },
+  "final_status": "L4_NOT_READY_RETAIN_L3",
+  "final_status_reason": "S3 has strong core (38/38 clear cases, 4 docs, 0 false positive) but lacks boundary capability (#8 FAIL, #9 FAIL). Cannot express UNKNOWN or expose CONFLICT. 4 boundary cases overcommitted. Retain as L3 candidate — do not close (core ability is real, boundary gap is identifiable).",
+  "anti_overdesign": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "P2_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "IS11_MODIFICATION": false,
+    "GT_MODIFICATION": false,
+    "EXPERIMENT_MODIFICATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "NEW_LLM_PIPELINE": false,
+    "NEW_OBSERVATION": false,
+    "RUNTIME_CHANGE": false,
+    "CAPABILITY_CHANGE": false,
+    "FROZEN_BASELINE_DRIFT": 0,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "FORMAL_LEARNING": false,
+    "STOP": true
+  },
+  "governance": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "P2_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "IS11_MODIFICATION": false,
+    "GT_MODIFICATION": false,
+    "EXPERIMENT_MODIFICATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "LLM": false,
+    "RUNTIME_CHANGE": false,
+    "CAPABILITY_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "FORMAL_LEARNING": false,
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  },
+  "stop": true
+}

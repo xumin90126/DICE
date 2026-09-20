@@ -1,0 +1,143 @@
+{
+ "canary_safety_verification": {
+  "amb135_independence": "AMB-135 repair does NOT depend on parameter fine-tuning (pair density=30, far above threshold 3); load-bearing parameters are entirely on the canary-boundary side, unrelated to making the FP pass",
+  "method": "measured pair-band local density at bounds 100/150/200pt",
+  "results": {
+   "eff_p5_AMB135": {
+    "100pt": 19,
+    "150pt": 30,
+    "200pt": 30,
+    "verdict": "region forms (target, desired)"
+   },
+   "med_p20_AMB414": {
+    "100pt": 0,
+    "150pt": 0,
+    "200pt": 0,
+    "verdict": "SAFE (no region) across all bounds"
+   },
+   "med_p24_AMB422": {
+    "100pt": 0,
+    "150pt": 0,
+    "200pt": 0,
+    "verdict": "SAFE across all bounds"
+   }
+  },
+  "robustness": "P_localization robust across [100,200]pt; canaries stay 0; target 19-30; threshold 3 sits in wide gap (0 vs 10-30)"
+ },
+ "eic1_precondition_1_amended": {
+  "amended": "region co-organization derivable IFF (a) >=2 distinguishable LSPs (each P_min_members>=2) AND (b) each LSP cross-band stable (P_min_bands>=3) AND (c) each LSP localized (y_ext <= P_localization=150pt) AND (d) at the candidate pair's y-band, >=P_min_costructure_band_local=3 local stable partitions co-occur AND (e) candidate pair same_y_band=True (frozen)",
+  "original": "region co-organization derivable (>=2 distinguishable LSPs + y-overlap + cross-band column stability; parameters = preregistration slots)",
+  "unchanged": [
+   "LSP = structural object (zero semantics)",
+   "localization = pure geometric bound (spatial extent), NOT table/cell semantic label",
+   "EIC-1 = sole semantic gate",
+   "state mapping reuses existing conventions entirely"
+  ]
+ },
+ "falsification_conditions": [
+  "canary pair-band LOCAL density >=3 (any bound) -> P_localization or P_costructure fails -> REPLAY FAIL (S2 hard gate)",
+  "DIRECT target pair-band LOCAL density <3 -> context unavailable (honest, per-case attribution, NOT failure)",
+  "correct control decision change -> F4 collateral -> FAIL",
+  "P_localization if implementation reveals table column y_ext > 150pt (large table) -> governance revision (NOT ad hoc adjustment)"
+ ],
+ "fixed_parameters": [
+  {
+   "grounding": "table partitions >=4 members; lag=0/1 noise excluded",
+   "load_bearing": false,
+   "name": "P_min_members",
+   "value": 2
+  },
+  {
+   "grounding": "table columns >=4 bands; caption fragments 1 band",
+   "load_bearing": "moderate",
+   "name": "P_min_bands",
+   "value": 3
+  },
+  {
+   "grounding": "table columns 32-88pt; caption/margin 293-393pt; 150pt = mid-gap (62pt margin below, 143pt above)",
+   "load_bearing": "YES (canary boundary)",
+   "name": "P_localization",
+   "value": "150pt (partition y_ext max)"
+  },
+  {
+   "grounding": "table pair-band 10-30; canary pair-band 0; threshold 3 in gap between 0 and 10",
+   "load_bearing": "YES (canary boundary)",
+   "name": "P_min_costructure_band_local",
+   "value": 3
+  },
+  {
+   "grounding": "frozen P2 pairwise (not a new parameter)",
+   "load_bearing": "frozen",
+   "name": "same_y_band (pair)",
+   "value": "True"
+  }
+ ],
+ "frozen_baseline_intact": true,
+ "gt_modification": "NONE",
+ "honest_disclosures": [
+  "cs p3 six pairs, eff p9/resnet p6 controls: per-pair pair-band density NOT individually measured (only page-max + zone profile); replay will verify per-pair - if a DIRECT pair density<3, classified honest unavailable (A2 rule preregistered)",
+  "localization constraint is a NEW contract refinement after Phase 2.2 (precondition 1 amendment) - but does NOT change LSP definition, state mapping, or decision logic; within design-review scope",
+  "AMB-135 repair does NOT depend on any parameter fine-tuning (pair density=30 >> threshold 3); load-bearing parameters entirely on canary-boundary side, unrelated to making FP pass"
+ ],
+ "implementation_authorized": false,
+ "localization_gap_finding": {
+  "description": "raw left_alignment_group co-structure is high on EVERY page (med p20 caption = 24 overlapping partitions; cs p3 = 125) because prose margin groups (x0~85/107, n=15-24, y_ext 293-393pt) contaminate every page; co-structure count alone CANNOT distinguish tables from captions/prose",
+  "discovered": true,
+  "eic1_precondition_1_amended": "gains localization sub-condition (pure geometric bound, non-semantic)",
+  "fix": "LSP/region derivation gains a localization constraint: only partitions with bounded y_ext (<=150pt) count as local structural columns; page-wide margin groups excluded",
+  "lsp_definition_unchanged": true,
+  "relation_to_ph02": "this is the structural recurrence point of the PH-02 whole-group trap - localization prevents LSP from degrading into page-wide whole-group object"
+ },
+ "measurement_facts": {
+  "method": "for each page, stable partitions (P_min_mem>=2 AND P_min_bands>=3 AND y_ext<=BOUND); per y-band count partitions with >=1 member in that band = band-local density",
+  "pages": [
+   {
+    "page": "eff p5 (y=162)",
+    "page_max_local": "20-31",
+    "pair_band_density_100pt": 19,
+    "pair_band_density_150pt": 30,
+    "role": "AMB-135 target"
+   },
+   {
+    "page": "med p20 (y=347)",
+    "page_max_local": "4-5",
+    "pair_band_density_100pt": 0,
+    "pair_band_density_150pt": 0,
+    "pair_band_density_200pt": 0,
+    "role": "canary AMB-414"
+   },
+   {
+    "page": "med p24 (y=578)",
+    "page_max_local": "0-1",
+    "pair_band_density_100pt": 0,
+    "pair_band_density_150pt": 0,
+    "pair_band_density_200pt": 0,
+    "role": "canary AMB-422"
+   },
+   {
+    "page": "eff p9",
+    "page_max_local": 26,
+    "role": "correct control (table)"
+   },
+   {
+    "page": "resnet p6",
+    "page_max_local": 10,
+    "role": "correct control (table)"
+   },
+   {
+    "page": "cs p3",
+    "page_max_local": 17,
+    "role": "DIRECT target (table)"
+   }
+  ],
+  "separation": "targets/tables = 10-30; canaries = 0 (across all bounds 100-200pt); table column y_ext = 32-88pt; caption/margin y_ext = 293-393pt; gap = 88-293pt (193pt margin)"
+ },
+ "missing_parameter_count": 0,
+ "next_step": "return to implementation authorization decision point (parameters ready; whether to authorize implementation + isolated replay)",
+ "objective": "fix EIC-1 region co-organization parameters (last MISSING_PARAMETER batch) before any implementation; grounded in frozen measured facts, NOT reverse-engineered from making AMB-135 pass",
+ "phase": "M-B Phase 3.1",
+ "production": false,
+ "replay_authorized": false,
+ "status": "COMPLETE",
+ "stop": true
+}

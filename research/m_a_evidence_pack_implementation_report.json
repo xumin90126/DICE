@@ -1,0 +1,114 @@
+{
+  "implementation_status": "COMPLETE",
+  "modified_files": [
+    "tmp/m_a_human_review_pilot/generate_data.py",
+    "tmp/m_a_human_review_pilot/assets/app.js"
+  ],
+  "generated_files": [
+    "tmp/m_a_human_review_pilot/data/candidates_internal.json",
+    "tmp/m_a_human_review_pilot/data/candidates.json",
+    "tmp/m_a_human_review_pilot/data/candidates_embedded.js"
+  ],
+  "unchanged_files": {
+    "P1_atomic_text": "74d23ec784d65782",
+    "TLD_table_line_detector": "022f5c21e872ad9e",
+    "GT_semantic_ground_truth": "7349963d0d23b5ef",
+    "layout_analyzer": "8f69f0d206b3e565",
+    "DGF_drawing_geometry": "f25a5ff41afa1bec",
+    "DEF_drawing_extent": "cba9e583517f8967"
+  },
+  "verification_results": {
+    "A_schema": "PASS",
+    "B_negative_control_context": "PASS",
+    "C_same_y_5pt": "PASS",
+    "D_drawing_extent": "PASS",
+    "E_evidence_state_3": "PASS",
+    "F_case_type_consistency": "PASS",
+    "G_regression": "PASS",
+    "H_determinism": "PASS",
+    "I_semantic_leakage": "PASS"
+  },
+  "schema_status": {
+    "total_cases": 79,
+    "internal_fields_count": 20,
+    "human_facing_fields_count": 15,
+    "evidence_state_in_both": true,
+    "internal_only_fields_not_leaked": true
+  },
+  "same_y_status": {
+    "threshold": 5,
+    "threshold_unit": "pt",
+    "pr1_pre_registered": true,
+    "old_3pt_removed": true,
+    "critical_case_max_resolved": true
+  },
+  "drawing_extent_status": {
+    "nearest_always_included": true,
+    "pr2_pre_registered": true,
+    "60pt_candidate_gen_only": true,
+    "type_a_with_extent_fixed": 3,
+    "no_false_none_when_def_gt_0": true
+  },
+  "evidence_state_status": {
+    "model": "3-state",
+    "pr3_pre_registered": true,
+    "states": ["NO_VISUAL_EVIDENCE", "PRIMITIVES_NO_EXTENT", "EXTENT_EXISTS"],
+    "distribution": {
+      "EXTENT_EXISTS": 74,
+      "PRIMITIVES_NO_EXTENT": 3,
+      "NO_VISUAL_EVIDENCE": 2
+    },
+    "semantic_leakage": false,
+    "is_availability_state_not_semantic": true
+  },
+  "negative_control_context_status": {
+    "before": "16/16 had hardcoded empty context",
+    "after": "16/16 have context populated",
+    "unified_pipeline": true
+  },
+  "case_type_consistency_status": {
+    "all_types_unified": true,
+    "caption_like": "context=39/39, state=39/39",
+    "ambiguous_fragment": "context=19/19, state=19/19",
+    "subfigure_label": "context=4/4, state=4/4",
+    "reference_like": "context=1/1, state=1/1",
+    "type_a_negative": "context=8/8, state=8/8",
+    "type_b_negative": "context=8/8, state=8/8"
+  },
+  "determinism_status": {
+    "runs": 3,
+    "all_identical": true,
+    "sha16": "9fb3cd9fb28e4ff1"
+  },
+  "semantic_leakage_status": {
+    "forbidden_fields_in_data": "NONE",
+    "forbidden_state_values": "NONE",
+    "forbidden_patterns_in_code": "NONE",
+    "anti_bias_comments_present": true
+  },
+  "p1_p6_regression": "PASS",
+  "p7_1_regression": "PASS (not applicable)",
+  "frozen_baseline_drift": 0,
+  "human_data_modified": false,
+  "m_a_algorithm_modified": false,
+  "pre_registered_params": {
+    "PR1_same_y": "±5pt (FROZEN)",
+    "PR2_60pt": "Candidate Generation Only (FROZEN)",
+    "PR3_evidence_state": "3-State Model (FROZEN)"
+  },
+  "governance": {
+    "implementation_authorized": "TRUE (this task only)",
+    "experiment_authorized": false,
+    "human_validation_authorized": false,
+    "human_feedback": "NOT_AUTHORIZED",
+    "l3": "NOT_AUTHORIZED",
+    "capability": "NOT_AUTHORIZED",
+    "capability_registration": "NOT_AUTHORIZED",
+    "runtime": "NOT_AUTHORIZED",
+    "runtime_authority": "ZERO",
+    "production": false,
+    "frozen_baseline": "INTACT",
+    "frozen_drift": 0,
+    "stop": true
+  }
+}

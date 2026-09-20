@@ -1,0 +1,1369 @@
+{
+  "metadata": {
+    "document_type": "human_feedback_reuse_pilot_design",
+    "date": "2026-09-12",
+    "mode": "READ-ONLY / EXPERIMENT DESIGN + PILOT PREPARATION",
+    "design_only": true,
+    "experiment_authorization": "NOT_GRANTED",
+    "objective": "Test whether a human-validated reusable signal can reduce human review count on future cases while maintaining quality and boundary safety"
+  },
+  "executive_verdict": {
+    "status": "CONDITIONAL",
+    "summary": "CS1 (DIFFERENT_TABLE_COLUMNS) satisfies minimum conditions for entering a Reuse Pilot: 31 past cases with TLD evidence + human feedback + GT, 20 future cases with matching evidence, boundary defined, metrics designed. But signal is CANDIDATE (not validated), future cases not tested, HRR not measured.",
+    "ready_for": "Human Validation + Reuse Test (requires participant + authorization)",
+    "not_ready_for": "Automatic reuse, runtime integration, production deployment"
+  },
+  "selected_signal": {
+    "signal_id": "CS1-DIFFERENT_TABLE_COLUMNS",
+    "signal_version": "1.0-experimental",
+    "signal_type": "evidence_grounded_interpretation",
+    "not_a_rule": true,
+    "not_a_decision_function": true,
+    "not_a_routing_function": true,
+    "runtime_authority": "ZERO",
+    "evidence_signature": {
+      "cue1_source": "TLD is_in_table",
+      "cue1_value": true,
+      "cue2_source": "TLD different_cell",
+      "cue2_value": true,
+      "description": "Both text_a and text_b are detected as being within a table region, and they are in different cells (different columns or different rows)",
+      "evidence_provenance": "chunker/table_line_detector.py (frozen, SHA256 022f5c21e872ad9e)"
+    },
+    "human_interpretation": {
+      "summary": "Text A and Text B occupy different structural positions within a detected multi-column table",
+      "human_feedback_source": "P01 pilot: \"同一个表格中的不同列的名称\", \"同一行的不同列数据\"",
+      "reviewer_rationale_source": "70/90 reviewer rationales mention \"table columns\" or \"table cells\"",
+      "semantic_relation": "different_structural_positions_in_table",
+      "not_a_decision": "This interpretation does NOT automatically mean KEEP_SEPARATE. It means the evidence structure has been observed and interpreted by humans as indicating different table positions."
+    },
+    "scope": {
+      "applicable_when": "TLD is_in_table=True AND different_cell=True",
+      "structure_families": [
+        "TABLE_NUMERIC",
+        "ROW_LABEL_VALUE",
+        "TABLE_HEADER"
+      ],
+      "documents_observed": [
+        "is11_resnet",
+        "is11_efficientnet",
+        "is11_cs_001"
+      ],
+      "not_applicable_when": "TLD is_in_table=False (non-table context)",
+      "not_applicable_when_2": "TLD is_in_table=True but different_cell=False (same cell — untested)"
+    },
+    "boundary": {
+      "SUPPORTED": {
+        "condition": "TLD is_in_table=True AND different_cell=True",
+        "evidence_count": 31,
+        "gt_distribution": {
+          "KEEP_SEPARATE": 31,
+          "MERGE": 0
+        },
+        "interpretation": "Evidence structure supports the interpretation of different table positions"
+      },
+      "UNSUPPORTED": {
+        "condition": "TLD is_in_table=False",
+        "evidence_count": 32,
+        "interpretation": "Evidence does not indicate table context — signal does not apply"
+      },
+      "UNKNOWN": {
+        "condition": "TLD is_in_table=True AND different_cell=False",
+        "evidence_count": 0,
+        "interpretation": "In table but cell relationship unclear — signal cannot determine position relationship",
+        "action": "HUMAN_REVIEW_REQUIRED"
+      },
+      "OUT_OF_SCOPE": {
+        "condition": "Non-table structure families (PROSE, FIGURE_CAPTION, AXIS, OTHER)",
+        "interpretation": "Signal is designed for table contexts only",
+        "action": "SIGNAL_NOT_APPLIED"
+      },
+      "CONFLICT": {
+        "condition": "different_cell=True BUT human adjudicates MERGE",
+        "evidence_count": 0,
+        "interpretation": "Evidence and human judgment disagree",
+        "action": "EVIDENCE_CONFLICT + NO_AUTO_REUSE + HUMAN_REVIEW",
+        "note": "No conflict case observed in current corpus, but protocol must handle it"
+      }
+    },
+    "positive_examples": [
+      {
+        "case_id": "IS11-AMB-005",
+        "doc": "is11_resnet",
+        "page": 1,
+        "gt": "KEEP_SEPARATE"
+      },
+      {
+        "case_id": "IS11-AMB-024",
+        "doc": "is11_resnet",
+        "page": 6,
+        "gt": "KEEP_SEPARATE"
+      },
+      {
+        "case_id": "IS11-AMB-034",
+        "doc": "is11_resnet",
+        "page": 6,
+        "gt": "KEEP_SEPARATE"
+      },
+      {
+        "case_id": "IS11-AMB-074",
+        "doc": "is11_resnet",
+        "page": 8,
+        "gt": "KEEP_SEPARATE"
+      },
+      {
+        "case_id": "IS11-AMB-130",
+        "doc": "is11_efficientnet",
+        "page": 5,
+        "gt": "KEEP_SEPARATE"
+      },
+      {
+        "case_id": "IS11-AMB-135",
+        "doc": "is11_efficientnet",
+        "page": 5,
+        "gt": "KEEP_SEPARATE"
+      },
+      {
+        "case_id": "IS11-AMB-262",
+        "doc": "is11_efficientnet",
+        "page": 7,
+        "gt": "KEEP_SEPARATE"
+      },
+      {
+        "case_id": "IS11-AMB-346",
+        "doc": "is11_efficientnet",
+        "page": 9,
+        "gt": "KEEP_SEPARATE"
+      },
+      {
+        "case_id": "IS11-AMB-350",
+        "doc": "is11_efficientnet",
+        "page": 9,
+        "gt": "KEEP_SEPARATE"
+      },
+      {
+        "case_id": "IS11-AMB-457",
+        "doc": "is11_cs_001",
+        "page": 3,
+        "gt": "KEEP_SEPARATE"
+      }
+    ],
+    "negative_examples": [],
+    "unknown_examples": [],
+    "conflict_examples": [],
+    "provenance": {
+      "constructed_from": "Human Feedback Reusability Audit (CS1 candidate)",
+      "feedback_sources": [
+        "P01 pilot free-text",
+        "Reviewer A rationales",
+        "Reviewer B rationales",
+        "GT adjudication rationales"
+      ],
+      "evidence_sources": [
+        "TLD (frozen)",
+        "GT-45 (frozen)",
+        "GT-48 (session adjudication)"
+      ],
+      "construction_date": "2026-09-12",
+      "construction_method": "Manual analysis of recurring human feedback patterns mapped to existing TLD evidence"
+    },
+    "validation_status": "CANDIDATE",
+    "validation_protocol": {
+      "required": "Human must validate that the evidence signature (TLD is_in_table=True + different_cell=True) supports the interpretation \"different structural positions in table\"",
+      "method": "Present 10 past cases to Human. Human confirms: \"Does this evidence structure indicate different table positions?\"",
+      "pass_threshold": "≥8/10 validated (80%)",
+      "not_pass": "Signal remains CANDIDATE, not promoted to HUMAN_VALIDATED",
+      "validation_does_not_mean": "Validation does NOT mean the signal becomes a decision rule. It means the interpretation is confirmed as reusable context."
+    }
+  },
+  "why_this_signal": {
+    "selected": "CS1-DIFFERENT_TABLE_COLUMNS",
+    "reasons": [
+      "Evidence is structural (TLD), more stable than text patterns",
+      "31 past cases all GT=KEEP_SEPARATE (100% consistency)",
+      "109 future cases with matching TLD evidence (20 selected)",
+      "Human feedback explicitly mentions different table columns",
+      "Cross-document (3 documents)"
+    ],
+    "not_selected": {
+      "CS2_SENTENCE_BOUNDARY": "Text pattern (period+capital), less structurally stable than TLD; future case count unverified",
+      "CS3_FIGURE_CAPTION": "Only 2 documents; FIG marker ambiguity (caption vs in-text reference); counter-evidence AMB-063",
+      "CS4_SECTION_HEADER": "Only 2 cases, 1 document; insufficient for signal validation"
+    }
+  },
+  "signal_boundary": {
+    "SUPPORTED": {
+      "condition": "TLD is_in_table=True AND different_cell=True",
+      "evidence_count": 31,
+      "gt_distribution": {
+        "KEEP_SEPARATE": 31,
+        "MERGE": 0
+      },
+      "interpretation": "Evidence structure supports the interpretation of different table positions"
+    },
+    "UNSUPPORTED": {
+      "condition": "TLD is_in_table=False",
+      "evidence_count": 32,
+      "interpretation": "Evidence does not indicate table context — signal does not apply"
+    },
+    "UNKNOWN": {
+      "condition": "TLD is_in_table=True AND different_cell=False",
+      "evidence_count": 0,
+      "interpretation": "In table but cell relationship unclear — signal cannot determine position relationship",
+      "action": "HUMAN_REVIEW_REQUIRED"
+    },
+    "OUT_OF_SCOPE": {
+      "condition": "Non-table structure families (PROSE, FIGURE_CAPTION, AXIS, OTHER)",
+      "interpretation": "Signal is designed for table contexts only",
+      "action": "SIGNAL_NOT_APPLIED"
+    },
+    "CONFLICT": {
+      "condition": "different_cell=True BUT human adjudicates MERGE",
+      "evidence_count": 0,
+      "interpretation": "Evidence and human judgment disagree",
+      "action": "EVIDENCE_CONFLICT + NO_AUTO_REUSE + HUMAN_REVIEW",
+      "note": "No conflict case observed in current corpus, but protocol must handle it"
+    }
+  },
+  "four_layer_distinction": {
+    "A_evidence": {
+      "description": "Machine-computed, frozen",
+      "fields": [
+        "TLD is_in_table (boolean)",
+        "TLD different_cell (boolean)"
+      ],
+      "provenance": "chunker/table_line_detector.py (frozen, SHA256 022f5c21)",
+      "human_modification": false
+    },
+    "B_human_feedback": {
+      "description": "Human-expressed, stored",
+      "examples": [
+        "同一个表格中的不同列的名称",
+        "同一行的不同列数据",
+        "表格中的内容应该分开"
+      ],
+      "sources": [
+        "P01 pilot free-text (4)",
+        "Reviewer A/B rationales (90)",
+        "GT adjudication rationales (93)"
+      ]
+    },
+    "C_reusable_signal_candidate": {
+      "description": "Experimental JSON, not DICE schema",
+      "signal_id": "CS1-DIFFERENT_TABLE_COLUMNS",
+      "evidence_signature": "is_in_table=True AND different_cell=True",
+      "human_interpretation": "Different structural positions within a detected multi-column table",
+      "validation_status": "CANDIDATE",
+      "is_not_a_rule": true,
+      "is_not_a_decision_function": true,
+      "runtime_authority": "ZERO"
+    },
+    "D_validated_reusable_signal": {
+      "description": "Only after Human validation",
+      "status": "NOT_YET_EXISTING",
+      "requires": "Human validates ≥8/10 past cases"
+    },
+    "forbidden_conversions": [
+      "Human Feedback = Signal (FORBIDDEN)",
+      "System Evidence = Human Interpretation (FORBIDDEN)",
+      "IF is_in_table=True AND different_cell=True THEN KEEP_SEPARATE (FORBIDDEN)",
+      "Signal → Decision Rule (FORBIDDEN)",
+      "Signal → Routing/Ranking/Selection (FORBIDDEN)"
+    ]
+  },
+  "past_to_signal": {
+    "past_cases": {
+      "count": 31,
+      "gt_distribution": {
+        "KEEP_SEPARATE": 31,
+        "MERGE": 0
+      },
+      "documents": 3,
+      "pages": 14,
+      "sources": {
+        "GT-45 (frozen)": 16,
+        "GT-48 (session)": 15
+      },
+      "all_have_tld": true,
+      "all_have_different_cell": true
+    },
+    "construction_flow": "31 Past Cases → TLD evidence → Human Feedback pattern → CS1 Candidate → CANDIDATE status",
+    "validation_protocol": {
+      "method": "Present 10 past cases, Human validates evidence interpretation",
+      "pass_threshold": "≥8/10 validated",
+      "output": "Signal promoted to HUMAN_VALIDATED or remains CANDIDATE",
+      "not_executed": true
+    }
+  },
+  "signal_to_future": {
+    "future_cases": {
+      "count": 20,
+      "gt_status": "NOT_ADJUDICATED",
+      "documents": 3,
+      "pages": 5,
+      "structure_families": {
+        "TABLE_HEADER": 6,
+        "ROW_LABEL_VALUE": 7,
+        "TABLE_NUMERIC": 7
+      },
+      "all_have_tld": true,
+      "all_have_different_cell": true,
+      "case_independence": "VERIFIED (0 leakage)",
+      "page_independence": false,
+      "document_independence": false
+    },
+    "selection_criteria": [
+      "NOT in past set (case_id not in any GT-45, GT-48, experiment set)",
+      "TLD is_in_table=True AND different_cell=True",
+      "Diversity: structure families + documents",
+      "Selected by evidence signature ONLY, not by expected outcome"
+    ],
+    "signal_applicability": "All 20 future cases: REUSE_SUPPORTED (evidence signature matches)",
+    "future_gt_note": "Future GT must be adjudicated AFTER experiment for quality measurement. Selection did NOT use future GT."
+  },
+  "reuse_off_vs_on": {
+    "phase_1_signal_construction": {
+      "status": "COMPLETE (this document)",
+      "description": "CS1 signal constructed from 31 past cases with TLD evidence + human feedback",
+      "output": "Signal representation (experimental JSON, not DICE schema)"
+    },
+    "phase_2_human_validation": {
+      "status": "NOT_STARTED (requires human participant)",
+      "description": "Human validates that CS1 evidence signature supports the interpretation",
+      "protocol": "Present 10 past CS1 cases. Human confirms interpretation. Record validated/rejected/uncertain per case.",
+      "pass_criteria": "≥8/10 validated → signal promoted to HUMAN_VALIDATED",
+      "output": "ValidationRecord per case"
+    },
+    "phase_3_future_case_reuse_test": {
+      "status": "NOT_STARTED (requires human participant + validated signal)",
+      "description": "Test Reuse OFF vs Reuse ON on 20 future cases",
+      "conditions": {
+        "A_reuse_off": {
+          "description": "Human reviews future cases from scratch, no signal shown",
+          "measures": [
+            "review_time",
+            "decision",
+            "confidence",
+            "boundary_quality"
+          ],
+          "review_count_expected": 20
+        },
+        "B_reuse_on": {
+          "description": "Human sees validated signal for TLD-matched cases, can accept/reject/unknown",
+          "measures": [
+            "review_time",
+            "decision",
+            "signal_acceptance",
+            "signal_rejection",
+            "unknown_preservation",
+            "boundary_quality"
+          ],
+          "review_count_expected": "20 minus accepted_reuse (if signal accepted, human skips detailed review)",
+          "anti_automation_bias": "Signal shown as \"validated interpretation\" not \"correct answer\". Human can REJECT or mark UNKNOWN."
+        }
+      },
+      "counterfactual_check": "For each future case, ask: without the validated signal, would Human need to redo the semantic judgment from scratch?"
+    },
+    "phase_4_measurement": {
+      "status": "NOT_STARTED",
+      "metrics": {
+        "HRR": "Human Review Reduction = (Review_OFF - Review_ON) / Review_OFF",
+        "reuse_coverage": "Future cases where signal is applicable / Total future cases",
+        "reuse_precision": "Correctly reused cases / Total reused cases",
+        "decision_quality": "Accuracy vs GT (GT must be adjudicated for future cases)",
+        "boundary_quality": "UNKNOWN_preservation + CONFLICT_detection",
+        "error_propagation": "Wrong reuse cases / Total reused cases"
+      }
+    }
+  },
+  "metrics": {
+    "primary": {
+      "HRR": "(Review_OFF - Review_ON) / Review_OFF — target > 0",
+      "reuse_coverage": "Applicable future cases / Total future cases — 20/20 = 100%",
+      "reuse_precision": "Correctly reused / Total reused — target ≥ 90%",
+      "decision_quality_on": "Accuracy_ON vs future GT — target ≥ Accuracy_OFF",
+      "boundary_quality": "UNKNOWN_preserved_ON ≥ UNKNOWN_preserved_OFF",
+      "error_propagation": "Wrong_reuse / Total_reuse — target 0, ≤ Error_OFF"
+    },
+    "secondary": {
+      "signal_acceptance_rate": "accepted_reuse / REUSE_SUPPORTED cases",
+      "signal_rejection_rate": "rejected_reuse / REUSE_SUPPORTED cases",
+      "review_time_reduction": "avg_time_OFF - avg_time_ON",
+      "FRR": "future_cases_covered / feedback_instances (research metric only)"
+    },
+    "result_classification": {
+      "TRUE_REUSE": "Signal accepted + Human skips detailed review + Quality maintained → Learning",
+      "EVIDENCE_HELPFULNESS": "Human still reviews + faster + Quality maintained → Not Learning (C2)",
+      "UNSAFE_AUTOMATION": "Signal accepted + Quality decreased OR Boundary violated → Failure"
+    }
+  },
+  "circularity_audit": {
+    "case_leakage": "NONE — 0 future case_ids in past set",
+    "document_leakage": "PARTIAL — same 3 documents in past and future",
+    "page_leakage": "FULL — all 20 future cases on same pages as past cases",
+    "gt_leakage": "NONE — future cases have no GT",
+    "outcome_leakage": "NONE — future cases selected by evidence signature only",
+    "risk": "MEDIUM",
+    "mitigation": "Different text pairs, different content, signal labeled as interpretation not answer"
+  },
+  "automation_bias_audit": {
+    "risk": "MEDIUM",
+    "mitigations": [
+      "Signal shown as \"validated interpretation\" not \"correct answer\"",
+      "Human can ACCEPT, REJECT, or mark UNKNOWN",
+      "Signal displays: evidence + scope + boundary + provenance",
+      "No auto-routing, no auto-decision, no auto-execute",
+      "Signal runtime authority = ZERO",
+      "Human override always available"
+    ],
+    "residual_risks": [
+      "Human might recognize page/table and accept without checking",
+      "All future cases are SUPPORTED (boundary not tested)",
+      "No CONFLICT cases in corpus (conflict protocol untested)"
+    ],
+    "key_principle": "Reuse Signal ≠ Final Decision Authority"
+  },
+  "current_learning_level": {
+    "L0": {
+      "description": "Human-only decision",
+      "status": "PASSED"
+    },
+    "L1": {
+      "description": "Feedback captured",
+      "status": "CURRENT"
+    },
+    "L2": {
+      "description": "Feedback evidence-linked",
+      "status": "ACHIEVED (CS1: 31/31 TLD-linked)"
+    },
+    "L3": {
+      "description": "Reusable signal candidate",
+      "status": "ACHIEVED (CS1 constructed with boundary)"
+    },
+    "L4": {
+      "description": "Human-validated signal",
+      "status": "NOT YET (validation protocol designed, not executed)"
+    },
+    "L5": {
+      "description": "Signal applied to future cases",
+      "status": "NOT YET (20 future cases prepared, not tested)"
+    },
+    "L6": {
+      "description": "Measured review reduction",
+      "status": "NOT YET (metrics defined, no measurement)"
+    },
+    "current_level": "L3",
+    "note": "Level based on actual completion, not design completion. L4-L6 require participant + authorization."
+  },
+  "smallest_next_step": {
+    "proposal": "Authorize a small-scale Human Feedback Reuse Pilot",
+    "scale": "1 participant, 10 past cases (validation) + 20 future cases (reuse test), ~30 minutes",
+    "prerequisites": [
+      "Human participant",
+      "GT adjudication protocol for 20 future cases",
+      "Experiment UI showing signal context"
+    ],
+    "not_authorized": [
+      "Automatic signal application",
+      "DICE Core modification",
+      "Frozen Baseline modification",
+      "Runtime modification",
+      "Signal Runtime Authority"
+    ],
+    "if_authorized": "Tests HRR, quality, boundary, safety on 20 future cases",
+    "if_not_authorized": "Current state remains L3, await conditions"
+  },
+  "governance": {
+    "DICE_CORE_MODIFICATION": false,
+    "FROZEN_BASELINE": "INTACT",
+    "FROZEN_EXPERIMENT": "INTACT",
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "ML_TRAINING": false,
+    "RUNTIME_CHANGE": false,
+    "SIGNAL_RUNTIME_AUTHORITY": "ZERO",
+    "EXPERIMENT_AUTHORIZATION": "NOT_GRANTED",
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e (expected 022f5c21e872ad9e)",
+    "gt_hash": "7349963d0d23b5ef (expected 7349963d0d23b5ef)",
+    "l5_5_aggregation_hash": "d017bddceb9a512a",
+    "l5_5_compression_hash": "79c8d5f079f43882"
+  },
+  "past_cases_detail": [
+    {
+      "case_id": "IS11-AMB-005",
+      "doc_id": "is11_resnet",
+      "page": 1,
+      "text_a": "unsurprising) and then degrades rapidly.",
+      "text_b": "Unexpectedly,",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Text_a ends with sentence-ending punctuation and text_b starts with capital — likely separate sentences.",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-024",
+      "doc_id": "is11_resnet",
+      "page": 6,
+      "text_a": "28.54",
+      "text_b": "10.02",
+      "gt": "KEEP_SEPARATE",
+      "rationale": null,
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-034",
+      "doc_id": "is11_resnet",
+      "page": 6,
+      "text_a": "21.59",
+      "text_b": "5.71",
+      "gt": "KEEP_SEPARATE",
+      "rationale": null,
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-074",
+      "doc_id": "is11_resnet",
+      "page": 8,
+      "text_a": "41.5",
+      "text_b": "21.2",
+      "gt": "KEEP_SEPARATE",
+      "rationale": null,
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-130",
+      "doc_id": "is11_efficientnet",
+      "page": 5,
+      "text_a": "Resolution",
+      "text_b": "#Channels",
+      "gt": "KEEP_SEPARATE",
+      "rationale": null,
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-135",
+      "doc_id": "is11_efficientnet",
+      "page": 5,
+      "text_a": "4",
+      "text_b": "MBConv6, k5x5",
+      "gt": "KEEP_SEPARATE",
+      "rationale": null,
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-262",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "text_a": "41M",
+      "text_b": "EfﬁcientNet-B5",
+      "gt": "KEEP_SEPARATE",
+      "rationale": null,
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-346",
+      "doc_id": "is11_efficientnet",
+      "page": 9,
+      "text_a": "83.95",
+      "text_b": "84.26",
+      "gt": "KEEP_SEPARATE",
+      "rationale": null,
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-350",
+      "doc_id": "is11_efficientnet",
+      "page": 9,
+      "text_a": "80.16",
+      "text_b": "81.72",
+      "gt": "KEEP_SEPARATE",
+      "rationale": null,
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-457",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "Models",
+      "text_b": "Size",
+      "gt": "KEEP_SEPARATE",
+      "rationale": null,
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-467",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "37.0",
+      "text_b": "60.0",
+      "gt": "KEEP_SEPARATE",
+      "rationale": null,
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-483",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "23.5",
+      "text_b": "38.5",
+      "gt": "KEEP_SEPARATE",
+      "rationale": null,
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-505",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "61.4",
+      "text_b": "28.3",
+      "gt": "KEEP_SEPARATE",
+      "rationale": null,
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-514",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "44.2",
+      "text_b": "63.5",
+      "gt": "KEEP_SEPARATE",
+      "rationale": null,
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-522",
+      "doc_id": "is11_cs_001",
+      "page": 4,
+      "text_a": "Size",
+      "text_b": "Max Batch Size",
+      "gt": "KEEP_SEPARATE",
+      "rationale": null,
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-530",
+      "doc_id": "is11_cs_001",
+      "page": 5,
+      "text_a": "PIQA",
+      "text_b": "SciQ",
+      "gt": "KEEP_SEPARATE",
+      "rationale": null,
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-45 (frozen)"
+    },
+    {
+      "case_id": "IS11-AMB-062",
+      "doc_id": "is11_resnet",
+      "page": 8,
+      "text_a": "deep model of over 1000 layers.",
+      "text_b": "We set",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Sentence boundary: text_a ends with period, text_b starts a new sentence",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-48 (session adjudication)"
+    },
+    {
+      "case_id": "IS11-AMB-004",
+      "doc_id": "is11_resnet",
+      "page": 1,
+      "text_a": "hamper convergence from the beginning.",
+      "text_b": "This problem,",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Sentence boundary: text_a ends with period, text_b starts a new sentence",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-48 (session adjudication)"
+    },
+    {
+      "case_id": "IS11-AMB-006",
+      "doc_id": "is11_resnet",
+      "page": 2,
+      "text_a": "nets [41].",
+      "text_b": "Our ensemble has",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Sentence boundary: text_a ends with period, text_b starts a new sentence",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-48 (session adjudication)"
+    },
+    {
+      "case_id": "IS11-AMB-007",
+      "doc_id": "is11_resnet",
+      "page": 2,
+      "text_a": "tions.",
+      "text_b": "On the contrary, our formulation always learns",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Sentence boundary: text_a ends with period, text_b starts a new sentence",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-48 (session adjudication)"
+    },
+    {
+      "case_id": "IS11-AMB-061",
+      "doc_id": "is11_resnet",
+      "page": 8,
+      "text_a": "nonlinearity (ReLU/addition).",
+      "text_b": "For ResNets, this analy-",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Sentence boundary: text_a ends with period, text_b starts a new sentence",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-48 (session adjudication)"
+    },
+    {
+      "case_id": "IS11-AMB-063",
+      "doc_id": "is11_resnet",
+      "page": 8,
+      "text_a": "0.1% (Fig. 6, right).",
+      "text_b": "Its test error is still fairly good",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Sentence boundary: text_a ends with period after figure reference, text_b starts new sentence",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-48 (session adjudication)"
+    },
+    {
+      "case_id": "IS11-AMB-076",
+      "doc_id": "is11_resnet",
+      "page": 10,
+      "text_a": "new structure is trained end-to-end.",
+      "text_b": "Global context im-",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Sentence boundary: text_a ends with period, text_b starts a new sentence",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-48 (session adjudication)"
+    },
+    {
+      "case_id": "IS11-AMB-534",
+      "doc_id": "is11_cs_001",
+      "page": 5,
+      "text_a": "2T",
+      "text_b": "64.56",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Table structure: TLD detects different cells — different columns",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-48 (session adjudication)"
+    },
+    {
+      "case_id": "IS11-AMB-016",
+      "doc_id": "is11_resnet",
+      "page": 5,
+      "text_a": "18 layers",
+      "text_b": "27.94",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Table structure: TLD detects different cells — different columns",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-48 (session adjudication)"
+    },
+    {
+      "case_id": "IS11-AMB-041",
+      "doc_id": "is11_resnet",
+      "page": 6,
+      "text_a": "GoogLeNet [44] (ILSVRC’14)",
+      "text_b": "6.66",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Table structure: TLD detects different cells — different columns",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-48 (session adjudication)"
+    },
+    {
+      "case_id": "IS11-AMB-082",
+      "doc_id": "is11_resnet",
+      "page": 11,
+      "text_a": "baseline Faster R-CNN (VGG-16)",
+      "text_b": "41.5",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Table structure: TLD detects different cells — different columns",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-48 (session adjudication)"
+    },
+    {
+      "case_id": "IS11-AMB-437",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "700M",
+      "text_b": "2.08 (1.00x)",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Table structure: TLD detects different cells — different columns",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-48 (session adjudication)"
+    },
+    {
+      "case_id": "IS11-AMB-009",
+      "doc_id": "is11_resnet",
+      "page": 4,
+      "text_a": "VGG-19",
+      "text_b": "34-layer plain",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Figure legend: different model labels in the same legend",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-48 (session adjudication)"
+    },
+    {
+      "case_id": "IS11-AMB-001",
+      "doc_id": "is11_resnet",
+      "page": 1,
+      "text_a": "Kaiming He",
+      "text_b": "Xiangyu Zhang",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Control case: trivially separable (different columns/headers/axis values)",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-48 (session adjudication)"
+    },
+    {
+      "case_id": "IS11-AMB-021",
+      "doc_id": "is11_resnet",
+      "page": 6,
+      "text_a": "28.07",
+      "text_b": "9.33",
+      "gt": "KEEP_SEPARATE",
+      "rationale": "Control case: trivially separable (different columns/headers/axis values)",
+      "is_in_table": true,
+      "different_cell": true,
+      "source": "GT-48 (session adjudication)"
+    }
+  ],
+  "future_cases_detail": [
+    {
+      "case_id": "IS11-AMB-434",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "Models",
+      "text_b": "Size",
+      "bbox_a": [
+        151.5,
+        75.7,
+        182.4,
+        85.7
+      ],
+      "bbox_b": [
+        230.9,
+        75.7,
+        248.0,
+        85.7
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/cs_001.pdf",
+      "structure_family": "TABLE_HEADER",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-435",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "Size",
+      "text_b": "Memory (GB)",
+      "bbox_a": [
+        230.9,
+        75.7,
+        248.0,
+        85.7
+      ],
+      "bbox_b": [
+        271.3,
+        75.7,
+        331.3,
+        85.7
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/cs_001.pdf",
+      "structure_family": "TABLE_HEADER",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-436",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "LLaMA LLM",
+      "text_b": "700M",
+      "bbox_a": [
+        151.5,
+        91.9,
+        207.6,
+        101.9
+      ],
+      "bbox_b": [
+        227.6,
+        91.9,
+        251.3,
+        101.9
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/cs_001.pdf",
+      "structure_family": "ROW_LABEL_VALUE",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-439",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "1.18 (1.00x)",
+      "text_b": "12.33",
+      "bbox_a": [
+        362.0,
+        91.9,
+        411.0,
+        101.9
+      ],
+      "bbox_b": [
+        437.4,
+        91.9,
+        459.8,
+        101.9
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/cs_001.pdf",
+      "structure_family": "ROW_LABEL_VALUE",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-442",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "0.96 (1.23x)",
+      "text_b": "12.87",
+      "bbox_a": [
+        362.0,
+        102.8,
+        411.0,
+        112.8
+      ],
+      "bbox_b": [
+        437.4,
+        102.8,
+        459.8,
+        112.8
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/cs_001.pdf",
+      "structure_family": "ROW_LABEL_VALUE",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-443",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "LLaMA LLM",
+      "text_b": "1.3B",
+      "bbox_a": [
+        151.5,
+        118.9,
+        207.6,
+        128.9
+      ],
+      "bbox_b": [
+        229.9,
+        118.9,
+        249.0,
+        128.9
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/cs_001.pdf",
+      "structure_family": "ROW_LABEL_VALUE",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-444",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "1.3B",
+      "text_b": "3.34 (1.00x)",
+      "bbox_a": [
+        229.9,
+        118.9,
+        249.0,
+        128.9
+      ],
+      "bbox_b": [
+        279.3,
+        118.9,
+        328.3,
+        128.9
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/cs_001.pdf",
+      "structure_family": "ROW_LABEL_VALUE",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-446",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "1.62 (1.00x)",
+      "text_b": "11.25",
+      "bbox_a": [
+        362.0,
+        118.9,
+        411.0,
+        128.9
+      ],
+      "bbox_b": [
+        437.4,
+        118.9,
+        459.8,
+        128.9
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/cs_001.pdf",
+      "structure_family": "ROW_LABEL_VALUE",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-339",
+      "doc_id": "is11_efficientnet",
+      "page": 9,
+      "text_a": "Val top1",
+      "text_b": "77.11",
+      "bbox_a": [
+        64.8,
+        483.6,
+        88.4,
+        490.6
+      ],
+      "bbox_b": [
+        96.9,
+        483.6,
+        112.7,
+        490.6
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/efficientnet_001.pdf",
+      "structure_family": "ROW_LABEL_VALUE",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-340",
+      "doc_id": "is11_efficientnet",
+      "page": 9,
+      "text_a": "77.11",
+      "text_b": "79.13",
+      "bbox_a": [
+        96.9,
+        483.6,
+        112.7,
+        490.6
+      ],
+      "bbox_b": [
+        121.1,
+        483.6,
+        136.9,
+        490.6
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/efficientnet_001.pdf",
+      "structure_family": "TABLE_NUMERIC",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-341",
+      "doc_id": "is11_efficientnet",
+      "page": 9,
+      "text_a": "79.13",
+      "text_b": "80.07",
+      "bbox_a": [
+        121.1,
+        483.6,
+        136.9,
+        490.6
+      ],
+      "bbox_b": [
+        145.3,
+        483.6,
+        161.1,
+        490.6
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/efficientnet_001.pdf",
+      "structure_family": "TABLE_NUMERIC",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-342",
+      "doc_id": "is11_efficientnet",
+      "page": 9,
+      "text_a": "80.07",
+      "text_b": "81.59",
+      "bbox_a": [
+        145.3,
+        483.6,
+        161.1,
+        490.6
+      ],
+      "bbox_b": [
+        169.6,
+        483.6,
+        185.4,
+        490.6
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/efficientnet_001.pdf",
+      "structure_family": "TABLE_NUMERIC",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-343",
+      "doc_id": "is11_efficientnet",
+      "page": 9,
+      "text_a": "81.59",
+      "text_b": "82.89",
+      "bbox_a": [
+        169.6,
+        483.6,
+        185.4,
+        490.6
+      ],
+      "bbox_b": [
+        193.8,
+        483.6,
+        209.6,
+        490.6
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/efficientnet_001.pdf",
+      "structure_family": "TABLE_NUMERIC",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-344",
+      "doc_id": "is11_efficientnet",
+      "page": 9,
+      "text_a": "82.89",
+      "text_b": "83.60",
+      "bbox_a": [
+        193.8,
+        483.6,
+        209.6,
+        490.6
+      ],
+      "bbox_b": [
+        218.0,
+        483.6,
+        233.8,
+        490.6
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/efficientnet_001.pdf",
+      "structure_family": "TABLE_NUMERIC",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-345",
+      "doc_id": "is11_efficientnet",
+      "page": 9,
+      "text_a": "83.60",
+      "text_b": "83.95",
+      "bbox_a": [
+        218.0,
+        483.6,
+        233.8,
+        490.6
+      ],
+      "bbox_b": [
+        242.3,
+        483.6,
+        258.1,
+        490.6
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/efficientnet_001.pdf",
+      "structure_family": "TABLE_NUMERIC",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-348",
+      "doc_id": "is11_efficientnet",
+      "page": 9,
+      "text_a": "77.23",
+      "text_b": "79.17",
+      "bbox_a": [
+        96.9,
+        492.0,
+        112.7,
+        499.1
+      ],
+      "bbox_b": [
+        121.1,
+        492.0,
+        136.9,
+        499.1
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/efficientnet_001.pdf",
+      "structure_family": "TABLE_NUMERIC",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-002",
+      "doc_id": "is11_resnet",
+      "page": 1,
+      "text_a": "Xiangyu Zhang",
+      "text_b": "Shaoqing Ren",
+      "bbox_a": [
+        222.1,
+        152.4,
+        296.8,
+        164.3
+      ],
+      "bbox_b": [
+        323.7,
+        152.4,
+        391.1,
+        164.3
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/resnet_001.pdf",
+      "structure_family": "TABLE_HEADER",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-003",
+      "doc_id": "is11_resnet",
+      "page": 1,
+      "text_a": "Shaoqing Ren",
+      "text_b": "Jian Sun",
+      "bbox_a": [
+        323.7,
+        152.4,
+        391.1,
+        164.3
+      ],
+      "bbox_b": [
+        418.0,
+        152.4,
+        458.8,
+        164.3
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/resnet_001.pdf",
+      "structure_family": "TABLE_HEADER",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-067",
+      "doc_id": "is11_resnet",
+      "page": 8,
+      "text_a": "VOC 07 test",
+      "text_b": "VOC 12 test",
+      "bbox_a": [
+        405.1,
+        225.8,
+        449.5,
+        234.7
+      ],
+      "bbox_b": [
+        465.9,
+        225.8,
+        510.3,
+        234.7
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/resnet_001.pdf",
+      "structure_family": "TABLE_HEADER",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    },
+    {
+      "case_id": "IS11-AMB-077",
+      "doc_id": "is11_resnet",
+      "page": 11,
+      "text_a": "COCO train",
+      "text_b": "COCO trainval",
+      "bbox_a": [
+        304.1,
+        73.7,
+        347.7,
+        82.6
+      ],
+      "bbox_b": [
+        385.3,
+        73.7,
+        439.2,
+        82.6
+      ],
+      "pdf_path": "/tmp/is11_independent_corpus/resnet_001.pdf",
+      "structure_family": "TABLE_HEADER",
+      "is_in_table": true,
+      "different_cell": true,
+      "same_cell": false,
+      "tld_computed": true
+    }
+  ]
+}

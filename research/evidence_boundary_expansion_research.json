@@ -1,0 +1,225 @@
+{
+  "gate_id": "evidence_boundary_expansion_design_research",
+  "date": "2026-09-19",
+  "mode": "READ_ONLY_RESEARCH_ONLY",
+  "governance": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_FIELD": "NONE",
+    "NEW_SCHEMA": "NONE",
+    "NEW_OBSERVATION": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_SIGNAL": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  },
+
+  "data_used": {
+    "g5_boundary_cases": 13,
+    "ma_uncertain_cases": 14,
+    "ce2_pair": 2,
+    "total_analyzed": 29,
+    "sources": ["Evidence Boundary Structure Research", "M-A Human Validation", "Evidence Configuration Family Research (CE2)"]
+  },
+
+  "boundary_type_distribution": {
+    "B1_evidence_missing": 5,
+    "B2_not_organized": 2,
+    "B4_provided_insufficient": 13,
+    "B5_structural_ceiling": 9
+  },
+
+  "expansion_level_distribution": {
+    "E1_existing_evidence": 0,
+    "E2_reorganize_existing": 6,
+    "E3_new_observation": 5,
+    "E4_genuine_semantic_boundary": 18,
+    "total": 29
+  },
+
+  "expansion_status": {
+    "SUPPORTED": 0,
+    "CONDITIONAL": 11,
+    "NOT_SUPPORTED": 18
+  },
+
+  "semantic_boundary_classification": {
+    "genuine_G5_YES": 18,
+    "not_G5_NO_evidence_issue": 5,
+    "partial_G5": 6,
+    "total": 29
+  },
+
+  "reusable_patterns": [
+    {
+      "pattern_id": "P1",
+      "name": "T1 caption_vs_reference",
+      "cases": 10,
+      "expansion_level": "E4",
+      "semantic_boundary": "YES (genuine G5)",
+      "missing_evidence": "semantic text understanding (caption vs in-text reference identity)",
+      "evidence_source": "E3 (not in current system)",
+      "expansion_status": "NOT_SUPPORTED",
+      "reusable": true
+    },
+    {
+      "pattern_id": "P2",
+      "name": "T1 Type_B_negative text_role",
+      "cases": 4,
+      "expansion_level": "E4",
+      "semantic_boundary": "YES (genuine G5)",
+      "missing_evidence": "semantic text role (axis label vs annotation vs body text)",
+      "evidence_source": "E3 (not in current system)",
+      "expansion_status": "NOT_SUPPORTED",
+      "reusable": true
+    },
+    {
+      "pattern_id": "P3",
+      "name": "T1 Type_A_negative no_drawing",
+      "cases": 5,
+      "expansion_level": "E3",
+      "semantic_boundary": "NO (G1, not G5)",
+      "missing_evidence": "drawing observation (extent not extracted)",
+      "evidence_source": "E3 (drawing exists in PDF but not in system)",
+      "expansion_status": "CONDITIONAL (if observation added)",
+      "reusable": true
+    },
+    {
+      "pattern_id": "P4",
+      "name": "T1 Type_A_negative no_linkage",
+      "cases": 2,
+      "expansion_level": "E2",
+      "semantic_boundary": "PARTIAL",
+      "missing_evidence": "drawing-text linkage (drawing exists but not linked)",
+      "evidence_source": "E2 (exists, not organized)",
+      "expansion_status": "CONDITIONAL",
+      "reusable": true
+    },
+    {
+      "pattern_id": "P5",
+      "name": "T2 sentence_vs_reference",
+      "cases": 6,
+      "expansion_level": "E2/E4 (mixed)",
+      "semantic_boundary": "PARTIAL (some E2, some E4)",
+      "missing_evidence": "page_context (E2) + author_name_recognition (E4)",
+      "evidence_source": "E2 (page context) + E3 (world knowledge for author names)",
+      "expansion_status": "CONDITIONAL (partial)",
+      "reusable": true
+    },
+    {
+      "pattern_id": "P6",
+      "name": "T2 column_type",
+      "cases": 2,
+      "expansion_level": "E4",
+      "semantic_boundary": "YES (genuine G5)",
+      "missing_evidence": "semantic column type (row-number vs data-value)",
+      "evidence_source": "E3 (not in current system)",
+      "expansion_status": "NOT_SUPPORTED",
+      "reusable": true
+    },
+    {
+      "pattern_id": "P7",
+      "name": "CE2 semantic_boundary",
+      "cases": 2,
+      "expansion_level": "E4",
+      "semantic_boundary": "YES (genuine G5, triple convergence)",
+      "missing_evidence": "text semantic content (identical structure, different judgment)",
+      "evidence_source": "E3 (not in current system)",
+      "expansion_status": "NOT_SUPPORTED",
+      "reusable": true
+    }
+  ],
+
+  "minimum_sufficient_evidence": {
+    "E3_cases": "drawing_extent (1 item per case; completing existing observation, not new field)",
+    "E2_cases_linkage": "drawing-text linkage (1 relationship per case; organizing existing spatial data)",
+    "E2_cases_page_context": "page_section_context (1 context label per case; organizing existing page structure)",
+    "E4_cases": "semantic text understanding (NOT derivable from structural evidence; no minimum structural evidence can help)"
+  },
+
+  "new_observation_required": {
+    "status": "POSSIBLE",
+    "cases": 5,
+    "reason": "Type_A_negative + PRIMITIVES_NO_EXTENT / NO_VISUAL_EVIDENCE — drawing not extracted",
+    "root_cause": "G1 (Observation Coverage Gap), NOT G5",
+    "authorized_to_implement": false
+  },
+
+  "g5_triple_convergence": {
+    "path_1": "Evidence Boundary Structure Research — 13 G5 cases, STRUCTURAL_EVIDENCE_NOT_SUFFICIENT",
+    "path_2": "Evidence Configuration Family Research (CE2) — identical evidence → different judgment",
+    "path_3": "Evidence Boundary Expansion Research (this study) — 18/29 E4, no expansion possible",
+    "convergence": "Three independent paths confirm: structural evidence has genuine ceiling; semantic identity cannot be determined from structure alone",
+    "implication": "G5 boundary is a PROPERTY of the task, not a deficiency of the system"
+  },
+
+  "over_design_audit": {
+    "O1_new_field": false,
+    "O2_new_schema": false,
+    "O3_new_observation": false,
+    "O4_new_semantic_label": false,
+    "O5_new_rule": false,
+    "O6_new_detector": false,
+    "O7_automatic_decision": false,
+    "O8_increased_human_burden": false,
+    "O9_one_case_one_patch": false,
+    "O10_finding_to_capability": false,
+    "all_false": true,
+    "result": "PASS"
+  },
+
+  "limitations": [
+    {"id": "EBE-L-01", "limitation": "SINGLE HUMAN REVIEWER — boundary classifications may be reviewer-specific"},
+    {"id": "EBE-L-02", "limitation": "NO IMPLEMENTATION TEST — E2/E3 expansions are theoretical"},
+    {"id": "EBE-L-03", "limitation": "E2 PARTIAL ONLY — even E2 cases have sub-cases that remain E4"},
+    {"id": "EBE-L-04", "limitation": "E3 NOT G5 — 5 E3 cases are G1 (observation missing), not genuine G5"},
+    {"id": "EBE-L-05", "limitation": "NO CROSS-DOMAIN TEST — all cases from academic papers"},
+    {"id": "EBE-L-06", "limitation": "CE2 IS SINGLE INSTANCE — more pairs would strengthen finding"}
+  ],
+
+  "final_questions": {
+    "Q1_not_genuine_g5": "11/29 (37.9%) — 5 E3 (G1) + 6 E2 (G2), evidence availability issues not semantic ceiling",
+    "Q2_expand_with_existing": "0/29 (0%) — no hidden evidence in current Pack",
+    "Q3_reorganize_existing": "6/29 (20.7%) — page_context + drawing-text linkage, partial only",
+    "Q4_need_new_observation": "5/29 (17.2%) — drawing observation missing, G1 not G5",
+    "Q5_genuine_g5_no_expansion": "18/29 (62.1%) — genuine semantic boundary, no structural evidence can help",
+    "Q6_reusable_patterns": "YES — 7 patterns identified, systematic not random",
+    "Q7_research_level_closed_loop": "CONDITIONAL — for 11/29 cases only; 18/29 are genuine G5 with no closed loop",
+    "Q8_next_step": "STOP — 62.1% genuine G5; E2/E3 require implementation (not authorized); G5 is task property"
+  },
+
+  "files_created": [
+    "tmp/evidence_boundary_expansion_research.md",
+    "tmp/evidence_boundary_expansion_research.json",
+    "tmp/evidence_boundary_expansion_case_table.csv"
+  ],
+  "files_modified": 0,
+
+  "conclusion": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_FIELD": "NONE",
+    "NEW_SCHEMA": "NONE",
+    "NEW_OBSERVATION": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_SIGNAL": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  }
+}

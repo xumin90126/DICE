@@ -1,0 +1,21 @@
+{
+  "session_id": "sess_1789630659813_9qk3ods8",
+  "total_events": 80,
+  "judgments": 80,
+  "skips": 0,
+  "unique_cases_judged": 79,
+  "total_cases": 79,
+  "coverage_pct": 100,
+  "candidate_results": {
+    "total": 64,
+    "yes": 56,
+    "no": 4,
+    "uncertain": 4
+  },
+  "negative_results": {
+    "total": 16,
+    "yes": 5,
+    "no": 0,
+    "uncertain": 11
+  }
+}

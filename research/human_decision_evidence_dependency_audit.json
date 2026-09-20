@@ -1,0 +1,1242 @@
+{
+  "research_question": "For Human correct MERGE/KEEP/UNKNOWN judgments, which Evidence is truly decision-relevant? Does it exist in DICE? If so, why must Human reconstruct it? Can Human feedback help System discover this evidence?",
+  "case_scope": {
+    "priority_1_override": [
+      "IS11-AMB-313",
+      "IS11-AMB-462"
+    ],
+    "priority_2_merge": [
+      "IS11-AMB-414",
+      "IS11-AMB-422"
+    ],
+    "priority_3_h2": 17,
+    "priority_4_all": 45,
+    "total_gt_cases": 45
+  },
+  "case_evidence_maps": [
+    {
+      "case_id": "IS11-AMB-005",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "unsurprising) and then degrade",
+      "text_b": "Unexpectedly,",
+      "doc_id": "is11_resnet",
+      "page": 1,
+      "dy": 0.0,
+      "h_gap": 10.0,
+      "line_obs": 3,
+      "same_style": true,
+      "len_a": 40,
+      "len_b": 13,
+      "has_fig_prefix": false,
+      "both_short": false,
+      "category": "E5",
+      "primary_evidence": [
+        "SENTENCE_STRUCTURE",
+        "PUNCTUATION"
+      ],
+      "rationale_a": "text_a ends a sentence with a period after 'degrades rapidly' and text_b starts "
+    },
+    {
+      "case_id": "IS11-AMB-024",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "28.54",
+      "text_b": "10.02",
+      "doc_id": "is11_resnet",
+      "page": 6,
+      "dy": 0.0,
+      "h_gap": 25.0,
+      "line_obs": 3,
+      "same_style": true,
+      "len_a": 5,
+      "len_b": 5,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In the error-rate table, '28.54' is the top-1 error and '10.02' is the top-5 err"
+    },
+    {
+      "case_id": "IS11-AMB-032",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "-",
+      "text_b": "8.43",
+      "doc_id": "is11_resnet",
+      "page": 6,
+      "dy": 0.0,
+      "h_gap": 33.9,
+      "line_obs": 3,
+      "same_style": true,
+      "len_a": 1,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 3, '-' is the missing top-1 error and '8.43' is the top-5 error for VGG"
+    },
+    {
+      "case_id": "IS11-AMB-034",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "21.59",
+      "text_b": "5.71",
+      "doc_id": "is11_resnet",
+      "page": 6,
+      "dy": 0.0,
+      "h_gap": 27.2,
+      "line_obs": 3,
+      "same_style": true,
+      "len_a": 5,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "'21.59' and '5.71' are the top-1 and top-5 error values for a ResNet row, residi"
+    },
+    {
+      "case_id": "IS11-AMB-052",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "0.46M",
+      "text_b": "7.51",
+      "doc_id": "is11_resnet",
+      "page": 7,
+      "dy": 0.0,
+      "h_gap": 15.4,
+      "line_obs": 5,
+      "same_style": true,
+      "len_a": 5,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 6, '0.46M' is the #params column and '7.51' is the error (%) column for"
+    },
+    {
+      "case_id": "IS11-AMB-064",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "training data",
+      "text_b": "07+12",
+      "doc_id": "is11_resnet",
+      "page": 8,
+      "dy": 0.0,
+      "h_gap": 27.1,
+      "line_obs": 5,
+      "same_style": true,
+      "len_a": 13,
+      "len_b": 5,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "'training data' is a column header label and '07+12' is a data value in an adjac"
+    },
+    {
+      "case_id": "IS11-AMB-074",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "41.5",
+      "text_b": "21.2",
+      "doc_id": "is11_resnet",
+      "page": 8,
+      "dy": 0.0,
+      "h_gap": 45.6,
+      "line_obs": 3,
+      "same_style": true,
+      "len_a": 4,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 8, '41.5' is the mAP@.5 value and '21.2' is the mAP@[.5,.95] value for "
+    },
+    {
+      "case_id": "IS11-AMB-101",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "-",
+      "text_b": "43.9",
+      "doc_id": "is11_resnet",
+      "page": 11,
+      "dy": 0.0,
+      "h_gap": 26.7,
+      "line_obs": 4,
+      "same_style": true,
+      "len_a": 1,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "'-' is a missing-value placeholder in one table cell and '43.9' is a numeric met"
+    },
+    {
+      "case_id": "IS11-AMB-102",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "our single model (ILSVRC’15)",
+      "text_b": "60.5",
+      "doc_id": "is11_resnet",
+      "page": 11,
+      "dy": 0.0,
+      "h_gap": 20.3,
+      "line_obs": 3,
+      "same_style": true,
+      "len_a": 28,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": false,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "'our single model (ILSVRC'15)' is a method/system label in one column and '60.5'"
+    },
+    {
+      "case_id": "IS11-AMB-130",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "Resolution",
+      "text_b": "#Channels",
+      "doc_id": "is11_efficientnet",
+      "page": 5,
+      "dy": 0.0,
+      "h_gap": 9.1,
+      "line_obs": 5,
+      "same_style": true,
+      "len_a": 10,
+      "len_b": 9,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "'Resolution' and '#Channels' are two distinct column headers in the Table 1 head"
+    },
+    {
+      "case_id": "IS11-AMB-135",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "4",
+      "text_b": "MBConv6, k5x5",
+      "doc_id": "is11_efficientnet",
+      "page": 5,
+      "dy": 0.0,
+      "h_gap": 30.0,
+      "line_obs": 8,
+      "same_style": true,
+      "len_a": 1,
+      "len_b": 13,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 1, '4' is the stage index and 'MBConv6, k5x5' is the operator type, two"
+    },
+    {
+      "case_id": "IS11-AMB-163",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "93.9%",
+      "text_b": "34M",
+      "doc_id": "is11_efficientnet",
+      "page": 6,
+      "dy": 0.0,
+      "h_gap": 25.8,
+      "line_obs": 11,
+      "same_style": true,
+      "len_a": 5,
+      "len_b": 3,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 2, '93.9%' is the Top-5 accuracy and '34M' is the #Params for DenseNet-"
+    },
+    {
+      "case_id": "IS11-AMB-168",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "3.0x",
+      "text_b": "5.7B",
+      "doc_id": "is11_efficientnet",
+      "page": 6,
+      "dy": 0.0,
+      "h_gap": 45.2,
+      "line_obs": 11,
+      "same_style": true,
+      "len_a": 4,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 2, '3.0x' is the param ratio-to-EfficientNet and '5.7B' is the #FLOPs f"
+    },
+    {
+      "case_id": "IS11-AMB-198",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "82.9%",
+      "text_b": "96.2%",
+      "doc_id": "is11_efficientnet",
+      "page": 6,
+      "dy": 0.0,
+      "h_gap": 25.6,
+      "line_obs": 11,
+      "same_style": true,
+      "len_a": 5,
+      "len_b": 5,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "'82.9%' is the Top-1 accuracy and '96.2%' is the Top-5 accuracy in Table 2, two "
+    },
+    {
+      "case_id": "IS11-AMB-205",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "96.5%",
+      "text_b": "155M",
+      "doc_id": "is11_efficientnet",
+      "page": 6,
+      "dy": 0.0,
+      "h_gap": 23.7,
+      "line_obs": 11,
+      "same_style": true,
+      "len_a": 5,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 2, '96.5%' is the Top-5 accuracy and '155M' is the #Params for AmoebaNe"
+    },
+    {
+      "case_id": "IS11-AMB-218",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "1.2B",
+      "text_b": "76.8%",
+      "doc_id": "is11_efficientnet",
+      "page": 6,
+      "dy": 0.0,
+      "h_gap": 20.8,
+      "line_obs": 6,
+      "same_style": true,
+      "len_a": 4,
+      "len_b": 5,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "'1.2B' is a #FLOPs value and '76.8%' is a Top-1 accuracy; these belong to differ"
+    },
+    {
+      "case_id": "IS11-AMB-257",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "Gpipe",
+      "text_b": "91.3%",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "dy": 0.0,
+      "h_gap": 10.1,
+      "line_obs": 13,
+      "same_style": true,
+      "len_a": 5,
+      "len_b": 5,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 5, 'Gpipe' is a model name and '91.3%' is its accuracy value, occupying"
+    },
+    {
+      "case_id": "IS11-AMB-261",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "Inception-v4",
+      "text_b": "81.8%",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "dy": 0.0,
+      "h_gap": 8.1,
+      "line_obs": 13,
+      "same_style": true,
+      "len_a": 12,
+      "len_b": 5,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 5, 'Inception-v4' is a model name and '81.8%' is its accuracy value, tw"
+    },
+    {
+      "case_id": "IS11-AMB-262",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "41M",
+      "text_b": "EfﬁcientNet-B5",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "dy": 0.0,
+      "h_gap": 12.0,
+      "line_obs": 13,
+      "same_style": true,
+      "len_a": 3,
+      "len_b": 14,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "'41M' is the #Param value for Inception-v4 in the comparison column group and 'E"
+    },
+    {
+      "case_id": "IS11-AMB-267",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "83.6%",
+      "text_b": "556M",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "dy": 0.0,
+      "h_gap": 10.9,
+      "line_obs": 13,
+      "same_style": true,
+      "len_a": 5,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 5, '83.6%' is the accuracy and '556M' is the #Params for GPipe, two sep"
+    },
+    {
+      "case_id": "IS11-AMB-279",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "EfﬁcientNet-B5",
+      "text_b": "98.5%",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "dy": 0.0,
+      "h_gap": 8.1,
+      "line_obs": 13,
+      "same_style": true,
+      "len_a": 14,
+      "len_b": 5,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "'EfficientNet-B5' is a model name and '98.5%' is its accuracy value in Table 5, "
+    },
+    {
+      "case_id": "IS11-AMB-313",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "Test Size",
+      "text_b": "#Classes",
+      "doc_id": "is11_efficientnet",
+      "page": 8,
+      "dy": 0.0,
+      "h_gap": 8.4,
+      "line_obs": 4,
+      "same_style": true,
+      "len_a": 9,
+      "len_b": 8,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "'Test Size' and '#Classes' are two different column headers in the Table 6 heade"
+    },
+    {
+      "case_id": "IS11-AMB-318",
+      "gt": "KEEP_SEPARATE",
+      "text_a": ")",
+      "text_b": "47,386",
+      "doc_id": "is11_efficientnet",
+      "page": 8,
+      "dy": 0.0,
+      "h_gap": 32.9,
+      "line_obs": 9,
+      "same_style": true,
+      "len_a": 1,
+      "len_b": 6,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "')' is the closing parenthesis of the dataset citation 'Birdsnap (Berg et al., 2"
+    },
+    {
+      "case_id": "IS11-AMB-321",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "8,144",
+      "text_b": "8,041",
+      "doc_id": "is11_efficientnet",
+      "page": 8,
+      "dy": 0.0,
+      "h_gap": 19.8,
+      "line_obs": 8,
+      "same_style": true,
+      "len_a": 5,
+      "len_b": 5,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 6 (Transfer Learning Datasets), '8,144' is the Train Size and '8,041' i"
+    },
+    {
+      "case_id": "IS11-AMB-323",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "2,040",
+      "text_b": "6,149",
+      "doc_id": "is11_efficientnet",
+      "page": 8,
+      "dy": 0.0,
+      "h_gap": 19.8,
+      "line_obs": 8,
+      "same_style": true,
+      "len_a": 5,
+      "len_b": 5,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 6, '2,040' is the Train Size and '6,149' is the Test Size for Flowers —"
+    },
+    {
+      "case_id": "IS11-AMB-346",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "83.95",
+      "text_b": "84.26",
+      "doc_id": "is11_efficientnet",
+      "page": 9,
+      "dy": 0.0,
+      "h_gap": 8.4,
+      "line_obs": 9,
+      "same_style": true,
+      "len_a": 5,
+      "len_b": 5,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "NUMERIC_VALUE",
+        "TABLE_CONTEXT"
+      ],
+      "rationale_a": "83.95 and 84.26 are two distinct accuracy values (differ by only 0.31, too small"
+    },
+    {
+      "case_id": "IS11-AMB-350",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "80.16",
+      "text_b": "81.72",
+      "doc_id": "is11_efficientnet",
+      "page": 9,
+      "dy": 0.0,
+      "h_gap": 8.4,
+      "line_obs": 10,
+      "same_style": true,
+      "len_a": 5,
+      "len_b": 5,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "NUMERIC_VALUE",
+        "TABLE_CONTEXT"
+      ],
+      "rationale_a": "80.16 and 81.72 are two distinct accuracy values for separate models, occupying "
+    },
+    {
+      "case_id": "IS11-AMB-375",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "[23].",
+      "text_b": "Each",
+      "doc_id": "is11_med_001",
+      "page": 6,
+      "dy": 0.0,
+      "h_gap": 9.7,
+      "line_obs": 3,
+      "same_style": true,
+      "len_a": 5,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E5",
+      "primary_evidence": [
+        "SENTENCE_STRUCTURE",
+        "PUNCTUATION"
+      ],
+      "rationale_a": "'[23].' is the terminal fragment of the sentence ending 'developed by Rupp et al"
+    },
+    {
+      "case_id": "IS11-AMB-380",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "RBF",
+      "text_b": "Matérn",
+      "doc_id": "is11_med_001",
+      "page": 13,
+      "dy": 0.1,
+      "h_gap": 30.6,
+      "line_obs": 7,
+      "same_style": true,
+      "len_a": 3,
+      "len_b": 6,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E5",
+      "primary_evidence": [
+        "TEXT_PATTERN_FIG",
+        "CAPTION_STRUCTURE"
+      ],
+      "rationale_a": "In the FIG. 4 kernel-construction diagram, 'RBF' and 'Matérn' are two distinct b"
+    },
+    {
+      "case_id": "IS11-AMB-401",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "0.70",
+      "text_b": "0.75",
+      "doc_id": "is11_med_001",
+      "page": 19,
+      "dy": 0.0,
+      "h_gap": 26.7,
+      "line_obs": 10,
+      "same_style": true,
+      "len_a": 4,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E5",
+      "primary_evidence": [
+        "TEXT_PATTERN_FIG",
+        "CAPTION_STRUCTURE"
+      ],
+      "rationale_a": "0.70 and 0.75 are two adjacent axis tick labels on the AUC axis of FIG. 8 — sepa"
+    },
+    {
+      "case_id": "IS11-AMB-407",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "1.35",
+      "text_b": "1.40",
+      "doc_id": "is11_med_001",
+      "page": 19,
+      "dy": 0.0,
+      "h_gap": 29.0,
+      "line_obs": 10,
+      "same_style": true,
+      "len_a": 4,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E5",
+      "primary_evidence": [
+        "TEXT_PATTERN_FIG",
+        "CAPTION_STRUCTURE"
+      ],
+      "rationale_a": "1.35 and 1.40 are two adjacent axis tick labels on the fC axis of FIG. 8 — separ"
+    },
+    {
+      "case_id": "IS11-AMB-409",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "0.65",
+      "text_b": "0.70",
+      "doc_id": "is11_med_001",
+      "page": 19,
+      "dy": 0.0,
+      "h_gap": 30.5,
+      "line_obs": 10,
+      "same_style": true,
+      "len_a": 4,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E5",
+      "primary_evidence": [
+        "TEXT_PATTERN_FIG",
+        "CAPTION_STRUCTURE"
+      ],
+      "rationale_a": "0.65 and 0.70 are two adjacent axis tick labels on the fO axis of FIG. 8 — separ"
+    },
+    {
+      "case_id": "IS11-AMB-414",
+      "gt": "MERGE",
+      "text_a": "FIG. 9:",
+      "text_b": "Left:",
+      "doc_id": "is11_med_001",
+      "page": 20,
+      "dy": 0.0,
+      "h_gap": 18.1,
+      "line_obs": 5,
+      "same_style": true,
+      "len_a": 7,
+      "len_b": 5,
+      "has_fig_prefix": true,
+      "both_short": true,
+      "category": "E5",
+      "primary_evidence": [
+        "TEXT_PATTERN_FIG",
+        "CAPTION_STRUCTURE"
+      ],
+      "rationale_a": "'FIG. 9:' and 'Left:' are both prefix fragments of the same figure caption ('FIG"
+    },
+    {
+      "case_id": "IS11-AMB-418",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "), but with the different kern",
+      "text_b": "The",
+      "doc_id": "is11_med_001",
+      "page": 20,
+      "dy": 0.0,
+      "h_gap": 10.8,
+      "line_obs": 7,
+      "same_style": true,
+      "len_a": 64,
+      "len_b": 3,
+      "has_fig_prefix": false,
+      "both_short": false,
+      "category": "E5",
+      "primary_evidence": [
+        "SENTENCE_STRUCTURE",
+        "PUNCTUATION"
+      ],
+      "rationale_a": "'...illustrated in the left panel.' ends one sentence, while 'The' starts the ne"
+    },
+    {
+      "case_id": "IS11-AMB-422",
+      "gt": "MERGE",
+      "text_a": "FIG. 12:",
+      "text_b": "Distribution of errors for pre",
+      "doc_id": "is11_med_001",
+      "page": 24,
+      "dy": 0.0,
+      "h_gap": 10.5,
+      "line_obs": 2,
+      "same_style": true,
+      "len_a": 8,
+      "len_b": 74,
+      "has_fig_prefix": true,
+      "both_short": false,
+      "category": "E5",
+      "primary_evidence": [
+        "TEXT_PATTERN_FIG",
+        "CAPTION_STRUCTURE"
+      ],
+      "rationale_a": "'FIG. 12:' and 'Distribution of errors for predictions of entropy (upper) and ZP"
+    },
+    {
+      "case_id": "IS11-AMB-440",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "700M",
+      "text_b": "0.80 (2.60x)",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "dy": 0.0,
+      "h_gap": 27.9,
+      "line_obs": 5,
+      "same_style": true,
+      "len_a": 4,
+      "len_b": 12,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 1, '700M' is the Size column value and '0.80 (2.60x)' is the Memory col"
+    },
+    {
+      "case_id": "IS11-AMB-457",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "Models",
+      "text_b": "Size",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "dy": 0.0,
+      "h_gap": 40.4,
+      "line_obs": 10,
+      "same_style": true,
+      "len_a": 6,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "'Models' and 'Size' are two adjacent column headers in Table 1/Table 2 — differe"
+    },
+    {
+      "case_id": "IS11-AMB-462",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "WGe",
+      "text_b": "Avg.",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "dy": 0.0,
+      "h_gap": 12.0,
+      "line_obs": 10,
+      "same_style": true,
+      "len_a": 3,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "'WGe' and 'Avg.' are two adjacent column headers in Table 2 — different columns."
+    },
+    {
+      "case_id": "IS11-AMB-467",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "37.0",
+      "text_b": "60.0",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "dy": 0.0,
+      "h_gap": 11.9,
+      "line_obs": 10,
+      "same_style": true,
+      "len_a": 4,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 2, '37.0' is the HS score and '60.0' is the BQ score for LLaMA 700M — t"
+    },
+    {
+      "case_id": "IS11-AMB-483",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "23.5",
+      "text_b": "38.5",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "dy": 0.0,
+      "h_gap": 16.2,
+      "line_obs": 10,
+      "same_style": true,
+      "len_a": 4,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 2, '23.5' is the ARCc score and '38.5' is the HS score for LLaMA 1.3B —"
+    },
+    {
+      "case_id": "IS11-AMB-505",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "61.4",
+      "text_b": "28.3",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "dy": 0.0,
+      "h_gap": 20.5,
+      "line_obs": 10,
+      "same_style": true,
+      "len_a": 4,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 2, '61.4' is the ARCe score and '28.3' is the ARCc score for BitNet 3B "
+    },
+    {
+      "case_id": "IS11-AMB-514",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "44.2",
+      "text_b": "63.5",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "dy": 0.0,
+      "h_gap": 11.9,
+      "line_obs": 10,
+      "same_style": true,
+      "len_a": 4,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "In Table 2, '44.2' is the HS score and '63.5' is the BQ score for BitNet 3.9B — "
+    },
+    {
+      "case_id": "IS11-AMB-519",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "facto backbone for open-source",
+      "text_b": "To embrace the open-source com",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "dy": 0.0,
+      "h_gap": 8.6,
+      "line_obs": 2,
+      "same_style": true,
+      "len_a": 36,
+      "len_b": 48,
+      "has_fig_prefix": false,
+      "both_short": false,
+      "category": "E5",
+      "primary_evidence": [
+        "SENTENCE_STRUCTURE",
+        "PUNCTUATION"
+      ],
+      "rationale_a": "'facto backbone for open-source LLMs.' ends the sentence about LLaMA architectur"
+    },
+    {
+      "case_id": "IS11-AMB-522",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "Size",
+      "text_b": "Max Batch Size",
+      "doc_id": "is11_cs_001",
+      "page": 4,
+      "dy": 0.0,
+      "h_gap": 19.9,
+      "line_obs": 4,
+      "same_style": true,
+      "len_a": 4,
+      "len_b": 14,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "'Size' and 'Max Batch Size' are two adjacent column headers in Table 3 — differe"
+    },
+    {
+      "case_id": "IS11-AMB-530",
+      "gt": "KEEP_SEPARATE",
+      "text_a": "PIQA",
+      "text_b": "SciQ",
+      "doc_id": "is11_cs_001",
+      "page": 5,
+      "dy": 0.0,
+      "h_gap": 12.3,
+      "line_obs": 8,
+      "same_style": true,
+      "len_a": 4,
+      "len_b": 4,
+      "has_fig_prefix": false,
+      "both_short": true,
+      "category": "E2",
+      "primary_evidence": [
+        "LINE_SPANS_UNORGANIZED",
+        "TEXT_CONTENT"
+      ],
+      "rationale_a": "'PIQA' and 'SciQ' are two adjacent benchmark column headers in Table 4 — differe"
+    }
+  ],
+  "evidence_dependency_categories": {
+    "E1_existing_explicit": {
+      "count": 0,
+      "description": "Machine directly has and Human can directly use"
+    },
+    "E2_existing_unorganized": {
+      "count": 35,
+      "pct": 78,
+      "description": "Machine has facts but Human must compose multiple facts",
+      "gt_distribution": {
+        "KEEP_SEPARATE": 35,
+        "MERGE": 0,
+        "DISAGREE": 0
+      }
+    },
+    "E3_derived": {
+      "count": 0,
+      "description": "Can be deterministically derived but not exposed"
+    },
+    "E4_missing_observation": {
+      "count": 0,
+      "description": "P1-P7 genuinely does not have this information"
+    },
+    "E5_human_semantic": {
+      "count": 10,
+      "pct": 22,
+      "description": "Requires Human semantic interpretation (text pattern, sentence structure)",
+      "gt_distribution": {
+        "KEEP_SEPARATE": 8,
+        "MERGE": 2,
+        "DISAGREE": 0
+      }
+    }
+  },
+  "E1": {
+    "count": 0
+  },
+  "E2": {
+    "count": 35,
+    "pct": 78,
+    "info_gain": "HIGH (35/35 KEEP_SEPARATE, 0 MERGE)",
+    "evidence": "line_spans unorganized + text content",
+    "gap_type": "Consumer/Integration Gap"
+  },
+  "E3": {
+    "count": 0
+  },
+  "E4": {
+    "count": 0
+  },
+  "E5": {
+    "count": 10,
+    "pct": 22,
+    "info_gain": "HIGH for has_fig_prefix (2/2 MERGE)",
+    "evidence": "text pattern (FIG.) + sentence structure",
+    "gap_type": "Human Semantic Interpretation"
+  },
+  "information_gain": {
+    "SAME_BAND_SEPARATED_PAIR": {
+      "info_gain": "ZERO",
+      "true_rate": "45/45 (100%)",
+      "verdict": "REJECT_AS_SIGNAL"
+    },
+    "has_fig_prefix_to_merge": {
+      "info_gain": "HIGH",
+      "true_for_merge": "2/2",
+      "true_for_others": "0/43",
+      "verdict": "SIGNAL_CANDIDATE (semantic)"
+    },
+    "line_obs_ge_6_to_keep": {
+      "info_gain": "MODERATE",
+      "true_for_keep": "28/39",
+      "false_positive": "0",
+      "coverage": "62%",
+      "verdict": "SIGNAL_CANDIDATE (pure geometry)"
+    },
+    "line_obs_ge_3_and_not_fig_to_keep": {
+      "info_gain": "HIGH",
+      "true_for_keep": "42/39*",
+      "false_positive": "0",
+      "coverage": "93%",
+      "verdict": "SIGNAL_CANDIDATE (mixed)"
+    }
+  },
+  "human_override_analysis": {
+    "AMB-313": {
+      "system_cue": "MERGE (WRONG)",
+      "human_decision": "KEEP_SEPARATE (CORRECT)",
+      "root_cause": "TLD detected 0 tables → is_in_table=False → default MERGE",
+      "human_used_evidence": "E2 (5 line spans → table header) + E5 (text not FIG.)",
+      "override_time": "3.9s (B2) vs 1.7s (B1)"
+    },
+    "AMB-462": {
+      "system_cue": "MERGE (WRONG)",
+      "human_decision": "KEEP_SEPARATE (CORRECT)",
+      "root_cause": "TLD detected 1 table but A/B outside bbox → is_in_table=False → MERGE",
+      "human_used_evidence": "E2 (10 line spans → table header) + E5 (text not FIG.)",
+      "override_time": "4.7s (B2) vs 0.7s (B1)"
+    },
+    "key_finding": "Human used BOTH structural (E2) and text pattern (E5) evidence. System only used TLD (which failed). Consumer/Integration Gap."
+  },
+  "feedback_grounding": {
+    "can_feedback_help_discover_evidence": true,
+    "method": "System analyzes KEEP_SEPARATE vs MERGE group differences → discovers line_obs_count and has_fig_prefix discrimination",
+    "correlation_vs_signal": "SIGNAL_CANDIDATE found, but not REUSABLE_SIGNAL (no validation, no future cases)"
+  },
+  "signal_candidates": {
+    "signal_1_has_fig_to_merge": {
+      "definition": "text_a or text_b starts with FIG → MERGE",
+      "evidence": "E1 (text content)",
+      "info_gain": "HIGH (2/2 MERGE, 0/43 others)",
+      "semantic_leakage": "non-zero (text pattern)",
+      "coverage": "4%",
+      "cross_case": "2 cases, 1 document",
+      "validatable": "PARTIAL (n=2)",
+      "future_reuse": "INSUFFICIENT",
+      "verdict": "SIGNAL_CANDIDATE"
+    },
+    "signal_2_line_obs_ge_6": {
+      "definition": "line_obs_count >= 6 → KEEP_SEPARATE",
+      "evidence": "E1 (line_obs_count)",
+      "info_gain": "MODERATE (0 false positive, 62% coverage)",
+      "semantic_leakage": 0,
+      "coverage": "62%",
+      "cross_case": "28 cases, 4 documents",
+      "validatable": "PARTIAL",
+      "future_reuse": "INSUFFICIENT",
+      "verdict": "SIGNAL_CANDIDATE (pure geometry)"
+    },
+    "signal_3_combined": {
+      "definition": "line_obs_count >= 3 AND NOT has_fig_prefix → KEEP_SEPARATE",
+      "evidence": "E1 (line_obs + text)",
+      "info_gain": "HIGH (42/42 KEEP_SEPARATE, 0 false positive)",
+      "semantic_leakage": "non-zero (text pattern component)",
+      "coverage": "93%",
+      "cross_case": "42 cases, 4 documents",
+      "validatable": "PARTIAL",
+      "future_reuse": "INSUFFICIENT",
+      "verdict": "SIGNAL_CANDIDATE (strongest, mixed)"
+    }
+  },
+  "future_reuse": {
+    "future_independent_cases": 0,
+    "p722_subset_of_gt": true,
+    "cross_document_future": 0,
+    "verdict": "INSUFFICIENT_EVIDENCE",
+    "reason": "No future cases — cannot validate generalization"
+  },
+  "evidence_utility": {
+    "utility_a_human_faster": "NOT_TESTED — P722 B2 showed wrong cue increases time; correct cue might help but untestable",
+    "utility_b_future_reuse": "INSUFFICIENT — no future cases",
+    "p722_b1_vs_b2": {
+      "B1_time": 1.7,
+      "B2_time": 5.9,
+      "B1_accuracy": 100,
+      "B2_accuracy": 93
+    },
+    "note": "B2 problem was WRONG CUE DIRECTION, not evidence exposure. If Signal 3 used for correct cue, utility might improve."
+  },
+  "learning_utility": {
+    "signal_candidates_found": 3,
+    "all_evidence_grounded": true,
+    "all_info_gain_positive": true,
+    "none_validated": true,
+    "none_reused": true,
+    "verdict": "L3 — evidence-grounded candidates, not reusable signals"
+  },
+  "research_route": {
+    "A_existing_evidence_poorly_organized": true,
+    "B_deterministic_derived_sufficient": "PARTIAL",
+    "C_new_observation_required": false,
+    "D_persistent_human_semantic": "PARTIAL (22%)",
+    "E_evidence_insufficient_future_validation": true,
+    "primary": "A + E"
+  },
+  "learning_level": {
+    "current": "L3",
+    "previous": "L2",
+    "improvement": "Found 3 signal candidates with info gain > 0 (vs SAME_BAND_SEPARATED_PAIR with zero info gain)",
+    "l0_storage": true,
+    "l1_feedback_capture": true,
+    "l2_candidate_discovery": true,
+    "l3_evidence_grounded_candidate": true,
+    "l4_human_validated": false,
+    "l5_future_reuse": false,
+    "l6_measured_hrr": false,
+    "l7_iterative_learning": false
+  },
+  "anti_overdesign": {
+    "learning_engine": false,
+    "feedback_engine": false,
+    "signal_engine": false,
+    "query_engine": false,
+    "pattern_engine": false,
+    "relation_engine": false,
+    "evidence_organization_layer": false,
+    "new_observation": false,
+    "llm": false,
+    "modify_p2_tld_is11": false,
+    "all_no": true
+  },
+  "category_distribution": {
+    "A_machine_knows_human_uses_directly": 0,
+    "B_machine_knows_human_reconstructs": 35,
+    "C_machine_can_derive_not_exposed": 0,
+    "D_machine_lacks_observation": 0,
+    "E_persistent_human_semantic": 10
+  },
+  "governance": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "P2_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "IS11_MODIFICATION": false,
+    "GT_MODIFICATION": false,
+    "EXPERIMENT_MODIFICATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "LLM": false,
+    "RUNTIME_CHANGE": false,
+    "CAPABILITY_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "FORMAL_LEARNING": false,
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  },
+  "stop": true
+}

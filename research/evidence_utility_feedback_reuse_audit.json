@@ -1,0 +1,356 @@
+{
+  "research_question": "Does SAME_BAND_SEPARATED_PAIR improve Human Evidence Utility, and can Human minimal feedback produce evidence-grounded reusable signal that reduces future Human Review while preserving quality?",
+  "loop_a": {
+    "conditions": {
+      "A_no_cue": {
+        "count": 15,
+        "h2_count": 2
+      },
+      "B1_cue": {
+        "count": 10,
+        "h2_count": 7
+      },
+      "B2_cue_relation": {
+        "count": 30,
+        "h2_count": 8
+      }
+    },
+    "all_cases_comparison": {
+      "A": {
+        "avg_time": 2.244466666666667,
+        "accuracy": 93.33333333333333,
+        "overrides": 0,
+        "automation_bias": 0
+      },
+      "B1": {
+        "avg_time": 1.7215,
+        "accuracy": 100.0,
+        "overrides": 0,
+        "automation_bias": 0
+      },
+      "B2": {
+        "avg_time": 5.892066666666665,
+        "accuracy": 93.33333333333333,
+        "overrides": 2,
+        "automation_bias": 0
+      }
+    },
+    "h2_cases_comparison": {
+      "B1": {
+        "avg_time": 1.6505714285714286,
+        "accuracy": 100,
+        "overrides": 0
+      },
+      "B2": {
+        "avg_time": 2.5535000000000005,
+        "accuracy": 100,
+        "overrides": 2,
+        "cue_wrong": 2
+      }
+    },
+    "h2_b2_case_details": [
+      {
+        "case_id": "IS11-AMB-457",
+        "cue_direction": "KEEP_SEPARATE",
+        "gt_label": "KEEP_SEPARATE",
+        "decision": "KEEP_SEPARATE",
+        "cue_followed": true,
+        "cue_conflict": false,
+        "override": null,
+        "final_correct": true,
+        "decision_time": 3.677,
+        "cue_correct": true
+      },
+      {
+        "case_id": "IS11-AMB-462",
+        "cue_direction": "MERGE",
+        "gt_label": "KEEP_SEPARATE",
+        "decision": "KEEP_SEPARATE",
+        "cue_followed": false,
+        "cue_conflict": true,
+        "override": true,
+        "final_correct": true,
+        "decision_time": 4.744,
+        "cue_correct": false
+      },
+      {
+        "case_id": "IS11-AMB-313",
+        "cue_direction": "MERGE",
+        "gt_label": "KEEP_SEPARATE",
+        "decision": "KEEP_SEPARATE",
+        "cue_followed": false,
+        "cue_conflict": true,
+        "override": true,
+        "final_correct": true,
+        "decision_time": 3.861,
+        "cue_correct": false
+      },
+      {
+        "case_id": "IS11-AMB-130",
+        "cue_direction": "KEEP_SEPARATE",
+        "gt_label": "KEEP_SEPARATE",
+        "decision": "KEEP_SEPARATE",
+        "cue_followed": true,
+        "cue_conflict": false,
+        "override": null,
+        "final_correct": true,
+        "decision_time": 1.128,
+        "cue_correct": true
+      },
+      {
+        "case_id": "IS11-AMB-205",
+        "cue_direction": "KEEP_SEPARATE",
+        "gt_label": "KEEP_SEPARATE",
+        "decision": "KEEP_SEPARATE",
+        "cue_followed": true,
+        "cue_conflict": false,
+        "override": null,
+        "final_correct": true,
+        "decision_time": 1.387,
+        "cue_correct": true
+      },
+      {
+        "case_id": "IS11-AMB-168",
+        "cue_direction": "KEEP_SEPARATE",
+        "gt_label": "KEEP_SEPARATE",
+        "decision": "KEEP_SEPARATE",
+        "cue_followed": true,
+        "cue_conflict": false,
+        "override": null,
+        "final_correct": true,
+        "decision_time": 0.97,
+        "cue_correct": true
+      },
+      {
+        "case_id": "IS11-AMB-262",
+        "cue_direction": "KEEP_SEPARATE",
+        "gt_label": "KEEP_SEPARATE",
+        "decision": "KEEP_SEPARATE",
+        "cue_followed": true,
+        "cue_conflict": false,
+        "override": null,
+        "final_correct": true,
+        "decision_time": 2.616,
+        "cue_correct": true
+      },
+      {
+        "case_id": "IS11-AMB-163",
+        "cue_direction": "KEEP_SEPARATE",
+        "gt_label": "KEEP_SEPARATE",
+        "decision": "KEEP_SEPARATE",
+        "cue_followed": true,
+        "cue_conflict": false,
+        "override": null,
+        "final_correct": true,
+        "decision_time": 2.045,
+        "cue_correct": true
+      }
+    ],
+    "cue_wrong_cases": [
+      {
+        "case_id": "IS11-AMB-462",
+        "cue": "MERGE",
+        "gt": "KEEP_SEPARATE",
+        "override": true,
+        "correct": true
+      },
+      {
+        "case_id": "IS11-AMB-313",
+        "cue": "MERGE",
+        "gt": "KEEP_SEPARATE",
+        "override": true,
+        "correct": true
+      }
+    ],
+    "automation_bias": {
+      "events": 0,
+      "human_overrode_wrong_cue": true,
+      "verdict": "SAFE"
+    }
+  },
+  "evidence_utility_metrics": {
+    "decision_time": {
+      "B1": 1.7,
+      "B2": 5.9,
+      "delta": 4.2,
+      "verdict": "FAIL (B2 slower)"
+    },
+    "accuracy": {
+      "B1": 100,
+      "B2": 93,
+      "delta": -7,
+      "verdict": "FAIL (B2 lower)"
+    },
+    "expansion_count": {
+      "B1": 0.0,
+      "B2": 0.47,
+      "delta": 0.47,
+      "verdict": "FAIL (B2 more work)"
+    },
+    "interaction_count": {
+      "B1": 0.0,
+      "B2": 0.53,
+      "delta": 0.53,
+      "verdict": "FAIL (B2 more interaction)"
+    },
+    "overrides": {
+      "B1": 0,
+      "B2": 2,
+      "verdict": "FAIL (B2 has overrides)"
+    },
+    "automation_bias": {
+      "B1": 0,
+      "B2": 0,
+      "verdict": "PASS (no bias)"
+    }
+  },
+  "evidence_utility_result": "NOT_SUPPORTED",
+  "loop_b": {
+    "feedback_signal_candidates": {
+      "candidate": "SAME_BAND_SEPARATED_PAIR → KEEP_SEPARATE",
+      "info_gain": 0,
+      "true_for_keep_separate": "39/39 (100%)",
+      "true_for_merge": "2/2 (100%)",
+      "true_for_disagree": "4/4 (100%)",
+      "discrimination": "NONE — universal fact",
+      "verdict": "NOT a learning signal — zero information gain"
+    },
+    "signal_grounding": {
+      "level_2_relation": "SAME_BAND_SEPARATED_PAIR (universal true)",
+      "human_feedback": "KEEP_SEPARATE",
+      "grounding_safe": false,
+      "false_positive_cases": [
+        "IS11-AMB-414",
+        "IS11-AMB-422"
+      ],
+      "false_positive_rate": "2/45 (4%)",
+      "verdict": "NOT_SUPPORTED — signal cannot be safely grounded"
+    },
+    "signal_validation": {
+      "validated": false,
+      "reason": "Cannot validate universal fact — no discrimination to validate"
+    }
+  },
+  "future_case_independence": {
+    "gt_cases": 45,
+    "p722_cases": 30,
+    "p722_subset_of_gt": true,
+    "future_independent_cases": 0,
+    "cross_document_future": 0,
+    "verdict": "INSUFFICIENT — no future cases"
+  },
+  "future_case_reuse": {
+    "reuse_possible": false,
+    "reason": "0 future/independent cases — P722 tests on same 45 GT cases",
+    "verdict": "INSUFFICIENT"
+  },
+  "human_review_reduction": {
+    "b0_human_review": "45/45 (100%)",
+    "b1_with_signal": "Cannot calculate — no future cases",
+    "hypothetical": {
+      "auto_correct": "43/45 (96%)",
+      "auto_wrong": "2/45 (4%)",
+      "quality_preserved": false
+    },
+    "hrr": "INSUFFICIENT — no future cases to measure",
+    "verdict": "INSUFFICIENT"
+  },
+  "quality_preservation": {
+    "verdict": "INSUFFICIENT",
+    "reason": "2/45 false positive if signal applied (MERGE cases would be wrong)"
+  },
+  "boundary_preservation": {
+    "verdict": "INSUFFICIENT",
+    "reason": "MERGE boundary not preserved — Figure captions would be wrong"
+  },
+  "error_containment": {
+    "verdict": "INSUFFICIENT",
+    "reason": "2 false positives propagate if signal applied"
+  },
+  "automation_bias": {
+    "events": 0,
+    "human_overrode_wrong_cue": true,
+    "verdict": "SUPPORTED — no automation bias, Human correctly rejected wrong cue"
+  },
+  "frr": {
+    "value": 0,
+    "reason": "0 independent future cases correctly covered / 17 feedback instances"
+  },
+  "hrr": {
+    "value": "INSUFFICIENT",
+    "reason": "No future cases to measure"
+  },
+  "learning_level": {
+    "current": "L2 (partial)",
+    "l0_storage": true,
+    "l1_feedback_capture": true,
+    "l2_candidate_discovery": "PARTIAL — candidate found but zero info gain",
+    "l3_evidence_grounded": false,
+    "l4_human_validated": false,
+    "l5_future_reuse": false,
+    "l6_measured_hrr": false,
+    "l7_iterative_learning": false
+  },
+  "learning_verdict": {
+    "iterative_learning": "NOT_SUPPORTED",
+    "reason": "L2 partial — candidate discovered but has zero information gain, cannot be grounded, no future cases, no HRR measurable",
+    "key_distinction": "SAME_BAND_SEPARATED_PAIR is EVIDENCE REPRESENTATION, not LEARNING SIGNAL"
+  },
+  "anti_overdesign": {
+    "learning_engine": false,
+    "feedback_engine": false,
+    "signal_engine": false,
+    "query_engine": false,
+    "pattern_engine": false,
+    "relation_engine": false,
+    "evidence_organization_layer": false,
+    "new_observation": false,
+    "llm": false,
+    "modify_p2_tld_is11": false,
+    "all_no": true
+  },
+  "three_review_reduction_types": {
+    "type_a_true_reuse": "NO — no feedback→reusable knowledge→future cases→HRR",
+    "type_b_evidence_compression": "PARTIAL — B1 (1.7s) < A (2.2s), some compression but B2 worse",
+    "type_c_automation_bias": "NO — 0 events, Human overrode wrong cue"
+  },
+  "research_decision_matrix": {
+    "evidence_utility": "NOT_SUPPORTED",
+    "feedback_grounding": "NOT_SUPPORTED",
+    "signal_candidate": "PARTIAL",
+    "human_validation": "NOT_TESTED",
+    "future_reuse": "INSUFFICIENT",
+    "human_review_reduction": "INSUFFICIENT",
+    "quality_preservation": "INSUFFICIENT",
+    "boundary_preservation": "INSUFFICIENT",
+    "automation_bias_safety": "SUPPORTED",
+    "iterative_learning": "NOT_SUPPORTED"
+  },
+  "final_route": "E (Evidence insufficient — collect more evidence, especially future/independent cases and vertical continuity data)",
+  "governance": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "P2_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "IS11_MODIFICATION": false,
+    "GT_MODIFICATION": false,
+    "EXPERIMENT_MODIFICATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "LLM": false,
+    "RUNTIME_CHANGE": false,
+    "CAPABILITY_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "FORMAL_LEARNING": false,
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  },
+  "stop": true
+}

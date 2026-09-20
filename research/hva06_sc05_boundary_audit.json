@@ -1,0 +1,358 @@
+{
+  "audit_status": "COMPLETE",
+  "audit_name": "HVA-06 SC-05 Boundary & Evidence Sufficiency Audit",
+  "date": "2026-09-17",
+  "mode": "READ-ONLY AUDIT / NO MODIFICATION / NO IMPLEMENTATION / STOP",
+  "research_questions": {
+    "RQ1": "Human 为什么能够区分 SC-05 的 TP 与 FP？",
+    "RQ1_answer": "Human 使用 neighboring text (page_context) 判断当前在 body text 还是 reference list，并识别 author-name pattern。S3 Signature 只包含 period+capital 但不包含上下文证据。",
+    "RQ2": "Human 用于区分 TP/FP 的 Evidence，是否已经存在于当前 DICE Evidence 层？",
+    "RQ2_answer": "PARTIALLY. page_context 存在于 P7 reviewer data 但不在 machine_eval/Evidence Pack。author-name recognition 不存在于任何系统模块。",
+    "RQ3": "Evidence Missing / Organization Gap / Signal Boundary Gap？",
+    "RQ3_answer": "PRIMARY=Organization Gap (page_context exists but not composed). SECONDARY=Semantic Boundary (author-name recognition is TYPE-F).",
+    "RQ4": "SC-05 是否应该继续作为 Reusable Signal？",
+    "RQ4_answer": "BOUNDARY_ONLY. period+capital 是必要条件但非充分条件。不应作为 Reusable Signal 继续使用，但 boundary 是真实的。"
+  },
+  "is11_source_bias": {
+    "finding": "BODY_TEXT_BIAS",
+    "detail": "All 3 IS-11 source cases are body text / figure caption sentence boundaries. None are in reference lists.",
+    "cases": [
+      {
+        "case_id": "IS11-AMB-375",
+        "context": "body text, citation [23] ends sentence"
+      },
+      {
+        "case_id": "IS11-AMB-418",
+        "context": "figure caption, sentence ends"
+      },
+      {
+        "case_id": "IS11-AMB-519",
+        "context": "body text, sentence ends"
+      }
+    ],
+    "implication": "Signal was validated without seeing reference list continuation counterexamples"
+  },
+  "tp_fp_analysis": {
+    "tp_count": 8,
+    "fp_count": 5,
+    "tp_pattern": "period ends COMPLETE sentence/unit, text_b starts genuinely NEW sentence/unit",
+    "fp_pattern": "period ends PART of reference entry, text_b CONTINUES same reference entry",
+    "fp_subtypes": {
+      "author_to_title": [
+        "IND-AMB-052",
+        "IND-AMB-033",
+        "IND-AMB-049"
+      ],
+      "title_to_publisher": [
+        "IND-AMB-003",
+        "IND-AMB-002"
+      ]
+    },
+    "boundary_class_mislabeling": {
+      "count": 4,
+      "cases": [
+        "IND-AMB-052 (BODY→actual REF)",
+        "IND-AMB-049 (BODY→actual REF)",
+        "IND-AMB-033 (OTHER→actual REF)",
+        "IND-AMB-134 (REF→actual BODY)"
+      ],
+      "implication": "boundary_class is human annotation with errors, cannot be used as reliable machine evidence"
+    }
+  },
+  "evidence_dependency_matrix": [
+    {
+      "id": "E1",
+      "name": "period",
+      "observed": true,
+      "necessary": true,
+      "sufficient": false,
+      "type": "A",
+      "source": "machine_eval/GT",
+      "in_evidence_pack": true
+    },
+    {
+      "id": "E2",
+      "name": "capital",
+      "observed": true,
+      "necessary": true,
+      "sufficient": false,
+      "type": "A",
+      "source": "machine_eval/GT",
+      "in_evidence_pack": true
+    },
+    {
+      "id": "E3",
+      "name": "text_a/text_b content",
+      "observed": true,
+      "necessary": true,
+      "sufficient": false,
+      "type": "A",
+      "source": "machine_eval/GT",
+      "in_evidence_pack": true
+    },
+    {
+      "id": "E4",
+      "name": "sentence continuity",
+      "observed": false,
+      "necessary": true,
+      "sufficient": false,
+      "type": "F",
+      "source": "Human semantic",
+      "in_evidence_pack": false
+    },
+    {
+      "id": "E5",
+      "name": "reference-like structure",
+      "observed": "Partially (P7 page_context)",
+      "necessary": true,
+      "sufficient": false,
+      "type": "B/D",
+      "source": "P7 reviewer data",
+      "in_evidence_pack": false
+    },
+    {
+      "id": "E6",
+      "name": "author-name continuation",
+      "observed": false,
+      "necessary": "Yes (3/5 FP)",
+      "sufficient": false,
+      "type": "F",
+      "source": "Human semantic",
+      "in_evidence_pack": false
+    },
+    {
+      "id": "E7",
+      "name": "bibliographic markers",
+      "observed": "Partially (in text)",
+      "necessary": "Partially",
+      "sufficient": false,
+      "type": "D",
+      "source": "Composable from text",
+      "in_evidence_pack": false
+    },
+    {
+      "id": "E8",
+      "name": "neighboring text",
+      "observed": "Partially (P7 page_context)",
+      "necessary": true,
+      "sufficient": false,
+      "type": "B",
+      "source": "P7 reviewer data",
+      "in_evidence_pack": false
+    },
+    {
+      "id": "E9",
+      "name": "document/page context",
+      "observed": "Partially (doc_id, page)",
+      "necessary": true,
+      "sufficient": false,
+      "type": "B",
+      "source": "machine_eval partial",
+      "in_evidence_pack": "Partial"
+    },
+    {
+      "id": "E10",
+      "name": "structural geometry",
+      "observed": true,
+      "necessary": false,
+      "sufficient": false,
+      "type": "B",
+      "source": "P7 geometry_provenance",
+      "in_evidence_pack": false
+    },
+    {
+      "id": "E11",
+      "name": "content-type",
+      "observed": false,
+      "necessary": true,
+      "sufficient": false,
+      "type": "E",
+      "source": "Not available (HVA-05: 64% ambiguous)",
+      "in_evidence_pack": false
+    },
+    {
+      "id": "E12",
+      "name": "IS-01/IS-02/TLD",
+      "observed": true,
+      "necessary": true,
+      "sufficient": false,
+      "type": "A",
+      "source": "machine_eval",
+      "in_evidence_pack": true
+    }
+  ],
+  "evidence_source_classification": {
+    "TYPE_A_machine_eval": [
+      "E1",
+      "E2",
+      "E3",
+      "E12"
+    ],
+    "TYPE_B_p1_p7": [
+      "E5",
+      "E8",
+      "E9",
+      "E10"
+    ],
+    "TYPE_C_tld": [],
+    "TYPE_D_composable": [
+      "E7",
+      "E5 (if page_context available)"
+    ],
+    "TYPE_E_not_in_system": [
+      "E11"
+    ],
+    "TYPE_F_semantic": [
+      "E4",
+      "E6"
+    ],
+    "summary": "4 items in Evidence Pack (TYPE-A), 4 items exist in P7 but not composed (TYPE-B), 1 composable (TYPE-D), 2 semantic (TYPE-F)"
+  },
+  "human_decision_dependency": {
+    "tp_evidence": "E1(period) + E2(capital) + E3(text content) + E4(grammar) + E8(body text context)",
+    "fp_evidence": "E1(period) + E2(capital) + E5(reference structure) + E6(author-name) + E8(neighboring text) + E7(bibliographic markers)",
+    "critical_gap": "S3 provides E1+E2+E3+E12. Human additionally needs E4+E5+E6+E8. The discriminating evidence (context + reference structure + author-name) is NOT in S3."
+  },
+  "primary_bottleneck": {
+    "classification": "CASE_B_EVIDENCE_ORGANIZATION_GAP",
+    "description": "page_context (neighboring text) exists in P7 reviewer data but NOT in machine_eval or Evidence Pack. If available, E5 (reference structure) and E7 (bibliographic markers) could be composed with deterministic rules.",
+    "catchable_fp_if_fixed": "3/5 (IND-AMB-003, 002, 052)",
+    "remaining_fp": "2/5 (IND-AMB-033, 049 — author-name recognition)"
+  },
+  "secondary_bottleneck": {
+    "classification": "CASE_D_SEMANTIC_BOUNDARY",
+    "description": "Author-name recognition (E6) requires semantic knowledge. \"Le.\" could be author surname or sentence fragment. Cannot be safely structured without world knowledge.",
+    "cases": [
+      "IND-AMB-033 (Le.)",
+      "IND-AMB-049 (Levine.)"
+    ],
+    "resolution": "Accept as Semantic Boundary, do not force Learning"
+  },
+  "sc05_boundary_diagnosis": {
+    "necessary_condition": true,
+    "sufficient_condition": false,
+    "boundary_type": "CONTEXT_DEPENDENT",
+    "is11_bias": "BODY_TEXT (all 3 source cases are body text/figure caption, no reference list cases)",
+    "fp_root_cause": "period+capital ambiguous between (a) sentence boundary → KEEP_SEPARATE and (b) within-reference continuation → MERGE",
+    "fp_cause_type": "STRUCTURAL (not random)"
+  },
+  "evidence_sufficiency": {
+    "body_text_vs_reference_list": {
+      "available": true,
+      "method": "page_context + [N] markers + vol./pp. patterns",
+      "reliability": "HIGH",
+      "status": "EVIDENCE_NOT_COMPOSED"
+    },
+    "within_reference_entry_vs_boundary": {
+      "available": "PARTIALLY",
+      "method": "[N] marker detection (HIGH) + author-name regex (LOW)",
+      "reliability": "MEDIUM",
+      "status": "MIXED"
+    },
+    "sentence_continuity": {
+      "available": false,
+      "method": "Grammar analysis",
+      "reliability": "N/A",
+      "status": "SEMANTIC_BOUNDARY"
+    },
+    "overall": "PARTIALLY_SUFFICIENT"
+  },
+  "boundary_evidence_available": {
+    "value": "PARTIALLY_TRUE",
+    "body_text_distinction": "AVAILABLE via page_context (TYPE-B → TYPE-D composable)",
+    "within_reference_distinction": "PARTIALLY: [N] detection available (TYPE-D), author-name recognition NOT available (TYPE-F)",
+    "if_page_context_added": "~3/5 FP catchable, ~2/5 FP remain as Semantic Boundary"
+  },
+  "observation_gap": {
+    "new_observation_required": false,
+    "reason": "Evidence EXISTS (page_context in P7) but is NOT ORGANIZED. This is Evidence Organization Gap (CASE-B), not Observation Gap (CASE-C).",
+    "minimum_request_if_authorized": "Add page_context to Evidence Pack L2 (source: P1 text extraction, already exists in pipeline). NOT a new observation. NOT requested in this audit."
+  },
+  "reference_continuation_check": {
+    "author_names": "NOT_AVAILABLE (no module detects author-name patterns)",
+    "titles": "NOT_AVAILABLE (no module detects paper titles)",
+    "publication_info": "NOT_AVAILABLE (no module detects publisher/location)",
+    "doi": "NOT_AVAILABLE (in text, but not extracted as evidence)",
+    "citation_marker": "NOT_AVAILABLE ([N] in text, but not extracted as evidence)",
+    "neighboring_text": "EVIDENCE_NOT_COMPOSED (exists in P7 page_context, not in Evidence Pack)",
+    "bibliography_structure": "NOT_AVAILABLE (no module detects reference list structure)",
+    "author_name_recognition": "SEMANTIC_BOUNDARY (requires world knowledge, TYPE-F)"
+  },
+  "reusable_signal_status": {
+    "sc05_status": "BOUNDARY_ONLY",
+    "reason": "period+capital is NECESSARY but NOT SUFFICIENT. Signal should not continue as Reusable Signal as-is, but boundary is real.",
+    "forbidden_actions": [
+      "auto-narrow",
+      "auto-stop",
+      "modify signal",
+      "create REFERENCE→MERGE rule"
+    ],
+    "rule_creation_forbidden": true,
+    "rule_creation_reason": "boundary_class has labeling errors (3/5 FP mislabeled). Reference list also contains TP cases. Human knowing reference is semantic (TYPE-F)."
+  },
+  "recommended_next_route": {
+    "route_a": {
+      "name": "Evidence Organization (add page_context to L2)",
+      "status": "NOT_AUTHORIZED",
+      "expected_improvement": "FP rate 38.5% → ~15%"
+    },
+    "route_b": {
+      "name": "Accept Semantic Boundary",
+      "status": "RECOMMENDED",
+      "description": "Accept L4 as ceiling for SC-05. Focus on other candidates or new discovery."
+    },
+    "route_c": {
+      "name": "SC-04 investigation",
+      "status": "NOT_AUTHORIZED",
+      "note": "SC-04 has no conflict but independence_ratio=0.6"
+    }
+  },
+  "learning_level": {
+    "current": "L4_CANDIDATE_VALIDATION",
+    "change": "UNCHANGED (audit does not improve Learning Level)",
+    "l5_achievable": "NO (without Route A authorization, FP rate remains 38.5% > 30%)",
+    "updates": {
+      "SIGNAL_BOUNDARY_STATUS": "BOUNDARY_ONLY",
+      "EVIDENCE_SUFFICIENCY_STATUS": "PARTIALLY_SUFFICIENT",
+      "REUSE_DIAGNOSIS": "REUSE_DEMONSTRATED_BUT_CONTEXT_DEPENDENT"
+    }
+  },
+  "final_gate": {
+    "audit_status": "COMPLETE",
+    "signal_boundary_status": "BOUNDARY_ONLY",
+    "evidence_sufficiency_status": "PARTIALLY_SUFFICIENT",
+    "reuse_diagnosis": "REUSE_DEMONSTRATED_BUT_CONTEXT_DEPENDENT",
+    "primary_bottleneck": "CASE_B_EVIDENCE_ORGANIZATION_GAP",
+    "secondary_bottleneck": "CASE_D_SEMANTIC_BOUNDARY",
+    "boundary_evidence_available": "PARTIALLY_TRUE",
+    "new_observation_required": false,
+    "implementation_authorized": false,
+    "experiment_authorized": false,
+    "dice_core_modification": false,
+    "p1_p7_modification": false,
+    "tld_modification": false,
+    "is11_modification": false,
+    "gt_modification": false,
+    "signal_modification": false,
+    "s3_modification": false,
+    "llm": false,
+    "new_observation": false,
+    "new_module": false,
+    "new_engine": false,
+    "runtime_change": false,
+    "capability_change": false,
+    "rule_creation": false,
+    "threshold_adjustment": false,
+    "frozen_baseline": "INTACT",
+    "production": false,
+    "stop": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "machine_eval_hash": "437aa665210ccd04",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  }
+}

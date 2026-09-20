@@ -1,0 +1,259 @@
+{
+  "gate_id": "human_evidence_binding_reusable_signal_validation_gate",
+  "date": "2026-09-19",
+  "mode": "READ_ONLY_RESEARCH_GATE",
+  "governance": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_SCHEMA": "NONE",
+    "NEW_FIELD": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  },
+
+  "research_objects": {
+    "candidate_group_a": {
+      "description": "caption_like + FIG=YES + EXTENT_EXISTS → Human YES",
+      "cases": 34,
+      "documents": 5,
+      "judgment_consistency": "100% (34/34 YES)"
+    },
+    "candidate_group_b": {
+      "description": "Type_B_negative + FIG=NO + EXTENT_EXISTS → Human YES",
+      "cases": 3,
+      "documents": 3,
+      "judgment_consistency": "100% (3/3 YES)",
+      "sample_size_warning": "Too small for strong conclusions"
+    }
+  },
+
+  "q1_evidence_configuration_stability": {
+    "status": "MEDIUM",
+    "identical_fields": ["case_type", "e1_evidence_state", "fig_prefix", "e1_extent", "e1_ctx_count", "drawing_extent_present", "vertical_relation"],
+    "variable_fields": {
+      "x_overlap": {"True": 29, "False": 5},
+      "distance_pt": {"range": "2.5 to 55.2", "unique_values": 28}
+    },
+    "interpretation": "Family of similar configs, not identical instances. 6/8 fields identical; 2/8 vary. Judgment remains consistent across the family.",
+    "key_distinction": "Same Case Type (caption_like) more than same Evidence Configuration"
+  },
+
+  "q2_cross_document_independence": {
+    "status": "SUPPORTED",
+    "documents": 5,
+    "per_document": {
+      "arxiv_2402.18619": 12,
+      "is11_med_001": 11,
+      "is11_resnet": 5,
+      "is11_efficientnet": 4,
+      "is11_cs_001": 2
+    },
+    "max_document_percentage": 35.3,
+    "single_document_dominance": false,
+    "all_docs_contribute": true,
+    "cross_domain_tested": false,
+    "cross_domain_required": false,
+    "domain_note": "All 5 documents are academic papers (same domain)"
+  },
+
+  "q3_evidence_grounding": {
+    "status": "A",
+    "description": "Evidence itself sufficient (burden_e1=0, EXTENT_EXISTS)",
+    "group_a": {"A": 34, "B": 0, "C": 0, "D": 0, "E": 0},
+    "group_b": {"A": 3, "B": 0, "C": 0, "D": 0, "E": 0},
+    "total_a": 37,
+    "percentage_a": 100,
+    "interpretation": "ALL 37 candidates are fully evidence-grounded. No document access or external knowledge needed."
+  },
+
+  "q4_semantic_label_dependency": {
+    "status": "TRUE",
+    "description": "case_type (a semantic label) is needed to distinguish YES from NO/UNCERTAIN",
+    "evidence": {
+      "structural_config_without_case_type": "FIG=True + EXTENT_EXISTS + VR=below + ctx=5",
+      "matching_non_caption_like_cases": 11,
+      "matching_cases_judgments": {"yes": 8, "no": 3, "uncertain": 1},
+      "interpretation": "Structural config alone produces MIXED judgments. case_type=caption_like is needed for 100% consistency."
+    },
+    "case_type_is_existing": true,
+    "case_type_is_semantic_label": true,
+    "implication": "Candidate requires case_type in Evidence Pack. If unavailable, pattern has counterexamples."
+  },
+
+  "q5_one_case_one_patch_risk": {
+    "status": "LOW",
+    "reasons_against": [
+      "34 cases share same case_type + FIG + EXTENT + VR → one pattern",
+      "All 34 received same judgment (YES) → consistent",
+      "5 documents contribute → cross-document",
+      "Five-level hierarchy prevents single-case → rule"
+    ],
+    "caveats": [
+      "distance_pt varies (2.5 to 55.2pt)",
+      "x_overlap varies (True/False)",
+      "Pattern is family, not identical",
+      "Semantic label dependency (Q4)"
+    ]
+  },
+
+  "q6_counterexample_audit": {
+    "counterexamples_found": true,
+    "true_counterexamples": 3,
+    "boundary_cases": 1,
+    "borderline_cases": 8,
+    "group_b_counterexamples": 4,
+    "true_counterexample_details": [
+      {"case_id": "arxiv_2402.18619_p19_339_297", "case_type": "ambiguous_fragment", "judgment": "no", "config": "FIG=True+EXTENT+VR=below+XO=YES", "note": "Same structural config as Group A, judgment NO"},
+      {"case_id": "is11_efficientnet_p8_467_415", "case_type": "ambiguous_fragment", "judgment": "no", "config": "FIG=True+EXTENT+VR=below+XO=YES", "note": "Same structural config as Group A, judgment NO"},
+      {"case_id": "is11_efficientnet_p4_188_461", "case_type": "ambiguous_fragment", "judgment": "no", "config": "FIG=True+EXTENT+VR=below+XO=NO", "note": "Same structural config as Group A, judgment NO"}
+    ],
+    "boundary_case_details": [
+      {"case_id": "is11_resnet_p4_464_620", "case_type": "ambiguous_fragment", "judgment": "uncertain", "config": "FIG=True+EXTENT+VR=below+XO=NO", "note": "Same structural config, uncertain judgment"}
+    ],
+    "interpretation": "Structural config alone does NOT guarantee YES. case_type is the boundary between YES and NO/UNCERTAIN."
+  },
+
+  "q7_minimal_reusable_signal_form": {
+    "status": "CONDITIONALLY_SUPPORTED",
+    "form": {
+      "evidence_configuration": "case_type + fig_prefix + e1_evidence_state + vertical_relation",
+      "human_judgment": "YES/NO/UNCERTAIN",
+      "provenance": "text_id + drawing_extent_id + document_id + page",
+      "cross_case_occurrence": "count + document list"
+    },
+    "condition": "Requires case_type (semantic label) to be available in Evidence Pack",
+    "no_rule": true,
+    "no_threshold": true,
+    "no_score": true,
+    "no_classifier": true,
+    "no_capability": true
+  },
+
+  "q8_d3_validation": {
+    "D3_C1_evidence_linked": true,
+    "D3_C2_provenance_complete": true,
+    "D3_C3_repeated": true,
+    "D3_C4_consistent": true,
+    "D3_C5_comparable_config": "PARTIAL",
+    "D3_C6_not_case_specific": true,
+    "D3_C7_no_free_text": true,
+    "D3_C8_no_semantic_label": false,
+    "conditions_met": 6,
+    "conditions_partial": 1,
+    "conditions_failed": 1,
+    "d3_status": "D3_LIKE_CANDIDATE",
+    "failure_reasons": [
+      "D3-C5 PARTIAL: Configuration is a family (x_overlap and distance vary)",
+      "D3-C8 FALSE: case_type (semantic label) is needed"
+    ]
+  },
+
+  "level_classification": {
+    "Level_1_case_specific": 14,
+    "Level_2_evidence_linked": 20,
+    "Level_3_repeated_instance": 8,
+    "Level_4_reusable_signal_candidate": 37,
+    "Level_5_validated_reusable_signal": 0,
+    "Level_6_capability": 0,
+    "current_maximum": "Level 4 (with conditions)",
+    "level_5_blocked_by": ["Single Human reviewer", "Semantic label dependency", "Configuration family", "Counterexamples exist"]
+  },
+
+  "over_design_audit": {
+    "O1_new_schema": false,
+    "O2_new_evidence_field": false,
+    "O3_created_semantic_label": false,
+    "O4_created_rule": false,
+    "O5_created_detector": false,
+    "O6_introduced_similarity_embedding": false,
+    "O7_treated_candidate_as_signal": false,
+    "O8_treated_signal_as_capability": false,
+    "O9_one_case_one_patch": false,
+    "O10_increased_human_burden": false,
+    "all_false": true,
+    "result": "PASS"
+  },
+
+  "final_decision": {
+    "reusable_signal_candidate": "CONDITIONAL",
+    "strengths": [
+      "100% evidence-grounded (Q3=A, 37/37)",
+      "Cross-document supported (Q2=YES, 5 docs)",
+      "100% judgment consistency (34/34 YES for Group A)",
+      "Low one-case-one-patch risk (Q5=LOW)",
+      "No free text needed (D3-C7=YES)",
+      "Provenance complete (D3-C2=YES)"
+    ],
+    "unresolved_conditions": [
+      "Semantic Label Dependency (Q4=TRUE, D3-C8=FALSE): case_type needed",
+      "Configuration Family (Q1=MEDIUM, D3-C5=PARTIAL): x_overlap and distance vary",
+      "Counterexamples exist (Q6): 3 true + 1 boundary",
+      "Single Human reviewer (inter-rater UNKNOWN)",
+      "P1 INCONCLUSIVE (no Human-level benefit)"
+    ],
+    "what_is_missing_for_supported": [
+      "Resolve semantic label dependency (requires new fields or Human validation)",
+      "Resolve configuration family (requires more data or narrowing)",
+      "Multi-reviewer validation (requires Human Validation authorization)"
+    ],
+    "none_resolvable_in_read_only_mode": true
+  },
+
+  "limitations": [
+    {"id": "RV-L-01", "limitation": "SINGLE HUMAN REVIEWER — inter-rater UNKNOWN"},
+    {"id": "RV-L-02", "limitation": "SEMANTIC LABEL DEPENDENCY — case_type needed"},
+    {"id": "RV-L-03", "limitation": "CONFIGURATION FAMILY — not identical instances"},
+    {"id": "RV-L-04", "limitation": "COUNTEREXAMPLES EXIST — 3 true, 1 boundary"},
+    {"id": "RV-L-05", "limitation": "SAME DOMAIN — all academic papers"},
+    {"id": "RV-L-06", "limitation": "P1 INCONCLUSIVE — no Human-level benefit"},
+    {"id": "RV-L-07", "limitation": "NO IMPLEMENTATION TEST — unverified in live system"},
+    {"id": "RV-L-08", "limitation": "GROUP B TOO SMALL — 3 cases insufficient"}
+  ],
+
+  "final_questions": {
+    "Q1_shared_evidence_configuration": "PARTIALLY — family, not identical (6/8 fields same, 2 vary)",
+    "Q2_cross_document": "YES — 5 documents, no single-doc dominance (max 35.3%)",
+    "Q3_evidence_grounded": "YES — 100% grounding=A (evidence sufficient, no document/external access)",
+    "Q4_semantic_label_needed": "YES — case_type needed; without it 3 counterexamples exist",
+    "Q5_one_case_one_patch_risk": "LOW — 34 cases form one pattern, not 34 patches",
+    "Q6_counterexamples_exist": "YES — 3 true counterexamples + 1 boundary (same structural config, different judgment)",
+    "Q7_minimal_form": "CONDITIONALLY_SUPPORTED — uses existing fields but requires case_type (semantic label)",
+    "Q8_d3_candidate": "D3_LIKE_CANDIDATE — 6/8 conditions met, C5 partial, C8 false",
+    "Q9_ready_for_validated_signal": "NO — three blockers (semantic label, single reviewer, counterexamples)",
+    "Q10_next_step": "STOP — conditions cannot be resolved in READ-ONLY mode; future resumption requires authorization"
+  },
+
+  "files_created": [
+    "tmp/human_evidence_binding_reusable_signal_validation.md",
+    "tmp/human_evidence_binding_reusable_signal_validation.json",
+    "tmp/human_evidence_binding_reusable_signal_validation_case_table.csv"
+  ],
+  "files_modified": 0,
+
+  "conclusion": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_SCHEMA": "NONE",
+    "NEW_FIELD": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  }
+}

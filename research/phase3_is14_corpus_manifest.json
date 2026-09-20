@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "phase": "Phase 3 — IS-14 GRAPHIC_TEXT_CONTEXT Controlled Experiment",
+    "artifact": "Independent corpus manifest (FROZEN)",
+    "created": "2026-09-10T13:39:38",
+    "pre_conditions_covered": [
+      "G-C1 (corpus, document-level)",
+      "G-C2 (regex freeze source corpus)",
+      "G-C3 (image-block prevalence)"
+    ],
+    "independence": {
+      "arxiv_id_grep_matches_in_repo": 0,
+      "sha_overlap_with_prior_corpus": 0,
+      "note": "Verified: no arXiv ID appears in tmp/perception/, perception/, chunker/, prior reports; zero SHA-256 overlap with /tmp/is11_independent_corpus/"
+    },
+    "domains_used_prior": [
+      "computer vision (resnet 1512.03385)",
+      "CV/NAS (efficientnet 1905.11946)",
+      "chemistry/particle physics (med_001 2311.15207)",
+      "CS/NLP LLM (cs_001 2402.17764)"
+    ],
+    "new_domains": [
+      "astrophysics",
+      "earth science / weather ML",
+      "genomics",
+      "medical physics"
+    ],
+    "sampling_seed_frozen": 20250910,
+    "sampling_protocol": "geometric blind stratified sampling, n=54, per Phase 2 §11 (seed recorded at corpus freeze per Phase 2 design)"
+  },
+  "documents": {
+    "PH3-ASTRO-001": {
+      "arxiv_id": "1602.03837",
+      "file": "/tmp/phase3_is14_corpus/1602.03837.pdf",
+      "domain": "astrophysics (gravitational waves)",
+      "title": "Observation of Gravitational Waves from a Binary Black Hole Merger",
+      "sha256": "e5e864c23d015b69be17e5b5d51b5b462d2829353a867513414b6728f54589c4",
+      "pages": 16,
+      "size_bytes": 935476,
+      "caption_label_count": 4,
+      "caption_pages": 4,
+      "image_block_count": 80,
+      "image_block_pages": 6
+    },
+    "PH3-EARTH-001": {
+      "arxiv_id": "1906.11238",
+      "file": "/tmp/phase3_is14_corpus/1906.11238.pdf",
+      "domain": "astrophysics (radio interferometry / black hole imaging)",
+      "title": "First M87 Event Horizon Telescope Results. I.",
+      "sha256": "be6604770bb0d0a6c2a81071518e89d5bc2f9b460f91390518804e0a1f454472",
+      "pages": 17,
+      "size_bytes": 2578342,
+      "caption_label_count": 4,
+      "caption_pages": 4,
+      "image_block_count": 37,
+      "image_block_pages": 3
+    },
+    "PH3-EARTH-002": {
+      "arxiv_id": "2212.12794",
+      "file": "/tmp/phase3_is14_corpus/2212.12794.pdf",
+      "domain": "earth science / weather forecasting ML",
+      "title": "GraphCast: Learning skillful medium-range global weather forecasting",
+      "sha256": "71ce5f63fb0b67955d38df35b766d9cd4ef27b4cd6188c7cbe4f9307b0e758c3",
+      "pages": 102,
+      "size_bytes": 39978933,
+      "caption_label_count": 53,
+      "caption_pages": 50,
+      "image_block_count": 65,
+      "image_block_pages": 17
+    },
+    "PH3-BIO-001": {
+      "arxiv_id": "2205.05897",
+      "file": "/tmp/phase3_is14_corpus/2205.05897.pdf",
+      "domain": "genomics (genome interpretation)",
+      "title": "CAGI, the Critical Assessment of Genome Interpretation",
+      "sha256": "330cf7b21a5185d1232b7ad9a94cbcbc7a4ad43e476b40e7598e741f236d6947",
+      "pages": 124,
+      "size_bytes": 10963509,
+      "caption_label_count": 45,
+      "caption_pages": 29,
+      "image_block_count": 35,
+      "image_block_pages": 23
+    },
+    "PH3-MED-001": {
+      "arxiv_id": "2309.04040",
+      "file": "/tmp/phase3_is14_corpus/2309.04040.pdf",
+      "domain": "medical physics (hyperpolarized MRI)",
+      "title": "Current Methods for Hyperpolarized [1-13C]pyruvate MRI Human Studies",
+      "sha256": "218c6fc0e828a3e99edaa5ed822f72e5177101610fd29c773a22676226223607",
+      "pages": 55,
+      "size_bytes": 4604717,
+      "caption_label_count": 9,
+      "caption_pages": 9,
+      "image_block_count": 10,
+      "image_block_pages": 9
+    }
+  },
+  "totals": {
+    "pdf_count": 5,
+    "domain_count": 4,
+    "pages": 314,
+    "caption_labels": 115,
+    "image_blocks": 227
+  },
+  "gc2_caption_regex_freeze": {
+    "regex_pattern": "^(FIG|Fig\\.?|Figure)\\s*\\d+\\s*[:.]?",
+    "regex_flags": "re.IGNORECASE",
+    "rationale": "Phase 2 §7 OBS-A frozen definition; handles FIG. N: / FIG. N. / Fig. N / Fig N / Figure N: / Figure N | styles",
+    "verified_on_corpus": {
+      "PH3-ASTRO-001": 4,
+      "PH3-EARTH-001": 4,
+      "PH3-EARTH-002": 53,
+      "PH3-BIO-001": 45,
+      "PH3-MED-001": 9
+    },
+    "caption_regex_frozen": true,
+    "regex_sha256": "b7f8e3d6ae785006f7fc80a20c3fbc3d00f02362b66385a0a1d7cb8de6820713",
+    "modification_forbidden": "regex may NOT be changed during experiment, even after seeing results (Phase 3 §6/§28)"
+  },
+  "gc3_vector_figure_disclosure": {
+    "image_block_prevalence_by_doc": {
+      "PH3-ASTRO-001": {
+        "image_blocks": 80,
+        "pages_with_blocks": 6,
+        "total_pages": 16
+      },
+      "PH3-EARTH-001": {
+        "image_blocks": 37,
+        "pages_with_blocks": 3,
+        "total_pages": 17
+      },
+      "PH3-EARTH-002": {
+        "image_blocks": 65,
+        "pages_with_blocks": 17,
+        "total_pages": 102
+      },
+      "PH3-BIO-001": {
+        "image_blocks": 35,
+        "pages_with_blocks": 23,
+        "total_pages": 124
+      },
+      "PH3-MED-001": {
+        "image_blocks": 10,
+        "pages_with_blocks": 9,
+        "total_pages": 55
+      }
+    },
+    "disclosure": "Vector-based figures may lack image blocks; OBS-D (image_block_present) is AUXILIARY ONLY and cannot serve as a complete figure detector. IS-14 does not require image-block presence as a necessary condition.",
+    "vector_figure_limitation_disclosed": true
+  }
+}

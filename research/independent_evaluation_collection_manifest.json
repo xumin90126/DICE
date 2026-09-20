@@ -1,0 +1,257 @@
+{
+  "manifest_type": "Independent Evaluation Data Collection Manifest",
+  "manifest_version": "1.0",
+  "creation_timestamp": "2026-09-09T00:17:17",
+  "phase": "Independent Evaluation Data Collection — Controlled Execution",
+  "phase_constraint": "DATA COLLECTION ONLY — no IS-01/IS-02, no machine metrics, no precision/recall",
+  "status": {
+    "DATA_COLLECTION_STATUS": "COMPLETE",
+    "CANDIDATE_UNIVERSE_FREEZE": "TRUE",
+    "SAMPLING_FRAME_FREEZE": "TRUE",
+    "EVALUATION_SET_FREEZE": "TRUE",
+    "SEMANTIC_GT_FREEZE": "TRUE",
+    "PROVENANCE_AUDIT": "PASS",
+    "IS_01_IS_02_EXECUTION": "NOT AUTHORIZED",
+    "MACHINE_EVALUATION": "NOT AUTHORIZED",
+    "P7_3": "NOT AUTHORIZED",
+    "IMPLEMENTATION": "NOT AUTHORIZED",
+    "FROZEN_BASELINE": "INTACT",
+    "STOP": "TRUE"
+  },
+  "corpus": {
+    "total_pdfs": 4,
+    "pdfs": [
+      {
+        "doc_id": "ind_arxiv_2402",
+        "independence_status": "INDEPENDENT",
+        "contamination": "ZERO references in P7 artifacts"
+      },
+      {
+        "doc_id": "ind_arxiv_bio2",
+        "independence_status": "INDEPENDENT",
+        "contamination": "ZERO references in P7 artifacts"
+      },
+      {
+        "doc_id": "ind_qbio_genomics",
+        "independence_status": "INDEPENDENT",
+        "contamination": "ZERO references in P7 artifacts"
+      },
+      {
+        "doc_id": "ind_qbio_rna",
+        "independence_status": "INDEPENDENT",
+        "contamination": "ZERO references in P7 artifacts"
+      }
+    ],
+    "pipeline": "Frozen P1-P6 (unmodified production code)",
+    "p4_span_config": "FROZEN (max_horizontal_gap=8.0, max_vertical_gap=14.0, same_line_tolerance=3.0, cross_column_gap_threshold=30.0, overlap_tolerance=0.5)"
+  },
+  "candidate_universe": {
+    "total_ambiguous_cases": 254,
+    "pages_covered": "N/A",
+    "by_document": {
+      "ind_arxiv_2402": 4,
+      "ind_arxiv_bio2": 103,
+      "ind_qbio_genomics": 85,
+      "ind_qbio_rna": 62
+    },
+    "freeze": "TRUE"
+  },
+  "sampling_frame": {
+    "total_sampled": 69,
+    "seed": 20240908,
+    "stratification": "geometry-only (gap bins, w_b bins, line_obs bins, w_a bins)",
+    "freeze": "TRUE"
+  },
+  "human_review": {
+    "reviewers": 2,
+    "protocol": "BLIND — reviewers saw only case_id, page, text_a, text_b, page_context",
+    "reviewer_a_cases": 69,
+    "reviewer_b_cases": 69,
+    "adjudicator_cases": 1,
+    "total_unique_cases": 69
+  },
+  "semantic_gt": {
+    "total_cases": 69,
+    "usable_gt": 69,
+    "unresolved": 0,
+    "usable_rate": "100.0%",
+    "by_label": {
+      "KEEP_SEPARATE": 45,
+      "MERGE": 24
+    },
+    "by_level": {
+      "LEVEL_2_AGREED": 68,
+      "LEVEL_2_ADJUDICATED": 1
+    },
+    "agreement": {
+      "simple_agreement": "98.6%",
+      "cohens_kappa": "0.968",
+      "kappa_interpretation": "Strong agreement",
+      "agreed": 68,
+      "disagreements": 1,
+      "adjudicated": 1
+    },
+    "freeze": "TRUE",
+    "is01_is02_computed": false,
+    "machine_prediction_computed": false
+  },
+  "provenance_audit": {
+    "overall": "PASS",
+    "checks_passed": 9,
+    "checks_total": 9,
+    "checks": [
+      {
+        "check": "IS-01/IS-02 not computed",
+        "pass": true,
+        "details": "0 actual computations"
+      },
+      {
+        "check": "No machine metrics computed",
+        "pass": true,
+        "details": "0 actual computations"
+      },
+      {
+        "check": "Blind packages contain only allowed fields",
+        "pass": true,
+        "details": "0 leaked fields"
+      },
+      {
+        "check": "No Round 1 data referenced in code",
+        "pass": true,
+        "details": "0 references"
+      },
+      {
+        "check": "Sampling frame geometry-only stratification",
+        "pass": true,
+        "details": "text=0, geo=2"
+      },
+      {
+        "check": "GT frozen, no machine computation",
+        "pass": true,
+        "details": "IS=False, Machine=False, Freeze=FROZEN"
+      },
+      {
+        "check": "Reviewer results contain only decision/reason",
+        "pass": true,
+        "details": "0 leaked fields"
+      },
+      {
+        "check": "No machine prediction files exist",
+        "pass": true,
+        "details": "0 files exist"
+      },
+      {
+        "check": "Adjudicator was blind",
+        "pass": true,
+        "details": "extra fields: set()"
+      }
+    ]
+  },
+  "file_inventory": {
+    "tmp/perception/p7/independent_evaluation_generate_candidates.py": {
+      "sha256": "86836f985d6f82fe27b4585119d88decf2043c79a5138c7180ba5e6de9322aa7",
+      "size_bytes": 15050
+    },
+    "tmp/perception/p7/independent_evaluation_candidate_universe.json": {
+      "sha256": "82b2109e9efeef336862bad7d5b9226c1dded6c06eb40e271a762b78f533da3f",
+      "size_bytes": 1300128
+    },
+    "tmp/perception/p7/independent_evaluation_sampling_frame.json": {
+      "sha256": "3ce33d89b12019e615b81ea135950c8af5dd08578c4ae3b0512a6b0a16254e73",
+      "size_bytes": 66477
+    },
+    "tmp/perception/p7/independent_evaluation_gt_assembly.py": {
+      "sha256": "afd206f1de4955d19dcbc1afed49d248430a234b453d98c9a95e654fab2e2ac1",
+      "size_bytes": 16028
+    },
+    "tmp/perception/p7/independent_evaluation_semantic_gt.json": {
+      "sha256": "6b84193bfa94c59a0e3034fc8dd5c5185ed3c591d4b146eb463db674ac9ed7a1",
+      "size_bytes": 54803
+    },
+    "tmp/perception/p7/independent_evaluation_provenance_audit.json": {
+      "sha256": "41d33626d5167734572539fdaf3712207049252cded5ed583c28fe0a4503f905",
+      "size_bytes": 1269
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/adjudicator_ind_amb_032.json": {
+      "sha256": "6a72a3098df647af8653e5b6dd575eca99220c3e6007553476d6e192953a3b6c",
+      "size_bytes": 417
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/review_packages_internal.json": {
+      "sha256": "69dff696eaaa448fe267cb62874538d8d08b3568f901023a940048bc44e420c8",
+      "size_bytes": 166356
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/reviewer_a_batch_1.json": {
+      "sha256": "fba15b2210843cd33e9d0ddf7cf64f7733e7b0e0d02b81e4d90a7913ff3c68a0",
+      "size_bytes": 44218
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/reviewer_a_batch_2.json": {
+      "sha256": "08f56f376248f4c768c2154304f74e23112bff289b787cd0af2ae5d320dd6159",
+      "size_bytes": 39873
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/reviewer_a_batch_3.json": {
+      "sha256": "0e8397c7aba386a16d1892f4b2f31bf4f85fc39a5f9f7c7297e30b4f0fe31057",
+      "size_bytes": 46574
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/reviewer_a_batch_4.json": {
+      "sha256": "b5ed66271f373f3f852bcd96b7ed2b67e05c559d1e7a9511aedd3a288e72f334",
+      "size_bytes": 20718
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/reviewer_a_blind_cases.json": {
+      "sha256": "a624e99c5613c6fc7d9b56de4e9073857bc3af1c018e7acd45e69f4d2c2be044",
+      "size_bytes": 151197
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/reviewer_a_results_batch_1_2.json": {
+      "sha256": "e29bc9e4fbb597d3a4078ee2a72f80497ba4f1aca5a1095b26a2ed348600e587",
+      "size_bytes": 9772
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/reviewer_a_results_batch_3_4.json": {
+      "sha256": "53a1494ae2307d39f93392f386d86727c63209615cccf4c140c47fdd5376d8f4",
+      "size_bytes": 8174
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/reviewer_b_batch_1.json": {
+      "sha256": "fba15b2210843cd33e9d0ddf7cf64f7733e7b0e0d02b81e4d90a7913ff3c68a0",
+      "size_bytes": 44218
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/reviewer_b_batch_2.json": {
+      "sha256": "08f56f376248f4c768c2154304f74e23112bff289b787cd0af2ae5d320dd6159",
+      "size_bytes": 39873
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/reviewer_b_batch_3.json": {
+      "sha256": "0e8397c7aba386a16d1892f4b2f31bf4f85fc39a5f9f7c7297e30b4f0fe31057",
+      "size_bytes": 46574
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/reviewer_b_batch_4.json": {
+      "sha256": "b5ed66271f373f3f852bcd96b7ed2b67e05c559d1e7a9511aedd3a288e72f334",
+      "size_bytes": 20718
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/reviewer_b_blind_cases.json": {
+      "sha256": "a624e99c5613c6fc7d9b56de4e9073857bc3af1c018e7acd45e69f4d2c2be044",
+      "size_bytes": 151197
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/reviewer_b_results_batch_1.json": {
+      "sha256": "848d16a8a00de41c9fd9de33b2b56b8c6a1b9caf40d10b6f46c5211ec51fd13b",
+      "size_bytes": 4846
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/reviewer_b_results_batch_2.json": {
+      "sha256": "9a9411b4489073189e5f1e9155ccd0d08bfe9656463d6d617bde579b9ec5d9aa",
+      "size_bytes": 5029
+    },
+    "tmp/perception/p7/independent_evaluation_human_review/reviewer_b_results_batch_3_4.json": {
+      "sha256": "0df87eeb24cff4bcddb5e27516c4ead5b56b8e12431ab56bf86e4fcf8df0239c",
+      "size_bytes": 7531
+    }
+  },
+  "boundary_protection": {
+    "layer_a_corpus_preprocessing": "ALLOWED (executed)",
+    "layer_b_experimental_feature_observation": "NOT EXECUTED (IS-01/IS-02 forbidden until after GT freeze)",
+    "layer_c_decision_leakage": "FORBIDDEN (verified: 0 violations)",
+    "blind_protocol": "ENFORCED (reviewers saw only text + page_context, no IS/geometric metadata/machine prediction)",
+    "gt_independence": "VERIFIED (GT generated from human semantic judgment, not geometry-based GT)"
+  },
+  "known_limitations": {
+    "is01_text_number_pattern": "FROZEN, known limitation: doesn't distinguish heading vs equation number",
+    "is02_text_readable_title": "FROZEN, known limitation: 'cos'/'sin'/'and'/'are' match (3 chars > 2)",
+    "timer_implementation": "Round 1 timer bug documented but NOT fixed. NOT AUTHORIZED in this phase. Human cost measurement protocol-designed but not implemented."
+  },
+  "next_authorized_steps": "NONE — IS-01/IS-02 execution, machine evaluation, P7.3, and implementation are all NOT AUTHORIZED. Manual human review required to authorize next phase."
+}

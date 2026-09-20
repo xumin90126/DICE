@@ -1,0 +1,182 @@
+[
+  {
+    "case_id": "IND-AMB-001",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Fig. 14a and Fig. 14b are two distinct figure sub-figure labels appearing as separate axis labels within the Fig. 15 caption area; they reference different sub-figures and are independent text units."
+  },
+  {
+    "case_id": "IND-AMB-003",
+    "decision": "MERGE",
+    "reason": "In the references section, 'Philadelphia, PA: Society for' is publisher information (City, State: Publisher format) that cannot begin a reference on its own. The preceding '.' ends the title field of the same reference entry, with publisher info following — they belong to one reference unit."
+  },
+  {
+    "case_id": "IND-AMB-004",
+    "decision": "KEEP_SEPARATE",
+    "reason": "text_a ', 2nd ed.' is marked on reference [40] (B. Parhami, Computer arithmetic, Oxford University Press, Oct 2009). text_b 'New York, NY: Springer, 2006' specifies a different publisher (Springer) and year (2006), so it belongs to a different reference entry, not [40]."
+  },
+  {
+    "case_id": "IND-AMB-002",
+    "decision": "MERGE",
+    "reason": "In the references section, 'Springer Berlin Heidelberg,' is publisher information that cannot start a reference. The preceding '.' ends the title of the same reference, with the publisher field following — they form one reference unit."
+  },
+  {
+    "case_id": "IND-AMB-090",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Caltech101 and LabelMe are two separate dataset-name column headers in a results table; each is an independent column label."
+  },
+  {
+    "case_id": "IND-AMB-084",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Cartoon and Photo are two separate domain-name column headers in a results table; each is an independent column label."
+  },
+  {
+    "case_id": "IND-AMB-054",
+    "decision": "MERGE",
+    "reason": "'Hyperparameter' and 'Search Space' together form the section heading 'Hyperparameter Search Space' in the appendix, a coherent phrase that belongs as one heading unit (corresponding to the search space table on page 12)."
+  },
+  {
+    "case_id": "IND-AMB-008",
+    "decision": "KEEP_SEPARATE",
+    "reason": "text_a ends a complete sentence with a period ('...in improving out-of-distribution generalization.'). text_b 'Our ap-' begins a new sentence ('Our approach...'). This is a sentence boundary."
+  },
+  {
+    "case_id": "IND-AMB-041",
+    "decision": "MERGE",
+    "reason": "'Shiori' and 'Sagawa,' are the first and last name of a single author 'Shiori Sagawa' in a reference entry; the references use Firstname Lastname format, so these fragments form one author name."
+  },
+  {
+    "case_id": "IND-AMB-052",
+    "decision": "MERGE",
+    "reason": "text_a '...Furao Shen.' ends the author list of a reference (period after last author), and text_b 'Image data aug-' begins the title of the same reference. The reference format used (e.g., '[24] ...Hinton. Imagenet classification...') places the title after the author-period, so they belong to one reference."
+  },
+  {
+    "case_id": "IND-AMB-062",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Both '[-32, 32]' values are separate table cells in the TranslateX(Y) row (Default and Wide columns). They are independent cell values in different columns, not parts of one value."
+  },
+  {
+    "case_id": "IND-AMB-067",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'[4, 8]' and '[2, 8]' are distinct table cells in the Posterize row (Default and Wide columns), representing different search-space ranges for different configurations."
+  },
+  {
+    "case_id": "IND-AMB-072",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'[-1.0, 1.0]' and '[-10.0, 10.0]' are distinct table cells in different columns (Wide and Wider) for the Contrast/Color/Sharpness rows, representing independent search-space ranges."
+  },
+  {
+    "case_id": "IND-AMB-033",
+    "decision": "MERGE",
+    "reason": "'Le.' ends an author name (with period) and 'Randaugment:' begins the title of the same reference. The reference format places the title after the author-period, so they belong to one reference entry."
+  },
+  {
+    "case_id": "IND-AMB-082",
+    "decision": "KEEP_SEPARATE",
+    "reason": "text_a '.' ends the sentence '...evaluated on dataset D.' and text_b 'The Affinity,' begins a new definitional sentence. This is a sentence boundary between two independent sentences."
+  },
+  {
+    "case_id": "IND-AMB-019",
+    "decision": "KEEP_SEPARATE",
+    "reason": "The '-' is the hyphen in the table row label 'Domain-Invariant', while '65.5' is a numeric table value. They are different text elements; accuracy values in this table are positive, so '-' is not a negative sign for 65.5."
+  },
+  {
+    "case_id": "IND-AMB-083",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Art and Cartoon are two separate domain-name column headers in a results table; each is an independent column label."
+  },
+  {
+    "case_id": "IND-AMB-032",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'Kyungjae Lee,' is one complete author name (ending with a comma separator) and 'Han-' is the start of the next author 'Han-Cheol Cho'. They are two different author names in the reference's author list."
+  },
+  {
+    "case_id": "IND-AMB-016",
+    "decision": "KEEP_SEPARATE",
+    "reason": "VLCS and OfficeHome are two separate dataset-name column headers in a results table; each is an independent column label."
+  },
+  {
+    "case_id": "IND-AMB-034",
+    "decision": "MERGE",
+    "reason": "'Randaugment:' and 'Practical automated data augmen-' are parts of one title 'Randaugment: Practical automated data augmentation...' split across a line. The colon connects the title and subtitle; they form one title unit."
+  },
+  {
+    "case_id": "IND-AMB-009",
+    "decision": "KEEP_SEPARATE",
+    "reason": "text_a ends a sentence with a period ('...eralization for classification.') and text_b 'During training, we as-' begins a new sentence. This is a sentence boundary."
+  },
+  {
+    "case_id": "IND-AMB-057",
+    "decision": "KEEP_SEPARATE",
+    "reason": "']' is the closing bracket of the citation '[33]' in the column header 'Wide [33]', while 'Wider (Ours)' is the next separate column header. They are independent table elements."
+  },
+  {
+    "case_id": "IND-AMB-030",
+    "decision": "MERGE",
+    "reason": "'[7] Junbum Cha,' is the reference number plus first author, and 'Sanghyuk Chun,' is the second author of the same reference [7]. They are consecutive parts of one reference's author list."
+  },
+  {
+    "case_id": "IND-AMB-049",
+    "decision": "MERGE",
+    "reason": "'Levine.' ends the author list of a reference (period after last author) and 'Bitrate-constrained dro:' begins the title of the same reference. The reference format places the title after the author-period, so they belong to one reference entry."
+  },
+  {
+    "case_id": "IND-AMB-104",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Infograph and Painting are two separate domain-name column headers in a results table (DomainNet domains); each is an independent column label."
+  },
+  {
+    "case_id": "IND-AMB-010",
+    "decision": "KEEP_SEPARATE",
+    "reason": "text_a '.' ends a sentence and text_b 'Here,' begins a new sentence. This is a sentence boundary between two independent sentences."
+  },
+  {
+    "case_id": "IND-AMB-101",
+    "decision": "KEEP_SEPARATE",
+    "reason": "L38 and L43 are two separate column headers in a results table; each is an independent column label."
+  },
+  {
+    "case_id": "IND-AMB-005",
+    "decision": "KEEP_SEPARATE",
+    "reason": "text_a 'distribution.' ends a sentence ('...follow the same distribution.') and text_b 'For the out-of-domain case, where the test' begins a new sentence in the abstract. This is a sentence boundary."
+  },
+  {
+    "case_id": "IND-AMB-093",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Art and Clipart are two separate domain-name column headers in a results table (OfficeHome domains); each is an independent column label."
+  },
+  {
+    "case_id": "IND-AMB-154",
+    "decision": "MERGE",
+    "reason": "'[20]' is the reference number and 'Nezha S Benabdallah et al. ...' is the reference content (authors and title). The number and its associated entry belong together as one reference unit, like a heading with its number."
+  },
+  {
+    "case_id": "IND-AMB-109",
+    "decision": "MERGE",
+    "reason": "'brain, we performed Hi-M imaging in brain cryosections at' and '3kb resolution (Figs.' are consecutive parts of one continuous sentence ('...at 3kb resolution (Figs. ...)') split across a line break. They form one sentence."
+  },
+  {
+    "case_id": "IND-AMB-113",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'Label' and 'Post-processed table' are two separate column headers in the trace-file table; each is an independent column label."
+  },
+  {
+    "case_id": "IND-AMB-114",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'non-KCs' is a cell in the Label column and 'traces non KCs.ecsv' is a cell in the Post-processed table column. They are distinct cells representing different types of information in different columns."
+  },
+  {
+    "case_id": "IND-AMB-115",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'KCs' is a cell in the Label column and 'traces KCs.ecsv' is a cell in the Post-processed table column. They are distinct cells representing different types of information in different columns."
+  },
+  {
+    "case_id": "IND-AMB-116",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'Trace table' and 'Cell-type' are two separate column headers in the trace-file table; each is an independent column label."
+  },
+  {
+    "case_id": "IND-AMB-117",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'Cell-type' and 'N unique traces' are two separate column headers in the trace-file table; each is an independent column label."
+  }
+]

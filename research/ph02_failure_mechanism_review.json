@@ -1,0 +1,61 @@
+{
+  "document": "tmp/ph02_failure_mechanism_review.md",
+  "failure_classification": {
+    "aggregation_level_mismatch": "CO-CAUSE (whole-group aggregation)",
+    "observation_insufficiency": "NOT SUPPORTED (all needed facts exist in frozen outputs)",
+    "predicate_design_failure": "SURFACE FORM (consequence of aggregation)",
+    "research_object_mismatch": "PRIMARY ROOT CAUSE",
+    "specificity_failure": "SECONDARY (7/13 anchors fire on value columns; masked by A=0)",
+    "threshold_sensitivity": "NOT ROOT CAUSE (failure uniform across all 15 combos)"
+  },
+  "governance": {
+    "ATOMIC_OBSERVATION_MODIFICATION": "NONE",
+    "FROZEN_BASELINE": "INTACT",
+    "GT_MODIFICATION": "NONE",
+    "NEW_HYPOTHESIS": "PROPOSED (DESIGN ONLY)",
+    "PERCEPTION_PRODUCTION_MODIFICATION": "NONE",
+    "PH02B": "NOT AUTHORIZED",
+    "PH02_EXPERIMENT": "COMPLETE",
+    "PH02_FAILURE_REVIEW": "COMPLETE",
+    "PH02_IMPLEMENTATION": "NOT AUTHORIZED",
+    "PH02_VERDICT": "REJECTED",
+    "PRODUCTION": "FALSE",
+    "STOP": "TRUE"
+  },
+  "key_observed_facts": {
+    "alignment_group_heterogeneity": {
+      "fp_anchor": "IS11-AMB-135 anchor 4 @ efficientnet p5 x0=320.35",
+      "heterogeneous_member": "1 @ y=263.39 w=8.00, full line: 'ble 1 shows the architecture of EfﬁcientNet-B0. Its main' (prose token of 'Table 1 shows...')",
+      "row_index_substructure": "i,1..9 @ y=122-207, dy~9.05pt, w~3.77 (9 members)",
+      "whole_group_dy_ratio": 6.2066
+    },
+    "uniform_value_columns_fired": {
+      "cs001_p3_37.0": {
+        "gt": "KEEP",
+        "members": 7,
+        "ratio": 1.49,
+        "w": 17.44
+      },
+      "resnet_p6_21.59": {
+        "gt": "KEEP",
+        "members": 7,
+        "ratio": 1.04,
+        "w": 20.17
+      },
+      "resnet_p6_28.54": {
+        "gt": "KEEP",
+        "members": 9,
+        "ratio": 2.01
+      }
+    }
+  },
+  "positive_case_coverage_warning": "GT pool contains exactly 1 row-number-like column instance -> any new hypothesis requires positive-case enumeration from 545-universe first (read-only, future authorized step)",
+  "task": "PH-02 failure mechanism review + research-object reassessment (READ/ANALYZE/CLASSIFY/REPORT only)",
+  "verdicts": {
+    "CURRENT_RESEARCH_OBJECT": "UNRESOLVED",
+    "NEW_OBSERVATION_MEASUREMENT_REQUEST": "NONE",
+    "Q6_next_decision": "B (design-only new hypothesis contract, 3 mandatory preconditions)",
+    "WHOLE_GROUP_AS_RESEARCH_OBJECT": "INVALID",
+    "leading_candidate": "C (structurally coherent candidate column segment, geometry-level, DESIGN ONLY)"
+  }
+}

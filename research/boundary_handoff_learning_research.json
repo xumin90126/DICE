@@ -1,0 +1,236 @@
+{
+  "gate_id": "boundary_handoff_learning_design_research",
+  "date": "2026-09-19",
+  "mode": "READ_ONLY_DESIGN_RESEARCH",
+  "governance": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_FIELD": "NONE",
+    "NEW_SCHEMA": "NONE",
+    "NEW_OBSERVATION": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_SIGNAL": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  },
+
+  "data_used": {
+    "e4_g5_cases": 18,
+    "sources": ["Evidence Boundary Expansion Research", "Evidence Boundary Structure Research", "M-A Human Validation", "CE2 pair"]
+  },
+
+  "requirement_analysis": {
+    "R1_existing_provided": {"yes": 18, "percentage": 100},
+    "R2_existing_not_packaged": {"partial": 2, "percentage": 11.1},
+    "R3_derivable": {"partial": 2, "percentage": 11.1},
+    "R4_document_context": {"yes": 2, "partial": 16, "percentage": 100},
+    "R5_semantic_knowledge": {"yes": 18, "percentage": 100},
+    "R6_unresolvable": {"yes": 18, "percentage": 100}
+  },
+
+  "boundary_types": {
+    "CAPTION_VS_REFERENCE": {"cases": 10, "documents": 3, "dimensions": "LOCAL_CONTEXT + SEMANTIC_UNDERSTANDING"},
+    "TEXT_ROLE_AMBIGUITY": {"cases": 4, "documents": 3, "dimensions": "LOCAL_CONTEXT + SPATIAL_RELATION + SEMANTIC_UNDERSTANDING"},
+    "AUTHOR_NAME_RECOGNITION": {"cases": 2, "documents": 1, "dimensions": "ENTITY_CONTEXT + SEMANTIC_UNDERSTANDING"},
+    "COLUMN_SEMANTIC_TYPE": {"cases": 2, "documents": 2, "dimensions": "ENTITY_CONTEXT + SEMANTIC_UNDERSTANDING"}
+  },
+
+  "ce2_special_check": {
+    "ce2_no": {
+      "case_id": "is11_efficientnet_p8_467_415",
+      "judgment": "NO",
+      "requirement_type": "R5_SEMANTIC_KNOWLEDGE",
+      "dimensions": "LOCAL_CONTEXT + SEMANTIC_UNDERSTANDING",
+      "R5": "YES",
+      "R6": "YES"
+    },
+    "ce2_yes": {
+      "case_id": "is11_resnet_p6_478_168",
+      "judgment": "YES",
+      "requirement_type": "R5_SEMANTIC_KNOWLEDGE",
+      "dimensions": "LOCAL_CONTEXT + SEMANTIC_UNDERSTANDING",
+      "R5": "YES",
+      "R6": "YES"
+    },
+    "finding": "Evidence identical, Judgment different, Requirement SAME",
+    "implication": "Handoff Pattern valid: same boundary → same requirement. Difference in judgment from semantic content, not evidence need. DICE can prepare same Evidence Package for both; Human makes different judgments using same evidence.",
+    "requirement_vs_answer": "Pattern predicts REQUIREMENT (what evidence to prepare), not ANSWER (what judgment to make)"
+  },
+
+  "pattern_matrix": [
+    {
+      "pattern_id": "P1",
+      "boundary_type": "CAPTION_VS_REFERENCE",
+      "evidence_requirement": "LOCAL_CONTEXT + SEMANTIC_UNDERSTANDING",
+      "cases": 10,
+      "documents": 3,
+      "c1_at_least_2": true,
+      "c2_cross_document": true,
+      "c4_similar_requirement": true,
+      "reusable": "REUSABLE",
+      "boundary_level": "B2",
+      "r5_semantic_needed": true,
+      "r6_unresolvable": true,
+      "case_ids": ["MA-UNC-2", "MA-UNC-5", "MA-UNC-6", "MA-UNC-7", "MA-UNC-11", "arxiv_2402.18619_p19_147_496", "arxiv_2402.18619_p26_327_253", "is11_resnet_p4_464_620", "is11_efficientnet_p8_467_415 (CE2_NO)", "is11_resnet_p6_478_168 (CE2_YES)"]
+    },
+    {
+      "pattern_id": "P2",
+      "boundary_type": "TEXT_ROLE_AMBIGUITY",
+      "evidence_requirement": "LOCAL_CONTEXT + SPATIAL_RELATION + SEMANTIC_UNDERSTANDING",
+      "cases": 4,
+      "documents": 3,
+      "c1_at_least_2": true,
+      "c2_cross_document": true,
+      "c4_similar_requirement": true,
+      "reusable": "REUSABLE",
+      "boundary_level": "B2",
+      "r5_semantic_needed": true,
+      "r6_unresolvable": true,
+      "case_ids": ["arxiv_2402.18619_p15_498_182", "arxiv_2402.18619_p18_346_73", "is11_efficientnet_p6_79_415", "is11_med_001_p15_244_342"]
+    },
+    {
+      "pattern_id": "P3",
+      "boundary_type": "AUTHOR_NAME_RECOGNITION",
+      "evidence_requirement": "ENTITY_CONTEXT + SEMANTIC_UNDERSTANDING",
+      "cases": 2,
+      "documents": 1,
+      "c1_at_least_2": true,
+      "c2_cross_document": false,
+      "c4_similar_requirement": true,
+      "reusable": "CONDITIONAL",
+      "boundary_level": "B2",
+      "r5_semantic_needed": true,
+      "r6_unresolvable": true,
+      "case_ids": ["IND-AMB-033", "IND-AMB-049"]
+    },
+    {
+      "pattern_id": "P4",
+      "boundary_type": "COLUMN_SEMANTIC_TYPE",
+      "evidence_requirement": "ENTITY_CONTEXT + SEMANTIC_UNDERSTANDING",
+      "cases": 2,
+      "documents": 2,
+      "c1_at_least_2": true,
+      "c2_cross_document": true,
+      "c4_similar_requirement": true,
+      "reusable": "REUSABLE",
+      "boundary_level": "B2",
+      "r5_semantic_needed": true,
+      "r6_unresolvable": true,
+      "case_ids": ["PH02-SPECIFICITY-VALUE-COL", "PH02-SPECIFICITY-CS001"]
+    }
+  ],
+
+  "boundary_level_distribution": {
+    "B0_human_from_scratch": 0,
+    "B1_partial_evidence": 0,
+    "B2_main_evidence_human_semantic": 4,
+    "B3_minimum_sufficient_handoff": 0,
+    "B4_human_not_needed": 0,
+    "all_at_B2": true,
+    "B4_forbidden": true
+  },
+
+  "evidence_learning_path": {
+    "allowed": "Human Judgment → Evidence Requirement → Boundary Handoff Pattern Candidate → Future Human Handoff",
+    "forbidden": ["Human Judgment → Semantic Label", "Human Judgment → Rule", "Human Judgment → Capability", "Human Judgment → Automatic Decision", "Handoff Pattern → Automatic Semantic Decision"],
+    "safety_conditions": [
+      "Record WHAT evidence was needed, NOT what answer was given",
+      "Requirement is about EVIDENCE TYPE, not SEMANTIC LABEL",
+      "Pattern describes RELATIONSHIP, not RULE",
+      "Pattern does NOT predict judgment (CE2 proves same pattern, different judgment)",
+      "Pattern is CANDIDATE, not validated signal"
+    ]
+  },
+
+  "unlearnable_boundary_check": {
+    "cases_without_pattern": 0,
+    "total_cases": 18,
+    "result": "ALL 18 cases fit into a pattern. No case is completely unlearnable in terms of Evidence Requirement.",
+    "judgment_unlearnable": true,
+    "requirement_learnable": true,
+    "handoff_pattern_not_supported": false,
+    "judgment_automation_not_supported": true
+  },
+
+  "deep_finding": {
+    "answer_vs_requirement": {
+      "answer": "Cannot be learned from structural evidence (CE2 proves: identical evidence → different judgment; R5=100%, R6=100%)",
+      "requirement": "CAN be learned from boundary type (4 stable patterns across 18 cases; CE2 proves: same boundary → same requirement)",
+      "principle": "DICE does NOT learn 'this text is a caption.' DICE DOES learn 'caption-vs-reference boundaries need local context + semantic understanding.'",
+      "relationship": "DICE = Evidence Provider (prepares what Human needs); Human = Semantic Judge (makes irreducible judgment); G5 = boundary between them"
+    }
+  },
+
+  "over_design_audit": {
+    "O1_new_field": false,
+    "O2_new_schema": false,
+    "O3_new_observation": false,
+    "O4_new_semantic_label": false,
+    "O5_new_rule": false,
+    "O6_new_detector": false,
+    "O7_new_signal": false,
+    "O8_new_capability": false,
+    "O9_increased_annotation": false,
+    "O10_one_case_one_patch": false,
+    "all_false": true,
+    "result": "PASS"
+  },
+
+  "limitations": [
+    {"id": "BHL-L-01", "limitation": "SINGLE HUMAN REVIEWER — requirements may be reviewer-specific"},
+    {"id": "BHL-L-02", "limitation": "NO IMPLEMENTATION TEST — B3 level is theoretical"},
+    {"id": "BHL-L-03", "limitation": "P3 NOT CROSS-DOCUMENT — AUTHOR_NAME_RECOGNITION has only 1 doc"},
+    {"id": "BHL-L-04", "limitation": "R5=100% means NO structural expansion can eliminate semantic need"},
+    {"id": "BHL-L-05", "limitation": "PATTERN ≠ SIGNAL — candidates, not validated signals"},
+    {"id": "BHL-L-06", "limitation": "CE2 IS SINGLE INSTANCE — more pairs would strengthen finding"},
+    {"id": "BHL-L-07", "limitation": "NO HUMAN TIME DATA — cannot claim review time decreases"}
+  ],
+
+  "final_questions": {
+    "Q1_describable_requirement": "18/18 (100%) — all have describable Evidence Requirement",
+    "Q2_cross_case_repeat": "YES — 4 patterns with repeated requirements across 18 cases",
+    "Q3_cross_document": "YES — 3/4 patterns are cross-document (16/18 = 88.9% of cases)",
+    "Q4_ce2_requirement_same": "YES — Evidence identical, Judgment different, Requirement SAME. Pattern valid.",
+    "Q5_stable_boundary_requirement": "YES — 3 REUSABLE + 1 CONDITIONAL patterns. Same boundary → same requirement.",
+    "Q6_handoff_pattern": "YES — 4 Pattern Candidates (3 REUSABLE, 1 CONDITIONAL). All at B2.",
+    "Q7_boundary_levels": "B1: 0, B2: 4 (ALL), B3: 0 (not yet), B4: 0 (forbidden)",
+    "Q8_no_stable_pattern": "0/18 (0%) — all cases fit into a pattern. Judgment unlearnable but requirement learnable.",
+    "Q9_safe_conversion": "YES — with strict conditions. Record requirement, not answer. CE2 proves no answer leakage.",
+    "Q10_next_step": "STOP — all patterns at B2; B3 requires implementation (not authorized); no further READ-ONLY research possible"
+  },
+
+  "files_created": [
+    "tmp/boundary_handoff_learning_research.md",
+    "tmp/boundary_handoff_learning_research.json",
+    "tmp/boundary_handoff_learning_case_table.csv"
+  ],
+  "files_modified": 0,
+
+  "conclusion": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_FIELD": "NONE",
+    "NEW_SCHEMA": "NONE",
+    "NEW_OBSERVATION": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_SIGNAL": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  }
+}

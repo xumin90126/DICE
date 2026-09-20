@@ -1,0 +1,312 @@
+{
+ "atomic_observation_modified": false,
+ "experiment_authorized": false,
+ "failure_surface": {
+  "c_abstain_total_distribution": {
+   "cs": 7,
+   "eff": 3,
+   "med": 8
+  },
+  "known_fp": "IS11-AMB-135 (eff p5): '4'@320.35 frozen lag=10 ('i','1'..'9',contaminating '1'@263.4) x 'MBConv6,k5x5'@354.14 lag=6; pairwise same_y_band=True h_gap=30.02; baseline IS-01^IS-02 -> incorrect MERGE",
+  "mb_direct_cases": 9,
+  "mb_direct_correction_disclosure": "prior audit md said 8 but enumerated 9 (1 FP + 2 eff + 6 cs) - arithmetic slip; case-level list is authoritative; scope = all 9 (no cherry-picking)",
+  "mb_direct_list": [
+   "AMB-135 (FP)",
+   "AMB-130 (eff p5 header lag3/2 band4)",
+   "AMB-313 (eff p8 header lag0/1 band3)",
+   "AMB-457",
+   "AMB-462",
+   "AMB-467",
+   "AMB-483",
+   "AMB-505",
+   "AMB-514 (cs p3, lag6-8 band9)"
+  ],
+  "out_of_scope": [
+   "AMB-262 (same_y_band=False, not same-row)",
+   "AMB-519 (prose pair, band=1 -> CC-04)",
+   "med 8 (M-A/M-H/M-F scope)"
+  ]
+ },
+ "falsification_conditions": [
+  "H1 (hypothesis, not promise): FP pair yields same_region=T ∧ different_partition=T -> admitted -> existing contract gives KEEP. FALSIFIED IF partition derivation cannot reproduce audit facts on p5 or context not admitted",
+  "H2: >=6/9 DIRECT cases obtain admissible context. FALSIFIED IF <6 (header weak-membership cases expected insufficient - per-case attribution required)",
+  "H3: controls 8/8 predictions unchanged. FALSIFIED IF any change (M3>0 -> REJECT)",
+  "H4: caption canaries 2/2 not flipped. FALSIFIED IF any flips to KEEP",
+  "H5: double-run byte-identical. FALSIFIED IF any difference",
+  "expected observations (NOT promises): M1 pass, M2a in [6,9], M3=0, M4=0"
+ ],
+ "frozen_baseline_intact": true,
+ "frozen_preconditions": {
+  "consumer_contract": "compute_is11_observation -> {is_in_table, same_cell, different_cell, table_info}; decision fn experimental_c_decision reads this dict only -> evidence producers are pluggable, decision logic untouched",
+  "is11_channel_proof": "cell-context decision rule 8/8 correct when table detected",
+  "mb_expressability_audit": "EXPRESSIBLE (prior phase, not re-litigated)",
+  "new_observation_request": "NONE",
+  "observation_gap": "NONE for minimal path",
+  "primary_root_cause": "CONSUMER / INTEGRATION GAP",
+  "secondary": "RESEARCH-OBJECT GAP -> local structural partition constructible"
+ },
+ "gt_modified": false,
+ "implementation_authorized": false,
+ "implementation_delta": {
+  "consumer_adapter": "compute_is11_observation gains second-producer call + three-case admission (flag default OFF) ~20-30 lines, 1 interface point - POTENTIAL IMPLEMENTATION (requires authorization)",
+  "is11_contract": "experimental_c_decision / 9.3 protocol - 0 lines - UNCHANGED",
+  "minimality_proof": "new objects 2 (pure-function reconstructable) / new interfaces 1 / new logic = derivation pure functions + 3-case contract (no scores) / new semantic assumptions 0 / new thresholds 0 (preregistration slots) / new authority 0 (conflict->abstain) / regression surface flag-gated single channel with canary+control guards",
+  "observation_layer": "ZERO change (adapter reads store) - FROZEN",
+  "q22_answer": "Can it be done WITHOUT modifying IS-11? Decision logic: YES (zero change). Harness observer wrapper: NO (hard-coded single TLD producer) - missing interface precisely = evidence-producer plug-in point; minimal delta is one gated admission point, not IS-11 logic modification",
+  "structural_evidence_layer": "new isolated module: build_local_structural_partitions + emit_structural_context (pure functions) ~100-150 lines, tmp/ standalone - DESIGN-ONLY",
+  "tld_gt_observation_schema": "0 lines - UNCHANGED"
+ },
+ "integration_candidates": [
+  {
+   "cons": [
+    "derivation logic grows inside decision layer",
+    "provenance blurs",
+    "no isolation boundary",
+    "regression surface = whole consumer"
+   ],
+   "desc": "feed raw P2 singles/pairwise into IS-11 consumer; consumer derives partitions itself",
+   "id": "A",
+   "name": "Direct Evidence Injection",
+   "pros": [
+    "no new object"
+   ],
+   "verdict": "REJECTED (pushes complexity into decision layer)"
+  },
+  {
+   "cons": [
+    "1 new module (~100-150 lines)",
+    "1 admission point (~20-30 lines, gated)"
+   ],
+   "desc": "thin read-only adapter derives LocalStructuralPartition + StructuralContextEvidence from frozen store; plugs in as second evidence producer beside TLD; three-case coexistence contract; decision fn unchanged",
+   "id": "B",
+   "name": "Structural Context Adapter",
+   "pros": [
+    "decision layer zero change",
+    "isolated + flag OFF = baseline",
+    "per-record provenance",
+    "aligns with PH-02 lesson (local partition, not whole group)"
+   ],
+   "verdict": "RECOMMENDED (minimal)"
+  },
+  {
+   "cons": [
+    "registry/priority = authority creep (forbidden)",
+    "larger schema",
+    "its useful core compresses into B's 3-case contract"
+   ],
+   "desc": "source registry + priority/merge framework for TLD+geometry",
+   "id": "C",
+   "name": "Parallel Evidence Channel + full coexistence framework",
+   "pros": [
+    "explicit multi-source story"
+   ],
+   "verdict": "REJECTED as standalone (heavier than minimal; core absorbed into B)"
+  }
+ ],
+ "is11_amb_135_walkthrough": {
+  "overrun_check": "LocalStructuralPartition outputs NO decision (schema has no such field) -> design does not overreach",
+  "responsibility_split": "steps 1-4 = evidence; step 5 = admission contract; step 6 = existing IS-11 decision",
+  "steps": [
+   "EVIDENCE: frozen left_alignment_group of '4'@320.35 = 10 members -> LocalStructuralPartition LSP-a (row-number column partition)",
+   "EVIDENCE: frozen lag=6 of 'MBConv6,k5x5'@354.14 -> LSP-b (operator column partition)",
+   "EVIDENCE: both partitions fall in one co-structured region (p5 table zone, 12 column clusters, y-overlap) -> same_structural_region=True",
+   "EVIDENCE: LSP-a != LSP-b -> different_local_partition=True",
+   "ADMISSION: TLD absent (p5 blind) + geometry single-source -> admitted (Case 2)",
+   "DECISION: experimental_c_decision UNCHANGED reads different_cell-context -> KEEP_SEPARATE; baseline MERGE (IS-01^IS-02) superseded by existing contract"
+  ]
+ },
+ "isolation_boundary": {
+  "OFF": "adapter not invoked -> is11_obs produced by TLD alone -> byte-identical to current behavior",
+  "ON": "adapter as second producer across the whole replay uniformly (no per-case special-casing)",
+  "baseline_path": "unchanged (decision fn / protocol / TLD untouched)",
+  "rollback": "trivial (flag off); new module physically isolated (tmp/ standalone file)"
+ },
+ "metrics": {
+  "M1": "known FP suppression: AMB-135 incorrect MERGE -> not-incorrect-MERGE",
+  "M2": "M-B direct recovery: (a) cases obtaining admissible context AND (b) cases whose final prediction changes - COUNTED SEPARATELY (evidence recovery != decision change)",
+  "M3": "collateral: prediction-change count among existing correct predictions (45-case global incl. 8 controls + 2 caption canaries) - REQUIRE 0",
+  "M4": "boundary leakage: incorrect structural context exposure on negatives - REQUIRE 0",
+  "M5": "determinism: double-run context records byte-identical",
+  "M6": "provenance completeness: source/artifact/input/derivation-trace quadruple per context record"
+ },
+ "negative_boundary_analysis": [
+  {
+   "boundary": "bibliography numbers",
+   "distinguishable": "yes - single column + long prose right neighbors; no second partition in region -> same_region=F",
+   "risk": "LOW",
+   "why": "aligned numeric stack"
+  },
+  {
+   "boundary": "TOC",
+   "distinguishable": "partially - co-structure EXISTS (hardest case); dot-leader center instability + title width variance observable; formal exclusion = experiment-side preregistration",
+   "risk": "MEDIUM-HIGH (honestly flagged)",
+   "why": "chapter/page 3 x-zone co-structure"
+  },
+  {
+   "boundary": "numbered list",
+   "distinguishable": "yes - no parallel column co-structure",
+   "risk": "LOW",
+   "why": "vertical numeric stack"
+  },
+  {
+   "boundary": "code line numbers",
+   "distinguishable": "yes - sib=0, no second partition",
+   "risk": "LOW",
+   "why": "continuous integer column"
+  },
+  {
+   "boundary": "figure axis ticks",
+   "distinguishable": "yes - single column stacks sib 0-1",
+   "risk": "LOW",
+   "why": "repeated numeric geometry"
+  },
+  {
+   "boundary": "ordinary numeric values",
+   "distinguishable": "Level-2 SAME class by design (not distinguished); same-partition pairs -> no KEEP support; in-frame GT=KEEP -> harmless face",
+   "risk": "LOW",
+   "why": "aligned value column"
+  },
+  {
+   "boundary": "prose (two-column)",
+   "distinguishable": "context may fire; in-frame GT=KEEP cases (005/519) harmless",
+   "risk": "MEDIUM",
+   "why": "same-band + cross-column partitions (margin groups lag 24-30)"
+  },
+  {
+   "boundary": "CAPTION (M-A collision)",
+   "distinguishable": "NOT by minimal geometry route - HONESTLY DECLARED",
+   "risk": "HIGH -> handled as M3 canary controls (must not flip), flip => PARTIAL/REJECT; NO exclusion predicate added in this design",
+   "why": "label+continuation same band, different x partitions -> different_partition context could flip 2 GT=MERGE abstains to KEEP (wrong)"
+  }
+ ],
+ "perception_modified": false,
+ "phase": "M-B Phase 2",
+ "production": false,
+ "provenance": {
+  "determinism": "adapter = pure function over frozen store; same input -> byte-identical output; double-run check (M5); conflict/abstain events also logged",
+  "per_record": [
+   "source (adapter id+version)",
+   "source artifact (frozen source_shas + params_hash, registry-verifiable)",
+   "input identity (member_atom_ids + case_ref)",
+   "derivation trace (relation/band_ref/region_ref + trace hash)"
+  ]
+ },
+ "recommended_design": {
+  "adapter_may": [
+   "expose",
+   "package",
+   "preserve provenance",
+   "normalize within frozen semantics"
+  ],
+  "adapter_must_not": [
+   "infer semantic table label",
+   "score",
+   "rank",
+   "decide merge",
+   "suppress candidate",
+   "override TLD",
+   "modify GT"
+  ],
+  "coexistence_contract": {
+   "case1_agree": "both sources present and consistent -> cell-context admitted per that fact",
+   "case1c_conflict": "sources conflict -> NO winner; cell-context fields null (not admitted); conflict logged to provenance audit; consumer falls back to frozen 9.3 base protocol",
+   "case2_tld_absent_geometry_present": "geometry context admitted as single source (M-B target)",
+   "no_arbitration": "no score / priority / confidence / winner; agreement-or-single-source is a contract, not authority",
+   "reverse_tld_only": "TLD single source admitted as today (unchanged)"
+  },
+  "flow": "Frozen store (read-only) -> pure-function derivation -> LocalStructuralPartition + StructuralContextEvidence -> producer plug-in point (beside TLD) -> three-case coexistence contract -> is11_obs-compatible record -> existing IS-11 consumer (zero change)",
+  "id": "B",
+  "name": "Structural Context Adapter"
+ },
+ "replay_experiment_design": {
+  "canary_controls_2": [
+   "AMB-414",
+   "AMB-422 (caption GT=MERGE abstains - must NOT flip to KEEP)"
+  ],
+  "existing_correct_controls_8": [
+   "AMB-005",
+   "AMB-024",
+   "AMB-034",
+   "AMB-074",
+   "AMB-346",
+   "AMB-350",
+   "AMB-522",
+   "AMB-530"
+  ],
+  "global": "full 45-case replay OFF vs ON with per-case diff + double-run determinism",
+  "infra": "reuse existing GT replay harness (run_ph02_replay framework) + new adapter module + admission point",
+  "negative_boundary_descriptive_no_gt": [
+   "LLaMA p19/p22 code line numbers",
+   "2309.04040 reference numbers",
+   "2212.12794 p15 TOC"
+  ],
+  "negative_boundary_in_frame": [
+   "AMB-519 (prose)",
+   "AMB-262 (different-band)"
+  ],
+  "positive_targets": [
+   "AMB-135 (FP)",
+   "AMB-130",
+   "AMB-313",
+   "AMB-457",
+   "AMB-462",
+   "AMB-467",
+   "AMB-483",
+   "AMB-505",
+   "AMB-514"
+  ],
+  "status": "DESIGNED ONLY, NOT RUN"
+ },
+ "research_object": {
+  "companion_object": "StructuralContextEvidence {case_ref, atom_a/b partition refs, same_structural_region: bool|null, different_local_partition: bool|null, region_ref, derivation_trace, provenance}",
+  "decision_authority": false,
+  "definition": "a local column partition: one x0 alignment structure over its members' y-extent, derived deterministically from frozen left_alignment_group + member bbox union",
+  "forbidden_fields": [
+   "is_table",
+   "is_row_number_column",
+   "is_cell",
+   "merge_candidate",
+   "keep_candidate",
+   "confidence",
+   "score",
+   "priority",
+   "recommendation"
+  ],
+  "name": "LocalStructuralPartition",
+  "schema": {
+   "axis": "frozen relation name (left_alignment_group)",
+   "bbox_union": "derived verbatim union of member bboxes",
+   "derivation_trace": "{relation, band_ref}",
+   "field_accountability": "every field: frozen-or-derived, source-backed, deterministic, non-semantic, non-decision, non-polluting",
+   "member_atom_ids": "frozen P2 atom ids (verbatim)",
+   "params_hash": "frozen config snapshot hash",
+   "partition_id": "{doc}|p{page}|lsp|{seq} (pure function of member_atom_ids)",
+   "source_shas": "frozen p1/p2 code shas from registry",
+   "source_surface": "atomic_observation_layer.v1/p2_singles"
+  },
+  "semantic_label": false,
+  "stop_condition": "if integration required semantic fields to complete -> STOP and report Research-Object/Consumer Contract Gap (currently not triggered)"
+ },
+ "research_question": "RQ-MB2: can a minimal Consumer Integration convert existing frozen geometry-derived local structural partitions into IS-11-consumable structural context, covering M-B DIRECT cases, without changing existing correct behavior?",
+ "risks": [
+  "HIGHEST: M-A collision - different_partition context may harm caption MERGE cases; guarded by M3 canaries; no exclusion predicate added in this design",
+  "TOC-like co-structure may receive context (no in-frame case; M4 descriptive observation guards)",
+  "header weak column-membership -> insufficient context (honest expectation, per-case attribution)",
+  "coexistence contract itself is a policy (conflict->abstain) - kept auditable in report",
+  "derived structure misread as semantic downstream - forbidden-fields list guards",
+  "parameter slots (grouping/banding/region tolerances) must remain preregistration items - no values fixed in this design phase"
+ ],
+ "status": "DESIGN_ONLY",
+ "stop": true,
+ "success_criteria": {
+  "PARTIAL": "FP suppressed but some DIRECT unrecovered; or context recovered but downstream decision unchanged - MUST distinguish Evidence recovery failure vs Consumer decision failure (latter = contract gap, not evidence failure)",
+  "PASS": "M1 pass AND M3=0 AND M4=0 AND M5 pass AND M6 pass AND explainable evidence recovery on M-B DIRECT (M2a>0, changes GT-consistent)",
+  "REJECT": "any correct case flipped / boundary leakage / semantic leakage / authority leakage / non-determinism / provenance failure"
+ },
+ "tld_relationship": {
+  "arbitration": "FORBIDDEN (no winner/score); conflict -> honest abstention + audit log",
+  "authority": "TLD authority neither expanded nor reduced",
+  "geometry_adapter": "second producer via plug-in point",
+  "tld": "unchanged, not retired, remains first producer (13/45 coverage + 8/8 correct are existing facts)"
+ }
+}

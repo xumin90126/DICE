@@ -1,0 +1,11 @@
+{
+  "evaluation_set": "Frozen 45-case Sampling Frame (seed=20240909)",
+  "gt_source": "Frozen Semantic GT (Stage 3, 45 cases, 2 MERGE, 43 KEEP_SEPARATE)",
+  "is01_is02": "FROZEN definitions (not modified)",
+  "is11": "EXPERIMENTAL observer (table_line_detector.py, not integrated into P1-P6)",
+  "p1_p6_modified": false,
+  "p4_modified": false,
+  "p7_1_drift": 0,
+  "p7_2_drift": 0,
+  "timestamp": "2026-09-09T23:28:17"
+}

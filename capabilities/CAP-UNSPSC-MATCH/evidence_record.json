@@ -1,0 +1,38 @@
+{
+  "evidence_record_metadata": {
+    "record_id": "CAP-UNSPSC-MATCH.evidence_record",
+    "artifact_type": "evidence_state_snapshot (PROPOSED)",
+    "snapshot_nature": "declarative empty-state record at PROPOSED status; NOT a performance guarantee",
+    "fill_authority": "Feedback Loop populates these fields after verification (record_execution auto-computes cross_doc_success_rate and maturity)"
+  },
+
+  "capability_id": "CAP-UNSPSC-MATCH",
+  "status": "PROPOSED",
+
+  "evidence_state": {
+    "maturity": "LOW",
+    "maturity_score": 0.0,
+    "source_evidence_ids": [],
+    "source_pattern_ids": [],
+    "documents_tested": [],
+    "cross_doc_success_rate": 0.0,
+    "execution_count": 0,
+    "success_count": 0,
+    "failure_count": 0,
+    "last_execution_at": ""
+  },
+
+  "promotion_requirements": {
+    "to_beta": "cross-document unspsc_match_accuracy ≥ threshold (threshold to be set by Human at verification, PC-3 / O3 DEFER)",
+    "to_active": "validated across multiple document classes",
+    "gate": "cross_document_unspsc_accuracy (declarative validation gate name)"
+  },
+
+  "prohibited_assertions": {
+    "performance_guarantee": false,
+    "prefilled_pass_marker": false,
+    "hand_computed_score": false,
+    "ranking": false,
+    "recommendation": false
+  }
+}

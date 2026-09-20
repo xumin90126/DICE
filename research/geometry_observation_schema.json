@@ -1,0 +1,91 @@
+{
+  "schema_name": "GeometryObservation",
+  "version": "p2",
+  "description": "Geometric facts derived from P1 AtomicTextObservation. Pure geometry: distances, overlaps, alignment, bands, direction. NO semantic classification (no is_heading/is_table/is_column/is_paragraph).",
+  "design_principles": [
+    "P2 produces only geometric facts, not interpretations.",
+    "No semantic rules (if-large-gap-then-paragraph, if-x-then-table, if-same-y-then-row).",
+    "column_id is NOT produced (x_projection/x_gap/alignment_group are facts for future ColumnCandidate).",
+    "All thresholds centralized in GeometryConfig — no hardcoded magic numbers.",
+    "Every fact traceable to a source observation (provenance).",
+    "Symmetry enforced: A LEFT_OF B implies B RIGHT_OF A."
+  ],
+  "observation_shapes": {
+    "SingleObservationGeometry": {
+      "description": "Derived geometry for one observation.",
+      "fields": {
+        "observation_id": "str",
+        "document_id": "str",
+        "page_number": "int",
+        "bbox": "List[float]",
+        "width": "float",
+        "height": "float",
+        "center_x": "float",
+        "center_y": "float",
+        "page_width": "Optional[float]",
+        "page_height": "Optional[float]",
+        "normalized_x": "Optional[float]",
+        "normalized_y": "Optional[float]",
+        "same_y_band_members": "List[str]",
+        "same_x_band_members": "List[str]",
+        "left_alignment_group": "List[str]",
+        "right_alignment_group": "List[str]",
+        "top_alignment_group": "List[str]",
+        "bottom_alignment_group": "List[str]",
+        "center_alignment_group": "List[str]",
+        "spatial_cluster_members": "List[str]",
+        "x_projection_overlap_count": "int",
+        "provenance": "Dict[str, Any]"
+      }
+    },
+    "PairwiseRelation": {
+      "description": "Geometric relation of A relative to B.",
+      "fields": {
+        "relation_id": "str",
+        "document_id": "str",
+        "page_number": "int",
+        "observation_a_id": "str",
+        "observation_b_id": "str",
+        "direction": "str",
+        "horizontal_distance": "float",
+        "vertical_distance": "float",
+        "horizontal_overlap": "float",
+        "vertical_overlap": "float",
+        "bbox_overlap_area": "float",
+        "iou": "float",
+        "left_alignment": "bool",
+        "right_alignment": "bool",
+        "top_alignment": "bool",
+        "bottom_alignment": "bool",
+        "center_alignment": "bool",
+        "same_y_band": "bool",
+        "same_x_band": "bool",
+        "provenance": "Dict[str, Any]"
+      }
+    }
+  },
+  "direction_vocabulary": [
+    "LEFT_OF",
+    "RIGHT_OF",
+    "ABOVE",
+    "BELOW",
+    "OVERLAPPING",
+    "CONTAINED_BY",
+    "CONTAINS",
+    "SAME_POSITION"
+  ],
+  "symmetry_rules": {
+    "symmetric": [
+      "OVERLAPPING",
+      "SAME_POSITION"
+    ],
+    "inverse_pairs": {
+      "LEFT_OF": "RIGHT_OF",
+      "RIGHT_OF": "LEFT_OF",
+      "ABOVE": "BELOW",
+      "BELOW": "ABOVE",
+      "CONTAINED_BY": "CONTAINS",
+      "CONTAINS": "CONTAINED_BY"
+    }
+  }
+}

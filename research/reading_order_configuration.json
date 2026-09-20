@@ -1,0 +1,19 @@
+{
+  "column_gap_threshold": 25.0,
+  "column_density_threshold": 2,
+  "column_x_bin_size": 5.0,
+  "top_region_ratio": 0.2,
+  "bottom_region_ratio": 0.2,
+  "full_width_ratio": 0.6,
+  "column_x_tolerance": 12.0,
+  "min_column_span_count": 3,
+  "vertical_order_tolerance": 1.0,
+  "large_vertical_gap": 30.0,
+  "overlap_tolerance": 0.5,
+  "confidence_threshold_high": 0.75,
+  "confidence_threshold_medium": 0.5,
+  "ambiguous_column_overlap_ratio": 0.4,
+  "row_alignment_threshold": 0.6,
+  "overlap_ambiguity_threshold": 0.6,
+  "construction_version": "v1"
+}

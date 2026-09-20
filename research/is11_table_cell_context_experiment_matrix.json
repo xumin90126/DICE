@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "document": "IS-11 TABLE_CELL_CONTEXT Experiment Matrix",
+    "type": "READ-ONLY experiment design matrix",
+    "timestamp": "2026-09-09T22:00:00",
+    "constraint": "DESIGN ONLY — NO IMPLEMENTATION, NO EXECUTION"
+  },
+  "experiment_stages": [
+    {
+      "stage": "A",
+      "name": "Independent Corpus Selection",
+      "dataset": "NEW PDFs with table-heavy content (NOT the frozen 4 independent PDFs used for IS-01/IS-02 evaluation)",
+      "independence": "MUST BE INDEPENDENT — zero references in any P7 artifact; not used in IS-11 development",
+      "purpose": "Provide table-containing pages for IS-11 evaluation",
+      "features_visible": "N/A (corpus selection only)",
+      "human_gt": "NOT YET",
+      "freeze_status": "NOT FROZEN (design stage)",
+      "machine_evaluation": "NOT ALLOWED",
+      "allowed": true,
+      "notes": "Candidate sources: (1) 3 partially-contaminated PDFs (arxiv_2310, arxiv_2401, qbio_cell) — metadata contamination only, no IS-11 ever computed; CONDITIONALLY USABLE with provenance tracking. (2) New external PDFs with diverse table styles. Need ≥30 TABLE_CELL cases for statistical power."
+    },
+    {
+      "stage": "B",
+      "name": "Frozen P1-P6 Processing",
+      "dataset": "Selected independent PDFs from Stage A",
+      "independence": "MAINTAINED",
+      "purpose": "Extract observations, spans, geometry using frozen pipeline",
+      "features_visible": "P1 observations, P2 geometry, P3 style, P4 spans (AMBIGUOUS only), P5 reading order, P6 regions (DENSE/SPARSE)",
+      "human_gt": "NOT YET",
+      "freeze_status": "P1-P6 code FROZEN (unmodified)",
+      "machine_evaluation": "NOT ALLOWED",
+      "allowed": true,
+      "notes": "P1-P6 does NOT detect tables. DENSE_REGION is a weak proxy. table_line_detector.py exists but is NOT in pipeline."
+    },
+    {
+      "stage": "C",
+      "name": "Geometric Candidate Universe",
+      "dataset": "AMBIGUOUS cases from Stage B",
+      "independence": "MAINTAINED",
+      "purpose": "Generate candidate boundary pairs using frozen P4 AMBIGUOUS criteria",
+      "features_visible": "Geometry only (gap, dy, w_a, w_b, same_style, line_obs)",
+      "human_gt": "NOT YET",
+      "freeze_status": "Candidate universe frozen before sampling",
+      "machine_evaluation": "NOT ALLOWED",
+      "allowed": true,
+      "notes": "Same AMBIGUOUS criteria as IS-01/IS-02 experiment: 8<gap≤50, same_style, line_obs≤15, w_b≥15"
+    },
+    {
+      "stage": "D",
+      "name": "Blind Semantic GT Collection",
+      "dataset": "Sampled cases from Stage C (stratified by geometry + TABLE_CELL presence)",
+      "independence": "MAINTAINED — reviewers blind to IS-11, IS-01, IS-02, geometry, machine prediction",
+      "purpose": "Collect Level 2 Semantic GT (dual reviewer + adjudication)",
+      "features_visible": "case_id, page, text_a, text_b, page_context ONLY",
+      "human_gt": "COLLECTED AND FROZEN before machine evaluation",
+      "freeze_status": "GT FROZEN before Stage G",
+      "machine_evaluation": "NOT ALLOWED",
+      "allowed": true,
+      "notes": "Reviewers see same blind package as IS-01/IS-02 experiment. No IS features, no geometry, no machine output. Must include ≥30 TABLE_CELL cases."
+    },
+    {
+      "stage": "E",
+      "name": "Evaluation Set Freeze",
+      "dataset": "Cases with frozen Level 2 GT",
+      "independence": "MAINTAINED",
+      "purpose": "Freeze evaluation set before any machine evaluation",
+      "features_visible": "N/A",
+      "human_gt": "FROZEN",
+      "freeze_status": "EVALUATION_SET_FREEZE = TRUE",
+      "machine_evaluation": "NOT ALLOWED",
+      "allowed": true,
+      "notes": "Provenance audit required (same 9-point audit as IS-01/IS-02 experiment)"
+    },
+    {
+      "stage": "F",
+      "name": "Baseline A+B Machine Evaluation",
+      "dataset": "Frozen evaluation set",
+      "independence": "MAINTAINED",
+      "purpose": "Establish baselines for incremental comparison",
+      "features_visible": "Baseline A: geometry only (P4 DETERMINISTIC + AMBIGUOUS); Baseline B: geometry + IS-01 + IS-02 (frozen §9.3 protocol)",
+      "human_gt": "FROZEN (not visible to machine)",
+      "freeze_status": "Baselines computed after GT freeze",
+      "machine_evaluation": "ALLOWED (baseline only)",
+      "allowed": true,
+      "notes": "Baseline B should reproduce IS-01/IS-02 results on new corpus. Expected: TABLE_CELL FP pattern continues if table-heavy PDFs included."
+    },
+    {
+      "stage": "G",
+      "name": "IS-11 Observation",
+      "dataset": "Frozen evaluation set",
+      "independence": "MAINTAINED",
+      "purpose": "Compute IS-11 TABLE_CELL_CONTEXT observation using FROZEN IS-11 definition",
+      "features_visible": "IS-11 observation (table_region, cell_membership, same_cell/different_cell) + Baseline B features",
+      "human_gt": "FROZEN (not visible to IS-11 computation)",
+      "freeze_status": "IS-11 spec MUST be frozen BEFORE this stage",
+      "machine_evaluation": "ALLOWED (experimental condition)",
+      "allowed": true,
+      "notes": "IS-11 definition must be frozen before Stage G. IS-11 may use table_line_detector.py output OR new table detection method — but definition is frozen once set."
+    },
+    {
+      "stage": "H",
+      "name": "Decision Comparison",
+      "dataset": "Frozen evaluation set",
+      "independence": "MAINTAINED",
+      "purpose": "Compare Baseline A vs Baseline B vs Experimental (IS-11) decisions against frozen GT",
+      "features_visible": "All three conditions' decisions + GT",
+      "human_gt": "FROZEN (used for evaluation only, not for tuning)",
+      "freeze_status": "Results IMMUTABLE after computation",
+      "machine_evaluation": "ALLOWED (evaluation only)",
+      "allowed": true,
+      "notes": "Compute ΔPrecision, ΔRecall, ΔCoverage, ΔAbstention, ΔFPR, ΔShrinkage. Pre-registered gates checked."
+    }
+  ],
+  "baselines": [
+    {
+      "baseline": "A",
+      "name": "Geometry Only",
+      "features": "P4 DETERMINISTIC_MERGE + DETERMINISTIC_BLOCK + AMBIGUOUS (no IS features)",
+      "expected_behavior": "AMBIGUOUS cases → all INSUFFICIENT_EVIDENCE (no IS features to decide)",
+      "purpose": "Establish floor — what happens with zero IS features"
+    },
+    {
+      "baseline": "B",
+      "name": "Geometry + IS-01 + IS-02",
+      "features": "Frozen §9.3 protocol: IS-01(text_a) + IS-02(text_b) → MERGE/KEEP_SEPARATE/INSUFFICIENT_EVIDENCE",
+      "expected_behavior": "Expected to reproduce TABLE_CELL FP pattern if table-heavy PDFs included; Precision likely low on TABLE_CELL subset",
+      "purpose": "Establish IS-01/IS-02 baseline for incremental comparison"
+    },
+    {
+      "experimental": "C",
+      "name": "Geometry + IS-01 + IS-02 + IS-11",
+      "features": "Frozen §9.3 protocol + IS-11 TABLE_CELL_CONTEXT observation",
+      "expected_behavior": "HYPOTHESIS: IS-11 enables correct KEEP_SEPARATE for TABLE_CELL pairs that IS-01+IS-02 would MERGE",
+      "purpose": "Measure incremental information gain from IS-11"
+    }
+  ],
+  "one_new_is_at_a_time": {
+    "principle": "IS-11 ONLY in first experiment. IS-12, IS-14, IS-10 NOT included.",
+    "reason": "Cannot attribute improvement to IS-11 if multiple new sources added simultaneously",
+    "is_12_excluded": "ROW_COLUMN_POSITION — co-occurs with IS-11, test in separate experiment after IS-11 validated",
+    "is_14_excluded": "DOCUMENT_STRUCTURE_ROLE — defer until IS-11 experiment completed",
+    "is_10_excluded": "SENTENCE_BOUNDARY — HUMAN_OWNED (Category C), never implementable as deterministic rule"
+  },
+  "incremental_metrics": [
+    {"metric": "ΔPrecision", "formula": "Precision(C) - Precision(B)", "target": "≥ 0 (no precision degradation)"},
+    {"metric": "ΔRecall", "formula": "Recall(C) - Recall(B)", "target": "≥ 0 (no recall degradation)"},
+    {"metric": "ΔCoverage", "formula": "Coverage(C) - Coverage(B)", "target": "≥ 0 (more deterministic decisions)"},
+    {"metric": "ΔAbstention", "formula": "Abstention(C) - Abstention(B)", "target": "≤ 0 (fewer abstentions, but only if correct)"},
+    {"metric": "ΔFalse_Positive_Rate", "formula": "FPR(C) - FPR(B)", "target": "< 0 (FP reduction — PRIMARY metric)"},
+    {"metric": "ΔFalse_Negative_Rate", "formula": "FNR(C) - FNR(B)", "target": "≤ 0 (no new FN)"},
+    {"metric": "ΔBoundary_Shrinkage", "formula": "Shrinkage(C) - Shrinkage(B)", "target": "> 0 (validated shrinkage increase)"},
+    {"metric": "False_Positive_Reduction", "formula": "FP(B) - FP(C)", "target": "> 0 (IS-11 should reduce TABLE_CELL FP)"},
+    {"metric": "Validated_Boundary_Shrinkage", "formula": "Independently_validated(C) / total", "target": "> 0 (new validated shrinkage)"}
+  ],
+  "pre_registered_gates": [
+    {"gate": "G1", "name": "Independent Data", "condition": "≥30 TABLE_CELL cases from independent PDFs (not from frozen 69-case set)", "threshold": "≥30", "set_before_results": true},
+    {"gate": "G2", "name": "IS-11 Specification Freeze", "condition": "IS-11 definition frozen before GT collection", "threshold": "FROZEN", "set_before_results": true},
+    {"gate": "G3", "name": "No Leakage", "condition": "Provenance audit: IS-11 spec not derived from GT; GT not influenced by IS-11", "threshold": "PASS", "set_before_results": true},
+    {"gate": "G4", "name": "Semantic GT Validity", "condition": "Level 2 GT (dual reviewer + adjudication, kappa ≥ 0.60)", "threshold": "kappa ≥ 0.60", "set_before_results": true},
+    {"gate": "G5", "name": "Cross-Document Coverage", "condition": "IS-11 tested on ≥2 documents with tables", "threshold": "≥2 docs", "set_before_results": true},
+    {"gate": "G6", "name": "Incremental Precision Improvement", "condition": "Precision(C) > Precision(B) on TABLE_CELL subset", "threshold": "ΔPrecision > 0", "set_before_results": true},
+    {"gate": "G7", "name": "False Positive Reduction", "condition": "FP(C) < FP(B) on TABLE_CELL subset", "threshold": "ΔFP < 0", "set_before_results": true},
+    {"gate": "G8", "name": "Recall / Coverage Safety", "condition": "Recall(C) ≥ Recall(B) AND Coverage(C) ≥ Coverage(B)", "threshold": "ΔRecall ≥ 0 AND ΔCoverage ≥ 0", "set_before_results": true},
+    {"gate": "G9", "name": "Abstention Safety", "condition": "No new FP from cases that were previously correct abstention", "threshold": "0 new FP from former abstain", "set_before_results": true},
+    {"gate": "G10", "name": "Boundary Shrinkage", "condition": "Validated shrinkage > 0 (IS-11 enables correct deterministic decisions that IS-01+IS-02 could not make)", "threshold": "ΔShrinkage > 0", "set_before_results": true},
+    {"gate": "G11", "name": "Determinism", "condition": "Run 1 = Run 2 (0 mismatches)", "threshold": "0 mismatches", "set_before_results": true},
+    {"gate": "G12", "name": "Provenance", "condition": "Full provenance chain documented", "threshold": "PASS", "set_before_results": true}
+  ]
+}

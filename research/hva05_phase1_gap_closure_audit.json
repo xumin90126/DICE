@@ -1,0 +1,443 @@
+{
+  "audit_status": "READY",
+  "metadata": {
+    "audit_name": "HVA-05 Phase 1 Contract Gap Closure Audit",
+    "date": "2026-09-17",
+    "mode": "READ-ONLY CONTRACT GAP CLOSURE / NO CODE / NO IMPLEMENTATION / FROZEN INTACT / STOP",
+    "predecessors": "HVA-03, HVA-04",
+    "scope": "GAP-1 (content_type) + GAP-4 (Evidence Source) + Guardrail Labeling ONLY"
+  },
+  "executive_summary": {
+    "status": "READY",
+    "gap1": "CLOSED — content_type REMOVED from Evidence Signature (64% ambiguous, not derivable)",
+    "gap4": "CLOSED — machine_eval is Evidence Source of Truth (45/45 complete, L5 has 17/30 discrepancies)",
+    "signature_version": "S3 (6 boolean fields, no content_type)",
+    "semantic_leakage": 0,
+    "automation_bias_risk": "LOW",
+    "authority_boundary": "PASS",
+    "stop": true
+  },
+  "gap1_content_type": {
+    "hva04_proposed_rule": "is_in_table+is01_a→TABLE_NUMERIC, is_in_table+!is01_a→TABLE_TEXT, !is_in_table+period→PROSE, Fig prefix→FIGURE",
+    "test_result": {
+      "TABLE_NUMERIC": 5,
+      "TABLE_TEXT": 8,
+      "PROSE": 3,
+      "FIGURE": 0,
+      "AMBIGUOUS": 29,
+      "ambiguous_pct": 64
+    },
+    "root_cause": "is_in_table is TLD DETECTION RESULT (can fail per DCE-06), not semantic classification. When TLD fails, is_in_table=False even for table content. No machine_eval field answers \"is this table content?\" deterministically.",
+    "version_comparison": {
+      "A_no_content_type": {
+        "evidence_purity": "HIGH",
+        "traceability": "HIGH",
+        "semantic_leakage": 0,
+        "reproducibility": "HIGH",
+        "signal_separation": "S3 distinguishes all",
+        "complexity": "LOW",
+        "verdict": "SELECTED"
+      },
+      "B_machine_derived": {
+        "evidence_purity": "MEDIUM",
+        "traceability": "MEDIUM",
+        "semantic_leakage": ">0",
+        "reproducibility": "LOW (64% ambiguous)",
+        "signal_separation": "Cannot test",
+        "complexity": "HIGH",
+        "verdict": "REJECTED"
+      },
+      "C_manual_hva01": {
+        "evidence_purity": "LOW",
+        "traceability": "LOW",
+        "semantic_leakage": ">0",
+        "reproducibility": "NONE",
+        "signal_separation": "Works but impure",
+        "complexity": "MEDIUM",
+        "verdict": "REJECTED"
+      }
+    },
+    "removal_justification": [
+      "S3 (without content_type) distinguishes all 4 signals with zero overlap",
+      "content_type adds ZERO separation power",
+      "content_type would introduce semantic contamination into Signature",
+      "content_type can be display metadata in L0 (labeled \"may be inaccurate\") but NOT in Signature"
+    ],
+    "resolution": "CLOSED. content_type REMOVED from Evidence Signature. CONTENT_TYPE_IS_MACHINE_EVIDENCE = NO."
+  },
+  "gap4_evidence_source": {
+    "discrepancy_analysis": {
+      "total_l5_cases_compared": 30,
+      "discrepancies": 17,
+      "discrepancy_pct": 57,
+      "type_a_l5_missing_tld": {
+        "count": 9,
+        "description": "L5 has_tld=False, TLD=None; machine_eval HAS TLD data",
+        "cases": [
+          "IS11-AMB-032",
+          "IS11-AMB-052",
+          "IS11-AMB-064",
+          "IS11-AMB-163",
+          "IS11-AMB-168",
+          "IS11-AMB-198",
+          "IS11-AMB-205",
+          "IS11-AMB-375",
+          "IS11-AMB-418"
+        ],
+        "implication": "L5 experiment did not expose TLD to human → Evidence Distillation Gap"
+      },
+      "type_b_l5_different_tld": {
+        "count": 8,
+        "description": "L5 has_tld=True with different_cell=True; machine_eval has different_cell=False",
+        "cases": [
+          "IS11-AMB-130",
+          "IS11-AMB-135",
+          "IS11-AMB-262",
+          "IS11-AMB-457",
+          "IS11-AMB-467",
+          "IS11-AMB-483",
+          "IS11-AMB-505",
+          "IS11-AMB-514"
+        ],
+        "implication": "L5 used DIFFERENT TLD results than machine_eval (version mismatch)"
+      }
+    },
+    "evidence_source_hierarchy": {
+      "machine_eval": {
+        "authority": "Machine Evidence (frozen, hashed)",
+        "allowed_use": "Evidence Snapshot source + Signature extraction + FeedbackRecord",
+        "forbidden_use": "NOT for Human judgment, NOT for Semantic decision, NOT modified"
+      },
+      "GT": {
+        "authority": "Human Ground Truth",
+        "allowed_use": "Evaluation comparison + Adjudication history + Audit trail + text_a/b for period/capital derivation",
+        "forbidden_use": "NOT as Machine Evidence, NOT in Evidence Signature, NOT shown as answer"
+      },
+      "L5_experiment_data": {
+        "authority": "Experiment Record (interaction log)",
+        "allowed_use": "Human behavior analysis + evidence_viewed tracking + engagement stats",
+        "forbidden_use": "NOT as Evidence Source of Truth, NOT for evidence_snapshot, NOT for TLD values"
+      },
+      "L5_cues": {
+        "authority": "Experiment UI presentation",
+        "allowed_use": "NONE in Phase 1",
+        "forbidden_use": "FORBIDDEN as Evidence (17/30 discrepancies)"
+      },
+      "HVA01_derived": {
+        "authority": "Audit Artifact",
+        "allowed_use": "Analysis context + Report reference",
+        "forbidden_use": "NOT as Machine Evidence, NOT in Signature"
+      },
+      "HVA02_candidates": {
+        "authority": "Audit Artifact",
+        "allowed_use": "Validation reference + Cross-check",
+        "forbidden_use": "NOT as Runtime Signal, NOT auto-promoted"
+      },
+      "P1_P6_TLD": {
+        "authority": "Frozen Machine Observation",
+        "allowed_use": "Read via machine_eval (captures output)",
+        "forbidden_use": "NOT directly accessed, NOT modified"
+      }
+    },
+    "machine_eval_justification": {
+      "completeness": "45/45 cases have is11_observation with is_in_table + different_cell",
+      "frozen": "machine_eval is frozen IS-11 evaluation result. TLD hash (022f5c21) and GT hash (7349963d) verified.",
+      "consistency": "machine_eval is11_observation is output of FROZEN TLD + IS-11 pipeline. L5 cues used different TLD config (Type B discrepancies).",
+      "authority": "Machine Evidence (structural observation). L5 cues are Experiment Record. GT is Human Ground Truth. Different authority levels, must not mix."
+    },
+    "resolution": "CLOSED. machine_eval is Evidence Source of Truth."
+  },
+  "evidence_snapshot_contract": {
+    "status": "READY",
+    "input": "machine_eval.experimental_c.is11_observation + experimental_c.is01_a/is02_b/decision + GT.text_a/text_b (for period/capital only)",
+    "transformation": "Copy field values into frozen dict. Derive period/capital from text.",
+    "output_fields": [
+      "is_in_table",
+      "different_cell",
+      "is01_a",
+      "is02_b",
+      "machine_decision",
+      "text_a_ends_period",
+      "text_b_starts_capital",
+      "document_id",
+      "page"
+    ],
+    "provenance_fields": [
+      "machine_eval_hash",
+      "tld_hash",
+      "gt_hash",
+      "snapshot_timestamp"
+    ],
+    "authority": "Machine Evidence (authority=0)",
+    "failure_state": "machine_eval missing for case_id → SNAPSHOT_FAILED → FeedbackRecord not created",
+    "reconstruction_guarantee": "evidence_snapshot + provenance hashes allow EXACT reconstruction. If hashes mismatch → SNAPSHOT_STALE → not used for SignalCandidate.",
+    "machine_eval_hash": "437aa665210ccd04",
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef"
+  },
+  "per_field_semantic_audit": [
+    {
+      "field": "is_in_table",
+      "source": "machine_eval is11_observation",
+      "type": "bool",
+      "semantic_level": "Machine Evidence (TLD detection)",
+      "provenance": "TLD (frozen)",
+      "safe_display": true,
+      "safe_signature": true,
+      "safe_learning": true
+    },
+    {
+      "field": "different_cell",
+      "source": "machine_eval is11_observation",
+      "type": "bool",
+      "semantic_level": "Machine Evidence (TLD detection)",
+      "provenance": "TLD (frozen)",
+      "safe_display": true,
+      "safe_signature": true,
+      "safe_learning": true
+    },
+    {
+      "field": "is01_a",
+      "source": "machine_eval experimental_c",
+      "type": "bool",
+      "semantic_level": "Machine Evidence (IS-01 regex)",
+      "provenance": "IS-01 (frozen)",
+      "safe_display": true,
+      "safe_signature": true,
+      "safe_learning": true
+    },
+    {
+      "field": "is02_b",
+      "source": "machine_eval experimental_c",
+      "type": "bool",
+      "semantic_level": "Machine Evidence (IS-02 alpha check)",
+      "provenance": "IS-02 (frozen)",
+      "safe_display": true,
+      "safe_signature": true,
+      "safe_learning": true
+    },
+    {
+      "field": "text_a_ends_period",
+      "source": "Derived from GT.text_a",
+      "type": "bool",
+      "semantic_level": "Evidence Fact (deterministic regex)",
+      "provenance": "GT text (frozen)",
+      "safe_display": true,
+      "safe_signature": true,
+      "safe_learning": true
+    },
+    {
+      "field": "text_b_starts_capital",
+      "source": "Derived from GT.text_b",
+      "type": "bool",
+      "semantic_level": "Evidence Fact (deterministic check)",
+      "provenance": "GT text (frozen)",
+      "safe_display": true,
+      "safe_signature": true,
+      "safe_learning": true
+    },
+    {
+      "field": "machine_decision",
+      "source": "machine_eval experimental_c",
+      "type": "str",
+      "semantic_level": "Machine Interpretation (IS-11 decision)",
+      "provenance": "IS-11 (frozen)",
+      "safe_display": "YES (label: \"may be wrong\")",
+      "safe_signature": false,
+      "safe_learning": false
+    },
+    {
+      "field": "machine_outcome",
+      "source": "machine_eval experimental_c",
+      "type": "str",
+      "semantic_level": "Machine Interpretation (vs GT)",
+      "provenance": "IS-11 (frozen)",
+      "safe_display": false,
+      "safe_signature": false,
+      "safe_learning": false
+    },
+    {
+      "field": "content_type",
+      "source": "Cannot derive",
+      "type": "str",
+      "semantic_level": "Cannot derive (64% ambiguous)",
+      "provenance": "N/A",
+      "safe_display": "Display only (labeled \"may be inaccurate\")",
+      "safe_signature": false,
+      "safe_learning": false
+    }
+  ],
+  "guardrail_labeling": {
+    "ui_labels": {
+      "is_in_table": "TLD Detection: In Table = YES/NO",
+      "different_cell": "TLD Detection: Different Cell = YES/NO",
+      "is01_a": "IS-01: Number = YES/NO",
+      "is02_b": "IS-02: Text = YES/NO",
+      "text_a_ends_period": "Text A ends with period: YES/NO",
+      "text_b_starts_capital": "Text B starts with capital: YES/NO",
+      "machine_decision": "Machine Decision (may be wrong): KEEP_SEPARATE",
+      "machine_outcome": "NOT SHOWN (reveals correctness)",
+      "content_type": "NOT in L1 (optional L0: \"Classified as: X (may be inaccurate)\")"
+    },
+    "automation_bias_risk": {
+      "machine_decision": {
+        "risk": "LOW",
+        "mitigation": "Label \"may be wrong\" explicitly. HVA-02: 2 overrides prove Human CAN override."
+      },
+      "machine_outcome": {
+        "risk": "NONE",
+        "mitigation": "NOT shown to Human."
+      },
+      "tld_fields": {
+        "risk": "LOW",
+        "mitigation": "Label \"TLD Detection\" (machine-derived, not \"correct answer\"). HVA-02: Human overrode TLD failures."
+      },
+      "content_type": {
+        "risk": "LOW",
+        "mitigation": "NOT in L1/SIgnature. Display only with \"may be inaccurate\" label."
+      },
+      "overall": "LOW"
+    },
+    "forbidden_labels": [
+      "Recommended",
+      "Suggested",
+      "Correct Answer",
+      "Should be",
+      "Best choice"
+    ]
+  },
+  "signature_final_selection": {
+    "selected": "S3",
+    "fields": [
+      "is_in_table",
+      "different_cell",
+      "is01_a",
+      "is02_b",
+      "text_a_ends_period",
+      "text_b_starts_capital"
+    ],
+    "field_count": 6,
+    "field_types": "ALL boolean (structural, not semantic)",
+    "version_comparison": {
+      "S1": {
+        "fields": 2,
+        "distinguishes_signals": false,
+        "verdict": "REJECTED (too coarse, SIG-01/02/07 overlap)"
+      },
+      "S2": {
+        "fields": 4,
+        "distinguishes_signals": true,
+        "verdict": "ACCEPTABLE but lacks period/capital"
+      },
+      "S3": {
+        "fields": 6,
+        "distinguishes_signals": true,
+        "verdict": "SELECTED (optimal, includes period/capital for sentence boundary)"
+      },
+      "S4": {
+        "fields": 7,
+        "distinguishes_signals": "Cannot test",
+        "verdict": "REJECTED (content_type not derivable)"
+      }
+    },
+    "s3_on_45_cases": {
+      "unique_signatures": 10,
+      "groups_with_2_plus": 8,
+      "groups_with_3_plus": 6,
+      "singletons": 2,
+      "largest_group": "(False, False, False, False, False, False) — 13 cases, all KEEP_SEPARATE, consistent",
+      "conflict_group": "(False, False, False, True, False, True) — 6 cases, 4 KS + 2 MERGE (figure captions), has_conflict=True",
+      "consistent_groups": "7/8"
+    },
+    "all_fields_satisfy": [
+      "From machine_eval or deterministic derivation from GT text",
+      "Boolean (structural, not semantic)",
+      "Deterministic and reproducible",
+      "Provenance traceable (TLD hash, GT hash)",
+      "No human label",
+      "No semantic judgment",
+      "No frozen evidence modification"
+    ]
+  },
+  "sig_revalidation_without_content_type": {
+    "SIG-01": {
+      "s3_signature": "(True, True, True, False, False, False)",
+      "cases": 5,
+      "consistent": true,
+      "content_type_necessity": "USEFUL (display only), NOT NECESSARY (signature)",
+      "distinguishable": true
+    },
+    "SIG-02": {
+      "s3_signature": "(False, False, False, True, True, True)",
+      "cases": 3,
+      "consistent": true,
+      "has_conflict": true,
+      "content_type_necessity": "REDUNDANT",
+      "distinguishable": true
+    },
+    "SIG-07": {
+      "s3_signature": "(True, True, False, False, False, False)",
+      "cases": 5,
+      "consistent": true,
+      "content_type_necessity": "REDUNDANT",
+      "distinguishable": true
+    },
+    "SIG-08": {
+      "s3_signature": "= SIG-02",
+      "cases": "same as SIG-02",
+      "content_type_necessity": "REDUNDANT",
+      "distinguishable": true
+    },
+    "summary": "content_type is NOT NECESSARY for any signal. S3 alone suffices."
+  },
+  "failure_routing": {
+    "status": "COMPLETE (unchanged from HVA-04)",
+    "routes": [
+      "Evidence Missing → UNKNOWN",
+      "Case Selection uncertain → retain/exclude",
+      "Evidence Pack insufficient → Human expands → UNKNOWN",
+      "Feedback insufficient → no Signal",
+      "Signal unstable → BOUNDARY_REVIEW_REQUIRED",
+      "Counterexample found → BOUNDARY_REVIEW_REQUIRED",
+      "No counterexample → INSUFFICIENT_EVIDENCE",
+      "Boundary unresolved → UNKNOWN",
+      "Future case fails → Signal REVIEW"
+    ],
+    "forbidden": [
+      "fallback = guess",
+      "retry = change decision"
+    ]
+  },
+  "final_gate": {
+    "hva05_status": "READY",
+    "gap1": "CLOSED",
+    "gap4": "CLOSED",
+    "content_type": "REMOVED",
+    "content_type_source": "N/A (not derivable from machine_eval)",
+    "content_type_is_machine_evidence": false,
+    "evidence_source_of_truth": "machine_eval (is11_machine_evaluation_results.json)",
+    "evidence_snapshot_contract": "READY",
+    "signature_minimal_version": "S3",
+    "semantic_leakage": 0,
+    "automation_bias_risk": "LOW",
+    "authority_boundary": "PASS",
+    "implementation_authorized": false,
+    "experiment_authorized": false,
+    "dice_core_modification": false,
+    "p1_p7_modification": false,
+    "tld_modification": false,
+    "is11_modification": false,
+    "gt_modification": false,
+    "frozen_baseline": "INTACT",
+    "production": false,
+    "stop": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "machine_eval_hash": "437aa665210ccd04",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  }
+}

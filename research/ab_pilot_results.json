@@ -1,0 +1,1117 @@
+{
+  "experiment": "M-A Human A/B Evidence Sufficiency Pilot",
+  "session_start": 1789734977920,
+  "session_end": 1789735461641,
+  "total_cases": 24,
+  "completed_cases": 24,
+  "case_results": [
+    {
+      "case_id": "is11_med_001_p23_85_395",
+      "presentation_order": 1,
+      "m1_association_judgment": "yes",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "no",
+      "m4_reconstruction_burden": 1,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 7
+    },
+    {
+      "case_id": "is11_med_001_p18_325_655",
+      "presentation_order": 2,
+      "m1_association_judgment": "uncertain",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "no",
+      "m4_reconstruction_burden": 4,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "insufficient",
+      "semantic_boundary_class": "EVIDENCE_INSUFFICIENT",
+      "revision_count": 6
+    },
+    {
+      "case_id": "is11_efficientnet_p8_467_415",
+      "presentation_order": 3,
+      "m1_association_judgment": "no",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 2,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 7
+    },
+    {
+      "case_id": "is11_resnet_p4_464_620",
+      "presentation_order": 4,
+      "m1_association_judgment": "yes",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 2,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 9
+    },
+    {
+      "case_id": "arxiv_2402.18619_p17_184_561",
+      "presentation_order": 5,
+      "m1_association_judgment": "yes",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 1,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "is11_med_001_p20_85_340",
+      "presentation_order": 6,
+      "m1_association_judgment": "yes",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "no",
+      "m4_reconstruction_burden": 1,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "is11_resnet_p4_309_134",
+      "presentation_order": 7,
+      "m1_association_judgment": "yes",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 2,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "is11_cs_001_p1_108_651",
+      "presentation_order": 8,
+      "m1_association_judgment": "yes",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 1,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "is11_efficientnet_p4_307_448",
+      "presentation_order": 9,
+      "m1_association_judgment": "yes",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 0,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_432_93",
+      "presentation_order": 10,
+      "m1_association_judgment": "yes",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 2,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "is11_efficientnet_p2_158_372",
+      "presentation_order": 11,
+      "m1_association_judgment": "uncertain",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "no",
+      "m4_reconstruction_burden": 4,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "uncertain",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "is11_med_001_p15_261_316",
+      "presentation_order": 12,
+      "m1_association_judgment": "yes",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 2,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "is11_resnet_p7_321_545",
+      "presentation_order": 13,
+      "m1_association_judgment": "uncertain",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "no",
+      "m4_reconstruction_burden": 4,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "uncertain",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "is11_med_001_p15_498_107",
+      "presentation_order": 14,
+      "m1_association_judgment": "uncertain",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "no",
+      "m4_reconstruction_burden": 4,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "uncertain",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "arxiv_2402.18619_p10_72_729",
+      "presentation_order": 15,
+      "m1_association_judgment": "uncertain",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "no",
+      "m4_reconstruction_burden": 4,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "uncertain",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "is11_efficientnet_p6_79_415",
+      "presentation_order": 16,
+      "m1_association_judgment": "no",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 2,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_457_234",
+      "presentation_order": 17,
+      "m1_association_judgment": "yes",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 2,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_346_73",
+      "presentation_order": 18,
+      "m1_association_judgment": "uncertain",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 2,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "uncertain",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "is11_resnet_p5_359_225",
+      "presentation_order": 19,
+      "m1_association_judgment": "no",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 2,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 7
+    },
+    {
+      "case_id": "is11_efficientnet_p4_66_331",
+      "presentation_order": 20,
+      "m1_association_judgment": "no",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 2,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 6
+    },
+    {
+      "case_id": "is11_resnet_p1_435_316",
+      "presentation_order": 21,
+      "m1_association_judgment": "yes",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 1,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_339_297",
+      "presentation_order": 22,
+      "m1_association_judgment": "no",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 2,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 6
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_147_496",
+      "presentation_order": 23,
+      "m1_association_judgment": "no",
+      "m2_pdf_reopen_required": "yes",
+      "m3_additional_document_search_required": "no",
+      "m4_reconstruction_burden": 2,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 5
+    },
+    {
+      "case_id": "is11_efficientnet_p4_188_461",
+      "presentation_order": 24,
+      "m1_association_judgment": "no",
+      "m2_pdf_reopen_required": "no",
+      "m3_additional_document_search_required": "yes",
+      "m4_reconstruction_burden": 2,
+      "m5_time_to_judgment": "NOT_AVAILABLE",
+      "m6_evidence_sufficiency": "sufficient",
+      "semantic_boundary_class": "NOT_DETERMINABLE",
+      "revision_count": 6
+    }
+  ],
+  "event_log": [
+    {
+      "case_id": "is11_med_001_p23_85_395",
+      "metric": "m1",
+      "new_value": "yes",
+      "timestamp": 1789734991669
+    },
+    {
+      "case_id": "is11_med_001_p23_85_395",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789734993339
+    },
+    {
+      "case_id": "is11_med_001_p23_85_395",
+      "metric": "m3",
+      "new_value": "no",
+      "timestamp": 1789735000270
+    },
+    {
+      "case_id": "is11_med_001_p23_85_395",
+      "metric": "m4",
+      "new_value": "1",
+      "timestamp": 1789735035026
+    },
+    {
+      "case_id": "is11_med_001_p23_85_395",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735038868
+    },
+    {
+      "case_id": "is11_med_001_p23_85_395",
+      "metric": "m4",
+      "old_value": "1",
+      "new_value": "2",
+      "timestamp": 1789735073488
+    },
+    {
+      "case_id": "is11_med_001_p23_85_395",
+      "metric": "m4",
+      "old_value": "2",
+      "new_value": "1",
+      "timestamp": 1789735077364
+    },
+    {
+      "case_id": "is11_med_001_p18_325_655",
+      "metric": "m6",
+      "new_value": "insufficient",
+      "timestamp": 1789735088159
+    },
+    {
+      "case_id": "is11_med_001_p18_325_655",
+      "metric": "m4",
+      "new_value": "4",
+      "timestamp": 1789735090692
+    },
+    {
+      "case_id": "is11_med_001_p18_325_655",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735095326
+    },
+    {
+      "case_id": "is11_med_001_p18_325_655",
+      "metric": "m1",
+      "new_value": "uncertain",
+      "timestamp": 1789735101671
+    },
+    {
+      "case_id": "is11_med_001_p18_325_655",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735104372
+    },
+    {
+      "case_id": "is11_med_001_p18_325_655",
+      "metric": "m3",
+      "old_value": "yes",
+      "new_value": "no",
+      "timestamp": 1789735115588
+    },
+    {
+      "case_id": "is11_efficientnet_p8_467_415",
+      "metric": "m1",
+      "new_value": "no",
+      "timestamp": 1789735124338
+    },
+    {
+      "case_id": "is11_efficientnet_p8_467_415",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735125325
+    },
+    {
+      "case_id": "is11_efficientnet_p8_467_415",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735127375
+    },
+    {
+      "case_id": "is11_efficientnet_p8_467_415",
+      "metric": "m4",
+      "new_value": "2",
+      "timestamp": 1789735129246
+    },
+    {
+      "case_id": "is11_efficientnet_p8_467_415",
+      "metric": "m4",
+      "old_value": "2",
+      "new_value": "1",
+      "timestamp": 1789735130539
+    },
+    {
+      "case_id": "is11_efficientnet_p8_467_415",
+      "metric": "m4",
+      "old_value": "1",
+      "new_value": "2",
+      "timestamp": 1789735136413
+    },
+    {
+      "case_id": "is11_efficientnet_p8_467_415",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735137808
+    },
+    {
+      "case_id": "is11_resnet_p4_464_620",
+      "metric": "m1",
+      "new_value": "uncertain",
+      "timestamp": 1789735144529
+    },
+    {
+      "case_id": "is11_resnet_p4_464_620",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735145805
+    },
+    {
+      "case_id": "is11_resnet_p4_464_620",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735146879
+    },
+    {
+      "case_id": "is11_resnet_p4_464_620",
+      "metric": "m4",
+      "new_value": "2",
+      "timestamp": 1789735148008
+    },
+    {
+      "case_id": "is11_resnet_p4_464_620",
+      "metric": "m6",
+      "new_value": "insufficient",
+      "timestamp": 1789735151875
+    },
+    {
+      "case_id": "is11_resnet_p4_464_620",
+      "metric": "m1",
+      "old_value": "uncertain",
+      "new_value": "yes",
+      "timestamp": 1789735163767
+    },
+    {
+      "case_id": "is11_resnet_p4_464_620",
+      "metric": "m6",
+      "old_value": "insufficient",
+      "new_value": "sufficient",
+      "timestamp": 1789735166521
+    },
+    {
+      "case_id": "is11_resnet_p4_464_620",
+      "metric": "m6",
+      "old_value": "sufficient",
+      "new_value": "insufficient",
+      "timestamp": 1789735167608
+    },
+    {
+      "case_id": "is11_resnet_p4_464_620",
+      "metric": "m6",
+      "old_value": "insufficient",
+      "new_value": "sufficient",
+      "timestamp": 1789735169316
+    },
+    {
+      "case_id": "arxiv_2402.18619_p17_184_561",
+      "metric": "m1",
+      "new_value": "yes",
+      "timestamp": 1789735174379
+    },
+    {
+      "case_id": "arxiv_2402.18619_p17_184_561",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735176332
+    },
+    {
+      "case_id": "arxiv_2402.18619_p17_184_561",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735180304
+    },
+    {
+      "case_id": "arxiv_2402.18619_p17_184_561",
+      "metric": "m4",
+      "new_value": "1",
+      "timestamp": 1789735181179
+    },
+    {
+      "case_id": "arxiv_2402.18619_p17_184_561",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735182379
+    },
+    {
+      "case_id": "is11_med_001_p20_85_340",
+      "metric": "m1",
+      "new_value": "yes",
+      "timestamp": 1789735186204
+    },
+    {
+      "case_id": "is11_med_001_p20_85_340",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735186817
+    },
+    {
+      "case_id": "is11_med_001_p20_85_340",
+      "metric": "m3",
+      "new_value": "no",
+      "timestamp": 1789735189292
+    },
+    {
+      "case_id": "is11_med_001_p20_85_340",
+      "metric": "m4",
+      "new_value": "1",
+      "timestamp": 1789735189921
+    },
+    {
+      "case_id": "is11_med_001_p20_85_340",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735190470
+    },
+    {
+      "case_id": "is11_resnet_p4_309_134",
+      "metric": "m1",
+      "new_value": "yes",
+      "timestamp": 1789735196133
+    },
+    {
+      "case_id": "is11_resnet_p4_309_134",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735196774
+    },
+    {
+      "case_id": "is11_resnet_p4_309_134",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735197475
+    },
+    {
+      "case_id": "is11_resnet_p4_309_134",
+      "metric": "m4",
+      "new_value": "2",
+      "timestamp": 1789735198258
+    },
+    {
+      "case_id": "is11_resnet_p4_309_134",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735199287
+    },
+    {
+      "case_id": "is11_cs_001_p1_108_651",
+      "metric": "m1",
+      "new_value": "yes",
+      "timestamp": 1789735204011
+    },
+    {
+      "case_id": "is11_cs_001_p1_108_651",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735204666
+    },
+    {
+      "case_id": "is11_cs_001_p1_108_651",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735205516
+    },
+    {
+      "case_id": "is11_cs_001_p1_108_651",
+      "metric": "m4",
+      "new_value": "1",
+      "timestamp": 1789735206325
+    },
+    {
+      "case_id": "is11_cs_001_p1_108_651",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735208563
+    },
+    {
+      "case_id": "is11_efficientnet_p4_307_448",
+      "metric": "m1",
+      "new_value": "yes",
+      "timestamp": 1789735211137
+    },
+    {
+      "case_id": "is11_efficientnet_p4_307_448",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735211762
+    },
+    {
+      "case_id": "is11_efficientnet_p4_307_448",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735212325
+    },
+    {
+      "case_id": "is11_efficientnet_p4_307_448",
+      "metric": "m4",
+      "new_value": "0",
+      "timestamp": 1789735213617
+    },
+    {
+      "case_id": "is11_efficientnet_p4_307_448",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735214425
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_432_93",
+      "metric": "m1",
+      "new_value": "yes",
+      "timestamp": 1789735221642
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_432_93",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735222787
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_432_93",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735223558
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_432_93",
+      "metric": "m4",
+      "new_value": "2",
+      "timestamp": 1789735224295
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_432_93",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735225267
+    },
+    {
+      "case_id": "is11_efficientnet_p2_158_372",
+      "metric": "m1",
+      "new_value": "uncertain",
+      "timestamp": 1789735229371
+    },
+    {
+      "case_id": "is11_efficientnet_p2_158_372",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735230499
+    },
+    {
+      "case_id": "is11_efficientnet_p2_158_372",
+      "metric": "m3",
+      "new_value": "no",
+      "timestamp": 1789735231546
+    },
+    {
+      "case_id": "is11_efficientnet_p2_158_372",
+      "metric": "m4",
+      "new_value": "4",
+      "timestamp": 1789735232329
+    },
+    {
+      "case_id": "is11_efficientnet_p2_158_372",
+      "metric": "m6",
+      "new_value": "uncertain",
+      "timestamp": 1789735232891
+    },
+    {
+      "case_id": "is11_med_001_p15_261_316",
+      "metric": "m1",
+      "new_value": "yes",
+      "timestamp": 1789735240483
+    },
+    {
+      "case_id": "is11_med_001_p15_261_316",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735241525
+    },
+    {
+      "case_id": "is11_med_001_p15_261_316",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735242372
+    },
+    {
+      "case_id": "is11_med_001_p15_261_316",
+      "metric": "m4",
+      "new_value": "2",
+      "timestamp": 1789735243043
+    },
+    {
+      "case_id": "is11_med_001_p15_261_316",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735244716
+    },
+    {
+      "case_id": "is11_resnet_p7_321_545",
+      "metric": "m1",
+      "new_value": "uncertain",
+      "timestamp": 1789735249458
+    },
+    {
+      "case_id": "is11_resnet_p7_321_545",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735249995
+    },
+    {
+      "case_id": "is11_resnet_p7_321_545",
+      "metric": "m3",
+      "new_value": "no",
+      "timestamp": 1789735250549
+    },
+    {
+      "case_id": "is11_resnet_p7_321_545",
+      "metric": "m4",
+      "new_value": "4",
+      "timestamp": 1789735251229
+    },
+    {
+      "case_id": "is11_resnet_p7_321_545",
+      "metric": "m6",
+      "new_value": "uncertain",
+      "timestamp": 1789735251758
+    },
+    {
+      "case_id": "is11_med_001_p15_498_107",
+      "metric": "m1",
+      "new_value": "uncertain",
+      "timestamp": 1789735256059
+    },
+    {
+      "case_id": "is11_med_001_p15_498_107",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735256677
+    },
+    {
+      "case_id": "is11_med_001_p15_498_107",
+      "metric": "m3",
+      "new_value": "no",
+      "timestamp": 1789735257144
+    },
+    {
+      "case_id": "is11_med_001_p15_498_107",
+      "metric": "m4",
+      "new_value": "4",
+      "timestamp": 1789735257881
+    },
+    {
+      "case_id": "is11_med_001_p15_498_107",
+      "metric": "m6",
+      "new_value": "uncertain",
+      "timestamp": 1789735258457
+    },
+    {
+      "case_id": "arxiv_2402.18619_p10_72_729",
+      "metric": "m1",
+      "new_value": "uncertain",
+      "timestamp": 1789735264496
+    },
+    {
+      "case_id": "arxiv_2402.18619_p10_72_729",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735265113
+    },
+    {
+      "case_id": "arxiv_2402.18619_p10_72_729",
+      "metric": "m3",
+      "new_value": "no",
+      "timestamp": 1789735265658
+    },
+    {
+      "case_id": "arxiv_2402.18619_p10_72_729",
+      "metric": "m4",
+      "new_value": "4",
+      "timestamp": 1789735266438
+    },
+    {
+      "case_id": "arxiv_2402.18619_p10_72_729",
+      "metric": "m6",
+      "new_value": "uncertain",
+      "timestamp": 1789735267151
+    },
+    {
+      "case_id": "is11_efficientnet_p6_79_415",
+      "metric": "m1",
+      "new_value": "no",
+      "timestamp": 1789735287961
+    },
+    {
+      "case_id": "is11_efficientnet_p6_79_415",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735288916
+    },
+    {
+      "case_id": "is11_efficientnet_p6_79_415",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735289586
+    },
+    {
+      "case_id": "is11_efficientnet_p6_79_415",
+      "metric": "m4",
+      "new_value": "2",
+      "timestamp": 1789735290235
+    },
+    {
+      "case_id": "is11_efficientnet_p6_79_415",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735291065
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_457_234",
+      "metric": "m1",
+      "new_value": "yes",
+      "timestamp": 1789735299470
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_457_234",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735300069
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_457_234",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735302178
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_457_234",
+      "metric": "m4",
+      "new_value": "2",
+      "timestamp": 1789735303307
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_457_234",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735303928
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_346_73",
+      "metric": "m1",
+      "new_value": "uncertain",
+      "timestamp": 1789735317803
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_346_73",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735318733
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_346_73",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735321116
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_346_73",
+      "metric": "m4",
+      "new_value": "2",
+      "timestamp": 1789735324782
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_346_73",
+      "metric": "m6",
+      "new_value": "uncertain",
+      "timestamp": 1789735325386
+    },
+    {
+      "case_id": "is11_resnet_p5_359_225",
+      "metric": "m1",
+      "new_value": "no",
+      "timestamp": 1789735346191
+    },
+    {
+      "case_id": "is11_resnet_p5_359_225",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735346978
+    },
+    {
+      "case_id": "is11_resnet_p5_359_225",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735347620
+    },
+    {
+      "case_id": "is11_resnet_p5_359_225",
+      "metric": "m4",
+      "new_value": "2",
+      "timestamp": 1789735348845
+    },
+    {
+      "case_id": "is11_resnet_p5_359_225",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735350161
+    },
+    {
+      "case_id": "is11_resnet_p5_359_225",
+      "metric": "m4",
+      "old_value": "2",
+      "new_value": "4",
+      "timestamp": 1789735375611
+    },
+    {
+      "case_id": "is11_resnet_p5_359_225",
+      "metric": "m4",
+      "old_value": "4",
+      "new_value": "2",
+      "timestamp": 1789735377441
+    },
+    {
+      "case_id": "is11_efficientnet_p4_66_331",
+      "metric": "m1",
+      "new_value": "uncertain",
+      "timestamp": 1789735418320
+    },
+    {
+      "case_id": "is11_efficientnet_p4_66_331",
+      "metric": "m1",
+      "old_value": "uncertain",
+      "new_value": "no",
+      "timestamp": 1789735419861
+    },
+    {
+      "case_id": "is11_efficientnet_p4_66_331",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735420494
+    },
+    {
+      "case_id": "is11_efficientnet_p4_66_331",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735421465
+    },
+    {
+      "case_id": "is11_efficientnet_p4_66_331",
+      "metric": "m4",
+      "new_value": "2",
+      "timestamp": 1789735422507
+    },
+    {
+      "case_id": "is11_efficientnet_p4_66_331",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735423669
+    },
+    {
+      "case_id": "is11_resnet_p1_435_316",
+      "metric": "m1",
+      "new_value": "yes",
+      "timestamp": 1789735427120
+    },
+    {
+      "case_id": "is11_resnet_p1_435_316",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735427790
+    },
+    {
+      "case_id": "is11_resnet_p1_435_316",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735429515
+    },
+    {
+      "case_id": "is11_resnet_p1_435_316",
+      "metric": "m4",
+      "new_value": "1",
+      "timestamp": 1789735432524
+    },
+    {
+      "case_id": "is11_resnet_p1_435_316",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735433615
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_339_297",
+      "metric": "m1",
+      "new_value": "uncertain",
+      "timestamp": 1789735437919
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_339_297",
+      "metric": "m1",
+      "old_value": "uncertain",
+      "new_value": "no",
+      "timestamp": 1789735438451
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_339_297",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735439461
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_339_297",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735440261
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_339_297",
+      "metric": "m4",
+      "new_value": "2",
+      "timestamp": 1789735440961
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_339_297",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735441553
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_147_496",
+      "metric": "m1",
+      "new_value": "no",
+      "timestamp": 1789735447445
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_147_496",
+      "metric": "m2",
+      "new_value": "yes",
+      "timestamp": 1789735448086
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_147_496",
+      "metric": "m3",
+      "new_value": "no",
+      "timestamp": 1789735448728
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_147_496",
+      "metric": "m4",
+      "new_value": "2",
+      "timestamp": 1789735450270
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_147_496",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735450903
+    },
+    {
+      "case_id": "is11_efficientnet_p4_188_461",
+      "metric": "m1",
+      "new_value": "uncertain",
+      "timestamp": 1789735454903
+    },
+    {
+      "case_id": "is11_efficientnet_p4_188_461",
+      "metric": "m1",
+      "old_value": "uncertain",
+      "new_value": "no",
+      "timestamp": 1789735455448
+    },
+    {
+      "case_id": "is11_efficientnet_p4_188_461",
+      "metric": "m2",
+      "new_value": "no",
+      "timestamp": 1789735456244
+    },
+    {
+      "case_id": "is11_efficientnet_p4_188_461",
+      "metric": "m3",
+      "new_value": "yes",
+      "timestamp": 1789735456798
+    },
+    {
+      "case_id": "is11_efficientnet_p4_188_461",
+      "metric": "m4",
+      "new_value": "2",
+      "timestamp": 1789735457423
+    },
+    {
+      "case_id": "is11_efficientnet_p4_188_461",
+      "metric": "m6",
+      "new_value": "sufficient",
+      "timestamp": 1789735457989
+    }
+  ]
+}

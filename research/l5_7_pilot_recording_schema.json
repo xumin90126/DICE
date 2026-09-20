@@ -1,0 +1,81 @@
+{
+  "schema_version": "L5.7_v1",
+  "description": "Recording schema for Human Validation Pilot. One record per judgment.",
+  "required_fields": {
+    "participant_id": {
+      "type": "string",
+      "description": "Anonymous participant identifier"
+    },
+    "item_id": {
+      "type": "string",
+      "description": "A|case_id / B|group_id / C|group_id"
+    },
+    "workflow": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "case_id_or_group_id": {
+      "type": "string",
+      "description": "The case_id (A) or group_id (B/C) being judged"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "KEEP_SEPARATE",
+        "MERGE",
+        "UNKNOWN"
+      ],
+      "description": "Human semantic judgment"
+    },
+    "time_seconds": {
+      "type": "number",
+      "description": "Time to complete this judgment (seconds)"
+    }
+  },
+  "optional_fields": {
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "Easy",
+        "Medium",
+        "Hard"
+      ],
+      "description": "Perceived difficulty"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "description": "Confidence in judgment"
+    },
+    "order_position": {
+      "type": "integer",
+      "description": "Position in sequence (1st, 2nd, 3rd workflow)"
+    },
+    "expansion_count": {
+      "type": "integer",
+      "description": "C only: how many levels expanded"
+    },
+    "levels_viewed": {
+      "type": "array",
+      "description": "C only: which levels were viewed"
+    },
+    "behavioral_notes": {
+      "type": "string",
+      "description": "Observer notes (abstraction behavior, revisit behavior, etc.)"
+    }
+  },
+  "behavioral_indicators": {
+    "ABSTRACTION_BEHAVIOR": "Human performs cross-instance comparison / commonality search / prototype formation",
+    "REVISIT_BEHAVIOR": "Human frequently returns to previously viewed evidence",
+    "EXPANSION_BEHAVIOR": "Human expands beyond default exposure (C only)"
+  },
+  "workload_proxy_warning": "review_count / evidence_exposure / interaction_count are workload PROXY, NOT cognitive_load. True burden = time + difficulty + abstraction_burden + task_behavior."
+}

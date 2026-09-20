@@ -1,0 +1,11 @@
+{
+  "A_all_15_corrected": false,
+  "B_all_zero": true,
+  "C_all_zero": false,
+  "N_values_fully_safe": [],
+  "gt_merge_geometry_only_also_clean": true,
+  "gt_merge_immunity_all_15": true,
+  "n_safe_N": 0,
+  "robust_ge_3_of_5": false,
+  "verdict": "REJECTED"
+}

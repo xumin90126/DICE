@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "purpose": "Phase 3 closure sampling-strategy diagnostic (READ-ONLY)",
+    "timestamp": "2026-09-10T14:13:11",
+    "universe_size": 1299,
+    "sample_size": 54
+  },
+  "H1_genuine_sparsity": {
+    "universe_size": 1299,
+    "table_domain_cases": 759,
+    "non_table_cases": 540,
+    "figure_context_gated_total": 79,
+    "prevalence_in_universe": 0.0608,
+    "prevalence_in_non_table": 0.1463,
+    "type_breakdown": {
+      "obs_a": 3,
+      "tick": 60,
+      "capblock": 16
+    },
+    "component_overlaps": {
+      "obs_a": 3,
+      "capblock": 19,
+      "tick": 65
+    },
+    "per_document": {
+      "PH3-ASTRO-001": 3,
+      "PH3-EARTH-002": 76
+    },
+    "pages_with_figure_context": 14,
+    "top_pages": [
+      {
+        "doc": "PH3-EARTH-002",
+        "page": 50,
+        "n": 30
+      },
+      {
+        "doc": "PH3-EARTH-002",
+        "page": 36,
+        "n": 19
+      },
+      {
+        "doc": "PH3-EARTH-002",
+        "page": 82,
+        "n": 10
+      },
+      {
+        "doc": "PH3-EARTH-002",
+        "page": 27,
+        "n": 6
+      },
+      {
+        "doc": "PH3-EARTH-002",
+        "page": 52,
+        "n": 4
+      },
+      {
+        "doc": "PH3-EARTH-002",
+        "page": 75,
+        "n": 2
+      },
+      {
+        "doc": "PH3-ASTRO-001",
+        "page": 2,
+        "n": 1
+      },
+      {
+        "doc": "PH3-ASTRO-001",
+        "page": 4,
+        "n": 1
+      }
+    ],
+    "in_frozen_sample": [
+      "IS14-AMB-491",
+      "IS14-AMB-518",
+      "IS14-AMB-535"
+    ],
+    "classification": "OBSERVED"
+  },
+  "H2_sampling_frame": {
+    "universe_prevalence": 0.0608,
+    "expected_in_n54_if_blind": 3.3,
+    "observed_in_sample": 3,
+    "sampling_fidelity_ratio": 0.91,
+    "strata_dilution_check": "OBSERVED: blind geometric sampling matched universe prevalence",
+    "classification": "OBSERVED",
+    "gap_bin_representation": {
+      "g1_8_12": {
+        "universe": 507,
+        "figure_context": 13,
+        "rate": 0.0256
+      },
+      "g2_12_20": {
+        "universe": 467,
+        "figure_context": 53,
+        "rate": 0.1135
+      },
+      "g3_20_30": {
+        "universe": 141,
+        "figure_context": 12,
+        "rate": 0.0851
+      },
+      "g4_30_50": {
+        "universe": 184,
+        "figure_context": 1,
+        "rate": 0.0054
+      }
+    }
+  },
+  "H3_research_object_absorption": {
+    "caption": {
+      "caption_context_pages_scanned": 96,
+      "adjacent_pairs_gap_distribution": {
+        "gap_le8_P4_merge": 1499,
+        "gap_8_50_AMBIGUOUS_eligible": 91,
+        "gap_gt50": 8
+      },
+      "note": "gap<=8 => absorbed by P4 DETERMINISTIC_MERGE (never enters AMBIGUOUS universe)",
+      "classification": "OBSERVED"
+    },
+    "numeric_rows": {
+      "adjacent_pairs_gap_distribution": {
+        "gap_8_50_AMBIGUOUS_eligible": 1885,
+        "gap_gt50": 1781,
+        "gap_le8_P4_merge": 60,
+        "overlap_or_merged": 4245,
+        "eligible_and_uniform_center": 129,
+        "eligible_and_uniform_edge": 117
+      },
+      "uniformity": {
+        "rows_total": 1326,
+        "uniform_center": 525,
+        "uniform_edge": 913,
+        "note": "frozen OBS-C uses center-gap CV<=0.15; edge-gap CV shown as diagnostic only (NO tuning)"
+      },
+      "classification": "OBSERVED"
+    }
+  },
+  "ROUTE_ANALYSIS": {
+    "route_A_natural_sampling": {
+      "required_n_for_15_figure_context": 247,
+      "review_cost_multiple_vs_n54": 4.6,
+      "note": "INFERRED from universe prevalence 6.08%; concentration unchanged (96% single-doc)",
+      "classification": "INFERRED"
+    },
+    "route_B_targeted_frame_feasibility": {
+      "positives_available_in_universe": 79,
+      "single_document_share": 0.962,
+      "per_doc_cap_needed_to_reach_15": 12,
+      "resulting_single_doc_share_at_min_cap": 0.8,
+      "g_d1_cross_doc_2_testability": "structurally weak: max 3 positives from any second document",
+      "note": "G-C1 can be satisfied literally ONLY by accepting >=80% single-document positives",
+      "classification": "INFERRED (from OBSERVED per-document distribution)"
+    },
+    "route_C_defer": {
+      "cost": 0,
+      "hypothesis_status": "remains HYPOTHESIS ONLY, not falsified"
+    },
+    "route_D_research_object_redesign": {
+      "map_home": "Perception Development Roadmap 阶段 1-2 (Atomic Observation Layer / Experimental Span Construction) — EXISTING sanctioned path for representation change without frozen impact",
+      "frozen_impact": "none if done in experimental layer; promotion requires roadmap 阶段 5-6 gates",
+      "classification": "INFERRED"
+    },
+    "concentration_summary": {
+      "documents_with_figure_context": {
+        "PH3-ASTRO-001": 3,
+        "PH3-EARTH-002": 76
+      },
+      "pages_with_figure_context": 14,
+      "top3_pages_share": 0.747
+    }
+  }
+}

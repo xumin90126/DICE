@@ -1,0 +1,235 @@
+{
+  "evidence": [
+    {
+      "evidence_id": "f9392b37b467db4a",
+      "observation_id": "263927b4069ad291",
+      "validation_id": "dc4172b91450027d",
+      "document_id": "arxiv_toc",
+      "page_number": 2,
+      "evidence_type": "HEADING",
+      "validated_content": {
+        "text": "Contents",
+        "span_ids": [
+          "1b7ed02754b7058c"
+        ],
+        "bbox": [
+          83.34,
+          110.51,
+          135.86,
+          122.46
+        ]
+      },
+      "source_geometry": {
+        "bbox": [
+          83.34,
+          110.51,
+          135.86,
+          122.46
+        ],
+        "width": 52.52000000000001,
+        "height": 11.949999999999989,
+        "center_x": 109.60000000000001,
+        "center_y": 116.485
+      },
+      "validation_provenance": {
+        "reviewer_id": "ai_assisted_round1",
+        "timestamp": "2026-09-08T13:16:55+00:00",
+        "reviewer_reason": "Genuine page heading: 'Contents' is the title of this TOC page, at top (y=111), bold/contrasted. Real heading.",
+        "duration_seconds": 3e-06
+      },
+      "status": "VALIDATED",
+      "coord_origin": "PDF_TOP_LEFT"
+    }
+  ],
+  "audit_chains": [
+    {
+      "evidence_id": "f9392b37b467db4a",
+      "validation_id": "dc4172b91450027d",
+      "task_id": "a3582b6af41171bb",
+      "observation_id": "263927b4069ad291",
+      "observation_type": "HEADING_CANDIDATE",
+      "document_id": "arxiv_toc",
+      "page_number": 2,
+      "source_bbox": [
+        83.34,
+        110.51,
+        135.86,
+        122.46
+      ],
+      "source_span_ids": [
+        "1b7ed02754b7058c"
+      ],
+      "source_region_ids": [
+        "8cb1aa510e4e2756",
+        "2dc528111577870b"
+      ],
+      "reviewer_decision": "ACCEPT",
+      "reviewer_id": "ai_assisted_round1",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "observation_status": "PROPOSED",
+      "chain_complete": true
+    }
+  ],
+  "blocked": [
+    {
+      "observation_id": "df71954b8f128848",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "bbcbaa69c17bbfc3",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "bc944a2f89791c67",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "d327f231dac2ca58",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "e7d45d9ff08bb5ad",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "4410b3cbf339a871",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "cc4f71d19f5dabae",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "daebad0044124f00",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "34a8522d551d6e89",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "e64f43861517e64d",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "9292086eaccdf253",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "53de61596c3067b8",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "bc5f70bb18e674d3",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "b8ed582641e8ad25",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "2ea24aa6c0450178",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "cae8b2b01736cb5d",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "b6ae50116fcbbe40",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "4c684891b3b41983",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "cb0c7b505e3795d7",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "86974a4759f027c7",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "09ee119989db27a6",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "5b9590f763f483fe",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "febdea62bb27d0ac",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "062f4101888f36b6",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "d92f3d8804ffdd46",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "3c3a70a7e6ded42c",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "a0321cdd5bf140f6",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "340a2d33ff25844c",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "1eebb92f1e604594",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "29def63ede5db1ff",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "241d06f7044b70c4",
+      "decision": "REJECT",
+      "no_evidence": true
+    },
+    {
+      "observation_id": "25733f7594a40c52",
+      "decision": "REJECT",
+      "no_evidence": true
+    }
+  ]
+}

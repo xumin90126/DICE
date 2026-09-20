@@ -1,0 +1,72 @@
+{"type": "session_start", "participant_id": "DRYRUN_001", "condition_order": ["B1", "B2", "A"], "session_start": 1789220203632, "server_timestamp": 1789220203.6369221}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B1", "case_id": "IS11-AMB-414", "decision": "KEEP_SEPARATE", "timestamp": 1789220203642, "server_timestamp": 1789220203.6456718}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B1", "case_id": "IS11-AMB-422", "decision": "MERGE", "timestamp": 1789220203650, "server_timestamp": 1789220203.654614}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B1", "case_id": "IS11-AMB-457", "decision": "KEEP_SEPARATE", "timestamp": 1789220203659, "server_timestamp": 1789220203.662716}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B1", "case_id": "IS11-AMB-462", "decision": "KEEP_SEPARATE", "timestamp": 1789220203667, "server_timestamp": 1789220203.6707032}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B1", "case_id": "IS11-AMB-467", "decision": "KEEP_SEPARATE", "timestamp": 1789220203675, "server_timestamp": 1789220203.67869}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B1", "case_id": "IS11-AMB-483", "decision": "MERGE", "timestamp": 1789220203682, "server_timestamp": 1789220203.6861281}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B1", "case_id": "IS11-AMB-505", "decision": "UNKNOWN", "timestamp": 1789220203691, "server_timestamp": 1789220203.694747}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B1", "case_id": "IS11-AMB-514", "decision": "UNKNOWN", "timestamp": 1789220203699, "server_timestamp": 1789220203.702751}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B1", "case_id": "IS11-AMB-519", "decision": "KEEP_SEPARATE", "timestamp": 1789220203706, "server_timestamp": 1789220203.710347}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B1", "case_id": "IS11-AMB-522", "decision": "UNKNOWN", "timestamp": 1789220203714, "server_timestamp": 1789220203.7179258}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B2", "case_id": "IS11-AMB-530", "decision": "MERGE", "timestamp": 1789220203722, "server_timestamp": 1789220203.7257102}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B2", "case_id": "IS11-AMB-052", "decision": "KEEP_SEPARATE", "timestamp": 1789220203730, "server_timestamp": 1789220203.734598}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B2", "case_id": "IS11-AMB-163", "decision": "UNKNOWN", "timestamp": 1789220203739, "server_timestamp": 1789220203.743071}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B2", "case_id": "IS11-AMB-168", "decision": "KEEP_SEPARATE", "timestamp": 1789220203747, "server_timestamp": 1789220203.7510421}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B2", "case_id": "IS11-AMB-198", "decision": "KEEP_SEPARATE", "timestamp": 1789220203756, "server_timestamp": 1789220203.759381}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B2", "case_id": "IS11-AMB-205", "decision": "KEEP_SEPARATE", "timestamp": 1789220203764, "server_timestamp": 1789220203.768023}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B2", "case_id": "IS11-AMB-375", "decision": "KEEP_SEPARATE", "timestamp": 1789220203772, "server_timestamp": 1789220203.776771}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B2", "case_id": "IS11-AMB-418", "decision": "UNKNOWN", "timestamp": 1789220203781, "server_timestamp": 1789220203.784841}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B2", "case_id": "IS11-AMB-032", "decision": "KEEP_SEPARATE", "timestamp": 1789220203789, "server_timestamp": 1789220203.793132}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "B2", "case_id": "IS11-AMB-064", "decision": "KEEP_SEPARATE", "timestamp": 1789220203797, "server_timestamp": 1789220203.803139}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "A", "case_id": "IS11-AMB-005", "decision": "UNKNOWN", "timestamp": 1789220203811, "server_timestamp": 1789220203.815082}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "A", "case_id": "IS11-AMB-024", "decision": "MERGE", "timestamp": 1789220203820, "server_timestamp": 1789220203.8243861}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "A", "case_id": "IS11-AMB-034", "decision": "UNKNOWN", "timestamp": 1789220203829, "server_timestamp": 1789220203.832774}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "A", "case_id": "IS11-AMB-074", "decision": "MERGE", "timestamp": 1789220203837, "server_timestamp": 1789220203.841296}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "A", "case_id": "IS11-AMB-130", "decision": "MERGE", "timestamp": 1789220203846, "server_timestamp": 1789220203.850385}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "A", "case_id": "IS11-AMB-135", "decision": "MERGE", "timestamp": 1789220203855, "server_timestamp": 1789220203.859446}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "A", "case_id": "IS11-AMB-262", "decision": "UNKNOWN", "timestamp": 1789220203864, "server_timestamp": 1789220203.868177}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "A", "case_id": "IS11-AMB-313", "decision": "KEEP_SEPARATE", "timestamp": 1789220203873, "server_timestamp": 1789220203.876877}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "A", "case_id": "IS11-AMB-346", "decision": "MERGE", "timestamp": 1789220203881, "server_timestamp": 1789220203.88534}
+{"type": "decision", "participant_id": "DRYRUN_001", "condition": "A", "case_id": "IS11-AMB-350", "decision": "UNKNOWN", "timestamp": 1789220203893, "server_timestamp": 1789220203.8971362}
+{"type": "session_start", "participant_id": "DRYRUN_002", "condition_order": ["B2", "A", "B1"], "session_start": 1789221502020, "server_timestamp": 1789221502.022654}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B2", "case_id": "IS11-AMB-530", "decision": "MERGE", "timestamp": 1789221502026, "server_timestamp": 1789221502.0287292}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B2", "case_id": "IS11-AMB-052", "decision": "MERGE", "timestamp": 1789221502031, "server_timestamp": 1789221502.033143}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B2", "case_id": "IS11-AMB-163", "decision": "UNKNOWN", "timestamp": 1789221502035, "server_timestamp": 1789221502.037607}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B2", "case_id": "IS11-AMB-168", "decision": "KEEP_SEPARATE", "timestamp": 1789221502040, "server_timestamp": 1789221502.04203}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B2", "case_id": "IS11-AMB-198", "decision": "UNKNOWN", "timestamp": 1789221502044, "server_timestamp": 1789221502.0468512}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B2", "case_id": "IS11-AMB-205", "decision": "UNKNOWN", "timestamp": 1789221502049, "server_timestamp": 1789221502.0517461}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B2", "case_id": "IS11-AMB-375", "decision": "KEEP_SEPARATE", "timestamp": 1789221502054, "server_timestamp": 1789221502.056782}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B2", "case_id": "IS11-AMB-418", "decision": "MERGE", "timestamp": 1789221502059, "server_timestamp": 1789221502.061839}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B2", "case_id": "IS11-AMB-032", "decision": "MERGE", "timestamp": 1789221502065, "server_timestamp": 1789221502.066869}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B2", "case_id": "IS11-AMB-064", "decision": "UNKNOWN", "timestamp": 1789221502070, "server_timestamp": 1789221502.073246}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "A", "case_id": "IS11-AMB-005", "decision": "MERGE", "timestamp": 1789221502076, "server_timestamp": 1789221502.078353}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "A", "case_id": "IS11-AMB-024", "decision": "UNKNOWN", "timestamp": 1789221502081, "server_timestamp": 1789221502.0841842}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "A", "case_id": "IS11-AMB-034", "decision": "MERGE", "timestamp": 1789221502087, "server_timestamp": 1789221502.089129}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "A", "case_id": "IS11-AMB-074", "decision": "MERGE", "timestamp": 1789221502092, "server_timestamp": 1789221502.094052}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "A", "case_id": "IS11-AMB-130", "decision": "KEEP_SEPARATE", "timestamp": 1789221502097, "server_timestamp": 1789221502.099044}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "A", "case_id": "IS11-AMB-135", "decision": "MERGE", "timestamp": 1789221502102, "server_timestamp": 1789221502.10399}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "A", "case_id": "IS11-AMB-262", "decision": "KEEP_SEPARATE", "timestamp": 1789221502107, "server_timestamp": 1789221502.109667}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "A", "case_id": "IS11-AMB-313", "decision": "MERGE", "timestamp": 1789221502114, "server_timestamp": 1789221502.116259}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "A", "case_id": "IS11-AMB-346", "decision": "KEEP_SEPARATE", "timestamp": 1789221502119, "server_timestamp": 1789221502.121776}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "A", "case_id": "IS11-AMB-350", "decision": "UNKNOWN", "timestamp": 1789221502125, "server_timestamp": 1789221502.127424}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B1", "case_id": "IS11-AMB-414", "decision": "KEEP_SEPARATE", "timestamp": 1789221502130, "server_timestamp": 1789221502.1326778}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B1", "case_id": "IS11-AMB-422", "decision": "MERGE", "timestamp": 1789221502136, "server_timestamp": 1789221502.139101}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B1", "case_id": "IS11-AMB-457", "decision": "KEEP_SEPARATE", "timestamp": 1789221502142, "server_timestamp": 1789221502.144686}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B1", "case_id": "IS11-AMB-462", "decision": "UNKNOWN", "timestamp": 1789221502148, "server_timestamp": 1789221502.150749}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B1", "case_id": "IS11-AMB-467", "decision": "MERGE", "timestamp": 1789221502154, "server_timestamp": 1789221502.156456}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B1", "case_id": "IS11-AMB-483", "decision": "KEEP_SEPARATE", "timestamp": 1789221502160, "server_timestamp": 1789221502.162178}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B1", "case_id": "IS11-AMB-505", "decision": "UNKNOWN", "timestamp": 1789221502165, "server_timestamp": 1789221502.167837}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B1", "case_id": "IS11-AMB-514", "decision": "KEEP_SEPARATE", "timestamp": 1789221502172, "server_timestamp": 1789221502.174195}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B1", "case_id": "IS11-AMB-519", "decision": "MERGE", "timestamp": 1789221502177, "server_timestamp": 1789221502.18023}
+{"type": "decision", "participant_id": "DRYRUN_002", "condition": "B1", "case_id": "IS11-AMB-522", "decision": "KEEP_SEPARATE", "timestamp": 1789221502183, "server_timestamp": 1789221502.1858099}
+{"type": "session_start", "participant_id": "P722", "condition_order": ["B2", "A", "B1"], "session_start": 1789221968172, "case_sets": {"A": ["IS11-AMB-457", "IS11-AMB-519", "IS11-AMB-530", "IS11-AMB-024", "IS11-AMB-135", "IS11-AMB-422", "IS11-AMB-163", "IS11-AMB-034", "IS11-AMB-462", "IS11-AMB-350"], "B1": ["IS11-AMB-032", "IS11-AMB-414", "IS11-AMB-514", "IS11-AMB-313", "IS11-AMB-198", "IS11-AMB-505", "IS11-AMB-064", "IS11-AMB-074", "IS11-AMB-005", "IS11-AMB-467"], "B2": ["IS11-AMB-375", "IS11-AMB-262", "IS11-AMB-522", "IS11-AMB-205", "IS11-AMB-168", "IS11-AMB-346", "IS11-AMB-483", "IS11-AMB-130", "IS11-AMB-052", "IS11-AMB-418"]}, "server_timestamp": 1789221968.1744719}
+{"type": "case_open", "participant_id": "P722", "condition": "B2", "timestamp": 1789222082867, "case_id": "IS11-AMB-375", "case_idx": 0, "server_timestamp": 1789222082.869508}
+{"type": "evidence_expand", "participant_id": "P722", "condition": "B2", "timestamp": 1789222093117, "section": "hiddenFields", "server_timestamp": 1789222093.118904}
+{"type": "evidence_expand", "participant_id": "P722", "condition": "B2", "timestamp": 1789222094116, "section": "hiddenFields", "server_timestamp": 1789222094.11761}
+{"type": "evidence_expand", "participant_id": "P722", "condition": "B2", "timestamp": 1789222094524, "section": "hiddenFields", "server_timestamp": 1789222094.526143}
+{"type": "evidence_expand", "participant_id": "P722", "condition": "B2", "timestamp": 1789222099587, "section": "lineSpansSection", "server_timestamp": 1789222099.588612}
+{"type": "evidence_expand", "participant_id": "P722", "condition": "B2", "timestamp": 1789222100049, "section": "lineSpansSection", "server_timestamp": 1789222100.051017}
+{"type": "evidence_expand", "participant_id": "P722", "condition": "B2", "timestamp": 1789222100457, "section": "lineSpansSection", "server_timestamp": 1789222100.45934}
+{"type": "evidence_expand", "participant_id": "P722", "condition": "B2", "timestamp": 1789222100820, "section": "lineSpansSection", "server_timestamp": 1789222100.821643}
+{"type": "evidence_expand", "participant_id": "P722", "condition": "B2", "timestamp": 1789222101420, "section": "lineSpansSection", "server_timestamp": 1789222101.4218051}

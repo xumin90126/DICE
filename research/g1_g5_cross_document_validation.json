@@ -1,0 +1,242 @@
+{
+  "research_id": "g1_g5_cross_document_validation",
+  "date": "2026-09-18",
+  "mode": "READ_ONLY_RESEARCH",
+  "governance": {
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true,
+    "NEW_CAPABILITY": "NONE",
+    "SYSTEM_MODIFIED": false
+  },
+  "research_questions": [
+    "RQ1: G1-G5 can explain expanded real failure cases?",
+    "RQ2: G1-G5 stable across document types?",
+    "RQ3: Large number of new gaps outside G1-G5?",
+    "RQ4: If unclassifiable, what kind (new type / boundary / observation / evidence / research object)?",
+    "RQ5: Is G1-G5 sufficient as Research Framework?",
+    "RQ6: Is DICE modification necessary?"
+  ],
+  "evidence_base": {
+    "reports_analyzed": "30+",
+    "documents": 13,
+    "document_types": 8,
+    "cases": 70,
+    "problem_types": 23,
+    "human_reviewed_cases": "60/70 (85.7%)",
+    "tasks_covered": 3,
+    "task_1": "Text-Text Boundary Decision (IS-11/P7/PH02, 58 cases)",
+    "task_2": "Text-Drawing Structural Association (M-A, 24 cases)",
+    "task_3": "IS-14 Graphic Text Context (Phase 3, 13 cases)",
+    "sample_coverage_gap": "NO non-academic documents available (annual report, technical report, manual, business document NOT in corpus)",
+    "generalization": "LIMITED (academic papers only)"
+  },
+  "sampling_frame": {
+    "file": "tmp/g1_g5_cross_document_sampling_frame.csv",
+    "total_cases": 70,
+    "by_document": {
+      "is11_efficientnet": 14,
+      "is11_med_001": 11,
+      "is11_cs_001": 10,
+      "is11_resnet": 9,
+      "arxiv_2402.18619": 5,
+      "ind_arxiv_2402": 4,
+      "PH3-ASTRO-001": 3,
+      "PH3-EARTH-002": 3,
+      "ind_arxiv_bio2": 3,
+      "ind_qbio_rna": 3,
+      "PH3-EARTH-001": 2,
+      "all_5_docs": 2,
+      "PH3-MED-001": 1
+    },
+    "by_document_type": {
+      "academic_paper_cs": 32,
+      "academic_paper_chemistry": 11,
+      "academic_paper_nlp": 10,
+      "academic_paper_biology": 6,
+      "academic_paper_astrophysics": 5,
+      "academic_paper_earth_science": 3,
+      "academic_paper_mixed": 2,
+      "academic_paper_medical_physics": 1
+    },
+    "by_problem_type_top10": {
+      "table_column_boundary": 17,
+      "text_drawing_association": 14,
+      "table_header_boundary": 5,
+      "prose_sentence_boundary": 4,
+      "figure_axis_tick": 3,
+      "table_cell_fp": 3,
+      "reference_list_author_title": 3,
+      "reference_list_continuation": 2,
+      "figure_caption_association": 2,
+      "header_contamination_table_fp": 2
+    }
+  },
+  "classification": {
+    "file": "tmp/g1_g5_case_classification.csv",
+    "total_classified": 70,
+    "unclassified": 0,
+    "primary_gap_distribution": {
+      "G1": { "count": 10, "pct": 14.3 },
+      "G2": { "count": 25, "pct": 35.7 },
+      "G3": { "count": 15, "pct": 21.4 },
+      "G4": { "count": 7, "pct": 10.0 },
+      "G5": { "count": 13, "pct": 18.6 }
+    },
+    "confidence": {
+      "HIGH": 52,
+      "MEDIUM": 18,
+      "LOW": 0
+    },
+    "cross_document_coverage": {
+      "G1": { "document_count": 7, "documents": ["PH3-ASTRO-001", "PH3-EARTH-001", "PH3-EARTH-002", "all_5_docs", "arxiv_2402.18619", "is11_efficientnet", "is11_med_001"] },
+      "G2": { "document_count": 7, "documents": ["PH3-ASTRO-001", "PH3-EARTH-001", "PH3-MED-001", "is11_cs_001", "is11_efficientnet", "is11_med_001", "is11_resnet"] },
+      "G3": { "document_count": 6, "documents": ["ind_arxiv_2402", "ind_arxiv_bio2", "is11_cs_001", "is11_efficientnet", "is11_med_001", "is11_resnet"] },
+      "G4": { "document_count": 3, "documents": ["ind_arxiv_2402", "ind_qbio_rna", "is11_efficientnet"] },
+      "G5": { "document_count": 5, "documents": ["arxiv_2402.18619", "ind_arxiv_bio2", "is11_cs_001", "is11_med_001", "is11_resnet"] }
+    },
+    "cross_document_type_coverage": {
+      "G1": { "type_count": 5, "types": ["astrophysics", "chemistry", "cs", "earth_science", "mixed"] },
+      "G2": { "type_count": 5, "types": ["astrophysics", "chemistry", "cs", "medical_physics", "nlp"] },
+      "G3": { "type_count": 4, "types": ["biology", "chemistry", "cs", "nlp"] },
+      "G4": { "type_count": 2, "types": ["biology", "cs"] },
+      "G5": { "type_count": 4, "types": ["biology", "chemistry", "cs", "nlp"] }
+    },
+    "cross_problem_type_coverage": {
+      "G1": { "problem_count": 7 },
+      "G2": { "problem_count": 9 },
+      "G3": { "problem_count": 5 },
+      "G4": { "problem_count": 5 },
+      "G5": { "problem_count": 4 }
+    }
+  },
+  "outlier_audit": {
+    "file": "tmp/g1_g5_outlier_audit.csv",
+    "borderline_cases_audited": 27,
+    "true_new_gap_candidates": 0,
+    "boundary_patterns": [
+      {
+        "boundary": "G2/G4",
+        "case_count": 15,
+        "description": "TLD organization failure (G2) + consumer no fallback (G4). Earliest breakpoint = G2.",
+        "is_new_gap": false
+      },
+      {
+        "boundary": "G3/G5",
+        "case_count": 4,
+        "description": "page_context not presented (G3) + period+cap ambiguous (G5). If resolvable with context = G3, else G5.",
+        "is_new_gap": false
+      },
+      {
+        "boundary": "G5/G3",
+        "case_count": 6,
+        "description": "text unit standard undefined (G5) + period+cap not computed (G3). Even with evidence, standard gap causes disagreement.",
+        "is_new_gap": false
+      },
+      {
+        "boundary": "G5/G4",
+        "case_count": 2,
+        "description": "structural ambiguity (G5) + guard specificity (G4). Value column indistinguishable from row-number column.",
+        "is_new_gap": false
+      }
+    ]
+  },
+  "object_specialization_check": {
+    "figure_problems_mapped": "G1 (raster/cross-page) + G2 (structure not detected) + G3 (extent not shown) + G5 (caption vs reference)",
+    "table_problems_mapped": "G2 (TLD missed) + G4 (binary heuristic) + G5 (column specificity)",
+    "caption_problems_mapped": "G2 (association not queried) + G3 (FIG prefix not computed) + G5 (caption vs reference)",
+    "formula_list_heading_mapped": "G2 (header contamination) + G4 (consumer integration)",
+    "verdict": "NO object-specific gap type created. Object type ≠ Evidence Gap Type. CONFIRMED."
+  },
+  "cross_task_validation": {
+    "task_1_boundary_decision": {
+      "cases": 58,
+      "gap_types": ["G2", "G3", "G4", "G5"],
+      "primary_pattern": "G2+G4 (organization + consumer)"
+    },
+    "task_2_text_drawing_association": {
+      "cases": 24,
+      "gap_types": ["G1", "G2", "G3", "G5"],
+      "primary_pattern": "G3+G1 (presentation + observation)"
+    },
+    "task_3_graphic_text_context": {
+      "cases": 13,
+      "gap_types": ["G1", "G2"],
+      "primary_pattern": "G1+G2 (observation + organization)"
+    },
+    "convergent_finding": "All 3 tasks produce cases that fit G1-G5. Same taxonomy covers all tasks."
+  },
+  "over_design_check": {
+    "O1_system_modified_for_sampling": { "result": "NO", "detail": "READ-ONLY research only" },
+    "O2_new_fields_for_coverage": { "result": "NO", "detail": "No new fields proposed" },
+    "O3_object_specific_gap": { "result": "NO", "detail": "All object problems map to G1-G5" },
+    "O4_single_case_generalization": { "result": "NO", "detail": "All abstractions require ≥2 cross-document cases" },
+    "O5_new_runtime_capability": { "result": "NO", "detail": "RUNTIME_AUTHORITY = ZERO" },
+    "O6_new_capability": { "result": "NO", "detail": "NEW_CAPABILITY = NONE" },
+    "O7_new_human_review_requirement": { "result": "NO", "detail": "HUMAN_VALIDATION_AUTHORIZED = FALSE" },
+    "overall_risk": "LOW"
+  },
+  "final_questions": {
+    "Q1_coverage": {
+      "answer": "70/70 = 100% classified. 0 unclassified. 0 new gap candidates."
+    },
+    "Q2_cross_document_type": {
+      "answer": "YES (within academic papers). All 5 gap types in ≥2 document types. G4 limited to 2 types. Non-academic NOT_TESTED."
+    },
+    "Q3_new_gap": {
+      "answer": "NO. 0 true new gap candidates. 27 borderline cases are existing type boundaries."
+    },
+    "Q4_boundary_nature": {
+      "answer": "Three dominant boundaries: G2↔G4 (TLD+consumer, 15 cases), G3↔G5 (presentation+semantic, 10 cases), G5↔G4 (specificity, 2 cases). All are adjacent types in the evidence flow hierarchy."
+    },
+    "Q5_sufficient_framework": {
+      "answer": "PARTIALLY_SUPPORTED",
+      "supported": ["100% case coverage", "Cross-task stability", "Cross-document stability (≥3 docs per gap)", "No object-specific gaps needed", "No new gap warranted"],
+      "not_supported": ["Non-academic documents NOT_TESTED", "G4 limited to 2 doc types", "Distribution corpus-dependent", "Single-researcher classification", "38.6% borderline cases"]
+    },
+    "Q6_modify_dice": {
+      "answer": "NO",
+      "evidence": [
+        "Framework stable (100% coverage without modification)",
+        "No new gap type warranted",
+        "Dominant pattern (G2+G4) is known — fixing requires IMPLEMENTATION (not authorized)",
+        "M-A Evidence Pack (E1) already fixed G3 cases",
+        "G1 (cross-page) requires new CAPABILITY (DESIGN_RESEARCH_REQUIRED)",
+        "G5 (semantic) is legitimate Human boundary — not fixable"
+      ]
+    }
+  },
+  "limitations": [
+    "ACADEMIC-ONLY CORPUS: all 13 documents are arXiv papers; non-academic NOT_TESTED",
+    "SINGLE-RESEARCHER CLASSIFICATION: no inter-rater reliability test",
+    "38.6% BORDERLINE CASES: 27/70 at boundary between two gap types",
+    "NO LIVE SYSTEM RUNS: all data from existing reports and frozen data",
+    "CORPUS BIAS: distribution inflated by IS-11 TLD coverage problem (G2=35.7%)"
+  ],
+  "files_created": [
+    "tmp/g1_g5_cross_document_validation.md",
+    "tmp/g1_g5_cross_document_validation.json",
+    "tmp/g1_g5_cross_document_sampling_frame.csv",
+    "tmp/g1_g5_case_classification.csv",
+    "tmp/g1_g5_outlier_audit.csv"
+  ],
+  "files_modified": 0,
+  "conclusion": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "SYSTEM_MODIFIED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  }
+}

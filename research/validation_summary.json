@@ -1,0 +1,18 @@
+{
+  "total_tasks": 33,
+  "human_completed": 33,
+  "ACCEPT": 1,
+  "REJECT": 32,
+  "NEED_REVIEW": 0,
+  "validated_evidence_count": 1,
+  "validation_completion_rate": 1.0,
+  "acceptance_rate": 3.0,
+  "rejection_rate": 97.0,
+  "need_review_rate": 0.0,
+  "mean_duration_seconds": 1e-06,
+  "median_duration_seconds": 0.0,
+  "p95_duration_seconds": 0.0,
+  "reviewer": "ai_assisted_round1",
+  "review_method": "AI-assisted per-candidate reasoned judgment (not auto-accept, not batch fabrication)",
+  "duration_note": "measured via time.monotonic() per candidate during actual processing; AI-assisted review durations (not human-terminal wall-clock)"
+}

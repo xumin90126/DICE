@@ -1,0 +1,251 @@
+{
+  "metadata": {
+    "description": "IS-11 Machine Evaluation Results",
+    "type": "EXPERIMENT-ONLY evaluation (Stage 4)",
+    "creation_timestamp": "2026-09-09T23:28:17",
+    "conditions": {
+      "A": "Geometry only (P4 DETERMINISTIC + AMBIGUOUS → INSUFFICIENT_EVIDENCE for AMBIGUOUS)",
+      "B": "Geometry + IS-01 + IS-02 (frozen §9.3 protocol)",
+      "C": "Geometry + IS-01 + IS-02 + IS-11 (experimental)"
+    },
+    "is01_definition": "FROZEN: ^\\d+(\\.\\d+)*\\.?$ or ^[A-Z]\\.\\d+$",
+    "is02_definition": "FROZEN: any word with >2 alpha chars",
+    "is11_definition": "TABLE_CELL_CONTEXT (experimental observer using table_line_detector.py)",
+    "is11_implementation": "EXPERIMENT-ONLY (not integrated into P1-P6)",
+    "evaluation_set": "Frozen 45-case Sampling Frame",
+    "gt_source": "Frozen Semantic GT (Stage 3)",
+    "p1_p6_modified": false,
+    "p7_3": "NOT AUTHORIZED",
+    "production": false
+  },
+  "metrics": {
+    "baseline_a": {
+      "total": 45,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "abstain": 45,
+      "precision": 0.0,
+      "recall": 0.0,
+      "coverage": 0.0,
+      "abstention_rate": 1.0
+    },
+    "baseline_b": {
+      "total": 45,
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "tn": 18,
+      "abstain": 26,
+      "precision": 0.0,
+      "recall": 0.0,
+      "coverage": 0.4222,
+      "abstention_rate": 0.5778
+    },
+    "experimental_c": {
+      "total": 45,
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "tn": 26,
+      "abstain": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "coverage": 0.6,
+      "abstention_rate": 0.4
+    },
+    "incremental_c_vs_b": {
+      "delta_fp": 0,
+      "delta_recall": 0.0,
+      "delta_coverage": 0.1778,
+      "delta_precision": 0.0
+    }
+  },
+  "gates": {
+    "G7_fp_reduction": {
+      "threshold": "ΔFP < 0",
+      "actual": 0,
+      "pass": false
+    },
+    "G8_recall_coverage_safety": {
+      "threshold": "ΔRecall≥0 AND ΔCoverage≥0",
+      "actual_delta_recall": 0.0,
+      "actual_delta_coverage": 0.1778,
+      "pass": true
+    }
+  },
+  "cross_document": {
+    "is11_cs_001": {
+      "a": {
+        "total": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "abstain": 10,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.0,
+        "abstention_rate": 1.0
+      },
+      "b": {
+        "total": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "abstain": 9,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.1,
+        "abstention_rate": 0.9
+      },
+      "c": {
+        "total": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "abstain": 7,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.3,
+        "abstention_rate": 0.7
+      },
+      "delta_fp": 0,
+      "n": 10
+    },
+    "is11_efficientnet": {
+      "a": {
+        "total": 18,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "abstain": 18,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.0,
+        "abstention_rate": 1.0
+      },
+      "b": {
+        "total": 18,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "tn": 12,
+        "abstain": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.7222,
+        "abstention_rate": 0.2778
+      },
+      "c": {
+        "total": 18,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "tn": 14,
+        "abstain": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.8333,
+        "abstention_rate": 0.1667
+      },
+      "delta_fp": 0,
+      "n": 18
+    },
+    "is11_med_001": {
+      "a": {
+        "total": 8,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "abstain": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.0,
+        "abstention_rate": 1.0
+      },
+      "b": {
+        "total": 8,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "abstain": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.0,
+        "abstention_rate": 1.0
+      },
+      "c": {
+        "total": 8,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "abstain": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.0,
+        "abstention_rate": 1.0
+      },
+      "delta_fp": 0,
+      "n": 8
+    },
+    "is11_resnet": {
+      "a": {
+        "total": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "abstain": 9,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.0,
+        "abstention_rate": 1.0
+      },
+      "b": {
+        "total": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 5,
+        "abstain": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.5556,
+        "abstention_rate": 0.4444
+      },
+      "c": {
+        "total": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 9,
+        "abstain": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0
+      },
+      "delta_fp": 0,
+      "n": 9
+    }
+  },
+  "cross_document_stability": {
+    "established": false,
+    "docs_with_fp_reduction": 0,
+    "total_docs": 4
+  },
+  "determinism": {
+    "mismatches": 0,
+    "pass": true
+  },
+  "c_vs_b_differences": 8,
+  "processing_time_seconds": 2.8
+}

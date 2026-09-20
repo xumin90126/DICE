@@ -1,0 +1,426 @@
+{
+  "metadata": {
+    "audit_type": "evidence_relation_expressibility_audit",
+    "date": "2026-09-12",
+    "mode": "READ-ONLY / NO IMPLEMENTATION / NO NEW MODULE / FROZEN INTACT / STOP",
+    "objective": "Determine if Human-needed Evidence Relations can be expressed by existing Evidence Facts"
+  },
+  "executive_summary": {
+    "finding": "4/8 Relations fully expressible, 2/8 partially, 2/8 not expressible, 1/8 not a Relation (L4)",
+    "key_discovery": "TLD already computes table.headers, table.rows, a_cell, b_cell — but compute_is11_observation() compresses them to boolean (is_in_table, different_cell), discarding structural relation data",
+    "gap_type": "DISTILLATION_GAP (for expressible relations) + MISSING_OBSERVATION (for RC2/RC3 — text block segmentation)",
+    "conclusion": "NO NEW MODULE — Relations can be derived evidence representations / research metadata"
+  },
+  "relation_definition": {
+    "R1_multi_evidence_dependency": "Must depend on >=2 Evidence Facts or 1 Fact + 1 Context",
+    "R2_relational_meaning": "Output must describe structural relation between evidence, not copy a field",
+    "R3_traceability": "Must trace back to Input Evidence IDs → Original Evidence → Source",
+    "R4_no_semantic_closure": "Cannot become \"different table columns\" / \"same paragraph\" / \"KEEP_SEPARATE\"",
+    "authority": 0,
+    "forbidden_actions": [
+      "MERGE",
+      "KEEP",
+      "REJECT",
+      "SELECT",
+      "ROUTE",
+      "RANK",
+      "SCORE",
+      "RECOMMEND",
+      "DECIDE",
+      "EXECUTE"
+    ]
+  },
+  "relation_candidates": [
+    {
+      "id": "RC1",
+      "name": "COLUMN_POSITION_RELATION",
+      "human_evidence": "70 TABLE_STRUCTURE + 57 NUMERIC_VALUE mentions",
+      "cases": 22
+    },
+    {
+      "id": "RC2",
+      "name": "PARAGRAPH_MEMBERSHIP_RELATION",
+      "human_evidence": "4 PARAGRAPH + 8 SENTENCE_BOUNDARY; A/B disagreement",
+      "cases": 4
+    },
+    {
+      "id": "RC3",
+      "name": "CAPTION_CONTINUITY_RELATION",
+      "human_evidence": "13 FIGURE_CAPTION mentions",
+      "cases": 2
+    },
+    {
+      "id": "RC4",
+      "name": "CONTENT_TYPE_RELATION",
+      "human_evidence": "57 NUMERIC_VALUE + 14 TABLE_HEADER mentions",
+      "cases": 13
+    },
+    {
+      "id": "RC5",
+      "name": "CROSS_INSTANCE_ALIGNMENT_RELATION",
+      "human_evidence": "Implied by 70 TABLE_STRUCTURE",
+      "cases": "ALL table"
+    },
+    {
+      "id": "RC6",
+      "name": "COUNTEREVIDENCE_RELATION",
+      "human_evidence": "2 UNKNOWN decisions (uncertainty)",
+      "cases": "ALL"
+    },
+    {
+      "id": "RC7",
+      "name": "BOUNDARY_INDICATOR_RELATION",
+      "human_evidence": "8 SENTENCE_BOUNDARY + TLD different_cell",
+      "cases": 13
+    },
+    {
+      "id": "RC8",
+      "name": "LOCAL_NEIGHBORHOOD_RELATION",
+      "human_evidence": "16 LOCAL_CONTEXT mentions",
+      "cases": "ALL"
+    }
+  ],
+  "fact_vs_relation_boundary": {
+    "same_y_band": "FACT — native geometry observation (dy=0), not a Relation",
+    "different_cell": "FACT (derived from Relation) — TLD computes a_cell != b_cell → boolean. Original Relation data (a_cell, b_cell) was compressed.",
+    "A_B_vertical_groups": "RELATION (L3) — can be derived from TLD table.rows column extraction"
+  },
+  "tld_discarded_data": {
+    "tld_outputs": {
+      "table.headers": "List of column header strings (e.g., [\"model\", \"top-1 err.\", \"top-5 err.\"])",
+      "table.rows": "List of rows, each row = list of cell values",
+      "table.bbox": "[x0, y0, x1, y1]",
+      "a_cell": "(row, col) tuple for item A",
+      "b_cell": "(row, col) tuple for item B"
+    },
+    "compute_is11_observation_returns": {
+      "is_in_table": "bool (derived from a_cell is not None)",
+      "different_cell": "bool (derived from a_cell != b_cell)",
+      "same_cell": "bool (derived from a_cell == b_cell)",
+      "table_info.a_cell": "(row, col) — exists but NOT used in Cue",
+      "table_info.b_cell": "(row, col) — exists but NOT used in Cue"
+    },
+    "discarded": [
+      "table.headers",
+      "table.rows",
+      "a_cell (used for bool only)",
+      "b_cell (used for bool only)"
+    ],
+    "implication": "Column Position Relation data was COMPUTED but DISCARDED in Cue construction — Distillation Gap, not Observation Gap"
+  },
+  "relation_expressibility": {
+    "RC1": {
+      "expressible": "FULLY",
+      "level": "L2",
+      "missing": "NO_MISSING_INFORMATION",
+      "semantic_leakage": false,
+      "new_module": false
+    },
+    "RC2": {
+      "expressible": "NO",
+      "level": "L2 (desired)",
+      "missing": "MISSING_OBSERVATION (text block segmentation)",
+      "semantic_leakage": "N/A",
+      "new_module": false
+    },
+    "RC3": {
+      "expressible": "PARTIAL",
+      "level": "L2 (desired)",
+      "missing": "MISSING_OBSERVATION (caption region — same as RC2)",
+      "semantic_leakage": false,
+      "new_module": false
+    },
+    "RC4": {
+      "expressible": "N/A",
+      "level": "L4 (Interpretation)",
+      "missing": "SEMANTIC_INTERPRETATION_REQUIRED",
+      "semantic_leakage": true,
+      "new_module": false,
+      "verdict": "NOT_EVIDENCE_RELATION"
+    },
+    "RC5": {
+      "expressible": "FULLY",
+      "level": "L3",
+      "missing": "NO_MISSING_INFORMATION",
+      "semantic_leakage": false,
+      "new_module": false,
+      "pattern_boundary": "DETECTED"
+    },
+    "RC6": {
+      "expressible": "FULLY",
+      "level": "L2",
+      "missing": "NO_MISSING_INFORMATION",
+      "semantic_leakage": false,
+      "new_module": false
+    },
+    "RC7": {
+      "expressible": "PARTIAL",
+      "level": "L1/L4",
+      "missing": "PARTIAL (facts exist, type is interpretation)",
+      "semantic_leakage": "PARTIAL",
+      "new_module": false
+    },
+    "RC8": {
+      "expressible": "FULLY",
+      "level": "L1",
+      "missing": "NO_MISSING_INFORMATION",
+      "semantic_leakage": false,
+      "new_module": false
+    },
+    "summary": {
+      "fully_expressible": 4,
+      "partially_expressible": 2,
+      "not_expressible": 2,
+      "not_relation": 1
+    }
+  },
+  "minimal_fact_sets": {
+    "RC1": {
+      "input_facts": [
+        "text_a",
+        "text_b",
+        "TLD table.headers",
+        "TLD table.rows"
+      ],
+      "derivation": "search text_a/b in table.rows → (row,col) → headers[col] → structural position",
+      "output": "A is in column 6 (header: top-1 err.), B is in column 7 (header: top-5 err.), same row, adjacent columns",
+      "new_observation_required": false,
+      "semantic_leakage": false,
+      "verified_case": "IS11-AMB-024: headers[6]=\"top-1 err.\", headers[7]=\"top-5 err.\""
+    },
+    "RC5": {
+      "input_facts": [
+        "TLD table.rows",
+        "a_cell (row,col)",
+        "b_cell (row,col)"
+      ],
+      "derivation": "extract column items from table.rows at A/B column indices",
+      "output": "A aligns vertically with [B6, 83.95, 84.04, ...]; B aligns with [., B7, 84.26, ...]",
+      "new_observation_required": false,
+      "semantic_leakage": false,
+      "pattern_boundary": "DETECTED — approaches Pattern but stays within single table (L3)"
+    },
+    "RC6": {
+      "input_facts": [
+        "TLD is_in_table",
+        "TLD different_cell",
+        "text_a ends period (cue5)",
+        "text_b starts capital (cue6)",
+        "text_a FIG (cue7)"
+      ],
+      "derivation": "compare is_in_table vs ends_period → conflict; compare different_cell vs ends_period → conflict",
+      "output": "Evidence conflict: TABLE_VS_SENTENCE (TLD=table but text=sentence-like)",
+      "new_observation_required": false,
+      "semantic_leakage": false,
+      "verified_cases": [
+        "IS11-AMB-005",
+        "IS11-AMB-522",
+        "IS11-AMB-530"
+      ]
+    },
+    "RC8": {
+      "input_facts": [
+        "line_spans",
+        "line_obs_count",
+        "bbox_a",
+        "bbox_b"
+      ],
+      "derivation": "sort line_spans by x0 → extract items before A and after B",
+      "output": "A has left neighbor \"1. Introduction\"; B has right neighbor (none)",
+      "new_observation_required": false,
+      "semantic_leakage": false
+    }
+  },
+  "human_relevance": {
+    "RC1": {
+      "need": "HIGH",
+      "cases": 22,
+      "traceability": true,
+      "observed_reference": "70 TABLE_STRUCTURE mentions"
+    },
+    "RC2": {
+      "need": "HIGH",
+      "cases": 4,
+      "traceability": false,
+      "observed_reference": "4 PARAGRAPH + A/B disagreement"
+    },
+    "RC3": {
+      "need": "MEDIUM",
+      "cases": 2,
+      "traceability": "PARTIAL",
+      "observed_reference": "13 FIGURE_CAPTION"
+    },
+    "RC4": {
+      "need": "HIGH",
+      "cases": 13,
+      "traceability": "N/A",
+      "observed_reference": "57 NUMERIC_VALUE",
+      "verdict": "NOT_EVIDENCE_RELATION"
+    },
+    "RC5": {
+      "need": "MEDIUM",
+      "cases": "ALL table",
+      "traceability": true,
+      "observed_reference": "Implied by TABLE_STRUCTURE"
+    },
+    "RC6": {
+      "need": "MEDIUM",
+      "cases": "ALL",
+      "traceability": true,
+      "observed_reference": "2 UNKNOWN decisions"
+    },
+    "RC7": {
+      "need": "MEDIUM",
+      "cases": 13,
+      "traceability": "PARTIAL",
+      "observed_reference": "8 SENTENCE_BOUNDARY"
+    },
+    "RC8": {
+      "need": "MEDIUM",
+      "cases": "ALL",
+      "traceability": true,
+      "observed_reference": "16 LOCAL_CONTEXT"
+    }
+  },
+  "necessity": {
+    "RC1": "NECESSARY — 22 cases affected; TLD data exists but discarded",
+    "RC2": "NECESSARY — caused A/B disagreement; but not expressible",
+    "RC3": "HELPFUL — only 2 cases; FIG marker already available",
+    "RC4": "N/A — Not Evidence Relation (L4)",
+    "RC5": "HELPFUL — useful but approaches Pattern boundary",
+    "RC6": "NECESSARY — 3 cases with conflicts; safety-critical",
+    "RC7": "HELPFUL — individual facts already exist as cues",
+    "RC8": "HELPFUL — line_spans already provide this"
+  },
+  "missing_information": {
+    "RC1": "NO_MISSING_INFORMATION (MISSING_RELATION_ORGANIZATION)",
+    "RC2": "MISSING_OBSERVATION (text block / paragraph region detection)",
+    "RC3": "MISSING_OBSERVATION (caption region — same as RC2)",
+    "RC4": "SEMANTIC_INTERPRETATION_REQUIRED",
+    "RC5": "NO_MISSING_INFORMATION (MISSING_RELATION_ORGANIZATION)",
+    "RC6": "NO_MISSING_INFORMATION",
+    "RC7": "PARTIAL (facts exist, type classification is interpretation)",
+    "RC8": "NO_MISSING_INFORMATION",
+    "key_distinction": "RC1/RC5/RC6/RC8 = MISSING_RELATION_ORGANIZATION (not new observation). RC2/RC3 = MISSING_OBSERVATION (text block segmentation).",
+    "shared_missing_observation": "RC2 and RC3 share the same missing observation: TEXT_BLOCK/REGION segmentation. Affects only 6/30 cases. P722 B1 still 100% on these cases (image sufficient)."
+  },
+  "semantic_boundary": {
+    "L0_raw_fact": "text_a, dy, is_in_table",
+    "L1_pairwise_relation": "A left neighbor is X (RC8)",
+    "L2_local_structural": "A in col 6 (top-1 err.) (RC1, RC6)",
+    "L3_cross_instance": "A column items: [B6, 83.95, ...] (RC5)",
+    "L4_semantic_interpretation": "\"different table columns\" / \"KEEP_SEPARATE\" (RC4) — NOT Evidence Relation",
+    "rule": "L4 is excluded from Evidence Relation layer"
+  },
+  "pattern_boundary": {
+    "detected": true,
+    "relation": "RC5 Cross-instance Alignment",
+    "description": "Single-table column extraction = L3 Relation. Cross-table aggregation = Pattern = FORBIDDEN.",
+    "action": "STOP — do not design Pattern Engine"
+  },
+  "rule_leakage": {
+    "audit_result": "No leakage in Relation definitions",
+    "explanation": "Relations describe structural positions/conflicts, not decisions. Rule leakage only occurs if someone writes code: if relation → decision. AUTHORITY=0 prevents this.",
+    "potential_leakage_forms": [
+      "if different_columns: KEEP_SEPARATE",
+      "if same_paragraph: MERGE",
+      "if caption_continuity: MERGE"
+    ],
+    "mitigation": "AUTHORITY=0 — Relation cannot MERGE/KEEP/REJECT/DECIDE"
+  },
+  "traceability": {
+    "example_1_AMB-024": {
+      "human_judgment": "KEEP_SEPARATE",
+      "interpretation_candidate": "28.54 and 10.02 are different error metrics in different columns",
+      "evidence_relation": "A in col 6 (top-1 err.), B in col 7 (top-5 err.), same row, adjacent",
+      "evidence_facts": "text_a='28.54', text_b='10.02', TLD headers[6]='top-1 err.', headers[7]='top-5 err.'",
+      "source": "TLD detect_tables_from_lines() on resnet p6 → 85 rows, 21 cols",
+      "original_evidence": "P1 text observation + TLD table detection"
+    },
+    "example_2_AMB-005": {
+      "human_judgment": "KEEP_SEPARATE (P722 A said MERGE — error)",
+      "interpretation_candidate": "degrades rapidly. and Unexpectedly, are separate sentences",
+      "evidence_relation": "TABLE_VS_SENTENCE conflict: TLD=table but text=sentence-like",
+      "evidence_facts": "TLD is_in_table=True, different_cell=True, text_a ends \".\", text_b starts \"U\"",
+      "source": "TLD false positive (author table) + P1 text pattern",
+      "original_evidence": "TLD on resnet p0 + P1 text observation"
+    }
+  },
+  "anti_overdesign": {
+    "A_derived_representation": true,
+    "B_persistence_required": false,
+    "C_frozen_baseline": false,
+    "D_runtime": false,
+    "E_api_contract": false,
+    "F_research_metadata": true,
+    "conclusion": "A and F are True → NO NEW MODULE, NO NEW CORE OBJECT",
+    "gate": {
+      "NEW_OBSERVATION_REQUIRED": false,
+      "NEW_EVIDENCE_TYPE_REQUIRED": false,
+      "NEW_RELATION_OBJECT_REQUIRED": false,
+      "NEW_MODULE_REQUIRED": false,
+      "NEW_ENGINE_REQUIRED": false,
+      "FROZEN_BASELINE_CHANGE_REQUIRED": false,
+      "TLD_CHANGE_REQUIRED": false,
+      "UI_CHANGE_REQUIRED": false
+    }
+  },
+  "recommended_direction": {
+    "for_expressible_relations": "Problem is Distillation Gap — compute_is11_observation() discards TLD headers/rows/cell positions. Not Architecture Gap.",
+    "for_inexpressible_relations": "RC2/RC3 share MISSING_OBSERVATION (text block segmentation). Affects 6/30 cases. P722 B1 still 100% (image sufficient). Not worth new module.",
+    "for_RC4": "Content Type is L4 Interpretation, not Evidence Relation. Should not be forced into Relation layer.",
+    "for_RC5": "PATTERN_BOUNDARY_DETECTED. Stays at L3. Do not design Pattern Engine.",
+    "overall": "NO NEW MODULE. Relations are derived evidence representations / research metadata."
+  },
+  "confidence": {
+    "tld_computes_headers_and_cells": "HIGH — directly verified",
+    "RC1_fully_expressible": "HIGH — AMB-024 verified: headers[6]=\"top-1 err.\", headers[7]=\"top-5 err.\"",
+    "RC2_not_expressible": "HIGH — P1-P6 + TLD have no text block segmentation",
+    "RC6_expressible": "HIGH — 3/30 cases detected conflicts",
+    "no_new_module_needed": "MEDIUM-HIGH — can be derived representation",
+    "tld_cell_position_has_error": "MEDIUM — a_cell=(3,1) but actual position is row 7 col 6"
+  },
+  "limitations": [
+    "TLD cell position assignment has误差 (a_cell does not always match actual position)",
+    "TLD coverage 41% (10/30 cases have cell data), non-TLD pages cannot express RC1/RC5",
+    "n=1 participant (P722), Human need assessment based on limited sample",
+    "Cannot verify if Relation actually improves Human judgment (experiment forbidden)",
+    "RC2/RC3 MISSING_OBSERVATION only documented, not evaluated for implementation cost"
+  ],
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  },
+  "governance": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P6_MODIFICATION": false,
+    "ATOMIC_OBSERVATION_CHANGE": false,
+    "AGGREGATION_CHANGE": false,
+    "COMPRESSION_CHANGE": false,
+    "EVIDENCE_CUE_CHANGE": false,
+    "TLD_MODIFICATION": false,
+    "SIGNAL_MODIFICATION": false,
+    "UI_MODIFICATION": false,
+    "NEW_OBJECT_IMPLEMENTATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "RUNTIME_CHANGE": false,
+    "ML_TRAINING": false,
+    "FROZEN_BASELINE": "INTACT",
+    "FROZEN_EXPERIMENT": "INTACT",
+    "FORMAL_EXPERIMENT": "NOT_STARTED",
+    "CS1_REUSE": "BLOCKED",
+    "HUMAN_VALIDATION": "BLOCKED",
+    "STOP": true
+  },
+  "final_answers": {
+    "Q1_relation_exists": "PARTIALLY_SUPPORTED — 4/8 expressible, 2/8 not, 1/8 not Relation",
+    "Q2_minimal_relation": "deterministic composition: search text in TLD rows → (row,col) → headers[col]; compare cues for conflicts; sort line_spans for neighbors",
+    "Q3_existing_evidence_expressible": "PARTIALLY_EXPRESSIBLE — 4/8 fully, 2/8 partially, 2/8 not",
+    "Q4_missing_info": "TEXT_BLOCK/REGION segmentation (shared by RC2+RC3). Affects 6/30. Image already compensates.",
+    "Q5_enter_core": "NO — Relations are derived representations / research metadata. No persistence, no frozen baseline, no runtime, no API contract needed."
+  }
+}

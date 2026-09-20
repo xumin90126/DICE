@@ -1,0 +1,7 @@
+{
+  "dense_gap_threshold": 18.0,
+  "min_dense_span_count": 3,
+  "density_area_unit": 10000.0,
+  "sparse_confidence_high_gap": 40.0,
+  "construction_version": "v1"
+}

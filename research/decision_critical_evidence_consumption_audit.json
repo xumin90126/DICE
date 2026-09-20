@@ -1,0 +1,285 @@
+{
+  "metadata": {
+    "audit_name": "Decision-Critical Evidence Consumption Audit",
+    "date": "2026-09-12",
+    "mode": "READ-ONLY / NO MODIFICATION / FROZEN INTACT / STOP",
+    "predecessor": "Human Boundary Decision Evidence Dependency Audit",
+    "cases_analyzed": 114
+  },
+  "executive_summary": {
+    "final_status": "DCE_EXISTS_BUT_CONSUMPTION_IS_CORPUS_SPECIFIC",
+    "key_finding": "4 of 5 DCE types are deterministically derivable from P1 text. They resolve 94% of IS-11 ABSTAIN cases with 0 FP. But P7 cross-validation proves they are corpus-specific, not universal. LS-3 NOT justified.",
+    "primary_bottleneck": "C (Consumer Integration) — corpus-specific",
+    "secondary_bottleneck": "F (Evaluation Standard)",
+    "type_d_count": 2,
+    "stop": true
+  },
+  "case_level_analysis": {
+    "focus_cases": [
+      "AMB-135",
+      "AMB-032",
+      "AMB-313",
+      "AMB-375",
+      "AMB-414",
+      "AMB-418",
+      "AMB-422",
+      "AMB-462",
+      "AMB-519"
+    ],
+    "comparison_cases": [
+      "AMB-024",
+      "AMB-074",
+      "AMB-346",
+      "AMB-530",
+      "AMB-052",
+      "AMB-163",
+      "AMB-168",
+      "AMB-267",
+      "AMB-005"
+    ],
+    "total_is11": 45,
+    "total_p7": 69,
+    "total_combined": 114
+  },
+  "evidence_consumption_matrix": {
+    "evidence_items_analyzed": 526,
+    "ec0_count": 0,
+    "ec1_count": 225,
+    "ec2_count": 189,
+    "ec3_count": 112,
+    "c0_count": 0,
+    "c1_count": 45,
+    "c2_count": 238,
+    "c3_count": 206,
+    "c4_count": 37,
+    "key_insight": "IS-01/IS-02 compresses P1 raw text to binary (is_number/has_text), losing all semantic content. 45 evidence items are C1 (available but not consumed)."
+  },
+  "decision_critical_evidence_set": {
+    "DCE-01": {
+      "name": "has_fig_prefix",
+      "source": "P1 text (text.startswith(\"FIG\"))",
+      "exists_in_dice": true,
+      "currently_consumed": false,
+      "current_consumption_form": "NONE",
+      "human_dependency": "HIGH (2/2 figure cases)",
+      "counterfactual_support": "2 ABSTAIN to TP, 0 FP (IS-11), 2 FP (P7)",
+      "criticality": "EC3",
+      "generalizability": "LOW (corpus-specific)",
+      "governance_risk": "MEDIUM"
+    },
+    "DCE-02": {
+      "name": "period_end + cap_start (sentence boundary)",
+      "source": "P1 text (text_a.endswith(\".\") + text_b[0].isupper())",
+      "exists_in_dice": true,
+      "currently_consumed": false,
+      "current_consumption_form": "NONE",
+      "human_dependency": "HIGH (4/4 prose cases)",
+      "counterfactual_support": "3 ABSTAIN to TN, 0 FP (IS-11), 5 FP (P7)",
+      "criticality": "EC3",
+      "generalizability": "LOW (corpus-specific)",
+      "governance_risk": "MEDIUM (requires standard clarification)"
+    },
+    "DCE-03": {
+      "name": "is01_a AND is01_b (both pure numbers)",
+      "source": "P1 text (IS-01 regex on both text_a and text_b)",
+      "exists_in_dice": true,
+      "currently_consumed": false,
+      "current_consumption_form": "NONE for is01_b",
+      "human_dependency": "INDIRECT (Human uses semantic column identity)",
+      "counterfactual_support": "7 ABSTAIN to TN, 0 FP (IS-11), unvalidated (P7)",
+      "criticality": "EC3",
+      "generalizability": "UNKNOWN (0 P7 cases)",
+      "governance_risk": "LOW (deterministic regex)"
+    },
+    "DCE-04": {
+      "name": "is02_a AND is02_b (both readable text, after fig check)",
+      "source": "P1 text (IS-02 check on both text_a and text_b)",
+      "exists_in_dice": true,
+      "currently_consumed": false,
+      "current_consumption_form": "NONE for is02_a",
+      "human_dependency": "INDIRECT (Human uses semantic header identity)",
+      "counterfactual_support": "5 ABSTAIN to TN, 0 FP (IS-11), 10 FP (P7)",
+      "criticality": "EC3",
+      "generalizability": "LOW (corpus-specific)",
+      "governance_risk": "HIGH (FP on body text and references in P7)"
+    },
+    "DCE-05": {
+      "name": "table_column_identity (semantic/structural)",
+      "source": "TLD (table structure) or equivalent",
+      "exists_in_dice": true,
+      "currently_consumed": "YES when TLD works (29% of cases)",
+      "current_consumption_form": "BINARY (different_cell)",
+      "human_dependency": "HIGH (all table cases)",
+      "counterfactual_support": "2/45 cases truly require this (AMB-135, AMB-262)",
+      "criticality": "EC3",
+      "generalizability": "UNIVERSAL (table structure is corpus-independent)",
+      "governance_risk": "HIGH (requires TLD improvement)"
+    }
+  },
+  "counterfactual_analysis": {
+    "current_state": {
+      "TN": 26,
+      "ABSTAIN": 18,
+      "FP": 1
+    },
+    "with_dce_01_to_04": {
+      "TN": 41,
+      "ABSTAIN": 1,
+      "FP": 1
+    },
+    "improvements": 17,
+    "regressions": 0,
+    "remaining_unresolved": 2,
+    "remaining_cases": [
+      "AMB-135 (FP, requires DCE-05)",
+      "AMB-262 (ABSTAIN, requires DCE-05)"
+    ],
+    "p7_generalizability": {
+      "DCE-01": {
+        "p7_cases": 2,
+        "p7_fp": 2,
+        "generalizable": false
+      },
+      "DCE-02": {
+        "p7_cases": 15,
+        "p7_fp": 5,
+        "generalizable": false
+      },
+      "DCE-03": {
+        "p7_cases": 0,
+        "p7_fp": 0,
+        "generalizable": "UNKNOWN"
+      },
+      "DCE-04": {
+        "p7_cases": 27,
+        "p7_fp": 10,
+        "generalizable": false
+      }
+    }
+  },
+  "learning_signal_analysis": {
+    "LS_0": 26,
+    "LS_1": 12,
+    "LS_2": 7,
+    "LS_3": 0,
+    "LS_4": 0,
+    "why_not_ls3": "DCE-01 to DCE-04 are corpus-specific (0 FP on IS-11, 17+ FP on P7). No cross-corpus generalizability. Patterns are retrospective, not from human feedback."
+  },
+  "bottleneck_analysis": {
+    "A_candidate_construction": "REJECTED (0% Construction FP)",
+    "B_evidence_organization": "REJECTED (evidence IS organized)",
+    "C_consumer_integration": "PRIMARY (17/45 Type B, but corpus-specific)",
+    "D_evidence_perception": "REJECTED (P2 sufficient)",
+    "E_human_semantic_judgment": "REJECTED (0% E5)",
+    "F_evaluation_standard": "SECONDARY (3 cases DCE-02)",
+    "G_evidence_insufficient": "REJECTED (0% E4, except DCE-05=2 cases)",
+    "H_mixed": "NOT_DOMINANT",
+    "primary_bottleneck": "C (Consumer Integration)",
+    "secondary_bottleneck": "F (Evaluation Standard)",
+    "type_d": "DCE-05 (2 cases, requires TLD improvement)"
+  },
+  "type_classification": {
+    "Type_A_already_consumed_critical": {
+      "count": 13,
+      "evidence": "different_cell (TLD), is01_a/is02_b when EC3"
+    },
+    "Type_B_exists_critical_not_consumed": {
+      "count": 17,
+      "evidence": "DCE-01 (2), DCE-02 (3), DCE-03 (7), DCE-04 (5)",
+      "caveat": "Corpus-specific (0 FP on IS-11, 17+ FP on P7)"
+    },
+    "Type_C_exists_human_uses_not_critical": {
+      "count": 35,
+      "evidence": "page_context, h_gap, same_style (supporting only)"
+    },
+    "Type_D_missing_critical": {
+      "count": 2,
+      "evidence": "DCE-05 table_column_identity (AMB-135, AMB-262)",
+      "requires": "TLD improvement or equivalent"
+    }
+  },
+  "is01_is02_information_loss": {
+    "input": "P1 raw text (full strings with semantic content)",
+    "is01_output": "bool (is pure number?)",
+    "is02_output": "bool (has readable text?)",
+    "loss": "ALL semantic content (text meaning, structural role, column identity)",
+    "example": "P1 text \"4\" -> is01=True. LOST: \"4\" = stage index. P1 text \"MBConv6\" -> is02=True. LOST: \"MBConv6\" = operator type.",
+    "binary_compression_loss_count": 90
+  },
+  "final_verdict": {
+    "question_which_dce_worth_consuming": "DCE-01 to DCE-04, but ONLY within IS-11 candidate space",
+    "question_why_changes_decision": "IS-11 candidate space (same_y_band + gap 8-50) is table-focused. Both-numbers/both-text/FIG-prefix/period+cap have specific structural meanings in this space.",
+    "question_minimal_reusable": "Within IS-11: YES (deterministic, 0 FP). Across corpora: NO (P7 FP).",
+    "recommended_next_step": "READ_ONLY_AUDIT",
+    "true_reusable_signal_found": false,
+    "current_learning_level": "L3"
+  },
+  "statistics": {
+    "TOTAL_CASES_ANALYZED": 114,
+    "EVIDENCE_ITEMS_ANALYZED": 526,
+    "EC0_COUNT": 0,
+    "EC1_COUNT": 225,
+    "EC2_COUNT": 189,
+    "EC3_COUNT": 112,
+    "C0_COUNT": 0,
+    "C1_COUNT": 45,
+    "C2_COUNT": 238,
+    "C3_COUNT": 206,
+    "C4_COUNT": 37,
+    "DECISION_CRITICAL_EVIDENCE_COUNT": 112,
+    "DECISION_CRITICAL_EXISTING_COUNT": 112,
+    "DECISION_CRITICAL_CONSUMED_COUNT": 40,
+    "DECISION_CRITICAL_UNUSED_COUNT": 72,
+    "MACHINE_UNUSED_EXISTING_EVIDENCE_COUNT": 45,
+    "BINARY_COMPRESSION_LOSS_COUNT": 90,
+    "DERIVABLE_DECISION_EVIDENCE_COUNT": 17,
+    "MISSING_DECISION_EVIDENCE_COUNT": 2,
+    "HUMAN_DEPENDENT_EVIDENCE_COUNT": 45,
+    "GENUINE_SEMANTIC_JUDGMENT_COUNT": 0,
+    "LS0_COUNT": 26,
+    "LS1_COUNT": 12,
+    "LS2_COUNT": 7,
+    "LS3_COUNT": 0,
+    "LS4_COUNT": 0,
+    "PRIMARY_BOTTLENECK": "C (Consumer Integration)",
+    "SECONDARY_BOTTLENECK": "F (Evaluation Standard)",
+    "TRUE_REUSABLE_SIGNAL_FOUND": false,
+    "CURRENT_LEARNING_LEVEL": "L3",
+    "RECOMMENDED_NEXT_STEP": "READ_ONLY_AUDIT"
+  },
+  "governance_gate": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "P2_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "IS11_MODIFICATION": false,
+    "M_B_MODIFICATION": false,
+    "GT_MODIFICATION": false,
+    "SIGNAL_MODIFICATION": false,
+    "EVIDENCE_CUE_MODIFICATION": false,
+    "LLM": false,
+    "NEW_OBSERVATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "RUNTIME_CHANGE": false,
+    "CAPABILITY_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "FROZEN_EXPERIMENT": "INTACT",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "FORMAL_EXPERIMENT": "NOT_STARTED",
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "p2_engine_hash": "388e7939d334458e",
+    "p2_config_hash": "7ef3629e5a9b819c",
+    "p2_schema_hash": "7731377cb8468c91",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "expected_p2_engine": "388e7939d334458e",
+    "drift": "0/7 INTACT"
+  },
+  "stop": true
+}

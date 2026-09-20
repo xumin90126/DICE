@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "document": "Next Information Source Decision Matrix",
+    "type": "READ-ONLY analysis matrix",
+    "timestamp": "2026-09-09T21:27:00",
+    "constraint": "NO IMPLEMENTATION — proposed sources only"
+  },
+  "information_sources": [
+    {
+      "information_source": "IS-11_TABLE_CELL_CONTEXT (PROPOSED)",
+      "evidence": "3/3 FP caused by table cell number+readable token; 25/56 abstentions involve table context; 40/254 (15.7%) of candidate universe are TABLE_CELL",
+      "frequency": "40 cases in candidate universe (15.7%); 11 sampled (15.9%)",
+      "human_usage": "37/69 (53.6%) of human decisions reference table/column/cell context",
+      "machine_observable": "YES — P6 region detection (DENSE/SPARSE) already identifies table regions; table cell boundaries detectable via vector line analysis",
+      "cross_document_evidence": "Present in ind_qbio_rna (34 TABLE_CELL) and ind_qbio_genomics (6 TABLE_CELL); absent in arxiv papers",
+      "failure_coverage": "Covers 3/3 FP (100% of FP) + 25/56 abstentions (44.6%) = 28/61 failures (45.9%)",
+      "semantic_risk": "LOW — table structure is geometric/visual, not semantic interpretation",
+      "priority": 1,
+      "recommended_action": "DESIGN_EXPERIMENT",
+      "status": "PROPOSED — not implemented, not authorized",
+      "rationale": "Highest failure coverage (45.9%); machine-observable via P6; low semantic risk; but 3/69 sample too small to build now — needs targeted data collection"
+    },
+    {
+      "information_source": "IS-12_ROW_COLUMN_POSITION (PROPOSED)",
+      "evidence": "36/69 (52.2%) human decisions reference row/column position; all 3 FP involve different-column pairs",
+      "frequency": "Co-occurs with IS-11 in 36/37 cases",
+      "human_usage": "36/69 (52.2%)",
+      "machine_observable": "YES — column boundaries detectable via x-coordinate clustering; row membership via y-coordinate",
+      "cross_document_evidence": "Same distribution as IS-11",
+      "failure_coverage": "Covers same 28/61 failures as IS-11 (co-occurs)",
+      "semantic_risk": "LOW — purely geometric",
+      "priority": 2,
+      "recommended_action": "DESIGN_EXPERIMENT",
+      "status": "PROPOSED — not implemented, not authorized",
+      "rationale": "Sub-component of IS-11; should be tested together with IS-11; same data collection needed"
+    },
+    {
+      "information_source": "IS-10_SENTENCE_BOUNDARY_INTERPRETATION (EXISTING, Category C)",
+      "evidence": "2/2 FN caused by inability to interpret citation fragments as continuous text; 21/56 abstentions involve sentence/paragraph context",
+      "frequency": "23/69 (33.3%) human decisions reference sentence boundary",
+      "human_usage": "23/69 (33.3%)",
+      "machine_observable": "PARTIAL — raw signals (IS-04 punctuation + IS-05 capital start) are observable, but interpretation is semantic (Category C)",
+      "cross_document_evidence": "Present across all 4 documents",
+      "failure_coverage": "Covers 2/2 FN (100% of FN) + 21/56 abstentions (37.5%) = 23/61 failures (37.7%)",
+      "semantic_risk": "HIGH — sentence boundary interpretation is inherently semantic (Category C)",
+      "priority": 3,
+      "recommended_action": "HUMAN_OWNED",
+      "status": "EXISTING (Category C) — not implementable as deterministic rule",
+      "rationale": "Category C information source; raw signals machine-observable but interpretation requires semantic judgment; AMB-026 precedent; should remain Human-owned"
+    },
+    {
+      "information_source": "IS-14_DOCUMENT_STRUCTURE_ROLE (PROPOSED)",
+      "evidence": "26/69 (37.7%) human decisions reference document structure role (reference list, bibliography, caption, license)",
+      "frequency": "26/69 (37.7%)",
+      "human_usage": "26/69 (37.7%)",
+      "machine_observable": "PARTIALLY — reference list detectable via [N] pattern + consistent formatting; caption detectable via 'Fig.' prefix; but document role assignment requires context",
+      "cross_document_evidence": "Present in all 4 documents (references in all, captions in arxiv, tables in qbio)",
+      "failure_coverage": "Covers 13/56 abstentions (23.2%) + 0 FP + 0 FN = 13/61 failures (21.3%)",
+      "semantic_risk": "MEDIUM — document structure role assignment partially semantic",
+      "priority": 4,
+      "recommended_action": "DEFER",
+      "status": "PROPOSED — not implemented",
+      "rationale": "Medium coverage; partially machine-observable but requires context aggregation; lower priority than IS-11; defer until IS-11 experiment completed"
+    },
+    {
+      "information_source": "IS-13_HEADER_RELATION (PROPOSED)",
+      "evidence": "16/69 (23.2%) human decisions reference header/heading relation; 15/56 abstentions involve header context",
+      "frequency": "16/69 (23.2%)",
+      "human_usage": "16/69 (23.2%)",
+      "machine_observable": "PARTIALLY — column headers detectable via position + formatting; but header-cell relation requires structure analysis",
+      "cross_document_evidence": "Primarily in qbio_rna table cases",
+      "failure_coverage": "Covers 13/56 abstentions (23.2%) — overlaps with IS-11",
+      "semantic_risk": "LOW-MEDIUM — header detection is geometric, relation is structural",
+      "priority": 5,
+      "recommended_action": "DEFER",
+      "status": "PROPOSED — not implemented",
+      "rationale": "Sub-component of IS-11; should be tested within IS-11 experiment; defer"
+    },
+    {
+      "information_source": "IS-07_VISUAL_TOC_CONTEXT (EXISTING, FROZEN)",
+      "evidence": "0 TOC pages in 4 independent PDFs; IS-07 would return NO for all 69 cases",
+      "frequency": "0/69 (0%) — no TOC pages in independent corpus",
+      "human_usage": "0/69 (0%)",
+      "machine_observable": "YES — P6 region detection",
+      "cross_document_evidence": "TOC pages exist in original arxiv_toc corpus but NOT in 4 independent PDFs",
+      "failure_coverage": "0/61 failures (0%) — no TOC context to leverage",
+      "semantic_risk": "LOW",
+      "priority": "N/A",
+      "recommended_action": "MORE_DATA_NEEDED",
+      "status": "EXISTING (FROZEN) — but untestable on current corpus",
+      "rationale": "Target class absent; need PDFs with TOC pages to test IS-07+IS-01+IS-02 on actual TOC_SECTION_NUMBER_TITLE cases"
+    }
+  ],
+  "priority_ranking": [
+    {
+      "rank": 1,
+      "source": "IS-11_TABLE_CELL_CONTEXT",
+      "action": "DESIGN_EXPERIMENT",
+      "reason": "45.9% failure coverage, machine-observable, low semantic risk"
+    },
+    {
+      "rank": 2,
+      "source": "IS-12_ROW_COLUMN_POSITION",
+      "action": "DESIGN_EXPERIMENT",
+      "reason": "Co-occurs with IS-11, test together"
+    },
+    {
+      "rank": 3,
+      "source": "IS-10_SENTENCE_BOUNDARY",
+      "action": "HUMAN_OWNED",
+      "reason": "Category C semantic, not implementable as deterministic rule"
+    },
+    {
+      "rank": 4,
+      "source": "IS-14_DOCUMENT_STRUCTURE_ROLE",
+      "action": "DEFER",
+      "reason": "Medium coverage, partially semantic, defer until IS-11 tested"
+    },
+    {
+      "rank": 5,
+      "source": "IS-13_HEADER_RELATION",
+      "action": "DEFER",
+      "reason": "Sub-component of IS-11, defer"
+    },
+    {
+      "rank": "N/A",
+      "source": "IS-07_VISUAL_TOC_CONTEXT",
+      "action": "MORE_DATA_NEEDED",
+      "reason": "Target class absent, need TOC-containing PDFs"
+    }
+  ],
+  "next_experiment_proposal": {
+    "experiment_name": "Table Structural Context Information Source Experiment",
+    "research_question": "Does adding IS-11 (TABLE_CELL_CONTEXT) + IS-12 (ROW_COLUMN_POSITION) to the frozen IS-01/IS-02 feature set enable correct KEEP_SEPARATE decisions for table cell pairs that currently produce false positives?",
+    "information_source_under_test": "IS-11 + IS-12 (PROPOSED, not implemented)",
+    "independent_data": "Requires new PDFs with table-heavy content (current 4 PDFs have 40 TABLE_CELL cases in universe, 11 sampled — insufficient for standalone experiment)",
+    "ground_truth": "Level 2 Semantic GT (dual reviewer + adjudication, blind protocol)",
+    "blind_protocol": "Reviewers see only text_a, text_b, page_context — no IS features, no geometry, no machine prediction",
+    "success_criteria": "Precision ≥ 95% AND Recall ≥ 80% on TABLE_CELL subset (pre-registered before results)",
+    "failure_criteria": "Any FP on TABLE_CELL cases with IS-11+IS-12 → IS-11 insufficient alone",
+    "contamination_prevention": "New PDFs must be independent (zero references in P7 artifacts); IS-11 definition frozen before evaluation; GT collected before machine evaluation",
+    "sample_requirements": "≥30 TABLE_CELL cases (current universe has 40, but only 11 sampled; need additional PDFs with tables to reach ≥30 sampled)",
+    "status": "DESIGN ONLY — NOT AUTHORIZED for execution"
+  }
+}

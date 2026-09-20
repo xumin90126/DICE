@@ -1,0 +1,294 @@
+{
+  "design_status": "DESIGN_READY",
+  "date": "2026-09-18",
+  "task": "M-A Human A/B Evidence Sufficiency Pilot — Design Gate",
+  "mode": "READ-ONLY / DESIGN ONLY / NO EXECUTION",
+
+  "research_question": {
+    "rq": "相比 E0，E1 是否能够降低 Human Reconstruction Burden、提高 Evidence Sufficiency 判断、减少因 Evidence 不完整产生的 UNCERTAIN",
+    "is_not": ["Caption Detection Accuracy", "Figure Detection Accuracy", "Association Machine Accuracy", "M-A Algorithm Accuracy", "Semantic Classification", "LLM Benchmark"],
+    "primary_comparison": "E0 → E1 RECONSTRUCTION_BURDEN_CHANGE"
+  },
+
+  "e0_definition": {
+    "description": "上一轮 Human Validation Pilot 实际使用的旧 Evidence Pack",
+    "characteristics": {
+      "same_y_threshold": "±3pt",
+      "type_a_negatives": "context_text='', context_atoms=[], extent_bbox=None",
+      "type_b_negatives": "context_text='', context_atoms=[]",
+      "evidence_state_field": false,
+      "60pt_rule": "used for both candidate generation AND pack inclusion"
+    },
+    "recovery_status": "RECONSTRUCTED",
+    "reconstruction_method": "OLD_LOGIC_RECONSTRUCTION",
+    "original_files": "OVERWRITTEN (no backup, no git history)",
+    "reconstruction_inputs": "P1/DGF/DEF (frozen, unchanged)",
+    "reconstruction_seeds": {"negative_sampling": 42, "ordering": 123},
+    "bias_risk": "LOW",
+    "verification": {
+      "negatives_empty_context": "16/16 (expected)",
+      "type_a_extent_none": "8/8 (expected)",
+      "evidence_state_absent": true
+    },
+    "case_alignment": "PERFECT (79=79, 0 mismatches)"
+  },
+
+  "e1_definition": {
+    "source": "tmp/m_a_human_review_pilot/data/candidates_internal.json (current)",
+    "characteristics": {
+      "same_y_threshold": "±5pt (PR1)",
+      "all_cases_unified_context": true,
+      "nearest_extent_always_included": "PR2",
+      "evidence_state_3_state": "PR3",
+      "60pt_rule": "candidate generation only (PR2)"
+    },
+    "verification": "9/9 verifications PASS, 3 runs byte-identical"
+  },
+
+  "sampling_frame": {
+    "total_cases": 79,
+    "case_types": ["caption_like", "ambiguous_fragment", "subfigure_label", "reference_like", "type_a", "type_b"],
+    "documents": ["is11_med_001", "is11_resnet", "is11_efficientnet", "is11_cs_001", "arxiv_2402.18619"],
+    "strata": {
+      "S1_COMPLETE_YES": {
+        "count": 56,
+        "definition": "E0 Pack complete + E0 judgment YES",
+        "purpose": "regression test",
+        "target": 8,
+        "per_arm": 4
+      },
+      "S3_COMPLETE_UNCERTAIN": {
+        "count": 3,
+        "definition": "E0 Pack complete + E0 judgment UNCERTAIN",
+        "purpose": "semantic boundary test",
+        "target": 2,
+        "per_arm": 1
+      },
+      "S4_TYPE_A_NEGATIVE": {
+        "count": 8,
+        "definition": "Type A negative (FIG-prefix, not near extent)",
+        "e0_judgments": {"yes": 1, "uncertain": 7},
+        "purpose": "E1 improvement test (context + extent restored)",
+        "target": 6,
+        "per_arm": 3
+      },
+      "S5_TYPE_B_NEGATIVE": {
+        "count": 8,
+        "definition": "Type B negative (near extent, no FIG-prefix)",
+        "e0_judgments": {"yes": 4, "uncertain": 4},
+        "purpose": "E1 improvement test (context restored)",
+        "target": 4,
+        "per_arm": 2
+      },
+      "S6_NO_JUDGMENT": {
+        "count": 4,
+        "definition": "E0 judgment NO",
+        "purpose": "semantic leakage test",
+        "target": 4,
+        "per_arm": 2
+      }
+    },
+    "sample_size": 24,
+    "per_arm": 12,
+    "composition": {
+      "regression_test": "33%",
+      "semantic_boundary": "8%",
+      "improvement_test": "42%",
+      "leakage_test": "17%"
+    },
+    "inclusion_rule": "Case exists in BOTH E0 and E1 with identical CASE_ID; belongs to one of 5 strata; has rendered page image",
+    "exclusion_rule": "Case not in 79-case Pilot; missing page image; S_OTHER stratum"
+  },
+
+  "randomization_rule": {
+    "selection_seed": 777,
+    "allocation_seed": 888,
+    "presentation_seed": 999,
+    "method": "within-stratum sort by case_id → shuffle (per-stratum seed) → take first N → shuffle (per-stratum seed) → alternating A/B → global shuffle (seed 999) for presentation",
+    "reproducible": true,
+    "no_cherry_picking": true
+  },
+
+  "a_b_allocation": {
+    "design": "Parallel case split with stratified randomization",
+    "arm_a": {"label": "E0", "count": 12, "description": "Human sees OLD Evidence Pack"},
+    "arm_b": {"label": "E1", "count": 12, "description": "Human sees NEW Evidence Pack"},
+    "each_case_seen_once": true,
+    "carryover_eliminated": true,
+    "rationale": "Parallel split eliminates primary carryover (same case seen twice). Counterbalanced within-subject would require 48 reviews with severe memory bias. Parallel split is minimal design controlling carryover.",
+    "balance_verified": {
+      "arm_a": {"strata": {"S1": 4, "S3": 1, "S4": 3, "S5": 2, "S6": 2}, "judgments": {"yes": 7, "uncertain": 3, "no": 2}, "documents": 4},
+      "arm_b": {"strata": {"S1": 4, "S3": 1, "S4": 3, "S5": 2, "S6": 2}, "judgments": {"yes": 4, "uncertain": 6, "no": 2}, "documents": 5}
+    },
+    "secondary_carryover_note": "Same Human did E0 Pilot before. Risk LOW (79 cases, reordered, Pack differs). Different Human: risk ZERO."
+  },
+
+  "blinding_status": {
+    "status": "PARTIAL",
+    "blinded": [
+      "No E0/E1/OLD/NEW/A/B labels",
+      "No version identity",
+      "No case_type, stratum, E0 judgment",
+      "No GT, algorithm output, expected answer",
+      "Interleaved presentation order"
+    ],
+    "not_blinded": [
+      "Pack content differs (E1 has evidence_state, context for negatives, extent when far)",
+      "Intrinsic to design — cannot hide content differences"
+    ],
+    "full_blinding_not_feasible": "Packs differ by design; hiding content defeats experiment purpose",
+    "critical_bias_controlled": "Human does not know which version is 'new' or 'expected to be better'"
+  },
+
+  "human_task": {
+    "core_question": "这个文本是否与这个图形关联？(Is this text associated with this drawing?)",
+    "allowed_answers": ["YES", "NO", "UNCERTAIN"],
+    "role": "MINIMAL_SEMANTIC_VALIDATOR",
+    "does_not": ["write reasons", "give confidence", "judge caption/figure/chart/class", "specify algorithm", "modify evidence", "choose threshold", "see GT/case_type/previous judgment"],
+    "self_report": ["M2 (PDF reopen)", "M3 (additional search)", "M4 (burden level)", "M6 (evidence sufficiency)"],
+    "uncertain_followup": "OPTIONAL (A: evidence insufficient, B: semantic boundary, C: other); if skipped: UNCERTAIN_UNCLASSIFIED"
+  },
+
+  "metrics": {
+    "M1": {"name": "ASSOCIATION_JUDGMENT", "values": ["YES", "NO", "UNCERTAIN"], "type": "HUMAN_JUDGMENT_DISTRIBUTION", "not_accuracy": true},
+    "M2": {"name": "PDF_REOPEN_REQUIRED", "values": ["YES", "NO"], "self_reported": true},
+    "M3": {"name": "ADDITIONAL_DOCUMENT_SEARCH_REQUIRED", "values": ["YES", "NO"], "self_reported": true},
+    "M4": {"name": "HUMAN_RECONSTRUCTION_BURDEN", "values": ["LEVEL_0", "LEVEL_1", "LEVEL_2", "LEVEL_3", "LEVEL_4"], "definition_frozen": true, "self_reported": true},
+    "M5": {"name": "TIME_TO_JUDGMENT", "status": "NOT_AVAILABLE", "note": "UI does not record timing; do NOT fabricate"},
+    "M6": {"name": "EVIDENCE_SUFFICIENCY", "values": ["SUFFICIENT", "INSUFFICIENT", "UNCERTAIN"], "note": "Sufficiency ≠ Truth"},
+    "primary_comparison": "RECONSTRUCTION_BURDEN_CHANGE (E0 arm vs E1 arm, descriptive only)"
+  },
+
+  "reconstruction_burden_definition": {
+    "level_0": "Pack complete, no reconstruction needed",
+    "level_1": "Need local context (same_y line)",
+    "level_2": "Need multiple sentences / page content",
+    "level_3": "Must open PDF / understand page layout",
+    "level_4": "Pack cannot support judgment even after PDF",
+    "frozen": true,
+    "not_redefined": true
+  },
+
+  "evidence_sufficiency_definition": {
+    "SUFFICIENT": "Human believes Pack contains enough info to make Association Judgment",
+    "INSUFFICIENT": "Human believes Pack lacks necessary info",
+    "UNCERTAIN": "Human cannot determine sufficiency",
+    "critical_distinction": "Evidence Sufficiency ≠ Association Truth",
+    "sufficient_for_NO": "Pack can be sufficient for a NO judgment",
+    "sufficient_but_uncertain": "Pack can be sufficient but judgment still UNCERTAIN (semantic boundary)"
+  },
+
+  "semantic_boundary_rule": {
+    "EVIDENCE_INSUFFICIENT": {"condition": "M6=INSUFFICIENT", "meaning": "Pack gap, NOT semantic boundary"},
+    "POSSIBLE_SEMANTIC_BOUNDARY": {"condition": "M6=SUFFICIENT AND M4<=1", "meaning": "Pack complete, low burden, still uncertain"},
+    "NOT_DETERMINABLE": {"condition": "M6=UNCERTAIN OR M4>=2", "meaning": "Cannot classify"},
+    "critical_rule": "UNCERTAIN alone does NOT mean semantic boundary",
+    "human_not_asked_to_diagnose": true,
+    "classification_automatic": true
+  },
+
+  "stop_rule": {
+    "STOP-1": "E1 Evidence Regression (any E1 field worse than E0)",
+    "STOP-2": "E1 Modified Existing Human Data (human_session_1.json changed)",
+    "STOP-3": "Frozen Baseline Drift > 0",
+    "STOP-4": "Semantic Leakage (new semantic field in Pack)",
+    "STOP-5": "A/B Evidence Not Same Case (case_id mismatch)",
+    "STOP-6": "E0/E1 Cannot Be Reliably Distinguished",
+    "STOP-7": "Human Data Contamination (Human sees GT/judgment/type)",
+    "action": "Stop immediately, record condition, do NOT continue, report to user",
+    "pre_registered": true
+  },
+
+  "pre_registration_status": {
+    "frozen_parameters": [
+      "Sampling Frame (79 cases, 5 strata)",
+      "Sampling Rule (seed=777)",
+      "A/B Allocation (12 per arm, seed=888)",
+      "Randomization (seed=999)",
+      "Blinding (PARTIAL)",
+      "Metrics (M1-M6, M5=NOT_AVAILABLE)",
+      "Reconstruction Burden Definition (Level 0-4)",
+      "Evidence Sufficiency Definition",
+      "Stop Rule (7 conditions)",
+      "Semantic Boundary Rule",
+      "PR1/PR2/PR3",
+      "Case Selection (24 cases in sampling_frame.csv)"
+    ],
+    "prohibited_after": ["looking at partial results then modifying design", "adding/removing cases", "changing arm assignments", "redefining metrics", "adjusting thresholds"]
+  },
+
+  "statistical_requirements": {
+    "type": "SMALL PILOT",
+    "prohibited": ["statistical significance claims", "over-generalization", "cross-domain generalization"],
+    "allowed": ["descriptive comparison", "rate comparison"],
+    "label": "PILOT EVIDENCE",
+    "sample_size_justification": "24 cases sufficient for descriptive comparison and large-effect detection; NOT sufficient for significance testing"
+  },
+
+  "human_burden_measurement_boundary": {
+    "measures": ["Document Reconstruction Burden", "Evidence Sufficiency", "Judgment distribution"],
+    "does_not_measure": ["cognitive load", "mental effort", "fatigue", "time"],
+    "rule": "100% completion ≠ low cognitive load; burden decreased = Document Reconstruction Burden only"
+  },
+
+  "hypotheses": {
+    "H1": "E1 arm lower PDF reopen rate (M2) than E0 arm",
+    "H2": "E1 arm lower burden levels (M4) than E0 arm",
+    "H3": "E1 arm higher evidence sufficiency (M6=SUFFICIENT) than E0 arm",
+    "H4": "E1 arm fewer UNCERTAIN(EVIDENCE_INSUFFICIENT); UNCERTAIN(SEMANTIC_BOUNDARY) may not decrease",
+    "H5": "E1 arm does NOT increase NO→YES leakage on S6 cases",
+    "note": "Hypotheses tested, NOT pre-determined results. All results reported regardless of direction."
+  },
+
+  "implementation_required": {
+    "for_future_execution": true,
+    "not_executed_now": true,
+    "requirements": [
+      "Render E0 Pack for Arm A (from reconstructed E0 data)",
+      "Render E1 Pack for Arm B (from current candidates_internal.json)",
+      "UI without version labels",
+      "Collect M1-M4, M6 (NOT M5)",
+      "Random presentation (seed=999)",
+      "Save to NEW session file (NOT human_session_1.json)",
+      "Pre-experiment frozen baseline check"
+    ]
+  },
+
+  "negative_control_audit": {
+    "type_a": {"selected": 6, "per_arm": 3, "e0_pack": "INCOMPLETE", "test": "E1 context+extent fix"},
+    "type_b": {"selected": 4, "per_arm": 2, "e0_pack": "PARTIAL", "test": "E1 context fix"},
+    "judgment_reporting": "HUMAN_JUDGMENT_DISTRIBUTION (NOT FPR, NOT accuracy)",
+    "note": "A/B Pilot judgments are INDEPENDENT from E0 Pilot. Compare WITHIN A/B: Arm A vs Arm B."
+  },
+
+  "experiment_ready": true,
+  "human_validation_authorized": false,
+  "blockers": "NONE",
+
+  "governance": {
+    "implementation_authorized": false,
+    "experiment_authorized": false,
+    "human_validation_authorized": false,
+    "human_feedback": "NOT_AUTHORIZED",
+    "l3": "NOT_AUTHORIZED",
+    "capability": "NOT_AUTHORIZED",
+    "runtime": "NOT_AUTHORIZED",
+    "runtime_authority": "ZERO",
+    "production": false,
+    "frozen_baseline": "INTACT",
+    "frozen_baseline_drift": 0,
+    "code_unchanged": true,
+    "evidence_pack_unchanged": true,
+    "m_a_algorithm_unchanged": true,
+    "human_data_unchanged": true,
+    "p1_p6_unchanged": true,
+    "p7_1_unchanged": true,
+    "dgf_unchanged": true,
+    "def_unchanged": true,
+    "tld_unchanged": true,
+    "pr1_frozen": "±5pt",
+    "pr2_frozen": "60pt candidate-gen-only",
+    "pr3_frozen": "3-state",
+    "stop": true
+  }
+}

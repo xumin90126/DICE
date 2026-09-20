@@ -1,0 +1,40 @@
+{
+  "p_files": {
+    "p1|perception/sandbox/observations/atomic_text.py": "74d23ec784d657825780b35627f1b766ad87bd4dd74d88bbe4d560941f3b724a",
+    "p1|perception/sandbox/observations/__init__.py": "ee9685c3050ebf3cfb1c906cb01637be07e9a4b0ab0a8bc48b18e804257b6d90",
+    "p2|perception/sandbox/geometry/geometry_config.py": "7ef3629e5a9b819c59724b8e94a831d10a94e875c8b9534d750a7dcfa849196b",
+    "p2|perception/sandbox/geometry/geometry_observation.py": "7731377cb8468c9171efdc89f03c1d60f11e1372e3671c64c80c77d6da7524da",
+    "p2|perception/sandbox/geometry/geometry_engine.py": "388e7939d334458e194dd4d805f6cafa0b975ce4f78d6b1137a965dd13d5554c",
+    "p2|perception/sandbox/geometry/__init__.py": "f1c3d54379e1c585518b0c35b9e5073cb3fdf1499f1b514c0ebce481674f4bb2",
+    "p3|perception/sandbox/style/style_config.py": "90359278840247ac3dff28342479a6ba022e8a9d4d72cbc929d547f18e44c2e5",
+    "p3|perception/sandbox/style/style_observation.py": "cdf84b47de8f1788de14a24c0a1327373b8c4b8097d879a595514b0e550fd586",
+    "p3|perception/sandbox/style/style_engine.py": "2518cbf0bde063226f77b4433fc41d2c4e3d3e5124b517b3eed9c68c7792da43",
+    "p3|perception/sandbox/style/__init__.py": "43142967188f02347a411a4b0ae96182b0d94a660371110500ae2d3940d2051b",
+    "p4|perception/sandbox/span/span_config.py": "55b9a23850398acc7a89d9164ada6a5788a0bd1777b3f2f520960db2febbb2b2",
+    "p4|perception/sandbox/span/span_observation.py": "87e8c0bca1b2dcc40d19bf5ba4ffabc2c927b5c8b28dfac7c57d9a4ee0c949ae",
+    "p4|perception/sandbox/span/span_rules.py": "1c8e38300e9de981562f13c010ae5d7c68f4c4b744c2a241031e6e8594c6dcfe",
+    "p4|perception/sandbox/span/span_engine.py": "41e9636a63d97110034ff5989f1038ceada748a4a6a854a8f6f755f893b479ab",
+    "p4|perception/sandbox/span/__init__.py": "620014b864affba25cba979977545c9732b7c3365a9c24e35693e209d10ad037",
+    "p5|perception/sandbox/reading_order/reading_order_config.py": "0f98f6eceef2b7b79dbf8bf656b85a97b51c8a06831792159afde64e35354a04",
+    "p5|perception/sandbox/reading_order/reading_order_observation.py": "b5b096cd9369e751c8a68b32867573e242b559d6b09cdab81af488189a43a912",
+    "p5|perception/sandbox/reading_order/column_geometry.py": "f99989f4f4e41bd0129ed7c00a555b93159804edb29a02cc68173263d11d6fe1",
+    "p5|perception/sandbox/reading_order/reading_order_engine.py": "ee4d0a3f410f398a5cd8e45bc2a49f313e52a3f6eddee009218fc015fb2d529b",
+    "p5|perception/sandbox/reading_order/__init__.py": "b691fd147499033a8cee9e1aa6bb63be85df10132828bfbabc75930641580bb1",
+    "runners|perception/sandbox/p1_runner.py": "190daecf5008912b19125b7b3439afd9ef342cb4f05f9c1a08bc5bb5616cee38",
+    "runners|perception/sandbox/p2_runner.py": "766df3561fd015c3be95ba7a9bf184e624470e08275f4b5617f8fa5b5b61cc51",
+    "runners|perception/sandbox/p3_runner.py": "12497927c0ef2d987e322650190e6945018d3c06f41fb9f99d5c26109b51dae4",
+    "runners|perception/sandbox/p4_runner.py": "1330bb3b7f63dfc93dc6d92754e7d41ee03304560e19fc6b4b4a1c22c9f6cd90",
+    "runners|perception/sandbox/p5_runner.py": "c8c2343f10ecd39e0909f46422343fdfae015c26a1fde33fd7fe684aa3c8dc12"
+  },
+  "frozen": {
+    "pool_730_md5_8": "a10b368e",
+    "registry_py_md5_8": "50e3db50",
+    "bootstrap_py_md5_8": "d7f09fef",
+    "capability_loader_md5_8": "830fca24"
+  },
+  "c1": {
+    "layout_analyzer": "8f69f0d206b3e56572c5e9741f625bedea7c13fbdf17c60956ee378eaefab6b9",
+    "layout_rebuilder": "a80ca3317a6d3ffde17e855cc863e6169b196498667cee2aab4121b1c8e990fe",
+    "table_line_detector": "022f5c21e872ad9e737ddadb10a3f9eb8ff0ddd31333dacd6f30610cfbd8d79b"
+  }
+}

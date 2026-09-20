@@ -1,0 +1,230 @@
+{
+  "baseline_version": "RESEARCH_BASELINE_V1",
+  "date": "2026-09-18",
+  "phase": "PHASE_1_CLOSURE",
+  "purpose": "Formal closure of DICE Phase 1 research; establish stable Research Baseline for future work",
+
+  "system_state": {
+    "P1_P7": "FROZEN",
+    "atomic_observation": "FROZEN",
+    "DGF": "FROZEN",
+    "DEF": "FROZEN",
+    "M_A": "FROZEN",
+    "evidence_pack_E1": "FROZEN",
+    "capability_registry": "FROZEN",
+    "runtime_governance": "FROZEN"
+  },
+
+  "frozen_hashes": {
+    "P1_AtomicText": { "sha_short": "74d23ec784d65782", "status": "INTACT", "verified_in": ["l5_5_implementation_baseline.json", "mb_phase3_2_implementation_baseline.json", "m_a_evidence_pack_pre_implementation_resolution_gate.md"] },
+    "TLD": { "sha_short": "022f5c21e872ad9e", "status": "INTACT", "verified_in": ["l5_5_implementation_baseline.json", "mb_phase3_2_implementation_baseline.json"] },
+    "GT": { "sha_short": "7349963d0d23b5ef", "status": "INTACT", "verified_in": ["l5_5_implementation_baseline.json", "mb_phase3_2_implementation_baseline.json"] },
+    "layout_analyzer": { "sha_short": "8f69f0d206b3e565", "status": "INTACT", "verified_in": ["m_a_evidence_pack_pre_implementation_resolution_gate.md", "m_a_evidence_pack_implementation_report.md"] },
+    "DGF": { "sha_short": "f25a5ff41afa1bec", "status": "INTACT", "verified_in": ["m_a_evidence_pack_pre_implementation_resolution_gate.md", "m_a_evidence_pack_implementation_report.md"] },
+    "DEF": { "sha_short": "cba9e583517f8967", "status": "INTACT", "verified_in": ["m_a_evidence_pack_pre_implementation_resolution_gate.md", "m_a_evidence_pack_implementation_report.md"] }
+  },
+  "baseline_drift": 0,
+
+  "research_state": {
+    "research_chain": [
+      "P1-P7",
+      "Atomic Observation",
+      "Vector Geometry Evidence (AO Visual Geometry Extension)",
+      "M-A Evidence Organization",
+      "Evidence Pack (E1: PR1/PR2/PR3, FROZEN)",
+      "G1-G5 Evidence Gap Framework",
+      "G1-G5 Cross-Document Validation (70 cases, 13 documents)",
+      "Evidence Sufficiency Analysis (149 cases)",
+      "Evidence Boundary Research (13 boundary candidates)"
+    ],
+    "research_artifacts": {
+      "md_reports": 131,
+      "json_files": 131,
+      "csv_files": 14
+    }
+  },
+
+  "frozen_artifacts": {
+    "system": [
+      { "artifact": "P1 AtomicText", "sha": "74d23ec784d65782", "status": "INTACT" },
+      { "artifact": "TLD", "sha": "022f5c21e872ad9e", "status": "INTACT" },
+      { "artifact": "GT", "sha": "7349963d0d23b5ef", "status": "INTACT" },
+      { "artifact": "layout_analyzer", "sha": "8f69f0d206b3e565", "status": "INTACT" },
+      { "artifact": "DGF", "sha": "f25a5ff41afa1bec", "status": "INTACT" },
+      { "artifact": "DEF", "sha": "cba9e583517f8967", "status": "INTACT" }
+    ],
+    "research_framework": [
+      { "framework": "G1 OBSERVATION_COVERAGE_GAP", "status": "FROZEN" },
+      { "framework": "G2 EVIDENCE_ORGANIZATION_GAP", "status": "FROZEN" },
+      { "framework": "G3 EVIDENCE_PRESENTATION_GAP", "status": "FROZEN" },
+      { "framework": "G4 CONSUMER_INTEGRATION_GAP", "status": "FROZEN" },
+      { "framework": "G5 SEMANTIC_BOUNDARY", "status": "FROZEN" },
+      { "framework": "Evidence Sufficiency (SUFFICIENT/INSUFFICIENT/BOUNDARY/INDETERMINATE)", "status": "FROZEN" },
+      { "framework": "Evidence Boundary (B1-B6 + C1-C4)", "status": "FROZEN" },
+      { "framework": "Evidence Functions F1-F12 + F13-F15", "status": "FROZEN" },
+      { "framework": "Minimum Sufficient Evidence (TARGET+REFERENCE+RELATION+CONTEXT+conditional STATE)", "status": "FROZEN" }
+    ],
+    "research_datasets": [
+      { "dataset": "IS-11 Boundary Decision", "n": 45, "status": "FROZEN" },
+      { "dataset": "M-A Human Validation E0", "n": 79, "status": "FROZEN" },
+      { "dataset": "M-A Evidence Pack Counterfactual P0", "n": 79, "status": "FROZEN" },
+      { "dataset": "M-A Human A/B Pilot P1", "n": 24, "status": "FROZEN" },
+      { "dataset": "G1-G5 Cross-Document Validation", "n": 70, "status": "FROZEN" },
+      { "dataset": "Evidence Sufficiency/Boundary Unified", "n": 149, "status": "FROZEN" },
+      { "dataset": "P7 Independent Evaluation", "n": 10, "status": "FROZEN" },
+      { "dataset": "Phase 3 IS-14", "n": 13, "status": "FROZEN" },
+      { "dataset": "PH-02 Column Membership", "n": 22, "status": "FROZEN" }
+    ]
+  },
+
+  "findings": {
+    "SUPPORTED": [
+      { "id": "S-01", "finding": "G1-G5 classifies 100% of 70 observed failure cases", "evidence": "70/70 from 13 documents, 23 problem types, 0 unclassified", "limitation": "Academic papers only" },
+      { "id": "S-02", "finding": "No new Gap Type (G6) is warranted", "evidence": "0 true new gap candidates; 27 borderline cases are existing type boundaries", "limitation": "Academic papers only" },
+      { "id": "S-03", "finding": "Evidence Availability ≠ Evidence Sufficiency", "evidence": "55 cases available but insufficient; 13 available but boundary; 65 available AND sufficient", "limitation": "None (proven by direct case evidence)" },
+      { "id": "S-04", "finding": "Evidence Boundary genuinely exists", "evidence": "13 cases pass B1-B6 + C1-C4; 9 CONFIRMED, 4 CONDITIONAL", "limitation": "Single-researcher; no live counterfactual" },
+      { "id": "S-05", "finding": "Cross-task convergence in boundary mechanism", "evidence": "3 tasks: structural evidence → semantic identity gap", "limitation": "Task 3 has 0 boundary cases" },
+      { "id": "S-06", "finding": "Evidence Boundary = G5 (distinguishable from G1-G5)", "evidence": "Clean separation: G1-G3=INSUFFICIENT, G4=INDETERMINATE, G5=BOUNDARY, L5=SUFFICIENT", "limitation": "G4 (7 cases) INDETERMINATE" },
+      { "id": "S-07", "finding": "G4 (evidence exists but not consumed) is real", "evidence": "IS-11 binary heuristic; 100% evidence exists, 64% not consumed; P1 usage NOT_OBSERVABLE", "limitation": "Consumer behavior unobservable" },
+      { "id": "S-08", "finding": "TLD coverage failure is dominant G2 pattern", "evidence": "32/45 IS-11 TLD fail (71%); P2 exists 45/45 (100%)", "limitation": "IS-11 specific" },
+      { "id": "S-09", "finding": "P0 proved objective Evidence Pack improvement", "evidence": "27/79 improved, 0 regressions, Level-3 burden 8→0", "limitation": "Objective only, not Human-confirmed" },
+      { "id": "S-10", "finding": "P1 did NOT confirm Human-level benefit", "evidence": "INCONCLUSIVE (N=24, M3 worsened, usage NOT_OBSERVABLE)", "limitation": "Honest negative from sound design" }
+    ],
+    "PARTIALLY_SUPPORTED": [
+      { "id": "P-01", "finding": "G1-G5 cross-domain generalization", "supported": "5 gaps in ≥3 documents, ≥2 types", "not_supported": "Academic papers only; non-academic NOT_TESTED" },
+      { "id": "P-02", "finding": "Minimum Sufficient Evidence object-independent", "supported": "Structural claims: TARGET+REFERENCE+RELATION+CONTEXT (65 cases)", "not_supported": "Semantic identity: no structural evidence sufficient" },
+      { "id": "P-03", "finding": "Evidence Boundary cross-document universality", "supported": "9 CONFIRMED from 5 documents, 4 types", "not_supported": "4 CONDITIONAL; academic only; no inter-rater" },
+      { "id": "P-04", "finding": "G1-G5 framework sufficiency", "supported": "100% coverage, cross-task stable, no new gap", "not_supported": "Academic only; 38.6% borderline; single researcher" },
+      { "id": "P-05", "finding": "Sufficiency classification reliability", "supported": "149 cases, clean matrix separation", "not_supported": "G4 INDETERMINATE; no inter-rater" }
+    ],
+    "NOT_DEMONSTRATED": [
+      { "id": "N-01", "finding": "Machine can automatically detect Evidence Boundary", "reason": "All 13 classifications manual; no automatic mechanism; semantic functions have no implementation path" },
+      { "id": "N-02", "finding": "Evidence Boundary can be reliably quantified", "reason": "4/13 CONDITIONAL; no quantitative metric; no inter-rater" },
+      { "id": "N-03", "finding": "G1-G5 holds on non-academic documents", "reason": "0 annual reports, 0 technical reports, 0 manuals, 0 business documents tested" },
+      { "id": "N-04", "finding": "Different Human reviewers produce consistent boundary judgments", "reason": "Single-researcher; M-A single Human; IS-11 Kappa=0.464" },
+      { "id": "N-05", "finding": "Evidence Boundary Intelligence Module should be implemented", "reason": "Missing: non-academic validation, inter-rater, automatic detection, semantic function, G4 observability" },
+      { "id": "N-06", "finding": "P1 Human A/B benefit confirmed", "reason": "INCONCLUSIVE (N=24, MINOR dominant, usage NOT_OBSERVABLE)" },
+      { "id": "N-07", "finding": "G1-G5 distribution is generalizable", "reason": "G2 inflated by IS-11 TLD; G3 inflated by M-A E0; corpus-dependent" },
+      { "id": "N-08", "finding": "Cross-page reference handling is solved", "reason": "6 cases with cross-page refs; no cross-page detection capability" }
+    ]
+  },
+
+  "known_limitations": [
+    { "id": "L-01", "limitation": "ACADEMIC-ONLY CORPUS", "impact": "G1-G5 generalization NOT_DEMONSTRATED for non-academic" },
+    { "id": "L-02", "limitation": "SINGLE-RESEARCHER CLASSIFICATION", "impact": "Classification reliability unverified" },
+    { "id": "L-03", "limitation": "SINGLE-HUMAN VALIDATION", "impact": "Human judgment reliability limited" },
+    { "id": "L-04", "limitation": "G4 NOT_OBSERVABLE", "impact": "7 cases INDETERMINATE; usage attribution impossible" },
+    { "id": "L-05", "limitation": "NO LIVE COUNTERFACTUAL", "impact": "Counterfactuals are reasoned, not empirically verified" },
+    { "id": "L-06", "limitation": "P1 A/B PILOT UNDERPOWERED", "impact": "Human benefit NOT_DEMONSTRATED" },
+    { "id": "L-07", "limitation": "NO NON-ENGLISH DOCUMENTS", "impact": "Cross-language NOT_TESTED" },
+    { "id": "L-08", "limitation": "CORPUS BIAS IN DISTRIBUTION", "impact": "Observed distribution NOT generalizable" },
+    { "id": "L-09", "limitation": "CONDITIONAL BOUNDARIES", "impact": "True boundary count 9-13 (imprecise)" },
+    { "id": "L-10", "limitation": "DOCUMENT DOMAIN CONCENTRATION", "impact": "Limited domain diversity within academic papers" }
+  ],
+
+  "research_questions": {
+    "file": "tmp/dice_research_question_registry_v1.csv",
+    "questions": [
+      { "rq_id": "RQ-01", "question": "G1-G5 explains different Evidence Failure types?", "status": "PARTIALLY_SUPPORTED", "implementation_required": false },
+      { "rq_id": "RQ-02", "question": "Evidence Availability ≠ Evidence Sufficiency?", "status": "SUPPORTED", "implementation_required": false },
+      { "rq_id": "RQ-03", "question": "Evidence Boundary genuinely exists?", "status": "SUPPORTED", "implementation_required": false },
+      { "rq_id": "RQ-04", "question": "Evidence Boundary has cross-task commonality?", "status": "SUPPORTED", "implementation_required": false },
+      { "rq_id": "RQ-05", "question": "Machine can automatically detect Evidence Boundary?", "status": "NOT_DEMONSTRATED", "implementation_required": false },
+      { "rq_id": "RQ-06", "question": "G1-G5 generalizes to non-academic documents?", "status": "NOT_DEMONSTRATED", "implementation_required": false },
+      { "rq_id": "RQ-07", "question": "Should Evidence Boundary Intelligence be implemented?", "status": "NOT_READY_FOR_IMPLEMENTATION", "implementation_required": false },
+      { "rq_id": "RQ-08", "question": "Minimum Sufficient Evidence is object-independent?", "status": "PARTIALLY_SUPPORTED", "implementation_required": false },
+      { "rq_id": "RQ-09", "question": "Evidence Boundary distinguishable from G1-G5?", "status": "SUPPORTED", "implementation_required": false },
+      { "rq_id": "RQ-10", "question": "Should DICE be modified based on findings?", "status": "NOT_SUPPORTED", "implementation_required": false }
+    ]
+  },
+
+  "next_research_gates": {
+    "gate_1": {
+      "id": "DOMAIN_GENERALIZATION_GATE",
+      "purpose": "Verify G1-G5 + Evidence Sufficiency + Evidence Boundary on non-academic documents",
+      "principle": "Document Diversity ↑ (not N ↑)",
+      "status": "REGISTERED (not started)",
+      "implementation_authorized": false,
+      "experiment_authorized": false,
+      "future_principles": [
+        "Must NOT simply add more academic papers",
+        "Must prioritize document DOMAIN diversity",
+        "Must use existing FROZEN framework",
+        "If framework fails → record as FRAMEWORK_LIMITATION, not auto-create G6"
+      ]
+    },
+    "gate_2": {
+      "id": "EVIDENCE_BOUNDARY_STRUCTURE_GATE",
+      "purpose": "Research whether Evidence Boundary can be structurally represented as Evidence → Supported Claim → Unsupported Stronger Claim",
+      "principle": "Structural analysis only; NO detector, NO score, NO confidence",
+      "status": "REGISTERED (not started)",
+      "implementation_authorized": false,
+      "experiment_authorized": false,
+      "future_principles": [
+        "Must NOT implement boundary detector",
+        "Must NOT add score/confidence",
+        "Must NOT add runtime authority",
+        "Must remain READ-ONLY research"
+      ]
+    },
+    "research_brake_mechanism": {
+      "steps": ["G1-G5 Classification", "Evidence Sufficiency", "Boundary check (B1-B6)", "Cross-case check (≥2 docs)", "Cross-document check", "Only then consider new research object"],
+      "rules": [
+        "If framework explains → NO new capability",
+        "If only one case → NO new Gap Type",
+        "If only object difference → NO Object-specific Module",
+        "If only Evidence Pack issue → NO new theory"
+      ]
+    }
+  },
+
+  "over_design_audit": {
+    "O1_NEW_MODULE": false,
+    "O2_NEW_FIELD": false,
+    "O3_NEW_DETECTOR": false,
+    "O4_NEW_CAPABILITY": false,
+    "O5_RUNTIME_CHANGE": false,
+    "O6_HUMAN_REVIEW_CHANGE": false,
+    "O7_OBJECT_SPECIFIC_FRAMEWORK": false,
+    "O8_G6_CREATED": false,
+    "all_false": true,
+    "over_design_risk": "NONE"
+  },
+
+  "forbidden_statements": [
+    "DICE 已经解决 Evidence Boundary",
+    "DICE 可以自动判断 Evidence 是否足够",
+    "G1-G5 是普适理论",
+    "Evidence Boundary 已经可以自动检测",
+    "G5 = 所有人类不确定性"
+  ],
+
+  "final_questions": {
+    "Q1_reached_baseline_freeze": "YES",
+    "Q2_most_important_achievement": "Establishment of the relationship: G1-G5 ↔ Evidence Sufficiency ↔ Evidence Boundary. G1-G3=INSUFFICIENT, G4=INDETERMINATE, G5=BOUNDARY, L5=SUFFICIENT. Evidence Boundary = G5. Boundary at L2 (structural) → L3 (semantic identity).",
+    "Q3_biggest_unknown": "Three: (1) Non-academic generalization (highest priority); (2) Human-independent validation (inter-rater reliability); (3) Boundary automaticity (no machine detection).",
+    "Q4_should_modify_dice": "NO",
+    "Q5_next_research_entry": "DOMAIN_GENERALIZATION_GATE (REGISTERED, not started, IMPLEMENTATION_AUTHORIZED=FALSE)"
+  },
+
+  "governance_state": {
+    "RESEARCH_BASELINE": "FROZEN",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  },
+
+  "files_created": [
+    "tmp/dice_research_baseline_v1.md",
+    "tmp/dice_research_baseline_v1.json",
+    "tmp/dice_research_question_registry_v1.csv"
+  ],
+  "files_modified": 0
+}

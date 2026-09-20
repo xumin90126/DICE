@@ -1,0 +1,526 @@
+{
+  "audit_type": "evidence_distillation_preimplementation_integrity_audit",
+  "audit_date": "2026-09-12",
+  "read_only": true,
+  "design_audit_only": true,
+  "governance": {
+    "CODE_MODIFICATION": 0,
+    "UI_MODIFICATION": 0,
+    "DATA_MUTATION": 0,
+    "GT_MODIFICATION": 0,
+    "SCHEMA_MODIFICATION": 0,
+    "TLD_MODIFICATION": 0,
+    "ATOMIC_MODIFICATION": 0,
+    "AGGREGATION_MODIFICATION": 0,
+    "COMPRESSION_MODIFICATION": 0,
+    "CAPABILITY_REGISTRY_MODIFICATION": 0,
+    "RUNTIME_MODIFICATION": 0,
+    "NEW_PRIMITIVE": 0,
+    "NEW_CONTRACT": 0,
+    "NEW_ARCHITECTURE": 0,
+    "PATTERN_ENGINE": 0,
+    "FEEDBACK_ENGINE": 0,
+    "LEARNING_ENGINE": 0,
+    "SIGNAL_ENGINE": 0,
+    "SIGNAL_OBJECT": 0,
+    "ML_TRAINING": 0,
+    "LLM_FINE_TUNING": 0,
+    "NO_EXPERIMENT_EXECUTION": true,
+    "NO_PARTICIPANT_RECRUITMENT": true,
+    "FROZEN_BASELINE": "INTACT",
+    "PRODUCTION": false,
+    "RUNTIME_AUTHORITY": "ZERO",
+    "CAPABILITY_REGISTRATION": "HUMAN_CONTROLLED",
+    "IMPLEMENTATION_READY": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "ITERATIVE_LEARNING": "INSUFFICIENT_EVIDENCE",
+    "STOP": true
+  },
+  "executive_conclusion": {
+    "result": "CONDITIONAL_PASS",
+    "implementation_ready": false,
+    "blocking_issues_count": 3,
+    "non_blocking_issues_count": 3,
+    "summary": "Strong foundational integrity in cue boundary, provenance, cognitive decomposition. Blocked by attribution confound, invalid automation bias measurement, and incomplete case corpus."
+  },
+  "information_equivalence": {
+    "fields_total": 15,
+    "retained": 7,
+    "re_expressed": 2,
+    "lost": 6,
+    "class_h_lost": 0,
+    "class_m_lost": 1,
+    "class_l_lost": 5,
+    "class_h_verdict": "PASS — no decision-relevant information lost",
+    "class_m_verdict": "CONDITIONAL — same_style lost with MEDIUM risk, n=1 insufficient",
+    "class_l_verdict": "PASS — all low-value, provenance preserved",
+    "mapping": [
+      {
+        "field": "text_a",
+        "class": "H",
+        "relevance": "HIGH",
+        "b_rep": "field (kept)",
+        "status": "RETAINED",
+        "loss_risk": "NONE"
+      },
+      {
+        "field": "text_b",
+        "class": "H",
+        "relevance": "HIGH",
+        "b_rep": "field (kept)",
+        "status": "RETAINED",
+        "loss_risk": "NONE"
+      },
+      {
+        "field": "page_image",
+        "class": "H",
+        "relevance": "HIGH",
+        "b_rep": "field (kept)",
+        "status": "RETAINED",
+        "loss_risk": "NONE"
+      },
+      {
+        "field": "A/B_highlight",
+        "class": "H",
+        "relevance": "HIGH",
+        "b_rep": "field (kept)",
+        "status": "RETAINED",
+        "loss_risk": "NONE"
+      },
+      {
+        "field": "line_spans",
+        "class": "H",
+        "relevance": "HIGH",
+        "b_rep": "field (kept)",
+        "status": "RETAINED",
+        "loss_risk": "NONE"
+      },
+      {
+        "field": "line_obs_count",
+        "class": "M",
+        "relevance": "MEDIUM",
+        "b_rep": "field + Cue 3",
+        "status": "RE-EXPRESSED",
+        "loss_risk": "NONE"
+      },
+      {
+        "field": "h_gap",
+        "class": "M",
+        "relevance": "MEDIUM",
+        "b_rep": "Cue 2 (different_cell)",
+        "status": "RE-EXPRESSED",
+        "loss_risk": "LOW"
+      },
+      {
+        "field": "doc_id",
+        "class": "L",
+        "relevance": "LOW",
+        "b_rep": "field (kept)",
+        "status": "RETAINED",
+        "loss_risk": "NONE"
+      },
+      {
+        "field": "page_number",
+        "class": "L",
+        "relevance": "LOW",
+        "b_rep": "field (kept)",
+        "status": "RETAINED",
+        "loss_risk": "NONE"
+      },
+      {
+        "field": "dy",
+        "class": "L",
+        "relevance": "LOW",
+        "b_rep": "none",
+        "status": "LOST",
+        "loss_risk": "NONE"
+      },
+      {
+        "field": "same_style",
+        "class": "M",
+        "relevance": "MEDIUM",
+        "b_rep": "none",
+        "status": "LOST",
+        "loss_risk": "MEDIUM"
+      },
+      {
+        "field": "width_a",
+        "class": "L",
+        "relevance": "LOW",
+        "b_rep": "none",
+        "status": "LOST",
+        "loss_risk": "NONE"
+      },
+      {
+        "field": "width_b",
+        "class": "L",
+        "relevance": "LOW",
+        "b_rep": "none",
+        "status": "LOST",
+        "loss_risk": "NONE"
+      },
+      {
+        "field": "style_sig_a",
+        "class": "L",
+        "relevance": "LOW",
+        "b_rep": "none",
+        "status": "LOST",
+        "loss_risk": "NONE"
+      },
+      {
+        "field": "style_sig_b",
+        "class": "L",
+        "relevance": "LOW",
+        "b_rep": "none",
+        "status": "LOST",
+        "loss_risk": "NONE"
+      }
+    ]
+  },
+  "attribution_risk": {
+    "counterfactual_c1_deletion_only": {
+      "answer": "LIKELY YES — time would still drop",
+      "risk": "HIGH"
+    },
+    "counterfactual_c2_all_fields_plus_cues": {
+      "answer": "UNCERTAIN",
+      "attribution": "STRONGER if cue used"
+    },
+    "confounding_issue": "B = (A - 7 fields) + 4 cues confounds deletion with distillation",
+    "factors": [
+      {
+        "factor": "Evidence Distillation (cue)",
+        "control": "WEAK",
+        "risk": "HIGH",
+        "fix": "3-condition design OR keep all fields"
+      },
+      {
+        "factor": "Information Deletion",
+        "control": "NONE",
+        "risk": "HIGH",
+        "fix": "Add B1 condition"
+      },
+      {
+        "factor": "UI Presentation",
+        "control": "PARTIAL",
+        "risk": "MEDIUM",
+        "fix": "Control layout"
+      },
+      {
+        "factor": "Learning Effect",
+        "control": "GOOD",
+        "risk": "LOW",
+        "fix": "None"
+      },
+      {
+        "factor": "Automation Bias",
+        "control": "WEAK",
+        "risk": "HIGH",
+        "fix": "Redesign measurement + add cases"
+      }
+    ],
+    "verdict": "FAIL — attribution confound blocks causal interpretation",
+    "recommended_correction": "3-condition design: A (15 fields) / B1 (8 fields, no cues) / B2 (8 fields + 4 cues)"
+  },
+  "evidence_cue_boundary": {
+    "cues_audited": 7,
+    "all_semantic_authority_zero": true,
+    "all_judgment_leakage_pass": true,
+    "verdict": "PASS",
+    "cues": [
+      {
+        "cue": "Cue 1 (is_in_table)",
+        "source": "frozen TLD",
+        "authority": 0,
+        "leakage": "PASS",
+        "risk": "LOW (TLD false-negative on AMB-313/462)"
+      },
+      {
+        "cue": "Cue 2 (different_cell)",
+        "source": "frozen TLD",
+        "authority": 0,
+        "leakage": "PASS",
+        "risk": "LOW"
+      },
+      {
+        "cue": "Cue 3 (line_obs_count)",
+        "source": "P1+P2",
+        "authority": 0,
+        "leakage": "PASS",
+        "risk": "NONE"
+      },
+      {
+        "cue": "Cue 4 (neighbors)",
+        "source": "P1+PyMuPDF",
+        "authority": 0,
+        "leakage": "PASS",
+        "risk": "NONE"
+      },
+      {
+        "cue": "Cue 5 (ends_period)",
+        "source": "P1 text",
+        "authority": 0,
+        "leakage": "PASS",
+        "risk": "LOW (decimal/abbreviation)"
+      },
+      {
+        "cue": "Cue 6 (starts_capital)",
+        "source": "P1 text",
+        "authority": 0,
+        "leakage": "PASS",
+        "risk": "LOW (proper noun)"
+      },
+      {
+        "cue": "Cue 7 (starts_FIG)",
+        "source": "P1 text",
+        "authority": 0,
+        "leakage": "PASS",
+        "risk": "LOW (rare non-caption)"
+      }
+    ]
+  },
+  "automation_bias_audit": {
+    "current_problem": "Arbitrary Override >= 50% threshold, no theoretical basis",
+    "required_metrics": [
+      {
+        "metric": "Wrong-Cue Acceptance Rate (WCAR)",
+        "definition": "Cue conflicts GT + Human accepts wrong direction / total conflict cases"
+      },
+      {
+        "metric": "Correct Override Rate (COR)",
+        "definition": "Cue conflicts GT + Human correctly overrides / total conflict cases"
+      },
+      {
+        "metric": "Evidence Inspection Rate (EIR)",
+        "definition": "Human inspected evidence before decision / total cases"
+      },
+      {
+        "metric": "Cue-Following Rate (CFR)",
+        "definition": "Human decision matches cue direction / total cases"
+      }
+    ],
+    "conflict_cases_available": 2,
+    "conflict_cases_needed": 5,
+    "system_ne_gt_cases": 0,
+    "system_ne_gt_needed": 3,
+    "verdict": "FAIL — insufficient conflict cases, invalid threshold",
+    "minimum_safety_conditions": {
+      "A_conflict_cases_exist": "FAIL (only 2, need >=5)",
+      "B_evidence_inspection_observed": "FAIL (EIR not measured)",
+      "C_automation_bias_event_recorded": "FAIL (no recording mechanism)"
+    }
+  },
+  "statistical_language": {
+    "issues": [
+      {
+        "location": "PASS criterion",
+        "problem": "\"significantly lower\"",
+        "correction": "\"expected-direction reduction\""
+      },
+      {
+        "location": "FAIL criterion",
+        "problem": "\"No significant time difference\"",
+        "correction": "\"no observable direction difference\""
+      },
+      {
+        "location": "Override threshold",
+        "problem": "\">= 50% = SAFE\"",
+        "correction": "Remove; report WCAR/COR individually"
+      }
+    ],
+    "verdict": "FAIL — must replace \"significant\" with \"expected-direction\"",
+    "no_statistical_generalization": true
+  },
+  "case_integrity": {
+    "types": {
+      "P_positive": {
+        "current": 15,
+        "needed": "10 per set",
+        "integrity": "PASS"
+      },
+      "N_negative": {
+        "current": 0,
+        "needed": "5-8",
+        "integrity": "FAIL — CRITICAL"
+      },
+      "B_boundary": {
+        "current": 2,
+        "needed": "2-3 per set",
+        "integrity": "PARTIAL"
+      },
+      "C_confounding": {
+        "current": 4,
+        "needed": "2 per set + System!=GT",
+        "integrity": "PARTIAL (only 2 true conflicts)"
+      },
+      "system_ne_gt": {
+        "current": 0,
+        "needed": "3-5",
+        "integrity": "FAIL — CRITICAL"
+      }
+    },
+    "amb_313_462": {
+      "classification": "C-type (correct)",
+      "true_conflict": true,
+      "sufficient": false
+    },
+    "amb_414_422": {
+      "classification": "C-type (INCORRECT)",
+      "true_conflict": false,
+      "note": "Cue correct, supports MERGE — reclassify as P-type MERGE"
+    },
+    "unknown_preservation": "NOT_TESTABLE — 0 UNKNOWN in baseline, no ambiguous cases",
+    "verdict": "FAIL — 0 N-type, 0 System!=GT, 0 UNKNOWN baseline"
+  },
+  "provenance": {
+    "all_traceable": true,
+    "all_deterministic": true,
+    "no_synthetic": true,
+    "no_hidden_detector": true,
+    "no_new_gt": true,
+    "verdict": "PASS"
+  },
+  "learning_effect": {
+    "design": "matched-pairs + counterbalancing",
+    "same_case_not_repeated": true,
+    "counterbalanced": true,
+    "within_session_trend_measurement": "REQUIRED (not yet specified)",
+    "transfer_risk": "MEDIUM",
+    "verdict": "PASS (with within-session trend measurement condition)"
+  },
+  "blocking_issues": [
+    {
+      "id": 1,
+      "issue": "Attribution confound (deletion + cue confounded)",
+      "severity": "HIGH",
+      "correction": "3-condition design OR keep all fields in B"
+    },
+    {
+      "id": 2,
+      "issue": "Automation bias measurement invalid (arbitrary threshold, 2 conflict cases, 0 System!=GT)",
+      "severity": "HIGH",
+      "correction": "Replace with WCAR/COR/EIR/CFR + add >=3 conflict cases"
+    },
+    {
+      "id": 3,
+      "issue": "Case corpus incomplete (0 N-type, 0 System!=GT, 0 UNKNOWN baseline)",
+      "severity": "HIGH",
+      "correction": "Add N-type + System!=GT + ambiguous cases"
+    }
+  ],
+  "non_blocking_issues": [
+    {
+      "id": 4,
+      "issue": "same_style LOST without sufficient justification",
+      "severity": "MEDIUM",
+      "correction": "Keep in B as progressive disclosure"
+    },
+    {
+      "id": 5,
+      "issue": "Statistical language uses \"significant\"",
+      "severity": "LOW",
+      "correction": "Replace with \"expected-direction\""
+    },
+    {
+      "id": 6,
+      "issue": "AMB-414/422 misclassified as conflict cases",
+      "severity": "LOW",
+      "correction": "Reclassify as P-type MERGE"
+    }
+  ],
+  "passing_audits": [
+    "Research question scope (distillation, not learning)",
+    "Evidence Cue boundary (all 7 cues: authority=0, no leakage)",
+    "Provenance (all traceable, deterministic)",
+    "Cognitive work decomposition (compressible vs non-compressible correct)",
+    "Learning effect control (matched-pairs + counterbalancing)",
+    "Class H information loss (0 decision-relevant fields lost)"
+  ],
+  "corrected_success_criteria": {
+    "primary_outcome": "B shows expected-direction reduction in decision time vs A (report: mean, median, distribution, within-participant difference, effect size)",
+    "quality_guard": [
+      "accuracy B >= A",
+      "boundary quality B >= A",
+      "UNKNOWN not artificially reduced",
+      "no increased error propagation"
+    ],
+    "attribution_guard": [
+      "B underlying evidence unchanged",
+      "information-equivalence PASS",
+      "cue authority=0",
+      "provenance preserved",
+      "3-condition separates deletion vs distillation"
+    ],
+    "automation_guard": [
+      "WCAR reported (not thresholded)",
+      "COR reported",
+      "EIR reported",
+      "CFR reported",
+      "per-conflict-case recording",
+      "if conflict<3: NOT_TESTED",
+      "AUTOMATION_BIAS_EVENT recorded"
+    ]
+  },
+  "minimal_corrections": [
+    {
+      "id": 1,
+      "correction": "Adopt 3-condition design (A / B1-deletion / B2-deletion+cue) OR 2-condition all-fields",
+      "type": "Design change",
+      "priority": "HIGH",
+      "implemented": false
+    },
+    {
+      "id": 2,
+      "correction": "Replace Override threshold with WCAR/COR/EIR/CFR",
+      "type": "Design change",
+      "priority": "HIGH",
+      "implemented": false
+    },
+    {
+      "id": 3,
+      "correction": "Add >=5 N-type + >=3 System!=GT + >=3 ambiguous boundary cases",
+      "type": "Case preparation",
+      "priority": "HIGH",
+      "implemented": false
+    },
+    {
+      "id": 4,
+      "correction": "Keep same_style in B as progressive disclosure",
+      "type": "Design change",
+      "priority": "MEDIUM",
+      "implemented": false
+    },
+    {
+      "id": 5,
+      "correction": "Replace all \"significant\" with \"expected-direction\"",
+      "type": "Language correction",
+      "priority": "LOW",
+      "implemented": false
+    },
+    {
+      "id": 6,
+      "correction": "Reclassify AMB-414/422 as P-type MERGE",
+      "type": "Classification correction",
+      "priority": "LOW",
+      "implemented": false
+    }
+  ],
+  "evidence_classification": {
+    "audit": "B-class",
+    "blocking_severity": "B-class",
+    "corrected_criteria": "B-class",
+    "automation_redesign": "C-class"
+  },
+  "pilot_limitations": {
+    "n": 1,
+    "cases": 21,
+    "documents": 4,
+    "n_type": 0,
+    "system_ne_gt": 0,
+    "conflict": 0,
+    "unknown": 0,
+    "image_confound": true,
+    "tld_false_negatives": 2,
+    "no_statistical_generalization": true
+  }
+}

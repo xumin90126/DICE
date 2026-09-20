@@ -1,0 +1,193 @@
+{
+  "C1_determinism": {
+    "test": "C1_determinism",
+    "pass": true,
+    "hash_1": "bdf3fe63aed3196d",
+    "hash_2": "bdf3fe63aed3196d"
+  },
+  "C2_aggregation_purity": {
+    "test": "C2_aggregation_purity",
+    "pass": true,
+    "forbidden_count": 0,
+    "semantic_label_count": 0,
+    "decision_count": 0,
+    "ranking_count": 0,
+    "score_count": 0,
+    "recommendation_count": 0,
+    "violations": []
+  },
+  "C3_compression_purity": {
+    "test": "C3_compression_purity",
+    "pass": true,
+    "forbidden_count": 0,
+    "new_semantic_interpretation": false,
+    "semantic_decision_count": 0,
+    "boundary_judgment_count": 0,
+    "scope_judgment_count": 0,
+    "confidence_count": 0,
+    "violations": []
+  },
+  "C4_unknown_preservation": {
+    "test": "C4_unknown_preservation",
+    "pass": true,
+    "unknown_before": 10,
+    "unknown_after": 10
+  },
+  "C5_conflict_preservation": {
+    "test": "C5_conflict_preservation",
+    "pass": true,
+    "conflict_before": 0,
+    "conflict_after": 0,
+    "winner_found": false
+  },
+  "C6_negative_preservation": {
+    "test": "C6_negative_preservation",
+    "pass": true,
+    "groups_before": 3,
+    "groups_after": 3,
+    "non_positive_groups_before": 2,
+    "non_positive_groups_retained": 2
+  },
+  "C7_provenance": {
+    "test": "C7_provenance",
+    "pass": true,
+    "total_members": 21,
+    "traced_members": 21,
+    "provenance_coverage": 1.0
+  },
+  "C8_claim_traceability": {
+    "test": "C8_claim_traceability",
+    "pass": true,
+    "all_traceable": true,
+    "details": [
+      {
+        "group_id": "grp|16bfcb76b820",
+        "chain_complete": true,
+        "source_candidates": [],
+        "chain": "claim -> aggregated EIC-1 candidates -> per-instance SCE -> frozen P2 -> observation"
+      },
+      {
+        "group_id": "grp|885e943771cd",
+        "chain_complete": true,
+        "source_candidates": [],
+        "chain": "claim -> aggregated EIC-1 candidates -> per-instance SCE -> frozen P2 -> observation"
+      },
+      {
+        "group_id": "grp|1ad8a7b55945",
+        "chain_complete": true,
+        "source_candidates": [
+          "different_cell_candidate",
+          "different_cell_candidate",
+          "different_cell_candidate"
+        ],
+        "chain": "claim -> aggregated EIC-1 candidates -> per-instance SCE -> frozen P2 -> observation"
+      }
+    ]
+  },
+  "C9_forbidden_field_audit": {
+    "test": "C9_forbidden_field_audit",
+    "pass": true,
+    "total_violations": 0,
+    "aggregation_violations": 0,
+    "compression_violations": 0,
+    "violations": []
+  },
+  "C10_mutation": {
+    "test": "C10_mutation",
+    "pass": true,
+    "replay_hash_before": "790157ee76c82db1",
+    "replay_hash_after": "790157ee76c82db1",
+    "cases_mutated": false
+  },
+  "R1_structural_not_semantic": {
+    "test": "R1_structural_not_semantic",
+    "pass": true,
+    "semantic_role_found": false,
+    "grouping_is_structural": true,
+    "note": "Structural Similarity != Semantic Equivalence; grouping by signature, no semantic label"
+  },
+  "R2_conflict_not_hidden": {
+    "test": "R2_conflict_not_hidden",
+    "pass": true,
+    "all_have_conflict_field": true,
+    "conflict_agg": 0,
+    "conflict_comp": 0
+  },
+  "R3_unknown_not_hidden": {
+    "test": "R3_unknown_not_hidden",
+    "pass": true,
+    "all_have_unknown_field": true,
+    "unknown_agg": 10,
+    "unknown_comp": 10
+  },
+  "R4_negative_not_suppressed": {
+    "test": "R4_negative_not_suppressed",
+    "pass": true,
+    "groups_before": 3,
+    "groups_after": 3,
+    "non_positive_preserved": true
+  },
+  "R5_semantic_equivalence_human": {
+    "test": "R5_semantic_equivalence_human",
+    "pass": true,
+    "unique_signatures": 3,
+    "total_groups": 3,
+    "note": "System groups by structure only; semantic equivalence remains Human problem"
+  },
+  "R6_no_semantic_role": {
+    "test": "R6_no_semantic_role",
+    "pass": true,
+    "semantic_role_violations": 0
+  },
+  "R7_no_new_claim": {
+    "test": "R7_no_new_claim",
+    "pass": true,
+    "new_semantic_interpretation": false,
+    "all_from_eic1": true
+  },
+  "R8_no_volume_weighting": {
+    "test": "R8_no_volume_weighting",
+    "pass": true,
+    "volume_weighted": false,
+    "all_instance_counted": true,
+    "weight_violations": 0
+  },
+  "third_primitive_detection": {
+    "test": "third_primitive_detection",
+    "pass": true,
+    "third_modules_needed": [],
+    "representative_selection": "NOT_IMPLEMENTED (member_refs only, no intelligent selection)",
+    "boundary_discovery": "NOT_IMPLEMENTED (grouping criteria = structural, no semantic boundary)",
+    "negative_detector": "NOT_IMPLEMENTED (non-positive groups preserved, not labeled)",
+    "pattern_miner": "FORBIDDEN",
+    "pattern_classifier": "FORBIDDEN",
+    "minimality_falsified": false
+  },
+  "burden_transfer_proxy": {
+    "test": "burden_transfer_proxy",
+    "pass": true,
+    "human_without_aggregation_would_group": 21,
+    "human_with_aggregation_groups": 0,
+    "human_without_compression_would_read": 21,
+    "human_with_compression_reads": 3,
+    "human_validates_claims": 3,
+    "compression_ratio": "3/21",
+    "human_does_grouping": false,
+    "human_does_comparison": false,
+    "human_does_commonality": false,
+    "human_does_negative_discovery": false,
+    "human_does_unknown_discovery": false,
+    "human_does_conflict_discovery": false,
+    "human_does_prototype_construction": false,
+    "human_does_provenance_reconstruction": false,
+    "note": "engineering proxy verification, NOT human-subject experiment"
+  },
+  "_summary": {
+    "C_tests_pass": "10/10",
+    "R_tests_pass": "8/8",
+    "third_primitive_required": false,
+    "minimality_falsified": false,
+    "burden_transfer_proxy_pass": true,
+    "all_pass": true
+  }
+}

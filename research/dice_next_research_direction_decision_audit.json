@@ -1,0 +1,245 @@
+{
+  "metadata": {
+    "audit_type": "dice_next_research_direction_decision_audit",
+    "date": "2026-09-12",
+    "mode": "READ-ONLY / NO IMPLEMENTATION",
+    "objective": "Determine next research direction: Route A (narrow) vs Route B (expand corpus)"
+  },
+  "current_research_level": {
+    "level": "L3",
+    "description": "Reusable Signal Candidate",
+    "evidence": "CS1 constructed with boundary, 31 past cases, 4 candidates identified",
+    "not_learning": true,
+    "learning_requires": "L4 (Human Validation) → L5 (Reuse) → L6 (HRR Measurement)"
+  },
+  "research_gaps": {
+    "evidence_quality": "PROVEN — P1-P6 + TLD frozen, 545 candidates, SHA256 verified",
+    "evidence_distillation": "PROVEN — L5.10 Cue, P722 B2 condition",
+    "human_feedback_capture": "PROVEN — 4 free-text + 90 rationales + 93 GT rationales + 55 decisions",
+    "signal_discovery": "PARTIAL — CS1-CS4 manually identified, no automation, all CANDIDATE",
+    "signal_validation": "NOT_PROVEN — protocol designed, not executed",
+    "future_case_reuse": "BLOCKED — independent future cases insufficient (CS1:1, CS2:3, CS3:0, CS4:0)",
+    "generalization": "BLOCKED — no novel document, page leakage FULL",
+    "human_effort_reduction": "NOT_PROVEN — no reuse experiment, no HRR measurement",
+    "iterative_learning": "NOT_PROVEN — closed loop not closed, L3 not L4",
+    "key_distinction": "C1 (Compression) + C2 (Distillation) = PROVEN. C3 (Learning) = NOT PROVEN. C2 ≠ Learning."
+  },
+  "cs1_assessment": {
+    "cross_document_potential": "MEDIUM — 3 docs TLD+, but med_001 0% TLD coverage",
+    "cross_page_potential": "LOW — non-past TLD+ rate 13% (2/15)",
+    "evidence_observability": "HIGH — TLD boolean, deterministic, frozen",
+    "human_feedback_expressibility": "HIGH — 70/90 rationales mention table columns (78%)",
+    "signal_verifiability": "HIGH — low-cost validation protocol designed",
+    "future_case_availability": "LOW — 1 independent case (need ≥10)",
+    "reuse_hrr_potential": "UNKNOWN — 31/31 KEEP_SEPARATE ceiling, P722 B1 already 100%/1.7s",
+    "true_bottleneck": "NOT just corpus insufficiency — combination of TLD coverage (41% pages, 0% med_001), page leakage, 100% KEEP_SEPARATE ceiling, 0 CONFLICT, 0 UNKNOWN",
+    "cs1_as_research_object": "Valid Candidate Signal but evidence-narrow (only KEEP_SEPARATE direction). Better as Route A example than Route B Reuse subject."
+  },
+  "route_a_assessment": {
+    "name": "收缩研究目标 (Evidence Distillation + Signal Identification)",
+    "immediately_executable": true,
+    "research_outputs": {
+      "evidence_distillation_quality": "CAN_BE_VALIDATED_NOW — P722 data available",
+      "human_feedback_relevance": "CAN_BE_VALIDATED_NOW — 187 feedback instances",
+      "evidence_grounded_signal_identification": "CAN_BE_VALIDATED_NOW — CS1-CS4 candidates",
+      "semantic_feedback_boundary": "CAN_BE_VALIDATED_NOW — counter-evidence exists",
+      "human_validation_minimality": "REQUIRES_NEW_PARTICIPANTS — 10 past cases protocol designed",
+      "automation_bias_boundary": "NOT_CURRENTLY_TESTABLE — requires Reuse ON/OFF experiment",
+      "learning_level_declaration": "CAN_BE_ESTABLISHED_NOW — L3 = Candidate Discovery"
+    },
+    "can_form_independent_contribution": true,
+    "contribution_summary": "Evidence-Grounded Signal Identification from Human Feedback: Candidate Discovery without Reuse. Proves C1+C2, identifies CS1-CS4, defines boundaries, declares L3, assesses Route B feasibility.",
+    "data_cost": "ZERO — uses existing data",
+    "engineering_cost": "LOW — analysis + design only",
+    "research_risk": "LOW — proving what is already known"
+  },
+  "route_b_assessment": {
+    "name": "扩展独立 Corpus (CS1 → Human Validation → Reuse)",
+    "immediately_executable": false,
+    "requires": [
+      "new PDF documents",
+      "new candidate pool",
+      "new GT adjudication",
+      "new experiment design",
+      "new participants"
+    ],
+    "expected_research_gain": "L4-L6 (Human Validation → Reuse → HRR) — IF successful",
+    "engineering_cost": "HIGH — new corpus + pipeline + GT + experiment + UI",
+    "data_collection_cost": "HIGH — ≥3-5 new documents, each needs manual candidate screening + GT",
+    "success_probability": "LOW to UNKNOWN",
+    "success_conditions": {
+      "count": 8,
+      "conditions": [
+        "TLD effective on new corpus (UNKNOWN)",
+        "CS1 appears with ≥10 independent future cases",
+        "CS1 has GT diversity (MERGE + CONFLICT + UNKNOWN)",
+        "Human Validation succeeds (≥8/10)",
+        "Reuse ON reduces Human Review (HRR > 0)",
+        "Quality maintained (accuracy_ON ≥ accuracy_OFF)",
+        "Boundary preserved (UNKNOWN_preserved)",
+        "No automation bias (override_rate > 0)"
+      ],
+      "all_must_hold": true,
+      "probability_all_hold": "LOW"
+    },
+    "risks": {
+      "risk_1_no_cs1": {
+        "probability": "UNKNOWN",
+        "impact": "FATAL",
+        "description": "TLD coverage on new docs unpredictable; med_001 had 0%"
+      },
+      "risk_2_layout_specific": {
+        "probability": "MEDIUM",
+        "impact": "SEVERE",
+        "description": "31/31 KEEP_SEPARATE ceiling, no MERGE diversity"
+      },
+      "risk_3_source_leakage": {
+        "probability": "MEDIUM",
+        "impact": "MODERATE",
+        "description": "Same-domain papers may share table layout"
+      },
+      "risk_4_validation_succeeds_reuse_fails": {
+        "probability": "MEDIUM",
+        "impact": "SEVERE",
+        "description": "Signal validated but HRR=0 (B1 already 100%/1.7s)"
+      },
+      "risk_5_structural_repetition": {
+        "probability": "MEDIUM",
+        "impact": "SEVERE",
+        "description": "Reuse works but is same-pattern recognition, not generalization"
+      },
+      "risk_6_automation_bias": {
+        "probability": "MEDIUM",
+        "impact": "FATAL",
+        "description": "HRR>0 from blind acceptance, not learning"
+      }
+    }
+  },
+  "corpus_expansion_feasibility": {
+    "current_corpus": {
+      "documents": 4,
+      "pages": 39,
+      "tld_positive_pages": 16,
+      "tld_negative_pages": 23
+    },
+    "tld_coverage_by_doc": {
+      "resnet": "73% (8/11)",
+      "efficientnet": "63% (5/8)",
+      "cs_001": "60% (3/5)",
+      "med_001": "0% (0/15)"
+    },
+    "cs1_frequency_per_tld_positive_paper": "~37 cases, ~10-15 after dedup",
+    "projection_n5": "~50-75 independent CS1 cases (if TLD-positive tech papers)",
+    "projection_n10": "~100-150 independent CS1 cases (if TLD-positive tech papers)",
+    "key_uncertainty": "TLD coverage depends on TABLE FORMATTING, not document topic. Cannot predict without testing.",
+    "tld_negative_evidence": "med_001 (medical journal) has 0% TLD coverage across 15 pages",
+    "cs1_ceiling_effect": "31/31 past CS1 = KEEP_SEPARATE. New corpus likely same → trivially correct signal, no HRR space.",
+    "boundary_diversity_issue": "TLD never detects same_cell → 0 UNKNOWN. No different_cell+MERGE → 0 CONFLICT. Boundary untestable.",
+    "overall_feasibility": "UNKNOWN — no basis for quantitative projection"
+  },
+  "tld_coverage_risk": {
+    "tld_positive_rate": "41% of pages (16/39)",
+    "tld_negative_rate": "59% of pages (23/39)",
+    "med_001_failure": "0% TLD coverage (0/15 pages) — complete failure on medical journal format",
+    "root_cause": "TLD column alignment algorithm recognizes specific table layouts (academic ML papers), not universal table structures",
+    "cannot_repair": "TLD is frozen (SHA256 022f5c21), modification prohibited",
+    "impact_on_route_b": "CRITICAL — if new corpus has med_001-style tables, 0 CS1 cases"
+  },
+  "generalization_risk": {
+    "cross_document": "PARTIAL — same 3 TLD+ docs, no novel TLD+ doc",
+    "cross_page": "FAILED — all TLD+ cases concentrate on same pages",
+    "novel_document": "BLOCKED — med_001 has 0 TLD, no novel TLD+ document available",
+    "layout_diversity": "LOW — 3 TLD+ docs are all academic ML papers with similar table formats",
+    "ceiling_effect": "31/31 KEEP_SEPARATE — no decision diversity, signal trivially correct",
+    "overall": "HIGH generalization risk — even with new corpus, layout-specific TLD + ceiling effect limit generalization claims"
+  },
+  "research_value_comparison": {
+    "route_a_value": "MEDIUM — proves what is already achieved, defines boundaries, honest declaration",
+    "route_b_value": "HIGH (if successful) — true Reuse Learning, L4-L6",
+    "route_a_risk_adjusted_value": "MEDIUM — low risk, guaranteed output",
+    "route_b_risk_adjusted_value": "LOW to UNKNOWN — high risk, uncertain output",
+    "comparison": "Route A has higher risk-adjusted research value due to immediate executability and low risk"
+  },
+  "engineering_cost_comparison": {
+    "route_a_cost": "LOW — analysis + design only, zero new data",
+    "route_b_cost": "HIGH — new corpus + pipeline + GT + experiment + participants",
+    "ratio": "Route B cost >> Route A cost"
+  },
+  "recommended_route": "A→B",
+  "decision_confidence": "HIGH",
+  "decision_rationale": [
+    "Route A is immediately executable with existing data",
+    "Route B has FATAL-level risks (TLD coverage UNKNOWN, automation bias)",
+    "Route A output directly reduces Route B uncertainty (Human Validation Go/No-Go)",
+    "Route A is honest — declares L3, not Learning, avoids overclaiming",
+    "CS1 structural limitations (ceiling, no boundary) persist regardless of corpus size",
+    "A→B is evidence-based sequencing, not avoidance"
+  ],
+  "blocking_evidence": {
+    "cs1_reuse_blocked": "Independent future cases insufficient (1, need ≥10)",
+    "human_validation_blocked": "Future case independence insufficient for Reuse Test",
+    "tld_coverage_risk": "TLD coverage on new corpus UNKNOWN — no basis for projection",
+    "cs1_ceiling_effect": "31/31 KEEP_SEPARATE, P722 B1 100%/1.7s — minimal HRR space",
+    "boundary_diversity_missing": "0 CONFLICT, 0 UNKNOWN — safety testing impossible",
+    "all_signals_insufficient": "CS1:1, CS2:3, CS3:0, CS4:0 — systemic, not CS1-specific"
+  },
+  "next_minimal_audit": {
+    "name": "TLD Coverage Projection on New Corpus",
+    "type": "READ-ONLY",
+    "objective": "Estimate TLD coverage probability on new document types",
+    "method": "Analyze TLD-positive vs TLD-negative page structural features; identify what makes TLD succeed/fail; project coverage probability",
+    "output": "TLD-positive probability (LOW/MEDIUM/HIGH/UNKNOWN) + recommended corpus type + Route B Go/No-Go",
+    "prerequisite": "Route A completion (Human Validation result + boundary analysis)",
+    "note": "Still READ-ONLY — no new corpus download, no TLD modification"
+  },
+  "decision_matrix": {
+    "route_a": {
+      "current_executability": "HIGH — existing data sufficient",
+      "research_value": "MEDIUM — proves achieved + defines boundaries",
+      "original_dice_goal_alignment": "PARTIAL — Candidate Discovery, not Reuse",
+      "evidence_basis": "STRONG — 187 feedback + 31 CS1 + 545 pool",
+      "human_feedback_value": "HIGH — identify evidence-grounded vs image-driven",
+      "reuse_verifiability": "NOT_ACHIEVABLE",
+      "generalization_risk": "N/A — not pursuing generalization",
+      "data_cost": "ZERO",
+      "engineering_cost": "LOW",
+      "research_risk": "LOW",
+      "evidence_support": "STRONG"
+    },
+    "route_b": {
+      "current_executability": "LOW — needs new corpus + GT + experiment",
+      "research_value": "HIGH (if successful) — true Reuse Learning",
+      "original_dice_goal_alignment": "HIGH — directly pursues Reuse + HRR",
+      "evidence_basis": "WEAK — TLD coverage unknown",
+      "human_feedback_value": "MEDIUM — feedback only valuable in Reuse",
+      "reuse_verifiability": "CONDITIONAL — 8 success conditions, probability LOW",
+      "generalization_risk": "HIGH — TLD layout-specific, ceiling effect",
+      "data_cost": "HIGH — ≥3-5 new PDFs + GT adjudication",
+      "engineering_cost": "HIGH — new pipeline + experiment + UI",
+      "research_risk": "HIGH — 6 risks, 2 FATAL",
+      "evidence_support": "INSUFFICIENT — TLD coverage + CS1 ceiling"
+    }
+  },
+  "governance": {
+    "DICE_CORE_MODIFICATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "SIGNAL_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "EVIDENCE_CUE_MODIFICATION": false,
+    "RUNTIME_CHANGE": false,
+    "ML_TRAINING": false,
+    "FROZEN_BASELINE": "INTACT",
+    "FROZEN_EXPERIMENT": "INTACT",
+    "FORMAL_EXPERIMENT": "NOT_STARTED",
+    "CS1_REUSE": "BLOCKED",
+    "HUMAN_VALIDATION": "BLOCKED",
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e (expected 022f5c21e872ad9e)",
+    "gt_hash": "7349963d0d23b5ef (expected 7349963d0d23b5ef)",
+    "l5_5_aggregation_hash": "d017bddceb9a512a",
+    "l5_5_compression_hash": "79c8d5f079f43882"
+  }
+}

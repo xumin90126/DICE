@@ -1,0 +1,53 @@
+{
+  "audit_type": "Post-Freeze Provenance Audit",
+  "audit_version": "v2",
+  "timestamp": "2026-09-09T00:16:50",
+  "checks": [
+    {
+      "check": "IS-01/IS-02 not computed",
+      "pass": true,
+      "details": "0 actual computations"
+    },
+    {
+      "check": "No machine metrics computed",
+      "pass": true,
+      "details": "0 actual computations"
+    },
+    {
+      "check": "Blind packages contain only allowed fields",
+      "pass": true,
+      "details": "0 leaked fields"
+    },
+    {
+      "check": "No Round 1 data referenced in code",
+      "pass": true,
+      "details": "0 references"
+    },
+    {
+      "check": "Sampling frame geometry-only stratification",
+      "pass": true,
+      "details": "text=0, geo=2"
+    },
+    {
+      "check": "GT frozen, no machine computation",
+      "pass": true,
+      "details": "IS=False, Machine=False, Freeze=FROZEN"
+    },
+    {
+      "check": "Reviewer results contain only decision/reason",
+      "pass": true,
+      "details": "0 leaked fields"
+    },
+    {
+      "check": "No machine prediction files exist",
+      "pass": true,
+      "details": "0 files exist"
+    },
+    {
+      "check": "Adjudicator was blind",
+      "pass": true,
+      "details": "extra fields: set()"
+    }
+  ],
+  "overall": "PASS"
+}

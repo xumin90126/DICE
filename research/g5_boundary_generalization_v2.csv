@@ -1,0 +1,35 @@
+case_id,source,document_id,pattern,pattern_normalized,is_ce2_like,case_type,fig_prefix,drawing_extent,vertical_relation,x_overlap,distance_pt,human_judgment,expansion_level,boundary_structure_holds
+IND-AMB-033,original_29,ind_arxiv_bio2,P3_AUTHOR_NAME_RECOGNITION,P3_AUTHOR_NAME,NO,,,,,,,,E4,YES
+IND-AMB-049,original_29,ind_arxiv_bio2,P3_AUTHOR_NAME_RECOGNITION,P3_AUTHOR_NAME,NO,,,,,,,,E4,YES
+MA-UNC-2,original_29,arxiv_2402.18619,P1_CAPTION_VS_REFERENCE,P1_CAPTION_VS_REFERENCE,NO,,,,,,,,E4,YES
+MA-UNC-5,original_29,arxiv_2402.18619,P1_CAPTION_VS_REFERENCE,P1_CAPTION_VS_REFERENCE,NO,,,,,,,,E4,YES
+MA-UNC-6,original_29,arxiv_2402.18619,P1_CAPTION_VS_REFERENCE,P1_CAPTION_VS_REFERENCE,NO,,,,,,,,E4,YES
+MA-UNC-7,original_29,is11_resnet,P1_CAPTION_VS_REFERENCE,P1_CAPTION_VS_REFERENCE,NO,,,,,,,,E4,YES
+MA-UNC-11,original_29,arxiv_2402.18619,P1_CAPTION_VS_REFERENCE,P1_CAPTION_VS_REFERENCE,NO,,,,,,,,E4,YES
+PH02-SPECIFICITY-VALUE-COL,original_29,is11_resnet,P4_COLUMN_SEMANTIC_TYPE,P4_COLUMN_TYPE,NO,,,,,,,,E4,YES
+PH02-SPECIFICITY-CS001,original_29,is11_cs_001,P4_COLUMN_SEMANTIC_TYPE,P4_COLUMN_TYPE,NO,,,,,,,,E4,YES
+arxiv_2402.18619_p15_498_182,original_29,arxiv_2402.18619,P2_TEXT_ROLE_AMBIGUITY,P2_TEXT_ROLE,NO,Type_B_negative,False,True,inside,False,0,uncertain,E4,YES
+arxiv_2402.18619_p18_346_73,original_29,arxiv_2402.18619,P2_TEXT_ROLE_AMBIGUITY,P2_TEXT_ROLE,NO,Type_B_negative,False,True,above,True,-9.7,uncertain,E4,YES
+arxiv_2402.18619_p19_147_496,original_29,arxiv_2402.18619,P1_CAPTION_VS_REFERENCE,P1_CAPTION_VS_REFERENCE,NO,ambiguous_fragment,True,True,above,True,56.4,uncertain,E4,YES
+arxiv_2402.18619_p26_327_253,original_29,arxiv_2402.18619,P1_CAPTION_VS_REFERENCE,P1_CAPTION_VS_REFERENCE,NO,ambiguous_fragment,True,True,above,True,38.8,uncertain,E4,YES
+is11_resnet_p4_464_620,original_29,is11_resnet,P1_CAPTION_VS_REFERENCE,P1_CAPTION_VS_REFERENCE,NO,ambiguous_fragment,True,True,below,False,38.4,uncertain,E4,YES
+is11_efficientnet_p6_79_415,original_29,is11_efficientnet,P2_TEXT_ROLE_AMBIGUITY,P2_TEXT_ROLE,NO,Type_B_negative,False,True,above,False,21.9,uncertain,E4,YES
+is11_med_001_p15_244_342,original_29,is11_med_001,P2_TEXT_ROLE_AMBIGUITY,P2_TEXT_ROLE,NO,Type_B_negative,False,True,above,True,33.1,uncertain,E4,YES
+is11_efficientnet_p8_467_415 (CE2_NO),original_29,is11_efficientnet,P1_CAPTION_VS_REFERENCE,P1_CAPTION_VS_REFERENCE,YES,ambiguous_fragment,True,True,below,True,25.5,no,E4,YES
+is11_resnet_p6_478_168 (CE2_YES),original_29,is11_resnet,P1_CAPTION_VS_REFERENCE,P1_CAPTION_VS_REFERENCE,YES,ambiguous_fragment,True,True,below,True,25.1,yes,E4,YES
+arxiv_2402.18619_p10_132_629,new_human_validation,arxiv_2402.18619,NP1_CAPTION_VS_REFERENCE_CE2_LIKE,P1_CAPTION_VS_REFERENCE,YES,ambiguous_fragment,True,True,below,False,56.9,yes,E4 (new validation),YES
+arxiv_2402.18619_p10_183_252,new_human_validation,arxiv_2402.18619,NP1_CAPTION_VS_REFERENCE_CE2_LIKE,P1_CAPTION_VS_REFERENCE,YES,ambiguous_fragment,True,True,above,True,18.4,yes,E4 (new validation),YES
+arxiv_2402.18619_p19_339_297,new_human_validation,arxiv_2402.18619,NP1_CAPTION_VS_REFERENCE_CE2_LIKE,P1_CAPTION_VS_REFERENCE,YES,ambiguous_fragment,True,True,below,True,56.8,no,E4 (new validation),YES
+arxiv_2402.18619_p19_83_745,new_human_validation,arxiv_2402.18619,NP1_CAPTION_VS_REFERENCE_CE2_LIKE,P1_CAPTION_VS_REFERENCE,YES,ambiguous_fragment,True,True,below,False,45.1,yes,E4 (new validation),YES
+arxiv_2402.18619_p28_256_214,new_human_validation,arxiv_2402.18619,NP1_CAPTION_VS_REFERENCE_CE2_LIKE,P1_CAPTION_VS_REFERENCE,YES,ambiguous_fragment,True,True,below,True,35.7,yes,E4 (new validation),YES
+arxiv_2402.18619_p28_457_234,new_human_validation,arxiv_2402.18619,NP1_CAPTION_VS_REFERENCE_CE2_LIKE,P1_CAPTION_VS_REFERENCE,YES,ambiguous_fragment,True,True,below,True,55.2,yes,E4 (new validation),YES
+arxiv_2402.18619_p28_479_214,new_human_validation,arxiv_2402.18619,NP1_CAPTION_VS_REFERENCE_CE2_LIKE,P1_CAPTION_VS_REFERENCE,YES,ambiguous_fragment,True,True,below,True,35.7,yes,E4 (new validation),YES
+is11_efficientnet_p4_188_461,new_human_validation,is11_efficientnet,NP1_CAPTION_VS_REFERENCE_CE2_LIKE,P1_CAPTION_VS_REFERENCE,YES,ambiguous_fragment,True,True,below,False,20.1,no,E4 (new validation),YES
+is11_efficientnet_p6_511_629,new_human_validation,is11_efficientnet,NP1_CAPTION_VS_REFERENCE_CE2_LIKE,P1_CAPTION_VS_REFERENCE,YES,ambiguous_fragment,True,True,below,True,3.2,yes,E4 (new validation),YES
+is11_med_001_p15_261_316,new_human_validation,is11_med_001,NP1_CAPTION_VS_REFERENCE_CE2_LIKE,P1_CAPTION_VS_REFERENCE,YES,ambiguous_fragment,True,True,above,True,55.0,yes,E4 (new validation),YES
+is11_resnet_p1_412_338,new_human_validation,is11_resnet,NP1_CAPTION_VS_REFERENCE_CE2_LIKE,P1_CAPTION_VS_REFERENCE,YES,ambiguous_fragment,True,True,below,True,35.4,yes,E4 (new validation),YES
+is11_resnet_p5_359_225,new_human_validation,is11_resnet,NP1_CAPTION_VS_REFERENCE_CE2_LIKE,P1_CAPTION_VS_REFERENCE,YES,ambiguous_fragment,True,True,above,True,17.8,no,E4 (new validation),YES
+arxiv_2402.18619_p17_184_561,new_human_validation,arxiv_2402.18619,NP2_TEXT_ROLE_WITHOUT_LEXICAL_SIGNAL,P2_TEXT_ROLE,NO,Type_B_negative,False,True,below,True,5.1,yes,E4 (new validation),YES
+is11_cs_001_p5_292_225,new_human_validation,is11_cs_001,NP2_TEXT_ROLE_WITHOUT_LEXICAL_SIGNAL,P2_TEXT_ROLE,NO,Type_B_negative,False,True,below,True,7.1,yes,E4 (new validation),YES
+is11_efficientnet_p8_328_261,new_human_validation,is11_efficientnet,NP2_TEXT_ROLE_WITHOUT_LEXICAL_SIGNAL,P2_TEXT_ROLE,NO,Type_B_negative,False,True,inside,True,0,yes,E4 (new validation),YES
+is11_resnet_p1_435_316,new_human_validation,is11_resnet,NP2_TEXT_ROLE_WITHOUT_LEXICAL_SIGNAL,P2_TEXT_ROLE,NO,Type_B_negative,False,True,below,True,13.5,yes,E4 (new validation),YES

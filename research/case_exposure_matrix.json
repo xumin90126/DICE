@@ -1,0 +1,872 @@
+{
+  "audit_type": "case_exposure_matrix",
+  "audit_date": "2026-09-12",
+  "summary": {
+    "total_cases": 30,
+    "tier1_full_evidence": 21,
+    "tier2_evidence_reduced": 9,
+    "genuine_cue_conflicts": 2,
+    "evidence_missing_not_conflict": 2,
+    "zero_cue_in_b2": 7,
+    "unknown_eligible": 2,
+    "exposure_design": "random_shuffle_3_sets (NOT stratified)",
+    "same_case_cross_condition": true,
+    "same_case_within_participant": false
+  },
+  "matrix": [
+    {
+      "case_id": "IS11-AMB-005",
+      "case_type": [
+        "B"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 6,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_left",
+        "cue5",
+        "cue6"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_resnet",
+      "page_number": 0,
+      "text_a_preview": "unsurprising) and then degrades rapidly.",
+      "text_b_preview": "Unexpectedly,"
+    },
+    {
+      "case_id": "IS11-AMB-024",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 4,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_left"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_resnet",
+      "page_number": 0,
+      "text_a_preview": "28.54",
+      "text_b_preview": "10.02"
+    },
+    {
+      "case_id": "IS11-AMB-034",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 5,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_left",
+        "cue4_right"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_resnet",
+      "page_number": 0,
+      "text_a_preview": "21.59",
+      "text_b_preview": "5.71"
+    },
+    {
+      "case_id": "IS11-AMB-074",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 4,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_left"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_resnet",
+      "page_number": 0,
+      "text_a_preview": "41.5",
+      "text_b_preview": "21.2"
+    },
+    {
+      "case_id": "IS11-AMB-130",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 5,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_left",
+        "cue4_right"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page_number": 0,
+      "text_a_preview": "Resolution",
+      "text_b_preview": "#Channels"
+    },
+    {
+      "case_id": "IS11-AMB-135",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 6,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_left",
+        "cue4_right",
+        "cue6"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page_number": 0,
+      "text_a_preview": "4",
+      "text_b_preview": "MBConv6, k5x5"
+    },
+    {
+      "case_id": "IS11-AMB-262",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 6,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_left",
+        "cue4_right",
+        "cue6"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page_number": 0,
+      "text_a_preview": "41M",
+      "text_b_preview": "EfﬁcientNet-B5"
+    },
+    {
+      "case_id": "IS11-AMB-313",
+      "case_type": [
+        "C",
+        "S"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 4,
+      "available_cues": [
+        "cue1",
+        "cue3",
+        "cue4_left",
+        "cue4_right"
+      ],
+      "conflict_status": "GENUINE_CUE_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "MERGE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page_number": 0,
+      "text_a_preview": "Test Size",
+      "text_b_preview": "#Classes"
+    },
+    {
+      "case_id": "IS11-AMB-346",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 4,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_left"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page_number": 0,
+      "text_a_preview": "83.95",
+      "text_b_preview": "84.26"
+    },
+    {
+      "case_id": "IS11-AMB-350",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 5,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_left",
+        "cue4_right"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page_number": 0,
+      "text_a_preview": "80.16",
+      "text_b_preview": "81.72"
+    },
+    {
+      "case_id": "IS11-AMB-414",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 5,
+      "available_cues": [
+        "cue1",
+        "cue3",
+        "cue4_right",
+        "cue6",
+        "cue7"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "MERGE",
+      "cue_direction": "MERGE",
+      "gt_direction": "MERGE",
+      "doc_id": "is11_med_001",
+      "page_number": 0,
+      "text_a_preview": "FIG. 9:",
+      "text_b_preview": "Left:"
+    },
+    {
+      "case_id": "IS11-AMB-422",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 4,
+      "available_cues": [
+        "cue1",
+        "cue3",
+        "cue6",
+        "cue7"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "MERGE",
+      "cue_direction": "MERGE",
+      "gt_direction": "MERGE",
+      "doc_id": "is11_med_001",
+      "page_number": 0,
+      "text_a_preview": "FIG. 12:",
+      "text_b_preview": "Distribution of errors for predictions o"
+    },
+    {
+      "case_id": "IS11-AMB-457",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 5,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_right",
+        "cue6"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_cs_001",
+      "page_number": 0,
+      "text_a_preview": "Models",
+      "text_b_preview": "Size"
+    },
+    {
+      "case_id": "IS11-AMB-462",
+      "case_type": [
+        "C",
+        "S"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 4,
+      "available_cues": [
+        "cue1",
+        "cue3",
+        "cue4_left",
+        "cue6"
+      ],
+      "conflict_status": "GENUINE_CUE_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "MERGE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_cs_001",
+      "page_number": 0,
+      "text_a_preview": "WGe",
+      "text_b_preview": "Avg."
+    },
+    {
+      "case_id": "IS11-AMB-467",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 5,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_left",
+        "cue4_right"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_cs_001",
+      "page_number": 0,
+      "text_a_preview": "37.0",
+      "text_b_preview": "60.0"
+    },
+    {
+      "case_id": "IS11-AMB-483",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 5,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_left",
+        "cue4_right"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_cs_001",
+      "page_number": 0,
+      "text_a_preview": "23.5",
+      "text_b_preview": "38.5"
+    },
+    {
+      "case_id": "IS11-AMB-505",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 5,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_left",
+        "cue4_right"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_cs_001",
+      "page_number": 0,
+      "text_a_preview": "61.4",
+      "text_b_preview": "28.3"
+    },
+    {
+      "case_id": "IS11-AMB-514",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 5,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_left",
+        "cue4_right"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_cs_001",
+      "page_number": 0,
+      "text_a_preview": "44.2",
+      "text_b_preview": "63.5"
+    },
+    {
+      "case_id": "IS11-AMB-519",
+      "case_type": [
+        "B"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 4,
+      "available_cues": [
+        "cue1",
+        "cue3",
+        "cue5",
+        "cue6"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_cs_001",
+      "page_number": 0,
+      "text_a_preview": "facto backbone for open-source LLMs.",
+      "text_b_preview": "To embrace the open-source community, ou"
+    },
+    {
+      "case_id": "IS11-AMB-522",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 6,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_left",
+        "cue4_right",
+        "cue6"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_cs_001",
+      "page_number": 0,
+      "text_a_preview": "Size",
+      "text_b_preview": "Max Batch Size"
+    },
+    {
+      "case_id": "IS11-AMB-530",
+      "case_type": [
+        "P"
+      ],
+      "tier": "T1_FULL_EVIDENCE",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": true,
+      "tld_available": true,
+      "cue_count_in_b2": 6,
+      "available_cues": [
+        "cue1",
+        "cue2",
+        "cue3",
+        "cue4_left",
+        "cue4_right",
+        "cue6"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_cs_001",
+      "page_number": 0,
+      "text_a_preview": "PIQA",
+      "text_b_preview": "SciQ"
+    },
+    {
+      "case_id": "IS11-AMB-052",
+      "case_type": [
+        "N"
+      ],
+      "tier": "T2_EVIDENCE_REDUCED",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "NO_CUES_B1_EQUALS_B2",
+      "image_available": false,
+      "tld_available": false,
+      "cue_count_in_b2": 0,
+      "available_cues": [],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_resnet",
+      "page_number": 0,
+      "text_a_preview": "0.46M",
+      "text_b_preview": "7.51"
+    },
+    {
+      "case_id": "IS11-AMB-163",
+      "case_type": [
+        "N"
+      ],
+      "tier": "T2_EVIDENCE_REDUCED",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "NO_CUES_B1_EQUALS_B2",
+      "image_available": false,
+      "tld_available": false,
+      "cue_count_in_b2": 0,
+      "available_cues": [],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page_number": 0,
+      "text_a_preview": "93.9%",
+      "text_b_preview": "34M"
+    },
+    {
+      "case_id": "IS11-AMB-168",
+      "case_type": [
+        "N"
+      ],
+      "tier": "T2_EVIDENCE_REDUCED",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "NO_CUES_B1_EQUALS_B2",
+      "image_available": false,
+      "tld_available": false,
+      "cue_count_in_b2": 0,
+      "available_cues": [],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page_number": 0,
+      "text_a_preview": "3.0x",
+      "text_b_preview": "5.7B"
+    },
+    {
+      "case_id": "IS11-AMB-198",
+      "case_type": [
+        "N"
+      ],
+      "tier": "T2_EVIDENCE_REDUCED",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "NO_CUES_B1_EQUALS_B2",
+      "image_available": false,
+      "tld_available": false,
+      "cue_count_in_b2": 0,
+      "available_cues": [],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page_number": 0,
+      "text_a_preview": "82.9%",
+      "text_b_preview": "96.2%"
+    },
+    {
+      "case_id": "IS11-AMB-205",
+      "case_type": [
+        "N"
+      ],
+      "tier": "T2_EVIDENCE_REDUCED",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "NO_CUES_B1_EQUALS_B2",
+      "image_available": false,
+      "tld_available": false,
+      "cue_count_in_b2": 0,
+      "available_cues": [],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page_number": 0,
+      "text_a_preview": "96.5%",
+      "text_b_preview": "155M"
+    },
+    {
+      "case_id": "IS11-AMB-375",
+      "case_type": [
+        "B",
+        "U"
+      ],
+      "tier": "T2_EVIDENCE_REDUCED",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": false,
+      "tld_available": false,
+      "cue_count_in_b2": 2,
+      "available_cues": [
+        "cue5",
+        "cue6"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "UNKNOWN_ELIGIBLE",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_med_001",
+      "page_number": 0,
+      "text_a_preview": "[23].",
+      "text_b_preview": "Each"
+    },
+    {
+      "case_id": "IS11-AMB-418",
+      "case_type": [
+        "B",
+        "U"
+      ],
+      "tier": "T2_EVIDENCE_REDUCED",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "HAS_CUES",
+      "image_available": false,
+      "tld_available": false,
+      "cue_count_in_b2": 2,
+      "available_cues": [
+        "cue5",
+        "cue6"
+      ],
+      "conflict_status": "NO_CONFLICT",
+      "unknown_status": "UNKNOWN_ELIGIBLE",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_med_001",
+      "page_number": 0,
+      "text_a_preview": "), but with the different kernels illust",
+      "text_b_preview": "The"
+    },
+    {
+      "case_id": "IS11-AMB-032",
+      "case_type": [
+        "S"
+      ],
+      "tier": "T2_EVIDENCE_REDUCED",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "NO_CUES_B1_EQUALS_B2",
+      "image_available": false,
+      "tld_available": false,
+      "cue_count_in_b2": 0,
+      "available_cues": [],
+      "conflict_status": "EVIDENCE_MISSING_NOT_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "MERGE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_resnet",
+      "page_number": 0,
+      "text_a_preview": "-",
+      "text_b_preview": "8.43"
+    },
+    {
+      "case_id": "IS11-AMB-064",
+      "case_type": [
+        "S"
+      ],
+      "tier": "T2_EVIDENCE_REDUCED",
+      "A_exposure": "AVAILABLE",
+      "B1_exposure": "AVAILABLE",
+      "B2_exposure": "AVAILABLE",
+      "B2_cue_difference": "NO_CUES_B1_EQUALS_B2",
+      "image_available": false,
+      "tld_available": false,
+      "cue_count_in_b2": 0,
+      "available_cues": [],
+      "conflict_status": "EVIDENCE_MISSING_NOT_CONFLICT",
+      "unknown_status": "NOT_UNKNOWN",
+      "gt_label": "KEEP_SEPARATE",
+      "cue_direction": "MERGE",
+      "gt_direction": "KEEP_SEPARATE",
+      "doc_id": "is11_resnet",
+      "page_number": 0,
+      "text_a_preview": "training data",
+      "text_b_preview": "07+12"
+    }
+  ]
+}

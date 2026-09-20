@@ -1,0 +1,508 @@
+{
+  "research_question": "Do the 3 L3 Signal Candidates truly satisfy: Human Feedback provides information Machine did not explicitly possess and can be safely reused in the future?",
+  "case_scope": {
+    "source_audit": "tmp/human_decision_evidence_dependency_audit.json",
+    "total_gt_cases": 45,
+    "gt_distribution": {
+      "KEEP_SEPARATE": 43,
+      "MERGE": 2
+    },
+    "reviewer_disagreement_cases": 4,
+    "p722_cases": 30,
+    "future_independent_cases": 0
+  },
+  "feature_origin_verification": {
+    "text_a_text_b": {
+      "source": "P1 corpus preprocessing",
+      "exists": true,
+      "derivable_without_human": true
+    },
+    "bbox_geometry": {
+      "source": "P2 geometry",
+      "exists": true,
+      "derivable_without_human": true
+    },
+    "h_gap_dy": {
+      "source": "P2 geometry",
+      "exists": true,
+      "derivable_without_human": true
+    },
+    "same_style": {
+      "source": "P3 style",
+      "exists": true,
+      "derivable_without_human": true
+    },
+    "line_obs_count": {
+      "source": "NOT in P2 output",
+      "exists": false,
+      "derivable_without_human": true,
+      "derivation": "count P1 observations on same y-band"
+    },
+    "line_spans": {
+      "source": "P4 span_v2",
+      "exists": true,
+      "derivable_without_human": true
+    },
+    "has_fig_prefix": {
+      "source": "NOT explicitly computed",
+      "exists": false,
+      "derivable_without_human": true,
+      "derivation": "text.startsWith(\"FIG\") — trivial string check"
+    },
+    "tld_is_in_table": {
+      "source": "TLD table_line_detector",
+      "exists": true,
+      "derivable_without_human": true,
+      "note": "TLD failed on 15/17 H2 cases"
+    },
+    "candidate_universe_metadata_note": "All features are geometric only (pure geometric slice). table_line_detector.py was NOT called. Text_a/text_b are P1 output.",
+    "key_finding": "ALL features exist in P1-P7 or are deterministically derivable. Feature info gain = 0. Info gain is in RULE DISCOVERY only."
+  },
+  "signal_candidate_cards": {
+    "signal_1_has_fig_to_merge": {
+      "definition": "text_a or text_b starts with FIG → MERGE",
+      "A_human_feedback_info": "Human provides MERGE label for 2 cases with FIG prefix",
+      "B_exists_in_evidence": "text in P1 (YES), has_fig_prefix derivable (YES), TLD is_in_table (YES but failed)",
+      "C_machine_without_human": "NO — Machine has feature but no label → cannot discover rule",
+      "D_info_gain": {
+        "feature": 0,
+        "rule": "> 0"
+      },
+      "E_missing_info": "FIG prefix → MERGE association rule",
+      "F_category": {
+        "feature": "E1 (text in P1)",
+        "rule": "E5 (text pattern → label)"
+      },
+      "G_new_semantic": "YES — Human provides FIG=caption=MERGE interpretation",
+      "H_cross_case_stable": "UNTESTED — n=2, 1 document",
+      "I_multiple_docs": "NO — both from is11_med_001",
+      "J_counterexamples": "None on 45 cases, but n=2 too small",
+      "K_boundary": "No UNKNOWN/CONFLICT in 2 FIG cases",
+      "L_keyword_recurrence": "YES — KEYWORD_RECURRENCE (FIG is academic paper specific)",
+      "classification": "TEMPORARY_MACHINE_GAP + KEYWORD_RECURRENCE"
+    },
+    "signal_2_line_obs_ge_6": {
+      "definition": "line_obs_count >= 6 → KEEP_SEPARATE",
+      "A_human_feedback_info": "Human provides KEEP_SEPARATE for 28 cases with line_obs >= 6",
+      "B_exists_in_evidence": "line_obs_count NOT in P2 but DERIVABLE from P1",
+      "C_machine_without_human": "NO — Machine can compute line_obs but has no label → cannot find threshold",
+      "D_info_gain": {
+        "feature": 0,
+        "rule": "> 0"
+      },
+      "E_missing_info": "threshold = 6 and line_obs → KEEP_SEPARATE association",
+      "F_category": {
+        "feature": "E3 (derivable from P1)",
+        "rule": "E2-B (proxy discovery)"
+      },
+      "G_new_semantic": "PARTIAL — Human provides label, System discovers line_obs as proxy",
+      "H_cross_case_stable": "MODERATE — 28 cases, 4 docs, but post-hoc threshold",
+      "I_multiple_docs": "YES — 4 documents",
+      "J_counterexamples": "0 false positive on 45 cases, but threshold excludes 17 cases",
+      "K_boundary": "1/4 disagreement cases covered (AMB-418, overcommit)",
+      "L_threshold_fitting": "YES — POST-HOC THRESHOLD FITTING",
+      "classification": "TEMPORARY_MACHINE_GAP + POST-HOC THRESHOLD"
+    },
+    "signal_3_combined": {
+      "definition": "line_obs_count >= 3 AND NOT has_fig_prefix → KEEP_SEPARATE",
+      "A_human_feedback_info": "Human provides KEEP_SEPARATE for 42 cases meeting condition",
+      "B_exists_in_evidence": "line_obs (derivable) + text (P1) — both available",
+      "C_machine_without_human": "NO — Machine has features but no label → cannot discover composite rule",
+      "D_info_gain": {
+        "feature": 0,
+        "rule": "> 0"
+      },
+      "E_missing_info": "composite rule: line_obs >= 3 AND NOT fig → KEEP_SEPARATE",
+      "F_category": {
+        "feature": "E1 (text) + E3 (line_obs)",
+        "rule": "E2-B (proxy) + E5 (text pattern)"
+      },
+      "G_new_semantic": "PARTIAL — NOT fig is text pattern (E5), line_obs is proxy (E2-B)",
+      "H_cross_case_stable": "MODERATE — 42 cases, 4 docs, but post-hoc + boundary overcommit",
+      "I_multiple_docs": "YES — 4 documents",
+      "J_counterexamples": "0 false positive on 45 cases",
+      "K_boundary": "3/4 disagreement cases covered — ALL overcommit (decisive where Humans split 50/50)",
+      "L_composite_fitting": "PARTIAL — composite post-hoc rule with keyword + threshold",
+      "classification": "TEMPORARY_MACHINE_GAP + BOUNDARY_OVERCOMMIT",
+      "boundary_overcommit_detail": {
+        "disagreement_cases_covered": [
+          "IS11-AMB-005",
+          "IS11-AMB-375",
+          "IS11-AMB-418"
+        ],
+        "p722_unknown_cases_overcommitted": [
+          "IS11-AMB-032 (45.9s UNKNOWN)",
+          "IS11-AMB-375 (31.3s UNKNOWN)"
+        ],
+        "issue": "Signal 3 gives decisive KEEP_SEPARATE where Human reviewers split 50/50 or P722 Human said UNKNOWN"
+      }
+    }
+  },
+  "counterfactual_analysis": {
+    "state_a": "Machine has P1 text, P2 geometry, P4 spans, TLD output — NO Human labels",
+    "state_b": "Machine has P1 + P2 + P4 + TLD + Human labels (KEEP_SEPARATE / MERGE)",
+    "results": {
+      "signal_1": {
+        "state_a": "NO (has fig feature, no MERGE label)",
+        "state_b": "YES (rule discovered)",
+        "counterfactual_gain": "> 0",
+        "classification": "TEMPORARY_MACHINE_GAP"
+      },
+      "signal_2": {
+        "state_a": "NO (has line_obs, no KEEP label)",
+        "state_b": "YES (threshold found)",
+        "counterfactual_gain": "> 0",
+        "classification": "TEMPORARY_MACHINE_GAP"
+      },
+      "signal_3": {
+        "state_a": "NO (has features, no label)",
+        "state_b": "YES (composite rule found)",
+        "counterfactual_gain": "> 0",
+        "classification": "TEMPORARY_MACHINE_GAP"
+      }
+    },
+    "critical_distinction": "Counterfactual Info Gain > 0 for all 3 — BUT gain is in RULE DISCOVERY, not FEATURE AVAILABILITY. Machine has all features; Human provides LABELS that enable rule discovery. This is supervised pattern fitting, not genuine learning without validation and reuse.",
+    "all_temporary_machine_gap": true,
+    "none_persistent_human_semantic": true,
+    "none_reorganization_only": true
+  },
+  "E2_deep_split": {
+    "total_e2": 35,
+    "E2_A_complete_info_unorganized": {
+      "count": 35,
+      "pct": 100,
+      "nature": "Features exist, rule missing",
+      "feature_info_gain": 0,
+      "rule_info_gain": "> 0"
+    },
+    "E2_B_partial_info_proxy_discovery": {
+      "count": 35,
+      "pct": 100,
+      "nature": "line_obs_count as proxy for table row membership",
+      "proxy_discovery": true
+    },
+    "E2_C_semantic_boundary": {
+      "count": 0,
+      "pct": 0,
+      "nature": "Not applicable to E2 cases"
+    },
+    "summary": "E2 78% is NOT pure Evidence Organization. It contains REORGANIZATION (E2-A, features exist) + PROXY DISCOVERY (E2-B, Human reveals proxy utility). Both have info gain > 0 at RULE level, not FEATURE level."
+  },
+  "E5_deep_split": {
+    "total_e5": 10,
+    "E5_FIG_keyword_recurrence": {
+      "count": 2,
+      "pct": 20,
+      "cases": [
+        "IS11-AMB-414",
+        "IS11-AMB-422"
+      ],
+      "gt": "MERGE (2/2)",
+      "nature": "KEYWORD_RECURRENCE — FIG is academic paper specific",
+      "cross_document": false,
+      "n": 2
+    },
+    "E5_PROSE_reclassifiable_to_E2": {
+      "count": 7,
+      "pct": 70,
+      "cases": [
+        "IS11-AMB-005",
+        "IS11-AMB-375",
+        "IS11-AMB-380",
+        "IS11-AMB-401",
+        "IS11-AMB-407",
+        "IS11-AMB-409",
+        "IS11-AMB-418"
+      ],
+      "nature": "Covered by Signal 3 (line_obs >= 3, no FIG)",
+      "reclassified": true
+    },
+    "E5_PROSE_genuine_semantic": {
+      "count": 1,
+      "pct": 10,
+      "case": "IS11-AMB-519",
+      "line_obs": 2,
+      "nature": "PERSISTENT_HUMAN_SEMANTIC_JUDGMENT — sentence boundary, line_obs < 3, not covered by any signal"
+    },
+    "summary": "E5 22% deep split: only 1 case (AMB-519) requires genuine Human semantic judgment. 2 are keyword recurrence. 7 are reclassifiable to E2 (covered by Signal 3)."
+  },
+  "signal_matrix": {
+    "columns": [
+      "Candidate",
+      "Novelty",
+      "Grounding",
+      "Reusability",
+      "Discriminative_Value",
+      "Counterfactual_Gain",
+      "Classification"
+    ],
+    "rows": [
+      {
+        "candidate": "Signal 1 (has_fig→MERGE)",
+        "novelty": "LOW (keyword)",
+        "grounding": "E1 (text in P1)",
+        "reusability": "LOW (n=2, 1 doc)",
+        "discriminative_value": "HIGH (2/2 MERGE)",
+        "counterfactual_gain": "> 0",
+        "classification": "TEMPORARY_MACHINE_GAP"
+      },
+      {
+        "candidate": "Signal 2 (line_obs≥6→KEEP)",
+        "novelty": "LOW (threshold)",
+        "grounding": "E3 (derivable)",
+        "reusability": "MODERATE (28 cases, 4 docs)",
+        "discriminative_value": "MODERATE (62% coverage, 0 FP)",
+        "counterfactual_gain": "> 0",
+        "classification": "TEMPORARY_MACHINE_GAP"
+      },
+      {
+        "candidate": "Signal 3 (composite→KEEP)",
+        "novelty": "MODERATE (composite)",
+        "grounding": "E1+E3",
+        "reusability": "MODERATE (42 cases, 4 docs)",
+        "discriminative_value": "HIGH (93%) BUT boundary overcommit",
+        "counterfactual_gain": "> 0",
+        "classification": "TEMPORARY_MACHINE_GAP"
+      }
+    ]
+  },
+  "four_core_properties": {
+    "novelty": {
+      "signal_1": "LOW — keyword, not novel info",
+      "signal_2": "LOW — simple count, post-hoc threshold",
+      "signal_3": "MODERATE — composite rule, but components simple",
+      "summary": "Human provides LABELS, not new features. Novelty at rule level, not info level."
+    },
+    "grounding": {
+      "signal_1": "YES — text in P1",
+      "signal_2": "YES — line_obs derivable from P1",
+      "signal_3": "YES — text + line_obs both traceable",
+      "summary": "All signals evidence-grounded."
+    },
+    "reusability": {
+      "signal_1": "LOW — n=2, 1 document",
+      "signal_2": "MODERATE — 28 cases, 4 docs",
+      "signal_3": "MODERATE — 42 cases, 4 docs",
+      "summary": "Signal 2/3 cross-document, but 0 future cases."
+    },
+    "discriminative_value": {
+      "signal_1": "HIGH for MERGE (2/2) but n=2",
+      "signal_2": "MODERATE (62% coverage)",
+      "signal_3": "HIGH (93%) BUT boundary overcommit on 3/4 disagreement cases",
+      "summary": "Signal 3 highest but cannot identify AMBIGUOUS cases as UNKNOWN."
+    }
+  },
+  "boundary_overcommit_analysis": {
+    "reviewer_disagreement_cases": [
+      {
+        "case_id": "IS11-AMB-005",
+        "reviewer_a": "KEEP_SEPARATE",
+        "reviewer_b": "MERGE",
+        "final": "KEEP_SEPARATE",
+        "line_obs": 3,
+        "signal_3_predicts": "KEEP_SEPARATE",
+        "p722_b2": "KEEP_SEPARATE (followed cue, 3.4s)"
+      },
+      {
+        "case_id": "IS11-AMB-375",
+        "reviewer_a": "KEEP_SEPARATE",
+        "reviewer_b": "MERGE",
+        "final": "KEEP_SEPARATE",
+        "line_obs": 3,
+        "signal_3_predicts": "KEEP_SEPARATE",
+        "p722_b2": "UNKNOWN (31.3s, expanded all fields)"
+      },
+      {
+        "case_id": "IS11-AMB-418",
+        "reviewer_a": "KEEP_SEPARATE",
+        "reviewer_b": "MERGE",
+        "final": "KEEP_SEPARATE",
+        "line_obs": 7,
+        "signal_3_predicts": "KEEP_SEPARATE",
+        "p722_b2": "KEEP_SEPARATE (12.2s)"
+      },
+      {
+        "case_id": "IS11-AMB-519",
+        "reviewer_a": "KEEP_SEPARATE",
+        "reviewer_b": "MERGE",
+        "final": "KEEP_SEPARATE",
+        "line_obs": 2,
+        "signal_3_predicts": "UNCOVERED",
+        "p722_b2": "KEEP_SEPARATE (2.0s)"
+      }
+    ],
+    "p722_unknown_cases": [
+      {
+        "case_id": "IS11-AMB-032",
+        "condition": "B2",
+        "decision": "UNKNOWN",
+        "time": 45.9,
+        "gt": "KEEP_SEPARATE",
+        "signal_3_predicts": "KEEP_SEPARATE (line_obs=3)"
+      },
+      {
+        "case_id": "IS11-AMB-375",
+        "condition": "B2",
+        "decision": "UNKNOWN",
+        "time": 31.3,
+        "gt": "KEEP_SEPARATE",
+        "signal_3_predicts": "KEEP_SEPARATE (line_obs=3)"
+      }
+    ],
+    "finding": "Signal 3 gives decisive KEEP_SEPARATE where P722 Human said UNKNOWN after 31-46s. Signal 3 cannot identify AMBIGUOUS cases as UNKNOWN. This is BOUNDARY_OVERCOMMIT."
+  },
+  "l4_candidate_decision": {
+    "criteria": [
+      "Human provided info Machine couldnt determine",
+      "Evidence-grounded",
+      "Non case-specific",
+      "Cross document/page reuse possible",
+      "Has positive examples",
+      "Has negative examples or boundary conditions",
+      "Doesnt require Human to write rules",
+      "No Runtime Authority",
+      "No new Architecture Layer"
+    ],
+    "signal_1": {
+      "passes": [
+        1,
+        2,
+        5,
+        7,
+        8,
+        9
+      ],
+      "fails": [
+        3,
+        4,
+        6
+      ],
+      "decision": "FALSE"
+    },
+    "signal_2": {
+      "passes": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "fails": [
+        6
+      ],
+      "partial": [
+        3
+      ],
+      "decision": "FALSE"
+    },
+    "signal_3": {
+      "passes": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "fails": [
+        6
+      ],
+      "partial": [
+        3
+      ],
+      "decision": "FALSE"
+    },
+    "all_false": true,
+    "reason": "No signal meets all 9 L4 criteria. Signal 3 strongest but fails on #6 (boundary conditions) — BOUNDARY_OVERCOMMIT on 3/4 disagreement cases."
+  },
+  "learning_level": {
+    "current": "L3",
+    "previous": "L3",
+    "upgraded": false,
+    "l0_raw_judgment": true,
+    "l1_feedback_storage": true,
+    "l2_evidence_reorganization": true,
+    "l3_evidence_grounded_candidate": true,
+    "l4_human_validated_reusable": false,
+    "l5_future_case_reuse": false,
+    "l6_measured_hrr": false,
+    "l7_iterative_learning": false,
+    "note": "L3 maintained — 3 evidence-grounded candidates found with info gain > 0, but L4 not reached (no validation, no future cases, boundary overcommit)"
+  },
+  "true_learning_signal_found": "NO",
+  "true_learning_signal_reasons": [
+    "All features have info gain = 0 (exist in P1/P2 or derivable)",
+    "Rule discovery has info gain > 0 (but this is supervised pattern fitting)",
+    "No Human validation (L4 not reached)",
+    "No future case reuse (L5 not reached)",
+    "Boundary overcommit on disagreement cases",
+    "Keyword recurrence (Signal 1, n=2)",
+    "Post-hoc threshold (Signal 2/3)"
+  ],
+  "what_was_found": [
+    "TEMPORARY_MACHINE_GAP — Machine has features but no rules",
+    "EVIDENCE_REORGANIZATION + PROXY DISCOVERY — line_obs as proxy",
+    "COUNTERFACTUAL_INFO_GAIN > 0 — at rule level, not feature level"
+  ],
+  "final_questions": {
+    "q1_best_candidate": "Signal 3 (line_obs >= 3 AND NOT fig → KEEP_SEPARATE) — highest coverage (93%), 0 FP, 4 docs, but needs boundary overcommit fix",
+    "q2_close_permanently": "Signal 1 (has_fig_prefix → MERGE) — n=2, 1 doc, KEYWORD_RECURRENCE. Signal 2 merges into Signal 3.",
+    "q3_need_future_cases": "YES — necessary for L4/L5",
+    "q4_min_independence": "Level B minimum (different document), at least 10 future cases. Level A (different doc + different page) preferred.",
+    "q5_minimal_feedback": "YES — Human only provides KEEP_SEPARATE / MERGE / UNKNOWN. No rules, no features, no descriptions. UNKNOWN is critical.",
+    "q6_need_rationale": "NO — rationale for post-hoc analysis only. Signal discovery needs only LABELS.",
+    "q7_need_llm": "NO — all signals based on deterministic features. No semantic understanding needed.",
+    "q8_need_new_architecture": "NO — all features exist in P1/P2 or derivable. Consumer/Integration Gap is IS-11 issue, not architecture issue."
+  },
+  "research_route": {
+    "A_existing_evidence_poorly_organized": true,
+    "B_deterministic_derived_sufficient": true,
+    "C_new_observation_required": false,
+    "D_persistent_human_semantic": "PARTIAL (1 case: AMB-519)",
+    "E_evidence_insufficient_future_validation": true,
+    "primary": "A + E"
+  },
+  "anti_overdesign": {
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "NEW_OBSERVATION": false,
+    "NEW_LLM_PIPELINE": false,
+    "TLD_MODIFICATION": false,
+    "P7_MODIFICATION": false,
+    "IS11_MODIFICATION": false,
+    "RUNTIME_MODIFICATION": false,
+    "GT_MODIFICATION": false,
+    "FROZEN_BASELINE_DRIFT": 0,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "STOP": true
+  },
+  "governance": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "P2_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "IS11_MODIFICATION": false,
+    "GT_MODIFICATION": false,
+    "EXPERIMENT_MODIFICATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "LLM": false,
+    "RUNTIME_CHANGE": false,
+    "CAPABILITY_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "FORMAL_LEARNING": false,
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  },
+  "stop": true
+}

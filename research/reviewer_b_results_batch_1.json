@@ -1,0 +1,92 @@
+[
+  {
+    "case_id": "IND-AMB-001",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Fig. 14a and Fig. 14b are distinct sub-figure panel labels, each labeling a separate panel of Figure 14. They are independent labels for different sub-figures arranged in a row."
+  },
+  {
+    "case_id": "IND-AMB-003",
+    "decision": "MERGE",
+    "reason": "The period ends a reference title and 'Philadelphia, PA: Society for' is the publisher location of the same reference entry (IEEE book format: Title. Location: Publisher, Year). They are continuous parts of one reference."
+  },
+  {
+    "case_id": "IND-AMB-004",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Text A ', 2nd ed.' belongs to reference [40] (B. Parhami, Computer arithmetic), whose publisher is 'New York: Oxford University Press, Oct 2009'. Text B 'New York, NY: Springer, 2006' is publisher info from a different reference entry with a different publisher and year."
+  },
+  {
+    "case_id": "IND-AMB-002",
+    "decision": "MERGE",
+    "reason": "The period ends a reference title and 'Springer Berlin Heidelberg,' is the publisher name of the same reference entry (IEEE book format: Title. Publisher, Year). They form one continuous reference."
+  },
+  {
+    "case_id": "IND-AMB-090",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Caltech101 and LabelMe are separate column headers (dataset names) in a results table. Each labels a distinct column."
+  },
+  {
+    "case_id": "IND-AMB-084",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Cartoon and Photo are separate column headers (domain names) in a results table. Each labels a distinct column."
+  },
+  {
+    "case_id": "IND-AMB-054",
+    "decision": "MERGE",
+    "reason": "Hyperparameter and Search Space together form a single section heading 'Hyperparameter Search Space' in the appendix, introducing the search space table on the following page."
+  },
+  {
+    "case_id": "IND-AMB-008",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Text A 'in improving out-of-distribution generalization.' ends a complete sentence with a period. Text B 'Our ap-' begins a new sentence ('Our approach'). They are two separate sentences."
+  },
+  {
+    "case_id": "IND-AMB-041",
+    "decision": "MERGE",
+    "reason": "Shiori and Sagawa, are the first and last name of the same author (Shiori Sagawa), forming one complete author name in a reference entry."
+  },
+  {
+    "case_id": "IND-AMB-052",
+    "decision": "MERGE",
+    "reason": "'Guo, Jian Zhao, and Furao Shen.' ends the author list and 'Image data aug-' begins the paper title of the same reference entry. They are continuous parts of one reference (IEEE format: Authors. Title)."
+  },
+  {
+    "case_id": "IND-AMB-062",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Both '[-32, 32]' values are separate table cells representing the Default and Wide column values for the TranslateX(Y) transform. Despite identical values, they are independent data entries in different columns."
+  },
+  {
+    "case_id": "IND-AMB-067",
+    "decision": "KEEP_SEPARATE",
+    "reason": "[4, 8] and [2, 8] are separate table cells representing the Default and Wide column values for the Posterize transform. They are independent data entries in different columns."
+  },
+  {
+    "case_id": "IND-AMB-072",
+    "decision": "KEEP_SEPARATE",
+    "reason": "[-1.0, 1.0] and [-10.0, 10.0] are separate table cells representing the Wide and Wider column values for the Contrast/Color/Sharpness transforms. They are independent data entries in different columns."
+  },
+  {
+    "case_id": "IND-AMB-033",
+    "decision": "MERGE",
+    "reason": "'Le.' ends the author list (Quoc V. Le.) and 'Randaugment:' begins the paper title of the same reference entry. They are continuous parts of one reference (IEEE format: Authors. Title)."
+  },
+  {
+    "case_id": "IND-AMB-082",
+    "decision": "KEEP_SEPARATE",
+    "reason": "The period ends the sentence 'evaluated on dataset D.' and 'The Affinity,' begins a new sentence defining the Affinity measure. They are two separate sentences; the period belongs to the preceding sentence."
+  },
+  {
+    "case_id": "IND-AMB-019",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Text A '-' (a hyphen/dash) and Text B '65.5' (a numeric table value) are separate elements in a results table. The dash is part of a category label or a placeholder, while 65.5 is an independent data value."
+  },
+  {
+    "case_id": "IND-AMB-083",
+    "decision": "KEEP_SEPARATE",
+    "reason": "Art and Cartoon are separate column headers (domain names) in a results table. Each labels a distinct column."
+  },
+  {
+    "case_id": "IND-AMB-032",
+    "decision": "MERGE",
+    "reason": "'Kyungjae Lee,' and 'Han-' are adjacent parts of the same reference's author list (reference [7]). The hyphen in 'Han-' is a line-break splitting 'Han-Cheol'. They flow continuously within one reference entry."
+  }
+]

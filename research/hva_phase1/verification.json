@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-09-13T14:30:56.419276+00:00",
+  "all_pass": true,
+  "criteria": {
+    "1_deterministic": true,
+    "2_evidence_source_machine_eval": true,
+    "3_snapshot_reconstructable": true,
+    "4_hash_mismatch_stale": true,
+    "5_s3_six_fields": true,
+    "6_no_content_type": true,
+    "7_provenance_complete": true,
+    "8_semantic_leakage_zero": true,
+    "9_authority_leakage_zero": true,
+    "10_human_decision_not_modified": true,
+    "11_single_case_not_candidate": true,
+    "12_cross_document_detectable": true,
+    "13_categories_not_compressed": true,
+    "14_frozen_baseline_drift_zero": true,
+    "15_dice_core_byte_identical": true
+  },
+  "hashes": {
+    "tld": "022f5c21e872ad9e",
+    "gt": "7349963d0d23b5ef",
+    "machine_eval": "437aa665210ccd04"
+  },
+  "counts": {
+    "evidence_packs": 45,
+    "feedback_records": 100,
+    "evidence_signatures": 100,
+    "signal_candidates": 10,
+    "unique_signatures": 10
+  }
+}

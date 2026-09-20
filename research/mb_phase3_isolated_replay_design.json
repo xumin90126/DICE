@@ -1,0 +1,412 @@
+{
+ "conflict_validation": {
+  "agree_path": "AMB-346/350/522/530 (TLD-active pages): dual-source agreement -> context admitted, decisions unchanged",
+  "conflict_path": {
+   "fallback_test": "if no natural conflict occurs: synthetic composition unit test - feed TLD verdict + disagreeing EIC verdict into composition function; assert EVIDENCE_CONFLICT state + all-False + no preference rule + conflict in provenance",
+   "honest_expectation": "natural in-frame conflict may not occur (TLD-blind pages are EIC targets; TLD-active pages have GT-consistent TLD verdicts)",
+   "scope": "composition function only; produces no corpus decision"
+  },
+  "f10": "conflict resolved by preference / unrecorded / winner field => FAIL"
+ },
+ "correct_controls": {
+  "cases": [
+   "AMB-005",
+   "AMB-024",
+   "AMB-034",
+   "AMB-074",
+   "AMB-346",
+   "AMB-350",
+   "AMB-522",
+   "AMB-530"
+  ],
+  "coverage": [
+   "normal prose (005)",
+   "numeric value column (034)",
+   "existing correct table-context (024/074/346/350)",
+   "non-table structured numeric sequence context (522/530)"
+  ],
+  "requirement": "S4: prediction change = 0; any change = F4 => FAIL"
+ },
+ "decision_policy_invariance": {
+  "checks": [
+   "function identity: ON-mode decision function source hash == OFF/archived version (frozen copy)",
+   "behavioral equivalence: every case where EIC-1 emits NO context -> ON decision == OFF decision (per-case diff = 0)",
+   "input-composition uniqueness: all ON-vs-OFF differences reducible to 'who produced the is11_obs content' (evidence input composition); NO new if/else branch in decision function - any new branch => MINIMAL_CONSUMER_INTEGRATION = FAILED (F2)",
+   "formula: NEW EVIDENCE != NEW DECISION POLICY"
+  ],
+  "method": "behavioral, not only file diff"
+ },
+ "design_scope": {
+  "decision_metric_rows": 21,
+  "descriptive_rows": 4,
+  "matrix_rule": "matrix frozen BEFORE results; adding/removing cases after seeing results FORBIDDEN (including dropping bad-performing cases)",
+  "source": "existing frozen corpus / GT only (zero manufactured GT)"
+ },
+ "determinism_check": "ON double-run: context records + decisions byte-identical (S8); any difference = F6",
+ "eic1_validation": {
+  "automated_assertions": [
+   "every emitted record: interpretation_status == 'candidate'",
+   "provenance chain L2->LSP->RSC->EIC-1 complete",
+   "no forbidden fields in L3 objects (table/row/column/cell/header/row-number/cell_id/table_id/score/confidence)",
+   "precondition evaluation logged (parameter values = preregistered)"
+  ],
+  "forbidden_observations": [
+   "LSP -> table/row/column/cell/different_cell",
+   "RSC -> table region",
+   "Cell Context Evidence -> validated semantic fact (without Human Validation record)"
+  ],
+  "human_validation": "NOT part of this replay - no simulated 'human confirms this case is a table'; only verifies EIC-1 produces auditable Interpretation Candidates under explicit contract"
+ },
+ "failure_taxonomy": {
+  "F1": "Semantic Leakage - L3 object carries L4 field / L4 lacks candidate status / provenance missing EIC-1 node",
+  "F10": "Evidence Conflict Handling Failure - conflict resolved by preference / unrecorded / winner field",
+  "F2": "Decision Policy Change - function hash changed / behavioral equivalence broken / new branch in decision function",
+  "F3": "Caption Safety Failure - any canary -> KEEP",
+  "F4": "Negative Collateral - D-group prediction change / non-target GT-inconsistent change",
+  "F5": "Provenance Failure - quadruple incomplete",
+  "F6": "Determinism Failure - double-run difference",
+  "F7": "OFF-path Drift - OFF != archived baseline (not byte-identical)",
+  "F8": "Integration Contract Failure - admission emits fields outside existing form / composition shows preference",
+  "F9": "EIC-1 Boundary Failure - forbidden inference / emission without preconditions / scope violation"
+ },
+ "frozen_baseline": {
+  "anchors_drift": 0,
+  "atomic_observation": "INTACT",
+  "baseline_reference": "archived 45-case machine-eval per-case records",
+  "gt": "UNCHANGED",
+  "intact": true,
+  "is11_decision_logic": "INTACT",
+  "tld": "INTACT"
+ },
+ "gt_modification": "NONE",
+ "implementation_authorized": false,
+ "negative_controls": {
+  "axis_tick": "descriptive only (no in-frame case; truthfully marked)",
+  "code_line_number": "LLaMA p19/p22 descriptive",
+  "m4": "incorrect structural context exposure = 0",
+  "mixed_artifact": "AMB-005 (dual role)",
+  "prose_numeric": "AMB-519",
+  "toc": "2212 p15 descriptive (hardest confusable)",
+  "value_column": "AMB-034 ('21.59', dual role: correct control + boundary attack)"
+ },
+ "next_step": "upon separate authorization: execute the frozen matrix per S1-S10 / F1-F10; otherwise remain STOP",
+ "objective": "design a minimal, isolated, falsifiable isolated-replay test set answering 7 questions: FP repaired via contract chain (not new rule); caption safety; correct KEEP unbroken; conflict without hidden arbitration; provenance complete; OFF byte-identical; existing decision policy factually unchanged",
+ "off_on_isolation": {
+  "OFF": "adapter not invoked; all 45-case per-case records byte-identical to archived baseline (S9); no effect on unrelated candidates/observations/registry/capability/runtime/GT",
+  "ON": "only adds EIC-1 consumer-integration channel (second producer); global flag (no per-case special-casing); influence = explicitly listed target evidence channel only"
+ },
+ "phase": "M-B Phase 3",
+ "positive_targets": {
+  "extended": "8 M-B DIRECT (evidence recovery vs decision change counted separately)",
+  "precommitment": "no reverse-engineering of research object or matrix to make AMB-135 pass",
+  "primary": "IS11-AMB-135 (S1)"
+ },
+ "provenance_check": "quadruple (source / source artifact / input identity / derivation trace) per context record; completeness = 1.0 (S7); any missing = F5",
+ "red_team": {
+  "forbidden": "predicate accumulation (return to Research Object / EIC, never stack rules)",
+  "permitted_responses": [
+   "layered attribution (precondition unmet / parameter values / derivation defect / consumer contract gap)",
+   "revise EIC-1 through governance",
+   "declare failure"
+  ],
+  "precommitted_answer": "NO - FORBIDDEN",
+  "question": "if AMB-135 fails, will we naturally add M6/M7/M8/M9?"
+ },
+ "replay_authorized": false,
+ "replay_matrix": [
+  {
+   "baseline_state": "MERGE (FP)",
+   "case_class": "POSITIVE_REPAIR",
+   "case_id": "IS11-AMB-135",
+   "doc": "efficientnet",
+   "expected_integrated_state": "KEEP_SEPARATE (EIC-1 admitted, interpretation_status=candidate)",
+   "page": 5,
+   "safety_level": "HIGH (primary)",
+   "why_included": "proven lag10 x lag6 + same_band 30.02 + 12-column co-structure; FP repair must go through contract chain, not a new rule"
+  },
+  {
+   "baseline_state": "ABSTAIN",
+   "case_class": "DIRECT_RECOVERY",
+   "case_id": "AMB-130",
+   "doc": "efficientnet",
+   "expected_integrated_state": "KEEP_SEPARATE (context admitted) or ABSTAIN (honest unavailable); NEVER MERGE",
+   "page": 5,
+   "safety_level": "HIGH",
+   "why_included": "header pair lag3/2 band4"
+  },
+  {
+   "baseline_state": "ABSTAIN",
+   "case_class": "DIRECT_RECOVERY (weak)",
+   "case_id": "AMB-313",
+   "doc": "efficientnet",
+   "expected_integrated_state": "same rule as A2 ('Test Size' lag=0 -> unavailable is honest expectation, per-case attribution)",
+   "page": 8,
+   "safety_level": "HIGH",
+   "why_included": "header pair lag0/1 band3"
+  },
+  {
+   "baseline_state": "ABSTAIN",
+   "case_class": "DIRECT_RECOVERY",
+   "case_id": "AMB-457",
+   "doc": "cs_001",
+   "expected_integrated_state": "A2 rule",
+   "page": 3,
+   "safety_level": "HIGH",
+   "why_included": "'Models'/'Size' lag8/3 band9"
+  },
+  {
+   "baseline_state": "ABSTAIN",
+   "case_class": "DIRECT_RECOVERY",
+   "case_id": "AMB-462",
+   "doc": "cs_001",
+   "expected_integrated_state": "A2 rule (lag1 weak-membership note)",
+   "page": 3,
+   "safety_level": "HIGH",
+   "why_included": "'WGe'/'Avg.' lag1/8 band9"
+  },
+  {
+   "baseline_state": "ABSTAIN",
+   "case_class": "DIRECT_RECOVERY",
+   "case_id": "AMB-467",
+   "doc": "cs_001",
+   "expected_integrated_state": "A2 rule",
+   "page": 3,
+   "safety_level": "HIGH",
+   "why_included": "'37.0'/'60.0' lag6/8 band9"
+  },
+  {
+   "baseline_state": "ABSTAIN",
+   "case_class": "DIRECT_RECOVERY",
+   "case_id": "AMB-483",
+   "doc": "cs_001",
+   "expected_integrated_state": "A2 rule",
+   "page": 3,
+   "safety_level": "HIGH",
+   "why_included": "lag7/6 band9"
+  },
+  {
+   "baseline_state": "ABSTAIN",
+   "case_class": "DIRECT_RECOVERY",
+   "case_id": "AMB-505",
+   "doc": "cs_001",
+   "expected_integrated_state": "A2 rule",
+   "page": 3,
+   "safety_level": "HIGH",
+   "why_included": "lag8/7 band9"
+  },
+  {
+   "baseline_state": "ABSTAIN",
+   "case_class": "DIRECT_RECOVERY",
+   "case_id": "AMB-514",
+   "doc": "cs_001",
+   "expected_integrated_state": "A2 rule",
+   "page": 3,
+   "safety_level": "HIGH",
+   "why_included": "lag6/8 band9"
+  },
+  {
+   "baseline_state": "ABSTAIN",
+   "case_class": "SAFETY_CANARY",
+   "case_id": "AMB-414",
+   "doc": "med_001",
+   "expected_integrated_state": "ABSTAIN UNCHANGED (context must not flip)",
+   "page": 20,
+   "safety_level": "CRITICAL (hard gate)",
+   "why_included": "band has 4 pseudo-cell fragments ('Left:'|'BIC values...'|'Right:'|'Learning'); 'FIG. 9:' lag=15 = prose margin group"
+  },
+  {
+   "baseline_state": "ABSTAIN",
+   "case_class": "SAFETY_CANARY",
+   "case_id": "AMB-422",
+   "doc": "med_001",
+   "expected_integrated_state": "ABSTAIN UNCHANGED",
+   "page": 24,
+   "safety_level": "CRITICAL (hard gate)",
+   "why_included": "'FIG. 12:' lag=6 margin, same structural class"
+  },
+  {
+   "baseline_state": "ABSTAIN",
+   "case_class": "NEG_PROSE_NUMERIC",
+   "case_id": "AMB-519",
+   "doc": "cs_001",
+   "expected_integrated_state": "ABSTAIN unchanged; any change enumerated+explained; GT-inconsistent = F4",
+   "page": 3,
+   "safety_level": "MEDIUM",
+   "why_included": "prose pair (band=1, margin lag24) - prose numeric token boundary"
+  },
+  {
+   "baseline_state": "ABSTAIN",
+   "case_class": "NEG_DIFFERENT_BAND",
+   "case_id": "AMB-262",
+   "doc": "efficientnet",
+   "expected_integrated_state": "ABSTAIN unchanged (same_y_band=False -> context should be unavailable)",
+   "page": 7,
+   "safety_level": "MEDIUM",
+   "why_included": "attacks 'non-same-band pair wrongly gets cell-context' boundary"
+  },
+  {
+   "baseline_state": "n/a (no GT)",
+   "case_class": "NEG_CODE_LINE_NUMBER",
+   "case_id": "LLaMA-code-line-seq",
+   "doc": "llama",
+   "expected_integrated_state": "descriptive: record whether EIC-1 emits context (expect: region not derivable -> no context)",
+   "page": "p19/p22",
+   "safety_level": "LOW (no GT)",
+   "why_included": "continuous integer column boundary attack"
+  },
+  {
+   "baseline_state": "n/a",
+   "case_class": "NEG_BIBLIOGRAPHY",
+   "case_id": "2309-reference-numbers",
+   "doc": "2309.04040",
+   "expected_integrated_state": "descriptive same",
+   "page": "ref pages",
+   "safety_level": "LOW (no GT)",
+   "why_included": "aligned numeric stack boundary"
+  },
+  {
+   "baseline_state": "n/a",
+   "case_class": "NEG_TOC",
+   "case_id": "2212-TOC",
+   "doc": "2212.12794",
+   "expected_integrated_state": "descriptive same (hardest confusable, honest record)",
+   "page": 15,
+   "safety_level": "LOW (no GT)",
+   "why_included": "3-zone co-structure boundary"
+  },
+  {
+   "baseline_state": "n/a",
+   "case_class": "NEG_AXIS_TICK",
+   "case_id": "axis-ticks",
+   "doc": "corpus figure pages",
+   "expected_integrated_state": "descriptive same; NO in-frame case exists - truthfully marked, no GT manufactured",
+   "page": "n/a",
+   "safety_level": "LOW (no GT)",
+   "why_included": "repeated numeric geometry boundary"
+  },
+  {
+   "baseline_state": "KEEP",
+   "case_class": "CORRECT_CONTROL + MIXED_ARTIFACT",
+   "case_id": "AMB-005",
+   "doc": "resnet",
+   "expected_integrated_state": "UNCHANGED",
+   "page": 1,
+   "safety_level": "HIGH (collateral guard)",
+   "why_included": "cross-column prose pair (margin lag30 x right column) - prose/mixed-artifact boundary attack"
+  },
+  {
+   "baseline_state": "KEEP",
+   "case_class": "CORRECT_CONTROL",
+   "case_id": "AMB-024",
+   "doc": "resnet",
+   "expected_integrated_state": "UNCHANGED",
+   "page": 6,
+   "safety_level": "HIGH",
+   "why_included": "existing correct in-table cell-context"
+  },
+  {
+   "baseline_state": "KEEP",
+   "case_class": "CORRECT_CONTROL + VALUE_COLUMN_HIGH_RISK",
+   "case_id": "AMB-034",
+   "doc": "resnet",
+   "expected_integrated_state": "UNCHANGED",
+   "page": 6,
+   "safety_level": "HIGH",
+   "why_included": "'21.59' lag6 - attacks value-column -> row-number misinterpretation boundary"
+  },
+  {
+   "baseline_state": "KEEP",
+   "case_class": "CORRECT_CONTROL",
+   "case_id": "AMB-074",
+   "doc": "resnet",
+   "expected_integrated_state": "UNCHANGED",
+   "page": 8,
+   "safety_level": "HIGH",
+   "why_included": "existing correct in-table"
+  },
+  {
+   "baseline_state": "KEEP",
+   "case_class": "CORRECT_CONTROL + CONFLICT_AGREEMENT_SITE",
+   "case_id": "AMB-346",
+   "doc": "efficientnet",
+   "expected_integrated_state": "UNCHANGED",
+   "page": 9,
+   "safety_level": "HIGH",
+   "why_included": "TLD-active page -> validates agree path"
+  },
+  {
+   "baseline_state": "KEEP",
+   "case_class": "CORRECT_CONTROL + CONFLICT_AGREEMENT_SITE",
+   "case_id": "AMB-350",
+   "doc": "efficientnet",
+   "expected_integrated_state": "UNCHANGED",
+   "page": 9,
+   "safety_level": "HIGH",
+   "why_included": "same"
+  },
+  {
+   "baseline_state": "KEEP",
+   "case_class": "CORRECT_CONTROL + CONFLICT_AGREEMENT_SITE",
+   "case_id": "AMB-522",
+   "doc": "cs_001",
+   "expected_integrated_state": "UNCHANGED",
+   "page": 4,
+   "safety_level": "HIGH",
+   "why_included": "same"
+  },
+  {
+   "baseline_state": "KEEP",
+   "case_class": "CORRECT_CONTROL + CONFLICT_AGREEMENT_SITE",
+   "case_id": "AMB-530",
+   "doc": "cs_001",
+   "expected_integrated_state": "UNCHANGED",
+   "page": 5,
+   "safety_level": "HIGH",
+   "why_included": "same"
+  }
+ ],
+ "safety_canaries": {
+  "cases": [
+   "AMB-414 (med p20)",
+   "AMB-422 (med p24)"
+  ],
+  "hard_gate": "any MERGE/ABSTAIN -> KEEP = SAFETY FAILURE => REPLAY FAIL even if FP removal = 100%",
+  "reported_standalone": true
+ },
+ "scientific_claim_boundary": {
+  "allowed_claim_on_pass": "在当前冻结测试框架中，验证了该 Consumer Integration 机制能够处理已识别的结构切片失败模式",
+  "forbidden_claims": [
+   "解决 vector table recovery",
+   "解决 table detection",
+   "通用 row-number recognition",
+   "跨文档泛化",
+   "方法普适"
+  ],
+  "gt_confirmed_positive": 1
+ },
+ "status": "DESIGN-READY",
+ "stop": true,
+ "stop_conditions": [
+  "caption canary flip",
+  "decision policy change required",
+  "semantic leakage > 0",
+  "provenance < 1",
+  "OFF path drift",
+  "frozen baseline drift",
+  "negative collateral > 0",
+  "conflict arbitration required",
+  "EIC-1 cannot honestly map onto existing observation contract"
+ ],
+ "success_criteria": {
+  "S1": "AMB-135 FP -> corrected via contract chain (decision = KEEP + complete evidence chain)",
+  "S10": "frozen baseline drift = 0",
+  "S2": "caption canary 0 semantic flip - HARD SAFETY GATE (violation => REPLAY FAIL regardless of FP removal)",
+  "S3": "negative collateral = 0",
+  "S4": "existing correct controls unchanged (8/8)",
+  "S5": "semantic leakage = 0 (section-10 assertions all pass)",
+  "S6": "decision policy modification = 0 (section-12 four checks pass)",
+  "S7": "provenance completeness = 1.0",
+  "S8": "determinism = PASS",
+  "S9": "OFF path byte-identical"
+ }
+}

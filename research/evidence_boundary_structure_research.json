@@ -1,0 +1,240 @@
+{
+  "gate_id": "EVIDENCE_BOUNDARY_STRUCTURE_GATE",
+  "date": "2026-09-18",
+  "mode": "READ_ONLY_RESEARCH",
+  "predecessor": "DICE Research Baseline v1 + 2 Domain Generalization Gates (142 cases, 3 domains)",
+  "governance": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true,
+    "NEW_CAPABILITY": "NONE"
+  },
+
+  "research_objects": {
+    "type": "EXISTING_EVIDENCE_BOUNDARY_CASE",
+    "total": 13,
+    "confirmed": 9,
+    "conditional": 4,
+    "source": "tmp/evidence_sufficiency_boundary_research.json (FROZEN)",
+    "domains": "academic_only",
+    "no_new_cases_searched": true
+  },
+
+  "clusters": {
+    "SPATIAL_TO_SEMANTIC": {
+      "count": 5,
+      "object": "Text-Drawing (Figure)",
+      "supported_claim": "Text and Drawing have spatial/structural association",
+      "unsupported_claim": "Text IS the semantic caption/label of this Drawing",
+      "evidence_functions": "F1+F2+F3+F4+F5+F6",
+      "semantic_dependency": "CAPTION_IDENTITY"
+    },
+    "STRUCTURAL_TO_SEMANTIC": {
+      "count": 2,
+      "object": "Numeric Column (Table)",
+      "supported_claim": "Numeric atoms form an aligned column",
+      "unsupported_claim": "Column is specifically a row-number column (not a value column)",
+      "evidence_functions": "F1+F12",
+      "semantic_dependency": "COLUMN_SEMANTIC_IDENTITY"
+    },
+    "TEXTUAL_TO_SEMANTIC": {
+      "count": 6,
+      "object": "Text-Text (Prose/Reference)",
+      "supported_claim": "Text pair has period+capital boundary signal",
+      "unsupported_claim": "Text pair is definitively sentence boundary vs reference continuation",
+      "evidence_functions": "F1+F6",
+      "semantic_dependency": "REFERENCE_CONTEXT (partial) + AUTHOR_NAME_RECOGNITION"
+    }
+  },
+
+  "missing_evidence_analysis": {
+    "all_13_cases": "SEMANTIC_INTERPRETATION_MISSING",
+    "observation_missing": 0,
+    "organization_missing": 0,
+    "presentation_missing": 0,
+    "consumer_missing": 0,
+    "semantic_interpretation_missing": 13,
+    "interpretation": "The missing evidence is NOT structural (G1-G4). It is SEMANTIC (G5). This confirms G5 classification."
+  },
+
+  "more_structural_evidence_analysis": {
+    "structural_evidence_not_sufficient": 9,
+    "more_structural_may_solve_partially": 4,
+    "interpretation": "9/13 are genuine semantic boundaries (structural evidence has hard ceiling). 4/13 are partially structural (page_context might resolve some sub-cases). No case is fully structural."
+  },
+
+  "structure_analysis": {
+    "structure_A": {
+      "name": "Evidence → Structural Claim → Semantic Identity Claim",
+      "applicable": "13/13 (100%)",
+      "precision": "HIGH",
+      "description": "Structural evidence is complete, supports structural claim, but cannot support semantic identity claim.",
+      "recommended": true
+    },
+    "structure_B": {
+      "name": "Observable Relation → Interpreted Relation",
+      "applicable": "13/13 (100%)",
+      "precision": "MEDIUM",
+      "description": "Equivalent to A with different terminology."
+    },
+    "structure_C": {
+      "name": "Observed Fact → Meaning/Identity",
+      "applicable": "13/13 (100%)",
+      "precision": "MEDIUM",
+      "description": "Equivalent to A with different terminology."
+    },
+    "structure_D": {
+      "name": "Weak Claim → Stronger Claim",
+      "applicable": "13/13 (100%)",
+      "precision": "LOW",
+      "description": "Most general, least informative. Does not specify evidence/claim types."
+    },
+    "equivalence": "A, B, C are reformulations of the same structure. D is a generalization that subsumes A/B/C.",
+    "recommended_representation": "Structure A (most precise)"
+  },
+
+  "object_independence": {
+    "result": "SUPPORTED",
+    "object_types_tested": [
+      {"type": "Figure (Text-Drawing)", "cases": 5, "structure": "spatial association → caption identity"},
+      {"type": "Table/Column (Numeric)", "cases": 2, "structure": "alignment → column type identity"},
+      {"type": "Text (Prose/Reference)", "cases": 6, "structure": "boundary signal → unit identity"}
+    ],
+    "all_follow_same_structure": true,
+    "object_specific_framework_needed": false
+  },
+
+  "boundary_formation_hypothesis": {
+    "status": "SUPPORTED",
+    "conditions": [
+      "Structural evidence is COMPLETE (G1-G4 resolved)",
+      "Structural claim IS supported (relationship/boundary/alignment confirmed)",
+      "Human task requires SEMANTIC IDENTITY (role/meaning determination)",
+      "More structural evidence CANNOT resolve (C3=NO for 9/13, PARTIAL for 4/13)",
+      "Missing category = SEMANTIC_INTERPRETATION_MISSING (13/13)"
+    ],
+    "supporting_evidence": [
+      "13/13 cases: missing evidence = SEMANTIC_INTERPRETATION_MISSING",
+      "9/13 cases: more structural evidence CANNOT solve (C3=NO)",
+      "4/13 cases: more structural evidence MIGHT partially solve (C3=PARTIAL)",
+      "All 3 object types follow same structure",
+      "Structure A applies to all 13 cases"
+    ],
+    "conditional_caveat": "4/13 CONDITIONAL cases may partially resolve with structural evidence (page_context). True boundary = 9/13 (purely semantic)."
+  },
+
+  "cross_domain_reference": {
+    "academic": {"g5_cases": 13, "boundary_structure_observed": true},
+    "biotech": {"g5_cases": 0, "reason": "G2/G3 dominate, masking G5"},
+    "finance_education": {"g5_cases": 0, "reason": "G2/G3 dominate, masking G5"},
+    "g5_in_non_academic": "MASKED (not demonstrably absent)",
+    "distinction": "Cannot distinguish 'G5 absent' from 'G5 unobservable' with current data"
+  },
+
+  "new_evidence_functions_identified": {
+    "count": 4,
+    "functions": [
+      {"name": "CAPTION_IDENTITY_FUNCTION", "cases": 5, "requires": "semantic text understanding", "status": "IDENTIFIED_NOT_IMPLEMENTED"},
+      {"name": "COLUMN_SEMANTIC_IDENTITY", "cases": 2, "requires": "semantic content understanding", "status": "IDENTIFIED_NOT_IMPLEMENTED"},
+      {"name": "REFERENCE_CONTEXT_FUNCTION", "cases": 4, "requires": "page_context organization (P7 exists)", "status": "PARTIALLY_DERIVABLE_NOT_IMPLEMENTED"},
+      {"name": "AUTHOR_NAME_RECOGNITION", "cases": 2, "requires": "world knowledge about names", "status": "NOT_DERIVABLE_NOT_IMPLEMENTED"}
+    ],
+    "note": "RESEARCH FINDINGS ONLY. NOT implemented, NOT authorized, NOT written to any schema."
+  },
+
+  "new_gap_type": {
+    "result": "NO",
+    "all_cases_fit_g5": true,
+    "g6_needed": false
+  },
+
+  "over_design_audit": {
+    "O1_SYSTEM_MODIFIED": false,
+    "O2_NEW_FIELD": false,
+    "O3_NEW_MODULE": false,
+    "O4_NEW_DETECTOR": false,
+    "O5_NEW_EVIDENCE_FUNCTION": false,
+    "O6_NEW_GAP_TYPE": false,
+    "O7_NEW_CAPABILITY": false,
+    "O8_RUNTIME_CHANGE": false,
+    "O9_HUMAN_VALIDATION_ADDED": false,
+    "O10_THRESHOLD_TUNING": false,
+    "all_false": true,
+    "over_design_risk": "NONE"
+  },
+
+  "limitations": [
+    {"id": "BS-L-01", "limitation": "ACADEMIC-ONLY BOUNDARY CASES — structure not tested on non-academic G5", "impact": "Structure validity limited to academic domain"},
+    {"id": "BS-L-02", "limitation": "SMALL SAMPLE SIZE — only 13 cases (9+4)", "impact": "Structure stability needs more cases for confirmation"},
+    {"id": "BS-L-03", "limitation": "NO HUMAN VALIDATION — all RESEARCHER_ASSESSMENT", "impact": "Claim decomposition not Human-validated"},
+    {"id": "BS-L-04", "limitation": "CONDITIONAL BOUNDARIES — 4/13 partially structural", "impact": "Clean structural→semantic pattern applies to 9/13, not all"},
+    {"id": "BS-L-05", "limitation": "G5 MASKED IN NON-ACADEMIC — cannot test cross-domain structure", "impact": "Cross-domain structure validity NOT_DEMONSTRATED"},
+    {"id": "BS-L-06", "limitation": "CLAIM LEVELS ARE RESEARCHER-INDUCED — L1/L2/L3 not pre-registered", "impact": "Different researcher might decompose differently"}
+  ],
+
+  "final_questions": {
+    "Q1_common_structure": {
+      "answer": "SUPPORTED",
+      "evidence": "13/13 share: Structural Evidence → Structural Claim → Semantic Identity Claim; all 13 missing = SEMANTIC_INTERPRETATION_MISSING"
+    },
+    "Q2_abstractable_to_evidence_claim_claim": {
+      "answer": "SUPPORTED",
+      "evidence": "All 13 fit Structure A (most precise); all 4 candidate structures apply; Structure A recommended"
+    },
+    "Q3_object_independent": {
+      "answer": "SUPPORTED",
+      "evidence": "3 object types (Figure, Table/Column, Text) all follow same structure; no object-specific framework needed"
+    },
+    "Q4_boundary_at_structural_to_semantic": {
+      "answer": "SUPPORTED",
+      "evidence": "13/13 at L2→L3 transition; 9/13 purely semantic (C3=NO); 4/13 partially structural (C3=PARTIAL)"
+    },
+    "Q5_distinguishable_from_g1_g4": {
+      "answer": "SUPPORTED",
+      "evidence": "G1-G4 = structural incomplete; G5 = structural complete + semantic ceiling; 13/13 missing = SEMANTIC; 0/13 = structural"
+    },
+    "Q6_new_evidence_function": {
+      "answer": "YES",
+      "functions_identified": ["CAPTION_IDENTITY", "COLUMN_SEMANTIC_IDENTITY", "REFERENCE_CONTEXT (partial)", "AUTHOR_NAME_RECOGNITION"],
+      "note": "IDENTIFIED as research findings only. NOT implemented. NOT authorized."
+    },
+    "Q7_new_gap_type": {
+      "answer": "NO",
+      "evidence": "All 13 fit G5; no G6 needed"
+    },
+    "Q8_ready_for_next_phase": {
+      "answer": "CONDITIONAL",
+      "what_is_ready": ["Structure describable (Structure A)", "Object-independent", "Distinguishable from G1-G4", "Boundary Formation Hypothesis supported"],
+      "what_is_not_ready": ["Only 13 academic cases", "4/13 conditional", "No non-academic G5", "No Human validation", "New functions not implementable"],
+      "implementation_authorized": false
+    }
+  },
+
+  "files_created": [
+    "tmp/evidence_boundary_structure_research.md",
+    "tmp/evidence_boundary_structure_research.json",
+    "tmp/evidence_boundary_structure_case_table.csv",
+    "tmp/evidence_boundary_structure_pattern_table.csv"
+  ],
+  "files_modified": 0,
+
+  "conclusion": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  }
+}

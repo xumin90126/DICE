@@ -1,0 +1,70 @@
+{
+  "spec_metadata": {
+    "spec_id": "CAP-UNSPSC-MATCH.evidence_spec",
+    "artifact_type": "evidence_specification",
+    "paradigm": "declarative evidence model (Evidence ≠ Performance Guarantee)",
+    "evidence_authority": "Feedback Loop fills evidence fields after verification; NOT hand-hardcoded",
+    "alignment": "Phase 10 Implementation Design Review §4 (three evidence types, no score/ranking/recommendation)"
+  },
+
+  "evidence_goal": {
+    "promotion_path": "PROPOSED → BETA/ACTIVE requires evidence accumulation via Feedback Loop",
+    "declaration_note": "Evidence is a declaration of WHAT is needed for promotion, NOT a performance guarantee, NOT a pre-filled 'passed' marker."
+  },
+
+  "evidence_types": [
+    {
+      "type": "input_evidence",
+      "source": "laboratory product records in product catalog documents",
+      "form": {
+        "product_name": "str",
+        "product_description": "str",
+        "catalog_number": "str"
+      },
+      "collector": "Evidence Collector (L2.2 observer paradigm, read-only extraction)",
+      "nature": "pure fact recording, no scoring"
+    },
+    {
+      "type": "candidate_mapping_evidence",
+      "source": "product record + external UNSPSC dictionary + declarative matching specification",
+      "form": {
+        "product_record_ref": "str (reference)",
+        "candidate_unspsc_code": "str",
+        "match_basis": "str (textual description, NOT a confidence score)"
+      },
+      "collector": "Human executes matching (this phase only declares the specification, I-3)",
+      "nature": "candidate mapping fact, no ranking"
+    },
+    {
+      "type": "validation_evidence",
+      "source": "cross-document ground-truth comparison (candidate mapping vs human-annotated correct code)",
+      "form": {
+        "mapping_ref": "str",
+        "ground_truth_code": "str",
+        "is_match": "bool"
+      },
+      "collector": "Feedback Loop (cross_doc_success_rate auto-computed via record_execution)",
+      "nature": "validation result fact, NOT hand-computed score"
+    }
+  ],
+
+  "forbidden": {
+    "quality_score": "forbidden — match_basis is textual; cross_doc_success_rate is an auto-computed objective statistic, not a manual quality score",
+    "ranking": "forbidden — candidate mappings are not ranked; no 'best candidate' judgment",
+    "recommendation": "forbidden — no 'recommend this code' output; output is candidate mapping + validation result fact"
+  },
+
+  "evidence_fields_at_proposed": {
+    "status": "PROPOSED",
+    "maturity": "LOW (auto-computed via _auto_compute_maturity)",
+    "maturity_score": 0.0,
+    "source_evidence_ids": [],
+    "source_pattern_ids": [],
+    "documents_tested": [],
+    "cross_doc_success_rate": 0.0,
+    "execution_count": 0,
+    "success_count": 0,
+    "failure_count": 0,
+    "last_execution_at": ""
+  }
+}

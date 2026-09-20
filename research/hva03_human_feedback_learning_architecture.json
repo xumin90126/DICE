@@ -1,0 +1,1089 @@
+{
+  "audit_status": "CONDITIONAL",
+  "metadata": {
+    "audit_name": "HVA-03 Human Feedback Learning Loop System Architecture",
+    "date": "2026-09-17",
+    "mode": "READ-ONLY ARCHITECTURE DESIGN / NO IMPLEMENTATION / RESEARCH PROTOTYPE / FROZEN INTACT / STOP",
+    "predecessors": "HVA-01, HVA-02, DCE-05/06/07, L5 Learning Signal Audit, Info Gain Audit, Feedback Reuse Audit, L5.3 Capability Boundary Review"
+  },
+  "executive_summary": {
+    "status": "CONDITIONAL",
+    "architecture_feasibility": "MEDIUM",
+    "key_decisions": [
+      "Stability-Novelty Paradox resolved by BOUNDING each signal to applicable scope, not choosing stable OR novel",
+      "Case Selection changes from GEOMETRIC_AMBIGUITY to REVIEW_VALUE with 6 Value Dimensions + Safety Constraints",
+      "Evidence Pack replaces raw dump with 5-level Progressive Disclosure (L1 contains decision-relevant evidence)",
+      "FeedbackRecord links Human Decision to Evidence Snapshot (currently only saves decision)",
+      "SignalCandidate uses Evidence Signature (structural fingerprint), NOT keyword matching",
+      "Counterexample Search is MANDATORY before any Human Boundary Validation",
+      "ValidatedSignal contains NO decision/routing/score fields (Authority Leakage Prevention)",
+      "Future Case Replay requires independent documents (prevents data leakage)"
+    ],
+    "primary_bottleneck": "Feedback Generalization (Stability-Novelty Paradox)",
+    "secondary_bottleneck": "Future Validation (0 independent future cases)",
+    "current_learning_level": "L3",
+    "phase1_target": "L3+ (Evidence-Linked Candidate)",
+    "phase2_target": "L4 (Human-Validated) — ONLY if Phase 1 succeeds AND data available",
+    "stop": true
+  },
+  "current_architecture_gap": {
+    "what_exists": "Document → P1-P7 → TLD → IS-01/IS-02 → IS-11 Decision → GT Comparison. Feedback CAPTURED but NOT LINKED to evidence, NOT REUSED.",
+    "gaps": [
+      {
+        "gap": "Case Selection optimizes wrong metric",
+        "evidence": "HVA-01: 53% Type A wasted, 88% TABLE bias",
+        "architecture_fix": "P3: 6 Value Dimensions + Selection Policy + Safety Constraints"
+      },
+      {
+        "gap": "Evidence not distilled for human",
+        "evidence": "HVA-01: B2 slower than A, AMB-032 UNKNOWN in B2",
+        "architecture_fix": "P4: 5-level Evidence Pack with L1 decision-relevant fields"
+      },
+      {
+        "gap": "Feedback not linked to evidence",
+        "evidence": "HVA-02: only saves decision",
+        "architecture_fix": "P6: FeedbackRecord with evidence_snapshot + evidence_refs"
+      },
+      {
+        "gap": "No counterexample search",
+        "evidence": "HVA-02: SIG-02 33% FP discovered only by manual P7 check",
+        "architecture_fix": "Mandatory Counterexample Search before Boundary Validation"
+      },
+      {
+        "gap": "No boundary validation",
+        "evidence": "HVA-02: SIG-08 unstable with no mechanism to bound",
+        "architecture_fix": "Human Boundary Validation: positive + counterexamples + UNKNOWN"
+      },
+      {
+        "gap": "No future case replay",
+        "evidence": "HVA-02: R5=0, R6=0, 0 future cases",
+        "architecture_fix": "Future Case Replay with independence check"
+      },
+      {
+        "gap": "Stability-Novelty Paradox",
+        "evidence": "HVA-02: stable=redundant, novel=unstable",
+        "architecture_fix": "BOUNDING: each signal gets explicit applicable scope"
+      },
+      {
+        "gap": "Ceiling effect",
+        "evidence": "HVA-02: 96% KEEP_SEPARATE, 0 negatives",
+        "architecture_fix": "P3 diversity constraint + Counterexample Search detects ceiling"
+      }
+    ]
+  },
+  "target_architecture": {
+    "flow": [
+      "DOCUMENT",
+      "P1_EVIDENCE",
+      "P2_CANDIDATE",
+      "P3_CASE_SELECTION",
+      "P4_EVIDENCE_PACK",
+      "P5_HUMAN_REVIEW",
+      "P6_FEEDBACK_EVIDENCE_LINKER",
+      "P7_SIGNAL_CANDIDATE",
+      "COUNTEREXAMPLE_SEARCH",
+      "HUMAN_BOUNDARY_VALIDATION",
+      "VALIDATED_SIGNAL",
+      "FUTURE_CASE_REPLAY",
+      "REUSE_OR_FAILURE"
+    ],
+    "loop_back": "REUSE_OR_FAILURE → P6_FEEDBACK_EVIDENCE_LINKER"
+  },
+  "p1_evidence": {
+    "problem": "Machine到底看到了什么？如果关键Evidence不存在，系统怎么阻止下游继续猜？",
+    "responsibility": "Machine Evidence的结构化记录与完整性声明",
+    "input": "Document pages, P1-P7 Observation (FROZEN), TLD output (FROZEN)",
+    "processing": [
+      "Collect P1/P2/TLD/IS-01/IS-02 evidence",
+      "Assess completeness",
+      "Assess insufficiency",
+      "Generate insufficiency_flags"
+    ],
+    "output": "EvidenceRecord with p1_evidence, p2_evidence, tld_evidence, is01, is02, completeness, insufficiency_flags, provenance",
+    "human_intervention": "NONE — pure Machine structured record",
+    "risks": [
+      {
+        "risk": "Evidence缺失(TLD fails)",
+        "mitigation": "insufficiency_flags → propagate downstream"
+      },
+      {
+        "risk": "Evidence过时(hash drift)",
+        "mitigation": "provenance.tld_hash校验 → drift则BLOCK"
+      },
+      {
+        "risk": "Evidence误导(TLD FP)",
+        "mitigation": "不在P1层解决 → Counterexample Search在P7层发现"
+      }
+    ],
+    "failure_route": "completeness.has_tld=False AND insufficiency non-empty → mark EVIDENCE_INSUFFICIENT → P2 propagates → P3 raises Review Value → P5 shows L1 Insufficient → Human can UNKNOWN",
+    "validation": "Evidence Accuracy: hash match against frozen baseline → drift → BLOCK"
+  },
+  "p2_candidate": {
+    "problem": "哪些Evidence组合值得进一步分析？",
+    "responsibility": "从EvidenceRecord提取值得分析的Evidence组合",
+    "input": "EvidenceRecord (from P1)",
+    "processing": [
+      "Extract structural features (content_type, machine_state, evidence_conflict)",
+      "Form Candidate (NO decision/rule/score)",
+      "Tag candidate_type (TYPE_A/D/E/B)"
+    ],
+    "output": "Candidate with evidence_ref, content_type, machine_state, evidence_conflict, insufficiency_inherited, candidate_type, structural_features",
+    "constraints": [
+      "Candidate ≠ Decision",
+      "Candidate ≠ Rule",
+      "Candidate ≠ Capability",
+      "Candidate ≠ Score"
+    ],
+    "human_intervention": "NONE",
+    "risks": [
+      {
+        "risk": "Candidate包含隐含语义结论",
+        "mitigation": "structural_features只含bool/数值, 不含interpretation"
+      },
+      {
+        "risk": "Candidate类型误判",
+        "mitigation": "candidate_type基于机器状态(客观)"
+      }
+    ],
+    "failure_route": "evidence_conflict=True → TYPE_E (boundary potential) → P3 raises Review Value; insufficiency_inherited non-empty → propagate"
+  },
+  "p3_case_selection": {
+    "problem": "当前Selection优化几何模糊度(53%浪费)。如何改为优化Review Value？",
+    "responsibility": "从Candidate Pool选择值得Human审阅的Case",
+    "input": "Candidate Pool (from P2)",
+    "value_dimensions": {
+      "D1_machine_error_risk": {
+        "source": "machine_state",
+        "values": "ERROR=3, UNCERTAIN=2, DECISIVE=0"
+      },
+      "D2_evidence_uncertainty": {
+        "source": "evidence_conflict + insufficiency",
+        "values": "conflict=+2, insufficiency=+1"
+      },
+      "D3_boundary_potential": {
+        "source": "period+capital, content_type",
+        "values": "period+cap=2, PROSE=+1, REFERENCE=+1"
+      },
+      "D4_feedback_value": {
+        "source": "candidate_type",
+        "values": "TYPE_E=3, TYPE_D=1, TYPE_A=0"
+      },
+      "D5_reuse_potential": {
+        "source": "content_type underrepresentation",
+        "values": "PROSE/REFERENCE/OTHER=2, UNCERTAIN=+1"
+      },
+      "D6_coverage_diversity": {
+        "source": "already-selected batch",
+        "values": "computed relative to batch"
+      }
+    },
+    "selection_policy": [
+      "MUST include all TYPE_E (boundary potential)",
+      "MUST include all TYPE_B (machine error)",
+      "Include TYPE_D with highest D2+D3",
+      "EXCLUDE most TYPE_A (only for diversity)"
+    ],
+    "safety_constraints": {
+      "max_table_pct": 0.5,
+      "min_prose_pct": 0.15,
+      "min_merge_count": 2,
+      "max_type_a_pct": 0.3
+    },
+    "not_black_box": "Each dimension has explicit evidence source and computation method. Every SelectedCase records selection_reason for auditability.",
+    "output": "SelectedCase with review_value(D1-D6), selection_reason, evidence_pack_ref",
+    "human_intervention": "NONE — Machine decision under Safety Constraints",
+    "risks": [
+      {
+        "risk": "Selection偏置(TABLE overrep)",
+        "mitigation": "Safety Constraints: max_table=50%, min_prose=15%"
+      },
+      {
+        "risk": "Type A浪费",
+        "mitigation": "Policy 4: EXCLUDE most Type A"
+      },
+      {
+        "risk": "黑盒化",
+        "mitigation": "selection_reason recorded per case"
+      }
+    ],
+    "failure_route": "Constraints violated → RESELECT with diversity; Pool lacks diversity → flag SELECTION_POOL_BIAS → warning",
+    "hva01_fix": "Type A 53%→≤30%, TABLE 88%→≤50%, PROSE 7%→≥15%, prioritize TYPE_E and diverse content"
+  },
+  "p4_evidence_pack": {
+    "problem": "Evidence存在但Human看不到有价值信息(AMB-032: B2 UNKNOWN despite TLD correct)",
+    "responsibility": "对已有Evidence结构化组织和Progressive Disclosure",
+    "input": "EvidenceRecord + Candidate + SelectedCase",
+    "levels": {
+      "L0_minimum_context": "text_a, text_b, page, doc, content_type — Human immediately knows case type",
+      "L1_decision_relevant": "is_in_table, different_cell, is_number_pair, has_text_pair, ends_period, starts_capital, machine_decision, insufficiency_flags — decision key info",
+      "L2_supporting": "same_y_band, h_gap, x_a, x_b, width_a, width_b — geometry and style",
+      "L3_counterevidence": "evidence_conflict, similar_different_gt, adjudicated, reviewer_disagreement — contradictions and boundaries",
+      "L4_raw_provenance": "full bbox, full TLD output, full P1-P7, hashes, timestamp — audit trail"
+    },
+    "key_design_decisions": [
+      "L1 contains different_cell (fixes AMB-032: B2 previously did not expose TLD different_cell)",
+      "L3 contains counterevidence (prevents confirmation bias)",
+      "NO recommendation/cue/hint in Pack (prevents automation bias — HVA-02: B2 cue WRONG on AMB-462/313)"
+    ],
+    "output": "EvidencePack with levels L0-L4, default_level=1",
+    "human_intervention": "Human interacts: default L0+L1, expand L2/L3/L4 on demand",
+    "risks": [
+      {
+        "risk": "Evidence太多(overload)",
+        "mitigation": "Progressive Disclosure: default L1, expand on demand"
+      },
+      {
+        "risk": "Human被带偏",
+        "mitigation": "No recommendation/cue in Pack, only facts"
+      },
+      {
+        "risk": "L1遗漏关键信息",
+        "mitigation": "L1 includes different_cell + period/capital + machine_decision + insufficiency"
+      }
+    ],
+    "failure_route": "L1 insufficient → show \"Evidence Insufficient\" → Human can UNKNOWN; L3 conflict → highlight → encourage expansion",
+    "amb032_fix": "L1 contains different_cell=YES → Human sees L1 → KEEP_SEPARATE in <5s (was 45.9s in B2)"
+  },
+  "p5_human_review": {
+    "problem": "Human职责必须严格限定",
+    "human_does_not": [
+      "找Evidence",
+      "整理Evidence",
+      "找Pattern",
+      "写Rule",
+      "写Classifier",
+      "写Prompt",
+      "写Runtime Policy"
+    ],
+    "human_only_does": [
+      "Case Judgment (KEEP/MERGE/UNKNOWN)",
+      "Signal Validation (成立/不成立/不确定)",
+      "Boundary Validation (适用/不适用/需要限定/UNKNOWN)",
+      "OUT_OF_SCOPE judgment"
+    ],
+    "ui_contracts": {
+      "case_review": "[KEEP_SEPARATE] [MERGE] [UNKNOWN] with L0-L4 Evidence Pack",
+      "signal_validation": "[成立] [不成立] [不确定] [需要限定边界] with positive + counterexamples",
+      "boundary_validation": "[适用] [不适用] [需要限定] [UNKNOWN] [OUT_OF_SCOPE] with scope condition input"
+    },
+    "when_see_raw_evidence": {
+      "routine": "L0+L1 only",
+      "boundary_case": "L0+L1+L3 (counterevidence)",
+      "signal_validation": "positive + counterexamples",
+      "boundary_validation": "positive + counterexamples + UNKNOWN",
+      "audit": "L4 (raw)"
+    },
+    "risks": [
+      {
+        "risk": "Human被Machine带偏",
+        "mitigation": "Evidence Pack无recommendation/cue"
+      },
+      {
+        "risk": "Human负担转移",
+        "mitigation": "L1默认展示, 不需要从12字段重建"
+      },
+      {
+        "risk": "Human越权(写Rule)",
+        "mitigation": "UI只提供固定选项, 不提供自由文本Rule"
+      },
+      {
+        "risk": "Human疲劳",
+        "mitigation": "P3减少Type A → 减少无价值审阅"
+      }
+    ],
+    "failure_route": "UNKNOWN → record, no Signal Candidate; OUT_OF_SCOPE → mark, no Signal flow"
+  },
+  "p6_feedback_evidence_linker": {
+    "problem": "当前只保存decision=KEEP, 不保存Human依赖了什么Evidence",
+    "responsibility": "建立Human Decision与Evidence Snapshot的结构化关联",
+    "input": "Human Decision + EvidenceRecord + EvidencePack + interaction log",
+    "processing": [
+      "Record evidence levels viewed",
+      "Snapshot evidence state at decision time",
+      "Identify decision-relevant fields",
+      "Record structural evidence_relations",
+      "Link to provenance"
+    ],
+    "output_fields": {
+      "record_id": "str",
+      "case_id": "str",
+      "human_id": "str",
+      "human_decision": "KEEP_SEPARATE / MERGE / UNKNOWN / OUT_OF_SCOPE",
+      "evidence_refs": "→ EvidenceRecord + EvidencePack",
+      "evidence_snapshot": "Frozen copy of evidence values at decision time",
+      "evidence_viewed": "levels_viewed, fields_expanded, decision_time_ms",
+      "evidence_relations": "Structural relationships (NOT semantic)",
+      "provenance": "tld_hash, gt_hash, timestamp, experiment_condition"
+    },
+    "forbidden_fields": [
+      "rule",
+      "pattern",
+      "inference",
+      "conclusion",
+      "suggested_signal",
+      "signal_id",
+      "confidence",
+      "score",
+      "weight"
+    ],
+    "field_necessity": {
+      "human_decision": "YES — core feedback",
+      "evidence_snapshot": "YES — must freeze decision-time state (TLD may update)",
+      "evidence_viewed": "YES — know what Human saw, judge feedback quality",
+      "evidence_relations": "YES — P7 needs structural relations for Signature",
+      "provenance": "YES — audit trail, prevent evidence drift",
+      "human_rationale": "OPTIONAL — record if present, but do not depend on it (96% no rationale in L5)"
+    },
+    "human_intervention": "Human does NOT create FeedbackRecord. System auto-generates on decision submission.",
+    "risks": [
+      {
+        "risk": "Feedback丢失",
+        "mitigation": "Auto-generate, no Human action required"
+      },
+      {
+        "risk": "Evidence drift",
+        "mitigation": "evidence_snapshot freezes state + provenance hash"
+      },
+      {
+        "risk": "关键关系遗漏",
+        "mitigation": "evidence_relations auto-extracted from structural_features"
+      }
+    ],
+    "failure_route": "No evidence viewed (snap <1s) → mark engagement_level=SNAP → P7 lowers weight; hash drift → mark FEEDBACK_STALE → not used for Signal"
+  },
+  "p7_signal_candidate": {
+    "problem": "如何从FeedbackRecord形成SignalCandidate, 避免关键词匹配和same-page重复？",
+    "responsibility": "从多个FeedbackRecord提取结构相似反馈, 形成SignalCandidate",
+    "input": "Multiple FeedbackRecords (from P6)",
+    "evidence_signature": {
+      "definition": "Structural fingerprint of evidence combination (NOT text content, NOT keyword)",
+      "fields": [
+        "content_type",
+        "is_in_table",
+        "different_cell",
+        "is_number_pair",
+        "has_text_pair",
+        "text_a_ends_period",
+        "text_b_starts_capital",
+        "same_y_band",
+        "machine_state"
+      ],
+      "key_principle": "Signature is structural feature combination, not text matching. \"Human said table 3 times\" → NOT a Signature. \"{is_in_table:True, different_cell:True} × 3\" → IS a Signature."
+    },
+    "structural_similarity": "Two cases structurally similar if Evidence Signatures match on ALL decision-relevant fields",
+    "independence_check": {
+      "method": "Group by (document_id, page_number). Each doc-page combo = 1 independent observation.",
+      "hva02_fix": "SIG-01 had 5 cases on resnet page 6 → independent_count=1, ratio=0.2 → LOW_INDEPENDENCE"
+    },
+    "conflicting_cases": "has_conflict=True → status=CONFLICT → MUST enter Boundary Review (not auto-resolved)",
+    "unknown_handling": "All UNKNOWN decisions → do NOT form Signal Candidate → recorded as ABSTENTION_BOUNDARY observation",
+    "engagement_tracking": "snap_count > 70% → LOW_ENGAGEMENT flag",
+    "output": "SignalCandidate with evidence_signature, source_cases, human_decisions, decision_consistency, has_conflict, independence, recurrence, engagement_stats, status",
+    "forbidden": [
+      "rule",
+      "decision_function",
+      "confidence",
+      "score"
+    ],
+    "risks": [
+      {
+        "risk": "关键词假复用",
+        "mitigation": "Evidence Signature只含结构特征"
+      },
+      {
+        "risk": "same-page重复",
+        "mitigation": "Independence Check (doc+page grouping)"
+      },
+      {
+        "risk": "Conflicting被忽略",
+        "mitigation": "has_conflict → forced Boundary Review"
+      },
+      {
+        "risk": "Snap形成弱Signal",
+        "mitigation": "engagement_stats → LOW_ENGAGEMENT"
+      },
+      {
+        "risk": "Ceiling effect",
+        "mitigation": "Counterexample Search主动找反例"
+      }
+    ],
+    "failure_route": "independence_ratio<0.3 → LOW_INDEPENDENCE; has_conflict → CONFLICT → Boundary Review; all UNKNOWN → no Signal, ABSTENTION_BOUNDARY"
+  },
+  "counterexample_search": {
+    "problem": "任何SignalCandidate都不能直接升级。必须主动寻找反例。",
+    "responsibility": "对每个SignalCandidate搜索相似Evidence Signature但不同Decision的Case",
+    "input": "SignalCandidate + all FeedbackRecords + all EvidenceRecords + P7 corpus",
+    "search_scope": [
+      "IS-11 (45 cases)",
+      "P7 (69 cases)",
+      "Pilot (27 cases)",
+      "Future corpus (when available)"
+    ],
+    "processing": "Extract Evidence Signature for all records → find structurally similar → check if decision differs → flag counterexamples + unknown_matches + ceiling_effect",
+    "output": "CounterexampleSearchResult with counterexamples_found, counterexamples, unknown_matches, ceiling_effect, cross_document_counterexamples, search_completeness",
+    "if_counterexamples_found": "Signal status=HAS_COUNTEREXAMPLES → MUST enter Human Boundary Validation. NOT auto-rejected, NOT auto-modified.",
+    "if_no_counterexamples": "ceiling_effect=True → WARNING \"cannot determine boundary\" → still enters Boundary Validation → Human likely UNKNOWN",
+    "risks": [
+      {
+        "risk": "搜索范围不足",
+        "mitigation": "Search IS-11 + P7 + Pilot + Future"
+      },
+      {
+        "risk": "GT代替Human(P7)",
+        "mitigation": "Mark decision_source=GT vs HUMAN"
+      },
+      {
+        "risk": "Ceiling误判为universal",
+        "mitigation": "ceiling_effect=True → forced WARNING, no auto-validate"
+      },
+      {
+        "risk": "反例被自动处理",
+        "mitigation": "FORBIDDEN: Machine不能修改Signal → must Boundary Review"
+      }
+    ],
+    "failure_route": "PARTIAL search → SEARCH_INCOMPLETE; 0 counterexamples+0 unknowns → CEILING_EFFECT → no auto-validate"
+  },
+  "human_boundary_validation": {
+    "problem": "Human不应重新审几十个Case。应看Positive+Counterexamples+UNKNOWN, 只回答Signal适用到哪里。",
+    "responsibility": "Human判断SignalCandidate的适用范围",
+    "input": "SignalCandidate + positive cases + counterexamples + UNKNOWN matches + independence report + engagement report",
+    "human_options": {
+      "applicable": "Signal适用于所有匹配Signature的Case. Requires 0 counterexamples AND 0 UNKNOWN. Disabled if counterexamples exist.",
+      "not_applicable": "Signal不成立, 拒绝. For counterexamples proving pattern not universal.",
+      "needs_scoping": "Signal在限定条件下适用. Human provides STRUCTURAL scope (not semantic). e.g. \"is_in_table=True AND different_cell=True\".",
+      "unknown": "Human无法判断. For reviewer disagreement, insufficient evidence, genuine ambiguity.",
+      "out_of_scope": "超出审阅范围. Needs domain knowledge or more data."
+    },
+    "must_unknown_conditions": [
+      "Reviewer disagreement on positive cases",
+      "Counterexamples have same Signature but different decision",
+      "Insufficient evidence to distinguish positive from counterexamples",
+      "Ceiling effect (0 counterexamples)"
+    ],
+    "signal_rejected_when": "Human selects NOT_APPLICABLE OR counterexamples > 30%",
+    "signal_scoped_when": "Human selects NEEDS_SCOPING with structural scope conditions",
+    "output": "BoundaryValidationResult with judgment, scope_conditions (structural only), evidence_reviewed, rationale (optional)",
+    "risks": [
+      {
+        "risk": "Human写semantic scope",
+        "mitigation": "UI only allows structural conditions (bool/enum)"
+      },
+      {
+        "risk": "Human越权(写Rule)",
+        "mitigation": "UI only 5 options, no free-text Rule"
+      },
+      {
+        "risk": "Human疲劳",
+        "mitigation": "Only positive + counterexamples + UNKNOWN, not all cases"
+      }
+    ],
+    "failure_route": "UNKNOWN → CANDIDATE (unstable); OUT_OF_SCOPE → DEFERRED; multiple Human disagreement → CONFLICT → adjudication"
+  },
+  "validated_signal": {
+    "problem": "只有经过Human Boundary Validation才能成为ValidatedSignal。如何防止偷变成Rule？",
+    "responsibility": "存储经验证的Signal, 包含明确适用边界和反例",
+    "input": "SignalCandidate (BOUNDARY_DEFINED or APPLICABLE) + BoundaryValidationResult",
+    "fields": {
+      "signal_id": "str",
+      "version": "int (starts 1, increments on revalidation)",
+      "evidence_preconditions": "Structural conditions MUST be true for signal to apply",
+      "positive_evidence": "evidence_signature + source_cases + source_documents + human_decisions",
+      "negative_evidence": "counterexample_cases + documents + decisions",
+      "boundary": "scope_conditions (structural) + exclusion_conditions (structural) + unknown_conditions",
+      "unknown_cases": "cases where signal returns UNKNOWN",
+      "conflict_cases": "cases with reviewer disagreement",
+      "provenance": "validation_human_id + timestamp + counterexample_search + boundary_validation + source_feedback_records",
+      "validation_status": "VALIDATED / SUPERSEDED / RETIRED",
+      "supersession": "supersedes / superseded_by"
+    },
+    "forbidden_fields": [
+      "decision",
+      "selection",
+      "routing",
+      "ranking",
+      "score",
+      "confidence",
+      "recommendation",
+      "execution_plan",
+      "fallback",
+      "retry",
+      "override",
+      "correction"
+    ],
+    "authority_leakage_check": {
+      "evidence_preconditions": "NO authority (structural facts) → ALLOWED",
+      "positive_evidence": "NO authority (historical record) → ALLOWED",
+      "negative_evidence": "NO authority (historical record) → ALLOWED",
+      "boundary.scope_conditions": "NO authority (structural constraints) → ALLOWED",
+      "decision": "YES authority (would become Rule) → FORBIDDEN",
+      "selection": "YES authority (would become Router) → FORBIDDEN",
+      "routing": "YES authority (would become Runtime) → FORBIDDEN",
+      "score": "YES authority (would become Ranker) → FORBIDDEN",
+      "confidence": "YES authority (would become Weight) → FORBIDDEN"
+    },
+    "key_principle": "ValidatedSignal is KNOWLEDGE RECORD, NOT DECISION FUNCTION. Records \"what was validated\", not \"what to do\". Future Replay uses it to CHECK, not to DECIDE.",
+    "risks": [
+      {
+        "risk": "Signal偷变成Rule",
+        "mitigation": "FORBIDDEN fields check (schema validation)"
+      },
+      {
+        "risk": "Signal过时",
+        "mitigation": "version + supersession"
+      },
+      {
+        "risk": "Scope含语义",
+        "mitigation": "scope_conditions only structural (bool/enum)"
+      }
+    ],
+    "failure_route": "FORBIDDEN field present → REJECT (schema validation fails); validation_status != VALIDATED → not usable for Replay"
+  },
+  "future_case_replay": {
+    "problem": "ValidatedSignal不能直接宣布Learning成功。必须在新Case上验证。",
+    "responsibility": "在新未见Case上replay ValidatedSignal",
+    "input": "ValidatedSignal + new unseen cases",
+    "new_case_acquisition": {
+      "source": "New documents not in IS-11 or P7",
+      "data_leakage_prevention": [
+        "document_id not in training set",
+        "page not in training set",
+        "text_a/text_b not exact match",
+        "if any match → REJECT"
+      ],
+      "independence": "New document → independent; Same doc different page → PARTIAL; Same page → REJECT"
+    },
+    "processing": "Check preconditions → check scope → check exclusion → match Evidence Signature → return SUPPORTED/UNSUPPORTED/UNKNOWN/OUT_OF_SCOPE",
+    "output": "ReplayResult with result, predicted_decision, human_verified, human_decision, match, document_independence",
+    "learning_success_criteria": [
+      "≥5 independent new cases replayed",
+      "True Positive Rate ≥ 80%",
+      "False Positive Rate ≤ 10%",
+      "≥2 cross-document cases",
+      "0 boundary violations"
+    ],
+    "risks": [
+      {
+        "risk": "数据泄漏",
+        "mitigation": "document_independence check (reject overlap)"
+      },
+      {
+        "risk": "过拟合",
+        "mitigation": "Require cross-document replay"
+      },
+      {
+        "risk": "TLD coverage on new corpus",
+        "mitigation": "TLD hash check; TLD failure → UNKNOWN not signal failure"
+      },
+      {
+        "risk": "HRR未测量",
+        "mitigation": "Must measure HRR (requires experiment)"
+      }
+    ],
+    "failure_route": "UNSUPPORTED → SIGNAL_FAILURE → REVIEW; FP>10% → COMPROMISED → revalidation; 0 new cases → UNVERIFIED_ON_FUTURE → no Learning claim"
+  },
+  "risk_mechanism_matrix": [
+    {
+      "risk": "Evidence缺失",
+      "part": "P1 Evidence",
+      "prevention": "insufficiency_flags",
+      "detection": "completeness check",
+      "human_boundary": "Human sees L1 Insufficient",
+      "failure_route": "UNKNOWN"
+    },
+    {
+      "risk": "Case太简单",
+      "part": "P3 Selection",
+      "prevention": "Policy 4 EXCLUDE Type A",
+      "detection": "Review Value D4=0",
+      "human_boundary": "N/A",
+      "failure_route": "Not selected"
+    },
+    {
+      "risk": "Case Selection偏置",
+      "part": "P3 Selection",
+      "prevention": "Safety Constraints max_table=50% min_prose=15%",
+      "detection": "Constraint validation",
+      "human_boundary": "N/A",
+      "failure_route": "RESELECT"
+    },
+    {
+      "risk": "Evidence太多",
+      "part": "P4 Pack",
+      "prevention": "Progressive Disclosure",
+      "detection": "levels_viewed tracking",
+      "human_boundary": "Human controls expansion",
+      "failure_route": "Default L1"
+    },
+    {
+      "risk": "Human被Machine带偏",
+      "part": "P4+P5",
+      "prevention": "No recommendation/cue in Pack",
+      "detection": "override tracking",
+      "human_boundary": "Human can override",
+      "failure_route": "No cue = no bias"
+    },
+    {
+      "risk": "Feedback丢失",
+      "part": "P6 Linker",
+      "prevention": "Auto-generate FeedbackRecord",
+      "detection": "Record count check",
+      "human_boundary": "N/A",
+      "failure_route": "Auto-generation"
+    },
+    {
+      "risk": "关键词假复用",
+      "part": "P7 Candidate",
+      "prevention": "Evidence Signature structural",
+      "detection": "Signature format check",
+      "human_boundary": "N/A",
+      "failure_route": "Reject text signature"
+    },
+    {
+      "risk": "正例过拟合",
+      "part": "Counterexample",
+      "prevention": "Mandatory search",
+      "detection": "ceiling_effect flag",
+      "human_boundary": "Human sees 0 counterexamples",
+      "failure_route": "UNKNOWN or needs data"
+    },
+    {
+      "risk": "Signal跨文档失效",
+      "part": "Future Replay",
+      "prevention": "Cross-doc independence",
+      "detection": "Replay on new docs",
+      "human_boundary": "Human verifies",
+      "failure_route": "REVIEW"
+    },
+    {
+      "risk": "Boundary不明确",
+      "part": "Human Boundary",
+      "prevention": "5-option judgment",
+      "detection": "Conflict/UNKNOWN tracking",
+      "human_boundary": "Human defines boundary",
+      "failure_route": "UNKNOWN or scoping"
+    },
+    {
+      "risk": "自动泛化错误",
+      "part": "Validated Signal",
+      "prevention": "FORBIDDEN fields",
+      "detection": "Schema validation",
+      "human_boundary": "N/A",
+      "failure_route": "Reject"
+    },
+    {
+      "risk": "Human负担转移",
+      "part": "P3+P4+P5",
+      "prevention": "Fewer cases + better Pack + simple UI",
+      "detection": "decision_time tracking",
+      "human_boundary": "N/A",
+      "failure_route": "Flag HIGH_BURDEN"
+    },
+    {
+      "risk": "Authority Leakage",
+      "part": "Validated Signal",
+      "prevention": "FORBIDDEN fields check",
+      "detection": "Schema validation",
+      "human_boundary": "Human retains semantic authority",
+      "failure_route": "Reject"
+    },
+    {
+      "risk": "Same-page重复",
+      "part": "P7 Candidate",
+      "prevention": "Independence Check",
+      "detection": "independence_ratio",
+      "human_boundary": "Human sees report",
+      "failure_route": "LOW_INDEPENDENCE"
+    },
+    {
+      "risk": "Conflicting被忽略",
+      "part": "P7+Boundary",
+      "prevention": "has_conflict → forced Boundary",
+      "detection": "Conflict detection",
+      "human_boundary": "Human sees conflict",
+      "failure_route": "Boundary Review"
+    },
+    {
+      "risk": "TLD coverage new corpus",
+      "part": "Future Replay",
+      "prevention": "TLD hash check",
+      "detection": "TLD output on new docs",
+      "human_boundary": "Human sees failure",
+      "failure_route": "UNKNOWN"
+    },
+    {
+      "risk": "Image confound",
+      "part": "P5 Review",
+      "prevention": "Image-free test condition",
+      "detection": "Condition tracking",
+      "human_boundary": "N/A",
+      "failure_route": "Mark IMAGE_CONFOUND"
+    },
+    {
+      "risk": "Reviewer disagreement",
+      "part": "P7+Boundary",
+      "prevention": "has_conflict flag",
+      "detection": "Adjudication history",
+      "human_boundary": "Human sees disagreement",
+      "failure_route": "UNKNOWN or scoping"
+    }
+  ],
+  "accuracy_control_chain": {
+    "A_evidence_accuracy": {
+      "input": "EvidenceRecord",
+      "metric": "hash match frozen baseline",
+      "failure": "hash drift",
+      "safety": "BLOCK pipeline"
+    },
+    "B_case_selection_quality": {
+      "input": "SelectedCase list",
+      "metric": "TypeA≤30%, TABLE≤50%, PROSE≥15%, MERGE≥2",
+      "failure": "constraints violated",
+      "safety": "RESELECT diversity"
+    },
+    "C_evidence_distillation_quality": {
+      "input": "EvidencePack + interaction log",
+      "metric": "L1 complete, time<10s, UNKNOWN<10%",
+      "failure": "UNKNOWN>20%",
+      "safety": "Redesign L1"
+    },
+    "D_signal_quality": {
+      "input": "SignalCandidate",
+      "metric": "independence≥0.5, consistency, deep>0, cross_doc≥2",
+      "failure": "independence<0.3",
+      "safety": "LOW_INDEPENDENCE, need more cases"
+    },
+    "E_boundary_quality": {
+      "input": "BoundaryValidationResult",
+      "metric": "search complete, judgment not UNKNOWN, structural scope, 0 conflicts",
+      "failure": "UNKNOWN",
+      "safety": "Stay CANDIDATE"
+    },
+    "F_reuse_quality": {
+      "input": "ReplayResult list",
+      "metric": "≥5 cases, TPR≥80%, FPR≤10%, ≥2 cross-doc, 0 violations",
+      "failure": "FP>10%",
+      "safety": "REVIEW → revalidation"
+    }
+  },
+  "authority_boundary": {
+    "machine_can": [
+      "Evidence aggregation (P1)",
+      "Evidence compression (P4)",
+      "Structural comparison (P7)",
+      "Candidate discovery (P7)",
+      "Signal candidate formation (P7)",
+      "Counterexample search",
+      "Replay",
+      "Independence check",
+      "Completeness check"
+    ],
+    "human_only": [
+      "Semantic validation",
+      "Signal validation",
+      "Boundary validation",
+      "UNKNOWN judgment",
+      "Final registration",
+      "OUT_OF_SCOPE judgment"
+    ],
+    "authority_leakage_check": "NO AUTHORITY LEAKAGE. Machine retains structural authority. Human retains semantic authority. ValidatedSignal is knowledge record, NOT runtime policy. All parts checked."
+  },
+  "sig_analyses": {
+    "SIG-01": {
+      "current": "R3, CANDIDATE, 9 cases, independence_ratio=0.33, LOW info gain",
+      "walkthrough": [
+        "P6: 9 FeedbackRecords, all is_in_table=True, different_cell=True",
+        "P7: Evidence Signature {is_in_table:True, different_cell:True, is_number_pair:True}, 9/9 KEEP_SEPARATE, independence_ratio=0.33 (5 on resnet p6), LOW_ENGAGEMENT (9/9 snap)",
+        "Counterexample: 0 counterexamples, ceiling_effect=True",
+        "Boundary: Human sees 9 positive + 0 counterexamples + LOW_INDEPENDENCE → likely UNKNOWN",
+        "Result: NOT VALIDATED, stays CANDIDATE"
+      ],
+      "prevention": "Independence Check prevents 5 same-page cases counted as independent; Counterexample reveals ceiling; Human likely UNKNOWN; no wrong upgrade to R5"
+    },
+    "SIG-02": {
+      "current": "R4, CANDIDATE with counterexamples, 4 IS-11 + 15 P7 (33% FP), adjudicated",
+      "walkthrough": [
+        "P6: 4 FeedbackRecords, text_a_ends_period=True, text_b_starts_capital=True, has_conflict=True",
+        "P7: Evidence Signature {period:True, capital:True, is_in_table:False}, has_conflict=True → CONFLICT",
+        "Counterexample: 15 P7 matches, 5 MERGE counterexamples found, 33% FP, cross_document=True",
+        "Boundary: Human sees 4 positive + 5 counterexamples + has_conflict + 33% FP. Applicable DISABLED. No structural feature separates positive from counterexamples. Human selects UNKNOWN.",
+        "Result: NOT VALIDATED, stays CANDIDATE (unstable)"
+      ],
+      "prevention": "Counterexample Search PROACTIVELY finds P7 FP before validation; Human sees counterexamples; cannot select Applicable; no structural scope exists; correctly blocked from R5",
+      "contrast_current": "Current system discovered 33% FP only by MANUAL P7 check. HVA-03 makes it automatic and mandatory."
+    },
+    "SIG-07": {
+      "current": "R1, NOT_REUSABLE, one-off distillation gap",
+      "walkthrough": [
+        "P6: AMB-032 FeedbackRecord, B2 UNKNOWN, A KEEP_SEPARATE, evidence_snapshot has different_cell=True",
+        "P7: Only 1 case → cannot form Signal Candidate (need ≥2)",
+        "Routing: NOT Signal Candidate. Routed to EVIDENCE_DISTILLATION_FEEDBACK.",
+        "P4: AMB-032 reveals B2 doesnt expose different_cell → L1 redesigned to include different_cell",
+        "Result: NOT a Signal. System presentation issue. Correctly stays R1."
+      ],
+      "prevention": "P7 requires ≥2 cases; observation routed to Evidence Pack improvement not Signal; no risk of packaging system bug as knowledge"
+    },
+    "SIG-08": {
+      "current": "R2, CANDIDATE (unstable), adjudicated, P7 counterexamples",
+      "walkthrough": [
+        "P6: AMB-375 FeedbackRecord, Reviewer A: KS, Reviewer B: MERGE, has_conflict=True",
+        "P7: Same Evidence Signature as SIG-02, has_conflict=True → CONFLICT",
+        "Counterexample: Same as SIG-02, 5 P7 MERGE counterexamples",
+        "Boundary: Human sees positive + counterexamples + conflict. No structural scope separates them (boundary is semantic: sentence-ending vs mid-sentence period). Human selects UNKNOWN.",
+        "Result: NOT VALIDATED. Genuine boundary acknowledged but cannot be structurally scoped."
+      ],
+      "prevention": "has_conflict forces Boundary Review; Counterexample finds 5 FP; no structural scope; Human UNKNOWN; signal not validated; needs Boundary Validation NOT direct Rule",
+      "why_boundary_not_rule": "Without Boundary: period+capital → KEEP Rule → 33% FP → 5 wrong decisions. With Boundary: counterexamples found → Human UNKNOWN → no wrong decisions."
+    }
+  },
+  "failure_routes": {
+    "complete_map": "Case → P1 → P2 → P3 → P4 → P5 → P6 → P7 → Counterexample → Boundary → ValidatedSignal → Replay → Reuse/Failure → (loop to P6)",
+    "failure_categories": [
+      {
+        "failure": "Evidence missing",
+        "detected": "P1",
+        "action": "Flag insufficiency",
+        "human": "No"
+      },
+      {
+        "failure": "Case too simple",
+        "detected": "P3",
+        "action": "Not selected",
+        "human": "No"
+      },
+      {
+        "failure": "Selection bias",
+        "detected": "P3",
+        "action": "RESELECT",
+        "human": "No"
+      },
+      {
+        "failure": "Keyword false reuse",
+        "detected": "P7",
+        "action": "Reject text signature",
+        "human": "No"
+      },
+      {
+        "failure": "Same-page repetition",
+        "detected": "P7",
+        "action": "LOW_INDEPENDENCE",
+        "human": "No"
+      },
+      {
+        "failure": "Ceiling effect",
+        "detected": "Counterexample",
+        "action": "Flag, prevent auto-validation",
+        "human": "Yes (Boundary)"
+      },
+      {
+        "failure": "Cross-doc failure",
+        "detected": "Replay",
+        "action": "REVIEW",
+        "human": "Yes (revalidation)"
+      },
+      {
+        "failure": "Boundary unclear",
+        "detected": "Boundary",
+        "action": "UNKNOWN",
+        "human": "Yes"
+      },
+      {
+        "failure": "Authority leakage",
+        "detected": "ValidatedSignal",
+        "action": "Schema reject",
+        "human": "No"
+      },
+      {
+        "failure": "Conflict unresolved",
+        "detected": "P7/Boundary",
+        "action": "UNKNOWN or CONFLICT",
+        "human": "Yes"
+      },
+      {
+        "failure": "Signal compromised",
+        "detected": "Replay",
+        "action": "REVIEW (FP>10%)",
+        "human": "Yes"
+      }
+    ]
+  },
+  "minimal_prototype_boundary": {
+    "phase1_includes": [
+      "P6 FeedbackRecord",
+      "P7 Signal Candidate",
+      "Counterexample Search (offline)",
+      "P4 Evidence Pack L0-L1"
+    ],
+    "phase1_not_includes": [
+      "P3 Case Selection redesign",
+      "Human Boundary Validation UI",
+      "Validated Signal",
+      "Future Case Replay"
+    ],
+    "phase1_does_not": [
+      "Modify DICE Core",
+      "Create Engine/Module/Runtime",
+      "Run Human Experiment",
+      "Validate Signal",
+      "Enter Runtime/Capability",
+      "Use LLM",
+      "Create Rules"
+    ],
+    "phase1_success_criteria": [
+      "FeedbackRecord generated for all 45 IS-11 cases",
+      "Evidence Signature correctly groups similar cases",
+      "Signal Candidates match HVA-02 8 candidates",
+      "Counterexample Search finds SIG-02 5 P7 FP",
+      "Evidence Pack L1 for AMB-032 shows different_cell=YES",
+      "Independence check detects resnet p6 cluster"
+    ],
+    "phase1_does_not_prove": [
+      "Learning",
+      "Reuse",
+      "HRR",
+      "Boundary"
+    ]
+  },
+  "architecture_judgment": {
+    "stability_novelty_resolution": "NOT resolved by choosing stable OR novel. Resolved by BOUNDING each signal to applicable scope. Stable signals → ceiling effect → UNKNOWN. Novel signals → counterexamples → UNKNOWN or scoping. Neither wrongly upgraded.",
+    "hva01_addressed": "P3 Selection: Type A 53%→≤30%, TABLE 88%→≤50%, PROSE 7%→≥15%. P4 Pack: L1 contains decision-relevant evidence, no cue. P3+P4: fewer cases, better Pack, simple UI.",
+    "hva02_addressed": "P6-P7 link feedback to evidence. Counterexample prevents wrong upgrade. Human Boundary defines scope. Future Replay tests reuse. But: success depends on DATA, architecture cannot create data.",
+    "limitations": [
+      "Cannot create data (needs more cases, participants, future corpus)",
+      "Cannot resolve semantic boundaries (SIG-02/08 may be permanently UNKNOWN)",
+      "Cannot prove Learning without future cases (0 available)",
+      "Cannot measure HRR without experiment (not authorized)"
+    ]
+  },
+  "implementation_roadmap": {
+    "phase0": {
+      "name": "Architecture / Contract (NO CODE)",
+      "duration": "1-2 days",
+      "deliverables": [
+        "FeedbackRecord schema",
+        "SignalCandidate schema",
+        "EvidencePack schema",
+        "ValidatedSignal schema",
+        "CounterexampleSearchResult schema",
+        "BoundaryValidationResult schema",
+        "ReplayResult schema"
+      ],
+      "constraints": [
+        "No code",
+        "No runtime",
+        "No DICE Core mod",
+        "Schema only"
+      ],
+      "success": "All schemas validated against HVA-01/HVA-02 data; SIG walk-throughs completed; FORBIDDEN fields check in schema"
+    },
+    "phase1": {
+      "name": "Minimal Prototype (OFFLINE ONLY)",
+      "duration": "3-5 days",
+      "deliverables": [
+        "FeedbackRecord generator",
+        "Evidence Signature extractor",
+        "Signal Candidate former",
+        "Counterexample Search (offline)",
+        "Evidence Pack L0-L1 generator"
+      ],
+      "constraints": [
+        "Offline only",
+        "No DICE Core mod",
+        "No Human Experiment",
+        "No Signal Validation",
+        "No Future Replay",
+        "All outputs JSON in tmp/"
+      ],
+      "success": [
+        "45 IS-11 cases have FeedbackRecord",
+        "Evidence Signature groups similar cases",
+        "Signal Candidates match HVA-02 8 candidates",
+        "Counterexample finds SIG-02 5 P7 FP",
+        "Pack L1 for AMB-032 shows different_cell",
+        "Independence check detects resnet p6"
+      ],
+      "does_not_prove": [
+        "Learning",
+        "Reuse",
+        "HRR",
+        "Boundary"
+      ]
+    },
+    "phase2": {
+      "name": "Human Validation + Future Replay (ONLY IF PHASE 1 SUCCEEDS)",
+      "prerequisites": [
+        "Phase 1 ALL success criteria met",
+        "Human experiment authorization (NOT granted)",
+        "New corpus (NOT available)"
+      ],
+      "duration": "2-4 weeks",
+      "deliverables": [
+        "Human Boundary Validation UI",
+        "Validated Signal registration",
+        "Future Case Replay",
+        "HRR Measurement"
+      ],
+      "constraints": [
+        "Requires authorization",
+        "Requires new corpus",
+        "No Runtime",
+        "No Capability",
+        "No Production",
+        "Research prototype"
+      ],
+      "success": [
+        "≥1 Signal VALIDATED",
+        "≥5 future cases replayed",
+        "TPR≥80%",
+        "FPR≤10%",
+        "HRR measured"
+      ],
+      "does_not": [
+        "Enter Runtime",
+        "Enter Capability",
+        "Enter Production",
+        "Modify DICE Core"
+      ]
+    },
+    "phase3": {
+      "name": "Runtime Integration (NOT PLANNED)",
+      "status": "Only if Phase 2 proves Learning with measured HRR. NOT authorized. NOT feasible. DO NOT PLAN."
+    }
+  },
+  "final_gate": {
+    "hva03_status": "CONDITIONAL",
+    "architecture_feasibility": "MEDIUM",
+    "primary_bottleneck": "Feedback Generalization (Stability-Novelty Paradox)",
+    "secondary_bottleneck": "Future Validation (0 independent future cases)",
+    "reusable_signal_supported": "INSUFFICIENT_EVIDENCE",
+    "current_learning_level": "L3",
+    "minimal_prototype": "P6 FeedbackRecord + P7 SignalCandidate + Counterexample Search + P4 L0-L1",
+    "human_boundary": "Human retains ALL semantic authority (validation, boundary, UNKNOWN, registration)",
+    "automation_risk": "LOW",
+    "authority_leakage_risk": "LOW",
+    "implementation_required": "NOT_YET",
+    "implementation_authorized": false,
+    "experiment_authorized": false,
+    "dice_core_modification": false,
+    "p1_p7_modification": false,
+    "tld_modification": false,
+    "is11_modification": false,
+    "m_b_modification": false,
+    "gt_modification": false,
+    "llm": false,
+    "new_observation": false,
+    "new_module": false,
+    "new_engine": false,
+    "runtime_change": false,
+    "capability_change": false,
+    "frozen_baseline": "INTACT",
+    "production": false,
+    "stop": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  }
+}

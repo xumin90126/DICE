@@ -1,0 +1,1302 @@
+[
+  {
+    "record_id": "FR-GT-IS11-AMB-005",
+    "case_id": "IS11-AMB-005",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(True, True, False, True, True, True)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-024",
+    "case_id": "IS11-AMB-024",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-032",
+    "case_id": "IS11-AMB-032",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-034",
+    "case_id": "IS11-AMB-034",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-052",
+    "case_id": "IS11-AMB-052",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-064",
+    "case_id": "IS11-AMB-064",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-074",
+    "case_id": "IS11-AMB-074",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-101",
+    "case_id": "IS11-AMB-101",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-102",
+    "case_id": "IS11-AMB-102",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-130",
+    "case_id": "IS11-AMB-130",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, True, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-135",
+    "case_id": "IS11-AMB-135",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, True, True, False, True)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-163",
+    "case_id": "IS11-AMB-163",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-168",
+    "case_id": "IS11-AMB-168",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-198",
+    "case_id": "IS11-AMB-198",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-205",
+    "case_id": "IS11-AMB-205",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-218",
+    "case_id": "IS11-AMB-218",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-257",
+    "case_id": "IS11-AMB-257",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-261",
+    "case_id": "IS11-AMB-261",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-262",
+    "case_id": "IS11-AMB-262",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-267",
+    "case_id": "IS11-AMB-267",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-279",
+    "case_id": "IS11-AMB-279",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-313",
+    "case_id": "IS11-AMB-313",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, True, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-318",
+    "case_id": "IS11-AMB-318",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-321",
+    "case_id": "IS11-AMB-321",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-323",
+    "case_id": "IS11-AMB-323",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-346",
+    "case_id": "IS11-AMB-346",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-350",
+    "case_id": "IS11-AMB-350",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-375",
+    "case_id": "IS11-AMB-375",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, True, True)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-380",
+    "case_id": "IS11-AMB-380",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-401",
+    "case_id": "IS11-AMB-401",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-407",
+    "case_id": "IS11-AMB-407",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-409",
+    "case_id": "IS11-AMB-409",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-414",
+    "case_id": "IS11-AMB-414",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-418",
+    "case_id": "IS11-AMB-418",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, True, True)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-422",
+    "case_id": "IS11-AMB-422",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-440",
+    "case_id": "IS11-AMB-440",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-457",
+    "case_id": "IS11-AMB-457",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-462",
+    "case_id": "IS11-AMB-462",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-467",
+    "case_id": "IS11-AMB-467",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-483",
+    "case_id": "IS11-AMB-483",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-505",
+    "case_id": "IS11-AMB-505",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-514",
+    "case_id": "IS11-AMB-514",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-519",
+    "case_id": "IS11-AMB-519",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, True, True)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-522",
+    "case_id": "IS11-AMB-522",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(True, True, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-530",
+    "case_id": "IS11-AMB-530",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(True, True, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-414",
+    "case_id": "IS11-AMB-414",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-505",
+    "case_id": "IS11-AMB-505",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-032",
+    "case_id": "IS11-AMB-032",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-005",
+    "case_id": "IS11-AMB-005",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(True, True, False, True, True, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-350",
+    "case_id": "IS11-AMB-350",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-418",
+    "case_id": "IS11-AMB-418",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, True, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-467",
+    "case_id": "IS11-AMB-467",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-457",
+    "case_id": "IS11-AMB-457",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-462",
+    "case_id": "IS11-AMB-462",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-375",
+    "case_id": "IS11-AMB-375",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, True, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-483",
+    "case_id": "IS11-AMB-483",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-350",
+    "case_id": "IS11-AMB-350",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-519",
+    "case_id": "IS11-AMB-519",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, True, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-522",
+    "case_id": "IS11-AMB-522",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(True, True, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-313",
+    "case_id": "IS11-AMB-313",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, True, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-467",
+    "case_id": "IS11-AMB-467",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-130",
+    "case_id": "IS11-AMB-130",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, True, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-205",
+    "case_id": "IS11-AMB-205",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-168",
+    "case_id": "IS11-AMB-168",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-414",
+    "case_id": "IS11-AMB-414",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-514",
+    "case_id": "IS11-AMB-514",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-375",
+    "case_id": "IS11-AMB-375",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, True, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-422",
+    "case_id": "IS11-AMB-422",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-462",
+    "case_id": "IS11-AMB-462",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-005",
+    "case_id": "IS11-AMB-005",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(True, True, False, True, True, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-074",
+    "case_id": "IS11-AMB-074",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-375",
+    "case_id": "IS11-AMB-375",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, True, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-505",
+    "case_id": "IS11-AMB-505",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-514",
+    "case_id": "IS11-AMB-514",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-350",
+    "case_id": "IS11-AMB-350",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-262",
+    "case_id": "IS11-AMB-262",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-422",
+    "case_id": "IS11-AMB-422",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-064",
+    "case_id": "IS11-AMB-064",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-346",
+    "case_id": "IS11-AMB-346",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-163",
+    "case_id": "IS11-AMB-163",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-467",
+    "case_id": "IS11-AMB-467",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-457",
+    "case_id": "IS11-AMB-457",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-032",
+    "case_id": "IS11-AMB-032",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-483",
+    "case_id": "IS11-AMB-483",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-414",
+    "case_id": "IS11-AMB-414",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-519",
+    "case_id": "IS11-AMB-519",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, True, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-135",
+    "case_id": "IS11-AMB-135",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, True, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-024",
+    "case_id": "IS11-AMB-024",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-522",
+    "case_id": "IS11-AMB-522",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(True, True, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-034",
+    "case_id": "IS11-AMB-034",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, True, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-052",
+    "case_id": "IS11-AMB-052",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-205",
+    "case_id": "IS11-AMB-205",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-530",
+    "case_id": "IS11-AMB-530",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(True, True, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-168",
+    "case_id": "IS11-AMB-168",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-462",
+    "case_id": "IS11-AMB-462",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-313",
+    "case_id": "IS11-AMB-313",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, True, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-198",
+    "case_id": "IS11-AMB-198",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-130",
+    "case_id": "IS11-AMB-130",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, True, False, False)"
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-005",
+    "case_id": "IS11-AMB-005",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(True, True, False, True, True, True)"
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-418",
+    "case_id": "IS11-AMB-418",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, True, True)"
+  }
+]

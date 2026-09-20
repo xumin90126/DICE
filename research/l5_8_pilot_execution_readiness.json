@@ -1,0 +1,190 @@
+{
+ "phase": "L5.8 Pilot Execution Readiness Check",
+ "status": "READY",
+ "objective": "Check whether L5.7 Pilot has actual execution conditions; output READY or BLOCKED; no design, no execution, no recruitment",
+
+ "executive_summary": {
+  "L5_8_STATUS": "READY",
+  "has_blocker": false,
+  "blocker_count": 0,
+  "limitation_count": 8,
+  "future_question_count": 5,
+  "note": "known limitations honestly retained; not eliminated via new architecture"},
+
+ "material_readiness": {
+  "CORE_MATERIAL": "READY",
+  "total_cases": 21,
+  "source": "mb_phase3_2_isolated_replay_results.json (frozen)",
+  "evidence_types": {
+   "admitted_positive": 11,
+   "region_not_formed_negative": 6,
+   "partition_unresolvable_UNKNOWN": 4,
+   "MERGE_boundary": 2,
+   "KEEP_SEPARATE": 19,
+   "conflict": 0},
+  "usable_for_ABC": {"A": true, "B": true, "C": true},
+  "conflict_coverage": 0,
+  "conflict_treatment": "recorded as LIMITATION, not artificially increased"},
+
+ "workflow_readiness": {
+  "A_instance_validation": {
+   "status": "READY",
+   "human_sees": "Evidence Instance + structural context + task",
+   "judgments": 21,
+   "human_abstraction": 0,
+   "human_independent_judgment": true},
+  "B_naive_pattern_validation": {
+   "status": "READY",
+   "human_sees": "3 groups (pre-grouped, no compression) + all member instances",
+   "judgments": 3,
+   "human_abstraction": "HIGH (commonality/comparison/prototype/boundary/negative/UNKNOWN)",
+   "preset_B_worse": false},
+  "C_minimal_semantic_validation": {
+   "status": "READY",
+   "human_sees": "3 Semantic Claim Candidates + summary + grouping criteria + provenance pointer",
+   "judgments": 3,
+   "human_does_not": ["grouping", "commonality", "pattern construction", "prototype", "rule definition"]},
+  "ABC_fairness": {
+   "same_task": true,
+   "same_material": true,
+   "same_GT": true,
+   "same_judgment_options": true,
+   "C_claim_is_candidate": true,
+   "C_claim_no_answer_leak": true,
+   "C_claim_candidate_wording": true,
+   "C_claim_no_assertion_wording": true}},
+
+ "unknown_handling": {
+  "all_workflows_allow_UNKNOWN": true,
+  "evidence_compression_deletes_UNKNOWN": false,
+  "F4_UNKNOWN_preservation": "PASS",
+  "unknown_counts_in_C": {"region_not_formed_group": 6, "partition_unresolvable_group": 4, "admitted_group": 0}},
+
+ "negative_evidence": {
+  "visible_in_C": true,
+  "negative_groups_shown": 2,
+  "positive_groups_shown": 1,
+  "rule": "C must show all groups, not only positive",
+  "conflict_coverage": 0,
+  "conflict_treatment": "CONFLICT_COVERAGE=0 recorded, not artificially increased"},
+
+ "compression_traceability": {
+  "F1_positive_preservation": "PASS",
+  "F2_negative_preservation": "PASS",
+  "F3_boundary_preservation": "PASS",
+  "F4_UNKNOWN_preservation": "PASS",
+  "F5_conflict_preservation": "PASS",
+  "F6_provenance_recovery": "PASS",
+  "F7_claim_traceability": "PASS",
+  "all_F1_F7_pass": true,
+  "provenance_coverage": 1.0,
+  "traced_members": "21/21",
+  "level_4_recoverable": true,
+  "traceability_chain": "claim -> summary -> group -> member_refs -> eic1_detail -> frozen_P2 -> observation"},
+
+ "recording_readiness": {
+  "required_fields": {"case_id": true, "workflow": true, "decision": true, "time": true},
+  "optional_fields": {"difficulty": true, "confidence": true},
+  "recording_feasible": true,
+  "method": "simple JSON per judgment",
+  "harness_written": false,
+  "harness_design_defined": true,
+  "harness_location": "tmp/l5_7_experiment_harness.py (to be written at pilot execution)",
+  "workload_proxy_rule": "review_count/evidence_exposure/interaction_count = workload proxy, NOT cognitive_load; must combine time+difficulty+abstraction_burden+task_behavior"},
+
+ "limitations": {
+  "all_non_blocking": true,
+  "items": [
+   {"id": "L1", "type": "GT imbalance", "detail": "19:2 (KEEP_SEPARATE:MERGE)", "impact": "quality statistical inference not feasible; pilot/exploratory only", "blocking": false},
+   {"id": "L2", "type": "Conflict coverage", "detail": "0 cases", "impact": "conflict-preservation Human judgment not testable (F5 still PASS)", "blocking": false},
+   {"id": "L3", "type": "Automation bias coverage", "detail": "0 System!=GT cases", "impact": "cannot test Human accepting misleading System claim", "blocking": false},
+   {"id": "L4", "type": "Positive scope", "detail": "all positive=KEEP_SEPARATE", "impact": "C false-acceptance not testable", "blocking": false},
+   {"id": "L5", "type": "n=21", "detail": "pilot/exploratory", "impact": "non-confirmatory; non-generalization", "blocking": false},
+   {"id": "L6", "type": "Learning effect", "detail": "same 21 cases x 3 conditions", "impact": "counterbalanced (Latin square); recorded", "blocking": false},
+   {"id": "L7", "type": "Cross-document", "detail": "all from DICE IS-11 sampling frame", "impact": "generalization not claimable", "blocking": false},
+   {"id": "L8", "type": "Harness not yet written", "detail": "tmp/l5_7_experiment_harness.py", "impact": "design defined; write at pilot execution", "blocking": false}]},
+
+ "future_questions": {
+  "not_addressed_in_pilot": true,
+  "items": [
+   {"id": "F1", "type": "Cross-document generalization", "detail": "requires multi-corpus experiment"},
+   {"id": "F2", "type": "Large-scale reuse", "detail": "requires large-scale data"},
+   {"id": "F3", "type": "Production deployment", "detail": "requires production integration (NOT AUTHORIZED)"},
+   {"id": "F4", "type": "Pattern lifecycle", "detail": "Pattern = closed concept, not developed"},
+   {"id": "F5", "type": "Capability auto-registration", "detail": "Human-controlled, not automatic"}],
+  "rule": "LIMITATION and FUTURE_QUESTION not converted to new design tasks"},
+
+ "order_control": {
+  "method": "Latin square (3 conditions x 3 orders)",
+  "orders": ["A->B->C", "B->C->A", "C->A->B"],
+  "learning_effect": "LIMITATION (L6, counterbalanced, recorded)",
+  "redesigned": false,
+  "reused_from_L5.7": true},
+
+ "safety_check": {
+  "modify_frozen_baseline": false,
+  "modify_GT": false,
+  "modify_TLD": false,
+  "modify_atomic_observation": false,
+  "modify_IS11_decision": false,
+  "modify_capability_registry": false,
+  "modify_runtime": false,
+  "output_location": "tmp/ or experiment-only",
+  "all_safe": true},
+
+ "artifact_boundary": {
+  "PRODUCTION": false,
+  "PRODUCTION_MODIFICATIONS": 0,
+  "FROZEN_BASELINE": "INTACT",
+  "frozen_baseline_drift": 0,
+  "frozen_hashes": {
+   "GT": "7349963d0d23b5ef (MATCH)",
+   "TLD": "022f5c21e872ad9e (MATCH)",
+   "IS11_harness": "b41494020b491b92 (MATCH)",
+   "EIC1_adapter": "d9b6a4b184c063b3 (MATCH)",
+   "anchors": "0/7 drift"},
+  "L5.5_location": "tmp/ only",
+  "L5.5_outside_imports": 0,
+  "L5.5_migrated_to_production": false},
+
+ "anti_overdesign": {
+  "NEW_PRIMITIVE": 0,
+  "NEW_CONTRACT": 0,
+  "NEW_ARCHITECTURE": 0,
+  "NEW_DESIGN": 0,
+  "no_L5.8.1_8.2": true,
+  "no_pattern_engine_registry_miner_classifier": true,
+  "no_new_evidence_authority_governance_layer": true,
+  "L5.5_not_redesigned": true,
+  "L5.4_not_redesigned": true,
+  "material_not_expanded": true,
+  "this_phase": "readiness check only, no new design"},
+
+ "gate": {
+  "L5_8_STATUS": "READY",
+  "EXECUTION_READINESS": "PASS",
+  "EXECUTION_DESIGN_MINIMALITY": "PASS",
+  "CORE_MATERIAL": "READY",
+  "A_READY": true,
+  "B_READY": true,
+  "C_READY": true,
+  "F1_F7_ALL_PASS": true,
+  "PROVENANCE_COVERAGE": 1.0,
+  "BLOCKER_COUNT": 0,
+  "LIMITATION_COUNT": 8,
+  "FUTURE_QUESTION_COUNT": 5,
+  "PILOT_SCOPE": "LIMITED / EXPLORATORY",
+  "L5_ARCHITECTURE": "CLOSED",
+  "EXPERIMENT_AUTHORIZATION": "NOT AUTHORIZED",
+  "NEXT": "HUMAN EXPERIMENT AUTHORIZATION -> Pilot Execution -> Real Human Evidence",
+  "IMPLEMENTATION_AUTHORIZATION": "NOT AUTHORIZED",
+  "PRODUCTION": false,
+  "FROZEN_BASELINE": "INTACT",
+  "STOP": true},
+
+ "frozen_baseline_verify": {
+  "gt_modified": false, "tld_modified": false, "atomic_observation_modified": false,
+  "is11_decision_modified": false, "production_code_modified": false,
+  "l5.5_modified": false, "schema_modified": false, "html_modified": false,
+  "capability_registry_modified": false, "runtime_modified": false}
+}

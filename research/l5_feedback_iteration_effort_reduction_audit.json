@@ -1,0 +1,529 @@
+{
+  "audit_type": "human_feedback_iteration_effort_reduction_audit",
+  "audit_date": "2026-09-12",
+  "read_only": true,
+  "design_only": true,
+  "governance": {
+    "CODE_MODIFICATION": 0,
+    "UI_MODIFICATION": 0,
+    "DATA_MUTATION": 0,
+    "GT_MODIFICATION": 0,
+    "TLD_MODIFICATION": 0,
+    "ATOMIC_MODIFICATION": 0,
+    "AGGREGATION_MODIFICATION": 0,
+    "COMPRESSION_MODIFICATION": 0,
+    "VALIDATION_RECORD_MODIFICATION": 0,
+    "CAPABILITY_REGISTRY_MODIFICATION": 0,
+    "RUNTIME_MODIFICATION": 0,
+    "NEW_PRIMITIVE": 0,
+    "NEW_CONTRACT": 0,
+    "NEW_ARCHITECTURE": 0,
+    "PATTERN_ENGINE": 0,
+    "FEEDBACK_ENGINE": 0,
+    "LEARNING_ENGINE": 0,
+    "SIGNAL_ENGINE": 0,
+    "ML_TRAINING": 0,
+    "LLM_FINE_TUNING": 0,
+    "IMPLEMENTATION_REQUIRED": true,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "PRODUCTION": false,
+    "RUNTIME_AUTHORITY": "ZERO",
+    "CAPABILITY_REGISTRATION": "HUMAN_CONTROLLED",
+    "STOP": true
+  },
+  "executive_conclusion": {
+    "closed_loop_exists": false,
+    "iterative_learning": "INSUFFICIENT_EVIDENCE",
+    "key_finding": "Distillation Gap != Learning Gap. Human Feedback value = Evidence Relevance Validation, not Knowledge Generation. Path to HER = Evidence Cue (L5.10), not Learning Engine.",
+    "current_state": "Storage + Manual Candidate Discovery (L1)",
+    "target_state": "L6 Measured Human Effort Reduction",
+    "gap": "9/14 closed-loop segments MISSING"
+  },
+  "current_state_map": {
+    "implemented_segments": [
+      "Document -> Evidence",
+      "Evidence -> Distillation (PARTIAL)",
+      "Distillation -> Candidate",
+      "Candidate -> Human Feedback",
+      "Feedback -> ValidationRecord"
+    ],
+    "missing_segments": [
+      "Feedback -> Reusable Signal",
+      "Signal -> Human Validation",
+      "Validation -> Reusable Knowledge",
+      "Knowledge -> System Iteration",
+      "Iteration -> Future Cases",
+      "Future Cases -> Effort Reduction",
+      "Effort Reduction -> Quality Check",
+      "Quality Check -> New Feedback",
+      "Boundary Preservation (not tested)"
+    ],
+    "implemented_count": 5,
+    "missing_count": 9,
+    "total_segments": 14
+  },
+  "four_state_distinction": {
+    "A_storage": {
+      "status": "YES",
+      "evidence": "27 judgments in pilot_results_live.json"
+    },
+    "B_aggregation": {
+      "status": "YES",
+      "evidence": "Structural grouping, B/C phase group judgments"
+    },
+    "C_reusable_candidate": {
+      "status": "YES (manual)",
+      "evidence": "CS1-CS4 identified in audit, not by system"
+    },
+    "D_actual_iterative_learning": {
+      "status": "NO",
+      "evidence": "No validation, no reuse, no measurement"
+    }
+  },
+  "her_definition": {
+    "formula": "HER = 1 - H_after / H_before",
+    "h_components": [
+      "review_count",
+      "decision_time",
+      "evidence_exposure",
+      "expansion_count",
+      "abstraction_burden",
+      "interaction_cost"
+    ],
+    "her_alone_insufficient": true,
+    "co_requirements": [
+      "Quality_after >= Quality_before",
+      "Error_after <= Error_before",
+      "Boundary Safety (UNKNOWN preserved, override available, no automation bias)"
+    ],
+    "current_her": "NOT MEASURABLE (no Round 2, no baseline)"
+  },
+  "evaluation_dimensions": [
+    {
+      "dimension": "Human Effort",
+      "metrics": [
+        "review_count",
+        "decision_time",
+        "evidence_exposure",
+        "expansion_count",
+        "abstraction_burden"
+      ],
+      "current_data": "Round 1 only",
+      "type": "CONCEPTUAL for HER"
+    },
+    {
+      "dimension": "Decision Quality",
+      "metrics": [
+        "correct_decision",
+        "false_positive",
+        "false_negative",
+        "UNKNOWN_reasonable"
+      ],
+      "current_data": "21/21 A-phase correct",
+      "type": "VALIDATED for Round 1"
+    },
+    {
+      "dimension": "Evidence Quality",
+      "metrics": [
+        "evidence_sufficiency",
+        "evidence_relevance",
+        "evidence_distillation",
+        "provenance"
+      ],
+      "current_data": "21/21 TLD available, 12/15 fields unused",
+      "type": "VALIDATED"
+    },
+    {
+      "dimension": "Error Recurrence",
+      "metrics": [
+        "round1_errors",
+        "round2_errors",
+        "error_recurrence_rate"
+      ],
+      "current_data": "0 Round 1 errors, no Round 2",
+      "type": "NOT TESTABLE"
+    },
+    {
+      "dimension": "Reuse",
+      "metrics": [
+        "feedback_reuse_ratio",
+        "reuse_coverage"
+      ],
+      "current_data": "N/A",
+      "type": "CONCEPTUAL"
+    },
+    {
+      "dimension": "Automation Bias",
+      "metrics": [
+        "blind_accept_rate",
+        "override_rate",
+        "automation_bias_index"
+      ],
+      "current_data": "N/A",
+      "type": "CONCEPTUAL"
+    }
+  ],
+  "candidate_counterfactual": [
+    {
+      "candidate": "CS1",
+      "counterfactual_answer": "YES — still need to repeat",
+      "reason": "Evidence exists in System (TLD) but not distilled to Human; future Human re-derives from raw data",
+      "gap_type": "DISTILLATION_GAP"
+    },
+    {
+      "candidate": "CS2",
+      "counterfactual_answer": "YES — still need to repeat",
+      "reason": "Text pattern computable but not computed; future Human reads text and re-derives",
+      "gap_type": "DISTILLATION + COMPUTATION_GAP"
+    },
+    {
+      "candidate": "CS3",
+      "counterfactual_answer": "YES — still need to repeat",
+      "reason": "Same as CS2",
+      "gap_type": "DISTILLATION + COMPUTATION_GAP"
+    },
+    {
+      "candidate": "CS4",
+      "counterfactual_answer": "YES — but different nature",
+      "reason": "Boundary awareness, not effort reduction",
+      "gap_type": "BOUNDARY_AWARENESS_GAP"
+    }
+  ],
+  "key_insight": {
+    "finding": "None of the 4 candidates require Learning from Human Feedback. They all require Distilling existing/computable evidence to Human.",
+    "feedback_value": "Evidence Relevance Validation (not Knowledge Generation)",
+    "her_path": "Evidence Cue implementation (L5.10), not Learning Engine",
+    "implication": "The most immediate path to Human Effort Reduction is Type B (Evidence Compression), not Type A (Genuine Reuse)"
+  },
+  "system_iteration_observable_changes": [
+    {
+      "change": "Evidence Cue Presentation",
+      "mechanism": "L5.10 safe translation table",
+      "new_module": false,
+      "is_learning": false,
+      "is_distillation": true,
+      "status": "DESIGN_READY"
+    },
+    {
+      "change": "Text Pattern Computation",
+      "mechanism": "trivial pattern match",
+      "new_module": false,
+      "is_learning": false,
+      "is_distillation": true,
+      "status": "DESIGN_IDENTIFIED"
+    },
+    {
+      "change": "Field Selection (cognitive load)",
+      "mechanism": "remove 7 low-value fields",
+      "new_module": false,
+      "is_learning": false,
+      "is_distillation": true,
+      "status": "DESIGN_IDENTIFIED"
+    },
+    {
+      "change": "Signal Validation",
+      "mechanism": "Human reviews candidates",
+      "new_module": false,
+      "is_learning": false,
+      "is_validation": true,
+      "status": "MISSING"
+    },
+    {
+      "change": "Signal Application to New Cases",
+      "mechanism": "match + present as context",
+      "new_module": false,
+      "is_learning": "POTENTIALLY (if F1-F10 met)",
+      "is_reuse": true,
+      "status": "MISSING"
+    }
+  ],
+  "review_reduction_types": [
+    {
+      "type": "A",
+      "name": "Genuine Reuse",
+      "is_success": true,
+      "is_learning": true,
+      "dice_achievable": "Requires validation + reuse + new cases",
+      "current": "NOT achievable"
+    },
+    {
+      "type": "B",
+      "name": "Evidence Compression",
+      "is_success": "PARTIAL",
+      "is_learning": false,
+      "dice_achievable": "Via L5.10 Evidence Cue",
+      "current": "DESIGN_READY, most immediate path"
+    },
+    {
+      "type": "C",
+      "name": "Automation Bias",
+      "is_success": false,
+      "is_learning": false,
+      "dice_achievable": "MUST BE PREVENTED",
+      "current": "Not tested"
+    },
+    {
+      "type": "D",
+      "name": "Case Removal",
+      "is_success": false,
+      "is_learning": false,
+      "dice_achievable": "NOT APPLICABLE",
+      "current": "N/A"
+    },
+    {
+      "type": "E",
+      "name": "Authority Transfer",
+      "is_success": false,
+      "is_learning": false,
+      "dice_achievable": "FORBIDDEN",
+      "current": "Governance prevents"
+    }
+  ],
+  "error_amplification": {
+    "risk_current": "LOW (no automated extraction or application)",
+    "risk_if_automated": "HIGH (without independent validation)",
+    "containment_requirements": [
+      "No automated signal extraction without Human validation",
+      "No signal application without scope specification",
+      "No silent system decision (authority=0 at L5)",
+      "Every reused signal traceable to source feedback",
+      "Human can always override or select UNKNOWN",
+      "System!=GT test cases included",
+      "Conflict test cases included",
+      "Supersede mechanism for newer feedback"
+    ]
+  },
+  "automation_bias_design": {
+    "condition_a": "Evidence only (blind)",
+    "condition_b": "Evidence + System-derived candidate cue (assisted, NOT answer)",
+    "safe_presentation": "\"A and B are in different structural positions\" (CUE)",
+    "forbidden_presentation": "\"A and B should be kept separate\" (ANSWER)",
+    "abi_formula": "blind_accept_rate / total_assisted_cases",
+    "abi_threshold_danger": 0.7,
+    "abi_threshold_safe": 0.3,
+    "abi_target": 0.5,
+    "system_ne_gt_required": true,
+    "conflict_cases_required": true
+  },
+  "f1_f10_conditions": [
+    {
+      "id": "F1",
+      "description": "Feedback captured",
+      "status": "PASS"
+    },
+    {
+      "id": "F2",
+      "description": "Evidence-linked",
+      "status": "PARTIAL"
+    },
+    {
+      "id": "F3",
+      "description": "Reusable candidate identified",
+      "status": "PARTIAL"
+    },
+    {
+      "id": "F4",
+      "description": "Human validated",
+      "status": "FAIL"
+    },
+    {
+      "id": "F5",
+      "description": "Applied to unseen future cases",
+      "status": "FAIL"
+    },
+    {
+      "id": "F6",
+      "description": "Human effort reduced",
+      "status": "FAIL"
+    },
+    {
+      "id": "F7",
+      "description": "Decision/evidence quality maintained",
+      "status": "FAIL"
+    },
+    {
+      "id": "F8",
+      "description": "Error recurrence not increased",
+      "status": "FAIL"
+    },
+    {
+      "id": "F9",
+      "description": "Boundary/UNKNOWN preserved",
+      "status": "FAIL"
+    },
+    {
+      "id": "F10",
+      "description": "Provenance traceable",
+      "status": "PARTIAL"
+    }
+  ],
+  "maturity_model": [
+    {
+      "level": "L0",
+      "description": "Human-only decision",
+      "status": "PASSED"
+    },
+    {
+      "level": "L1",
+      "description": "Feedback Captured",
+      "status": "CURRENT"
+    },
+    {
+      "level": "L2",
+      "description": "Evidence-linked Feedback",
+      "status": "PARTIAL"
+    },
+    {
+      "level": "L3",
+      "description": "Reusable Candidate",
+      "status": "PARTIAL (manual)"
+    },
+    {
+      "level": "L4",
+      "description": "Human Validated Reusable Knowledge",
+      "status": "MISSING"
+    },
+    {
+      "level": "L5",
+      "description": "Future-case Reuse",
+      "status": "MISSING"
+    },
+    {
+      "level": "L6",
+      "description": "Measured Human Effort Reduction",
+      "status": "MISSING"
+    },
+    {
+      "level": "L7",
+      "description": "Repeated Iterative Improvement",
+      "status": "MISSING"
+    }
+  ],
+  "research_hypotheses": [
+    {
+      "id": "H1",
+      "name": "Reuse",
+      "description": "Human feedback can generate evidence-grounded reusable candidate",
+      "status": "PARTIALLY_SUPPORTED",
+      "evidence": "CS1 at R3, TLD 15/17"
+    },
+    {
+      "id": "H2",
+      "name": "Iteration",
+      "description": "Validated reusable feedback can improve handling of unseen future cases",
+      "status": "NOT_TESTED"
+    },
+    {
+      "id": "H3",
+      "name": "Effort Reduction",
+      "description": "After validated reuse, Human effort decreases",
+      "status": "NOT_TESTED"
+    },
+    {
+      "id": "H4",
+      "name": "Quality Preservation",
+      "description": "Effort reduction does not reduce quality",
+      "status": "NOT_TESTED"
+    },
+    {
+      "id": "H5",
+      "name": "Error Containment",
+      "description": "Feedback reuse does not amplify errors",
+      "status": "NOT_TESTED"
+    },
+    {
+      "id": "H6",
+      "name": "Boundary Preservation",
+      "description": "UNKNOWN/negative/boundary remain protected",
+      "status": "NOT_TESTED"
+    },
+    {
+      "id": "H7",
+      "name": "Non-Automation",
+      "description": "Effort reduction is not merely automation bias",
+      "status": "NOT_TESTED"
+    }
+  ],
+  "final_gate": {
+    "FEEDBACK_CAPTURE": "PASS",
+    "EVIDENCE_LINKAGE": "PARTIAL",
+    "REUSABLE_SIGNAL": "PARTIAL",
+    "HUMAN_VALIDATION": "FAIL",
+    "FUTURE_CASE_REUSE": "FAIL",
+    "SYSTEM_ITERATION": "FAIL",
+    "HUMAN_EFFORT_REDUCTION": "FAIL",
+    "QUALITY_PRESERVATION": "FAIL",
+    "ERROR_CONTAINMENT": "FAIL",
+    "BOUNDARY_PRESERVATION": "FAIL",
+    "AUTOMATION_BIAS_CONTROL": "FAIL",
+    "ITERATIVE_LEARNING": "INSUFFICIENT_EVIDENCE"
+  },
+  "minimum_experiment": {
+    "phase_0": {
+      "name": "Implement L5.10 Evidence Cue",
+      "type": "Type B (distillation)",
+      "note": "NOT Learning Engine, NOT Signal Engine"
+    },
+    "phase_1": {
+      "name": "Baseline (B0)",
+      "participants": 5,
+      "cases": 50,
+      "measure": "time, accuracy, UNKNOWN, expansion, effort"
+    },
+    "phase_2": {
+      "name": "Signal Extraction + Validation",
+      "extractors": "offline",
+      "validators": 3,
+      "output": "validated signals with scope+boundary"
+    },
+    "phase_3": {
+      "name": "Iterated (B1)",
+      "participants": 5,
+      "cases": "50 old + 50 new",
+      "conditions": "Evidence Cue + validated signal as context",
+      "controls": ">=10 System!=GT, >=5 conflict"
+    },
+    "phase_4": {
+      "name": "Comparison",
+      "compare": "B0 vs B1",
+      "metrics": "all dimensions + ABI + HER"
+    },
+    "phase_5": {
+      "name": "Decision",
+      "criteria": "HER>0 AND quality>= AND error<= AND boundary preserved AND ABI<0.5"
+    },
+    "expected_observables": {
+      "most_likely": "Type B (Evidence Compression) — time↓, exposure↓, burden↓, review count SAME",
+      "possibly": "Type A (Genuine Reuse) on matching subset — time↓ MORE",
+      "must_verify": "Type C (Automation Bias) NOT occurring — ABI<0.5, override>0, UNKNOWN>=baseline"
+    }
+  },
+  "critical_reflection": {
+    "reducing_or_hiding": "Currently NEITHER — feedback saved but unused. Evidence Cue would genuinely reduce (distillation). Signal Reuse must ensure independent validation.",
+    "iterating_or_archiving": "Currently ARCHIVING only. Path to iteration: L5.10 → multi-participant → validation → reuse → measurement.",
+    "key_principle": "Human Feedback primary value = Evidence Relevance Validation, not Knowledge Generation. Path to HER = Evidence Distillation (L5.10), not Learning Engine."
+  },
+  "evidence_classification": {
+    "audit": "B-class",
+    "cs1_candidate": "B-class (R3)",
+    "her_feasibility": "C-class (not measured)",
+    "iterative_learning": "C-class (INSUFFICIENT_EVIDENCE)",
+    "evidence_cue_as_her_path": "B-class (L5.10 PASS, Type B expected)",
+    "automation_bias_risk": "C-class (not tested)"
+  },
+  "pilot_limitations": {
+    "n": 1,
+    "judgments": 27,
+    "voice_feedbacks": 4,
+    "merge": 2,
+    "unknown": 0,
+    "conflict": 0,
+    "system_ne_gt": 0,
+    "image_confound": true,
+    "tld_false_negatives": 2,
+    "no_round2": true,
+    "no_baseline": true,
+    "no_measurement": true
+  }
+}

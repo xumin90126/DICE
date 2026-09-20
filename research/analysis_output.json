@@ -1,0 +1,79 @@
+{
+  "analysis": {
+    "total_results": 30,
+    "condition_a_count": 15,
+    "condition_b_count": 15,
+    "is_dry_run": false,
+    "M1_decision_accuracy": {
+      "A_accuracy": 0.6,
+      "B_accuracy": 0.467,
+      "A_correct": 9,
+      "A_total": 15,
+      "B_correct": 7,
+      "B_total": 15
+    },
+    "M2_decision_time": {
+      "A_median_ms": 4000,
+      "B_median_ms": 9800,
+      "A_mean_ms": 4062.4,
+      "B_mean_ms": 9418.1
+    },
+    "M3_evidence_seeking": {
+      "A_raw_expanded": 0,
+      "B_raw_expanded": 7,
+      "A_expansion_count_mean": 0,
+      "B_expansion_count_mean": 0.47
+    },
+    "M4_decision_quality": {
+      "A_merge_accuracy": 0.286,
+      "A_keep_accuracy": 0.875,
+      "B_merge_accuracy": 0.714,
+      "B_keep_accuracy": 0.25,
+      "A_unknown_count": 6,
+      "B_unknown_count": 7
+    },
+    "M5_automation_bias": {
+      "A_machine_wrong_cases": 13,
+      "B_machine_wrong_cases": 13,
+      "A_followed_machine_when_wrong": 0,
+      "B_followed_machine_when_wrong": 0,
+      "A_follow_rate": 0.0,
+      "B_follow_rate": 0.0
+    },
+    "M6_evidence_exposure": {
+      "A_avg_view_length": 257.8,
+      "B_avg_view_length": 635.6,
+      "B_avg_raw_context_length": 2497,
+      "B_avg_compression_ratio": 0.118
+    },
+    "fp_specific": {
+      "fp_in_A": 5,
+      "fp_in_B": 5,
+      "A_fp_correct": 0,
+      "B_fp_correct": 5,
+      "A_fp_expanded": 0,
+      "B_fp_expanded": 0
+    },
+    "verdict": "NOT_SUPPORTED",
+    "human_effect": "NOT_SUPPORTED"
+  },
+  "metadata": {
+    "experiment": "HVA-09 Evidence Pack v2 Human Effect Experiment",
+    "date": "2026-09-13T15:21:12.962678+00:00",
+    "total_cases": 15,
+    "conditions": [
+      "A (Current Pack)",
+      "B (Evidence Pack v2)"
+    ],
+    "human_task": "MERGE / KEEP_SEPARATE / UNKNOWN",
+    "counterbalancing": "AB/BA (pilot)",
+    "status": "PILOT / EXPLORATORY",
+    "frozen_baseline": {
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "machine_eval_hash": "437aa665210ccd04",
+      "drift": "0/7 INTACT"
+    }
+  },
+  "result_count": 30
+}

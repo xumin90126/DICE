@@ -1,0 +1,57 @@
+{
+  "result_metadata": {
+    "result_id": "CAP-UNSPSC-MATCH.validation_result",
+    "artifact_type": "validation_result (observation)",
+    "paradigm": "Observation-only — PASS/FAIL is an observation, NOT an approval action, NOT a registration trigger",
+    "execution_mode": "read-only declarative contract check (no validator code created; Phase 9 Q3 DEFER retained)",
+    "checked_against": "CAP-UNSPSC-MATCH.validation_spec.json"
+  },
+
+  "dimensions": [
+    {
+      "dimension": "structure",
+      "result": "PASS",
+      "checks": [
+        {"check": "id conforms to CAP-<DOMAIN>-<ACTION>", "value": "CAP-UNSPSC-MATCH = UNSPSC + MATCH", "verdict": "PASS"},
+        {"check": "five layers present (Identity/Strategy/Definition/Evidence/Evolution)", "value": "all present in contract.json", "verdict": "PASS"},
+        {"check": "Definition six fields present", "value": "positive/negative_boundary + activation_rule + conflict_resolution + exclusion_rules + validation_criteria", "verdict": "PASS"},
+        {"check": "schema well-formed", "value": "JSON parses, fields/constraints consistent", "verdict": "PASS"}
+      ]
+    },
+    {
+      "dimension": "semantic",
+      "result": "PASS",
+      "checks": [
+        {"check": "positive/negative boundary mutually consistent", "value": "positive=classification into UNSPSC; negative excludes catalog extraction / section detection / non-lab", "verdict": "PASS"},
+        {"check": "activation_rule self-consistent", "value": "semantic_presence + no_doc_class=True + observation note", "verdict": "PASS"},
+        {"check": "conflict_resolution rival exists", "value": "CAP-CATALOG-EXTRACT exists (bootstrap.py L1756 build_cap_catalog_extract)", "verdict": "PASS"},
+        {"check": "no dangling references", "value": "no unreferenced rival / pattern / implementation ids", "verdict": "PASS"}
+      ]
+    },
+    {
+      "dimension": "authority_leakage",
+      "result": "PASS",
+      "checks": [
+        {"check": "no decision/selection/routing/execution/governance/metrics field", "value": "authority_declaration all false", "verdict": "PASS"},
+        {"check": "no priority/score/confidence/ranking/recommendation numeric field", "value": "D-PRIORITY: no default_priority; match_basis is textual", "verdict": "PASS"},
+        {"check": "implementation_ids empty", "value": "[]", "verdict": "PASS"},
+        {"check": "pattern_ids empty", "value": "[]", "verdict": "PASS"}
+      ]
+    },
+    {
+      "dimension": "evidence",
+      "result": "PASS",
+      "checks": [
+        {"check": "evidence references traceable", "value": "empty lists legal at PROPOSED status", "verdict": "PASS"},
+        {"check": "cross_doc_success_rate ∈ [0,1]", "value": "0.0", "verdict": "PASS"},
+        {"check": "status legal initial value", "value": "PROPOSED", "verdict": "PASS"},
+        {"check": "maturity auto-computed", "value": "LOW (via _auto_compute_maturity at registration time)", "verdict": "PASS"}
+      ]
+    }
+  ],
+
+  "overall": {
+    "verdict": "PASS",
+    "observation_note": "All four dimensions PASS. This is an observation, NOT a registration authorization. Registration remains Human-only (P3)."
+  }
+}

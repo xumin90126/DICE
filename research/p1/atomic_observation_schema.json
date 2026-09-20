@@ -1,0 +1,100 @@
+{
+  "schema_name": "AtomicTextObservation",
+  "version": "p1",
+  "description": "One atomic text fact observed on a PDF page. Describes ONLY what was observed. NO semantic classification (no heading/caption/table/formula/flowchart/paragraph/evidence detection).",
+  "design_principles": [
+    "Observations describe only 'what was observed' (raw facts).",
+    "No semantic classification at the observation layer.",
+    "No high-level rules (if-bold-then-heading, if-x-distance-then-table).",
+    "Provenance preserved: source_type + source_index on every observation.",
+    "Independent of CandidateSpan / Frozen 730 Pool / Legacy Generator.",
+    "Fields that cannot be reliably obtained are null, never guessed."
+  ],
+  "primary_source_layer": "span (PyMuPDF 'dict' spans) — richest: text+bbox+font+size+flags",
+  "secondary_source_layer": "word (PyMuPDF 'words') — natural atomic, no font info",
+  "comparison_layers": [
+    "character (rawdict)",
+    "line (dict lines)",
+    "block (blocks, legacy corruption source)"
+  ],
+  "fields": {
+    "observation_id": {
+      "type": "str",
+      "description": "Deterministic 16-char id (sha1 of doc|page|source_type|source_index).",
+      "nullable": true
+    },
+    "document_id": {
+      "type": "str",
+      "description": "Source document identifier (caller-supplied fact).",
+      "nullable": true
+    },
+    "page_number": {
+      "type": "int",
+      "description": "1-based page number.",
+      "nullable": true
+    },
+    "text": {
+      "type": "str",
+      "description": "Observed text content (stripped of surrounding whitespace only).",
+      "nullable": true
+    },
+    "bbox": {
+      "type": "Optional[List[float]]",
+      "description": "[x0,y0,x1,y1] in PDF points; null if unavailable.",
+      "nullable": true
+    },
+    "source_type": {
+      "type": "str",
+      "description": "character / word / span / line / block.",
+      "nullable": true
+    },
+    "source_index": {
+      "type": "int",
+      "description": "Index within the source layer's emission order on this page.",
+      "nullable": true
+    },
+    "reading_order_hint": {
+      "type": "int",
+      "description": "Monotonic hint for reading order within (page, source_type).",
+      "nullable": true
+    },
+    "font_name": {
+      "type": "Optional[str]",
+      "description": "Font name (span/char layers only; null for word/line/block).",
+      "nullable": true
+    },
+    "font_size": {
+      "type": "Optional[float]",
+      "description": "Font size in pt (span/char layers only).",
+      "nullable": true
+    },
+    "font_flags": {
+      "type": "Optional[int]",
+      "description": "PyMuPDF flags bitmask (span/char layers only).",
+      "nullable": true
+    },
+    "line_index": {
+      "type": "Optional[int]",
+      "description": "Parent line index in dict (span/line/char only).",
+      "nullable": true
+    },
+    "block_index": {
+      "type": "Optional[int]",
+      "description": "Parent block index (span/line/word/block).",
+      "nullable": true
+    },
+    "provenance": {
+      "type": "Dict[str, Any]",
+      "description": "Extra provenance facts (dict).",
+      "nullable": true
+    }
+  },
+  "source_type_vocabulary": [
+    "character",
+    "word",
+    "span",
+    "line",
+    "block"
+  ],
+  "pymupdf_version_at_extraction": "1.26.5.1.26.10"
+}

@@ -1,0 +1,111 @@
+{
+ "phase": "L5.3 Minimum System Abstraction Boundary Review",
+ "status": "DESIGN-ONLY / READ-ONLY (no implementation, no experiment, no frozen artifact/schema/code modification)",
+ "objective": "Capability Deletion Test on L5.2 Missing Capabilities to find truly indispensable System capability boundary for Workflow C",
+ "core_principles": ["Compress evidence, not meaning", "Human should validate, not reconstruct"],
+
+ "l5_2_baseline": "7 items: aggregation + compression + provenance-preserved + conflict-preserved + UNKNOWN-preserved + commonality(structural) + negative(structural); boundary deferrable",
+ "l5_3_result": "compressed to 2 primitives + 6 fidelity constraints; 5 items are derived/merged/reused",
+
+ "deletion_test_matrix": [
+  {"capability": "Aggregation", "delete_holds": false, "failure": "no group -> compression no input -> Human manually groups -> burden transfer", "derivable": false, "verdict": "PRIMITIVE", "current": "MISSING", "authority": 0, "new_observation": false, "input": "frozen P2 structural features + EIC-1 structural context [O]", "closure_risk": "LOW (signature=structural-only)"},
+  {"capability": "Evidence Compression", "delete_holds": false, "failure": "groups exist but Human reads all N -> burden transfer (= Workflow B)", "derivable": false, "verdict": "PRIMITIVE", "current": "MISSING", "authority": 0, "new_observation": false, "input": "aggregation output + per-instance EIC-1 candidate [O] + per-instance provenance [O]", "closure_risk": "LOW (reports existing candidates, not new meaning)"},
+  {"capability": "Provenance Preservation", "delete_holds": "partial", "failure": "Human cannot audit -> over-trust", "derivable": "N/A", "verdict": "EXISTS (reused)", "current": "EXISTS", "authority": 0, "note": "instance-level provenance reused at Level 4"},
+  {"capability": "Conflict Preservation", "delete_holds": false, "failure": "silent suppression -> error_risk", "derivable": true, "verdict": "MERGED into Compression (fidelity constraint)", "source": "EIC-1 coexistence EVIDENCE_CONFLICT [O]", "note": "compression must count conflict_count"},
+  {"capability": "UNKNOWN Preservation", "delete_holds": false, "failure": "false closure -> error_risk", "derivable": true, "verdict": "MERGED into Compression (fidelity constraint)", "source": "IS-11 INSUFFICIENT_EVIDENCE [O]", "note": "compression must count UNKNOWN_count"},
+  {"capability": "Commonality Discovery", "delete_holds": true, "derivable": true, "verdict": "DERIVED from Aggregation", "mechanism": "grouping criterion stated = commonality"},
+  {"capability": "Negative Set Discovery", "delete_holds": true, "derivable": true, "verdict": "DERIVED from Aggregation + Compression-fidelity", "mechanism": "other groups (different signature); System preserves, does NOT discover semantic role", "critical": "System labeling negative semantic role = Semantic Closure; forbidden"},
+  {"capability": "Structural Comparison / Signature", "delete_holds": true, "derivable": true, "verdict": "INPUT to Aggregation (from frozen evidence)", "mechanism": "frozen P2/EIC-1 features as grouping key"},
+  {"capability": "Summarization", "delete_holds": false, "derivable": true, "verdict": "MERGED into Compression", "mechanism": "= compression output format"},
+  {"capability": "Coverage Construction", "delete_holds": true, "derivable": true, "verdict": "DERIVED from Compression (summary count)", "mechanism": "N/M/K/L counts in summary"},
+  {"capability": "Prototype Construction", "delete_holds": true, "derivable": "partial", "verdict": "DEFERRED", "reason": "Level 0 default does not need; Level 2 on-demand can use first/random; intelligent selection = optimization + bias risk (R2)"},
+  {"capability": "Boundary Discovery", "delete_holds": true, "derivable": true, "verdict": "DEFERRED", "reason": "grouping criteria = hard boundary; edge-case selection = optimization"},
+  {"capability": "Semantic Claim Candidate Construction", "delete_holds": false, "derivable": true, "verdict": "OUTPUT of Compression (aggregated existing EIC-1 candidates)", "mechanism": "claim = count + signature + existing EIC-1 candidate Y (status=candidate); Y from EIC-1 governed mapping [O], not compression-created", "critical": "compression creating new Y = Semantic Closure; forbidden"},
+  {"capability": "Progressive Disclosure", "verdict": "VIEW (UI), not System abstraction primitive", "mechanism": "Level 0-4 presentation; data from aggregation+compression+provenance"}],
+
+ "minimum_system_capability_set": {
+  "primitives": [
+   {"name": "Aggregation", "why_indispensable": "without it Human groups = burden transfer; entry operation no upstream", "delete_failure": "Human compares 21 instances, finds signature, groups -> 8/10 abstraction tasks return", "derivable": false, "code_support": false, "input_exists": true, "current": "MISSING", "authority": 0, "authority_guarantee": "signature=structural-only frozen features; no semantic labels; grouping!=ranking; forbidden-field assertions", "closure_risk": "LOW", "prerequisite": "no new observation (frozen features sufficient [EV])"},
+   {"name": "Evidence Compression", "why_indispensable": "without it Human reads all N = burden transfer (= Workflow B)", "delete_failure": "Human reads N instances + EIC-1 + provenance -> exposure=N -> fatigue", "derivable": false, "code_support": false, "input_exists": true, "current": "MISSING", "authority": 0, "authority_guarantee": "reports existing EIC-1 candidate (status=candidate); summary=counts not ranking; claim=candidate not conclusion; Compress evidence not meaning", "closure_risk": "LOW", "prerequisite": "aggregation (upstream); EIC-1 governed mapping (EXISTS); no new observation"}],
+  "fidelity_constraints": [
+   {"constraint": "conflict_count preserved", "source": "EIC-1 EVIDENCE_CONFLICT [O]", "why": "compression must count (else silent suppression)"},
+   {"constraint": "UNKNOWN_count preserved", "source": "IS-11 INSUFFICIENT_EVIDENCE [O]", "why": "compression must count (else false closure)"},
+   {"constraint": "coverage_count preserved", "source": "aggregation membership", "why": "N/M/K/L counts (else over-trust)"},
+   {"constraint": "provenance traceable", "source": "EXISTS [O] instance-level", "why": "Level 4 expandable (else unauditable)"},
+   {"constraint": "non-positive groups preserved", "source": "aggregation output", "why": "preserve other groups (else negative lost -> overgeneralization)"},
+   {"constraint": "claim status=candidate", "source": "EIC-1 governed [O]", "why": "must label candidate (else Semantic Closure)"}]},
+
+ "derived_deferred_merged_view_human": {
+  "derived_from_aggregation": ["Commonality (grouping criterion stated)", "Negative Set (other groups, preserve only)", "Structural Signature (frozen features as key)", "Structural Comparison (read frozen pairwise)"],
+  "merged_into_compression": ["Summarization (output format)", "Conflict Preservation (fidelity: conflict_count)", "UNKNOWN Preservation (fidelity: UNKNOWN_count)", "Coverage (fidelity: N/M/K/L)", "Semantic Claim Candidate (output: aggregated EIC-1 candidates)"],
+  "deferred": ["Prototype Construction (Level 0 not needed; intelligent=bias R2)", "Boundary Discovery (grouping criteria=boundary; edge-case=optimization)"],
+  "view": ["Progressive Disclosure (UI Level 0-4)"],
+  "exists_reused": ["Provenance (instance-level, Level 4)", "EIC-1 Governed Mapping (interpretation_status=candidate)", "IS-11 INSUFFICIENT_EVIDENCE (frozen harness)", "EIC-1 EVIDENCE_CONFLICT (tmp adapter, no winner)"],
+  "human_only": ["Semantic Interpretation", "Semantic Claim Validation (SUPPORTED/UNSUPPORTED/UNKNOWN)", "Negative Semantic Role Labeling (System doing this = Semantic Closure)", "Boundary Adequacy Judgment (on-demand)", "Final Authorization", "Capability Registration (Human Controlled)"]},
+
+ "minimality_proof": {
+  "delete_aggregation": "no group -> compression no input -> Human manually groups 21 -> burden transfer -> Workflow C breaks",
+  "delete_compression": "groups exist but Human reads all N -> burden transfer (= Workflow B) -> no claim output -> Human constructs claim -> Workflow C breaks",
+  "both_present": "aggregation groups -> compression summarizes -> Human sees Level 0 (claim+counts) -> judges; no grouping/comparison/commonality/negative/UNKNOWN/conflict/prototype/boundary by Human -> no burden transfer -> Workflow C holds",
+  "cannot_merge": "aggregation=grouping (output: groups); compression=summarizing (output: summary+claim); different inputs/outputs/operations",
+  "cannot_derive_each_other": "aggregation needs no upstream; compression needs aggregation output; independent transformations",
+  "result": "2 primitives minimal; cannot reduce further",
+  "l5_2_to_l5_3_compression": "7 items -> 2 primitives + 6 fidelity constraints; 5 items are derived/merged/reused"},
+
+ "system_vs_human_boundary": {
+  "system_authority_0": ["Aggregation (group by structural signature)", "Evidence Compression (summarize counts + report existing EIC-1 candidates)"],
+  "human_sole_semantic_authority": ["Semantic Interpretation", "Semantic Claim Validation", "Negative Semantic Role", "Boundary Adequacy (on-demand)", "Final Authorization", "Capability Registration"],
+  "boundary_unchanged": "System=Structural Abstraction (L1/L2 authority=0); Human=Semantic Abstraction (L3 sole authority); Minimum set does not cross boundary"},
+
+ "authority_semantic_closure_risk": {
+  "aggregation": {"authority": 0, "closure_risk": "LOW", "mitigation": "signature=structural-only frozen features; forbidden-field assertions; no semantic labels"},
+  "compression": {"authority": 0, "closure_risk": "LOW", "mitigation": "reports existing EIC-1 candidate (not new); status=candidate; summary=counts+structural description"},
+  "extreme_B_check": {"system_forms_semantic_pattern": false, "system_judges_negative_role": false, "system_auto_boundary": false, "system_auto_prototype": "DEFERRED", "system_outputs_conclusion": false, "semantic_closure": "NONE"},
+  "residual_risk": "structural signature may hide semantic assumption (R4); compression wording may imply conclusion (R5); needs audit [H]"},
+
+ "burden_transfer_check": {
+  "extreme_A_system_too_weak": {"if_minimum_implemented": "no burden transfer; Human does not group/compare/find-commonality/find-negative/find-boundary/judge-UNKNOWN/reconstruct-provenance", "verdict": "PASS"},
+  "extreme_B_system_too_strong": {"no_semantic_closure": true, "verdict": "PASS"},
+  "conclusion": "Minimum={Aggregation, Compression} correctly positioned: strong enough to eliminate burden transfer, not too strong to cause semantic closure"},
+
+ "implementation_prerequisite": [
+  {"item": "Aggregation input (frozen structural features)", "status": "EXISTS [O, EV]", "note": "same_y_band/co_density/region_forms/partition_id/localization from frozen P2 + EIC-1"},
+  {"item": "EIC-1 governed mapping (candidate interpretation)", "status": "EXISTS [O]", "note": "interpretation_status=candidate; not new semantic authority"},
+  {"item": "Per-instance provenance", "status": "EXISTS [O]", "note": "case_ref + frozen_p2 source + layer_registry sha"},
+  {"item": "IS-11 INSUFFICIENT_EVIDENCE (UNKNOWN)", "status": "EXISTS [O]", "note": "frozen harness"},
+  {"item": "EIC-1 EVIDENCE_CONFLICT", "status": "EXISTS [O]", "note": "tmp adapter coexistence no-winner"},
+  {"item": "Aggregation layer (group by signature)", "status": "MISSING", "note": "new abstraction layer (read frozen -> group); not new observation"},
+  {"item": "Compression layer (summarize + claim candidate)", "status": "MISSING", "note": "new abstraction layer (read groups+EIC-1 -> summary+claim); not new observation"},
+  {"item": "New Observation Measurement", "status": "NONE", "note": "frozen observation sufficient for all primitive inputs [EV M-B audit]"}],
+
+ "simulation_21_cases": {
+  "aggregation_output": {"G1": "16 cases (co-structure signature)", "G2": "2 cases (caption density=0)", "G3": "2 cases (unresolvable UNKNOWN)", "G4": "3 cases (margin/prose)"},
+  "compression_output": {"G1": "16 consistent/0 conflict/0 UNKNOWN; claim=different-cell candidate", "G2": "2 density=0 safety; claim=not-cell candidate", "G3": "2 unresolvable; claim=UNKNOWN", "G4": "3 margin/prose; claim=non-positive"},
+  "human_burden": "4 judgments (not 21); default exposure 4 claims+summaries (not 21 instances); 0 grouping/comparison/commonality/negative/boundary/prototype",
+  "verification": "Minimum set sufficient for 21-case Workflow C [D based on O cases]; GT-confirmed positive=1; pattern generalization unverified; design simulation not experiment"},
+
+ "evidence_levels": {
+  "O": ["frozen structural features exist", "EIC-1 candidate exists", "provenance exists", "IS-11 UNKNOWN exists", "EIC-1 conflict exists", "21-case replay results"],
+  "EV": ["M-B audit: frozen observation sufficient for pattern prerequisites"],
+  "D": ["deletion test methodology", "minimum set definition", "fidelity constraints", "system-human boundary", "simulation"],
+  "I": ["burden transfer failure modes", "no semantic closure in minimum set"],
+  "H": ["residual closure risk in structural signature (R4)", "compression wording risk (R5)"],
+  "note": "no [E] (no human subject experiment); design NOT written as experimentally verified"},
+
+ "gate": {
+  "L5_3_STATUS": "CONDITIONAL PASS",
+  "MINIMUM_SYSTEM_CAPABILITY_SET": "{ Aggregation, Evidence Compression } + 6 Compression Fidelity Constraints",
+  "DERIVED_FROM_AGGREGATION": "Commonality, Negative Set (preserve only), Structural Signature, Structural Comparison",
+  "MERGED_INTO_COMPRESSION": "Summarization, Conflict Preservation, UNKNOWN Preservation, Coverage, Semantic Claim Candidate",
+  "DEFERRED_CAPABILITIES": "Prototype Construction, Boundary Discovery",
+  "VIEW": "Progressive Disclosure (UI)",
+  "EXISTS_REUSED": "Provenance, EIC-1 Governed Mapping, IS-11 INSUFFICIENT_EVIDENCE, EIC-1 EVIDENCE_CONFLICT",
+  "HUMAN_ONLY": "Semantic Interpretation, Semantic Claim Validation, Negative Semantic Role, Boundary Adequacy, Final Authorization, Capability Registration",
+  "NEW_OBSERVATION_MEASUREMENT_REQUEST": "NONE",
+  "IMPLEMENTATION_AUTHORIZATION": "NOT AUTHORIZED",
+  "EXPERIMENT_AUTHORIZATION": "NOT AUTHORIZED",
+  "FROZEN_BASELINE": "INTACT",
+  "STOP": true},
+
+ "frozen_baseline_verify": {"gt_modified": false, "tld_modified": false, "atomic_observation_modified": false, "is11_decision_modified": false, "production_code_modified": false, "schema_modified": false, "html_modified": false}
+}

@@ -1,0 +1,37 @@
+{
+  "metadata_id": "CAP-UNSPSC-MATCH.domain_metadata",
+  "artifact_type": "domain_metadata",
+  "domain": "UNSPSC classification of laboratory products",
+  "domain_scope": "laboratory_products",
+  "unspsc_structure_note": "UNSPSC is a 4-level numeric taxonomy: Segment(2) → Family(2) → Class(2) → Commodity(2), total 8 digits.",
+
+  "external_data_references": [
+    {
+      "ref_id": "unspsc_taxonomy_ref",
+      "ref_type": "external UNSPSC taxonomy reference",
+      "ref_format": "path/name reference to the external UNSPSC code dictionary (I-2: exact reference format finalized before any matching implementation)",
+      "ownership": "Human data management (loading/maintenance); NOT part of Capability, NOT part of Runtime",
+      "note": "D-DICT: the UNSPSC 8-digit-code → semantic-label mapping table is EXTERNAL data, not embedded in this Capability, not embedded in Runtime."
+    },
+    {
+      "ref_id": "validation_dataset_ref",
+      "ref_type": "validation dataset reference",
+      "ref_format": "path/name reference to the ground-truth annotated dataset (human-annotated UNSPSC codes)",
+      "ownership": "Human data management",
+      "note": "Ground-truth UNSPSC codes used for cross-document unspsc_match_accuracy validation."
+    }
+  ],
+
+  "forbidden_in_package": [
+    "embedded authority database — dictionary content must NOT be hardcoded into the contract",
+    "hidden rule priority — D-PRIORITY: no numeric default_priority, no hidden rule precedence",
+    "runtime state — contract is a static declaration; no execution counters / cache / intermediate results"
+  ],
+
+  "authority_declaration": {
+    "dictionary_authority": "Human data management",
+    "capability_authority": "declarative matching semantics only",
+    "runtime_authority": "ZERO",
+    "production": false
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "ui_audit": {
+    "A_target_text_visible": "PASS",
+    "B_target_drawing_visible": "PASS",
+    "C_full_page_visible": "PASS",
+    "D_focused_view": "PASS",
+    "E_bbox_correct": "PASS",
+    "F_no_answer_leakage": "PASS",
+    "G_no_semantic_leakage": "PASS",
+    "H_no_machine_confidence": "PASS",
+    "I_no_recommendation": "PASS",
+    "J_no_automatic_gt": "PASS",
+    "K_no_p1_modification": "PASS",
+    "L_no_frozen_baseline_drift": "PASS",
+    "M_dedup_preserved": "PASS",
+    "N_multi_drawing": "PASS",
+    "O_append_only": "PASS",
+    "Q_zoom": "PASS",
+    "R_yes_no_uncertain": "PASS",
+    "S_text_context": "PASS",
+    "T_no_visual_bias": "PASS"
+  },
+  "cognitive_load_audit": {
+    "1_find_target": "NO",
+    "2_understand_bbox": "NO",
+    "3_understand_distance": "NO",
+    "4_understand_primitive": "NO",
+    "5_understand_fig_prefix": "NO",
+    "6_read_entire_page": "NO",
+    "7_see_text_drawing": "YES",
+    "8_complete_judgment": "YES",
+    "9_answer_suggesting": "NO",
+    "10_requires_explanation": "NO"
+  },
+  "ui_audit_summary": {
+    "pass": 19,
+    "fail": 0,
+    "total": 19
+  },
+  "cognitive_load_summary": {
+    "items_1_6_no": "6/6",
+    "items_7_8_yes": "2/2",
+    "items_9_10_no": "2/2",
+    "design_audit": "PASS",
+    "note": "Real cognitive burden requires Human Pilot data to confirm."
+  }
+}

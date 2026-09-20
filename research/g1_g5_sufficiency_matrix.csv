@@ -1,0 +1,7 @@
+Gap,Sufficient,Insufficient,Boundary,Indeterminate,Total
+G1,0,12,0,0,12
+G2,0,28,0,0,28
+G3,0,15,0,0,15
+G4,0,0,0,7,7
+G5,0,0,13,0,13
+L5_SUFFICIENT,65,0,0,9,74

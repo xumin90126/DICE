@@ -1,0 +1,6 @@
+datalab-to|marker|master|marker/builders/document.py|marker/builder_document.py
+datalab-to|marker|master|marker/converters/table.py|marker/convert_table.py
+datalab-to|marker|master|marker/converters/ocr.py|marker/convert_ocr.py
+datalab-to|marker|master|marker/builders/__init__.py|marker/builders_init.py
+datalab-to|marker|master|marker/models.py|marker/models2.py
+datalab-to|marker|master|marker/processors/__init__.py|marker/processors_init.py

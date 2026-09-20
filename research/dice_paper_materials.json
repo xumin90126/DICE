@@ -1,0 +1,117 @@
+{
+ "layer": "2 — Future Paper Material Library",
+ "purpose": "preserve process-level research evidence (failures, revisions, negatives, safety) for future papers/reports/thesis; strictly separated from engineering acceptance reports",
+ "separation_principle": "Engineering Fact / Research Interpretation / Potential Paper Claim distinguished; no over-claiming",
+
+ "type_A_research_questions": [
+  {"id": "A1", "question": "Is Evidence Quality a better optimization target than raw accuracy?", "status": "partially_answered", "paper_value": "MEDIUM"},
+  {"id": "A2", "question": "Can Geometry Evidence support slicing failure diagnosis?", "status": "answered", "paper_value": "HIGH"},
+  {"id": "A3", "question": "How should a Structural Object be defined?", "status": "answered", "paper_value": "HIGH"},
+  {"id": "A4", "question": "Where is the boundary between Evidence and Interpretation?", "status": "answered", "paper_value": "HIGH"},
+  {"id": "A5", "question": "Should Human Validation validate instances or reusable patterns?", "status": "answered", "paper_value": "HIGH"},
+  {"id": "A6", "question": "Can Consumer Integration solve evidence-not-reaching-downstream?", "status": "answered", "paper_value": "HIGH"},
+  {"id": "A7", "question": "How to avoid if/else patch accumulation?", "status": "answered", "paper_value": "MEDIUM"},
+  {"id": "A8", "question": "How to control error propagation via safety canary?", "status": "answered", "paper_value": "HIGH"}],
+
+ "type_B_failed_hypotheses": [
+  {"id": "PH02", "paper_value": "HIGH", "hypothesis": "frozen left_alignment_group geometry can directly serve as column-membership signal via whole-group equidistance predicate to fix AMB-135", "preregistration": "15 combos x 45 cases; A=1^B=0^C=0=PASS else REJECTED", "experiment": "15/15; A=0/1; 7/13 anchors firing", "falsification": "A=0 triggered REJECTED rule", "rejection_reason": "research object (whole group) structurally cannot bear column-membership semantics; page-wide != local column", "what_changed": "research object revision -> LSP; no M6/M7/M8; mechanism redesign", "evidence_level": "Experimentally-supported (rejected)"},
+  {"id": "C2_coverage", "paper_value": "HIGH", "hypothesis": "candidate-column-segment (member-level) improves positive coverage", "result": "positive GT-confirmed stayed=1, new=0; INSUFFICIENT", "what_changed": "no predicate tuning; corpus expansion + mechanism redesign (M-B)", "evidence_level": "Experimentally-supported"}],
+
+ "type_C_research_object_revision": [
+  {"stage": "PH-02", "object": "whole left_alignment_group", "why_invalid": "page-wide margin contamination; whole group != local column", "new_object": "candidate-column-segment", "solved": "localization", "unverified": "coverage insufficient"},
+  {"stage": "C2", "object": "candidate-column-segment", "why_invalid": "positive diversity=1; M5 self-contradictory", "new_object": "(pivot to M-B, not column-segment)", "solved": "-", "unverified": "-"},
+  {"stage": "M-B", "object": "Local Structural Partition (LSP)", "why_invalid": "(valid)", "new_object": "LSP + RSC + EIC-1", "solved": "local partition + semantic gate + reuse existing contract", "unverified": "L5 human validation not occurred; natural conflict cases=0"}],
+ "convergence_trajectory": "whole group (page-wide) -> column segment (local but coverage insufficient) -> LSP (local + structural + non-semantic, interpreted via EIC)",
+ "key_insight": "each revision changes the object's LAYER and semantic boundary, not adds predicates",
+
+ "type_D_negative_evidence": [
+  {"case": "VALUE_COLUMN (resnet p6 '21.59')", "observation": "aligned numeric column lag6 band2", "challenged": "'aligned numeric = row-index'", "result": "Level-2 isomorphic, role-blind", "rules_out": "L2 role distinction", "does_not_rule_out": "role needs L5"},
+  {"case": "AXIS_TICK", "observation": "single-column repeated numeric stack", "challenged": "'repeated numeric = table column'", "result": "sib=0 no second partition", "rules_out": "single-column=table-column"},
+  {"case": "CODE_LINE_NUMBER (LLaMA p19)", "observation": "continuous integer column", "challenged": "'integer sequence = row-index'", "result": "single column sib=0", "rules_out": "-", "does_not_rule_out": "L5 role distinction"},
+  {"case": "TOC (2212 p15)", "observation": "3 x-zone co-structure", "challenged": "'3-zone co-structure = table'", "result": "dot-leader x-center unstable (hardest confusable)", "rules_out": "-", "does_not_rule_out": "needs L5 negative set"},
+  {"case": "page-wide body margin", "observation": "n=15-24, y_ext 293-393pt", "challenged": "'alignment group = column'", "result": "pollutes every page", "rules_out": "whole-group=column", "does_not_rule_out": "localization fix"},
+  {"case": "caption pseudo-cell (med p20)", "observation": "band has 4 pseudo-cell fragments", "challenged": "'same-band multi-partition = table row'", "result": "caption indistinguishable at L2", "rules_out": "L2 caption/table distinction", "does_not_rule_out": "localization + canary"},
+  {"case": "lag=0 (AMB-313)", "observation": "no alignment group members", "challenged": "'all atoms partitionable'", "result": "partition unresolvable", "rules_out": "full atom partitionability", "does_not_rule_out": "honest ABSTAIN"},
+  {"case": "lag=1 (AMB-462)", "observation": "single member", "challenged": "'weak members partitionable'", "result": "weak", "rules_out": "-", "does_not_rule_out": "honest ABSTAIN"}],
+ "negative_evidence_paper_value": "HIGH (all)",
+
+ "type_E_safety_error_containment": [
+  {"mechanism": "AMB-135 FP repair", "case": "MERGE->KEEP", "why_abstain_correct": "via contract chain, not new rule; evidence pre-existed"},
+  {"mechanism": "AMB-414/422 caption canary", "case": "ABSTAIN preserved", "why_abstain_correct": "geometry != table semantics; localization protection; flip=SAFETY_FAILURE"},
+  {"mechanism": "honest ABSTAIN (313/462)", "case": "partition unresolvable", "why_abstain_correct": "coverage != forced decision; refusal > guessing"},
+  {"mechanism": "conflict contract", "case": "EVIDENCE_CONFLICT", "why_abstain_correct": "no winner; observable + provenance"},
+  {"mechanism": "frozen decision function", "case": "hash unchanged", "why_abstain_correct": "architecture change != decision policy change"},
+  {"mechanism": "OFF isolation", "case": "byte-identical", "why_abstain_correct": "off = baseline revertible"},
+  {"mechanism": "provenance 1.0", "case": "11/11 quadruple", "why_abstain_correct": "traceable"},
+  {"mechanism": "deterministic replay", "case": "21/21 double-run", "why_abstain_correct": "reproducible"},
+  {"mechanism": "frozen baseline drift 0", "case": "anchors/GT/TLD unchanged", "why_abstain_correct": "freeze discipline"}],
+ "core_idea": "errors do not propagate downstream; ABSTAIN is a legitimate Evidence Quality result, not failure",
+
+ "type_F_engineering_decisions": [
+  {"decision": "do not modify frozen harness", "alternatives": "edit harness", "why_rejected": "breaks freeze", "why_selected": "importlib import unmodified", "evidence": "hash verified", "risk": "low", "status": "executed"},
+  {"decision": "do not modify decision function", "alternatives": "add if/else", "why_rejected": "decision policy change (F2)", "why_selected": "EIC reuses existing contract", "evidence": "behavioral 10/10", "risk": "low", "status": "executed"},
+  {"decision": "do not modify TLD", "alternatives": "edit TLD", "why_rejected": "breaks existing 8/8 channel", "why_selected": "second producer coexists", "evidence": "agree 3 cases", "risk": "low", "status": "executed"},
+  {"decision": "do not modify Atomic Observation", "alternatives": "add drawings", "why_rejected": "NEW_OBSERVATION request", "why_selected": "Type C doesn't need", "evidence": "EXPRESSIBLE", "risk": "low", "status": "executed"},
+  {"decision": "no direct LSP->different_cell", "alternatives": "direct edge", "why_rejected": "semantic leakage (F1)", "why_selected": "via EIC-1 gate", "evidence": "code-level proof", "risk": "low", "status": "executed"},
+  {"decision": "introduce EIC-1", "alternatives": "no gate", "why_rejected": "semantic upgrade uncontrolled", "why_selected": "sole interpretation authority", "evidence": "Phase 2.1 finding", "risk": "medium", "status": "executed"},
+  {"decision": "conflict no winner", "alternatives": "trust TLD/Geometry", "why_rejected": "hidden arbitration", "why_selected": "EVIDENCE_CONFLICT", "evidence": "-", "risk": "medium", "status": "executed"},
+  {"decision": "Human Validation at pattern level", "alternatives": "instance level", "why_rejected": "annotation tool degradation", "why_selected": "reusable abstraction", "evidence": "Phase 2.2", "risk": "medium", "status": "design"},
+  {"decision": "localization in prerequisite", "alternatives": "none", "why_rejected": "canary would fire", "why_selected": "exclude page-wide groups", "evidence": "LOCALIZATION_GAP", "risk": "low", "status": "executed"},
+  {"decision": "no M6/M7/M8", "alternatives": "stack predicates", "why_rejected": "patch accumulation", "why_selected": "failure attribution / contract revision", "evidence": "PH-02 lesson", "risk": "low", "status": "precommit"},
+  {"decision": "implementation isolated+flag-gated+non-production", "alternatives": "direct production", "why_rejected": "unauthorized/regression", "why_selected": "OFF revertible", "evidence": "S9", "risk": "low", "status": "executed"}],
+
+ "type_G_quantitative_evidence": [
+  {"quantity": "adjudicated cases", "value": 45, "source": "machine eval", "level": "Observed"},
+  {"quantity": "TCC cases", "value": "26 (3 docs/10 pages)", "source": "independence audit", "level": "Observed"},
+  {"quantity": "545-universe", "value": 545, "source": "C2 coverage audit", "level": "Observed"},
+  {"quantity": "corpus discovery clusters", "value": "709 / 10 docs", "source": "corpus_discovery", "level": "Observed"},
+  {"quantity": "numeric x0-clusters", "value": 138, "source": "C2", "level": "Observed"},
+  {"quantity": "negative clusters", "value": 137, "source": "C2", "level": "Observed"},
+  {"quantity": "corpus acquisition", "value": "4 docs / 80 pages / 131 clusters", "source": "corpus_acquisition", "level": "Observed"},
+  {"quantity": "positive GT-confirmed", "value": "1 (throughout)", "source": "all phases", "level": "Observed"},
+  {"quantity": "PH-02 param combos", "value": "15/15 (A=0/1)", "source": "ph02_results", "level": "Experimentally-supported"},
+  {"quantity": "M-B replay matrix", "value": "21 decision + 4 descriptive", "source": "phase3 design", "level": "Design"},
+  {"quantity": "S1-S10", "value": "ALL PASS", "source": "phase3.2", "level": "Experimentally-supported"},
+  {"quantity": "F1-F10", "value": 0, "source": "phase3.2", "level": "Experimentally-supported"},
+  {"quantity": "DIRECT recovery", "value": "6/8", "source": "phase3.2", "level": "Experimentally-supported"},
+  {"quantity": "honest ABSTAIN", "value": "2/8 (313/462)", "source": "phase3.2", "level": "Experimentally-supported"},
+  {"quantity": "collateral", "value": 0, "source": "phase3.2", "level": "Experimentally-supported"},
+  {"quantity": "unsafe flip", "value": 0, "source": "phase3.2", "level": "Experimentally-supported"},
+  {"quantity": "provenance completeness", "value": "1.0 (11/11)", "source": "phase3.2", "level": "Experimentally-supported"},
+  {"quantity": "determinism", "value": "21/21", "source": "phase3.2", "level": "Experimentally-supported"},
+  {"quantity": "frozen drift", "value": 0, "source": "all phases", "level": "Observed"},
+  {"quantity": "AMB-135 pair-band density", "value": 30, "source": "phase3.1", "level": "Experimentally-supported"},
+  {"quantity": "canary pair-band density", "value": "0 (100/150/200pt)", "source": "phase3.1", "level": "Experimentally-supported"},
+  {"quantity": "localization robustness", "value": "[100,200]pt", "source": "phase3.1", "level": "Experimentally-supported"},
+  {"quantity": "7/13 anchors firing (PH-02)", "value": "7/13", "source": "ph02_report", "level": "Experimentally-supported"}],
+ "discrepancy_log_ref": "tmp/dice_evidence_discrepancy_log.md",
+
+ "type_H_case_studies": [
+  {"id": "AMB-135", "paper_value": "HIGH", "arc": "initial FP (IS-01^IS-02 MERGE) -> PH-02 failure (15/15 A=0) -> research-object diagnosis (whole group -> LSP) -> M-B recovery (Geometry->LSP->RSC->EIC-1->contract->KEEP, density=30) -> final KEEP_SEPARATE GT-consistent"},
+  {"id": "AMB-414/422", "paper_value": "HIGH", "arc": "caption safety canary; band has pseudo-cell fragments; geometry != table semantics; localization protection (density=0); ABSTAIN preserved; flip=SAFETY_FAILURE"},
+  {"id": "AMB-313/462", "paper_value": "HIGH", "arc": "insufficient structural separation (lag=0/1); honest ABSTAIN; coverage != forced decision; refusal > guessing"},
+  {"id": "AMB-262", "paper_value": "MEDIUM-HIGH", "arc": "early classification error (different_band); replay correction (actual pair same-band co_density=41); GT-consistent; discrepancy reconciliation logged"},
+  {"id": "VALUE_COLUMN/CODE_LINE/TOC", "paper_value": "HIGH", "arc": "negative structural lookalikes; geometric similarity does not imply semantic equivalence; Level-2 role-blind; role semantics at L5 pattern level with negative sets"}],
+
+ "type_I_research_insights": [
+  {"id": "I1", "insight": "Geometry Fact != Structural Object", "evidence_level": "Experimentally-supported (PH-02)", "paper_value": "HIGH"},
+  {"id": "I2", "insight": "Structural Evidence should not auto-acquire Semantic Authority", "evidence_level": "Mechanism-supported (Phase 2.1/2.2)", "paper_value": "HIGH"},
+  {"id": "I3", "insight": "Evidence Integration Gap vs Observation Gap must be distinguished", "evidence_level": "Experimentally-supported (M-B audit)", "paper_value": "HIGH"},
+  {"id": "I4", "insight": "Human Validation should act on reusable pattern, not instance annotation", "evidence_level": "Hypothesis (design, L5 not occurred)", "paper_value": "HIGH"},
+  {"id": "I5", "insight": "Honest ABSTAIN is a legitimate Evidence Quality / Error Containment result", "evidence_level": "Experimentally-supported (313/462)", "paper_value": "HIGH"},
+  {"id": "I6", "insight": "Safety canary as semantic-boundary regression gate", "evidence_level": "Experimentally-supported (414/422)", "paper_value": "HIGH"},
+  {"id": "I7", "insight": "Frozen baseline + isolated replay separates architecture change from decision-policy change", "evidence_level": "Experimentally-supported (S6/S9)", "paper_value": "HIGH"},
+  {"id": "I8", "insight": "Failed hypotheses are themselves research evidence, not to be deleted", "evidence_level": "Observed (PH-02/C2 preserved)", "paper_value": "HIGH"},
+  {"id": "I9", "insight": "When evidence already exists, fix consumer integration first, not expand observation layer", "evidence_level": "Experimentally-supported (NEW_OBSERVATION=NONE)", "paper_value": "HIGH"},
+  {"id": "I10", "insight": "When positive diversity insufficient, stop tuning + expand corpus / revise object, not stack predicates", "evidence_level": "Experimentally-supported (C2)", "paper_value": "HIGH"}],
+
+ "claim_separation_examples": {
+  "engineering_fact": "AMB-135 MERGE->KEEP_SEPARATE (Phase 3.2 measured)",
+  "research_interpretation": "existing frozen geometry evidence was sufficient to express the failure mechanism through a governed integration layer (EIC-1) without modifying the decision policy",
+  "potential_paper_claim": "在当前冻结测试框架中，该 minimal Consumer Integration 机制得到验证",
+  "forbidden_claims": ["DICE 解决了 table slicing", "实现了通用 table detection", "跨文档泛化已被证明"]},
+
+ "value_ranking_principle": "HIGH includes failed hypotheses, research-object corrections, localization gap, semantic leakage, EIC-1 boundary, safety canary, honest ABSTAIN, frozen decision invariant, isolated replay, evidence-integration-vs-observation-gap, negative examples, discrepancy correction; failure processes NOT marked LOW just because final result succeeded",
+
+ "governance": {"experiments_run": 0, "parameters_added": 0, "predicates_added": 0, "gt_modified": false, "tld_modified": false, "atomic_observation_modified": false, "is11_decision_modified": false, "production_code_modified": false, "frozen_baseline": "INTACT", "stop": true}
+}

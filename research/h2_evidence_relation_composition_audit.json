@@ -1,0 +1,927 @@
+{
+  "case_matrix": [
+    {
+      "case_id": "IS11-AMB-052",
+      "text_a": "0.46M",
+      "text_b": "7.51",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_resnet",
+      "page": 7,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          437.6,
+          183.9,
+          462.2,
+          193.3
+        ],
+        "bbox_b": [
+          477.6,
+          183.9,
+          493.9,
+          193.3
+        ],
+        "dy": 0.0,
+        "h_gap": 15.4,
+        "same_style": true,
+        "line_obs_count": 5
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-130",
+      "text_a": "Resolution",
+      "text_b": "#Channels",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 5,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          428.1,
+          108.3,
+          460.8,
+          115.9
+        ],
+        "bbox_b": [
+          469.8,
+          108.3,
+          501.7,
+          115.9
+        ],
+        "dy": 0.0,
+        "h_gap": 9.1,
+        "same_style": true,
+        "line_obs_count": 5
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-163",
+      "text_a": "93.9%",
+      "text_b": "34M",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 6,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          266.2,
+          198.7,
+          287.5,
+          207.0
+        ],
+        "bbox_b": [
+          313.3,
+          198.7,
+          328.9,
+          207.0
+        ],
+        "dy": 0.0,
+        "h_gap": 25.8,
+        "same_style": true,
+        "line_obs_count": 11
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-168",
+      "text_a": "3.0x",
+      "text_b": "5.7B",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 6,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          373.0,
+          208.6,
+          387.5,
+          216.9
+        ],
+        "bbox_b": [
+          432.7,
+          208.6,
+          448.6,
+          216.9
+        ],
+        "dy": 0.0,
+        "h_gap": 45.2,
+        "same_style": true,
+        "line_obs_count": 11
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-198",
+      "text_a": "82.9%",
+      "text_b": "96.2%",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 6,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          219.2,
+          340.1,
+          240.6,
+          348.4
+        ],
+        "bbox_b": [
+          266.2,
+          340.1,
+          287.5,
+          348.4
+        ],
+        "dy": 0.0,
+        "h_gap": 25.6,
+        "same_style": true,
+        "line_obs_count": 11
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-205",
+      "text_a": "96.5%",
+      "text_b": "155M",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 6,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          266.2,
+          364.1,
+          287.5,
+          372.4
+        ],
+        "bbox_b": [
+          311.2,
+          364.1,
+          331.0,
+          372.4
+        ],
+        "dy": 0.0,
+        "h_gap": 23.7,
+        "same_style": true,
+        "line_obs_count": 11
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-218",
+      "text_a": "1.2B",
+      "text_b": "76.8%",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 6,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          216.3,
+          533.6,
+          231.2,
+          541.3
+        ],
+        "bbox_b": [
+          251.9,
+          533.6,
+          272.0,
+          541.3
+        ],
+        "dy": 0.0,
+        "h_gap": 20.8,
+        "same_style": true,
+        "line_obs_count": 6
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-257",
+      "text_a": "Gpipe",
+      "text_b": "91.3%",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          338.7,
+          135.9,
+          355.2,
+          142.7
+        ],
+        "bbox_b": [
+          365.3,
+          135.9,
+          382.8,
+          142.7
+        ],
+        "dy": 0.0,
+        "h_gap": 10.1,
+        "same_style": true,
+        "line_obs_count": 13
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-261",
+      "text_a": "Inception-v4",
+      "text_b": "81.8%",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          116.4,
+          144.1,
+          151.0,
+          150.8
+        ],
+        "bbox_b": [
+          159.1,
+          144.1,
+          176.6,
+          150.8
+        ],
+        "dy": 0.0,
+        "h_gap": 8.1,
+        "same_style": true,
+        "line_obs_count": 13
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-262",
+      "text_a": "41M",
+      "text_b": "EfﬁcientNet-B5",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          188.6,
+          144.1,
+          201.4,
+          150.8
+        ],
+        "bbox_b": [
+          213.4,
+          144.1,
+          256.5,
+          150.8
+        ],
+        "dy": 0.0,
+        "h_gap": 12.0,
+        "same_style": true,
+        "line_obs_count": 13
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-267",
+      "text_a": "83.6%",
+      "text_b": "556M",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          365.3,
+          144.1,
+          382.8,
+          150.8
+        ],
+        "bbox_b": [
+          393.7,
+          144.1,
+          409.9,
+          150.8
+        ],
+        "dy": 0.0,
+        "h_gap": 10.9,
+        "same_style": true,
+        "line_obs_count": 13
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-279",
+      "text_a": "EfﬁcientNet-B5",
+      "text_b": "98.5%",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          213.4,
+          160.4,
+          256.5,
+          167.2
+        ],
+        "bbox_b": [
+          264.6,
+          160.4,
+          282.1,
+          167.2
+        ],
+        "dy": 0.0,
+        "h_gap": 8.1,
+        "same_style": true,
+        "line_obs_count": 13
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-313",
+      "text_a": "Test Size",
+      "text_b": "#Classes",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 8,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          224.9,
+          271.8,
+          250.4,
+          278.8
+        ],
+        "bbox_b": [
+          258.9,
+          271.8,
+          283.5,
+          278.8
+        ],
+        "dy": 0.0,
+        "h_gap": 8.4,
+        "same_style": true,
+        "line_obs_count": 4
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-318",
+      "text_a": ")",
+      "text_b": "47,386",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 8,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          157.2,
+          301.0,
+          159.5,
+          308.0
+        ],
+        "bbox_b": [
+          192.4,
+          301.0,
+          211.7,
+          308.0
+        ],
+        "dy": 0.0,
+        "h_gap": 32.9,
+        "same_style": true,
+        "line_obs_count": 9
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-380",
+      "text_a": "RBF",
+      "text_b": "Matérn",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_med_001",
+      "page": 13,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_FIGURE_DIFFERENT_ITEMS",
+      "existing_evidence": {
+        "bbox_a": [
+          199.4,
+          107.2,
+          218.0,
+          117.0
+        ],
+        "bbox_b": [
+          248.6,
+          107.3,
+          276.9,
+          117.2
+        ],
+        "dy": 0.1,
+        "h_gap": 30.6,
+        "same_style": true,
+        "line_obs_count": 7
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-457",
+      "text_a": "Models",
+      "text_b": "Size",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          131.0,
+          216.1,
+          162.0,
+          226.1
+        ],
+        "bbox_b": [
+          202.5,
+          216.1,
+          219.6,
+          226.1
+        ],
+        "dy": 0.0,
+        "h_gap": 40.4,
+        "same_style": true,
+        "line_obs_count": 10
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    },
+    {
+      "case_id": "IS11-AMB-462",
+      "text_a": "WGe",
+      "text_b": "Avg.",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "human_decision": "KEEP_SEPARATE",
+      "minimum_relation": "SAME_ROW_DIFFERENT_COLUMN",
+      "existing_evidence": {
+        "bbox_a": [
+          428.4,
+          216.1,
+          450.5,
+          226.1
+        ],
+        "bbox_b": [
+          462.5,
+          216.1,
+          481.0,
+          226.1
+        ],
+        "dy": 0.0,
+        "h_gap": 12.0,
+        "same_style": true,
+        "line_obs_count": 10
+      },
+      "can_compose_deterministically": true,
+      "compose_reason": "dy≈0 + h_gap>0 + line_obs_count≥3 → same row with multiple items",
+      "relation_status": "R2_RELATION_NOT_COMPUTED",
+      "authority_level": "L2_STRUCTURAL",
+      "group": "B"
+    }
+  ],
+  "minimum_relation_matrix": {
+    "SAME_ROW_DIFFERENT_COLUMN": 16,
+    "SAME_FIGURE_DIFFERENT_ITEMS": 1,
+    "composition_logic": "same_y_band(A,B) == True AND h_gap(A,B) > 0 → SAME_ROW_DIFFERENT_COLUMN",
+    "evidence_source": "P2 frozen pairwise (same_y_band, h_gap) or bbox direct computation",
+    "all_composable": true,
+    "composable_count": 17
+  },
+  "tld_status": {
+    "TLD_RAN_NO_TABLE_DETECTED": 15,
+    "TLD_DETECTED_WRONG_TABLE_OR_PARTIAL": 2,
+    "TLD_DETECTED_CORRECT_TABLE_WITH_CELLS": 0,
+    "tld_ran_on_all_cases": true,
+    "tld_modified": false,
+    "details": [
+      {
+        "case_id": "IS11-AMB-052",
+        "tables_detected": 0,
+        "a_in_table": null,
+        "b_in_table": null,
+        "tld_status": "TLD_RAN_NO_TABLE_DETECTED",
+        "tld_reason": "no tables detected"
+      },
+      {
+        "case_id": "IS11-AMB-130",
+        "tables_detected": 0,
+        "a_in_table": null,
+        "b_in_table": null,
+        "tld_status": "TLD_RAN_NO_TABLE_DETECTED",
+        "tld_reason": "no tables detected"
+      },
+      {
+        "case_id": "IS11-AMB-163",
+        "tables_detected": 0,
+        "a_in_table": null,
+        "b_in_table": null,
+        "tld_status": "TLD_RAN_NO_TABLE_DETECTED",
+        "tld_reason": "no tables detected"
+      },
+      {
+        "case_id": "IS11-AMB-168",
+        "tables_detected": 0,
+        "a_in_table": null,
+        "b_in_table": null,
+        "tld_status": "TLD_RAN_NO_TABLE_DETECTED",
+        "tld_reason": "no tables detected"
+      },
+      {
+        "case_id": "IS11-AMB-198",
+        "tables_detected": 0,
+        "a_in_table": null,
+        "b_in_table": null,
+        "tld_status": "TLD_RAN_NO_TABLE_DETECTED",
+        "tld_reason": "no tables detected"
+      },
+      {
+        "case_id": "IS11-AMB-205",
+        "tables_detected": 0,
+        "a_in_table": null,
+        "b_in_table": null,
+        "tld_status": "TLD_RAN_NO_TABLE_DETECTED",
+        "tld_reason": "no tables detected"
+      },
+      {
+        "case_id": "IS11-AMB-218",
+        "tables_detected": 0,
+        "a_in_table": null,
+        "b_in_table": null,
+        "tld_status": "TLD_RAN_NO_TABLE_DETECTED",
+        "tld_reason": "no tables detected"
+      },
+      {
+        "case_id": "IS11-AMB-257",
+        "tables_detected": 0,
+        "a_in_table": null,
+        "b_in_table": null,
+        "tld_status": "TLD_RAN_NO_TABLE_DETECTED",
+        "tld_reason": "no tables detected"
+      },
+      {
+        "case_id": "IS11-AMB-261",
+        "tables_detected": 0,
+        "a_in_table": null,
+        "b_in_table": null,
+        "tld_status": "TLD_RAN_NO_TABLE_DETECTED",
+        "tld_reason": "no tables detected"
+      },
+      {
+        "case_id": "IS11-AMB-262",
+        "tables_detected": 0,
+        "a_in_table": null,
+        "b_in_table": null,
+        "tld_status": "TLD_RAN_NO_TABLE_DETECTED",
+        "tld_reason": "no tables detected"
+      },
+      {
+        "case_id": "IS11-AMB-267",
+        "tables_detected": 0,
+        "a_in_table": null,
+        "b_in_table": null,
+        "tld_status": "TLD_RAN_NO_TABLE_DETECTED",
+        "tld_reason": "no tables detected"
+      },
+      {
+        "case_id": "IS11-AMB-279",
+        "tables_detected": 0,
+        "a_in_table": null,
+        "b_in_table": null,
+        "tld_status": "TLD_RAN_NO_TABLE_DETECTED",
+        "tld_reason": "no tables detected"
+      },
+      {
+        "case_id": "IS11-AMB-313",
+        "tables_detected": 0,
+        "a_in_table": null,
+        "b_in_table": null,
+        "tld_status": "TLD_RAN_NO_TABLE_DETECTED",
+        "tld_reason": "no tables detected"
+      },
+      {
+        "case_id": "IS11-AMB-318",
+        "tables_detected": 0,
+        "a_in_table": null,
+        "b_in_table": null,
+        "tld_status": "TLD_RAN_NO_TABLE_DETECTED",
+        "tld_reason": "no tables detected"
+      },
+      {
+        "case_id": "IS11-AMB-380",
+        "tables_detected": 0,
+        "a_in_table": null,
+        "b_in_table": null,
+        "tld_status": "TLD_RAN_NO_TABLE_DETECTED",
+        "tld_reason": "no tables detected"
+      },
+      {
+        "case_id": "IS11-AMB-457",
+        "tables_detected": 1,
+        "a_in_table": false,
+        "b_in_table": false,
+        "tld_status": "TLD_DETECTED_WRONG_TABLE_OR_PARTIAL",
+        "tld_reason": ""
+      },
+      {
+        "case_id": "IS11-AMB-462",
+        "tables_detected": 1,
+        "a_in_table": false,
+        "b_in_table": false,
+        "tld_status": "TLD_DETECTED_WRONG_TABLE_OR_PARTIAL",
+        "tld_reason": ""
+      }
+    ]
+  },
+  "mb_overlap": {
+    "MB_PARTIALLY_COVERS": 5,
+    "MB_NOT_COVERED": 12,
+    "mb_cases": [
+      "IS11-AMB-130",
+      "IS11-AMB-262",
+      "IS11-AMB-313",
+      "IS11-AMB-457",
+      "IS11-AMB-462"
+    ],
+    "mb_finding": "M-B identified Consumer/Integration Gap (IS-11 uses TLD not P2). Same gap mechanism as H2.",
+    "new_mechanism_proposed": false
+  },
+  "ph02_overlap": {
+    "PH02_RELATED_BUT_DIFFERENT": 17,
+    "PH02_SAME_PROBLEM": 0,
+    "PH02_NOT_RELEVANT": 0,
+    "ph02_status": "REJECTED",
+    "ph02_failure": "Whole-group-as-research-object error (vertical column membership)",
+    "h2_difference": "Pairwise relation (horizontal row membership), different axis, different failure mode",
+    "ph02_logic_reintroduced": false
+  },
+  "c2_overlap": {
+    "c2_status": "PAUSED/BLOCKED",
+    "c2_relevance": "NOT_RELEVANT — C2 is DICE 1.0 Semantic Boundary Constraints, not DICE 2.0 IS-11 table column relation"
+  },
+  "relation_status_distribution": {
+    "R1_RELATION_ALREADY_COMPUTED_BUT_DISCARDED": 0,
+    "R2_RELATION_NOT_COMPUTED": 17,
+    "R3_EVIDENCE_INSUFFICIENT_FOR_RELATION": 0,
+    "R4_SEMANTIC_INTERPRETATION_REQUIRED": 0,
+    "R5_UNKNOWN": 0,
+    "terminology_correction": "Previous audit said RELATION_DISCARDED (R1). Correct: R2_RELATION_NOT_COMPUTED. TLD never computed table structure, so nothing was discarded."
+  },
+  "evidence_status_distribution": {
+    "FULLY_AVAILABLE": 0,
+    "PARTIALLY_AVAILABLE": 17,
+    "NOT_AVAILABLE": 0,
+    "details": {
+      "bbox_a": {
+        "available": 17,
+        "source": "candidate universe"
+      },
+      "bbox_b": {
+        "available": 17,
+        "source": "candidate universe"
+      },
+      "text_a": {
+        "available": 17,
+        "source": "candidate universe"
+      },
+      "text_b": {
+        "available": 17,
+        "source": "candidate universe"
+      },
+      "dy": {
+        "available": 17,
+        "source": "candidate universe (10 stored) + bbox computation (7)"
+      },
+      "h_gap": {
+        "available": 17,
+        "source": "candidate universe (10 stored) + bbox computation (7)"
+      },
+      "same_style": {
+        "available": 10,
+        "source": "candidate universe"
+      },
+      "line_obs_count": {
+        "available": 10,
+        "source": "candidate universe"
+      },
+      "p2_same_y_band": {
+        "available": 17,
+        "source": "P2 frozen pairwise (per M-B audit), computable from bbox"
+      },
+      "tld_is_in_table": {
+        "available": 0,
+        "source": "TLD did not detect table"
+      }
+    }
+  },
+  "semantic_gap_status": {
+    "cases_requiring_semantic": 0,
+    "verdict": "NOT_SUPPORTED — 0/17 require semantic interpretation"
+  },
+  "llm_feasibility": {
+    "cases_needing_llm": 0,
+    "verdict": "NOT_NECESSARY — 17/17 can be deterministically composed from existing evidence"
+  },
+  "architecture_need": {
+    "new_observation_needed": false,
+    "new_evidence_type_needed": false,
+    "new_relation_object_needed": false,
+    "new_architecture_layer_needed": false,
+    "new_module_needed": false,
+    "new_engine_needed": false,
+    "relation_lifetime": "DERIVED_EPHEMERAL_RELATION — no persistent storage, no new schema, no new object",
+    "actual_gap": "CONSUMER/INTEGRATION GAP — IS-11 uses TLD not P2 (identified by M-B audit)",
+    "gap_type": "Integration issue, not Architecture issue"
+  },
+  "group_classification": {
+    "A_existing_evidence_existing_relation": 0,
+    "B_existing_evidence_deterministic_composition": 17,
+    "C_new_evidence_required": 0,
+    "D_semantic_interpretation_required": 0,
+    "E_unknown": 0
+  },
+  "research_questions": {
+    "RQ1_structural_organization": {
+      "answer": "YES (SUPPORTED)",
+      "evidence": "17/17 L2_STRUCTURAL, 0/17 discourse"
+    },
+    "RQ2_group_distribution": {
+      "answer": "B=17, A=0, C=0, D=0, E=0",
+      "evidence": "All 17 have existing evidence + deterministic composition"
+    },
+    "RQ3_minimum_relation": {
+      "answer": "SAME_ROW_DIFFERENT_COLUMN (16/17) + SAME_FIGURE_DIFFERENT_ITEMS (1/17)",
+      "evidence": "All pairwise, L2_STRUCTURAL"
+    },
+    "RQ4_deterministic_composition": {
+      "answer": "YES (17/17)",
+      "evidence": "same_y_band + h_gap → SAME_ROW_DIFFERENT_COLUMN, from P2 frozen pairwise or bbox"
+    },
+    "RQ5_mb_coverage": {
+      "answer": "PARTIALLY (5/17 covered, 12/17 not)",
+      "evidence": "M-B found same Consumer Gap but focused on P2 expressability"
+    },
+    "RQ6_ph02_c2_overlap": {
+      "answer": "PH-02 RELATED_BUT_DIFFERENT (17/17), C2 NOT_RELEVANT",
+      "evidence": "PH-02=vertical column (REJECTED), H2=horizontal row (pairwise); C2=DICE 1.0"
+    },
+    "RQ7_new_observation": {
+      "answer": "NO (0/17)",
+      "evidence": "bbox + text + P2 same_y_band all exist"
+    },
+    "RQ8_new_architecture_layer": {
+      "answer": "NO",
+      "evidence": "Consumer/Integration Gap, not Architecture Gap"
+    },
+    "RQ9_llm": {
+      "answer": "NO (0/17)",
+      "evidence": "17/17 deterministic composition, 0/17 semantic"
+    },
+    "RQ10_minimal_next_step": {
+      "answer": "STOP",
+      "reason": "Audit complete. 17/17 confirmed Group B. No new architecture/observation/LLM needed."
+    }
+  },
+  "final_recommendation": {
+    "verdict": "GROUP_B = 17/17 (100%)",
+    "gap_type": "CONSUMER/INTEGRATION GAP (IS-11 uses TLD not P2)",
+    "relation_status": "R2_RELATION_NOT_COMPUTED (not R1_RELATION_DISCARDED)",
+    "terminology_correction": "Previous RELATION_DISCARDED was wrong → R2_RELATION_NOT_COMPUTED",
+    "architecture_layer_needed": false,
+    "llm_needed": false,
+    "new_observation_needed": false,
+    "next_step": "STOP",
+    "forbidden": [
+      "Evidence Organization Engine",
+      "Relation Engine",
+      "Document Understanding Layer",
+      "Discourse Engine",
+      "LLM",
+      "New Architecture Layer"
+    ]
+  },
+  "limitations": [
+    "17 H2 cases from 4 documents only",
+    "TLD coverage 41% — H2 concentrated on undetected pages",
+    "AMB-380 figure pattern only 1 case",
+    "Deterministic composition not runtime-verified (READ-ONLY)",
+    "P2 same_y_band not directly stored in candidate universe but computable from bbox",
+    "Consumer/Integration fix not designed (audit only)",
+    "No future case test (L4-L7 not reached)",
+    "TLD not modified — only recorded detection failure"
+  ],
+  "governance": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "ATOMIC_OBSERVATION_MODIFICATION": false,
+    "M-B_MODIFICATION": false,
+    "PH02_MODIFICATION": false,
+    "C2_MODIFICATION": false,
+    "AGGREGATION_CHANGE": false,
+    "COMPRESSION_CHANGE": false,
+    "EVIDENCE_CUE_CHANGE": false,
+    "SIGNAL_MODIFICATION": false,
+    "UI_MODIFICATION": false,
+    "NEW_OBJECT_IMPLEMENTATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "LLM": false,
+    "ML_TRAINING": false,
+    "RUNTIME_CHANGE": false,
+    "CAPABILITY_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "FROZEN_EXPERIMENT": "INTACT",
+    "FORMAL_EXPERIMENT": "NOT_STARTED",
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  }
+}

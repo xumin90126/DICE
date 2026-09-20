@@ -1,0 +1,498 @@
+{
+  "manifest_type": "IS-11 New Independent Corpus Candidate Manifest",
+  "manifest_version": "1.0",
+  "creation_timestamp": "2026-09-09T22:51:50",
+  "phase": "NEW INDEPENDENT CORPUS ACQUISITION",
+  "phase_constraint": "CORPUS ACQUISITION ONLY — no IS-11 computation, no P1-P6 modification, no candidate generation",
+  "acquisition_method": "arxiv.org PDF download (public, open access)",
+  "included_pdfs": [
+    {
+      "document_id": "resnet_001",
+      "filename": "resnet_001.pdf",
+      "title": "Deep Residual Learning for Image Recognition Kaiming He Xiangyu Zhang Shaoqing Ren Jian Sun Microsoft Research {kahe, v-",
+      "source": "arxiv",
+      "url": "https://arxiv.org/pdf/1512.03385",
+      "doi": "10.48550/arXiv.1512.03385",
+      "arxiv_id": "1512.03385",
+      "download_timestamp": "2026-09-09T22:15:00Z",
+      "sha256": "1e0651b6810ecba34a3dbc5b5b0209226f889004607c1f203540a48d64e5a93a",
+      "size_bytes": 819383,
+      "page_count": 12,
+      "table_count": 5,
+      "table_pages": [
+        {
+          "page": 1,
+          "data_rows": 3
+        },
+        {
+          "page": 4,
+          "data_rows": 36
+        },
+        {
+          "page": 5,
+          "data_rows": 7
+        },
+        {
+          "page": 6,
+          "data_rows": 3
+        },
+        {
+          "page": 8,
+          "data_rows": 6
+        }
+      ],
+      "total_data_rows": 55,
+      "estimated_table_cell_candidates": 110,
+      "estimate_note": "ESTIMATE ONLY — actual candidates determined by frozen P1-P6 pipeline processing",
+      "document_type": "computer_vision",
+      "field": "computer_science",
+      "independence_status": "INDEPENDENT",
+      "contamination_status": "ZERO_CONTAMINATION",
+      "contamination_reason": "Zero references in any P7 artifact (verified by grep across tmp/perception/p7/, perception/, chunker/)",
+      "inclusion_status": "INCLUDED",
+      "table_content_samples": {
+        "1": [
+          {
+            "y": 225,
+            "cells": [
+              "Abstract",
+              "20",
+              "",
+              "20"
+            ]
+          },
+          {
+            "y": 240,
+            "cells": [
+              "test error (%)",
+              "56-layer"
+            ]
+          }
+        ],
+        "4": [
+          {
+            "y": 78,
+            "cells": [
+              "VGG-19 34-layer plain",
+              "image 34-layer residual"
+            ]
+          },
+          {
+            "y": 156,
+            "cells": [
+              "3x3 conv, 128",
+              "7x7 conv, 64, /2",
+              "7x7 conv, 64, /2"
+            ]
+          }
+        ],
+        "5": [
+          {
+            "y": 102,
+            "cells": [
+              "conv2 x 56×56",
+              "\u0015 ×2",
+              "\u0014 3×3, 64 3×3, 64",
+              "\u0015 ×3"
+            ]
+          },
+          {
+            "y": 135,
+            "cells": [
+              "conv3 x 28×28",
+              "×4",
+              "×4",
+              "×8"
+            ]
+          }
+        ],
+        "6": [
+          {
+            "y": 87,
+            "cells": [
+              "VGG-16 [41] 28.07 9.33",
+              "1x1, 64"
+            ]
+          },
+          {
+            "y": 99,
+            "cells": [
+              "GoogLeNet [44] - 9.15",
+              "relu"
+            ]
+          }
+        ],
+        "8": [
+          {
+            "y": 75,
+            "cells": [
+              "ResNet-20 ResNet-32 ResNet-4",
+              "residual-110 residual-1202"
+            ]
+          },
+          {
+            "y": 117,
+            "cells": [
+              "10",
+              "10",
+              "20-layer",
+              "10"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "document_id": "efficientnet_001",
+      "filename": "efficientnet_001.pdf",
+      "title": "EfﬁcientNet: Rethinking Model Scaling for Convolutional Neural Networks Mingxing Tan 1 Quoc V. Le 1 Abstract Convolution",
+      "source": "arxiv",
+      "url": "https://arxiv.org/pdf/1905.11946",
+      "doi": "10.48550/arXiv.1905.11946",
+      "arxiv_id": "1905.11946",
+      "download_timestamp": "2026-09-09T22:15:00Z",
+      "sha256": "af6b1bd620f81bfaea81edf8227484588e1fcc2427d6b5020fa17454d7566c70",
+      "size_bytes": 933600,
+      "page_count": 11,
+      "table_count": 6,
+      "table_pages": [
+        {
+          "page": 1,
+          "data_rows": 5
+        },
+        {
+          "page": 3,
+          "data_rows": 4
+        },
+        {
+          "page": 4,
+          "data_rows": 3
+        },
+        {
+          "page": 6,
+          "data_rows": 5
+        },
+        {
+          "page": 7,
+          "data_rows": 5
+        },
+        {
+          "page": 10,
+          "data_rows": 6
+        }
+      ],
+      "total_data_rows": 28,
+      "estimated_table_cell_candidates": 56,
+      "estimate_note": "ESTIMATE ONLY — actual candidates determined by frozen P1-P6 pipeline processing",
+      "document_type": "computer_vision",
+      "field": "computer_science",
+      "independence_status": "INDEPENDENT",
+      "contamination_status": "ZERO_CONTAMINATION",
+      "contamination_reason": "Zero references in any P7 artifact (verified by grep across tmp/perception/p7/, perception/, chunker/)",
+      "inclusion_status": "INCLUDED",
+      "table_content_samples": {
+        "1": [
+          {
+            "y": 189,
+            "cells": [
+              "84",
+              "B6",
+              "AmoebaNet-C"
+            ]
+          },
+          {
+            "y": 195,
+            "cells": [
+              "Convolutional Neural Networks",
+              "B5"
+            ]
+          }
+        ],
+        "3": [
+          {
+            "y": 69,
+            "cells": [
+              "(Zhang et al., 2018; Ma et al.",
+              "i. Figure 2(a) illustrate a re"
+            ]
+          },
+          {
+            "y": 300,
+            "cells": [
+              "s.t. N(d, w, r) = K",
+              "i=1...s ˆFd·ˆLi i \u0000 X⟨r· ˆ Hi,"
+            ]
+          }
+        ],
+        "4": [
+          {
+            "y": 189,
+            "cells": [
+              "0 2 4 6 8 FLOPS (Billions)",
+              "0 1 2 3 4 FLOPS (Billions)",
+              "0 1 2 3 FLOPS (Billions)"
+            ]
+          },
+          {
+            "y": 300,
+            "cells": [
+              "ImageNet Top1 Accuracy (%)",
+              "81"
+            ]
+          }
+        ],
+        "6": [
+          {
+            "y": 456,
+            "cells": [
+              "84",
+              "AmoebaNet-C"
+            ]
+          },
+          {
+            "y": 462,
+            "cells": [
+              "Model FLOPS Top-1 Acc.",
+              "B5"
+            ]
+          }
+        ],
+        "7": [
+          {
+            "y": 246,
+            "cells": [
+              "CIFAR10",
+              "CIFAR100",
+              "Birdsnap",
+              "Stanford Cars"
+            ]
+          },
+          {
+            "y": 330,
+            "cells": [
+              "Flowers",
+              "FGVC Aircraft",
+              "Oxford-IIIT Pets",
+              "Food-101"
+            ]
+          }
+        ],
+        "10": [
+          {
+            "y": 69,
+            "cells": [
+              "Ioffe, S. and Szegedy, C. Batc",
+              "Raghu, M., Poole, B., Kleinber"
+            ]
+          },
+          {
+            "y": 114,
+            "cells": [
+              "Kornblith, S., Shlens, J., and",
+              "Ramachandran, P., Zoph, B., an"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "document_id": "med_001",
+      "filename": "med_001.pdf",
+      "title": "Efficient interpolation of molecular properties across chemical compound space with low-dimensional descriptors Yun-Wen ",
+      "source": "arxiv",
+      "url": "https://arxiv.org/pdf/2311.15207",
+      "doi": "10.48550/arXiv.2311.15207",
+      "arxiv_id": "2311.15207",
+      "download_timestamp": "2026-09-09T22:15:00Z",
+      "sha256": "ead90f6b62e6e57cd22cba195b12a2d73a5f75112a3328db73838b871aff9760",
+      "size_bytes": 2300171,
+      "page_count": 29,
+      "table_count": 2,
+      "table_pages": [
+        {
+          "page": 12,
+          "data_rows": 4
+        },
+        {
+          "page": 19,
+          "data_rows": 3
+        }
+      ],
+      "total_data_rows": 7,
+      "estimated_table_cell_candidates": 14,
+      "estimate_note": "ESTIMATE ONLY — actual candidates determined by frozen P1-P6 pipeline processing",
+      "document_type": "molecular_chemistry",
+      "field": "chemistry",
+      "independence_status": "INDEPENDENT",
+      "contamination_status": "ZERO_CONTAMINATION",
+      "contamination_reason": "Zero references in any P7 artifact (verified by grep across tmp/perception/p7/, perception/, chunker/)",
+      "inclusion_status": "INCLUDED",
+      "table_content_samples": {
+        "12": [
+          {
+            "y": 303,
+            "cells": [
+              "κRBF(xi, xj) = exp \u0012 −d(xi, xj",
+              "\u0013 (14)"
+            ]
+          },
+          {
+            "y": 381,
+            "cells": [
+              "κRQ(xi, xj) = \u0012 1 + d(xi, xj)2",
+              "\u00132 (15)"
+            ]
+          }
+        ],
+        "19": [
+          {
+            "y": 129,
+            "cells": [
+              "S × T  (kcal mol−1)",
+              "S × T  (kcal mol−1)"
+            ]
+          },
+          {
+            "y": 237,
+            "cells": [
+              "17.9 18.1 18.3 18.5 18.7 AUC",
+              "0.70 0.75 0.80 0.85 0.90 ­"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "document_id": "cs_001",
+      "filename": "cs_001.pdf",
+      "title": "The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits Shuming Ma∗Hongyu Wang∗Lingxiao Ma Lei Wang Wenhui Wan",
+      "source": "arxiv",
+      "url": "https://arxiv.org/pdf/2402.17764v1",
+      "doi": "10.48550/arXiv.2402.17764",
+      "arxiv_id": "2402.17764",
+      "download_timestamp": "2026-09-09T22:15:00Z",
+      "sha256": "bcd625e89f95c39dc9143af4174978fcf2467eb9659d86f8da448d7d9366c332",
+      "size_bytes": 463748,
+      "page_count": 8,
+      "table_count": 1,
+      "table_pages": [
+        {
+          "page": 1,
+          "data_rows": 4
+        }
+      ],
+      "total_data_rows": 4,
+      "estimated_table_cell_candidates": 8,
+      "estimate_note": "ESTIMATE ONLY — actual candidates determined by frozen P1-P6 pipeline processing",
+      "document_type": "nlp",
+      "field": "computer_science",
+      "independence_status": "INDEPENDENT",
+      "contamination_status": "ZERO_CONTAMINATION",
+      "contamination_reason": "Zero references in any P7 artifact (verified by grep across tmp/perception/p7/, perception/, chunker/)",
+      "inclusion_status": "INCLUDED",
+      "table_content_samples": {
+        "1": [
+          {
+            "y": 387,
+            "cells": [
+              "BitNet b1.58 (This Work)",
+              "Transformer LLMs"
+            ]
+          },
+          {
+            "y": 399,
+            "cells": [
+              "{-1, 0, 1}",
+              "16-bit Float (FP16/BF16)"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "excluded_pdfs": [
+    {
+      "filename": "mat_001.pdf",
+      "exclusion_reason": "Formula content, not real data table (matrix equations detected as table-like)",
+      "inclusion_status": "EXCLUDED"
+    },
+    {
+      "filename": "eng_001.pdf",
+      "exclusion_reason": "No real data tables detected (formula-heavy neural operator paper)",
+      "inclusion_status": "EXCLUDED"
+    },
+    {
+      "filename": "medimg_001.pdf",
+      "exclusion_reason": "No real data tables detected (RL controller paper, figure-heavy)",
+      "inclusion_status": "EXCLUDED"
+    },
+    {
+      "filename": "nlp_001.pdf",
+      "exclusion_reason": "No real data tables detected (QLoRA paper, no benchmark tables in PDF)",
+      "inclusion_status": "EXCLUDED"
+    },
+    {
+      "filename": "transformer_001.pdf",
+      "exclusion_reason": "No real data tables detected (Attention paper, no results tables)",
+      "inclusion_status": "EXCLUDED"
+    }
+  ],
+  "independence_verification": {
+    "method": "grep across tmp/perception/p7/, perception/, chunker/ for arxiv_id, title keywords, author names",
+    "frozen_69case_members": [
+      "ind_arxiv_2402",
+      "ind_arxiv_bio2",
+      "ind_qbio_genomics",
+      "ind_qbio_rna"
+    ],
+    "new_pdf_overlap": "NONE — zero matches found",
+    "round1_members": [
+      "arxiv_2307",
+      "arxiv_bio"
+    ],
+    "new_pdf_overlap_round1": "NONE",
+    "evidence_gap_analysis": "NOT REFERENCED",
+    "boundary_pair_analysis": "NOT PERFORMED on new PDFs",
+    "is11_computation": "NOT PERFORMED",
+    "is11_hypothesis_formation": "NOT INVOLVED",
+    "conclusion": "ALL 4 INCLUDED PDFs are INDEPENDENT — zero contamination"
+  },
+  "corpus_summary": {
+    "total_downloaded": 10,
+    "valid_pdfs": 8,
+    "included_pdfs": 4,
+    "excluded_pdfs": 5,
+    "corrupted_pdfs": 2,
+    "total_table_pages": 14,
+    "total_data_rows": 94,
+    "total_estimated_candidates": 188,
+    "fields_covered": [
+      "chemistry",
+      "computer_science"
+    ],
+    "document_types": [
+      "computer_vision",
+      "nlp",
+      "molecular_chemistry"
+    ]
+  },
+  "gate_check": {
+    "gate": "CORPUS_ACQUISITION_GATE",
+    "independent_pdfs_required": 2,
+    "independent_pdfs_actual": 4,
+    "estimated_candidates_required": 30,
+    "estimated_candidates_actual": 188,
+    "unresolved_contamination": 0,
+    "result": "PASS"
+  },
+  "status": {
+    "IS-11": "HYPOTHESIS ONLY",
+    "IS-11_IMPLEMENTATION": "NOT AUTHORIZED",
+    "IS-11_COMPUTATION": "NOT AUTHORIZED",
+    "P7_3": "NOT AUTHORIZED",
+    "FROZEN_BASELINE": "INTACT",
+    "CORPUS_ACQUISITION_GATE": "PASS",
+    "NEXT_AUTHORIZED_ACTION": "STAGE 2 (awaiting human authorization)",
+    "STOP": "TRUE"
+  }
+}

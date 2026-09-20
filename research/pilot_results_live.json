@@ -1,0 +1,502 @@
+{
+  "schema_version": "L5.7_v1",
+  "participant_id": "P01",
+  "workflow_order": [
+    "B",
+    "C",
+    "A"
+  ],
+  "total_judgments": 27,
+  "results": [
+    {
+      "participant_id": "P01",
+      "item_id": "B|grp|16bfcb76b820",
+      "workflow": "B",
+      "case_id_or_group_id": "grp|16bfcb76b820",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 132.87,
+      "start_timestamp": "2026-09-12T09:59:39.076Z",
+      "end_timestamp": "2026-09-12T10:01:51.950Z",
+      "order_position": 1,
+      "order_index": 0,
+      "confidence": null,
+      "feedback_text": "是这样的,例子1我判断他们不属于同一个内容单元因为这两个是前一句话的后半部分和后一句话的前半部分例子二我也不认为他们是同一个语意单元因为他们是同一个表格中的不同列的名称,实例三我认可他们是同一内容单元，实例4我认可他们是同一语义单元，实力5我不认为他们是同一语义单元因为他们是一句话的后半部分和下一句话的前半部，例子6我不认为他们是同一内容单元因为他们是同一张表格的不同列的名称",
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "B|grp|885e943771cd",
+      "workflow": "B",
+      "case_id_or_group_id": "grp|885e943771cd",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 66.46,
+      "start_timestamp": "2026-09-12T10:01:51.952Z",
+      "end_timestamp": "2026-09-12T10:02:58.410Z",
+      "order_position": 1,
+      "order_index": 1,
+      "confidence": null,
+      "feedback_text": "我认为这些例子的每一项都应该分开因为他们基本都是表格中的内容，要么就是表格中同一行的不同列数据，要么就是同一表格中的不同列的名称",
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "B|grp|1ad8a7b55945",
+      "workflow": "B",
+      "case_id_or_group_id": "grp|1ad8a7b55945",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 73.78,
+      "start_timestamp": "2026-09-12T10:02:58.410Z",
+      "end_timestamp": "2026-09-12T10:04:12.194Z",
+      "order_position": 1,
+      "order_index": 2,
+      "confidence": null,
+      "feedback_text": "跟上一个差不多的问题就是他们都是同一个表格中的内容但他们都基本上是同一行的不同列的内容然后他们是没有什么语义完整性的因为他们是属于不同行的就是不同方向层面的内容然后可能有的是数据啊有的是object对象啊",
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "C|grp|16bfcb76b820",
+      "workflow": "C",
+      "case_id_or_group_id": "grp|16bfcb76b820",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 116.45,
+      "start_timestamp": "2026-09-12T10:04:12.194Z",
+      "end_timestamp": "2026-09-12T10:06:08.648Z",
+      "order_position": 2,
+      "order_index": 3,
+      "confidence": null,
+      "feedback_text": "是的确实是这样我认可你的这个判断但是你这个你这个给我的判断选项我觉得和你要让我做的事情不贴合你的判断选项还是应该分开是同一个不确定这三个选项但是我觉得像这一类比如说你做了一个判断然后你问我你这个判断合不合适的问题你应该给我的判断按钮是合适不合适所以你可能需要修改但是我这里可以跟你说你这个判断目前在这边的这个判断是对的，但是就是这个里面提到的这些例子我之前有跟你说过我的理解和判断你去之前找一下他们的类别还是不一样的就虽然我都赞同说你需要结构上更加去看他有什么样的排布或者说根据理解他在一个什么行文思路上但是他们每一个处的问题处的类别还是不一样的",
+      "expansion_count": 1,
+      "levels_viewed": [
+        "default",
+        "level_4"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "C|grp|885e943771cd",
+      "workflow": "C",
+      "case_id_or_group_id": "grp|885e943771cd",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 11.08,
+      "start_timestamp": "2026-09-12T10:06:08.649Z",
+      "end_timestamp": "2026-09-12T10:06:19.731Z",
+      "order_position": 2,
+      "order_index": 4,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 1,
+      "levels_viewed": [
+        "default",
+        "level_4"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "C|grp|1ad8a7b55945",
+      "workflow": "C",
+      "case_id_or_group_id": "grp|1ad8a7b55945",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 6.45,
+      "start_timestamp": "2026-09-12T10:06:19.732Z",
+      "end_timestamp": "2026-09-12T10:06:26.177Z",
+      "order_position": 2,
+      "order_index": 5,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 1,
+      "levels_viewed": [
+        "default",
+        "level_4"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-005",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-005",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 5.92,
+      "start_timestamp": "2026-09-12T10:06:26.178Z",
+      "end_timestamp": "2026-09-12T10:06:32.102Z",
+      "order_position": 3,
+      "order_index": 6,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-024",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-024",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 9.58,
+      "start_timestamp": "2026-09-12T10:28:47.953Z",
+      "end_timestamp": "2026-09-12T10:28:57.530Z",
+      "order_position": 3,
+      "order_index": 7,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-034",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-034",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 4.58,
+      "start_timestamp": "2026-09-12T10:28:57.531Z",
+      "end_timestamp": "2026-09-12T10:29:02.109Z",
+      "order_position": 3,
+      "order_index": 8,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-074",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-074",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 3.05,
+      "start_timestamp": "2026-09-12T10:29:02.109Z",
+      "end_timestamp": "2026-09-12T10:29:05.155Z",
+      "order_position": 3,
+      "order_index": 9,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-130",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-130",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 2.98,
+      "start_timestamp": "2026-09-12T10:29:05.155Z",
+      "end_timestamp": "2026-09-12T10:29:08.130Z",
+      "order_position": 3,
+      "order_index": 10,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-135",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-135",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 3.32,
+      "start_timestamp": "2026-09-12T10:29:08.130Z",
+      "end_timestamp": "2026-09-12T10:29:11.450Z",
+      "order_position": 3,
+      "order_index": 11,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-262",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-262",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 3.44,
+      "start_timestamp": "2026-09-12T10:29:11.451Z",
+      "end_timestamp": "2026-09-12T10:29:14.888Z",
+      "order_position": 3,
+      "order_index": 12,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-313",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-313",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 6.38,
+      "start_timestamp": "2026-09-12T10:29:14.888Z",
+      "end_timestamp": "2026-09-12T10:29:21.271Z",
+      "order_position": 3,
+      "order_index": 13,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-346",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-346",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 3.51,
+      "start_timestamp": "2026-09-12T10:29:21.272Z",
+      "end_timestamp": "2026-09-12T10:29:24.784Z",
+      "order_position": 3,
+      "order_index": 14,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-350",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-350",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 2.9,
+      "start_timestamp": "2026-09-12T10:29:24.784Z",
+      "end_timestamp": "2026-09-12T10:29:27.680Z",
+      "order_position": 3,
+      "order_index": 15,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-414",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-414",
+      "decision": "MERGE",
+      "time_seconds": 3.1,
+      "start_timestamp": "2026-09-12T10:29:27.680Z",
+      "end_timestamp": "2026-09-12T10:29:30.784Z",
+      "order_position": 3,
+      "order_index": 16,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-422",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-422",
+      "decision": "MERGE",
+      "time_seconds": 1.82,
+      "start_timestamp": "2026-09-12T10:29:30.785Z",
+      "end_timestamp": "2026-09-12T10:29:32.601Z",
+      "order_position": 3,
+      "order_index": 17,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-457",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-457",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 11.18,
+      "start_timestamp": "2026-09-12T10:29:32.601Z",
+      "end_timestamp": "2026-09-12T10:29:43.780Z",
+      "order_position": 3,
+      "order_index": 18,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-462",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-462",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 3.16,
+      "start_timestamp": "2026-09-12T10:29:43.780Z",
+      "end_timestamp": "2026-09-12T10:29:46.938Z",
+      "order_position": 3,
+      "order_index": 19,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-467",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-467",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 3.23,
+      "start_timestamp": "2026-09-12T10:29:46.939Z",
+      "end_timestamp": "2026-09-12T10:29:50.172Z",
+      "order_position": 3,
+      "order_index": 20,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-483",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-483",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 2.63,
+      "start_timestamp": "2026-09-12T10:29:50.172Z",
+      "end_timestamp": "2026-09-12T10:29:52.801Z",
+      "order_position": 3,
+      "order_index": 21,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-505",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-505",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 2.59,
+      "start_timestamp": "2026-09-12T10:29:52.801Z",
+      "end_timestamp": "2026-09-12T10:29:55.393Z",
+      "order_position": 3,
+      "order_index": 22,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-514",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-514",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 2.55,
+      "start_timestamp": "2026-09-12T10:29:55.393Z",
+      "end_timestamp": "2026-09-12T10:29:57.938Z",
+      "order_position": 3,
+      "order_index": 23,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-519",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-519",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 2.23,
+      "start_timestamp": "2026-09-12T10:29:57.939Z",
+      "end_timestamp": "2026-09-12T10:30:00.167Z",
+      "order_position": 3,
+      "order_index": 24,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-522",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-522",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 1.75,
+      "start_timestamp": "2026-09-12T10:30:00.168Z",
+      "end_timestamp": "2026-09-12T10:30:01.918Z",
+      "order_position": 3,
+      "order_index": 25,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    },
+    {
+      "participant_id": "P01",
+      "item_id": "A|IS11-AMB-530",
+      "workflow": "A",
+      "case_id_or_group_id": "IS11-AMB-530",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 2.13,
+      "start_timestamp": "2026-09-12T10:30:01.918Z",
+      "end_timestamp": "2026-09-12T10:30:04.043Z",
+      "order_position": 3,
+      "order_index": 26,
+      "confidence": null,
+      "feedback_text": null,
+      "expansion_count": 0,
+      "levels_viewed": [
+        "default"
+      ]
+    }
+  ],
+  "completed_at": "2026-09-12T10:30:04.044Z"
+}

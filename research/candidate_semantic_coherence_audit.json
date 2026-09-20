@@ -1,0 +1,208 @@
+{
+  "research_question": "Do DICE candidates have sufficient Semantic Coherence / Evaluation Value?",
+  "candidate_construction_mechanism": {
+    "type": "PURELY_GEOMETRIC",
+    "criteria": {
+      "same_y_band": true,
+      "gap_min": 8.0,
+      "gap_max": 50.0,
+      "line_obs_max": 15,
+      "wb_min": 15.0
+    },
+    "semantic_coherence_check": false,
+    "tld_called": false,
+    "is01_is02_computed": false,
+    "is11_computed": false,
+    "note": "Candidate = any two same-y-band text fragments with gap 8-50pt. NO semantic check.",
+    "total_candidates": 545
+  },
+  "candidate_quality_distribution": {
+    "is11_45_cases": {
+      "VALID_CANDIDATE": 41,
+      "VALID_CANDIDATE_pct": 91,
+      "STRUCTURALLY_RELATED_BUT_SEMANTICALLY_UNCERTAIN": 4,
+      "STRUCTURALLY_RELATED_BUT_SEMANTICALLY_UNCERTAIN_pct": 9,
+      "CONSTRUCTION_FALSE_POSITIVE": 0,
+      "CONSTRUCTION_FALSE_POSITIVE_pct": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "UNKNOWN": 0
+    },
+    "p7_69_cases": {
+      "VALID_CANDIDATE": 60,
+      "VALID_CANDIDATE_pct": 86,
+      "STRUCTURALLY_RELATED_BUT_SEMANTICALLY_UNCERTAIN": 9,
+      "STRUCTURALLY_RELATED_BUT_SEMANTICALLY_UNCERTAIN_pct": 13,
+      "CONSTRUCTION_FALSE_POSITIVE": 0,
+      "CONSTRUCTION_FALSE_POSITIVE_pct": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "UNKNOWN": 0
+    },
+    "combined_114_cases": {
+      "VALID_CANDIDATE": 101,
+      "VALID_CANDIDATE_pct": 89,
+      "STRUCTURALLY_RELATED_BUT_SEMANTICALLY_UNCERTAIN": 13,
+      "STRUCTURALLY_RELATED_BUT_SEMANTICALLY_UNCERTAIN_pct": 11,
+      "CONSTRUCTION_FALSE_POSITIVE": 0,
+      "CONSTRUCTION_FALSE_POSITIVE_pct": 0
+    },
+    "universe_545_note": "431/545 without GT. Construction FP rate UNKNOWN for unGT candidates."
+  },
+  "construction_false_positive_rate": {
+    "gt_cases": 114,
+    "construction_fp": 0,
+    "rate": "0% (in GT cases)",
+    "universe_fp_unknown": true,
+    "other_family_count": 51,
+    "low_opportunity_count": 326
+  },
+  "human_feedback_type_distribution": {
+    "F1_candidate_validity": 0,
+    "F2_boundary_validation": 45,
+    "F2_pct": 100,
+    "F3_semantic_interpretation": 0,
+    "F4_evidence_sufficiency": 2,
+    "F4_note": "P722 participant-level (AMB-032, AMB-375), not reviewer-level",
+    "F5_construction_correction": 0,
+    "F5_pct": 0,
+    "summary": "100% F2 (Boundary Validation). 0% F5 (Construction Correction)."
+  },
+  "feedback_information_gain": {
+    "IG_0": 25,
+    "IG_0_pct": 55,
+    "IG_0_detail": "Machine already correct (TN), human confirms",
+    "IG_1": 16,
+    "IG_1_pct": 35,
+    "IG_1_detail": "Human uses existing evidence (P2 text/geometry) that machine did not use. Consumer/Integration Gap.",
+    "IG_2": 4,
+    "IG_2_pct": 8,
+    "IG_2_detail": "Human provides content unit definition (sentence vs paragraph). Standard Gap.",
+    "IG_3": 0,
+    "IG_3_pct": 0,
+    "IG_3_detail": "NO reusable Candidate Construction signal found"
+  },
+  "causal_chain": {
+    "layer_1_construction": "GEOMETRIC (same_y_band + gap 8-50) -> 545 candidates, NO semantic check",
+    "layer_2_quality": "89% VALID, 11% UNCERTAIN, 0% FP (in 114 GT cases)",
+    "layer_3_judgment": "91% boundary agreed, 9% boundary disputed (prose standard gap)",
+    "layer_4_feedback": "100% F2 (Boundary Validation), 0% F5 (Construction Correction)",
+    "layer_5_ig": "55% IG-0, 35% IG-1, 8% IG-2, 0% IG-3",
+    "layer_6_reusable_signal": "NONE - 0% IG-3, 0% F5",
+    "conclusion": "Human Feedback occurs at BOUNDARY VALIDATION layer, NOT at CONSTRUCTION layer"
+  },
+  "construction_correction_search": {
+    "patterns_found": 0,
+    "detail": "In all 114 GT cases, 0 cases where Human says these should not be paired. All candidates have structural/semantic coherence.",
+    "reason": "Geometric construction (same_y_band + gap 8-50) is coarse but sufficient for academic papers."
+  },
+  "focus_case_analysis": {
+    "AMB-135": {
+      "construction": "same_y_band + h_gap=30.0 -> geometric pairing",
+      "quality": "VALID_CANDIDATE (both: different table columns)",
+      "feedback": "F2 (Boundary Validation)",
+      "ig": "IG-1 (machine FP, human used table evidence)",
+      "note": "Candidate valid. Machine decision wrong. NOT construction error."
+    },
+    "AMB-032": {
+      "construction": "same_y_band + h_gap=33.9 -> geometric pairing",
+      "quality": "VALID_CANDIDATE (both: different table cells)",
+      "feedback": "F2 (reviewer) / F4 (P722 participant)",
+      "ig": "IG-0 (machine TN, TLD correct)",
+      "note": "Candidate valid. P722 participant evidence gap."
+    },
+    "AMB-375": {
+      "construction": "same_y_band + h_gap=9.7 -> geometric pairing",
+      "quality": "STRUCTURALLY_RELATED_BUT_UNCERTAIN (sentence boundary, standard ambiguous)",
+      "feedback": "F2 (Boundary Validation, reviewer disagreement)",
+      "ig": "IG-2 (content unit definition)",
+      "note": "Candidate valid. Standard gap, not construction error."
+    },
+    "AMB-414": {
+      "construction": "same_y_band + h_gap=18.1 -> geometric pairing",
+      "quality": "VALID_CANDIDATE (both: figure caption parts)",
+      "feedback": "F2 (Boundary Validation, MERGE)",
+      "ig": "IG-0 (machine ABSTAIN, candidate valid)",
+      "note": "Candidate valid. Machine could not determine (no figure detector)."
+    },
+    "AMB-462": {
+      "construction": "same_y_band + h_gap=12.0 -> geometric pairing",
+      "quality": "VALID_CANDIDATE (both: different table headers)",
+      "feedback": "F2 (Boundary Validation, KEEP)",
+      "ig": "IG-1 (TLD wrong table, human used text content)",
+      "note": "Candidate valid. TLD partial failure. NOT construction error."
+    },
+    "AMB-519": {
+      "construction": "same_y_band + h_gap=10.0 -> geometric pairing",
+      "quality": "STRUCTURALLY_RELATED_BUT_UNCERTAIN (sentence boundary, standard ambiguous)",
+      "feedback": "F2 (Boundary Validation, reviewer disagreement)",
+      "ig": "IG-2 (content unit definition)",
+      "note": "Candidate valid. Standard gap."
+    }
+  },
+  "error_assumption_check": {
+    "q1_misinterpreted_boundary_as_construction": false,
+    "q2_feedback_correcting_construction": false,
+    "q3_candidates_lack_coherence": false,
+    "q4_quality_masking_construction": "N/A - quality is high (89% valid)",
+    "q5_feedback_can_change_construction": false
+  },
+  "final_question": {
+    "what_to_optimize": "B. Evidence Organization (primary)",
+    "why_not_A_construction": "0% Construction FP, candidates valid",
+    "why_not_C_interface": "Human feedback is boundary, not UI",
+    "why_not_D_perception": "P2 evidence sufficient (45/45)",
+    "why_not_E_semantic": "0% persistent semantic ambiguity",
+    "human_feedback_has_construction_signal": false,
+    "missing_info": "Evidence Organization / Consumer Integration (35% IG-1), Standard clarity (8% IG-2)"
+  },
+  "final_status": "CANDIDATES_HAVE_SUFFICIENT_COHERENCE",
+  "candidate_construction_bottleneck": "NONE (0% Construction FP)",
+  "boundary_validation_bottleneck": "YES (100% F2, 35% IG-1)",
+  "evidence_organization_bottleneck": "YES (35% IG-1, 2 P722 F4)",
+  "potential_learning_signal_count": 0,
+  "true_reusable_signal_found": false,
+  "current_learning_level": "L3",
+  "primary_bottleneck": "B (Evidence Organization) / D (Consumer Integration)",
+  "recommended_next_step": "Continue READ-ONLY research on Evidence Organization - how to safely organize P2 evidence for IS-11 consumer when TLD fails",
+  "data_sources": {
+    "is11_gt": "45 cases (tmp/is11_semantic_ground_truth.json)",
+    "is11_universe": "545 candidates (tmp/is11_independent_candidate_universe.json)",
+    "p7_independent": "69 cases (tmp/perception/p7/independent_machine_resolvability_results.json)",
+    "p722_experiment": "55 judgments (tmp/l5_evidence_distillation_experiment/recording/experiment_results_live.json)",
+    "potential_eval": "83 selected (tmp/potential_evaluation_case_set.json)",
+    "overlap_note": "IS-11 45 subset of 545. P7 69 = different corpus. P722 55 subset of IS-11 45. No double-counting.",
+    "retrospective_labeling": true,
+    "gt_usage": "GT used ONLY for auditing, NOT for construction or implementation"
+  },
+  "governance": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "P2_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "IS11_MODIFICATION": false,
+    "GT_MODIFICATION": false,
+    "SIGNAL_MODIFICATION": false,
+    "EVIDENCE_CUE_MODIFICATION": false,
+    "LLM": false,
+    "NEW_OBSERVATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "RUNTIME_CHANGE": false,
+    "CAPABILITY_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "FROZEN_EXPERIMENT": "INTACT",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "FORMAL_EXPERIMENT": "NOT_STARTED",
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "p2_engine_hash": "388e7939d334458e",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "expected_p2_engine": "388e7939d334458e",
+    "drift": "0/7 INTACT"
+  },
+  "stop": true
+}

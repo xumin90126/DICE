@@ -1,0 +1,327 @@
+{
+  "implementation_status": "PASS",
+  "learning_level": "L3_CANDIDATE_DISCOVERY",
+  "metadata": {
+    "date": "2026-09-17",
+    "scope": "Phase 1 Minimal Prototype C",
+    "authorization": "HVA-05 READY + explicit user authorization"
+  },
+  "executive_summary": {
+    "status": "PASS",
+    "all_acceptance_criteria_passed": true,
+    "core_hypothesis_proven": "Human Feedback can be linked to Evidence and grouped by structural similarity into Signal Candidates",
+    "components_built": {
+      "feedback_records": 100,
+      "evidence_packs": 45,
+      "evidence_signatures": 100,
+      "signal_candidates": 10
+    },
+    "frozen_baseline": "INTACT",
+    "semantic_leakage": 0,
+    "authority_leakage": 0,
+    "stop": true
+  },
+  "input_sources": {
+    "machine_eval": {
+      "file": "tmp/is11_machine_evaluation_results.json",
+      "hash": "437aa665210ccd04",
+      "role": "Evidence Source of Truth"
+    },
+    "GT": {
+      "file": "tmp/is11_semantic_ground_truth.json",
+      "hash": "7349963d0d23b5ef",
+      "role": "Human Ground Truth + text for derivation"
+    },
+    "L5": {
+      "file": "tmp/l5_evidence_distillation_experiment/recording/experiment_results_live.json",
+      "role": "Human behavior only"
+    },
+    "TLD": {
+      "file": "chunker/table_line_detector.py",
+      "hash": "022f5c21e872ad9e",
+      "role": "Frozen baseline verification"
+    }
+  },
+  "data_contracts": {
+    "feedback_record": {
+      "fields": [
+        "record_id",
+        "case_id",
+        "source",
+        "human_id",
+        "human_decision",
+        "evidence_snapshot",
+        "evidence_viewed",
+        "provenance",
+        "conflict",
+        "adjudicated"
+      ],
+      "evidence_snapshot_fields": [
+        "is_in_table",
+        "different_cell",
+        "is01_a",
+        "is02_b",
+        "text_a_ends_period",
+        "text_b_starts_capital",
+        "machine_decision",
+        "document_id",
+        "page"
+      ],
+      "evidence_source": "machine_eval (NOT L5 cues)",
+      "forbidden_fields": [
+        "rationale",
+        "rule",
+        "confidence",
+        "score",
+        "recommendation"
+      ]
+    },
+    "evidence_pack": {
+      "levels": [
+        "L0",
+        "L1"
+      ],
+      "L0_fields": [
+        "text_a",
+        "text_b",
+        "page",
+        "document_id"
+      ],
+      "L1_fields": [
+        "tld_in_table",
+        "tld_different_cell",
+        "is01_number",
+        "is02_text",
+        "text_a_ends_period",
+        "text_b_starts_capital",
+        "machine_decision",
+        "machine_decision_label"
+      ],
+      "machine_decision_label": "Machine Decision (may be wrong): {decision}",
+      "forbidden_labels": [
+        "Recommended",
+        "Suggested",
+        "Correct Answer",
+        "Should be",
+        "Likely Correct"
+      ]
+    },
+    "s3_signature": {
+      "fields": [
+        "is_in_table",
+        "different_cell",
+        "is01_a",
+        "is02_b",
+        "text_a_ends_period",
+        "text_b_starts_capital"
+      ],
+      "field_count": 6,
+      "excluded": [
+        "content_type (64% ambiguous)",
+        "machine_decision (interpretation)",
+        "h_gap/dy (not in machine_eval)"
+      ]
+    },
+    "signal_candidate": {
+      "fields": [
+        "signal_id",
+        "signature",
+        "source_cases",
+        "source_feedback_records",
+        "positive_cases",
+        "negative_cases",
+        "unknown_cases",
+        "conflict_cases",
+        "has_conflict",
+        "has_negative",
+        "majority_decision",
+        "independence",
+        "engagement_stats",
+        "status",
+        "provenance"
+      ],
+      "status_machine": [
+        "SINGLE_CASE_NOT_CANDIDATE",
+        "DISCOVERED",
+        "REPEATED",
+        "INDEPENDENCE_VERIFIED",
+        "BOUNDARY_REVIEW_REQUIRED"
+      ],
+      "forbidden_fields": [
+        "decision",
+        "selection",
+        "routing",
+        "ranking",
+        "score",
+        "confidence",
+        "recommendation",
+        "execution_plan",
+        "fallback",
+        "retry",
+        "override",
+        "correction",
+        "rule",
+        "auto_validated",
+        "validated",
+        "registered",
+        "active"
+      ]
+    }
+  },
+  "results": {
+    "feedback_records": {
+      "total": 100,
+      "gt_records": 45,
+      "l5_records": 55,
+      "l5_decisions": {
+        "KEEP_SEPARATE": 47,
+        "MERGE": 6,
+        "UNKNOWN": 2
+      },
+      "engagement": {
+        "SNAP": 38,
+        "DEEP": 17,
+        "NO_INTERACTION": 45
+      }
+    },
+    "signal_candidates": {
+      "total": 10,
+      "unique_signatures": 10,
+      "status_distribution": {
+        "INDEPENDENCE_VERIFIED": 6,
+        "BOUNDARY_REVIEW_REQUIRED": 2,
+        "SINGLE_CASE_NOT_CANDIDATE": 2
+      },
+      "reusable_candidates": 8,
+      "cross_document_candidates": 6
+    },
+    "sig_mapping": [
+      {
+        "signal": "SIG-01",
+        "maps_to": "SC-04",
+        "status": "INDEPENDENCE_VERIFIED",
+        "cases": 5,
+        "independence_ratio": 0.6,
+        "correct": true
+      },
+      {
+        "signal": "SIG-02",
+        "maps_to": "SC-05",
+        "status": "BOUNDARY_REVIEW_REQUIRED",
+        "cases": 3,
+        "has_conflict": true,
+        "correct": true
+      },
+      {
+        "signal": "SIG-07",
+        "maps_to": "SC-06",
+        "status": "INDEPENDENCE_VERIFIED",
+        "cases": 5,
+        "correct": true
+      },
+      {
+        "signal": "SIG-08",
+        "maps_to": "SC-05",
+        "status": "BOUNDARY_REVIEW_REQUIRED",
+        "correct": true,
+        "note": "= SIG-02 (same signature)"
+      }
+    ]
+  },
+  "gap4_verification": {
+    "case": "AMB-032",
+    "l5_cues": {
+      "has_tld": false,
+      "is_in_table": null,
+      "different_cell": null
+    },
+    "machine_eval": {
+      "is_in_table": true,
+      "different_cell": true
+    },
+    "feedback_record_snapshot": {
+      "is_in_table": true,
+      "different_cell": true
+    },
+    "evidence_pack_l1": {
+      "tld_in_table": true,
+      "tld_different_cell": true
+    },
+    "result": "PASS — machine_eval is source, L5 cues not used"
+  },
+  "acceptance_criteria": {
+    "1_deterministic": true,
+    "2_evidence_source_machine_eval": true,
+    "3_snapshot_reconstructable": true,
+    "4_hash_mismatch_stale": true,
+    "5_s3_six_fields": true,
+    "6_no_content_type": true,
+    "7_provenance_complete": true,
+    "8_semantic_leakage_zero": true,
+    "9_authority_leakage_zero": true,
+    "10_human_decision_not_modified": true,
+    "11_single_case_not_candidate": true,
+    "12_cross_document_detectable": true,
+    "13_categories_not_compressed": true,
+    "14_frozen_baseline_drift_zero": true,
+    "15_dice_core_byte_identical": true,
+    "all_pass": true
+  },
+  "output_files": {
+    "tmp/hva_phase1/implement.py": 30415,
+    "tmp/hva_phase1/evidence_packs.json": 22855,
+    "tmp/hva_phase1/feedback_records.json": 90612,
+    "tmp/hva_phase1/evidence_signatures.json": 35059,
+    "tmp/hva_phase1/signal_candidates.json": 18237,
+    "tmp/hva_phase1/verification.json": 947,
+    "tmp/hva_phase1_implementation.md": 4607,
+    "tmp/hva_phase1_implementation_report.md": 11583
+  },
+  "what_proven": [
+    "Human Feedback can be linked to Evidence (FeedbackRecord with evidence_snapshot)",
+    "Evidence can be organized for Human (Evidence Pack L0-L1)",
+    "Structural fingerprint can be extracted (S3 Evidence Signature)",
+    "Similar cases can be grouped (SignalCandidate with recurrence + independence)",
+    "Conflict and negative cases are detected (BOUNDARY_REVIEW_REQUIRED)",
+    "Same-page clustering is detected (independence_ratio)",
+    "Single cases do not form Reusable Candidates",
+    "Frozen baseline is intact (0 drift)",
+    "No semantic leakage (0 violations)",
+    "No authority leakage (0 violations)"
+  ],
+  "what_not_proven": [
+    "Signal Validity (requires Human Boundary Validation — Phase 2)",
+    "Future Case Reuse (requires Future Case Replay — Phase 2)",
+    "Human Effort Reduction (requires HRR measurement — Phase 2)",
+    "Learning Success (requires L4-L6 — Phase 2+)"
+  ],
+  "final_gate": {
+    "implementation_status": "PASS",
+    "learning_level": "L3_CANDIDATE_DISCOVERY",
+    "frozen_baseline": "INTACT",
+    "dice_core_drift": 0,
+    "semantic_leakage": 0,
+    "authority_leakage": 0,
+    "dice_core_modification": false,
+    "p1_p7_modification": false,
+    "tld_modification": false,
+    "is11_modification": false,
+    "gt_modification": false,
+    "llm": false,
+    "new_observation": false,
+    "new_module": false,
+    "new_engine": false,
+    "runtime_change": false,
+    "capability_change": false,
+    "production": false,
+    "stop": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "machine_eval_hash": "437aa665210ccd04",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  }
+}

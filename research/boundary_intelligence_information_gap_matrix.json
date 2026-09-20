@@ -1,0 +1,293 @@
+{
+  "document": "Boundary Intelligence Information Gap Matrix",
+  "type": "READ-ONLY design matrix",
+  "version": "1.0",
+  "frozen_baseline": "INTACT",
+  "round1_evidence_basis": {
+    "sample": "20/43 AMBIGUOUS",
+    "documents": ["arxiv_toc", "arxiv_2307", "arxiv_bio_body"],
+    "modes": ["TOC_SECTION_NUMBER_TITLE", "FORMULA_FRAGMENT_WIDE", "APPENDIX_LETTER_TITLE", "BODY_TEXT_CONTINUATION"],
+    "human_accuracy": "19/20 = 95.0%",
+    "gt_disputed": "AMB-026",
+    "reviewer": "single (reviewer_1)",
+    "human_cost": "INVALID (duration_ms broken)"
+  },
+  "information_source_taxonomy": {
+    "IS-01": {
+      "name": "TEXT_NUMBER_PATTERN",
+      "category": "B (new machine-observable)",
+      "definition": "text_a matches numbering pattern (1, 2.1, B.1)",
+      "human_used_count": 12,
+      "p4_has": false,
+      "machine_observable": "YES (regex: ^\\d+(\\.\\d+)*\\.?$)",
+      "deterministic": true,
+      "p1_has_text": true,
+      "round1_cases": ["AMB-001", "AMB-005", "AMB-012", "AMB-014", "AMB-017", "AMB-018", "AMB-023", "AMB-025", "AMB-027", "AMB-028", "AMB-034", "AMB-043"]
+    },
+    "IS-02": {
+      "name": "TEXT_READABLE_TITLE",
+      "category": "B (new machine-observable)",
+      "definition": "text_b contains readable alphabetic word (length > 2)",
+      "human_used_count": 14,
+      "p4_has": false,
+      "machine_observable": "YES (word detection)",
+      "deterministic": true,
+      "p1_has_text": true,
+      "round1_cases": ["AMB-001", "AMB-005", "AMB-012", "AMB-014", "AMB-017", "AMB-018", "AMB-021", "AMB-023", "AMB-025", "AMB-026", "AMB-027", "AMB-028", "AMB-034", "AMB-043"]
+    },
+    "IS-03": {
+      "name": "TEXT_SYMBOL_PATTERN",
+      "category": "B (new machine-observable)",
+      "definition": "text is non-alphabetic or very short (math symbol)",
+      "human_used_count": 13,
+      "p4_has": false,
+      "machine_observable": "YES (character class analysis)",
+      "deterministic": true,
+      "p1_has_text": true,
+      "round1_cases": ["AMB-029", "AMB-030", "AMB-032", "AMB-037", "AMB-040", "AMB-041"]
+    },
+    "IS-04": {
+      "name": "TEXT_PUNCTUATION",
+      "category": "B (new machine-observable)",
+      "definition": "text_a ends with period (sentence boundary signal)",
+      "human_used_count": 5,
+      "p4_has": false,
+      "machine_observable": "YES (character check)",
+      "deterministic": true,
+      "p1_has_text": true,
+      "round1_cases": ["AMB-026", "AMB-027", "AMB-028", "AMB-034", "AMB-043"]
+    },
+    "IS-05": {
+      "name": "TEXT_CAPITAL_START",
+      "category": "B (new machine-observable)",
+      "definition": "text_b starts with capital letter (sentence start signal)",
+      "human_used_count": 15,
+      "p4_has": false,
+      "machine_observable": "YES (case check)",
+      "deterministic": true,
+      "p1_has_text": true,
+      "round1_cases": ["AMB-001", "AMB-005", "AMB-012", "AMB-014", "AMB-017", "AMB-018", "AMB-021", "AMB-023", "AMB-025", "AMB-026", "AMB-027", "AMB-028", "AMB-034", "AMB-043"]
+    },
+    "IS-06": {
+      "name": "TEXT_APPENDIX_LETTER",
+      "category": "B (new machine-observable)",
+      "definition": "text_a matches appendix letter pattern (B.1, A.2)",
+      "human_used_count": 1,
+      "p4_has": false,
+      "machine_observable": "YES (regex: ^[A-F]\\.\\d+)",
+      "deterministic": true,
+      "p1_has_text": true,
+      "round1_cases": ["AMB-021"]
+    },
+    "IS-07": {
+      "name": "VISUAL_TOC_CONTEXT",
+      "category": "B (new machine-observable)",
+      "definition": "page is TOC page (table of contents layout)",
+      "human_used_count": 7,
+      "p4_has": false,
+      "machine_observable": "YES (P6 region type)",
+      "deterministic": true,
+      "p6_has_region": true,
+      "round1_cases": ["AMB-001", "AMB-005", "AMB-012", "AMB-014", "AMB-017", "AMB-018", "AMB-021"]
+    },
+    "IS-08": {
+      "name": "VISUAL_FORMULA_CONTEXT",
+      "category": "B (new machine-observable)",
+      "definition": "page is formula-dense page",
+      "human_used_count": 10,
+      "p4_has": false,
+      "machine_observable": "YES (P6 region type + line density)",
+      "deterministic": true,
+      "p6_has_region": true,
+      "round1_cases": ["AMB-027", "AMB-028", "AMB-029", "AMB-030", "AMB-032", "AMB-034", "AMB-037", "AMB-040", "AMB-041", "AMB-043"]
+    },
+    "IS-09": {
+      "name": "VISUAL_BODY_CONTEXT",
+      "category": "B (new machine-observable)",
+      "definition": "page is body text page",
+      "human_used_count": 3,
+      "p4_has": false,
+      "machine_observable": "YES (P6 region type)",
+      "deterministic": true,
+      "p6_has_region": true,
+      "round1_cases": ["AMB-023", "AMB-025", "AMB-026"]
+    },
+    "IS-10": {
+      "name": "SENTENCE_BOUNDARY_INTERPRETATION",
+      "category": "C (inherently semantic)",
+      "definition": "interpreting punctuation + capitalization as sentence boundary → different text unit",
+      "human_used_count": 1,
+      "p4_has": false,
+      "machine_observable": "PARTIAL (raw signals are B, interpretation is C)",
+      "deterministic": false,
+      "note": "Raw signals (period, capitalization) are machine-observable (Category B). But interpreting them as sentence boundary = text unit boundary requires semantic judgment (Category C). Period could be decimal/abbreviation; capitalization could be proper noun.",
+      "round1_cases": ["AMB-026"]
+    }
+  },
+  "gap_category_summary": {
+    "A_existing_uncombined": {
+      "count": 0,
+      "sources": [],
+      "explanation": "P4 v3 Design already attempted to combine all geometric features. Irreducible FP proves geometry alone is insufficient. The gap is not combination; it is information space exclusion."
+    },
+    "B_new_machine_observable": {
+      "count": 9,
+      "sources": ["IS-01", "IS-02", "IS-03", "IS-04", "IS-05", "IS-06", "IS-07", "IS-08", "IS-09"],
+      "explanation": "All textual and visual information sources Human used are potentially machine-observable. P1 has text content; P6 has region types. The information exists in DICE but P4's contract excludes it.",
+      "implementation_candidate": "Textual Structure Feature + Visual Context Feature (NOT AUTHORIZED)"
+    },
+    "C_inherently_semantic": {
+      "count": 1,
+      "sources": ["IS-10"],
+      "explanation": "Sentence boundary interpretation requires semantic judgment. Even with raw signal detection, interpretation of '. + capitalization = different sentence = different text unit' is inherently semantic.",
+      "human_owned_boundary_candidate": "BODY_TEXT_CONTINUATION"
+    }
+  },
+  "boundary_mode_shrinkage_assessment": {
+    "TOC_SECTION_NUMBER_TITLE": {
+      "case_count": 12,
+      "gap_category": "B",
+      "human_info_sources": ["IS-01", "IS-02", "IS-05", "IS-07/IS-08/IS-09"],
+      "missing_info": "numbering pattern + readable word detection + page context",
+      "potential_source": "Textual Structure Feature + P6 Visual Context",
+      "shrinkage_possible": "yes (pending Gate verification)",
+      "gate_status": "NOT PASSED (2/9)",
+      "human_owned": false
+    },
+    "APPENDIX_LETTER_TITLE": {
+      "case_count": 1,
+      "gap_category": "B",
+      "human_info_sources": ["IS-06", "IS-02", "IS-05", "IS-07"],
+      "missing_info": "appendix letter pattern + readable word",
+      "potential_source": "Textual Structure Feature",
+      "shrinkage_possible": "yes (but insufficient cases)",
+      "gate_status": "NOT PASSED",
+      "human_owned": false
+    },
+    "FORMULA_FRAGMENT_WIDE": {
+      "case_count": 6,
+      "gap_category": "B",
+      "human_info_sources": ["IS-03", "IS-08"],
+      "missing_info": "symbol detection + formula page context",
+      "potential_source": "Character class detection + P6 formula region",
+      "shrinkage_possible": "partial (line_obs>15 already DETERMINISTIC_BLOCK; line_obs<=15 needs visual context)",
+      "gate_status": "NOT PASSED",
+      "human_owned": "possible (line_obs <= 15 cases)"
+    },
+    "BODY_TEXT_CONTINUATION": {
+      "case_count": 1,
+      "gap_category": "C",
+      "human_info_sources": ["IS-02", "IS-04", "IS-05", "IS-09", "IS-10"],
+      "missing_info": "sentence boundary interpretation (inherently semantic)",
+      "potential_source": "text semantics layer (requires interpretation, not just detection)",
+      "shrinkage_possible": "no",
+      "gate_status": "NOT PASSED",
+      "human_owned": "likely permanent"
+    }
+  },
+  "information_source_expansion_candidates": {
+    "textual_structure_feature": {
+      "description": "Pattern analysis on P1 observation text: number detection, symbol detection, punctuation, capitalization, word detection",
+      "input": "P1 observation.text",
+      "output": "TextStructureProfile {is_number, is_readable_word, is_symbol, ends_with_period, starts_capital, text_length_category}",
+      "category": "B",
+      "affected_modes": ["TOC_SECTION_NUMBER_TITLE", "APPENDIX_LETTER_TITLE", "FORMULA_FRAGMENT_WIDE"],
+      "deterministic": true,
+      "authorized": false,
+      "note": "Does NOT modify P4. Would be a new information layer usable by Relation Assessment or P7.1."
+    },
+    "visual_context_feature": {
+      "description": "Page-level region type from P6: TOC, BODY, FORMULA, TABLE",
+      "input": "P6 region classification",
+      "output": "PageContextProfile {region_type, line_density_category}",
+      "category": "B",
+      "affected_modes": ["all modes"],
+      "deterministic": true,
+      "authorized": false,
+      "note": "P6 already classifies regions. This would expose P6's classification to boundary assessment."
+    },
+    "sentence_boundary_signal": {
+      "description": "Raw signals: ends_with_period, starts_capital (Category B detection, but interpretation is Category C)",
+      "input": "P1 observation.text",
+      "output": "SentenceBoundarySignal {ends_with_period, starts_capital}",
+      "category": "B (raw) + C (interpretation)",
+      "affected_modes": ["BODY_TEXT_CONTINUATION"],
+      "deterministic": "raw signals yes, interpretation no",
+      "authorized": false,
+      "note": "Could reduce AMBIGUOUS zone for BODY_CONT, but cannot fully resolve. Interpretation remains Human-owned."
+    }
+  },
+  "human_workload_scaling": {
+    "architecture_principle": "Human workload should NOT scale linearly with corpus size",
+    "scenario_A_bad": {
+      "condition": "no shrinkage, no capability, every AMBIGUOUS needs Human",
+      "workload": "linear with document volume",
+      "status": "to be avoided"
+    },
+    "scenario_B_desired": {
+      "condition": "Category B modes shrink, document-type capability accumulates, AMBIGUOUS dedup",
+      "workload": "tends toward constant",
+      "status": "architecture design target — EMPIRICALLY UNVALIDATED"
+    },
+    "scenario_C_expansion": {
+      "condition": "new document types produce new boundary modes",
+      "workload": "temporarily increases, then stabilizes",
+      "status": "normal capability expansion phase"
+    },
+    "key_distinction": "more data (same type) should NOT increase workload; more boundary classes (new types) temporarily increases workload",
+    "correct_statement": "Architecture is designed to prevent linear workload growth, but this remains empirically unvalidated."
+  },
+  "boundary_intelligence_loop": {
+    "steps": [
+      "Observation (P1, immutable)",
+      "Machine Assessment (P4 geometry + P7.1 structure)",
+      "Deterministic (MERGE/BLOCK) OR Ambiguous (KEEP_SEPARATE, needs review)",
+      "Human Review (via P7.2) for Ambiguous",
+      "Boundary Evidence (ValidationRecord)",
+      "Information Source Attribution (which IS did Human use?)",
+      "Information Gap Identification (A/B/C category)",
+      "Category B → Candidate IS Expansion → Generalization Evaluation → Gate → Machine Boundary (shrinkage) OR Keep Human",
+      "Category C → Human-owned Boundary (permanent)"
+    ],
+    "goal": "Human Review only exists at boundaries that cannot be reliably auto-decided",
+    "invariants": [
+      "Observation immutable",
+      "P4 frozen",
+      "Human Decision immutable",
+      "Evidence derived from ACCEPT",
+      "Machine Boundary requires Gate",
+      "Human-owned Boundary fixed"
+    ]
+  },
+  "machine_boundary_promotion_gate_status": {
+    "G1_sufficient_cases": "NOT MET (max 12 per mode, need 20)",
+    "G2_cross_document": "PARTIAL (TOC_NUM_TITLE across 3 docs; others < 3)",
+    "G3_low_fp": "NOT TESTED",
+    "G4_stable_feature": "PARTIAL (P4 v3 has candidates, irreducible FP exists)",
+    "G5_adversarial": "MET (AMB-018, AMB-040 correct)",
+    "G6_inter_reviewer": "NOT MET (single reviewer)",
+    "G7_no_counterexample": "NOT MET (AMB-026 is counterexample)",
+    "G8_regression": "NOT TESTED",
+    "G9_provenance": "MET",
+    "overall": "NOT PASSED (2/9) — no Machine Boundary Promotion allowed"
+  },
+  "future_experiment_priorities": {
+    "R1": "Information Source Attribution Validation — verify IS-01~IS-09 cross-document stability",
+    "R2": "Textual Structure Feature Prototype — verify text_pattern detection replicates Human judgment",
+    "R3": "Cross-document Boundary Mode Analysis — verify same mode is consistent across documents",
+    "R4": "Second Reviewer Experiment — measure inter-reviewer agreement",
+    "R5": "Human-owned Boundary Stability — confirm BODY_CONT is permanent Human-owned",
+    "R6": "Boundary Shrinkage Measurement — measure if shrinkage occurs",
+    "R7": "Machine Boundary Promotion Experiment — verify Category B mode machine-resolvability"
+  },
+  "authorization": {
+    "implementation": "NOT AUTHORIZED",
+    "p7_3": "NOT AUTHORIZED",
+    "p4_v3": "NOT AUTHORIZED (suspended)",
+    "timer_fix": "NOT AUTHORIZED (design only)",
+    "gt_modification": "NOT AUTHORIZED (GT_DISPUTED preserved)",
+    "sample_expansion": "NOT AUTHORIZED",
+    "textual_structure_feature": "NOT AUTHORIZED (design candidate only)",
+    "frozen_baseline": "INTACT"
+  }
+}

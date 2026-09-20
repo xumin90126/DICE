@@ -1,0 +1,25 @@
+{
+  "capability_id": "CAP-TEMP-RANGE",
+  "positive_boundary": {
+    "required_span_types": [
+      "recommended_condition"
+    ],
+    "boundary_reason": "A span is acceptable when it is a recommended/storage condition carrying a temperature unit token (°C or ℃)."
+  },
+  "negative_boundary": {
+    "exclusions": [
+      {
+        "excluded_span_types": [
+          "procedure_excluded",
+          "marketing_excluded"
+        ]
+      }
+    ]
+  },
+  "boundary_constraints": {
+    "required_unit_tokens": [
+      "°C",
+      "℃"
+    ]
+  }
+}

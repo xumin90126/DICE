@@ -1,0 +1,159 @@
+{
+  "package_metadata": {
+    "package_id": "CAP-TABLE-CELL-SEGMENT",
+    "artifact_type": "structural_capability_package",
+    "lifecycle_phase": "IMPLEMENTED",
+    "design_authority": "Human (Phase 26/27/28 design + Phase 29 registration review + Phase 30 implementation authorization)",
+    "registration_status": "NONE",
+    "runtime_authority": "ZERO",
+    "production": false,
+    "frozen_baseline": "INTACT",
+    "provenance": {
+      "contract_freeze": "phase28_table_capability_contract_freeze.md",
+      "registration_review": "phase29_CAP_TABLE_CELL_SEGMENT_registration_review.md",
+      "implementation_authorization": "phase30 implementation authorization"
+    }
+  },
+
+  "identity": {
+    "id": "CAP-TABLE-CELL-SEGMENT",
+    "name": "TableCellSegmentation",
+    "layer": "structural_evidence_acquisition",
+    "description": "L1 STRUCTURAL table capability. Given a Human-confirmed table region and a merged text block (a single table column collapsed into one text block by layout-first PDF slicing), segment the block into individual CELL observations via geometry-only, deterministic row separation. It recovers the per-cell granularity lost during block-level slicing. It performs ZERO semantic association: no header interpretation, no column-meaning inference, no row matching, no cell joining, no fact generation. The L2 semantic layer (which value belongs to which component) remains permanently owned by Human.",
+    "scope": {
+      "problem_space": "Type A table fragmentation: multiple table cells merged into a single text block during PDF block-level text extraction, losing per-cell boundaries.",
+      "vocabulary": {},
+      "note_f3": "table region identification remains Human-assisted (Phase 27 F-3); this capability performs cell segmentation ONLY within a Human-confirmed region."
+    }
+  },
+
+  "strategy": {
+    "input_schema": {
+      "fields": {
+        "table_region_reference": { "type": "str", "required": true, "description": "Human-confirmed table region identity (fact; NOT auto-detected)" },
+        "span_text": { "type": "str", "required": true, "description": "merged block text (raw, newline-separated rows)" },
+        "bbox": { "type": "list[float]", "required": false, "description": "block bounding box [x0, y0, x1, y1]" },
+        "column_index": { "type": "int", "required": false, "description": "Human-confirmed column index of this block (default 0)" }
+      },
+      "constraints": { "min_content_length": 0 }
+    },
+    "output_schema": {
+      "fields": {
+        "table_region_reference": { "type": "str", "required": true },
+        "cell_id": { "type": "str", "required": true },
+        "row_index": { "type": "int", "required": true },
+        "column_index": { "type": "int", "required": true },
+        "raw_text": { "type": "str", "required": true },
+        "bbox": { "type": "list[float]", "required": true }
+      },
+      "forbidden_fields": [
+        "value", "normalized_value", "unit", "product", "property",
+        "relation", "confidence", "semantic_label", "fact", "attribute_name"
+      ]
+    },
+    "execution_strategy": "GEOMETRY-ONLY ROW SEPARATION: split the merged block text by line boundaries (each line = one row = one cell); assign each cell a proportional geometric bbox slice derived from the block bbox. Describes WHAT structural granularity to recover, NOT how to interpret table meaning.",
+    "evidence_requirements": {
+      "min_pattern_matches": 0,
+      "min_content_length": 0,
+      "validation_gate": "cell_count_recovery + six_field_schema + semantic_authority_zero"
+    },
+    "pattern_ids": [],
+    "implementation_ids": []
+  },
+
+  "definition": {
+    "positive_boundary": {
+      "definition": "Deterministic cell segmentation within a Human-confirmed table region: row boundary detection (line split) and merged-cell geometric split (proportional bbox slice). Output is a list of structural cell observations.",
+      "core_structure": "merged block (text + bbox) → per-row cell observations (six structural fields)",
+      "input_forms": ["merged single-column text block", "block bbox", "Human-confirmed table_region_reference"],
+      "output_forms": ["cell_id", "row_index", "column_index", "raw_text", "bbox"],
+      "domain_scope": "L1 structural table geometry (any domain; no semantic vocabulary)"
+    },
+    "negative_boundary": {
+      "exclusions": [
+        {
+          "domain": "Semantic association (value→component matching)",
+          "belongs_to": "Human (L2 semantic layer)",
+          "reason": "Matching a quantity cell to its component name is semantic interpretation, permanently owned by Human."
+        },
+        {
+          "domain": "Header / column meaning inference",
+          "belongs_to": "Human",
+          "reason": "Determining what a column MEANS (e.g. 'Volume', 'Quantity') is semantic, not structural."
+        },
+        {
+          "domain": "Cell joining / row matching",
+          "belongs_to": "Human",
+          "reason": "Joining two cells or matching rows across columns is semantic reconstruction, forbidden."
+        },
+        {
+          "domain": "Fact / value generation",
+          "belongs_to": "GenericExtractor layer capabilities",
+          "reason": "Producing value/unit/normalized facts is extraction-layer work, not structural segmentation."
+        }
+      ]
+    },
+    "activation_rule": {
+      "type": "human_confirmed_region",
+      "trigger": "Human supplies a confirmed table_region_reference and a merged block",
+      "no_doc_class": true,
+      "note": "Activation is a Human-driven observation, NOT a Runtime decision; no automatic table detection."
+    },
+    "conflict_resolution": {
+      "conflicts": [
+        {
+          "rival": "CAP-TABLE-COLLAPSE-RECONSTRUCT / CAP-TABLE-EXTRACT-BASIC / CAP-TABLE-TYPE-CLASSIFY",
+          "resolution": "Orthogonal by LAYER: those three are L2 semantic table capabilities (reconstructed_entries / entries / column_types + confidence); CAP-TABLE-CELL-SEGMENT is L1 structural (cell geometry only, zero semantic authority). No mutual exclusion."
+        }
+      ]
+    },
+    "exclusion_rules": {
+      "hard_exclusions": ["semantic association", "header interpretation", "column meaning inference", "row matching", "cell joining", "fact generation"],
+      "soft_exclusions": []
+    },
+    "validation_criteria": {
+      "primary_metrics": ["cell_count_recovery", "six_field_schema_compliance", "semantic_authority_zero"],
+      "pass_condition": "RA101 15-value block recovers 15 cells; output carries exactly six structural fields; zero semantic fields",
+      "review_questions": [
+        "Does the segmentation recover the correct cell count without semantic interpretation?",
+        "Does each cell observation carry ONLY the six structural fields (no value/unit/fact)?"
+      ]
+    }
+  },
+
+  "evidence": {
+    "status": "PROPOSED",
+    "maturity": "LOW",
+    "maturity_score": 0.0,
+    "source_evidence_ids": [],
+    "source_pattern_ids": [],
+    "documents_tested": ["RA101"],
+    "cross_doc_success_rate": 0.0,
+    "evidence_note": "Evidence is EMPTY at IMPLEMENTED status. Phase 30 establishes the deterministic segmenter and its RA101 validation case; promotion metrics are populated by later verification, NOT hand-hardcoded."
+  },
+
+  "evolution": {
+    "version": 1,
+    "epoch": 1,
+    "previous_version_id": "",
+    "evolution_ids": [],
+    "validation_history": [],
+    "evolution_history": [],
+    "enhancement_signals": []
+  },
+
+  "authority_declaration": {
+    "decision": false,
+    "selection": false,
+    "routing": false,
+    "execution": false,
+    "governance": false,
+    "metrics": false,
+    "recommendation": false,
+    "ranking": false,
+    "score": false,
+    "confidence": false,
+    "priority": false,
+    "authority_increment": "ZERO"
+  }
+}

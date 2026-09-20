@@ -1,0 +1,76 @@
+{
+  "core_cases": [
+    {
+      "case_id": "IS11-AMB-414",
+      "doc": "is11_med_001",
+      "page": 20,
+      "e0_atoms": 363,
+      "e0_ntb": 0,
+      "e0_same_y": true,
+      "e0_h_gap": 18.11212921142578,
+      "a_primitives": 235,
+      "a_nearest_dist": 15.276429443359348,
+      "a_near_count": 149,
+      "b_extents": 1,
+      "b_extent_bbox": [
+        88.45,
+        127.28,
+        526.03,
+        305.95
+      ],
+      "b_dy_below": 34.546429443359386,
+      "b_x_overlap": true,
+      "b_primitive_count": 16,
+      "gain_source": "EXTENT_GAIN",
+      "gain_reason": "The aggregated extent is what makes 'text near drawing as a whole' answerable. Primitives alone show individual proximity but not the overall visual region."
+    },
+    {
+      "case_id": "IS11-AMB-422",
+      "doc": "is11_med_001",
+      "page": 24,
+      "e0_atoms": 214,
+      "e0_ntb": 0,
+      "e0_same_y": true,
+      "e0_h_gap": 10.472763061523438,
+      "a_primitives": 635,
+      "a_nearest_dist": 15.29339400629096,
+      "a_near_count": 208,
+      "b_extents": 1,
+      "b_extent_bbox": [
+        176.83,
+        144.96,
+        469.99,
+        517.0
+      ],
+      "b_dy_below": 54.762451171875,
+      "b_x_overlap": false,
+      "b_primitive_count": 2,
+      "gain_source": "EXTENT_GAIN",
+      "gain_reason": "The aggregated extent is what makes 'text near drawing as a whole' answerable. Primitives alone show individual proximity but not the overall visual region."
+    },
+    {
+      "case_id": "EXT-ARXIV2402-P28",
+      "doc": "arxiv_2402.18619",
+      "page": 28,
+      "e0_atoms": 630,
+      "e0_ntb": 0,
+      "e0_same_y": null,
+      "e0_h_gap": null,
+      "a_primitives": 216,
+      "a_nearest_dist": 5.895315107215501,
+      "a_near_count": 204,
+      "b_extents": 1,
+      "b_extent_bbox": [
+        123.73,
+        77.15,
+        503.18,
+        178.35
+      ],
+      "b_dy_below": -96.03341064453124,
+      "b_x_overlap": true,
+      "b_primitive_count": 12,
+      "gain_source": "EXTENT_GAIN",
+      "gain_reason": "The aggregated extent is what makes 'text near drawing as a whole' answerable. Primitives alone show individual proximity but not the overall visual region."
+    }
+  ]
+}

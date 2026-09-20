@@ -1,0 +1,242 @@
+{
+  "research_question": "When Boundary Detection is established, why does Human still fail to stably decide KEEP_SEPARATE / MERGE?",
+  "cases_analyzed": {
+    "disagreement_cases": [
+      "IS11-AMB-005",
+      "IS11-AMB-375",
+      "IS11-AMB-418",
+      "IS11-AMB-519"
+    ],
+    "unknown_case": [
+      "IS11-AMB-032"
+    ],
+    "clear_comparison": 38,
+    "unsupported_comparison": 2,
+    "total": 45
+  },
+  "boundary_detection_status": {
+    "established": true,
+    "feature": "period_end + cap_start",
+    "discrimination": "4/4 BOUNDARY, 0/38 CLEAR, 0/2 UNSUPPORTED, 0/1 UNKNOWN",
+    "derivable": true,
+    "category": "E3 (Derived from P1 text)",
+    "in_signal_3": false
+  },
+  "boundary_resolution_status": {
+    "status": "PARTIALLY_SUPPORTED",
+    "reason": "Adjudicator resolved all 4 disagreements with deterministic rule (period+cap → KEEP_SEPARATE), but standard was unclear and rule not in Signal 3"
+  },
+  "cause_distribution": {
+    "STANDARD_GAP": {
+      "count": 4,
+      "pct": 80,
+      "cases": [
+        "IS11-AMB-005",
+        "IS11-AMB-375",
+        "IS11-AMB-418",
+        "IS11-AMB-519"
+      ],
+      "detail": "text unit undefined; sentence vs paragraph interpretation; adjudicator resolved with period+cap"
+    },
+    "EVIDENCE_ORGANIZATION_GAP": {
+      "count": 1,
+      "pct": 20,
+      "cases": [
+        "IS11-AMB-032"
+      ],
+      "detail": "TLD correct but table structure not organized for participant"
+    },
+    "EVIDENCE_MISSING": {
+      "count": 0,
+      "detail": "No case requires genuinely missing observation"
+    },
+    "PERSISTENT_SEMANTIC_AMBIGUITY": {
+      "count": 0,
+      "detail": "NOT FOUND — all disagreements resolved by standard clarification + deterministic feature"
+    },
+    "UNKNOWN": {
+      "count": 0
+    }
+  },
+  "human_evidence_dependency": {
+    "disagreement_cases": {
+      "evidence_available": true,
+      "evidence_organized": false,
+      "standard_clear": false,
+      "human_agreement": false,
+      "resolving_feature": "period_end + cap_start (E3, derivable, used by adjudicator)"
+    },
+    "unknown_case_amb032": {
+      "evidence_available": true,
+      "evidence_organized": false,
+      "standard_clear": true,
+      "human_agreement": true,
+      "resolving_feature": "table structure organization (not provided to participant)"
+    }
+  },
+  "reviewer_agreement_analysis": {
+    "q1_same_evidence": true,
+    "q2_different_standards": true,
+    "q3_different_sources": false,
+    "q4_evidence_not_shown": "PARTIAL — period+cap exists in P1 but not computed",
+    "q5_deterministic_composition": true,
+    "q6_boundary_cue_explains": true,
+    "q7_disagreement_persists_if_standard_clear": false,
+    "q8_disagreement_type": "STANDARD_AMBIGUITY — text unit undefined, not semantic ambiguity",
+    "core_finding": "Both reviewers agree on facts (period, capital, same paragraph). They disagree on standard: A=sentence, B=paragraph. Adjudicator chose sentence (period+cap → KEEP_SEPARATE)."
+  },
+  "amb024_vs_amb375": {
+    "amb024_clear": {
+      "text_a": "28.54",
+      "text_b": "10.02",
+      "period_end": false,
+      "cap_start": false,
+      "line_obs": 3,
+      "has_fig": false,
+      "tld": true,
+      "reviewer": "A=B=KEEP"
+    },
+    "amb375_boundary": {
+      "text_a": "[23].",
+      "text_b": "Each",
+      "period_end": true,
+      "cap_start": true,
+      "line_obs": 3,
+      "has_fig": false,
+      "tld": false,
+      "reviewer": "A=KEEP, B=MERGE"
+    },
+    "signal_3_identical": true,
+    "key_difference": "period_end + cap_start (N/N vs Y/Y)",
+    "machine_lacks": "period_end + cap_start feature (E3, derivable, not computed)",
+    "adjudicator_rule": "period+cap → KEEP_SEPARATE (resolved AMB-375)"
+  },
+  "adjudication_analysis": {
+    "all_4_identical_rationale": true,
+    "rationale": "Text_a ends with sentence-ending punctuation and text_b starts with capital — likely separate sentences.",
+    "adjudicator_used": "period_end + cap_start (deterministic E3 feature)",
+    "adjudicator_chose": "sentence = text unit (Reviewer A interpretation)",
+    "consistency": "100% — same rule for all 4 cases",
+    "rule_conflict_check": {
+      "triggers": 4,
+      "correct": 4,
+      "wrong": 0,
+      "false_positive": "0/45"
+    },
+    "stronger_than_signal_3": true,
+    "reason": "RESOLVES boundary (KEEP_SEPARATE), not just detects it"
+  },
+  "minimal_human_question": {
+    "question": "Do these two fragments belong to the same content unit?",
+    "answer_space": [
+      "MERGE",
+      "KEEP_SEPARATE",
+      "UNKNOWN"
+    ],
+    "sufficient": true,
+    "problem": "Content unit (text unit) is UNDEFINED in annotation protocol",
+    "solution": "Clarify standard: text unit = sentence (period + capital delimited)",
+    "note": "Missing is not more buttons, but Evaluation Standard definition"
+  },
+  "human_effort_analysis": {
+    "low_effort_correct": [
+      "AMB-005 (3.4s)",
+      "AMB-519 (2.0s)"
+    ],
+    "high_effort_uncertain": [
+      "AMB-375 (31.3s, UNKNOWN)",
+      "AMB-032 (45.9s, UNKNOWN)"
+    ],
+    "pattern": "High effort cases involved Evidence Reconstruction from geometry fields; participant needed text content + context but only got geometry",
+    "key_insight": "Geometry fields (h_gap, dy, same_style) do not convey sentence boundary or table structure"
+  },
+  "persistent_semantic_ambiguity_check": {
+    "found": false,
+    "evidence_against": [
+      "Adjudicator resolved ALL 4 with deterministic rule (period+cap)",
+      "Adjudicator rationale is IDENTICAL for all 4 cases",
+      "Both reviewers agree on facts (period, capital, same paragraph)",
+      "Counterfactual: if standard clear, disagreement disappears",
+      "Resolving feature is E3 (derivable), not E5 (semantic)"
+    ],
+    "conclusion": "NOT_FOUND — all disagreements are STANDARD_GAP, resolvable by standard clarification + deterministic feature"
+  },
+  "learning_signal_candidates": {
+    "adjudicator_rule": {
+      "rule": "period_end + cap_start → KEEP_SEPARATE",
+      "evidence_grounded": true,
+      "human_validated": true,
+      "info_gain": ">0 (resolves 4/4 disagreements)",
+      "cross_case": "4 cases, 3 documents",
+      "consistent": true,
+      "false_positive": "0/45",
+      "l3_signal_candidate": true,
+      "l4_reusable_signal": false,
+      "reason_not_l4": "n=4, no future cases, not in Signal 3, no measured HRR"
+    },
+    "signal_3_retained": {
+      "status": "L3_CANDIDATE (retained)",
+      "reason": "38/38 CLEAR correct, but BOUNDARY_OVERCOMMIT"
+    }
+  },
+  "document_discourse_needed": false,
+  "llm_needed": false,
+  "new_observation_needed": false,
+  "new_architecture_needed": false,
+  "what_is_missing": {
+    "primary": "Evaluation Standard — text unit undefined in annotation protocol",
+    "secondary": "Evidence Organization — period+cap not computed; table structure not organized for AMB-032",
+    "not_missing": [
+      "Observation (all in P1)",
+      "Semantic Interpretation (deterministic rule works)",
+      "LLM (not needed)",
+      "Architecture (not needed)"
+    ]
+  },
+  "final_questions": {
+    "q1_boundary_detection_vs_resolution": "Detection = period+cap (deterministic, E3). Resolution = KEEP/MERGE; needs standard clarification; once clear, also deterministic.",
+    "q2_disagreement_source": "STANDARD_GAP (4/4) — text unit undefined; EVIDENCE_ORGANIZATION_GAP (AMB-032) — table structure not organized.",
+    "q3_need_higher_semantic": "NO — adjudicator used deterministic string checks.",
+    "q4_need_discourse": "NO — local text features (period, capital) sufficient.",
+    "q5_need_llm": "NO — all resolution via deterministic string checks.",
+    "q6_what_missing": "Primary: Evaluation Standard. Secondary: Evidence Organization.",
+    "q7_persistent_semantic": "NO — NOT_FOUND. All disagreements resolved by standard + deterministic feature.",
+    "q8_l3_signal_candidate": "YES — adjudicator rule (period+cap → KEEP_SEPARATE) is evidence-grounded + human-validated.",
+    "q9_next_step": "C (clarify standard) primary, B (compute period+cap) secondary, E (expand corpus) tertiary."
+  },
+  "final_status": "PARTIALLY_SUPPORTED",
+  "next_research_route": {
+    "primary": "C. Increase Evaluation / GT Standard — define text unit (sentence vs paragraph)",
+    "secondary": "B. Minimal Deterministic Derivation — compute period+cap (retrospective, not implemented)",
+    "tertiary": "E. Expand Independent Corpus — validate adjudicator rule on future cases",
+    "constraints": [
+      "Cannot modify Signal 3",
+      "Cannot implement",
+      "Cannot modify GT",
+      "Need future independent cases for L4"
+    ]
+  },
+  "governance": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "SIGNAL_MODIFICATION": false,
+    "LLM": false,
+    "NEW_MODULE": false,
+    "RUNTIME_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "FROZEN_EXPERIMENT": "INTACT",
+    "FORMAL_EXPERIMENT": "NOT_STARTED",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  },
+  "stop": true
+}

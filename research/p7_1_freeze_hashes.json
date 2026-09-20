@@ -1,0 +1,12 @@
+{
+  "freeze_name": "P7.1 StructureHypothesis Foundation — ACCEPTED / FROZEN",
+  "frozen_at": "2025-09-08",
+  "files": {
+    "perception/sandbox/structure/structure_config.py": "6924631dc6fa01b5b4d003c13da72a312fb66a6879b3ad68487b79a2061701fb",
+    "perception/sandbox/structure/structure_relation.py": "95719a919bebd89bcf0317d1203001a90d04ec9be3b297cb59a68e1af198c157",
+    "perception/sandbox/structure/structure_hypothesis.py": "a2f3bd9c8dff771b3f955766b8316470bbd6c627831186cec1b5565eb89c0a21",
+    "perception/sandbox/structure/structure_engine.py": "7512167fa1689d92c983b4727aa5d7007b60d0b912233a59fef217c264e37ca5",
+    "perception/sandbox/structure/__init__.py": "3e90a7d68c7ed9bc93364ac2fb6e26a285dd61b97dbc6ac05b5a71b4b943de1e",
+    "perception/sandbox/p7_runner.py": "d5f18439969a74c2e90c36c43ff3baae73aa6d825e986bd6a5f9aa60ed6cafab"
+  }
+}

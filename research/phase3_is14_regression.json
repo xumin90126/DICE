@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "phase": "Phase 3 \u2014 IS-14 (BLOCKED at G-C1)",
+    "check": "Frozen baseline regression verification at stop point (G-S5-equivalent)",
+    "timestamp": "2026-09-10T13:56:07",
+    "method": "independent SHA-256 verification (not runner self-report)"
+  },
+  "checks": {
+    "P7.1_drift": 0,
+    "P7.2_drift": 0,
+    "GT_sha_unchanged": true,
+    "Stage4_sealed_unchanged": true,
+    "table_line_detector_unchanged": true,
+    "P4_span_config_values_present": true,
+    "phase1_report_present": true,
+    "phase2_report_present": true
+  },
+  "phase3_experiment_only_files": [
+    "tmp/phase3_is14_corpus_manifest.json",
+    "tmp/phase3_is14_candidate_universe.json",
+    "tmp/phase3_is14_sampling_manifest.json",
+    "tmp/phase3_is14_gc1_count.json",
+    "tmp/phase3_is14_generate_candidates.py",
+    "tmp/phase3_is14_sampling.py",
+    "tmp/phase3_is14_observer.py",
+    "tmp/phase3_is14_gc1_count.py"
+  ],
+  "production_files_modified": 0,
+  "frozen_baseline_intact": true
+}

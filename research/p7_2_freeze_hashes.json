@@ -1,0 +1,33 @@
+{
+  "phase": "P7.2 Human Validation Infrastructure (Priority 0)",
+  "frozen_at": "2026-09-08T13:17:00Z",
+  "files": {
+    "perception/sandbox/validation/__init__.py": "3aee6c93c0e6c4869651fdf482693361cc98133bd13c660696ccb8222c477d0b",
+    "perception/sandbox/validation/validation_config.py": "953796045a3ade5ca5707872c3ed0901d3ca9ad822244a13a2c3247f078de71f",
+    "perception/sandbox/validation/validation_models.py": "8bdcbcc0c530ae009505662d78e6e333604e57f0fede5f162862e43933075128",
+    "perception/sandbox/validation/validation_engine.py": "2d9204dedccacb6fde23ad836df8899cc9710556ecfa9bc3de75b76eacdcda49",
+    "perception/sandbox/validation/review_interface.py": "7b447fed80bed07043a1f8f622d7d92a19f2c20c90a172f2432e12275fbe3816",
+    "perception/sandbox/validation/validation_tests.py": "b7075e2afe096a37fdb130e3092ce45711455c633ff7f7dc1afe2b0189837f68",
+    "perception/sandbox/p7_2_runner.py": "b8e965cf37d7120afff6ddba8d9359ebb0140d52a8eb023b850db03c9a1f3be6",
+    "perception/sandbox/p7_2_apply_decisions.py": "d52090a8e0247615f2048d20f58b7d0f9e8c42f9082708cbb760946fc495dec3"
+  },
+  "calibration_dataset": "tmp/perception/p7/p7_2_calibration/",
+  "round1_summary": {
+    "total_tasks": 33,
+    "human_completed": 33,
+    "ACCEPT": 1,
+    "REJECT": 32,
+    "NEED_REVIEW": 0,
+    "validated_evidence_count": 1,
+    "validation_completion_rate": 1.0,
+    "acceptance_rate": 3.0,
+    "rejection_rate": 97.0,
+    "need_review_rate": 0.0,
+    "mean_duration_seconds": 1e-06,
+    "median_duration_seconds": 0.0,
+    "p95_duration_seconds": 0.0,
+    "reviewer": "ai_assisted_round1",
+    "review_method": "AI-assisted per-candidate reasoned judgment (not auto-accept, not batch fabrication)",
+    "duration_note": "measured via time.monotonic() per candidate during actual processing; AI-assisted review durations (not human-terminal wall-clock)"
+  }
+}

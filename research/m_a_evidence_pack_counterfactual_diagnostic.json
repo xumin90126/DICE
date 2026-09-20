@@ -1,0 +1,235 @@
+{
+  "task": "M-A Evidence Pack Counterfactual Diagnostic",
+  "mode": "READ-ONLY DIAGNOSTIC / NO MODIFICATION",
+  "date": "2026-09-17",
+  "e0_reconstruction": {
+    "method": "OLD_LOGIC_RECONSTRUCTION",
+    "description": "No git history or backup. Reconstructed by replicating original generate_data.py logic (±3pt, hardcoded empty context for negatives, extent=None for Type A, no evidence_state field).",
+    "bias_risk": "LOW",
+    "case_alignment": "PERFECT (79 = 79, no mismatches)",
+    "inputs_unchanged": "P1, DGF, DEF all frozen (same sha16 as during E0 Pilot)"
+  },
+  "comparison_scope": {
+    "total_cases": 79,
+    "case_types_covered": ["caption_like", "ambiguous_fragment", "subfigure_label", "reference_like", "Type_A_negative", "Type_B_negative"],
+    "case_id_alignment": "PERFECT"
+  },
+  "overall_change_distribution": {
+    "UNCHANGED": 52,
+    "EVIDENCE_ADDED": 16,
+    "EVIDENCE_CORRECTED": 11
+  },
+  "focus_areas": {
+    "negative_control_context": {
+      "e0_with_context": 0,
+      "e1_with_context": 16,
+      "gap_type": "EVIDENCE_COLLECTION_GAP",
+      "status": "RESOLVED"
+    },
+    "drawing_extent_presentation": {
+      "false_none_cases": 3,
+      "case_ids": [
+        "is11_efficientnet_p4_66_331",
+        "is11_med_001_p15_498_107",
+        "arxiv_2402.18619_p10_72_729"
+      ],
+      "gap_type": "EVIDENCE_PRESENTATION_GAP",
+      "status": "RESOLVED"
+    },
+    "same_y_threshold": {
+      "e0_threshold": "±3pt",
+      "e1_threshold": "±5pt",
+      "cases_gained_atoms": 16,
+      "critical_max_case": {
+        "case_id": "is11_med_001_p15_244_342",
+        "e0_atoms": 0,
+        "e1_atoms": 5
+      },
+      "gap_type": "EVIDENCE_COLLECTION_GAP",
+      "status": "RESOLVED"
+    },
+    "evidence_state": {
+      "e0_states": "NONE (no evidence_state field; extent=None conflated 3 states)",
+      "e0_none_breakdown": {
+        "PRIMITIVES_NO_EXTENT": 3,
+        "EXTENT_EXISTS": 3,
+        "NO_VISUAL_EVIDENCE": 2
+      },
+      "e1_states": {
+        "EXTENT_EXISTS": 74,
+        "PRIMITIVES_NO_EXTENT": 3,
+        "NO_VISUAL_EVIDENCE": 2
+      },
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "status": "RESOLVED"
+    }
+  },
+  "document_reconstruction_burden": {
+    "e0_distribution": {
+      "level_0": 60,
+      "level_1": 11,
+      "level_2": 0,
+      "level_3": 8,
+      "level_4": 0
+    },
+    "e1_distribution": {
+      "level_0": 70,
+      "level_1": 4,
+      "level_2": 5,
+      "level_3": 0,
+      "level_4": 0
+    },
+    "improved": 15,
+    "regressed": 0,
+    "unchanged": 64,
+    "level_3_eliminated": true,
+    "level_0_increased": true,
+    "regression_detected": false
+  },
+  "minimum_sufficient_evidence": {
+    "e0_coverage": {
+      "target_text": "79/79 (100%)",
+      "nearest_drawing_extent": "71/79 (89.9%)",
+      "spatial_relation": "71/79 (89.9%)",
+      "same_y_context": "63/79 (79.7%)",
+      "evidence_state": "0/79 (0%)"
+    },
+    "e1_coverage": {
+      "target_text": "79/79 (100%)",
+      "nearest_drawing_extent": "74/79 (93.7%)",
+      "spatial_relation": "74/79 (93.7%)",
+      "same_y_context": "79/79 (100%)",
+      "evidence_state": "79/79 (100%)"
+    },
+    "status": "SUPPORTED",
+    "complete_pack_cases": 74,
+    "incomplete_pack_cases": 5,
+    "incomplete_reason": "genuine DEF=0 (no extent on page)",
+    "note": "Evidence Sufficient ≠ Association True"
+  },
+  "semantic_boundary_audit": {
+    "uncertain_total": 14,
+    "pack_complete_uncertain": {
+      "count": 8,
+      "case_ids": [
+        "arxiv_2402.18619_p15_498_182",
+        "is11_efficientnet_p4_66_331",
+        "arxiv_2402.18619_p19_147_496",
+        "arxiv_2402.18619_p26_327_253",
+        "is11_resnet_p4_464_620",
+        "is11_med_001_p15_498_107",
+        "is11_efficientnet_p6_79_415",
+        "is11_med_001_p15_244_342"
+      ],
+      "status": "POSSIBLE_SEMANTIC_BOUNDARY",
+      "caveat": "Judged UNCERTAIN under E0 (incomplete Pack). Cannot confirm without re-evaluation under E1."
+    },
+    "pack_incomplete_uncertain": {
+      "count": 6,
+      "case_ids": [
+        "is11_efficientnet_p3_319_69",
+        "is11_med_001_p18_325_655",
+        "is11_efficientnet_p2_158_372",
+        "is11_resnet_p7_321_545",
+        "arxiv_2402.18619_p11_72_651",
+        "arxiv_2402.18619_p18_346_73"
+      ],
+      "status": "EVIDENCE_INSUFFICIENT (not semantic boundary)"
+    },
+    "confirmed_semantic_boundary": 0,
+    "possible_semantic_boundary": 8,
+    "not_semantic_boundary": 6
+  },
+  "negative_control_audit": {
+    "type_a": {
+      "total": 8,
+      "e0_with_context": 0,
+      "e1_with_context": 8,
+      "e0_with_extent": 0,
+      "e1_with_extent": 3,
+      "e1_evidence_state_breakdown": {
+        "EXTENT_EXISTS": 3,
+        "PRIMITIVES_NO_EXTENT": 3,
+        "NO_VISUAL_EVIDENCE": 2
+      },
+      "human_judgment_distribution_under_e0": {
+        "YES": 1,
+        "NO": 0,
+        "UNCERTAIN": 7
+      }
+    },
+    "type_b": {
+      "total": 8,
+      "e0_with_context": 0,
+      "e1_with_context": 8,
+      "e0_with_extent": 8,
+      "e1_with_extent": 8,
+      "human_judgment_distribution_under_e0": {
+        "YES": 4,
+        "NO": 0,
+        "UNCERTAIN": 4
+      }
+    },
+    "note": "Human judgment distribution, not machine FPR. Judgments made under E0."
+  },
+  "cross_case_patterns": [
+    {
+      "pattern": "A",
+      "name": "Evidence Present but Not Presented",
+      "cases": 3,
+      "cause": "60pt used for both candidate generation AND pack inclusion",
+      "status": "RESOLVED"
+    },
+    {
+      "pattern": "B",
+      "name": "Context Collection Disabled for Negatives",
+      "cases": 16,
+      "cause": "Hardcoded context_text='' for negatives",
+      "status": "RESOLVED"
+    },
+    {
+      "pattern": "C",
+      "name": "Extent Availability Conflated",
+      "cases": 8,
+      "cause": "No evidence_state field; binary extent_bbox",
+      "status": "RESOLVED"
+    },
+    {
+      "pattern": "D",
+      "name": "SAME_Y ±3pt Too Narrow",
+      "cases": 16,
+      "cause": "±3pt threshold insufficient for fine-grained P1 atoms",
+      "status": "RESOLVED"
+    }
+  ],
+  "regression_check": {
+    "evidence_pack_regression": "NONE",
+    "fields_lost": 0,
+    "fields_gained_or_improved": 27,
+    "description": "Every E0 field value is preserved or improved in E1"
+  },
+  "research_question_answers": {
+    "RQ1": "YES. 27/79 cases (34.2%) gained or corrected Evidence.",
+    "RQ2": "same_y context (16 negatives), nearest extent (3 Type A), ±5pt atoms (16 cases), evidence_state (79 cases).",
+    "RQ3": "Collection Gap (32), Presentation Gap (3), Organization Gap (8). All resolved.",
+    "RQ4": "YES. E1 coverage: TARGET_TEXT 100%, NEAREST_DRAWING_EXTENT 93.7%, SPATIAL_RELATION 93.7%, SAME_Y_CONTEXT 100%, EVIDENCE_STATE 100%.",
+    "RQ5": "POSSIBLE. 8 UNCERTAIN cases now have complete E1 Pack. But judged under E0. Cannot confirm without re-evaluation."
+  },
+  "conclusion": "EVIDENCE_PACK_IMPROVEMENT_SUPPORTED",
+  "conclusion_rationale": "E1 resolves all 4 systematic Evidence Gaps. Burden reduced for 15/79 cases with 0 regressions. Level 3 eliminated. Minimum Sufficient Evidence supported for 74/79 cases. No regression. No semantic leakage.",
+  "governance": {
+    "implementation_authorized": false,
+    "experiment_authorized": false,
+    "human_validation_authorized": false,
+    "human_feedback": "NOT_AUTHORIZED",
+    "l3": "NOT_AUTHORIZED",
+    "capability": "NOT_AUTHORIZED",
+    "runtime": "NOT_AUTHORIZED",
+    "production": false,
+    "frozen_baseline": "INTACT",
+    "frozen_baseline_drift": 0,
+    "human_data_modified": false,
+    "m_a_algorithm_modified": false,
+    "stop": true
+  }
+}

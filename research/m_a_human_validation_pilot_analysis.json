@@ -1,0 +1,140 @@
+{
+  "status": "COMPLETE",
+  "unique_cases": 79,
+  "review_events": 80,
+  "final_judgments": 79,
+  "yes": 61,
+  "no": 4,
+  "uncertain": 14,
+  "coverage_pct": 100,
+  "revision_count": 1,
+  "n_humans": 1,
+  "single_rater_pilot": true,
+  "inter_rater_agreement": "NOT_AVAILABLE",
+  "hypothesis_assessment": {
+    "H1_human_review_object": "SUPPORTED",
+    "H2_high_value_candidate_space": "SUPPORTED",
+    "H3_uncertainty_semantic_boundary": "NOT_SUPPORTED",
+    "H4_fig_prefix_reduction_cue": "SUPPORTED"
+  },
+  "crosstab": {
+    "caption_like": {
+      "n": 39,
+      "yes": 39,
+      "no": 0,
+      "uncertain": 0
+    },
+    "ambiguous_fragment": {
+      "n": 19,
+      "yes": 12,
+      "no": 4,
+      "uncertain": 3
+    },
+    "subfigure_label": {
+      "n": 4,
+      "yes": 4,
+      "no": 0,
+      "uncertain": 0
+    },
+    "reference_like": {
+      "n": 1,
+      "yes": 1,
+      "no": 0,
+      "uncertain": 0
+    },
+    "Type_A_negative": {
+      "n": 8,
+      "yes": 1,
+      "no": 0,
+      "uncertain": 7
+    },
+    "Type_B_negative": {
+      "n": 8,
+      "yes": 4,
+      "no": 0,
+      "uncertain": 4
+    }
+  },
+  "association_validity": {
+    "numerator": 56,
+    "denominator": 63,
+    "value_pct": 88.9,
+    "formula": "candidate_YES / candidate_total",
+    "name": "Candidate Association Confirmation Rate"
+  },
+  "negative_control_metrics": {
+    "total": 16,
+    "yes": 5,
+    "no": 0,
+    "uncertain": 11,
+    "fpr_pct": 31.2,
+    "fpr_formula": "YES / neg_total (includes UNCERTAIN)",
+    "fpr_excl_unc_pct": 100.0,
+    "fpr_excl_unc_formula": "YES / (YES + NO) (excludes UNCERTAIN, n=5)",
+    "negative_control_validated": false,
+    "semantic_negative_gt": "NOT_ESTABLISHED"
+  },
+  "boundary_rate": {
+    "numerator": 14,
+    "denominator": 79,
+    "value_pct": 17.7,
+    "formula": "UNCERTAIN / unique_cases"
+  },
+  "uncertain_classification": {
+    "total": 14,
+    "evidence_insufficiency_no_extent": 7,
+    "evidence_insufficiency_short_text": 2,
+    "evidence_insufficiency_total": 9,
+    "evidence_insufficiency_pct": 64,
+    "possible_semantic_boundary_fig_fragment": 3,
+    "possible_semantic_boundary_non_fig_text": 2,
+    "possible_semantic_boundary_total": 5,
+    "possible_semantic_boundary_pct": 36,
+    "unknown": 0
+  },
+  "spatial_evidence_by_judgment": {
+    "yes": {
+      "n": 61,
+      "distance_median_pt": 18.4,
+      "below_pct": 74,
+      "x_overlap_true_pct": 80
+    },
+    "no": {
+      "n": 4,
+      "distance_median_pt": 25.5,
+      "below_pct": 75,
+      "x_overlap_true_pct": 75
+    },
+    "uncertain": {
+      "n": 14,
+      "distance_median_pt": 38.4,
+      "no_extent_count": 7,
+      "x_overlap_false_pct": 71
+    }
+  },
+  "document_distribution": {
+    "arxiv_2402.18619": 31,
+    "is11_med_001": 15,
+    "is11_efficientnet": 15,
+    "is11_resnet": 14,
+    "is11_cs_001": 4,
+    "document_type": "arxiv scientific papers only",
+    "cross_document_generalization": "CONDITIONAL"
+  },
+  "g9_acceptance_criteria": {
+    "metrics_designed": true,
+    "metrics_measured_in_pilot": "5 of 7",
+    "thresholds_pre_registered": false,
+    "status": "NEEDS_PRE_REGISTRATION"
+  },
+  "full_experiment_ready": "CONDITIONAL",
+  "machine_accuracy": "NOT_MEASURED",
+  "algorithm_modified": false,
+  "human_data_modified": false,
+  "frozen_baseline_drift": 0,
+  "human_feedback": "NOT_AUTHORIZED",
+  "l3": "NOT_AUTHORIZED",
+  "capability": "NOT_AUTHORIZED",
+  "runtime": "NOT_AUTHORIZED",
+  "stop": true
+}

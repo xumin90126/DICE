@@ -1,0 +1,196 @@
+{
+  "tier1_count": 18,
+  "tier2_count": 15,
+  "tier3_count": 130,
+  "tier4_count": 29,
+  "total": 192,
+  "mixed_configs": 3,
+  "mixed_cases": 12,
+  "tier1_cases": [
+    {
+      "case_id": "is11_efficientnet_p8_328_261",
+      "case_type": "Type_B_negative",
+      "dep": "True",
+      "judgment": "yes"
+    },
+    {
+      "case_id": "arxiv_2402.18619_p17_184_561",
+      "case_type": "Type_B_negative",
+      "dep": "True",
+      "judgment": "yes"
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_457_234",
+      "case_type": "ambiguous_fragment",
+      "dep": "True",
+      "judgment": "yes"
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_479_214",
+      "case_type": "ambiguous_fragment",
+      "dep": "True",
+      "judgment": "yes"
+    },
+    {
+      "case_id": "is11_cs_001_p5_292_225",
+      "case_type": "Type_B_negative",
+      "dep": "True",
+      "judgment": "yes"
+    },
+    {
+      "case_id": "is11_efficientnet_p6_511_629",
+      "case_type": "ambiguous_fragment",
+      "dep": "True",
+      "judgment": "yes"
+    },
+    {
+      "case_id": "arxiv_2402.18619_p10_132_629",
+      "case_type": "ambiguous_fragment",
+      "dep": "True",
+      "judgment": "yes"
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_256_214",
+      "case_type": "ambiguous_fragment",
+      "dep": "True",
+      "judgment": "yes"
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_339_297",
+      "case_type": "ambiguous_fragment",
+      "dep": "True",
+      "judgment": "no"
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_432_93",
+      "case_type": "ambiguous_fragment",
+      "dep": "True",
+      "judgment": "yes"
+    },
+    {
+      "case_id": "arxiv_2402.18619_p10_183_252",
+      "case_type": "ambiguous_fragment",
+      "dep": "True",
+      "judgment": "yes"
+    },
+    {
+      "case_id": "is11_efficientnet_p4_188_461",
+      "case_type": "ambiguous_fragment",
+      "dep": "True",
+      "judgment": "no"
+    },
+    {
+      "case_id": "is11_resnet_p4_320_146",
+      "case_type": "ambiguous_fragment",
+      "dep": "True",
+      "judgment": "yes"
+    },
+    {
+      "case_id": "is11_resnet_p5_359_225",
+      "case_type": "ambiguous_fragment",
+      "dep": "True",
+      "judgment": "no"
+    },
+    {
+      "case_id": "is11_resnet_p1_435_316",
+      "case_type": "Type_B_negative",
+      "dep": "True",
+      "judgment": "yes"
+    },
+    {
+      "case_id": "is11_resnet_p1_412_338",
+      "case_type": "ambiguous_fragment",
+      "dep": "True",
+      "judgment": "yes"
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_83_745",
+      "case_type": "ambiguous_fragment",
+      "dep": "True",
+      "judgment": "yes"
+    },
+    {
+      "case_id": "is11_med_001_p15_261_316",
+      "case_type": "ambiguous_fragment",
+      "dep": "True",
+      "judgment": "yes"
+    }
+  ],
+  "tier2_cases": [
+    {
+      "case_id": "is11_efficientnet_p4_55_218",
+      "case_type": "caption_like",
+      "dep": "True"
+    },
+    {
+      "case_id": "is11_efficientnet_p8_55_213",
+      "case_type": "caption_like",
+      "dep": "True"
+    },
+    {
+      "case_id": "is11_med_001_p13_85_307",
+      "case_type": "caption_like",
+      "dep": "True"
+    },
+    {
+      "case_id": "is11_med_001_p16_85_484",
+      "case_type": "caption_like",
+      "dep": "True"
+    },
+    {
+      "case_id": "is11_resnet_p8_50_328",
+      "case_type": "caption_like",
+      "dep": "True"
+    },
+    {
+      "case_id": "is11_efficientnet_p8_307_390",
+      "case_type": "caption_like",
+      "dep": "True"
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_207_82",
+      "case_type": "subfigure_label",
+      "dep": "True"
+    },
+    {
+      "case_id": "is11_resnet_p4_309_134",
+      "case_type": "reference_like",
+      "dep": "True"
+    },
+    {
+      "case_id": "is11_efficientnet_p7_55_455",
+      "case_type": "caption_like",
+      "dep": "True"
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_458_160",
+      "case_type": "subfigure_label",
+      "dep": "True"
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_152_82",
+      "case_type": "subfigure_label",
+      "dep": "True"
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_152_95",
+      "case_type": "subfigure_label",
+      "dep": "True"
+    },
+    {
+      "case_id": "is11_med_001_p14_85_386",
+      "case_type": "caption_like",
+      "dep": "True"
+    },
+    {
+      "case_id": "is11_med_001_p24_85_572",
+      "case_type": "caption_like",
+      "dep": "True"
+    },
+    {
+      "case_id": "is11_cs_001_p1_108_651",
+      "case_type": "caption_like",
+      "dep": "True"
+    }
+  ]
+}

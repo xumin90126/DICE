@@ -1,0 +1,10 @@
+{
+  "max_horizontal_gap": 8.0,
+  "max_vertical_gap": 14.0,
+  "same_line_tolerance": 3.0,
+  "style_transition_tolerance": 0.0,
+  "cross_column_gap_threshold": 30.0,
+  "overlap_tolerance": 0.5,
+  "page_boundary_policy": "BLOCK_CROSS_PAGE",
+  "construction_version": "v2"
+}

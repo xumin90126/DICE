@@ -1,0 +1,34 @@
+{
+  "candidate_count_original": 126,
+  "candidate_count_deduplicated": 63,
+  "duplicate_inflation_rate": "50%",
+  "deduplicated_breakdown": {
+    "caption_pattern": 39,
+    "reference_pattern": 1,
+    "subfigure_label": 4,
+    "ambiguous_fragment": 19
+  },
+  "negative_type_a_original": 280,
+  "negative_type_a_deduplicated": 154,
+  "negative_type_b_original": 9257,
+  "negative_type_b_deduplicated": 6330,
+  "vertical_ordering_dedup": {
+    "below": 34,
+    "below_pct": 83,
+    "above": 2,
+    "above_pct": 5,
+    "inside": 5,
+    "inside_pct": 12,
+    "distance_range": [
+      2.5,
+      55.2
+    ],
+    "distance_median": 22.9
+  },
+  "g2_finding": {
+    "p1_coarse_atoms_contain_caption_pattern": true,
+    "p1_modification_required": "NOT_REQUIRED",
+    "failure_taxonomy": "NOT_A_NOT_C (P1 records information; issue was analysis methodology)",
+    "coarse_level_reference_detection": "PARTIALLY_AVAILABLE (lexical pattern: colon/period vs parenthesis/comma)"
+  }
+}

@@ -1,0 +1,455 @@
+{
+  "experiment_type": "evidence_distillation_effort_reduction",
+  "design_version": "v2_corrected",
+  "design_date": "2026-09-12 (corrected)",
+  "read_only": true,
+  "design_only": true,
+  "correction_basis": "tmp/l5_evidence_distillation_preimplementation_audit.md — 3 HIGH blocking issues resolved",
+  "governance": {
+    "CODE_MODIFICATION": 0,
+    "UI_MODIFICATION": 0,
+    "DATA_MUTATION": 0,
+    "GT_MODIFICATION": 0,
+    "TLD_MODIFICATION": 0,
+    "ATOMIC_MODIFICATION": 0,
+    "AGGREGATION_MODIFICATION": 0,
+    "COMPRESSION_MODIFICATION": 0,
+    "CAPABILITY_REGISTRY_MODIFICATION": 0,
+    "RUNTIME_MODIFICATION": 0,
+    "NEW_PRIMITIVE": 0,
+    "NEW_CONTRACT": 0,
+    "NEW_ARCHITECTURE": 0,
+    "PATTERN_ENGINE": 0,
+    "FEEDBACK_ENGINE": 0,
+    "LEARNING_ENGINE": 0,
+    "SIGNAL_ENGINE": 0,
+    "ML_TRAINING": 0,
+    "LLM_FINE_TUNING": 0,
+    "IMPLEMENTATION_REQUIRED": true,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "PRODUCTION": false,
+    "RUNTIME_AUTHORITY": "ZERO",
+    "CAPABILITY_REGISTRATION": "HUMAN_CONTROLLED",
+    "ITERATIVE_LEARNING": "INSUFFICIENT_EVIDENCE",
+    "STOP": true
+  },
+  "research_question": "Can better distillation of already-existing evidence reduce Human effort without reducing decision quality or increasing automation/authority risk?",
+  "what_this_is": "Single-round, three-condition comparison: A (full) / B1 (reduced, no cue) / B2 (reduced + cue)",
+  "corrections_applied": [
+    "Correction 1: 3-condition design (A / B1 / B2) — resolves attribution confound",
+    "Correction 2: same_style HIDDEN_NOT_DELETED (progressive disclosure) — resolves Class M loss",
+    "Correction 3: Automation bias redesign (WCAR/COR/EIR/CFR, no threshold) — resolves invalid measurement",
+    "Correction 4: Case composition (add N/B/S/U cases, reclassify AMB-414/422) — resolves incomplete corpus",
+    "Correction 5: Statistical language (expected-direction, not significant) — resolves premature claims",
+    "Correction 6: Latin Square 3-group counterbalancing — resolves 3-condition learning effect"
+  ],
+  "three_condition_design": {
+    "condition_a": {
+      "fields": 15,
+      "cues": 0,
+      "description": "Full evidence baseline"
+    },
+    "condition_b1": {
+      "fields": 8,
+      "cues": 0,
+      "description": "Reduced evidence, no cue — isolates Information Reduction"
+    },
+    "condition_b2": {
+      "fields": 8,
+      "cues": 4,
+      "description": "Reduced evidence + cue — isolates Evidence Distillation"
+    },
+    "evidence_equality": "Underlying_Evidence(A) == Underlying_Evidence(B1) == Underlying_Evidence(B2)"
+  },
+  "attribution_logic": {
+    "primary_comparison": "B1 vs B2 (isolates Evidence Distillation effect)",
+    "secondary_1": "A vs B1 (isolates Information Reduction effect)",
+    "secondary_2": "A vs B2 (measures overall improvement)",
+    "interpretation_matrix": {
+      "A>B1, B1≈B2": "Mainly Information Reduction; Cue adds no value",
+      "A>B1, B1>B2": "Both Reduction AND Distillation contribute",
+      "A≈B1, B1>B2": "Most valuable: Cue provides value field reduction cannot",
+      "B2_faster_but_quality_down": "NOT success — automation bias or quality loss"
+    },
+    "strict_distinction": "Information Reduction (A→B1) ≠ Evidence Distillation (B1→B2)"
+  },
+  "information_equivalence": {
+    "fields_total": 15,
+    "retained": 7,
+    "re_expressed": 2,
+    "hidden_not_deleted": 6,
+    "lost": 0,
+    "class_h_lost": 0,
+    "class_m_lost": 0,
+    "class_l_lost": 0,
+    "same_style_status": "HIDDEN_NOT_DELETED (progressive disclosure in B1 and B2)",
+    "verdict": "PASS — no information lost, all hidden fields available via progressive disclosure",
+    "mapping": [
+      {
+        "field": "text_a",
+        "class": "H",
+        "a": "shown",
+        "b1": "shown",
+        "b2": "shown",
+        "status": "RETAINED"
+      },
+      {
+        "field": "text_b",
+        "class": "H",
+        "a": "shown",
+        "b1": "shown",
+        "b2": "shown",
+        "status": "RETAINED"
+      },
+      {
+        "field": "page_image",
+        "class": "H",
+        "a": "shown",
+        "b1": "shown",
+        "b2": "shown",
+        "status": "RETAINED"
+      },
+      {
+        "field": "A/B_highlight",
+        "class": "H",
+        "a": "shown",
+        "b1": "shown",
+        "b2": "shown",
+        "status": "RETAINED"
+      },
+      {
+        "field": "line_spans",
+        "class": "H",
+        "a": "shown",
+        "b1": "shown",
+        "b2": "shown",
+        "status": "RETAINED"
+      },
+      {
+        "field": "line_obs_count",
+        "class": "M",
+        "a": "shown",
+        "b1": "shown",
+        "b2": "shown+Cue3",
+        "status": "RE-EXPRESSED"
+      },
+      {
+        "field": "h_gap",
+        "class": "M",
+        "a": "shown",
+        "b1": "hidden(pd)",
+        "b2": "hidden(pd)+Cue2",
+        "status": "RE-EXPRESSED"
+      },
+      {
+        "field": "same_style",
+        "class": "M",
+        "a": "shown",
+        "b1": "hidden(pd)",
+        "b2": "hidden(pd)",
+        "status": "HIDDEN_NOT_DELETED"
+      },
+      {
+        "field": "doc_id",
+        "class": "L",
+        "a": "shown",
+        "b1": "shown",
+        "b2": "shown",
+        "status": "RETAINED"
+      },
+      {
+        "field": "page_number",
+        "class": "L",
+        "a": "shown",
+        "b1": "shown",
+        "b2": "shown",
+        "status": "RETAINED"
+      },
+      {
+        "field": "dy",
+        "class": "L",
+        "a": "shown",
+        "b1": "hidden(pd)",
+        "b2": "hidden(pd)",
+        "status": "HIDDEN_NOT_DELETED"
+      },
+      {
+        "field": "width_a",
+        "class": "L",
+        "a": "shown",
+        "b1": "hidden(pd)",
+        "b2": "hidden(pd)",
+        "status": "HIDDEN_NOT_DELETED"
+      },
+      {
+        "field": "width_b",
+        "class": "L",
+        "a": "shown",
+        "b1": "hidden(pd)",
+        "b2": "hidden(pd)",
+        "status": "HIDDEN_NOT_DELETED"
+      },
+      {
+        "field": "style_sig_a",
+        "class": "L",
+        "a": "shown",
+        "b1": "hidden(pd)",
+        "b2": "hidden(pd)",
+        "status": "HIDDEN_NOT_DELETED"
+      },
+      {
+        "field": "style_sig_b",
+        "class": "L",
+        "a": "shown",
+        "b1": "hidden(pd)",
+        "b2": "hidden(pd)",
+        "status": "HIDDEN_NOT_DELETED"
+      }
+    ]
+  },
+  "evidence_cue_boundary": {
+    "cues_audited": 7,
+    "all_semantic_authority_zero": true,
+    "all_judgment_leakage_pass": true,
+    "verdict": "PASS"
+  },
+  "experiment_hypotheses": {
+    "H1_information_reduction": "B1 may require less Human effort than A",
+    "H2_evidence_distillation": "B2 may require less Human effort than B1 AND Decision Quality(B2) >= Decision Quality(B1)",
+    "H3_boundary_safety": "UNKNOWN(B2) should not be artificially lower than UNKNOWN(B1) or UNKNOWN(A)",
+    "H4_automation_bias": "In cue-conflict cases, Human should inspect evidence and override when necessary; no preset threshold"
+  },
+  "case_selection_corrected": {
+    "types": {
+      "P_positive": {
+        "current": 13,
+        "needed": "+5 for Set Y/Z",
+        "target": 18
+      },
+      "N_negative": {
+        "current": 0,
+        "needed": "+5-8",
+        "target": "5-8",
+        "status": "MUST ADD"
+      },
+      "B_boundary": {
+        "current": 2,
+        "needed": "+3",
+        "target": 5,
+        "status": "MUST ADD"
+      },
+      "C_confounding": {
+        "current": 2,
+        "needed": "+2 for Set Y/Z",
+        "target": 4
+      },
+      "S_system_ne_gt": {
+        "current": 0,
+        "needed": "+3-5",
+        "target": "3-5",
+        "status": "MUST ADD"
+      },
+      "U_unknown_baseline": {
+        "current": 0,
+        "needed": "+2",
+        "target": 2,
+        "status": "MUST ADD"
+      }
+    },
+    "amb_414_422_reclassification": {
+      "from": "C-type",
+      "to": "P-type MERGE",
+      "reason": "Cue correct, supports MERGE — not a conflict"
+    },
+    "amb_313_462_verification": {
+      "classification": "C-type + S-type",
+      "true_conflict": true,
+      "cue_chain_complete": true
+    },
+    "minimum_conflict_cases_for_wcar": 5,
+    "current_conflict_cases": 2,
+    "new_conflict_cases_needed": 3,
+    "total_new_cases_needed": "20-25",
+    "new_cases_status": "NOT PREPARED"
+  },
+  "automation_bias_corrected": {
+    "removed": [
+      "Override >= 50% = SAFE",
+      "any preset safety threshold"
+    ],
+    "metrics": [
+      {
+        "metric": "WCAR",
+        "definition": "Cue!=GT + Human accepts wrong direction / total conflict cases"
+      },
+      {
+        "metric": "COR",
+        "definition": "Cue!=GT + Human correctly overrides / total conflict cases"
+      },
+      {
+        "metric": "EIR",
+        "definition": "Human inspected evidence before decision / total cases"
+      },
+      {
+        "metric": "CFR",
+        "definition": "Human decision matches cue direction / total cases"
+      }
+    ],
+    "automation_bias_event": "TRUE when: Cue!=GT + Human did NOT inspect evidence + Human accepted Cue + Human decision!=GT",
+    "reporting": "descriptive (raw counts + rates + individual variation + case-level errors), NO threshold",
+    "minimum_safety_conditions": {
+      "A_conflict_cases_exist": "PASS after case preparation (5 conflict cases)",
+      "B_evidence_inspection_observed": "PASS after schema implementation (EIR measured)",
+      "C_automation_bias_event_recorded": "PASS after schema implementation"
+    }
+  },
+  "unknown_preservation": {
+    "baseline_requirement": ">=2 genuinely ambiguous U-type cases",
+    "current_baseline": 0,
+    "hard_constraint": "UNKNOWN(B2) < UNKNOWN(B1) must be investigated for over-certainty; NOT interpreted as better",
+    "critical_check": "Cue clarity↑ + uncertainty↓ + correctness↓ = AUTOMATION_BIAS risk",
+    "verdict": "PASS after U-type cases prepared"
+  },
+  "participant_design": {
+    "design": "3-condition Latin Square with matched sets",
+    "groups": 3,
+    "group_1": "A on X → B1 on Y → B2 on Z",
+    "group_2": "A on Y → B1 on Z → B2 on X",
+    "group_3": "A on Z → B1 on X → B2 on Y",
+    "minimum_n_per_group": 5,
+    "minimum_total_n": 15,
+    "recommended_total_n": 21,
+    "learning_effect_risk": "PARTIALLY CONTROLLED (Latin Square + matched sets + within-session trend)"
+  },
+  "measurement_plan": {
+    "primary_outcome": "Decision Time (B1 vs B2 primary; A vs B1, A vs B2 secondary)",
+    "secondary_outcomes": [
+      "evidence_expansion_count",
+      "levels_viewed",
+      "screenshot_revisit",
+      "cross_instance_comparison",
+      "abstraction_burden",
+      "interaction_count"
+    ],
+    "safety_quality": [
+      "correctness",
+      "boundary_correctness",
+      "UNKNOWN_rate",
+      "WCAR",
+      "COR",
+      "EIR",
+      "CFR",
+      "cue_inspection",
+      "automation_bias_event"
+    ],
+    "schema_extensions": [
+      "condition",
+      "set_id",
+      "case_type",
+      "cue_shown",
+      "cue_inspected",
+      "decision_time_ms",
+      "field_expansion_count",
+      "progressive_disclosure_used",
+      "progressive_disclosure_fields",
+      "image_interactions",
+      "evidence_inspected",
+      "cue_followed",
+      "automation_bias_event"
+    ],
+    "schema_status": "DESIGN_SPECIFIED, NOT IMPLEMENTED"
+  },
+  "statistical_language_corrected": {
+    "removed": [
+      "significantly lower",
+      "No significant time difference",
+      "Override >= 50% = SAFE"
+    ],
+    "corrected": "expected-direction reduction; report mean/median/distribution/effect_size/individual_variability",
+    "no_statistical_generalization": true,
+    "exploratory_pilot": true
+  },
+  "success_criteria_corrected": {
+    "PASS": [
+      "B2 < B1 expected-direction",
+      "B1 <= A expected-direction",
+      "Quality B2>=B1>=A",
+      "UNKNOWN not artificially lower",
+      "WCAR reported no AUTOMATION_BIAS_EVENT pattern",
+      "Evidence unchanged",
+      "No semantic judgment in cue",
+      "Attribution valid"
+    ],
+    "PARTIAL_PASS": [
+      "B2<B1 but B1≈A",
+      "OR B1<A but B1≈B2",
+      "OR P-type improved but N/B/S not",
+      "OR WCAR>0 but no systematic pattern"
+    ],
+    "FAIL": [
+      "B2 faster but Quality down",
+      "OR AUTOMATION_BIAS_EVENT pattern",
+      "OR cue contains semantic judgment",
+      "OR cue requires new observation",
+      "OR B2≈B1 (no distillation effect)",
+      "OR UNKNOWN down AND correctness down"
+    ]
+  },
+  "attribution_assessment": {
+    "A_distillation": {
+      "control": "STRONG (B1 vs B2)",
+      "risk": "LOW"
+    },
+    "B_deletion": {
+      "control": "STRONG (A vs B1)",
+      "risk": "LOW"
+    },
+    "C_ui_presentation": {
+      "control": "PARTIAL",
+      "risk": "MEDIUM"
+    },
+    "D_learning_effect": {
+      "control": "GOOD (Latin Square)",
+      "risk": "LOW"
+    },
+    "E_automation_bias": {
+      "control": "GOOD (WCAR/COR/EIR/CFR)",
+      "risk": "LOW"
+    }
+  },
+  "design_status": "READY",
+  "design_status_reason": "All 3 HIGH blocking issues resolved; implementation blocked by preparation only (cases, participants, UI, schema, GT)",
+  "implementation_blockers": [
+    "New case preparation (N/B/S/U + Set Y/Z) — 20-25 cases",
+    "Participant recruitment (n>=15)",
+    "UI for 3 conditions",
+    "Recording schema extension",
+    "GT adjudication for new cases"
+  ],
+  "learning_boundary": "This experiment tests Evidence Distillation, NOT Iterative Learning. ITERATIVE_LEARNING = INSUFFICIENT_EVIDENCE regardless of outcome.",
+  "provenance": {
+    "verdict": "PASS",
+    "all_traceable": true,
+    "all_deterministic": true,
+    "no_synthetic": true
+  },
+  "evidence_classification": {
+    "corrected_design": "B-class",
+    "expected_distillation_benefit": "C-class",
+    "attribution_validity": "B-class (3-condition isolation)",
+    "automation_bias_measurement": "B-class (observable WCAR/COR/EIR/CFR)"
+  },
+  "pilot_limitations": {
+    "n": 1,
+    "cases": 21,
+    "documents": 4,
+    "n_type": 0,
+    "system_ne_gt": 0,
+    "conflict": 0,
+    "unknown": 0,
+    "image_confound": true,
+    "tld_false_negatives": 2,
+    "no_statistical_generalization": true
+  }
+}

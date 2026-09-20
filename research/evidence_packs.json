@@ -1,0 +1,857 @@
+[
+  {
+    "case_id": "IS11-AMB-005",
+    "L0": {
+      "text_a": "unsurprising) and then degrades rapidly.",
+      "text_b": "Unexpectedly,",
+      "page": 1,
+      "document_id": "is11_resnet"
+    },
+    "L1": {
+      "tld_in_table": true,
+      "tld_different_cell": true,
+      "is01_number": false,
+      "is02_text": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-024",
+    "L0": {
+      "text_a": "28.54",
+      "text_b": "10.02",
+      "page": 6,
+      "document_id": "is11_resnet"
+    },
+    "L1": {
+      "tld_in_table": true,
+      "tld_different_cell": true,
+      "is01_number": true,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-032",
+    "L0": {
+      "text_a": "-",
+      "text_b": "8.43",
+      "page": 6,
+      "document_id": "is11_resnet"
+    },
+    "L1": {
+      "tld_in_table": true,
+      "tld_different_cell": true,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-034",
+    "L0": {
+      "text_a": "21.59",
+      "text_b": "5.71",
+      "page": 6,
+      "document_id": "is11_resnet"
+    },
+    "L1": {
+      "tld_in_table": true,
+      "tld_different_cell": true,
+      "is01_number": true,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-052",
+    "L0": {
+      "text_a": "0.46M",
+      "text_b": "7.51",
+      "page": 7,
+      "document_id": "is11_resnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-064",
+    "L0": {
+      "text_a": "training data",
+      "text_b": "07+12",
+      "page": 8,
+      "document_id": "is11_resnet"
+    },
+    "L1": {
+      "tld_in_table": true,
+      "tld_different_cell": true,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-074",
+    "L0": {
+      "text_a": "41.5",
+      "text_b": "21.2",
+      "page": 8,
+      "document_id": "is11_resnet"
+    },
+    "L1": {
+      "tld_in_table": true,
+      "tld_different_cell": true,
+      "is01_number": true,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-101",
+    "L0": {
+      "text_a": "-",
+      "text_b": "43.9",
+      "page": 11,
+      "document_id": "is11_resnet"
+    },
+    "L1": {
+      "tld_in_table": true,
+      "tld_different_cell": true,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-102",
+    "L0": {
+      "text_a": "our single model (ILSVRC’15)",
+      "text_b": "60.5",
+      "page": 11,
+      "document_id": "is11_resnet"
+    },
+    "L1": {
+      "tld_in_table": true,
+      "tld_different_cell": true,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-130",
+    "L0": {
+      "text_a": "Resolution",
+      "text_b": "#Channels",
+      "page": 5,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-135",
+    "L0": {
+      "text_a": "4",
+      "text_b": "MBConv6, k5x5",
+      "page": 5,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": true,
+      "is02_text": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "MERGE",
+      "machine_decision_label": "Machine Decision (may be wrong): MERGE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-163",
+    "L0": {
+      "text_a": "93.9%",
+      "text_b": "34M",
+      "page": 6,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-168",
+    "L0": {
+      "text_a": "3.0x",
+      "text_b": "5.7B",
+      "page": 6,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-198",
+    "L0": {
+      "text_a": "82.9%",
+      "text_b": "96.2%",
+      "page": 6,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-205",
+    "L0": {
+      "text_a": "96.5%",
+      "text_b": "155M",
+      "page": 6,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-218",
+    "L0": {
+      "text_a": "1.2B",
+      "text_b": "76.8%",
+      "page": 6,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-257",
+    "L0": {
+      "text_a": "Gpipe",
+      "text_b": "91.3%",
+      "page": 7,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-261",
+    "L0": {
+      "text_a": "Inception-v4",
+      "text_b": "81.8%",
+      "page": 7,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-262",
+    "L0": {
+      "text_a": "41M",
+      "text_b": "EfﬁcientNet-B5",
+      "page": 7,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-267",
+    "L0": {
+      "text_a": "83.6%",
+      "text_b": "556M",
+      "page": 7,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-279",
+    "L0": {
+      "text_a": "EfﬁcientNet-B5",
+      "text_b": "98.5%",
+      "page": 7,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-313",
+    "L0": {
+      "text_a": "Test Size",
+      "text_b": "#Classes",
+      "page": 8,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-318",
+    "L0": {
+      "text_a": ")",
+      "text_b": "47,386",
+      "page": 8,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-321",
+    "L0": {
+      "text_a": "8,144",
+      "text_b": "8,041",
+      "page": 8,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-323",
+    "L0": {
+      "text_a": "2,040",
+      "text_b": "6,149",
+      "page": 8,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-346",
+    "L0": {
+      "text_a": "83.95",
+      "text_b": "84.26",
+      "page": 9,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": true,
+      "tld_different_cell": true,
+      "is01_number": true,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-350",
+    "L0": {
+      "text_a": "80.16",
+      "text_b": "81.72",
+      "page": 9,
+      "document_id": "is11_efficientnet"
+    },
+    "L1": {
+      "tld_in_table": true,
+      "tld_different_cell": true,
+      "is01_number": true,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-375",
+    "L0": {
+      "text_a": "[23].",
+      "text_b": "Each",
+      "page": 6,
+      "document_id": "is11_med_001"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-380",
+    "L0": {
+      "text_a": "RBF",
+      "text_b": "Matérn",
+      "page": 13,
+      "document_id": "is11_med_001"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-401",
+    "L0": {
+      "text_a": "0.70",
+      "text_b": "0.75",
+      "page": 19,
+      "document_id": "is11_med_001"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": true,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-407",
+    "L0": {
+      "text_a": "1.35",
+      "text_b": "1.40",
+      "page": 19,
+      "document_id": "is11_med_001"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": true,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-409",
+    "L0": {
+      "text_a": "0.65",
+      "text_b": "0.70",
+      "page": 19,
+      "document_id": "is11_med_001"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": true,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-414",
+    "L0": {
+      "text_a": "FIG. 9:",
+      "text_b": "Left:",
+      "page": 20,
+      "document_id": "is11_med_001"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-418",
+    "L0": {
+      "text_a": "), but with the different kernels illustrated in the left panel.",
+      "text_b": "The",
+      "page": 20,
+      "document_id": "is11_med_001"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-422",
+    "L0": {
+      "text_a": "FIG. 12:",
+      "text_b": "Distribution of errors for predictions of entropy (upper) and ZPVE (lower)",
+      "page": 24,
+      "document_id": "is11_med_001"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-440",
+    "L0": {
+      "text_a": "700M",
+      "text_b": "0.80 (2.60x)",
+      "page": 3,
+      "document_id": "is11_cs_001"
+    },
+    "L1": {
+      "tld_in_table": true,
+      "tld_different_cell": true,
+      "is01_number": false,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-457",
+    "L0": {
+      "text_a": "Models",
+      "text_b": "Size",
+      "page": 3,
+      "document_id": "is11_cs_001"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-462",
+    "L0": {
+      "text_a": "WGe",
+      "text_b": "Avg.",
+      "page": 3,
+      "document_id": "is11_cs_001"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-467",
+    "L0": {
+      "text_a": "37.0",
+      "text_b": "60.0",
+      "page": 3,
+      "document_id": "is11_cs_001"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": true,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-483",
+    "L0": {
+      "text_a": "23.5",
+      "text_b": "38.5",
+      "page": 3,
+      "document_id": "is11_cs_001"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": true,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-505",
+    "L0": {
+      "text_a": "61.4",
+      "text_b": "28.3",
+      "page": 3,
+      "document_id": "is11_cs_001"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": true,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-514",
+    "L0": {
+      "text_a": "44.2",
+      "text_b": "63.5",
+      "page": 3,
+      "document_id": "is11_cs_001"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": true,
+      "is02_text": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-519",
+    "L0": {
+      "text_a": "facto backbone for open-source LLMs.",
+      "text_b": "To embrace the open-source community, our design",
+      "page": 3,
+      "document_id": "is11_cs_001"
+    },
+    "L1": {
+      "tld_in_table": false,
+      "tld_different_cell": false,
+      "is01_number": false,
+      "is02_text": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_decision_label": "Machine Decision (may be wrong): INSUFFICIENT_EVIDENCE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-522",
+    "L0": {
+      "text_a": "Size",
+      "text_b": "Max Batch Size",
+      "page": 4,
+      "document_id": "is11_cs_001"
+    },
+    "L1": {
+      "tld_in_table": true,
+      "tld_different_cell": true,
+      "is01_number": false,
+      "is02_text": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  },
+  {
+    "case_id": "IS11-AMB-530",
+    "L0": {
+      "text_a": "PIQA",
+      "text_b": "SciQ",
+      "page": 5,
+      "document_id": "is11_cs_001"
+    },
+    "L1": {
+      "tld_in_table": true,
+      "tld_different_cell": true,
+      "is01_number": false,
+      "is02_text": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_decision_label": "Machine Decision (may be wrong): KEEP_SEPARATE"
+    }
+  }
+]

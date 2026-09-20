@@ -1,0 +1,4386 @@
+{
+  "cases": [
+    {
+      "case_id": "IS11-AMB-005",
+      "case_type": [
+        "B"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "unsurprising) and then degrades rapidly.",
+      "text_b": "Unexpectedly,",
+      "fields": {
+        "text_a": "unsurprising) and then degrades rapidly.",
+        "text_b": "Unexpectedly,",
+        "h_gap": 10.0,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 169.2,
+        "width_b": 57.0,
+        "style_sig_a": "NimbusRomNo9L-Regu|10.0|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|10.0|0|0|-|0|-",
+        "line_obs_count": 3,
+        "doc_id": "is11_resnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-005.jpg",
+      "line_spans": [
+        {
+          "text": "1. Introduction",
+          "x0": 50.1,
+          "x1": 126.9,
+          "y0": 535.2,
+          "y1": 547.2,
+          "w": 76.8,
+          "size": 12.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "unsurprising) and then degrades rapidly.",
+          "x0": 308.9,
+          "x1": 478.1,
+          "y0": 534.1,
+          "y1": 544.1,
+          "w": 169.2,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "Unexpectedly,",
+          "x0": 488.1,
+          "x1": 545.1,
+          "y0": 534.1,
+          "y1": 544.1,
+          "w": 57.0,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": true
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 3,
+          "text": "There are 3 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: '1. Introduction'",
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": true,
+          "text": "Text A ends with a period"
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": true,
+          "text": "Text B starts with a capital letter"
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-024",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "28.54",
+      "text_b": "10.02",
+      "fields": {
+        "text_a": "28.54",
+        "text_b": "10.02",
+        "h_gap": 25.0,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 20.2,
+        "width_b": 20.2,
+        "style_sig_a": "NimbusRomNo9L-Regu|9.0|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|9.0|0|0|-|0|-",
+        "line_obs_count": 3,
+        "doc_id": "is11_resnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-024.jpg",
+      "line_spans": [
+        {
+          "text": "plain-34",
+          "x0": 96.4,
+          "x1": 123.0,
+          "y0": 126.2,
+          "y1": 134.2,
+          "w": 26.6,
+          "size": 8.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "28.54",
+          "x0": 170.2,
+          "x1": 190.4,
+          "y0": 125.4,
+          "y1": 134.4,
+          "w": 20.2,
+          "size": 9.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "10.02",
+          "x0": 215.3,
+          "x1": 235.5,
+          "y0": 125.4,
+          "y1": 134.4,
+          "w": 20.2,
+          "size": 9.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": true
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 3,
+          "text": "There are 3 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: 'plain-34'",
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-034",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "21.59",
+      "text_b": "5.71",
+      "fields": {
+        "text_a": "21.59",
+        "text_b": "5.71",
+        "h_gap": 27.2,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 20.2,
+        "width_b": 15.7,
+        "style_sig_a": "NimbusRomNo9L-Regu|9.0|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|9.0|0|0|-|0|-",
+        "line_obs_count": 4,
+        "doc_id": "is11_resnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-034.jpg",
+      "line_spans": [
+        {
+          "text": "PReLU-net [13]",
+          "x0": 67.1,
+          "x1": 125.1,
+          "y0": 305.9,
+          "y1": 314.9,
+          "w": 58.0,
+          "size": 9.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "21.59",
+          "x0": 199.5,
+          "x1": 219.7,
+          "y0": 305.9,
+          "y1": 314.9,
+          "w": 20.2,
+          "size": 9.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "5.71",
+          "x0": 246.9,
+          "x1": 262.6,
+          "y0": 305.9,
+          "y1": 314.9,
+          "w": 15.7,
+          "size": 9.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": true
+        },
+        {
+          "text": "ter than the plain counterpart. B is slightly better than A. We",
+          "x0": 308.9,
+          "x1": 545.1,
+          "y0": 301.9,
+          "y1": 311.8,
+          "w": 236.3,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 4,
+          "text": "There are 4 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: 'PReLU-net [13]'",
+          "right": "Text to the right of B: 'ter than the plain counterpart. B is slightly better than A. We'"
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-074",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "41.5",
+      "text_b": "21.2",
+      "fields": {
+        "text_a": "41.5",
+        "text_b": "21.2",
+        "h_gap": 45.6,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 15.7,
+        "width_b": 15.7,
+        "style_sig_a": "NimbusRomNo9L-Regu|9.0|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|9.0|0|0|-|0|-",
+        "line_obs_count": 10,
+        "doc_id": "is11_resnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-074.jpg",
+      "line_spans": [
+        {
+          "text": "0",
+          "x0": 70.6,
+          "x1": 72.9,
+          "y0": 317.7,
+          "y1": 322.4,
+          "w": 2.3,
+          "size": 4.6,
+          "font": "Times-Roman",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "20",
+          "x0": 106.1,
+          "x1": 110.8,
+          "y0": 317.7,
+          "y1": 322.4,
+          "w": 4.7,
+          "size": 4.6,
+          "font": "Times-Roman",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "40",
+          "x0": 142.8,
+          "x1": 147.5,
+          "y0": 317.7,
+          "y1": 322.4,
+          "w": 4.6,
+          "size": 4.6,
+          "font": "Times-Roman",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "60",
+          "x0": 179.5,
+          "x1": 184.2,
+          "y0": 317.7,
+          "y1": 322.4,
+          "w": 4.7,
+          "size": 4.6,
+          "font": "Times-Roman",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "80",
+          "x0": 216.3,
+          "x1": 221.0,
+          "y0": 317.7,
+          "y1": 322.4,
+          "w": 4.6,
+          "size": 4.6,
+          "font": "Times-Roman",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "100",
+          "x0": 252.0,
+          "x1": 258.9,
+          "y0": 317.7,
+          "y1": 322.4,
+          "w": 7.0,
+          "size": 4.6,
+          "font": "Times-Roman",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": " ",
+          "x0": 71.4,
+          "x1": 72.0,
+          "y0": 315.9,
+          "y1": 317.9,
+          "w": 0.6,
+          "size": 2.0,
+          "font": "Helvetica",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "VGG-16",
+          "x0": 350.0,
+          "x1": 381.3,
+          "y0": 313.5,
+          "y1": 322.5,
+          "w": 31.2,
+          "size": 9.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "41.5",
+          "x0": 413.0,
+          "x1": 428.7,
+          "y0": 313.5,
+          "y1": 322.5,
+          "w": 15.7,
+          "size": 9.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "21.2",
+          "x0": 474.4,
+          "x1": 490.0,
+          "y0": 313.5,
+          "y1": 322.5,
+          "w": 15.7,
+          "size": 9.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": true
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 10,
+          "text": "There are 10 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: 'VGG-16'",
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-130",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "Resolution",
+      "text_b": "#Channels",
+      "fields": {
+        "text_a": "Resolution",
+        "text_b": "#Channels",
+        "h_gap": 9.1,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 32.7,
+        "width_b": 31.9,
+        "style_sig_a": "NimbusRomNo9L-Regu|7.5|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|7.5|0|0|-|0|-",
+        "line_obs_count": 8,
+        "doc_id": "is11_efficientnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-130.jpg",
+      "line_spans": [
+        {
+          "text": "In this paper, we propose a new",
+          "x0": 55.4,
+          "x1": 176.0,
+          "y0": 111.4,
+          "y1": 121.2,
+          "w": 120.6,
+          "size": 9.9,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": " compound scaling method",
+          "x0": 176.0,
+          "x1": 288.2,
+          "y0": 111.2,
+          "y1": 121.2,
+          "w": 112.2,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": ",",
+          "x0": 288.2,
+          "x1": 290.7,
+          "y0": 111.4,
+          "y1": 121.2,
+          "w": 2.4,
+          "size": 9.9,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Stage",
+          "x0": 313.9,
+          "x1": 330.6,
+          "y0": 108.3,
+          "y1": 115.9,
+          "w": 16.8,
+          "size": 7.5,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Operator",
+          "x0": 365.9,
+          "x1": 392.8,
+          "y0": 108.3,
+          "y1": 115.9,
+          "w": 26.8,
+          "size": 7.5,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Resolution",
+          "x0": 428.1,
+          "x1": 460.8,
+          "y0": 108.3,
+          "y1": 115.9,
+          "w": 32.7,
+          "size": 7.5,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "#Channels",
+          "x0": 469.8,
+          "x1": 501.7,
+          "y0": 108.3,
+          "y1": 115.9,
+          "w": 31.9,
+          "size": 7.5,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": true
+        },
+        {
+          "text": "#Layers",
+          "x0": 510.7,
+          "x1": 535.0,
+          "y0": 108.3,
+          "y1": 115.9,
+          "w": 24.3,
+          "size": 7.5,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 8,
+          "text": "There are 8 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: 'Operator'",
+          "right": "Text to the right of B: '#Layers'"
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-135",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "4",
+      "text_b": "MBConv6, k5x5",
+      "fields": {
+        "text_a": "4",
+        "text_b": "MBConv6, k5x5",
+        "h_gap": 30.0,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 3.8,
+        "width_b": 50.4,
+        "style_sig_a": "NimbusRomNo9L-Regu|7.5|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|7.5|0|0|-|0|-",
+        "line_obs_count": 12,
+        "doc_id": "is11_efficientnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-135.jpg",
+      "line_spans": [
+        {
+          "text": "depth:",
+          "x0": 127.2,
+          "x1": 152.1,
+          "y0": 159.3,
+          "y1": 169.3,
+          "w": 24.9,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": " d",
+          "x0": 152.1,
+          "x1": 160.3,
+          "y0": 159.4,
+          "y1": 169.4,
+          "w": 8.3,
+          "size": 10.0,
+          "font": "CMMI10",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": " =",
+          "x0": 160.3,
+          "x1": 170.9,
+          "y0": 159.1,
+          "y1": 169.0,
+          "w": 10.5,
+          "size": 10.0,
+          "font": "CMR10",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": " α",
+          "x0": 170.9,
+          "x1": 180.0,
+          "y0": 159.4,
+          "y1": 169.4,
+          "w": 9.1,
+          "size": 10.0,
+          "font": "CMMI10",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "φ",
+          "x0": 180.0,
+          "x1": 184.8,
+          "y0": 157.3,
+          "y1": 164.3,
+          "w": 4.8,
+          "size": 7.0,
+          "font": "CMMI7",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "4",
+          "x0": 320.3,
+          "x1": 324.1,
+          "y0": 158.2,
+          "y1": 165.7,
+          "w": 3.8,
+          "size": 7.5,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "MBConv6, k5x5",
+          "x0": 354.1,
+          "x1": 404.6,
+          "y0": 158.2,
+          "y1": 165.7,
+          "w": 50.4,
+          "size": 7.5,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": true
+        },
+        {
+          "text": "56",
+          "x0": 432.3,
+          "x1": 439.8,
+          "y0": 158.0,
+          "y1": 165.5,
+          "w": 7.5,
+          "size": 7.5,
+          "font": "CMR10",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": " ×",
+          "x0": 439.8,
+          "x1": 447.4,
+          "y0": 157.9,
+          "y1": 165.5,
+          "w": 7.5,
+          "size": 7.5,
+          "font": "CMSY10",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": " 56",
+          "x0": 447.4,
+          "x1": 456.6,
+          "y0": 158.0,
+          "y1": 165.5,
+          "w": 9.2,
+          "size": 7.5,
+          "font": "CMR10",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "40",
+          "x0": 482.0,
+          "x1": 489.5,
+          "y0": 158.2,
+          "y1": 165.7,
+          "w": 7.5,
+          "size": 7.5,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "2",
+          "x0": 521.0,
+          "x1": 524.8,
+          "y0": 158.2,
+          "y1": 165.7,
+          "w": 3.8,
+          "size": 7.5,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 12,
+          "text": "There are 12 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: 'φ'",
+          "right": "Text to the right of B: '56'"
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": true,
+          "text": "Text B starts with a capital letter"
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-262",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "41M",
+      "text_b": "EfﬁcientNet-B5",
+      "fields": {
+        "text_a": "41M",
+        "text_b": "EfﬁcientNet-B5",
+        "h_gap": 12.0,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 12.8,
+        "width_b": 43.1,
+        "style_sig_a": "NimbusRomNo9L-Regu|6.8|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|6.8|0|0|-|0|-",
+        "line_obs_count": 13,
+        "doc_id": "is11_efficientnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-262.jpg",
+      "line_spans": [
+        {
+          "text": "Birdsnap",
+          "x0": 61.2,
+          "x1": 85.6,
+          "y0": 144.1,
+          "y1": 150.8,
+          "w": 24.5,
+          "size": 6.8,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Inception-v4",
+          "x0": 116.4,
+          "x1": 151.0,
+          "y0": 144.1,
+          "y1": 150.8,
+          "w": 34.6,
+          "size": 6.8,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "81.8%",
+          "x0": 159.1,
+          "x1": 176.6,
+          "y0": 144.1,
+          "y1": 150.8,
+          "w": 17.5,
+          "size": 6.8,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "41M",
+          "x0": 188.6,
+          "x1": 201.4,
+          "y0": 144.1,
+          "y1": 150.8,
+          "w": 12.8,
+          "size": 6.8,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "EfﬁcientNet-B5",
+          "x0": 213.4,
+          "x1": 256.5,
+          "y0": 144.1,
+          "y1": 150.8,
+          "w": 43.1,
+          "size": 6.8,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": true
+        },
+        {
+          "text": "82.0%",
+          "x0": 264.7,
+          "x1": 282.1,
+          "y0": 144.1,
+          "y1": 150.8,
+          "w": 17.5,
+          "size": 6.8,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "28M (1.5x)",
+          "x0": 293.6,
+          "x1": 324.4,
+          "y0": 144.1,
+          "y1": 150.8,
+          "w": 30.8,
+          "size": 6.8,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "GPipe",
+          "x0": 338.5,
+          "x1": 355.4,
+          "y0": 144.1,
+          "y1": 150.8,
+          "w": 16.9,
+          "size": 6.8,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "83.6%",
+          "x0": 365.3,
+          "x1": 382.8,
+          "y0": 144.1,
+          "y1": 150.8,
+          "w": 17.5,
+          "size": 6.8,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "556M",
+          "x0": 393.7,
+          "x1": 409.9,
+          "y0": 144.1,
+          "y1": 150.8,
+          "w": 16.2,
+          "size": 6.8,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "EfﬁcientNet-B7",
+          "x0": 420.2,
+          "x1": 463.3,
+          "y0": 144.1,
+          "y1": 150.8,
+          "w": 43.1,
+          "size": 6.8,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "84.3%",
+          "x0": 471.4,
+          "x1": 490.1,
+          "y0": 144.0,
+          "y1": 150.8,
+          "w": 18.6,
+          "size": 6.8,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "64M (8.7x)",
+          "x0": 501.5,
+          "x1": 532.4,
+          "y0": 144.1,
+          "y1": 150.8,
+          "w": 30.8,
+          "size": 6.8,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 13,
+          "text": "There are 13 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: '81.8%'",
+          "right": "Text to the right of B: '82.0%'"
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": true,
+          "text": "Text B starts with a capital letter"
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-313",
+      "case_type": [
+        "C",
+        "S"
+      ],
+      "cue_conflict": true,
+      "cue_direction": "MERGE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "Test Size",
+      "text_b": "#Classes",
+      "fields": {
+        "text_a": "Test Size",
+        "text_b": "#Classes",
+        "h_gap": 8.4,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 25.5,
+        "width_b": 24.6,
+        "style_sig_a": "NimbusRomNo9L-Regu|7.0|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|7.0|0|0|-|0|-",
+        "line_obs_count": 5,
+        "doc_id": "is11_efficientnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-313.jpg",
+      "line_spans": [
+        {
+          "text": "Dataset",
+          "x0": 109.8,
+          "x1": 130.9,
+          "y0": 271.8,
+          "y1": 278.8,
+          "w": 21.1,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Train Size",
+          "x0": 187.6,
+          "x1": 216.5,
+          "y0": 271.8,
+          "y1": 278.8,
+          "w": 28.9,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Test Size",
+          "x0": 224.9,
+          "x1": 250.4,
+          "y0": 271.8,
+          "y1": 278.8,
+          "w": 25.5,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "#Classes",
+          "x0": 258.9,
+          "x1": 283.5,
+          "y0": 271.8,
+          "y1": 278.8,
+          "w": 24.6,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": true
+        },
+        {
+          "text": "81",
+          "x0": 338.5,
+          "x1": 345.5,
+          "y0": 275.2,
+          "y1": 282.4,
+          "w": 7.0,
+          "size": 7.2,
+          "font": "CMR12",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": false,
+          "text": "no multi-column aligned structure detected"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": false,
+          "text": null
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 5,
+          "text": "There are 5 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: 'Train Size'",
+          "right": "Text to the right of B: '81'"
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "GENUINE_CUE_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-346",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "83.95",
+      "text_b": "84.26",
+      "fields": {
+        "text_a": "83.95",
+        "text_b": "84.26",
+        "h_gap": 8.4,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 15.8,
+        "width_b": 15.8,
+        "style_sig_a": "NimbusRomNo9L-Regu|7.0|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|7.0|0|0|-|0|-",
+        "line_obs_count": 9,
+        "doc_id": "is11_efficientnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-346.jpg",
+      "line_spans": [
+        {
+          "text": "Val top1",
+          "x0": 64.8,
+          "x1": 88.4,
+          "y0": 483.6,
+          "y1": 490.6,
+          "w": 23.6,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "77.11",
+          "x0": 96.9,
+          "x1": 112.7,
+          "y0": 483.6,
+          "y1": 490.6,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "79.13",
+          "x0": 121.1,
+          "x1": 136.9,
+          "y0": 483.6,
+          "y1": 490.6,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "80.07",
+          "x0": 145.3,
+          "x1": 161.1,
+          "y0": 483.6,
+          "y1": 490.6,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "81.59",
+          "x0": 169.6,
+          "x1": 185.4,
+          "y0": 483.6,
+          "y1": 490.6,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "82.89",
+          "x0": 193.8,
+          "x1": 209.6,
+          "y0": 483.6,
+          "y1": 490.6,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "83.60",
+          "x0": 218.0,
+          "x1": 233.8,
+          "y0": 483.6,
+          "y1": 490.6,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "83.95",
+          "x0": 242.3,
+          "x1": 258.1,
+          "y0": 483.6,
+          "y1": 490.6,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "84.26",
+          "x0": 266.5,
+          "x1": 282.3,
+          "y0": 483.6,
+          "y1": 490.6,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": true
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 9,
+          "text": "There are 9 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: '83.60'",
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-350",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "80.16",
+      "text_b": "81.72",
+      "fields": {
+        "text_a": "80.16",
+        "text_b": "81.72",
+        "h_gap": 8.4,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 15.8,
+        "width_b": 15.8,
+        "style_sig_a": "NimbusRomNo9L-Regu|7.0|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|7.0|0|0|-|0|-",
+        "line_obs_count": 10,
+        "doc_id": "is11_efficientnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-350.jpg",
+      "line_spans": [
+        {
+          "text": "Test top1",
+          "x0": 62.6,
+          "x1": 88.4,
+          "y0": 492.0,
+          "y1": 499.1,
+          "w": 25.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "77.23",
+          "x0": 96.9,
+          "x1": 112.7,
+          "y0": 492.0,
+          "y1": 499.1,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "79.17",
+          "x0": 121.1,
+          "x1": 136.9,
+          "y0": 492.0,
+          "y1": 499.1,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "80.16",
+          "x0": 145.3,
+          "x1": 161.1,
+          "y0": 492.0,
+          "y1": 499.1,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "81.72",
+          "x0": 169.6,
+          "x1": 185.4,
+          "y0": 492.0,
+          "y1": 499.1,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": true
+        },
+        {
+          "text": "82.94",
+          "x0": 193.8,
+          "x1": 209.6,
+          "y0": 492.0,
+          "y1": 499.1,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "83.69",
+          "x0": 218.0,
+          "x1": 233.8,
+          "y0": 492.0,
+          "y1": 499.1,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "84.04",
+          "x0": 242.3,
+          "x1": 258.1,
+          "y0": 492.0,
+          "y1": 499.1,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "84.33",
+          "x0": 266.5,
+          "x1": 282.3,
+          "y0": 492.0,
+          "y1": 499.1,
+          "w": 15.8,
+          "size": 7.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Hu, J., Shen, L., and Sun, G. Squeeze-and-excitation net-",
+          "x0": 307.4,
+          "x1": 543.1,
+          "y0": 490.0,
+          "y1": 500.0,
+          "w": 235.7,
+          "size": 10.1,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 10,
+          "text": "There are 10 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: '79.17'",
+          "right": "Text to the right of B: '82.94'"
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-414",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "MERGE",
+      "gt_direction": "MERGE",
+      "gt_label": "MERGE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "FIG. 9:",
+      "text_b": "Left:",
+      "fields": {
+        "text_a": "FIG. 9:",
+        "text_b": "Left:",
+        "h_gap": 18.1,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 40.3,
+        "width_b": 23.9,
+        "style_sig_a": "SFRM1200|12.0|0|0|-|0|-",
+        "style_sig_b": "SFRM1200|12.0|0|0|-|0|-",
+        "line_obs_count": 5,
+        "doc_id": "is11_med_001",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-414.jpg",
+      "line_spans": [
+        {
+          "text": "FIG. 9:",
+          "x0": 85.0,
+          "x1": 125.4,
+          "y0": 340.5,
+          "y1": 352.5,
+          "w": 40.3,
+          "size": 12.0,
+          "font": "SFRM1200",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "Left:",
+          "x0": 143.5,
+          "x1": 167.4,
+          "y0": 340.5,
+          "y1": 352.5,
+          "w": 23.9,
+          "size": 12.0,
+          "font": "SFRM1200",
+          "is_a": false,
+          "is_b": true
+        },
+        {
+          "text": "BIC values for models with different kernels.",
+          "x0": 178.6,
+          "x1": 424.9,
+          "y0": 340.5,
+          "y1": 352.5,
+          "w": 246.3,
+          "size": 12.0,
+          "font": "SFRM1200",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Right:",
+          "x0": 439.1,
+          "x1": 470.8,
+          "y0": 340.5,
+          "y1": 352.5,
+          "w": 31.7,
+          "size": 12.0,
+          "font": "SFRM1200",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Learning",
+          "x0": 482.0,
+          "x1": 527.1,
+          "y0": 340.5,
+          "y1": 352.5,
+          "w": 45.0,
+          "size": 12.0,
+          "font": "SFRM1200",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": false,
+          "text": "no multi-column aligned structure detected"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": false,
+          "text": null
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 5,
+          "text": "There are 5 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": null,
+          "right": "Text to the right of B: 'BIC values for models with different kernels.'"
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": true,
+          "text": "Text B starts with a capital letter"
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": true,
+          "text": "Text A starts with 'FIG.'"
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-422",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "MERGE",
+      "gt_direction": "MERGE",
+      "gt_label": "MERGE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "FIG. 12:",
+      "text_b": "Distribution of errors for predictions of entropy (upper) and ZPVE (lower)",
+      "fields": {
+        "text_a": "FIG. 12:",
+        "text_b": "Distribution of errors for predictions of entropy (upper) and ZPVE (lower)",
+        "h_gap": 10.5,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 43.6,
+        "width_b": 388.0,
+        "style_sig_a": "SFRM1200|12.0|0|0|-|0|-",
+        "style_sig_b": "SFRM1200|12.0|0|0|-|0|-",
+        "line_obs_count": 2,
+        "doc_id": "is11_med_001",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-422.jpg",
+      "line_spans": [
+        {
+          "text": "FIG. 12:",
+          "x0": 85.0,
+          "x1": 128.7,
+          "y0": 571.8,
+          "y1": 583.7,
+          "w": 43.6,
+          "size": 12.0,
+          "font": "SFRM1200",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "Distribution of errors for predictions of entropy (upper) and ZPVE (lower)",
+          "x0": 139.1,
+          "x1": 527.1,
+          "y0": 571.8,
+          "y1": 583.7,
+          "w": 388.0,
+          "size": 12.0,
+          "font": "SFRM1200",
+          "is_a": false,
+          "is_b": true
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": false,
+          "text": "no multi-column aligned structure detected"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": false,
+          "text": null
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 2,
+          "text": "There are 2 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": null,
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": true,
+          "text": "Text B starts with a capital letter"
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": true,
+          "text": "Text A starts with 'FIG.'"
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-457",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "Models",
+      "text_b": "Size",
+      "fields": {
+        "text_a": "Models",
+        "text_b": "Size",
+        "h_gap": 40.4,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 31.0,
+        "width_b": 17.2,
+        "style_sig_a": "NimbusRomNo9L-Medi|10.0|1|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Medi|10.0|1|0|-|0|-",
+        "line_obs_count": 10,
+        "doc_id": "is11_cs_001",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-457.jpg",
+      "line_spans": [
+        {
+          "text": "Models",
+          "x0": 131.0,
+          "x1": 162.0,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 31.0,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "Size",
+          "x0": 202.5,
+          "x1": 219.6,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 17.2,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": true
+        },
+        {
+          "text": "ARCe",
+          "x0": 234.9,
+          "x1": 260.9,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 26.0,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "ARCc",
+          "x0": 272.9,
+          "x1": 298.9,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 26.0,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "HS",
+          "x0": 312.9,
+          "x1": 326.2,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 13.3,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "BQ",
+          "x0": 341.7,
+          "x1": 356.1,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 14.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "OQ",
+          "x0": 370.6,
+          "x1": 386.1,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 15.5,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "PQ",
+          "x0": 400.8,
+          "x1": 414.6,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 13.8,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "WGe",
+          "x0": 428.4,
+          "x1": 450.5,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 22.1,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Avg.",
+          "x0": 462.5,
+          "x1": 481.0,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 18.5,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 10,
+          "text": "There are 10 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": null,
+          "right": "Text to the right of B: 'ARCe'"
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": true,
+          "text": "Text B starts with a capital letter"
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-462",
+      "case_type": [
+        "C",
+        "S"
+      ],
+      "cue_conflict": true,
+      "cue_direction": "MERGE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "WGe",
+      "text_b": "Avg.",
+      "fields": {
+        "text_a": "WGe",
+        "text_b": "Avg.",
+        "h_gap": 12.0,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 22.1,
+        "width_b": 18.5,
+        "style_sig_a": "NimbusRomNo9L-Medi|10.0|1|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Medi|10.0|1|0|-|0|-",
+        "line_obs_count": 10,
+        "doc_id": "is11_cs_001",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-462.jpg",
+      "line_spans": [
+        {
+          "text": "Models",
+          "x0": 131.0,
+          "x1": 162.0,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 31.0,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Size",
+          "x0": 202.5,
+          "x1": 219.6,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 17.2,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "ARCe",
+          "x0": 234.9,
+          "x1": 260.9,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 26.0,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "ARCc",
+          "x0": 272.9,
+          "x1": 298.9,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 26.0,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "HS",
+          "x0": 312.9,
+          "x1": 326.2,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 13.3,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "BQ",
+          "x0": 341.7,
+          "x1": 356.1,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 14.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "OQ",
+          "x0": 370.6,
+          "x1": 386.1,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 15.5,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "PQ",
+          "x0": 400.8,
+          "x1": 414.6,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 13.8,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "WGe",
+          "x0": 428.4,
+          "x1": 450.5,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 22.1,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "Avg.",
+          "x0": 462.5,
+          "x1": 481.0,
+          "y0": 216.1,
+          "y1": 226.1,
+          "w": 18.5,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": true
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": false,
+          "text": "no multi-column aligned structure detected"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": false,
+          "text": null
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 10,
+          "text": "There are 10 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: 'PQ'",
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": true,
+          "text": "Text B starts with a capital letter"
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "GENUINE_CUE_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-467",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "37.0",
+      "text_b": "60.0",
+      "fields": {
+        "text_a": "37.0",
+        "text_b": "60.0",
+        "h_gap": 11.9,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 17.4,
+        "width_b": 17.4,
+        "style_sig_a": "NimbusRomNo9L-Regu|10.0|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|10.0|0|0|-|0|-",
+        "line_obs_count": 10,
+        "doc_id": "is11_cs_001",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-467.jpg",
+      "line_spans": [
+        {
+          "text": "LLaMA LLM",
+          "x0": 131.0,
+          "x1": 187.2,
+          "y0": 232.3,
+          "y1": 242.3,
+          "w": 56.2,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "700M",
+          "x0": 199.2,
+          "x1": 223.0,
+          "y0": 232.3,
+          "y1": 242.3,
+          "w": 23.8,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "54.7",
+          "x0": 239.2,
+          "x1": 256.6,
+          "y0": 232.3,
+          "y1": 242.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "23.0",
+          "x0": 277.1,
+          "x1": 294.6,
+          "y0": 232.3,
+          "y1": 242.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "37.0",
+          "x0": 310.8,
+          "x1": 328.3,
+          "y0": 232.3,
+          "y1": 242.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "60.0",
+          "x0": 340.2,
+          "x1": 357.6,
+          "y0": 232.3,
+          "y1": 242.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": true
+        },
+        {
+          "text": "20.2",
+          "x0": 369.6,
+          "x1": 387.0,
+          "y0": 232.3,
+          "y1": 242.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "68.9",
+          "x0": 399.0,
+          "x1": 416.4,
+          "y0": 232.3,
+          "y1": 242.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "54.8",
+          "x0": 430.7,
+          "x1": 448.2,
+          "y0": 232.3,
+          "y1": 242.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "45.5",
+          "x0": 463.0,
+          "x1": 480.4,
+          "y0": 232.3,
+          "y1": 242.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 10,
+          "text": "There are 10 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: '23.0'",
+          "right": "Text to the right of B: '20.2'"
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-483",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "23.5",
+      "text_b": "38.5",
+      "fields": {
+        "text_a": "23.5",
+        "text_b": "38.5",
+        "h_gap": 16.2,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 17.4,
+        "width_b": 17.4,
+        "style_sig_a": "NimbusRomNo9L-Regu|10.0|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|10.0|0|0|-|0|-",
+        "line_obs_count": 10,
+        "doc_id": "is11_cs_001",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-483.jpg",
+      "line_spans": [
+        {
+          "text": "LLaMA LLM",
+          "x0": 131.0,
+          "x1": 187.2,
+          "y0": 259.3,
+          "y1": 269.3,
+          "w": 56.2,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "1.3B",
+          "x0": 201.5,
+          "x1": 220.6,
+          "y0": 259.3,
+          "y1": 269.3,
+          "w": 19.1,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "56.9",
+          "x0": 239.2,
+          "x1": 256.6,
+          "y0": 259.3,
+          "y1": 269.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "23.5",
+          "x0": 277.1,
+          "x1": 294.6,
+          "y0": 259.3,
+          "y1": 269.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "38.5",
+          "x0": 310.8,
+          "x1": 328.3,
+          "y0": 259.3,
+          "y1": 269.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": true
+        },
+        {
+          "text": "59.1",
+          "x0": 340.2,
+          "x1": 357.6,
+          "y0": 259.3,
+          "y1": 269.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "21.6",
+          "x0": 369.6,
+          "x1": 387.0,
+          "y0": 259.3,
+          "y1": 269.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "70.0",
+          "x0": 399.0,
+          "x1": 416.4,
+          "y0": 259.3,
+          "y1": 269.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "53.9",
+          "x0": 430.7,
+          "x1": 448.2,
+          "y0": 259.3,
+          "y1": 269.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "46.2",
+          "x0": 463.0,
+          "x1": 480.4,
+          "y0": 259.3,
+          "y1": 269.3,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 10,
+          "text": "There are 10 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: '56.9'",
+          "right": "Text to the right of B: '59.1'"
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-505",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "61.4",
+      "text_b": "28.3",
+      "fields": {
+        "text_a": "61.4",
+        "text_b": "28.3",
+        "h_gap": 20.5,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 17.4,
+        "width_b": 17.4,
+        "style_sig_a": "NimbusRomNo9L-Medi|10.0|1|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Medi|10.0|1|0|-|0|-",
+        "line_obs_count": 10,
+        "doc_id": "is11_cs_001",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-505.jpg",
+      "line_spans": [
+        {
+          "text": "BitNet b1.58",
+          "x0": 131.0,
+          "x1": 184.2,
+          "y0": 297.2,
+          "y1": 307.1,
+          "w": 53.1,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "3B",
+          "x0": 205.2,
+          "x1": 216.9,
+          "y0": 297.3,
+          "y1": 307.2,
+          "w": 11.6,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "61.4",
+          "x0": 239.2,
+          "x1": 256.6,
+          "y0": 297.2,
+          "y1": 307.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "28.3",
+          "x0": 277.1,
+          "x1": 294.6,
+          "y0": 297.2,
+          "y1": 307.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": true
+        },
+        {
+          "text": "42.9",
+          "x0": 310.8,
+          "x1": 328.3,
+          "y0": 297.2,
+          "y1": 307.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "61.5",
+          "x0": 340.2,
+          "x1": 357.6,
+          "y0": 297.2,
+          "y1": 307.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "26.6",
+          "x0": 369.6,
+          "x1": 387.0,
+          "y0": 297.2,
+          "y1": 307.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "71.5",
+          "x0": 399.0,
+          "x1": 416.4,
+          "y0": 297.2,
+          "y1": 307.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "59.3",
+          "x0": 430.7,
+          "x1": 448.2,
+          "y0": 297.2,
+          "y1": 307.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "50.2",
+          "x0": 463.0,
+          "x1": 480.4,
+          "y0": 297.2,
+          "y1": 307.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 10,
+          "text": "There are 10 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: '3B'",
+          "right": "Text to the right of B: '42.9'"
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-514",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "44.2",
+      "text_b": "63.5",
+      "fields": {
+        "text_a": "44.2",
+        "text_b": "63.5",
+        "h_gap": 11.9,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 17.4,
+        "width_b": 17.4,
+        "style_sig_a": "NimbusRomNo9L-Medi|10.0|1|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Medi|10.0|1|0|-|0|-",
+        "line_obs_count": 10,
+        "doc_id": "is11_cs_001",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-514.jpg",
+      "line_spans": [
+        {
+          "text": "BitNet b1.58",
+          "x0": 131.0,
+          "x1": 184.2,
+          "y0": 308.1,
+          "y1": 318.1,
+          "w": 53.1,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "3.9B",
+          "x0": 201.5,
+          "x1": 220.6,
+          "y0": 308.2,
+          "y1": 318.1,
+          "w": 19.1,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "64.2",
+          "x0": 239.2,
+          "x1": 256.6,
+          "y0": 308.1,
+          "y1": 318.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "28.7",
+          "x0": 277.1,
+          "x1": 294.6,
+          "y0": 308.1,
+          "y1": 318.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "44.2",
+          "x0": 310.8,
+          "x1": 328.3,
+          "y0": 308.1,
+          "y1": 318.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "63.5",
+          "x0": 340.2,
+          "x1": 357.6,
+          "y0": 308.1,
+          "y1": 318.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": true
+        },
+        {
+          "text": "24.2",
+          "x0": 369.6,
+          "x1": 387.0,
+          "y0": 308.1,
+          "y1": 318.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "73.2",
+          "x0": 399.0,
+          "x1": 416.4,
+          "y0": 308.1,
+          "y1": 318.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "60.5",
+          "x0": 430.7,
+          "x1": 448.2,
+          "y0": 308.1,
+          "y1": 318.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "51.2",
+          "x0": 463.0,
+          "x1": 480.4,
+          "y0": 308.1,
+          "y1": 318.1,
+          "w": 17.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 10,
+          "text": "There are 10 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: '28.7'",
+          "right": "Text to the right of B: '24.2'"
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-519",
+      "case_type": [
+        "B"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "facto backbone for open-source LLMs.",
+      "text_b": "To embrace the open-source community, our design",
+      "fields": {
+        "text_a": "facto backbone for open-source LLMs.",
+        "text_b": "To embrace the open-source community, our design",
+        "h_gap": 8.6,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 165.9,
+        "width_b": 221.6,
+        "style_sig_a": "NimbusRomNo9L-Regu|10.1|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|10.1|0|0|-|0|-",
+        "line_obs_count": 2,
+        "doc_id": "is11_cs_001",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-519.jpg",
+      "line_spans": [
+        {
+          "text": "facto backbone for open-source LLMs.",
+          "x0": 108.0,
+          "x1": 273.9,
+          "y0": 420.5,
+          "y1": 430.6,
+          "w": 165.9,
+          "size": 10.1,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "To embrace the open-source community, our design",
+          "x0": 282.4,
+          "x1": 504.0,
+          "y0": 420.5,
+          "y1": 430.6,
+          "w": 221.6,
+          "size": 10.1,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": true
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": false,
+          "text": "no multi-column aligned structure detected"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": false,
+          "text": null
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 2,
+          "text": "There are 2 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": null,
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": true,
+          "text": "Text A ends with a period"
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": true,
+          "text": "Text B starts with a capital letter"
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-522",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "Size",
+      "text_b": "Max Batch Size",
+      "fields": {
+        "text_a": "Size",
+        "text_b": "Max Batch Size",
+        "h_gap": 19.9,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 17.2,
+        "width_b": 66.4,
+        "style_sig_a": "NimbusRomNo9L-Medi|10.0|1|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Medi|10.0|1|0|-|0|-",
+        "line_obs_count": 4,
+        "doc_id": "is11_cs_001",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-522.jpg",
+      "line_spans": [
+        {
+          "text": "Models",
+          "x0": 158.6,
+          "x1": 189.6,
+          "y0": 263.2,
+          "y1": 273.1,
+          "w": 31.0,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Size",
+          "x0": 234.7,
+          "x1": 251.9,
+          "y0": 263.2,
+          "y1": 273.1,
+          "w": 17.2,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "Max Batch Size",
+          "x0": 271.8,
+          "x1": 338.2,
+          "y0": 263.2,
+          "y1": 273.1,
+          "w": 66.4,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": true
+        },
+        {
+          "text": "Throughput (tokens/s)",
+          "x0": 358.2,
+          "x1": 453.4,
+          "y0": 263.2,
+          "y1": 273.1,
+          "w": 95.2,
+          "size": 10.0,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 4,
+          "text": "There are 4 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: 'Models'",
+          "right": "Text to the right of B: 'Throughput (tokens/s)'"
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": true,
+          "text": "Text B starts with a capital letter"
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-530",
+      "case_type": [
+        "P"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": true,
+      "has_image": true,
+      "text_a": "PIQA",
+      "text_b": "SciQ",
+      "fields": {
+        "text_a": "PIQA",
+        "text_b": "SciQ",
+        "h_gap": 12.3,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 23.6,
+        "width_b": 19.5,
+        "style_sig_a": "NimbusRomNo9L-Medi|9.5|1|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Medi|9.5|1|0|-|0|-",
+        "line_obs_count": 8,
+        "doc_id": "is11_cs_001",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-530.jpg",
+      "line_spans": [
+        {
+          "text": "Models",
+          "x0": 118.4,
+          "x1": 147.8,
+          "y0": 273.9,
+          "y1": 283.3,
+          "w": 29.4,
+          "size": 9.5,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Tokens",
+          "x0": 193.6,
+          "x1": 222.1,
+          "y0": 273.9,
+          "y1": 283.3,
+          "w": 28.5,
+          "size": 9.5,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Winogrande",
+          "x0": 233.5,
+          "x1": 283.7,
+          "y0": 273.9,
+          "y1": 283.3,
+          "w": 50.3,
+          "size": 9.5,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "PIQA",
+          "x0": 295.1,
+          "x1": 318.7,
+          "y0": 273.9,
+          "y1": 283.3,
+          "w": 23.7,
+          "size": 9.5,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": true,
+          "is_b": false
+        },
+        {
+          "text": "SciQ",
+          "x0": 331.0,
+          "x1": 350.5,
+          "y0": 273.9,
+          "y1": 283.3,
+          "w": 19.5,
+          "size": 9.5,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": true
+        },
+        {
+          "text": "LAMBADA",
+          "x0": 362.7,
+          "x1": 411.0,
+          "y0": 273.9,
+          "y1": 283.3,
+          "w": 48.3,
+          "size": 9.5,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "ARC-easy",
+          "x0": 422.4,
+          "x1": 463.3,
+          "y0": 273.9,
+          "y1": 283.3,
+          "w": 41.0,
+          "size": 9.5,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Avg.",
+          "x0": 476.5,
+          "x1": 494.1,
+          "y0": 273.9,
+          "y1": 283.3,
+          "w": 17.6,
+          "size": 9.5,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": true,
+          "text": "within a detected multi-column aligned structure"
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": true,
+          "text": "in different structural positions"
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 8,
+          "text": "There are 8 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": "Text to the left of A: 'Winogrande'",
+          "right": "Text to the right of B: 'LAMBADA'"
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": true,
+          "text": "Text B starts with a capital letter"
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-052",
+      "case_type": [
+        "N"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": false,
+      "has_image": true,
+      "text_a": "0.46M",
+      "text_b": "7.51",
+      "fields": {
+        "text_a": "0.46M",
+        "text_b": "7.51",
+        "h_gap": 15.4,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 24.6,
+        "width_b": 16.3,
+        "style_sig_a": "NimbusRomNo9L-Regu|9.3|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|9.3|0|0|-|0|-",
+        "line_obs_count": 5,
+        "doc_id": "is11_resnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-052.jpg",
+      "line_spans": [
+        {
+          "text": "of plain-110 is higher than 60% and not displayed.",
+          "x0": 50.11199951171875,
+          "x1": 231.6636962890625,
+          "y0": 183.53298950195312,
+          "y1": 192.4993896484375,
+          "w": 181.55169677734375,
+          "size": 8.966400146484375,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": " Middle",
+          "x0": 231.6636962890625,
+          "x1": 261.8423156738281,
+          "y0": 183.4511260986328,
+          "y1": 192.4175262451172,
+          "w": 30.178619384765625,
+          "size": 8.966400146484375,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": ": ResNets.",
+          "x0": 261.84197998046875,
+          "x1": 299.24078369140625,
+          "y0": 183.53298950195312,
+          "y1": 192.4993896484375,
+          "w": 37.3988037109375,
+          "size": 8.966400146484375,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": " Right",
+          "x0": 299.24078369140625,
+          "x1": 323.44073486328125,
+          "y0": 183.4511260986328,
+          "y1": 192.4175262451172,
+          "w": 24.199951171875,
+          "size": 8.966400146484375,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": ": ResNets with 110 and 1202 layers.",
+          "x0": 323.44000244140625,
+          "x1": 453.73077392578125,
+          "y0": 183.53298950195312,
+          "y1": 192.4993896484375,
+          "w": 130.290771484375,
+          "size": 8.966400146484375,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": null,
+          "text": null
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": null,
+          "text": null
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 5,
+          "text": "There are 5 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": null,
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-163",
+      "case_type": [
+        "N"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": false,
+      "has_image": true,
+      "text_a": "93.9%",
+      "text_b": "34M",
+      "fields": {
+        "text_a": "93.9%",
+        "text_b": "34M",
+        "h_gap": 25.8,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 21.4,
+        "width_b": 15.6,
+        "style_sig_a": "NimbusRomNo9L-Regu|8.3|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|8.3|0|0|-|0|-",
+        "line_obs_count": 3,
+        "doc_id": "is11_efficientnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-163.jpg",
+      "line_spans": [
+        {
+          "text": "Geo-Mean",
+          "x0": 61.196632385253906,
+          "x1": 90.15318298339844,
+          "y0": 196.28549194335938,
+          "y1": 203.05735778808594,
+          "w": 28.95655059814453,
+          "size": 6.771877765655518,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "(4.7x)",
+          "x0": 300.84222412109375,
+          "x1": 317.2030944824219,
+          "y0": 196.22366333007812,
+          "y1": 202.9955291748047,
+          "w": 16.360870361328125,
+          "size": 6.771877765655518,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "(9.6x)",
+          "x0": 508.7566833496094,
+          "x1": 525.1175537109375,
+          "y0": 196.22366333007812,
+          "y1": 202.9955291748047,
+          "w": 16.360870361328125,
+          "size": 6.771877765655518,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": null,
+          "text": null
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": null,
+          "text": null
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 3,
+          "text": "There are 3 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": null,
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-168",
+      "case_type": [
+        "N"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": false,
+      "has_image": true,
+      "text_a": "3.0x",
+      "text_b": "5.7B",
+      "fields": {
+        "text_a": "3.0x",
+        "text_b": "5.7B",
+        "h_gap": 45.2,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 14.5,
+        "width_b": 15.9,
+        "style_sig_a": "NimbusRomNo9L-Regu|8.3|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|8.3|0|0|-|0|-",
+        "line_obs_count": 6,
+        "doc_id": "is11_efficientnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-168.jpg",
+      "line_spans": [
+        {
+          "text": "†",
+          "x0": 64.58236694335938,
+          "x1": 67.0662841796875,
+          "y0": 205.5664520263672,
+          "y1": 210.30674743652344,
+          "w": 2.483917236328125,
+          "size": 4.740301132202148,
+          "font": "CMSY7",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "GPipe (",
+          "x0": 67.4039306640625,
+          "x1": 88.28162384033203,
+          "y0": 206.65481567382812,
+          "y1": 213.4266815185547,
+          "w": 20.87769317626953,
+          "size": 6.771877765655518,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "Huang et al.",
+          "x0": 88.28162384033203,
+          "x1": 121.19296264648438,
+          "y0": 206.65481567382812,
+          "y1": 213.4266815185547,
+          "w": 32.911338806152344,
+          "size": 6.771877765655518,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": ",",
+          "x0": 121.19295501708984,
+          "x1": 122.88592529296875,
+          "y0": 206.65481567382812,
+          "y1": 213.4266815185547,
+          "w": 1.6929702758789062,
+          "size": 6.771877765655518,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": " 2018",
+          "x0": 122.88592529296875,
+          "x1": 138.1226348876953,
+          "y0": 206.65481567382812,
+          "y1": 213.4266815185547,
+          "w": 15.236709594726562,
+          "size": 6.771877765655518,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": ") trains giant models with specialized pipeline parallelism library.",
+          "x0": 138.12261962890625,
+          "x1": 315.4238586425781,
+          "y0": 206.65481567382812,
+          "y1": 213.4266815185547,
+          "w": 177.30123901367188,
+          "size": 6.771877765655518,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": null,
+          "text": null
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": null,
+          "text": null
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 6,
+          "text": "There are 6 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": null,
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-198",
+      "case_type": [
+        "N"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": false,
+      "has_image": true,
+      "text_a": "82.9%",
+      "text_b": "96.2%",
+      "fields": {
+        "text_a": "82.9%",
+        "text_b": "96.2%",
+        "h_gap": 25.6,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 21.4,
+        "width_b": 21.4,
+        "style_sig_a": "NimbusRomNo9L-Regu|8.3|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|8.3|0|0|-|0|-",
+        "line_obs_count": 7,
+        "doc_id": "is11_efficientnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-198.jpg",
+      "line_spans": [
+        {
+          "text": "0",
+          "x0": 119.02912139892578,
+          "x1": 122.12128448486328,
+          "y0": 340.4624328613281,
+          "y1": 346.7922058105469,
+          "w": 3.0921630859375,
+          "size": 6.323447227478027,
+          "font": "CMR12",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": ".",
+          "x0": 122.12493896484375,
+          "x1": 123.83859252929688,
+          "y0": 340.4624328613281,
+          "y1": 346.785888671875,
+          "w": 1.713653564453125,
+          "size": 6.323447227478027,
+          "font": "CMMI12",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "4",
+          "x0": 123.84484100341797,
+          "x1": 126.93700408935547,
+          "y0": 340.4624328613281,
+          "y1": 346.7922058105469,
+          "w": 3.0921630859375,
+          "size": 6.323447227478027,
+          "font": "CMR12",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "92",
+          "x0": 208.32586669921875,
+          "x1": 214.51019287109375,
+          "y0": 341.1797180175781,
+          "y1": 347.5094909667969,
+          "w": 6.184326171875,
+          "size": 6.323447227478027,
+          "font": "CMR12",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": ".",
+          "x0": 214.51751708984375,
+          "x1": 216.23117065429688,
+          "y0": 341.1797180175781,
+          "y1": 347.503173828125,
+          "w": 1.713653564453125,
+          "size": 6.323447227478027,
+          "font": "CMMI12",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "5",
+          "x0": 216.23741149902344,
+          "x1": 219.32957458496094,
+          "y0": 341.1797180175781,
+          "y1": 347.5094909667969,
+          "w": 3.0921630859375,
+          "size": 6.323447227478027,
+          "font": "CMR12",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "96",
+          "x0": 305.5341796875,
+          "x1": 311.718505859375,
+          "y0": 337.1192932128906,
+          "y1": 343.4490661621094,
+          "w": 6.184326171875,
+          "size": 6.323447227478027,
+          "font": "CMR12",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": null,
+          "text": null
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": null,
+          "text": null
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 7,
+          "text": "There are 7 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": null,
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-205",
+      "case_type": [
+        "N"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": false,
+      "has_image": true,
+      "text_a": "96.5%",
+      "text_b": "155M",
+      "fields": {
+        "text_a": "96.5%",
+        "text_b": "155M",
+        "h_gap": 23.7,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 21.4,
+        "width_b": 19.8,
+        "style_sig_a": "NimbusRomNo9L-Regu|8.3|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|8.3|0|0|-|0|-",
+        "line_obs_count": 5,
+        "doc_id": "is11_efficientnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-205.jpg",
+      "line_spans": [
+        {
+          "text": "98",
+          "x0": 115.93329620361328,
+          "x1": 122.11762237548828,
+          "y0": 363.23193359375,
+          "y1": 369.56170654296875,
+          "w": 6.184326171875,
+          "size": 6.323447227478027,
+          "font": "CMR12",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": ".",
+          "x0": 122.12493896484375,
+          "x1": 123.83859252929688,
+          "y0": 363.23193359375,
+          "y1": 369.5553894042969,
+          "w": 1.713653564453125,
+          "size": 6.323447227478027,
+          "font": "CMMI12",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "0",
+          "x0": 123.84484100341797,
+          "x1": 126.93700408935547,
+          "y0": 363.23193359375,
+          "y1": 369.56170654296875,
+          "w": 3.0921630859375,
+          "size": 6.323447227478027,
+          "font": "CMR12",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "94",
+          "x0": 305.5341796875,
+          "x1": 311.718505859375,
+          "y0": 359.9707946777344,
+          "y1": 366.3005676269531,
+          "w": 6.184326171875,
+          "size": 6.323447227478027,
+          "font": "CMR12",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "90",
+          "x0": 397.9267578125,
+          "x1": 404.111083984375,
+          "y0": 361.7495422363281,
+          "y1": 368.0793151855469,
+          "w": 6.184326171875,
+          "size": 6.323447227478027,
+          "font": "CMR12",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": null,
+          "text": null
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": null,
+          "text": null
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 5,
+          "text": "There are 5 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": null,
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-375",
+      "case_type": [
+        "B",
+        "U"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": false,
+      "has_image": true,
+      "text_a": "[23].",
+      "text_b": "Each",
+      "fields": {
+        "text_a": "[23].",
+        "text_b": "Each",
+        "h_gap": 9.7,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 21.5,
+        "width_b": 25.2,
+        "style_sig_a": "SFRM1200|12.0|0|0|-|0|-",
+        "style_sig_b": "SFRM1200|12.0|0|0|-|0|-",
+        "line_obs_count": 0,
+        "doc_id": "is11_med_001",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-375.jpg",
+      "line_spans": [],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": null,
+          "text": null
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": null,
+          "text": null
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 0,
+          "text": null
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": null,
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": true,
+          "text": "Text A ends with a period"
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": true,
+          "text": "Text B starts with a capital letter"
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-418",
+      "case_type": [
+        "B",
+        "U"
+      ],
+      "cue_conflict": false,
+      "cue_direction": "KEEP_SEPARATE",
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": false,
+      "has_image": true,
+      "text_a": "), but with the different kernels illustrated in the left panel.",
+      "text_b": "The",
+      "fields": {
+        "text_a": "), but with the different kernels illustrated in the left panel.",
+        "text_b": "The",
+        "h_gap": 10.8,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 325.4,
+        "width_b": 20.2,
+        "style_sig_a": "SFRM1200|12.0|0|0|-|0|-",
+        "style_sig_b": "SFRM1200|12.0|0|0|-|0|-",
+        "line_obs_count": 0,
+        "doc_id": "is11_med_001",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-418.jpg",
+      "line_spans": [],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": null,
+          "text": null
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": null,
+          "text": null
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 0,
+          "text": null
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": null,
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": true,
+          "text": "Text A ends with a period"
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": true,
+          "text": "Text B starts with a capital letter"
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "NO_CONFLICT"
+    },
+    {
+      "case_id": "IS11-AMB-032",
+      "case_type": [
+        "N"
+      ],
+      "cue_conflict": false,
+      "cue_direction": null,
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": false,
+      "has_image": true,
+      "text_a": "-",
+      "text_b": "8.43",
+      "fields": {
+        "text_a": "-",
+        "text_b": "8.43",
+        "h_gap": 33.9,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 3.0,
+        "width_b": 15.7,
+        "style_sig_a": "NimbusRomNo9L-Regu|9.0|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|9.0|0|0|-|0|-",
+        "line_obs_count": 3,
+        "doc_id": "is11_resnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-032.jpg",
+      "line_spans": [
+        {
+          "text": "Comparisons with State-of-the-art Methods.",
+          "x0": 50.11199951171875,
+          "x1": 240.08883666992188,
+          "y0": 260.99871826171875,
+          "y1": 270.9613037109375,
+          "w": 189.97683715820312,
+          "size": 9.962599754333496,
+          "font": "NimbusRomNo9L-Medi",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": " In Table 4",
+          "x0": 240.08883666992188,
+          "x1": 286.3627014160156,
+          "y0": 261.08966064453125,
+          "y1": 271.0522766113281,
+          "w": 46.27386474609375,
+          "size": 9.962599754333496,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "ods are with data augmentation. For ResNet-110, we run it 5 times",
+          "x0": 308.86199951171875,
+          "x1": 545.108642578125,
+          "y0": 264.1299743652344,
+          "y1": 273.09637451171875,
+          "w": 236.24664306640625,
+          "size": 8.966400146484375,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": null,
+          "text": null
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": null,
+          "text": null
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 3,
+          "text": "There are 3 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": null,
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "EVIDENCE_MISSING",
+      "reclassified_from": "S",
+      "reclassification_reason": "No cue displayed in B2; conflict is conceptual (absence of boundary markers), not observable"
+    },
+    {
+      "case_id": "IS11-AMB-064",
+      "case_type": [
+        "N"
+      ],
+      "cue_conflict": false,
+      "cue_direction": null,
+      "gt_direction": "KEEP_SEPARATE",
+      "gt_label": "KEEP_SEPARATE",
+      "has_tld": false,
+      "has_image": true,
+      "text_a": "training data",
+      "text_b": "07+12",
+      "fields": {
+        "text_a": "training data",
+        "text_b": "07+12",
+        "h_gap": 27.1,
+        "dy": 0,
+        "same_style": true,
+        "width_a": 45.1,
+        "width_b": 23.0,
+        "style_sig_a": "NimbusRomNo9L-Regu|9.0|0|0|-|0|-",
+        "style_sig_b": "NimbusRomNo9L-Regu|9.0|0|0|-|0|-",
+        "line_obs_count": 5,
+        "doc_id": "is11_resnet",
+        "page_number": 0
+      },
+      "image_path": "pilot_images_annotated/IS11-AMB-064.jpg",
+      "line_spans": [
+        {
+          "text": "pages 303–338, 2010.",
+          "x0": 68.37098693847656,
+          "x1": 138.3245086669922,
+          "y0": 209.8995361328125,
+          "y1": 217.86962890625,
+          "w": 69.95352172851562,
+          "size": 7.970099925994873,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "[34] B. D. Ripley.",
+          "x0": 308.8620300292969,
+          "x1": 369.4428405761719,
+          "y0": 204.9344482421875,
+          "y1": 212.904541015625,
+          "w": 60.580810546875,
+          "size": 7.970099925994873,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": "university press, 1996.",
+          "x0": 327.12103271484375,
+          "x1": 398.9715270996094,
+          "y0": 214.3984375,
+          "y1": 222.3685302734375,
+          "w": 71.85049438476562,
+          "size": 7.970099925994873,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": " Pattern recognition and neural networks",
+          "x0": 369.4428405761719,
+          "x1": 503.76397705078125,
+          "y0": 204.79327392578125,
+          "y1": 212.76336669921875,
+          "w": 134.32113647460938,
+          "size": 7.970099925994873,
+          "font": "NimbusRomNo9L-ReguItal",
+          "is_a": false,
+          "is_b": false
+        },
+        {
+          "text": ". Cambridge",
+          "x0": 503.76104736328125,
+          "x1": 545.10986328125,
+          "y0": 204.9344482421875,
+          "y1": 212.904541015625,
+          "w": 41.34881591796875,
+          "size": 7.970099925994873,
+          "font": "NimbusRomNo9L-Regu",
+          "is_a": false,
+          "is_b": false
+        }
+      ],
+      "cues": {
+        "cue1": {
+          "source": "TLD is_in_table",
+          "value": null,
+          "text": null
+        },
+        "cue2": {
+          "source": "TLD different_cell",
+          "value": null,
+          "text": null
+        },
+        "cue3": {
+          "source": "line_obs_count",
+          "value": 5,
+          "text": "There are 5 text items on this line"
+        },
+        "cue4": {
+          "source": "line_spans",
+          "left": null,
+          "right": null
+        },
+        "cue5": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        },
+        "cue6": {
+          "source": "P1 text_b",
+          "value": false,
+          "text": null
+        },
+        "cue7": {
+          "source": "P1 text_a",
+          "value": false,
+          "text": null
+        }
+      },
+      "conflict_status": "EVIDENCE_MISSING",
+      "reclassified_from": "S",
+      "reclassification_reason": "No cue displayed in B2; conflict is conceptual (absence of boundary markers), not observable"
+    }
+  ],
+  "total": 30,
+  "schema_version": "exp_v2"
+}

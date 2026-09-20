@@ -1,0 +1,1099 @@
+{
+  "audit_status": {
+    "document_discourse_hypothesis": "NOT_SUPPORTED",
+    "evidence_organization_gap": "SUPPORTED",
+    "genuine_human_semantic_gap": "NOT_SUPPORTED",
+    "observation_gap": "NOT_SUPPORTED",
+    "llm_role": "NOT_NECESSARY",
+    "minimal_next_step": "Evidence Organization Audit",
+    "current_learning_level": "L3"
+  },
+  "case_scope": {
+    "source": "Machine-Requested Minimal Query Audit, Type C (EVIDENCE_MISSING)",
+    "h2_case_count": 17,
+    "case_ids": [
+      "IS11-AMB-052",
+      "IS11-AMB-130",
+      "IS11-AMB-163",
+      "IS11-AMB-168",
+      "IS11-AMB-198",
+      "IS11-AMB-205",
+      "IS11-AMB-218",
+      "IS11-AMB-257",
+      "IS11-AMB-261",
+      "IS11-AMB-262",
+      "IS11-AMB-267",
+      "IS11-AMB-279",
+      "IS11-AMB-313",
+      "IS11-AMB-318",
+      "IS11-AMB-380",
+      "IS11-AMB-457",
+      "IS11-AMB-462"
+    ],
+    "case_scope_verified": true,
+    "doc_distribution": {
+      "is11_resnet": 1,
+      "is11_efficientnet": 13,
+      "is11_med_001": 1,
+      "is11_cs_001": 2
+    },
+    "page_count": 7,
+    "gt_distribution": {
+      "KEEP_SEPARATE": 17,
+      "MERGE": 0
+    },
+    "reviewer_agreement": "17/17 unanimous"
+  },
+  "case_matrix": [
+    {
+      "case_id": "IS11-AMB-052",
+      "text_a": "0.46M",
+      "text_b": "7.51",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_resnet",
+      "page": 7,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "METRIC_VALUE"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_DIFFERENT_COLUMNS",
+      "reviewer_a_rationale": "In Table 6, '0.46M' is the #params column and '7.51' is the error (%) column for ResNet-32, two diff",
+      "reviewer_b_rationale": "'0.46M' (# params) and '7.51' (error) are values in different columns of the ResNet-32 row in the CI",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "METRIC_VALUE",
+        "PARAM_FLOP"
+      ],
+      "local_text": [
+        "NUMERIC_VALUE",
+        "PARAM_SUFFIX",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [
+        "TABLE_CONTEXT"
+      ],
+      "cross_object": [
+        "DIFFERENT_COLUMNS"
+      ],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-130",
+      "text_a": "Resolution",
+      "text_b": "#Channels",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 5,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "HEADER_REFERENCE"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_DIFFERENT_COLUMNS",
+      "reviewer_a_rationale": "'Resolution' and '#Channels' are two distinct column headers in the Table 1 header row, representing",
+      "reviewer_b_rationale": "'Resolution' and '#Channels' are two distinct column headers in Table 1 of the EfficientNet architec",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "HEADER_REFERENCE"
+      ],
+      "local_text": [
+        "CAPITAL_START",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [
+        "TABLE_CONTEXT",
+        "TABLE_HEADER_ROW"
+      ],
+      "cross_object": [
+        "DIFFERENT_COLUMNS",
+        "HEADER_ROW_ITEM"
+      ],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-163",
+      "text_a": "93.9%",
+      "text_b": "34M",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 6,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "METRIC_VALUE"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_DIFFERENT_COLUMNS",
+      "reviewer_a_rationale": "In Table 2, '93.9%' is the Top-5 accuracy and '34M' is the #Params for DenseNet-264, two different t",
+      "reviewer_b_rationale": "'93.9%' (Top-5 Acc.) and '34M' (#Params) are values in different columns of the DenseNet-264 row in ",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "METRIC_VALUE",
+        "PARAM_FLOP"
+      ],
+      "local_text": [
+        "PERCENTAGE",
+        "PARAM_SUFFIX",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [
+        "TABLE_CONTEXT"
+      ],
+      "cross_object": [
+        "DIFFERENT_COLUMNS"
+      ],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-168",
+      "text_a": "3.0x",
+      "text_b": "5.7B",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 6,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "PARAM_FLOP"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_DIFFERENT_COLUMNS",
+      "reviewer_a_rationale": "In Table 2, '3.0x' is the param ratio-to-EfficientNet and '5.7B' is the #FLOPs for Inception-v3, two",
+      "reviewer_b_rationale": "'3.0x' (param ratio) and '5.7B' (#FLOPs) are values in different columns of the Inception-v3 row in ",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "PARAM_FLOP"
+      ],
+      "local_text": [
+        "PARAM_SUFFIX",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [
+        "TABLE_CONTEXT"
+      ],
+      "cross_object": [],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-198",
+      "text_a": "82.9%",
+      "text_b": "96.2%",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 6,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "METRIC_VALUE"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_DIFFERENT_COLUMNS",
+      "reviewer_a_rationale": "'82.9%' is the Top-1 accuracy and '96.2%' is the Top-5 accuracy in Table 2, two distinct table colum",
+      "reviewer_b_rationale": "'82.9%' (Top-1 Acc.) and '96.2%' (Top-5 Acc.) are values in different columns of a model row in Tabl",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "METRIC_VALUE"
+      ],
+      "local_text": [
+        "PERCENTAGE",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [
+        "TABLE_CONTEXT"
+      ],
+      "cross_object": [
+        "MODEL_TO_METRIC"
+      ],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-205",
+      "text_a": "96.5%",
+      "text_b": "155M",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 6,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "METRIC_VALUE"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_DIFFERENT_COLUMNS",
+      "reviewer_a_rationale": "In Table 2, '96.5%' is the Top-5 accuracy and '155M' is the #Params for AmoebaNet-C, two different t",
+      "reviewer_b_rationale": "'96.5%' (Top-5 Acc.) and '155M' (#Params) are values in different columns of the AmoebaNet-C row in ",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "METRIC_VALUE",
+        "PARAM_FLOP"
+      ],
+      "local_text": [
+        "PERCENTAGE",
+        "PARAM_SUFFIX",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [
+        "TABLE_CONTEXT"
+      ],
+      "cross_object": [
+        "DIFFERENT_COLUMNS"
+      ],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-218",
+      "text_a": "1.2B",
+      "text_b": "76.8%",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 6,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "METRIC_VALUE"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_DIFFERENT_COLUMNS",
+      "reviewer_a_rationale": "'1.2B' is a #FLOPs value and '76.8%' is a Top-1 accuracy; these belong to different table columns (a",
+      "reviewer_b_rationale": "'1.2B' (#FLOPs) and '76.8%' (accuracy) are values in different columns of a model row in the ImageNe",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "METRIC_VALUE",
+        "PARAM_FLOP"
+      ],
+      "local_text": [
+        "PERCENTAGE",
+        "PARAM_SUFFIX",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [],
+      "cross_object": [
+        "DIFFERENT_COLUMNS"
+      ],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-257",
+      "text_a": "Gpipe",
+      "text_b": "91.3%",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "MODEL_NAME"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_DIFFERENT_COLUMNS",
+      "reviewer_a_rationale": "In Table 5, 'Gpipe' is a model name and '91.3%' is its accuracy value, occupying two separate table ",
+      "reviewer_b_rationale": "'Gpipe' (model name) and '91.3%' (accuracy) are values in different columns of the CIFAR-100 row in ",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "MODEL_NAME",
+        "METRIC_VALUE"
+      ],
+      "local_text": [
+        "PERCENTAGE",
+        "CAPITAL_START",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [
+        "TABLE_CONTEXT"
+      ],
+      "cross_object": [
+        "MODEL_TO_METRIC"
+      ],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-261",
+      "text_a": "Inception-v4",
+      "text_b": "81.8%",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "MODEL_NAME"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_DIFFERENT_COLUMNS",
+      "reviewer_a_rationale": "In Table 5, 'Inception-v4' is a model name and '81.8%' is its accuracy value, two distinct table col",
+      "reviewer_b_rationale": "'Inception-v4' (model name) and '81.8%' (accuracy) are values in different columns of the Birdsnap r",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "MODEL_NAME",
+        "METRIC_VALUE"
+      ],
+      "local_text": [
+        "PERCENTAGE",
+        "CAPITAL_START",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [
+        "TABLE_CONTEXT"
+      ],
+      "cross_object": [
+        "MODEL_TO_METRIC"
+      ],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-262",
+      "text_a": "41M",
+      "text_b": "EfﬁcientNet-B5",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "MODEL_NAME"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_COMPARISON_COLUMN_GROUP",
+      "reviewer_a_rationale": "'41M' is the #Param value for Inception-v4 in the comparison column group and 'EfficientNet-B5' is a",
+      "reviewer_b_rationale": "'41M' (#Param for Inception-v4) and 'EfficientNet-B5' (Our Model name) are values in different colum",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "MODEL_NAME",
+        "PARAM_FLOP"
+      ],
+      "local_text": [
+        "PARAM_SUFFIX",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [],
+      "cross_object": [
+        "DIFFERENT_COLUMNS",
+        "MODEL_TO_METRIC"
+      ],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-267",
+      "text_a": "83.6%",
+      "text_b": "556M",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "METRIC_VALUE"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_DIFFERENT_COLUMNS",
+      "reviewer_a_rationale": "In Table 5, '83.6%' is the accuracy and '556M' is the #Params for GPipe, two separate table columns.",
+      "reviewer_b_rationale": "'83.6%' (accuracy) and '556M' (#Param) are values in different columns of the GPipe row in Table 5; ",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "METRIC_VALUE",
+        "PARAM_FLOP"
+      ],
+      "local_text": [
+        "PERCENTAGE",
+        "PARAM_SUFFIX",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [
+        "TABLE_CONTEXT"
+      ],
+      "cross_object": [],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-279",
+      "text_a": "EfﬁcientNet-B5",
+      "text_b": "98.5%",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 7,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "MODEL_NAME"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_DIFFERENT_COLUMNS",
+      "reviewer_a_rationale": "'EfficientNet-B5' is a model name and '98.5%' is its accuracy value in Table 5, two distinct table c",
+      "reviewer_b_rationale": "'EfficientNet-B5' (Our Model name) and '98.5%' (accuracy) are values in different columns of the Flo",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "MODEL_NAME",
+        "METRIC_VALUE"
+      ],
+      "local_text": [
+        "PERCENTAGE",
+        "PARAM_SUFFIX",
+        "CAPITAL_START",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [
+        "TABLE_CONTEXT"
+      ],
+      "cross_object": [
+        "MODEL_TO_METRIC"
+      ],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-313",
+      "text_a": "Test Size",
+      "text_b": "#Classes",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 8,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "HEADER_REFERENCE"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_DIFFERENT_COLUMNS",
+      "reviewer_a_rationale": "'Test Size' and '#Classes' are two different column headers in the Table 6 header row, representing ",
+      "reviewer_b_rationale": "'Test Size' and '#Classes' are two distinct column headers in Table 6; they represent different data",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "HEADER_REFERENCE"
+      ],
+      "local_text": [
+        "CAPITAL_START",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [
+        "TABLE_CONTEXT",
+        "TABLE_HEADER_ROW"
+      ],
+      "cross_object": [
+        "DIFFERENT_COLUMNS",
+        "HEADER_ROW_ITEM"
+      ],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-318",
+      "text_a": ")",
+      "text_b": "47,386",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_efficientnet",
+      "page": 8,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "DATASET_NAME"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_DIFFERENT_COLUMNS",
+      "reviewer_a_rationale": "')' is the closing parenthesis of the dataset citation 'Birdsnap (Berg et al., 2014)' in the Dataset",
+      "reviewer_b_rationale": "')' is the closing parenthesis of the dataset name cell 'Birdsnap (Berg et al., 2014)' and '47,386' ",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "DATASET_NAME"
+      ],
+      "local_text": [
+        "NUMERIC_VALUE",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [],
+      "cross_object": [
+        "DIFFERENT_COLUMNS"
+      ],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-380",
+      "text_a": "RBF",
+      "text_b": "Matérn",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_med_001",
+      "page": 13,
+      "human_decision_relevant_evidence": [
+        "FIGURE_REFERENCE",
+        "KERNEL_NAME"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are different items in the same figure\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "FIGURE_DIFFERENT_ITEMS",
+      "reviewer_a_rationale": "In the FIG. 4 kernel-construction diagram, 'RBF' and 'Matérn' are two distinct base-kernel list item",
+      "reviewer_b_rationale": "'RBF' and 'Matérn' are different kernel names listed as separate items in the FIG. 4 kernel construc",
+      "evidence_used": [
+        "FIGURE_REFERENCE",
+        "KERNEL_NAME"
+      ],
+      "local_text": [
+        "PARAM_SUFFIX",
+        "CAPITAL_START",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [
+        "FIGURE_CONTEXT"
+      ],
+      "cross_object": [],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-457",
+      "text_a": "Models",
+      "text_b": "Size",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "HEADER_REFERENCE"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_DIFFERENT_COLUMNS",
+      "reviewer_a_rationale": "'Models' and 'Size' are two adjacent column headers in Table 1/Table 2 — different columns.",
+      "reviewer_b_rationale": "'Models' and 'Size' are two distinct column headers in Table 2; they represent different attributes ",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "HEADER_REFERENCE"
+      ],
+      "local_text": [
+        "PARAM_SUFFIX",
+        "CAPITAL_START",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [
+        "TABLE_CONTEXT",
+        "TABLE_HEADER_ROW"
+      ],
+      "cross_object": [
+        "DIFFERENT_COLUMNS",
+        "HEADER_ROW_ITEM"
+      ],
+      "discourse": []
+    },
+    {
+      "case_id": "IS11-AMB-462",
+      "text_a": "WGe",
+      "text_b": "Avg.",
+      "gt": "KEEP_SEPARATE",
+      "doc_id": "is11_cs_001",
+      "page": 3,
+      "human_decision_relevant_evidence": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "HEADER_REFERENCE"
+      ],
+      "evidence_existing": "PARTIALLY_AVAILABLE",
+      "organization_gap": "RELATION_DISCARDED",
+      "discourse_needed": "NO",
+      "context_level": "LOCAL_SUFFICIENT",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "minimal_query": "MINIMAL_QUERY_POTENTIALLY_VALID",
+      "llm_potential": "NOT_NECESSARY",
+      "relation": "YES — \"A and B are in different columns of the same table\"",
+      "relation_level": "L2_STRUCTURAL_RELATION",
+      "structural_pattern": "TABLE_DIFFERENT_COLUMNS",
+      "reviewer_a_rationale": "'WGe' and 'Avg.' are two adjacent column headers in Table 2 — different columns.",
+      "reviewer_b_rationale": "'WGe' and 'Avg.' are two distinct column headers in Table 2; they represent different evaluation ben",
+      "evidence_used": [
+        "TABLE_REFERENCE",
+        "COLUMN_REFERENCE",
+        "HEADER_REFERENCE"
+      ],
+      "local_text": [
+        "CAPITAL_START",
+        "TEXT_CONTENT"
+      ],
+      "spatial": [
+        "SAME_LINE"
+      ],
+      "hierarchy": [
+        "TABLE_CONTEXT",
+        "TABLE_HEADER_ROW"
+      ],
+      "cross_object": [
+        "DIFFERENT_COLUMNS",
+        "HEADER_ROW_ITEM"
+      ],
+      "discourse": []
+    }
+  ],
+  "evidence_inventory": {
+    "text_content": {
+      "available": 17,
+      "status": "FULLY_AVAILABLE"
+    },
+    "bbox_a": {
+      "available": 17,
+      "status": "FULLY_AVAILABLE"
+    },
+    "bbox_b": {
+      "available": 17,
+      "status": "FULLY_AVAILABLE"
+    },
+    "dy_same_line": {
+      "available": 17,
+      "status": "COMPUTABLE_FROM_BBOX"
+    },
+    "h_gap": {
+      "available": 17,
+      "status": "COMPUTABLE_FROM_BBOX"
+    },
+    "line_spans": {
+      "available": 10,
+      "status": "PARTIALLY_AVAILABLE"
+    },
+    "fields_h_gap_dy": {
+      "available": 10,
+      "status": "PARTIALLY_AVAILABLE"
+    },
+    "tld_is_in_table": {
+      "available": 0,
+      "status": "NOT_AVAILABLE — TLD did not detect table"
+    },
+    "tld_table_headers": {
+      "available": 0,
+      "status": "NOT_AVAILABLE — TLD did not detect table"
+    },
+    "tld_table_rows": {
+      "available": 0,
+      "status": "NOT_AVAILABLE — TLD did not detect table"
+    },
+    "tld_cell_assignment": {
+      "available": 0,
+      "status": "NOT_AVAILABLE — TLD did not detect table"
+    },
+    "summary": "17/17 have bbox+text (PARTIALLY_AVAILABLE). 0/17 have TLD table structure (NOT_AVAILABLE). Gap is RELATION_COMPOSITION."
+  },
+  "relation_inventory": {
+    "missing_relation": "SAME_TABLE_ROW_DIFFERENT_COLUMN",
+    "relation_definition": "A and B are on the same horizontal line (same y), with multiple other text items, forming a row of a table that TLD did not detect",
+    "evidence_needed": [
+      "dy ≈ 0 (same y position) — EXISTS (17/17)",
+      "h_gap > 0 (horizontal separation) — EXISTS (17/17)",
+      "Multiple text items on same line — EXISTS (10/17 have line_spans data)",
+      "Similar y positions on adjacent lines (table grid) — NOT CHECKED but derivable",
+      "Header row identification — NOT CHECKED but derivable"
+    ],
+    "relation_level": "L2_STRUCTURAL_RELATION",
+    "relation_count": 17,
+    "status": "RELATION_DISCARDED — TLD did not detect table, so column relation was never computed"
+  },
+  "discourse_pattern_inventory": {
+    "patterns_checked": {
+      "A_object_caption": 0,
+      "B_paragraph_figure": 0,
+      "C_paragraph_table": 0,
+      "D_heading_content_group": 0,
+      "E_previous_following": 0,
+      "F_local_global_section": 0,
+      "G_multiple_objects_one_unit": 0,
+      "H_spatially_close_different_units": 17
+    },
+    "pattern_H_note": "Surface match, but Human judgment is based on TABLE_COLUMN structure, not semantic \"different content unit\". This is STRUCTURAL, not DISCOURSE.",
+    "actual_structural_patterns": {
+      "TABLE_DIFFERENT_COLUMNS": 15,
+      "TABLE_COMPARISON_COLUMN_GROUP": 1,
+      "FIGURE_DIFFERENT_ITEMS": 1
+    },
+    "discourse_patterns_found": 0,
+    "verdict": "NO discourse pattern found. All patterns are structural."
+  },
+  "context_level_distribution": {
+    "LOCAL_SUFFICIENT": 17,
+    "SECTION_REQUIRED": 0,
+    "GLOBAL_REQUIRED": 0,
+    "MULTI_LEVEL_REQUIRED": 0,
+    "UNKNOWN": 0
+  },
+  "gap_type_distribution": {
+    "EVIDENCE_ORGANIZATION_GAP": 17,
+    "OBSERVATION_GAP": 0,
+    "GENUINE_HUMAN_SEMANTIC_GAP": 0,
+    "MACHINE_LOGIC_GAP": 0,
+    "UNKNOWN": 0
+  },
+  "structural_vs_discourse": {
+    "structural_organization": 17,
+    "discourse_organization": 0,
+    "verdict": "H2 is ENTIRELY Structural, NOT Discourse"
+  },
+  "human_evidence_decomposition": {
+    "A_local_text": {
+      "count": 17,
+      "details": "text content, numeric values, percentage, param suffix"
+    },
+    "B_spatial_structure": {
+      "count": 17,
+      "details": "same line (dy≈0), horizontal gap, alignment"
+    },
+    "C_document_hierarchy": {
+      "count": 16,
+      "details": "table context (Table N reference)"
+    },
+    "D_cross_object_relation": {
+      "count": 17,
+      "details": "different columns / different items"
+    },
+    "E_discourse_authorial": {
+      "count": 0,
+      "details": "NONE — no case requires discourse understanding"
+    }
+  },
+  "llm_role_feasibility": {
+    "case_a_evidence_sufficient_organization_gap": 17,
+    "case_b_cross_paragraph_semantic": 0,
+    "case_c_evidence_missing": 0,
+    "case_d_subjective_judgment": 0,
+    "verdict": "NOT_NECESSARY — 17/17 are Case A (organization gap), LLM cannot solve better than spatial logic",
+    "llm_boundaries": "If future cases require discourse, LLM role must be: Evidence → LLM Hypothesis → Evidence Traceability → Human Minimal Validation (NOT PDF→LLM→Truth)"
+  },
+  "minimal_query_feasibility": {
+    "question": "这两部分是否属于同一内容单元？",
+    "options": [
+      "同一内容",
+      "不同内容",
+      "无法判断"
+    ],
+    "valid_count": 17,
+    "status": "POTENTIALLY_VALID (17/17)",
+    "caveat": "Minimal Query is FALLBACK, not PRIMARY — if Evidence Organization is fixed, query no longer needed",
+    "conditions_met": {
+      "Q1_human_no_algorithm": true,
+      "Q2_human_no_pattern_mining": true,
+      "Q3_human_no_long_explanation": true,
+      "Q4_answer_resolves_ambiguity": true
+    }
+  },
+  "minimal_learnable_unit": {
+    "L0_case_specific": false,
+    "L1_local_structural_relation": true,
+    "L2_repeated_evidence_organization": true,
+    "L3_cross_document_pattern": true,
+    "L4_reusable_semantic_discourse": false,
+    "appropriate_level": "L2",
+    "pattern": "if dy ≈ 0 AND multiple items on same line AND regular x-spacing → table row → different columns → KEEP_SEPARATE",
+    "pattern_type": "STRUCTURAL (not discourse)"
+  },
+  "spatial_evidence_sufficiency": {
+    "bbox_a_exists": 17,
+    "bbox_b_exists": 17,
+    "dy_approx_zero": 17,
+    "h_gap_positive": 17,
+    "line_obs_count_ge_3": 10,
+    "verdict": "17/17 have sufficient spatial evidence for table row detection. Gap is RELATION_COMPOSITION, not OBSERVATION."
+  },
+  "anti_overdesign_gate": {
+    "G1_new_observation": "NO — bbox + text + line_spans already exist",
+    "G2_new_evidence_type": "NO — spatial position is already evidence",
+    "G3_new_relation_object": "POTENTIALLY_REQUIRED — SAME_TABLE_ROW_DIFFERENT_COLUMN relation needs expression (audit only, no implementation)",
+    "G4_pattern_engine": "NO — simple spatial alignment logic sufficient",
+    "G5_query_engine": "NO — Minimal Query is fallback, not primary",
+    "G6_learning_engine": "NO — L2 pattern not validated (L4 not reached)",
+    "G7_llm": "NO — 0/17 cases need LLM",
+    "G8_modify_dice_core": "NO — only TLD coverage expansion needed (FROZEN, not modified)"
+  },
+  "research_questions": {
+    "RQ1_same_problem": {
+      "answer": "YES (SUPPORTED)",
+      "evidence": "17/17 identical gap type, pattern, context level, discourse=NO"
+    },
+    "RQ2_decision_relevant_evidence": {
+      "answer": "Table column structure (TABLE_COLUMN_REFERENCE)",
+      "evidence": "Table ref 16/17, Column ref 16/17, different columns 16/17"
+    },
+    "RQ3_evidence_existing": {
+      "answer": "PARTIALLY_AVAILABLE (17/17)",
+      "evidence": "text+bbox exist, TLD table structure missing"
+    },
+    "RQ4_primary_gap": {
+      "answer": "Organization/Relation (17/17)",
+      "evidence": "Observation=0, Organization=17, Logic=0, Semantic=0"
+    },
+    "RQ5_repeated_pattern": {
+      "answer": "YES but STRUCTURAL not DISCOURSE",
+      "evidence": "TABLE_DIFFERENT_COLUMNS 15/17, stable across 4 docs"
+    },
+    "RQ6_structural_or_discourse": {
+      "answer": "STRUCTURAL (17/17)",
+      "evidence": "0/17 discourse needed"
+    },
+    "RQ7_context_level": {
+      "answer": "LOCAL_SUFFICIENT (17/17)",
+      "evidence": "0/17 need section/global"
+    },
+    "RQ8_persistent_semantic": {
+      "answer": "NOT_SUPPORTED",
+      "evidence": "0/17 need semantic, 17/17 reviewer agreement"
+    },
+    "RQ9_llm_role": {
+      "answer": "NOWHERE in current H2 data",
+      "evidence": "0/17 need LLM"
+    },
+    "RQ10_minimal_next_step": {
+      "answer": "Evidence Organization Audit",
+      "reason": "17/17 are Organization Gap — study how to compose existing evidence into table column relation"
+    }
+  },
+  "evidence_relation_discourse_matrix": {
+    "evidence_layer": {
+      "existing_capability": "P1-P7: text, bbox, reading order, line_spans, fields (h_gap, dy, same_style)",
+      "h2_need": "text + bbox + spatial alignment",
+      "status": "PARTIALLY_AVAILABLE — all raw evidence exists"
+    },
+    "relation_layer": {
+      "existing_capability": "TLD: table.headers, table.rows, a_cell, b_cell (when detected); compute_is11_observation() compresses to boolean",
+      "h2_need": "SAME_TABLE_ROW_DIFFERENT_COLUMN relation",
+      "status": "RELATION_DISCARDED — TLD did not detect table, relation never computed"
+    },
+    "discourse_layer": {
+      "existing_capability": "None (no discourse module exists)",
+      "h2_need": "None (not required)",
+      "status": "NOT_REQUIRED — 0/17 cases need discourse understanding"
+    },
+    "key_conclusion": "Gap is at RELATION layer, NOT DISCOURSE layer. Do not upgrade Relation Gap to Discourse Gap."
+  },
+  "final_recommendation": {
+    "verdict": "EVIDENCE_ORGANIZATION_GAP = PRIMARY",
+    "document_discourse_hypothesis": "NOT_SUPPORTED",
+    "next_step": "Evidence Organization Audit",
+    "forbidden_directions": [
+      "Discourse Engine",
+      "LLM integration",
+      "New Observation",
+      "New Module",
+      "Semantic Understanding"
+    ],
+    "principle": "Do not upgrade a Relation Gap into a Discourse Gap. The evidence exists; only the relation composition is missing."
+  },
+  "limitations": [
+    "17 H2 cases from 4 documents only — pattern may not generalize",
+    "TLD coverage 41% — H2 concentrated on undetected pages",
+    "AMB-380 (FIGURE_DIFFERENT_ITEMS) only 1 case — figure pattern prevalence unknown",
+    "AMB-262 has comparison context but reviewer still used structural judgment",
+    "No future case test (L4-L7 not reached)",
+    "Reviewer rationales are post-hoc explanations",
+    "P722 n=1 participant",
+    "Audit does not diagnose why TLD failed — TLD is FROZEN"
+  ],
+  "governance": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "ATOMIC_OBSERVATION_MODIFICATION": false,
+    "AGGREGATION_CHANGE": false,
+    "COMPRESSION_CHANGE": false,
+    "EVIDENCE_CUE_CHANGE": false,
+    "SIGNAL_MODIFICATION": false,
+    "UI_MODIFICATION": false,
+    "NEW_OBJECT_IMPLEMENTATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "RUNTIME_CHANGE": false,
+    "ML_TRAINING": false,
+    "LLM_TRAINING": false,
+    "CAPABILITY_REGISTRATION_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "FROZEN_EXPERIMENT": "INTACT",
+    "FORMAL_EXPERIMENT": "NOT_STARTED",
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  }
+}

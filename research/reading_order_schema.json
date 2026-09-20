@@ -1,0 +1,71 @@
+{
+  "schema_name": "ReadingOrderObservation",
+  "version": "p5",
+  "description": "Geometric reading-order interpretation of P4 ExperimentalSpans. Derived, not a copy. Reverse-traceable to span_id. NO semantic classification.",
+  "design_principles": [
+    "P5 = geometric order of spans, NOT semantic structure.",
+    "Column groups are geometric x-density regions, NOT 'body/title columns'.",
+    "Column detection via bbox vertical coverage (white-stripe) projection.",
+    "Reading order: within column top→bottom, columns left→right by geometry.",
+    "No hardcoded '2-column' assumption; 1/2/3+/uneven/asymmetric supported.",
+    "Unclear layout → LOW_CONFIDENCE / AMBIGUOUS, not forced classification.",
+    "No column_id semantic interpretation, no header/footer semantics.",
+    "P5 does not modify spans (read-only input)."
+  ],
+  "fields": {
+    "observation_id": "str",
+    "document_id": "str",
+    "page_number": "int",
+    "span_id": "str",
+    "source_span_index": "int",
+    "column_group_id": "Optional[str]",
+    "page_region": "str",
+    "reading_order_index": "int",
+    "previous_span_id": "Optional[str]",
+    "next_span_id": "Optional[str]",
+    "bbox": "List[float]",
+    "center_x": "float",
+    "center_y": "float",
+    "width": "float",
+    "height": "float",
+    "order_reason": "str",
+    "order_facts": "Dict[str, Any]",
+    "horizontal_relation": "Optional[str]",
+    "vertical_relation": "Optional[str]",
+    "column_relation": "Optional[str]",
+    "confidence": "str",
+    "provenance": "Dict[str, Any]"
+  },
+  "page_layout_fields": {
+    "page_number": "int",
+    "column_groups": "List[Dict[str, Any]]",
+    "column_count": "int",
+    "page_width": "float",
+    "page_height": "float",
+    "top_region_span_ids": "List[str]",
+    "bottom_region_span_ids": "List[str]",
+    "full_width_span_ids": "List[str]",
+    "column_region_span_ids": "List[str]",
+    "ambiguous_span_ids": "List[str]",
+    "confidence": "str",
+    "x_projection": "Dict[str, Any]",
+    "provenance": "Dict[str, Any]"
+  },
+  "regions": [
+    "TOP_PAGE_REGION",
+    "BOTTOM_PAGE_REGION",
+    "COLUMN_REGION",
+    "FULL_WIDTH_REGION",
+    "UNKNOWN_PAGE_REGION"
+  ],
+  "order_reasons": [
+    "SAME_COLUMN_VERTICAL_ORDER",
+    "COLUMN_GROUP_SEQUENCE",
+    "TOP_REGION_BEFORE_COLUMN_REGION",
+    "BOTTOM_REGION_AFTER_COLUMN_REGION",
+    "SINGLE_COLUMN_TOP_DOWN",
+    "PAGE_BOUNDARY",
+    "AMBIGUOUS",
+    "SINGLE_SPAN"
+  ]
+}

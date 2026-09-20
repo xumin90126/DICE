@@ -1,0 +1,239 @@
+{
+  "gate_id": "g5_boundary_generalization_gate",
+  "date": "2026-09-19",
+  "mode": "READ_ONLY_RESEARCH_ONLY",
+  "governance": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "MODEL_TRAINING": false,
+    "EXTERNAL_DATASET_IMPORTED": false,
+    "CAPABILITY_CREATED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_FIELD": "NONE",
+    "NEW_SCHEMA": "NONE",
+    "NEW_OBSERVATION": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_SIGNAL": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "NEXT_GATE": "NONE",
+    "STOP": true
+  },
+
+  "data_used": {
+    "new_cases_total": 181,
+    "original_29_excluded": true,
+    "sources": {
+      "academic_g1_g4": 46,
+      "ma_definitive": 63,
+      "biotech": 37,
+      "fin_edu": 35
+    }
+  },
+
+  "new_case_classification": {
+    "TRUE_G5": {"count": 0, "percentage": 0},
+    "FALSE_G5": {"count": 118, "percentage": 65.2, "breakdown": {"G1": 27, "G2": 64, "G3": 27, "G4": 12}},
+    "MACHINE_RESOLVABLE": {"count": 63, "percentage": 34.8},
+    "INDETERMINATE": {"count": 0, "percentage": 0}
+  },
+
+  "signal_test_results": {
+    "original_signal": "drawing_extent_present (False→FALSE_G5, True+UNCERTAIN→TRUE_G5)",
+    "original_accuracy": "14/14 = 100% (on 14 M-A UNCERTAIN, ALL in original 29)",
+    "new_boundary_cases_available": 0,
+    "new_uncertain_cases_available": 0,
+    "statistically_limited": true,
+    "g1_inference_test": {
+      "cases": 15,
+      "correct": 15,
+      "wrong": 0,
+      "accuracy": "100%",
+      "note": "indirect inference (G1≈drawing_extent missing→FALSE_G5), not direct Signal test"
+    },
+    "anomaly": {
+      "case_id": "arxiv_2402.18619_p10_72_729",
+      "drawing_extent_present": "False",
+      "judgment": "YES (definitive)",
+      "evidence_sufficiency": "SUFFICIENT",
+      "signal_prediction": "FALSE_G5",
+      "actual_state": "MACHINE_RESOLVABLE",
+      "classification": "FALSE_POSITIVE_FOR_FALSE_G5 (over-cautious)",
+      "severity": "LOW (conservative, not dangerous)",
+      "missed_true_g5": false
+    },
+    "out_of_distribution": {
+      "count": 62,
+      "description": "dep=True but SUFFICIENT (not UNCERTAIN) → MACHINE_RESOLVABLE",
+      "note": "Signal was designed for UNCERTAIN cases, not SUFFICIENT. dep=True alone is insufficient without UNCERTAIN status."
+    }
+  },
+
+  "metrics": {
+    "NEW_CASE_COUNT": 181,
+    "TRUE_G5_COUNT": 0,
+    "FALSE_G5_COUNT": 118,
+    "INDETERMINATE_COUNT": 0,
+    "MACHINE_RESOLVABLE_COUNT": 63,
+    "SIGNAL_TRUE_COUNT": 62,
+    "SIGNAL_FALSE_COUNT": 16,
+    "CORRECT_BOUNDARY_COUNT": 0,
+    "FALSE_ESCALATION_COUNT": 62,
+    "FALSE_ESCALATION_IN_BOUNDARY": 0,
+    "FALSE_ESCALATION_OUT_OF_DISTRIBUTION": 62,
+    "MISSED_TRUE_G5_COUNT": 0,
+    "BOUNDARY_SIGNAL_PRECISION": "N/A (no new boundary cases)",
+    "BOUNDARY_SIGNAL_RECALL": "N/A (no new TRUE_G5)",
+    "FALSE_ESCALATION_RATE": "N/A (out-of-distribution)",
+    "MISSED_TRUE_G5_RATE": "N/A (no TRUE_G5 in new cases)",
+    "G1_INFERENCE_ACCURACY": "15/15 = 100%",
+    "STATISTICALLY_LIMITED": true
+  },
+
+  "new_false_g5_types": {
+    "original_types": {"G1": 5, "G2": 6},
+    "new_types": {"G1": 27, "G2": 64, "G3": 27, "G4": 12},
+    "new_type_G3": {
+      "count": 27,
+      "cause": "evidence exists and organized but not presented correctly",
+      "detectable_by_drawing_extent": false
+    },
+    "new_type_G4": {
+      "count": 12,
+      "cause": "consumer integration failed",
+      "detectable_by_drawing_extent": false
+    },
+    "signal_coverage": {
+      "detectable_by_drawing_extent": "G1 only = 27/118 = 22.9%",
+      "not_detectable": "G2+G3+G4 = 91/118 = 77.1%"
+    }
+  },
+
+  "three_result_types": {
+    "true_positive_boundary": {"count": 0, "note": "no new TRUE_G5 cases"},
+    "false_boundary": {"count": 0, "note": "0 in boundary cases; 62 out-of-distribution"},
+    "missed_boundary": {"count": 0, "note": "no TRUE_G5 to miss; 1 anomaly is NOT missed TRUE_G5"}
+  },
+
+  "generalization_conclusion": "GENERALIZATION_CONDITIONAL",
+  "generalization_reasoning": {
+    "evidence_for": [
+      "G1 inference: 15/15 CORRECT (100%)",
+      "No MISSED_TRUE_G5",
+      "1 anomaly is conservative (not dangerous)",
+      "FALSE_G5 continues to exist (65.2% of new cases)"
+    ],
+    "evidence_against": [
+      "No new UNCERTAIN/boundary cases to test Signal directly",
+      "Signal only detects G1 (22.9% of FALSE_G5)",
+      "G2/G3/G4 FALSE_G5 not detectable by drawing_extent",
+      "1 anomaly: dep=False ≠ always FALSE_G5",
+      "STATISTICALLY_LIMITED = TRUE"
+    ]
+  },
+
+  "safety_analysis": {
+    "most_dangerous_failure": "MISSED_TRUE_G5",
+    "missed_true_g5_count": 0,
+    "missed_true_g5_reason": "no TRUE_G5 in new cases (data limitation, not Signal accuracy)",
+    "anomaly_safety": "conservative (routes to Evidence Recovery, not away from Human)",
+    "overall_safety": "No dangerous failures found, but unvalidated"
+  },
+
+  "six_layer_convergence": {
+    "layer_1": "Evidence Boundary Structure — 13 G5, 4 reclassified FALSE_G5",
+    "layer_2": "Evidence Configuration Family (CE2) — Answer NOT learnable, Signal IS",
+    "layer_3": "Evidence Boundary Expansion — 62.1% TRUE_G5, 37.9% FALSE_G5",
+    "layer_4": "Human Review Reduction — 77.8% irreducible, 0% review reduction",
+    "layer_5": "G5 Evidence Boundary Governance — 37.9% FALSE_G5, Signal 100% on 14",
+    "layer_6": "G5 Boundary Generalization (this study) — Signal UNVALIDATED, covers 22.9%",
+    "convergence": "G5 genuine. FALSE_G5 widespread (65.2%). Signal promising for G1 but UNVALIDATED and covers only 22.9%. Cannot proceed to routing design."
+  },
+
+  "external_dataset_assessment": {
+    "value": "NOT_JUSTIFIED",
+    "reason": "External datasets lack UNCERTAIN/boundary cases. Generalization problem requires new Human Validation, not external data.",
+    "unchanged_from_previous_gate": true
+  },
+
+  "over_design_audit": {
+    "O1_trained_model": false,
+    "O2_finetuned_llm": false,
+    "O3_new_classifier": false,
+    "O4_new_detector": false,
+    "O5_new_threshold": false,
+    "O6_new_routing_code": false,
+    "O7_modified_human_review": false,
+    "O8_modified_p1_p7": false,
+    "O9_modified_dgf_def": false,
+    "O10_modified_ma": false,
+    "O11_modified_tld": false,
+    "O12_modified_frozen_baseline": false,
+    "O13_new_field": false,
+    "O14_new_schema": false,
+    "O15_new_observation": false,
+    "O16_external_dataset_imported": false,
+    "O17_model_training": false,
+    "O18_capability_created": false,
+    "all_false": true,
+    "result": "PASS"
+  },
+
+  "limitations": [
+    {"id": "GEN-L-01", "limitation": "NO NEW UNCERTAIN CASES — all 14 were in original 29, cannot test Signal on new boundary cases"},
+    {"id": "GEN-L-02", "limitation": "NO NEW TRUE_G5 CASES — cannot test Signal's TRUE_G5 detection or recall"},
+    {"id": "GEN-L-03", "limitation": "G1 INFERENCE IS INDIRECT — uses PRIMARY_GAP not drawing_extent_present"},
+    {"id": "GEN-L-04", "limitation": "SINGLE ANOMALY — 1 case, cannot determine if rare or common"},
+    {"id": "GEN-L-05", "limitation": "SIGNAL COVERS ONLY G1 — 22.9% of FALSE_G5, G2/G3/G4 not detectable"},
+    {"id": "GEN-L-06", "limitation": "NO CROSS-DOMAIN BOUNDARY TEST — biotech/fin-edu have 0 G5"},
+    {"id": "GEN-L-07", "limitation": "STATISTICALLY_LIMITED — 14+0=14 boundary cases, insufficient for statistical conclusion"}
+  ],
+
+  "final_questions": {
+    "Q1_false_g5_in_new_cases": "YES — 118/181 (65.2%), including new G3 (27) and G4 (12) types",
+    "Q2_signal_generalization": "CANNOT BE DETERMINED — no new boundary cases; G1 inference 15/15 but indirect; STATISTICALLY_LIMITED",
+    "Q3_new_false_g5_types": "YES — G3 (27) and G4 (12), not detectable by drawing_extent; Signal covers only 22.9%",
+    "Q4_missed_true_g5": "NO — 0 missed, but due to no TRUE_G5 in new cases (data limitation, not Signal accuracy)",
+    "Q5_safe_for_routing_research": "CONDITIONAL — no dangerous failures, but Signal unvalidated and covers only 22.9%",
+    "Q6_external_dataset": "NOT_JUSTIFIED (unchanged) — external data lacks boundary cases",
+    "Q7_next_gate_boundary_routing": "NOT YET — Signal insufficient for routing design; NEXT_GATE = NONE; STOP"
+  },
+
+  "files_created": [
+    "tmp/g5_boundary_generalization_gate.md",
+    "tmp/g5_boundary_generalization_gate.json",
+    "tmp/g5_boundary_generalization_case_table.csv"
+  ],
+  "files_modified": 0,
+
+  "conclusion": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "MODEL_TRAINING": false,
+    "EXTERNAL_DATASET_IMPORTED": false,
+    "CAPABILITY_CREATED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_FIELD": "NONE",
+    "NEW_SCHEMA": "NONE",
+    "NEW_OBSERVATION": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_SIGNAL": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "NEXT_GATE": "NONE",
+    "STOP": true,
+    "GENERALIZATION_RESULT": "GENERALIZATION_CONDITIONAL"
+  }
+}

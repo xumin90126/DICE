@@ -1,0 +1,322 @@
+{
+  "reviewer_id": "B",
+  "review_timestamp": "2026-09-09T23:00:00",
+  "total_cases": 45,
+  "results": [
+    {
+      "case_id": "IS11-AMB-005",
+      "reviewer_id": "B",
+      "label": "MERGE",
+      "rationale": "Both fragments are from the same paragraph in the introduction discussing the degradation problem; 'degrades rapidly.' ends one sentence and 'Unexpectedly,' begins the next within the same continuous text flow, not a structural break.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-024",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'28.54' (top-1 err.) and '10.02' (top-5 err.) are values in different columns of the same table row for plain-34; they belong to distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-032",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'-' (top-1 err.) and '8.43' (top-5 err.) are values in different columns of the VGG row in Table 3; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-034",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'21.59' and '5.71' are numeric values in different table cells, representing different error metrics in adjacent columns of a results table.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-052",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'0.46M' (# params) and '7.51' (error) are values in different columns of the ResNet-32 row in the CIFAR-10 results table.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-064",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'training data' is a column header and '07+12' is a sub-header/value in a different cell of Table 7; they are structurally separate table elements.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-074",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'41.5' (mAP@.5) and '21.2' (mAP@[.5,.95]) are values in different columns of the VGG-16 row in Table 8; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-101",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'-' and '43.9' are values in different table cells representing different metrics or different rows in a COCO results table.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-102",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'our single model (ILSVRC'15)' is a row label and '60.5' is a numeric value in a different cell of the same table row.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-130",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'Resolution' and '#Channels' are two distinct column headers in Table 1 of the EfficientNet architecture table; they represent different attributes.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-135",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'4' (stage index) and 'MBConv6, k5x5' (operator) are values in different columns of the same row in Table 1; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-163",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'93.9%' (Top-5 Acc.) and '34M' (#Params) are values in different columns of the DenseNet-264 row in Table 2; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-168",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'3.0x' (param ratio) and '5.7B' (#FLOPs) are values in different columns of the Inception-v3 row in Table 2; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-198",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'82.9%' (Top-1 Acc.) and '96.2%' (Top-5 Acc.) are values in different columns of a model row in Table 2; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-205",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'96.5%' (Top-5 Acc.) and '155M' (#Params) are values in different columns of the AmoebaNet-C row in Table 2; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-218",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'1.2B' (#FLOPs) and '76.8%' (accuracy) are values in different columns of a model row in the ImageNet performance table; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-257",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'Gpipe' (model name) and '91.3%' (accuracy) are values in different columns of the CIFAR-100 row in Table 5; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-261",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'Inception-v4' (model name) and '81.8%' (accuracy) are values in different columns of the Birdsnap row in Table 5; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-262",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'41M' (#Param for Inception-v4) and 'EfficientNet-B5' (Our Model name) are values in different columns of the Birdsnap row; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-267",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'83.6%' (accuracy) and '556M' (#Param) are values in different columns of the GPipe row in Table 5; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-279",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'EfficientNet-B5' (Our Model name) and '98.5%' (accuracy) are values in different columns of the Flowers row in Table 5; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-313",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'Test Size' and '#Classes' are two distinct column headers in Table 6; they represent different dataset attributes.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-318",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "')' is the closing parenthesis of the dataset name cell 'Birdsnap (Berg et al., 2014)' and '47,386' is the Train Size value in a different cell of Table 6.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-321",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'8,144' (Train Size) and '8,041' (Test Size) are values in different columns of the Stanford Cars row in Table 6; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-323",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'2,040' (Train Size) and '6,149' (Test Size) are values in different columns of the Flowers row in Table 6; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-346",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'83.95' and '84.26' are numeric values in different table cells of an appendix results table; they represent distinct data points in adjacent cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-350",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'80.16' and '81.72' are numeric values in different table cells of an appendix results table; they represent distinct data points in adjacent cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-375",
+      "reviewer_id": "B",
+      "label": "MERGE",
+      "rationale": "'[23].' and 'Each' are in the same paragraph of body text; the citation reference ends one sentence and 'Each' begins the next sentence within the same continuous text flow about Coulomb matrices.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-380",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'RBF' and 'Matérn' are different kernel names listed as separate items in the FIG. 4 kernel construction diagram; they are distinct list entries, not parts of the same text unit.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-401",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'0.70' and '0.75' are different axis tick labels on the AUC axis of FIG. 8; they are distinct labeled values on the figure, not parts of the same text unit.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-407",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'1.35' and '1.40' are different axis tick labels on the fC axis of FIG. 8; they are distinct labeled values, not parts of the same text unit.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-409",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'0.65' and '0.70' are different axis tick labels on the fO axis of FIG. 8; they are distinct labeled values, not parts of the same text unit.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-414",
+      "reviewer_id": "B",
+      "label": "MERGE",
+      "rationale": "'FIG. 9:' and 'Left:' are parts of the same figure caption; the figure label and its sub-description ('Left: BIC values...') form one continuous caption text that was split by extraction.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-418",
+      "reviewer_id": "B",
+      "label": "MERGE",
+      "rationale": "'...left panel.' and 'The' are in the same figure caption paragraph; one sentence ends and the next begins ('The shaded area...') within the same continuous caption text flow.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-422",
+      "reviewer_id": "B",
+      "label": "MERGE",
+      "rationale": "'FIG. 12:' and 'Distribution of errors for predictions of entropy (upper) and ZPVE (lower)' are parts of the same figure caption; the label and description form one continuous caption text that was split by extraction.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-440",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'700M' (Size) and '0.80 (2.60x)' (Memory) are values in different columns of the BitNet b1.58 row in Table 1; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-457",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'Models' and 'Size' are two distinct column headers in Table 2; they represent different attributes of the benchmark results table.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-462",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'WGe' and 'Avg.' are two distinct column headers in Table 2; they represent different evaluation benchmarks, not parts of the same header.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-467",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'37.0' (HS) and '60.0' (BQ) are values in different columns of the LLaMA LLM 700M row in Table 2; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-483",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'23.5' (ARCc) and '38.5' (HS) are values in different columns of the LLaMA LLM 1.3B row in Table 2; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-505",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'61.4' (ARCe) and '28.3' (ARCc) are values in different columns of the BitNet b1.58 3B row in Table 2; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-514",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'44.2' (HS) and '63.5' (BQ) are values in different columns of the BitNet b1.58 3.9B row in Table 2; they are distinct table cells.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-519",
+      "reviewer_id": "B",
+      "label": "MERGE",
+      "rationale": "'facto backbone for open-source LLMs.' and 'To embrace the open-source community, our design' are in the same paragraph; one sentence ends and the next begins within the same continuous text flow under the 'LLaMA-alike Components' heading.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-522",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'Size' and 'Max Batch Size' are two distinct column headers in Table 3; they represent different attributes of the throughput comparison table.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    },
+    {
+      "case_id": "IS11-AMB-530",
+      "reviewer_id": "B",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'PIQA' and 'SciQ' are two distinct column headers in Table 4; they represent different evaluation benchmarks, not parts of the same header.",
+      "review_timestamp": "2026-09-09T23:00:00"
+    }
+  ]
+}

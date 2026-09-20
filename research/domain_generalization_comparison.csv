@@ -1,0 +1,16 @@
+Dimension,Academic,Non-Academic,Structural_Pattern
+Total cases,70,37,
+G1 observed,10,4,Both domains: raster diagrams not observable
+G2 observed,25,28,Both domains: table structure not organized — DOMINANT in non-academic
+G3 observed,15,5,Both domains: reading order / step numbering disrupted
+G4 observed,7,0,Academic only: consumer behavior testable; Non-academic: NOT_TESTED
+G5 observed,13,0,Academic only: semantic boundary; Non-academic: NOT_DEMONSTRATED
+Boundary observed,13,0,Academic only: structural→semantic gap; Non-academic: structural failures dominate
+New Gap,0,0,Both: 0 new gap — framework holds
+Indeterminate,7,0,Academic: G4 consumer unknown; Non-academic: 0
+
+G1 %,14.3%,10.8%,
+G2 %,35.7%,75.7%,Dominant in both; MORE dominant in non-academic
+G3 %,21.4%,13.5%,
+G4 %,10.0%,0.0%,
+G5 %,18.6%,0.0%,Absent in non-academic

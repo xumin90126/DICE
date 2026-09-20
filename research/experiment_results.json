@@ -1,0 +1,67 @@
+{
+  "results": [
+    {
+      "session_id": "c729c4ac",
+      "participant_id": "c729c4ac",
+      "case_id": "IND-AMB-003",
+      "condition": "A",
+      "decision": "MERGE",
+      "decision_time_ms": 26311,
+      "raw_context_expanded": false,
+      "page_revisited": false,
+      "evidence_expansion_count": 0,
+      "interaction_count": 0,
+      "levels_viewed": 0,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "machine_agrees_with_gt": false,
+      "view_length_a": 264,
+      "view_length_b": 881,
+      "has_context_b": true,
+      "markers_b": {
+        "citation_marker": 2,
+        "online_marker": 2,
+        "doi_marker": 2,
+        "available_marker": 2,
+        "publisher_city_marker": 1
+      },
+      "compression_ratio_b": 0.08,
+      "raw_context_length_b": 5569,
+      "timestamp": 1789316767.482304
+    },
+    {
+      "session_id": "c729c4ac",
+      "participant_id": "c729c4ac",
+      "case_id": "IND-AMB-002",
+      "condition": "A",
+      "decision": "MERGE",
+      "decision_time_ms": 4506,
+      "raw_context_expanded": false,
+      "page_revisited": false,
+      "evidence_expansion_count": 0,
+      "interaction_count": 0,
+      "levels_viewed": 0,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "machine_agrees_with_gt": false,
+      "view_length_a": 262,
+      "view_length_b": 1171,
+      "has_context_b": true,
+      "markers_b": {
+        "citation_marker": 3,
+        "volume_marker": 2,
+        "pages_marker": 1,
+        "online_marker": 3,
+        "doi_marker": 3,
+        "available_marker": 3,
+        "publisher_city_marker": 1
+      },
+      "compression_ratio_b": 0.126,
+      "raw_context_length_b": 5569,
+      "timestamp": 1789316771.992919
+    }
+  ],
+  "session_count": 1
+}

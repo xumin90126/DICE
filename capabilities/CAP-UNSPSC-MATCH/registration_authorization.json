@@ -1,0 +1,39 @@
+{
+  "authorization_metadata": {
+    "artifact_type": "registration_authorization",
+    "authorization_id": "AUTH-PHASE10-REG-001",
+    "capability_id": "CAP-UNSPSC-MATCH",
+    "authorized_by": "Human",
+    "timestamp": "2026-08-18T10:14:00+08:00",
+    "nature": "Human-controlled Registration Layer mutation (state B: Capability Registered). This is NOT Runtime Implementation (state C)."
+  },
+
+  "authorized_scope": {
+    "objective": "Advance CAP-UNSPSC-MATCH from Capability Artifact Created (A) to Capability Registered (B).",
+    "allowed_mutations": [
+      "dice/bootstrap.py: add (\"CAP-UNSPSC-MATCH\", build_cap_unspsc_match) to bootstrap_registry() builders list",
+      "dice/bootstrap.py: add \"CAP-UNSPSC-MATCH\" to _ALL_CAP_IDS",
+      "dice/runtime/composition/shadow/capability_runtime/capability_loader.py: add \"CAP-UNSPSC-MATCH\": \"UnspscProductClassificationMatching\" to FROZEN_CAPABILITY_TABLE",
+      "Update baseline registry count 21 -> 22 in historical validation scripts (DP-1 Option A, count constants only)"
+    ],
+    "forbidden_mutations": [
+      "Runtime execution logic (execution.py / executor.py)",
+      "matcher / selector / router",
+      "ranking / scoring",
+      "production connector",
+      "adding pattern_ids",
+      "adding implementation_ids",
+      "creating UNSPSC matching algorithm",
+      "creating Rule Engine",
+      "capability activation",
+      "calling execute()"
+    ]
+  },
+
+  "boundary_assertions": {
+    "registration_is_not_runtime_implementation": true,
+    "registered_capability_is_not_executable": true,
+    "runtime_authority_increment": "ZERO",
+    "production": false
+  }
+}

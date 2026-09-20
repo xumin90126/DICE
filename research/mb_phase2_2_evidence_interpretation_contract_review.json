@@ -1,0 +1,287 @@
+{
+ "amb135_walkthrough": {
+  "L2": "'4'@320.35 lag=10 ('i','1'..'9','1'@263.4) | 'MBConv6,k5x5'@354.14 lag=6 | pairwise same_y_band=T h_gap=30.02 v_gap=0 [frozen]",
+  "L3": "LSP-a (10-member alignment partition) != LSP-b (6-member partition) - different geometric column segments; RSC-R: >=2 partitions co-occurring + y-overlap + cross-band stability (p5 table zone 12 column clusters); structural facts: same_region=T ∧ different_partition=T [pure derivation, zero semantics]",
+  "L4_via_EIC1": "preconditions met -> explicit interpretation (scope = pair + region): 'A and B are in different local partitions of one structurally co-organized region - MAY be interpreted as different-cell-like context' (interpretation_status=candidate) -> existing observation form {is_in_table:T, same_cell:F, different_cell:T, table_info:{source:'eic-1', region_ref, provenance, interpretation_status}}",
+  "L5": "not reached - claim remains candidate within experiment context, no runtime authority",
+  "consumer": "experimental_c_decision UNCHANGED: different_cell -> KEEP_SEPARATE",
+  "responsibility": "L2/L3 = evidence; EIC-1 = the single interpretation gate; consumer = existing decision; NO 'LSP -> different_cell' direct edge anywhere"
+ },
+ "authority_gradient": {
+  "L0_raw_document": "PDF bytes",
+  "L1_observation": "'a digit 4 exists' (frozen P1)",
+  "L2_geometric_evidence": "bbox/x0/center/y/width, pairwise, band (frozen P2, source-backed)",
+  "L3_structural_evidence": "LSP + co-occurrence organization (RSC) - pure function over frozen facts, zero semantics",
+  "L4_semantic_interpretation": "'may correspond to table first column / code line numbers' - REQUIRES explicit EIC; without contract stays Structural Evidence / Interpretation Candidate",
+  "L5_human_validated_knowledge": "human validation at REUSABLE PATTERN level + boundary + negatives + record",
+  "L6_capability": "governed reusable knowledge as capability asset - only from L5",
+  "fixed_rules": [
+   "L2/L3 cannot auto-acquire L4 authority",
+   "L4 cannot auto-acquire L5 authority",
+   "only L5 forms governed reusable knowledge",
+   "Interpretation Candidate never enters Runtime Authority"
+  ]
+ },
+ "caption_safety_canaries": {
+  "canaries": [
+   {
+    "baseline": "abstain",
+    "case": "AMB-414",
+    "facts": "band has 4 pseudo-cell fragments ('Left:'|'BIC values...'|'Right:'|'Learning'); 'FIG. 9:' lag=15 = PROSE margin group",
+    "gt": "MERGE",
+    "id": "M-A-1",
+    "page": "med p20"
+   },
+   {
+    "baseline": "abstain",
+    "case": "AMB-422",
+    "facts": "same structural class ('FIG. 12:' lag=6 margin)",
+    "gt": "MERGE",
+    "id": "M-A-2",
+    "page": "med p24"
+   }
+  ],
+  "designation": "MANDATORY SAFETY BOUNDARY",
+  "honest_note": "EIC-1 does NOT distinguish captions at L3 (indistinguishable at pure partition level) - caption boundary governed by L5 negative set + canary hard boundary, both coexist",
+  "principle": "Geometry != Table Semantics",
+  "safety_rule": "any new interpretation contract causing GT MERGE/ABSTAIN -> KEEP = SAFETY FAILURE, NOT offsettable by aggregate improvement"
+ },
+ "cell_context_evidence_contract": {
+  "code_fact_supporting_state_reuse": "experimental_c_decision reads ONLY different_cell/same_cell (is_in_table not gating); all-False existing semantics = 'cell membership unknown -> use base decision' (code comment verbatim) - states REUSED, not invented",
+  "is_B_means": "produced by EIC-1, explicitly labeled interpretation_status='candidate'",
+  "name": "EIC-1",
+  "not_A_because": "'different cell' adds interpretation content above the structural facts (same_region ∧ different_partition)",
+  "not_C_because": "no L5 human validation yet",
+  "q3_answer": "B: SEMANTIC INTERPRETATION (strictly distinguished from A structural evidence and C validated fact)",
+  "q4_authority_sources": [
+   "EIC-1 document itself (explicit, auditable, deterministic, governance-ratified)",
+   "full provenance chain to L2/L3",
+   "boundary: before L5 the interpretation is an Interpretation Candidate confined to isolated experiment context - no runtime authority, not capability"
+  ],
+  "q5_consumability": "existing IS-11 observation contract ALREADY consumes producer interpretations - TLD cell facts are themselves unvalidated heuristic interpretations (bbox containment + dist<30 proximity fallback + row/col index); existing 8/8 was achieved on TLD interpretations; EIC-1 emits the SAME form/field-semantics/state-conventions. Pure L3 booleans are NOT in the existing form -> without EIC-1 NOT consumable - the contract IS the gate",
+  "ten_elements": {
+   "10_human_validation_boundary": "L5 pattern level with applicability boundary + negative set MUST include caption/code/TOC/value-column + exceptions + validation record",
+   "1_preconditions": "region co-organization derivable (>=2 distinguishable LSPs + y-overlap + cross-band column stability; parameters = preregistration slots, no values fixed) AND both atoms partition-resolvable AND (TLD absent or consistent)",
+   "2_input_evidence": "L2/L3 frozen facts + per-link provenance",
+   "3_allowed_relations_mapping": {
+    "TLD conflict": "{F,F,F} + table_info.evidence_conflict (observable state)",
+    "partition/region unresolvable": "{F,F,F} + table_info.reason='interpretation_unavailable' (existing 'unknown' convention)",
+    "same_region ∧ different_partition (+preconditions)": "{is_in_table:T, same_cell:F, different_cell:T}",
+    "same_region ∧ same_partition (+preconditions)": "{is_in_table:T, same_cell:T, different_cell:F}"
+   },
+   "4_interpretation_scope": "cell-context claim limited to the evaluated pair + its co-organized region; no global table claim; no row/column role claims",
+   "5_semantic_authority": "EIC-1 document (governance-ratified) + provenance chain; interpretation_status='candidate' until L5",
+   "6_provenance": "L2->L3->EIC-1->observation form, quadruple per record",
+   "7_failure_unknown": "partition unresolvable (measured: AMB-313 'Test Size' lag=0) or region underivable -> all-False + reason; no forced interpretation",
+   "8_conflict_state": "see conflict contract",
+   "9_forbidden_inferences": [
+    "region -> table",
+    "partition -> cell (as fact)",
+    "partition -> row-number column",
+    "structural similarity -> capability",
+    "confidence/score",
+    "per-instance semantic labels"
+   ]
+  }
+ },
+ "decision_policy_change_required": false,
+ "decision_policy_rationale": "decision fn experimental_c_decision zero change (reads only different_cell/same_cell); state mapping REUSES existing field semantics and existing state conventions (all-False = existing 'unknown'); the partition->cell-context mapping is carried by an Evidence Interpretation Contract (legal interpretation of evidence into the existing observation form), not a decision policy (evidence->KEEP/MERGE/ABSTAIN rules untouched)",
+ "frozen_baseline_status": {
+  "anchors_drift": 0,
+  "gt_sha": "7349963d...",
+  "intact": true,
+  "layer_registry": "7/7",
+  "modifications_this_phase": 0
+ },
+ "gate_A_O": {
+  "A_lsp_structural_only": true,
+  "B_rsc_structural_only": true,
+  "C_no_direct_lsp_to_different_cell": true,
+  "D_eic_explicit_auditable": true,
+  "E_decision_policy_unchanged": true,
+  "F_no_hidden_arbitration": true,
+  "G_conflict_as_evidence_state": true,
+  "H_canaries_mandatory": true,
+  "I_no_semantic_closure_in_contract": true,
+  "J_human_validation_pattern_level": true,
+  "K_no_m6_m7_m8": true,
+  "L_no_frozen_modification": true,
+  "M_no_gt_modification": true,
+  "N_no_experiment_replay": true,
+  "O_no_new_observation_request": true
+ },
+ "gt_modification": "NONE",
+ "human_validation_boundary": {
+  "four_states": [
+   "Structural Evidence",
+   "Interpretation Candidate",
+   "Validated Knowledge (L5)",
+   "Capability (L6) - strictly layered; Candidate != Capability; Candidate never in Runtime Authority"
+  ],
+  "insufficiency": "UNKNOWN / UNRESOLVED permitted - no forced generalization",
+  "is_this": "'human confirms local structural patterns satisfying the full EIC-1 precondition set may be interpreted as row-index-like table structure, boundary=..., negatives=caption/code/TOC/value-column'",
+  "not_this": "'human confirms page 5 digits 1-9 are the table first column' (instance-level = annotation tool, forbidden)",
+  "q8_answer": "minimal reusable abstraction unit = the INTERPRETATION PATTERN: 'a class of local structural patterns constrained by specified structural conditions may be interpreted as X-like structure within a defined boundary' + applicability boundary + negative examples + exceptions + provenance + validation record"
+ },
+ "implementation_authorization": "NOT AUTHORIZED",
+ "lsp_contract": {
+  "must_not_describe": [
+   "table",
+   "row",
+   "column (semantic)",
+   "cell",
+   "header",
+   "row-number",
+   "code-line",
+   "semantic role",
+   "KEEP/MERGE/REJECT",
+   "decision",
+   "confidence",
+   "score",
+   "recommendation"
+  ],
+  "name": "LocalStructuralPartition",
+  "only_describes": [
+   "membership",
+   "spatial scope (bbox union)",
+   "relation identity",
+   "local continuity",
+   "provenance"
+  ],
+  "q1_answer": "LSP semantic authority stops at ZERO - description rights only; interpretation rights begin at L4 via EIC",
+  "terminology_discipline": "'geometric column segment' (structural object) vs 'semantic table column' (L4+, requires EIC/L5) strictly distinguished"
+ },
+ "minimality_review": {
+  "added_artifacts": [
+   "EIC-1 contract document (governance object)",
+   "LSP/RSC read-only derivation module (design-only, preregistered parameter slots)",
+   "producer admission point (potential implementation, flag OFF default)"
+  ],
+  "evidence_sufficiency": "frozen evidence already expresses every contract prerequisite (bbox/alignment groups/bands/pairwise/co-occurrence - audit-proven)",
+  "not_added": [
+   "vector detector",
+   "OCR",
+   "parser",
+   "table detector",
+   "predicate",
+   "threshold",
+   "alignment heuristic",
+   "semantic classifier"
+  ]
+ },
+ "new_observation_measurement_request": "NONE",
+ "next_step": "M-B Phase 3 - Isolated Replay Design / Authorization Request (do NOT enter autonomously)",
+ "no_semantic_closure_rule": {
+  "enforcement": "without an EIC these remain Structural Evidence / Interpretation Candidate only; applies to ALL future paths including M-B itself",
+  "forbidden_transitions": [
+   "bbox -> table",
+   "alignment group -> row-number column",
+   "vertical sequence -> table row",
+   "local partition -> different_cell",
+   "regional structure -> table semantics",
+   "structural similarity -> capability"
+  ],
+  "statement": "low-level structural evidence must not automatically complete high-level semantic interpretation"
+ },
+ "objective": "Define a minimal, auditable, non-authority-upgrading Evidence Interpretation Contract (EIC-1): Frozen Geometry -> LSP -> Regional Structural Context -> Cell Context Evidence -> existing IS-11 observation contract, WITHOUT changing existing IS-11 decision policy. Focus: where semantic interpretation authority originates.",
+ "phase": "M-B-2.2",
+ "red_team_results": [
+  {
+   "attack": "LSP secretly becomes table detector?",
+   "guard": "single frozen relation definition + forbidden schema fields + new relation = contract revision",
+   "rt": 1,
+   "verdict": "BLOCKED"
+  },
+  {
+   "attack": "RSC secretly becomes table region?",
+   "guard": "ceiling statement + no table fields in schema",
+   "rt": 2,
+   "verdict": "BLOCKED"
+  },
+  {
+   "attack": "Cell Context secretly becomes semantic fact?",
+   "guard": "interpretation_status='candidate' + no runtime authority + L5 gate",
+   "rt": 3,
+   "verdict": "BLOCKED"
+  },
+  {
+   "attack": "conflict secretly becomes winner selection?",
+   "guard": "EVIDENCE_CONFLICT observable + no preference rule + behavioral-equivalence honestly disclosed",
+   "rt": 4,
+   "verdict": "BLOCKED"
+  },
+  {
+   "attack": "M6/M7/M8 patches to fix AMB-135?",
+   "guard": "all facts from frozen lag/band/pairwise; EIC preconditions = interpretation-admission conditions (preregistered slots), NOT decision-producing predicates",
+   "rt": 5,
+   "verdict": "NONE"
+  },
+  {
+   "attack": "caption misinterpreted as table?",
+   "guard": "canary hard boundary (SAFETY FAILURE) + L5 negative set",
+   "rt": 6,
+   "verdict": "RISK REAL - dual gate"
+  },
+  {
+   "attack": "TOC misinterpreted?",
+   "guard": "TOC in L5 negative set; experiment-phase descriptive observation",
+   "rt": 7,
+   "verdict": "dual gate"
+  },
+  {
+   "attack": "code line numbers as table row-number?",
+   "guard": "role claims only at L5 pattern level; L3 roleless",
+   "rt": 8,
+   "verdict": "dual gate"
+  },
+  {
+   "attack": "value column as row-number column?",
+   "guard": "Level-2 role-blind by design; role semantics only L5",
+   "rt": 9,
+   "verdict": "dual gate"
+  },
+  {
+   "attack": "Human Validation degrades to instance annotation?",
+   "guard": "validation object = pattern class + boundary + negatives + record; UNKNOWN permitted",
+   "rt": 10,
+   "verdict": "BLOCKED"
+  }
+ ],
+ "regional_structural_context_contract": {
+  "ceiling_statement": "'this region has some local structural organization' - Regional Structural Context != Table Semantics",
+  "expresses": [
+   "co-occurring local structure objects",
+   "spatial scope (member bbox union)",
+   "local partition relations",
+   "adjacency",
+   "vertical/horizontal continuity",
+   "provenance",
+   "source evidence references"
+  ],
+  "q2_answer": "YES - fully structural evidence",
+  "schema": "no table/cell fields; presence of any = REJECT"
+ },
+ "replay_authorization": {
+  "authorized": false,
+  "phase3_form": "Isolated Replay Design / Authorization Request (minimal set: 1 FP + 2 canaries + highest-risk boundary negatives + selected controls; NOT full corpus)",
+  "preconditions": [
+   "EIC-1 governance-ratified",
+   "canary boundary in force",
+   "preregistered parameters fixed"
+  ]
+ },
+ "status": "PASS / DESIGN-READY",
+ "stop": true,
+ "strict_falsification": "if implementation reveals the existing form cannot honestly carry the interpretation (decision input change / precedence change / new decision field required) -> set DECISION_POLICY_CHANGE_REQUIRED=TRUE and STOP (MINIMAL_CONSUMER_INTEGRATION = FAILED)",
+ "tld_geometry_conflict_contract": {
+  "conflict_handling": "composite interpretation unavailable -> emit existing all-False ('unknown') state + conflict record",
+  "forbidden_this_phase": "conflict -> automatic winner / automatic baseline selection / retry / correction",
+  "honest_disclosure": "consumer-side behavior is equivalent to base fallback, but this is REUSE of the existing unknown-state convention (code comment verbatim), NOT a new fallback policy; no source preferred; existing code has NO multi-source fallback contract so none is cited; this composition convention is submitted for governance ratification together with EIC-1",
+  "principles": [
+   "Discovery != Arbitration",
+   "Evidence Composition != Decision Selection",
+   "EVIDENCE_CONFLICT != winner - no 'trust TLD / trust Geometry / stronger evidence' rule"
+  ],
+  "q7_answer": "conflict = observable evidence state + provenance: table_info.evidence_conflict={tld_verdict, eic_verdict, refs} + provenance log (existing free-form field, no new decision input)"
+ }
+}

@@ -1,0 +1,101 @@
+{
+  "evidence_metadata": {
+    "artifact_type": "registration_evidence",
+    "evidence_id": "EVID-PHASE10-REG-001",
+    "capability_id": "CAP-UNSPSC-MATCH",
+    "authorization_reference": "registration_authorization.json (AUTH-PHASE10-REG-001)",
+    "timestamp": "2026-08-18T10:14:00+08:00"
+  },
+
+  "before_snapshot": {
+    "registry_count": 21,
+    "registry_md5": "50e3db502a085ec3b0b1a37fff86d73f",
+    "registry_lines": 476,
+    "loader_md5": "792b2fffb570a7f49c5e7431e00fd927",
+    "frozen_table_count": 21,
+    "layer_aggregate_md5": "659fd529df096c99d8ad58c0c0a8462b",
+    "layer_files_count": 49
+  },
+
+  "after_snapshot": {
+    "registry_count": 22,
+    "registry_md5": "50e3db502a085ec3b0b1a37fff86d73f",
+    "registry_lines": 476,
+    "loader_md5": "830fca24150d1fa4c9ccff62fc9d34ad",
+    "frozen_table_count": 22,
+    "layer_aggregate_md5": "659fd529df096c99d8ad58c0c0a8462b",
+    "layer_files_count": 49
+  },
+
+  "registry_diff": {
+    "added": ["CAP-UNSPSC-MATCH"],
+    "removed": [],
+    "net_count_change": "+1 (21 -> 22)"
+  },
+
+  "frozen_table_diff": {
+    "added": {"CAP-UNSPSC-MATCH": "UnspscProductClassificationMatching"},
+    "removed": [],
+    "net_count_change": "+1 (21 -> 22)"
+  },
+
+  "frozen_baseline_integrity": {
+    "registry_py_unchanged": true,
+    "registry_py_md5_before": "50e3db502a085ec3b0b1a37fff86d73f",
+    "registry_py_md5_after": "50e3db502a085ec3b0b1a37fff86d73f",
+    "layer_1_8_unchanged": true,
+    "layer_aggregate_md5_before": "659fd529df096c99d8ad58c0c0a8462b",
+    "layer_aggregate_md5_after": "659fd529df096c99d8ad58c0c0a8462b"
+  },
+
+  "capability_state_after": {
+    "id": "CAP-UNSPSC-MATCH",
+    "status": "PROPOSED",
+    "registered": true,
+    "active": false,
+    "execution": false,
+    "production": false,
+    "pattern_ids": [],
+    "implementation_ids": [],
+    "version": 1
+  },
+
+  "loader_observation": {
+    "lookup": "FOUND",
+    "reference_kind": "readonly_reference",
+    "production_execution": false
+  },
+
+  "runtime_authority_after": {
+    "decision": false,
+    "selection": false,
+    "routing": false,
+    "execution": false,
+    "governance": false,
+    "metrics": false,
+    "increment": "ZERO"
+  },
+
+  "validation_references": {
+    "baseline_count_constants_updated": [
+      "dice/tests/phase6_1_l2/verify_boundary_l21.py",
+      "dice/tests/phase6_1_l22/verify_boundary_l22.py",
+      "dice/tests/phase6_1_l3/verify_boundary_l3.py",
+      "dice/tests/phase6_1_l3/verify_boundary_l3_audit_trace.py",
+      "dice/tests/phase6_1_l3/verify_boundary_l3_capability_loader.py",
+      "dice/tests/phase6_1_l3/verify_boundary_l3_invocation.py",
+      "dice/tests/phase6_1_l3/verify_boundary_l3_permission.py",
+      "dice/tests/phase7_integration/verify_integration_phase7.py",
+      "dice/tests/phase8_domain_transfer/verify_domain_transfer_phase8.py",
+      "dice/tests/phase6_1_l3/test_capability_loader.py"
+    ],
+    "only_count_constants_modified": true,
+    "no_validation_logic_modified": true
+  },
+
+  "stop_condition": {
+    "state_reached": "Capability Registered (B)",
+    "next_state_not_authorized": "Capability Runtime Implementation (C)",
+    "declaration": "Registration != Runtime Implementation; Registered Capability != Executable Capability"
+  }
+}

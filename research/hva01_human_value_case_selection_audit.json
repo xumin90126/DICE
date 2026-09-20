@@ -1,0 +1,602 @@
+{
+  "audit_status": "CONDITIONAL",
+  "metadata": {
+    "audit_name": "HVA-01 Human Value-Aware Case Selection Audit",
+    "date": "2026-09-16",
+    "mode": "READ-ONLY / AUDIT ONLY / NO IMPLEMENTATION / FROZEN INTACT / STOP",
+    "predecessors": "DCE-05/06/07, L5 Learning Signal Audit, Info Gain Audit, Feedback Reuse Audit, Next Direction Audit, Capability Boundary Review",
+    "cases_analyzed": 45,
+    "data_sources": [
+      "IS-11 GT (45)",
+      "IS-11 Machine Eval (45)",
+      "L5 Experiment (55 judgments)",
+      "Pilot P01 (27 judgments)",
+      "P7 Evaluation (69 cases)",
+      "9 prior audit files"
+    ]
+  },
+  "primary_bottleneck": "MIXED (L2 Case Selection + L3 Evidence Distillation)",
+  "secondary_bottleneck": "L1 (Evidence/Perception — TLD, but NOT primary for human learning)",
+  "executive_summary": {
+    "key_finding": "Current Case Selection optimizes for GEOMETRIC AMBIGUITY, not LEARNING VALUE. 53% of cases are Type A (wasted human review). 88% TABLE content bias. TLD failure does NOT systematically produce high learning value.",
+    "case_class_distribution": {
+      "Type_A": {
+        "count": 24,
+        "pct": 53,
+        "description": "Machine decisive, Human snap judgment, no new info"
+      },
+      "Type_D_LOW": {
+        "count": 15,
+        "pct": 33,
+        "description": "Machine uncertain, Human resolves quickly (snap)"
+      },
+      "Type_E": {
+        "count": 5,
+        "pct": 11,
+        "description": "Genuine boundary (adjudicated or UNKNOWN)"
+      },
+      "Type_B": {
+        "count": 1,
+        "pct": 2,
+        "description": "Machine error, Human corrects, case-specific"
+      },
+      "Type_C": {
+        "count": 0,
+        "pct": 0,
+        "description": "Machine error + High reuse — NOT FOUND"
+      }
+    },
+    "l5_human_behavior": {
+      "mean_decision_time": "4.1s",
+      "snap_decisions_pct": 69,
+      "no_expansion_pct": 96,
+      "one_level_only_pct": 96,
+      "high_engagement_cases": 2,
+      "high_engagement_case_ids": [
+        "IS11-AMB-032",
+        "IS11-AMB-375"
+      ],
+      "condition_A_faster_than_B2": true,
+      "implication": "Distilled evidence (B2) adds cognitive load without improving accuracy"
+    },
+    "tld_learning_relationship": "TLD failure does NOT systematically produce high learning value. 83% of TLD failures resolved as snap judgments. Learning value comes from REVIEWER DISAGREEMENT, not TLD failure.",
+    "counterfactual_result": "INSUFFICIENT EVIDENCE",
+    "next_route": "ROUTE_E_MIXED",
+    "stop": true
+  },
+  "case_value_distribution": {
+    "content_type_distribution": {
+      "IS11": {
+        "TABLE_NUMERIC": 20,
+        "TABLE_TEXT": 20,
+        "PROSE": 3,
+        "FIGURE": 2
+      },
+      "P7": {
+        "TABLE_CELL": 11,
+        "TABLE_CELL_PAIR": 4,
+        "BODY_TEXT_CONTINUATION": 27,
+        "REFERENCE_LIST_ENTRY": 16,
+        "FIGURE_LABEL": 2,
+        "OTHER_AMBIGUOUS": 9
+      },
+      "bias": "IS-11 is 88% TABLE-focused. P7 is only 22% TABLE, with 39% PROSE and 23% REFERENCE."
+    },
+    "machine_outcome_distribution": {
+      "TN": 26,
+      "ABSTAIN": 18,
+      "FP": 1,
+      "FN": 0
+    },
+    "gt_label_distribution": {
+      "KEEP_SEPARATE": 43,
+      "MERGE": 2
+    },
+    "adjudicated_cases": 4,
+    "adjudicated_case_ids": [
+      "IS11-AMB-005",
+      "IS11-AMB-375",
+      "IS11-AMB-418",
+      "IS11-AMB-519"
+    ]
+  },
+  "low_learning_cases": {
+    "count": 39,
+    "pct": 87,
+    "breakdown": {
+      "Type_A": {
+        "count": 24,
+        "description": "Machine correct, human confirms in <3s, 0 expansions. Wasted review.",
+        "examples": [
+          "IS11-AMB-024 (28.54 vs 10.02, 1.4s)",
+          "IS11-AMB-034 (21.59 vs 5.71, 1.2s)",
+          "IS11-AMB-074 (41.5 vs 21.2, 3.1s)"
+        ]
+      },
+      "Type_D_LOW": {
+        "count": 15,
+        "description": "Machine abstains, human resolves as snap judgment (<5s, 0 expansions). Temporary gain (Machine LOGIC GAP).",
+        "examples": [
+          "IS11-AMB-262 (41M vs EfficientNet-B5, 2.6s)",
+          "IS11-AMB-462 (WGe vs Avg., 2.3s)",
+          "IS11-AMB-457 (Models vs Size, 2.3s)"
+        ]
+      }
+    },
+    "reason": "91% of feedback is BOUNDARY_CONFIRMATION (prior audit). HIGH info gain is TEMPORARY (Machine LOGIC GAP — would drop to LOW if Machine adds numeric detection, per Info Gain Audit)."
+  },
+  "high_learning_cases": {
+    "count": 5,
+    "pct": 11,
+    "breakdown": {
+      "Type_E_high_engagement": {
+        "count": 2,
+        "case_ids": [
+          "IS11-AMB-032",
+          "IS11-AMB-375"
+        ],
+        "description": "Genuine boundary with high human engagement (7 expansions, 30-46s)"
+      },
+      "Type_E_adjudicated_snap": {
+        "count": 3,
+        "case_ids": [
+          "IS11-AMB-005",
+          "IS11-AMB-418",
+          "IS11-AMB-519"
+        ],
+        "description": "Adjudicated (reviewer disagreement) but human resolved as snap judgment in L5"
+      }
+    },
+    "details": {
+      "AMB-032": {
+        "machine_outcome": "TN (TLD correct)",
+        "gt": "KEEP_SEPARATE",
+        "l5_b2": "UNKNOWN (45.9s, 7 expansions)",
+        "l5_a": "KEEP_SEPARATE (1.8s, 0 expansions)",
+        "learning_value": "HIGH — reveals evidence distillation gap (B2 fails to expose TLD different_cell info)",
+        "four_layer": {
+          "L1": "HIGH",
+          "L2": "HIGH",
+          "L3": "MEDIUM",
+          "L4": "MEDIUM-HIGH"
+        }
+      },
+      "AMB-375": {
+        "machine_outcome": "ABSTAIN",
+        "gt": "KEEP_SEPARATE (adjudicated)",
+        "l5_b2": "UNKNOWN (31.3s, 7 expansions)",
+        "l5_a": "KEEP_SEPARATE (8.1s, 0 expansions)",
+        "learning_value": "HIGH — genuine boundary, reviewer disagreement, when should system abstain",
+        "four_layer": {
+          "L1": "MEDIUM",
+          "L2": "HIGH",
+          "L3": "HIGH",
+          "L4": "MEDIUM"
+        }
+      }
+    }
+  },
+  "high_learning_value_missed_cases": {
+    "p7_body_text_continuation": {
+      "count": 27,
+      "description": "Prose boundary cases. IS-11 has only 3 PROSE. Could reveal sentence/paragraph boundary signals."
+    },
+    "p7_reference_list_entry": {
+      "count": 16,
+      "description": "Reference list boundary cases. IS-11 has 0. Could reveal citation format boundary signals."
+    },
+    "p7_other_ambiguous": {
+      "count": 9,
+      "description": "Cross-category boundary cases. IS-11 has 0."
+    },
+    "p7_merge_cases": {
+      "count": 24,
+      "description": "MERGE cases. IS-11 has only 2. Harder, more likely to produce boundary learning signals."
+    },
+    "reason_missed": "Selection Filter optimizes geometric proximity (same_y, close_x). Table cells match. Prose continuation and reference entries may not match → filtered out."
+  },
+  "tld_learning_relationship": {
+    "matrix": {
+      "tld_correct_low_learning": {
+        "count": 24,
+        "pct_of_tld_correct": 92,
+        "description": "Type A snap judgments"
+      },
+      "tld_correct_high_learning": {
+        "count": 1,
+        "pct_of_tld_correct": 4,
+        "description": "AMB-032 (evidence distillation gap, not TLD itself)"
+      },
+      "tld_wrong_low_learning": {
+        "count": 1,
+        "pct_of_tld_wrong": 100,
+        "description": "AMB-135 (snap correction, case-specific)"
+      },
+      "tld_missing_low_learning": {
+        "count": 15,
+        "pct_of_tld_missing": 83,
+        "description": "Type D_LOW snap judgments"
+      },
+      "tld_missing_high_learning": {
+        "count": 3,
+        "pct_of_tld_missing": 17,
+        "description": "AMB-375/418/519 — all adjudicated, learning value from REVIEWER DISAGREEMENT not TLD failure"
+      }
+    },
+    "conclusion": "TLD Failure does NOT systematically produce high Learning Value. TLD is an independent Evidence Quality Problem (L1), NOT the human learning bottleneck (L2/L3).",
+    "dce07_impact": "DCE-07 closed locality route. TLD failure remains unresolved but is NOT the primary human learning bottleneck."
+  },
+  "selection_mechanism_analysis": {
+    "pipeline": [
+      "545 Candidates",
+      "Geometry Filter (same_y, close_x, h_gap)",
+      "Ambiguity Filter (IS-01/IS-02 mixed)",
+      "Sampling",
+      "45 IS-11 Cases",
+      "Human Review"
+    ],
+    "what_it_optimizes": "GEOMETRIC_AMBIGUITY",
+    "what_it_should_optimize": "EXPECTED_SYSTEM_IMPROVEMENT_PER_HUMAN_JUDGMENT",
+    "formula": "P(new info) × P(evidence-grounded) × P(reusable) × P(future benefit)",
+    "stage_analysis": {
+      "geometry_filter": {
+        "optimizes": "Geometric proximity",
+        "not_optimizing": "Content type diversity"
+      },
+      "ambiguity_filter": {
+        "optimizes": "Machine uncertainty (IS-01/IS-02 mixed)",
+        "not_optimizing": "Learning value",
+        "problem": "24/45 (53%) of ambiguous cases are actually Machine-Decisive (TN)"
+      },
+      "sampling": {
+        "optimizes": "Representative distribution",
+        "not_optimizing": "High-value case priority"
+      },
+      "human_review": {
+        "optimizes": "All selected equally",
+        "not_optimizing": "Expected improvement per judgment"
+      }
+    },
+    "low_value_entry_point": "Ambiguity Filter — selects IS-01/IS-02 mixed cases, but IS-11 experimental_c resolves most via TLD override → 53% become Machine-Decisive"
+  },
+  "feedback_reuse_findings": {
+    "current_learning_level": "L3 (Candidate Discovery)",
+    "learning_levels": {
+      "L0_feedback_storage": true,
+      "L1_feedback_accumulation": true,
+      "L2_evidence_linked_feedback": true,
+      "L3_candidate_discovery": true,
+      "L4_human_validated_reusable_signal": false,
+      "L5_future_case_reuse": false,
+      "L6_measured_effort_reduction": false
+    },
+    "feedback_taxonomy": {
+      "BOUNDARY_CONFIRMATION": 116,
+      "CONFLICT_SIGNAL": 4,
+      "HUMAN_ONLY_INFORMATION": 4,
+      "EVIDENCE_SUFFICIENCY_SIGNAL": 2,
+      "BOUNDARY_CORRECTION": 1,
+      "key_observation": "91% of feedback is BOUNDARY_CONFIRMATION — Human mainly confirms Machine"
+    },
+    "info_gain_correction": {
+      "previous_diagnosis": "Stability-Novelty Paradox (91% LOW gain)",
+      "corrected_diagnosis": "60% HIGH gain (Quadrant B — Machine ambiguous, Human resolves)",
+      "correction_reason": "Previous analyzed Feedback Text; current analyzes Evidence State",
+      "key_caveat": "10/10 Quadrant B HIGH gain is TEMPORARY (Machine LOGIC GAP — would drop to LOW if Machine adds numeric detection)"
+    },
+    "signal_candidates": {
+      "CS1": {
+        "level": "R3",
+        "status": "Potential Reusable Signal Candidate (NOT Reusable Knowledge)"
+      },
+      "CS2": {
+        "level": "R2",
+        "status": "Weak candidate"
+      },
+      "CS3": {
+        "level": "R2",
+        "status": "Weak candidate"
+      },
+      "CS4": {
+        "level": "R1",
+        "status": "One-off boundary observation"
+      },
+      "none_reached_L4": true
+    },
+    "ceiling_effect": "96% KEEP_SEPARATE, 0 negative cases, 0 CONFLICT, 0 UNKNOWN in CS1 candidates",
+    "image_confound": true,
+    "n_participants": 1,
+    "future_cases_available": {
+      "CS1": 1,
+      "CS2": 3,
+      "CS3": 0,
+      "CS4": 0
+    }
+  },
+  "counterfactual_result": {
+    "question": "If selection prioritized high learning value cases, would system improvement potential increase?",
+    "answer": "INSUFFICIENT EVIDENCE",
+    "supported": [
+      "Human review effort would decrease (45→10-15 cases)",
+      "Feedback information gain per judgment would increase"
+    ],
+    "not_supported": [
+      "True system improvement (no L4 achieved)",
+      "Human effort reduction (no HRR measurement)"
+    ],
+    "caveats": [
+      "Even high-gain cases are temporary (Machine LOGIC GAP)",
+      "No candidate reached L4",
+      "Ceiling effect (96% KEEP_SEPARATE)",
+      "Insufficient future cases for reuse validation",
+      "Image confound (humans use page visual)"
+    ],
+    "assessment": "Counterfactual is PLAUSIBLE but UNPROVEN. Current data does not demonstrate that high-value selection would produce measurable system improvement, only that it would reduce wasted effort."
+  },
+  "four_layer_value_model": {
+    "L1_evidence_value": {
+      "Type_A": "HIGH (P1/P2/TLD working, machine decisive)",
+      "Type_D_LOW": "MEDIUM (P1/P2 exist, TLD fails or IS-11 fallback)",
+      "Type_E": "VARIABLE (evidence exists but ambiguous)",
+      "Type_B": "LOW (TLD detection failure)"
+    },
+    "L2_human_review_value": {
+      "Type_A": "LOW (machine correct, human confirms <3s, no expansion)",
+      "Type_D_LOW": "LOW-MEDIUM (human resolves quickly)",
+      "Type_E": "MEDIUM-HIGH (genuine boundary)",
+      "Type_B": "LOW (human corrects easily 2.2s)"
+    },
+    "L3_feedback_value": {
+      "Type_A": "LOW (91% BOUNDARY_CONFIRMATION)",
+      "Type_D_LOW": "LOW-MEDIUM (temporary Machine LOGIC GAP)",
+      "Type_E": "MEDIUM-HIGH (only 2/5 had high engagement)",
+      "Type_B": "LOW (case-specific, no reusable signal)"
+    },
+    "L4_learning_reuse_value": {
+      "Type_A": "LOW (machine already has evidence)",
+      "Type_D_LOW": "LOW (temporary gain, no L4)",
+      "Type_E": "UNKNOWN (2 high-engagement but UNKNOWN, no stable signal)",
+      "Type_B": "LOW (DCE-07 closed route)",
+      "overall": "LOW — no candidate reached L4"
+    }
+  },
+  "case_value_profiles": {
+    "AMB-135": {
+      "case_class": "Type_B",
+      "machine_outcome": "FP",
+      "gt": "KEEP_SEPARATE",
+      "content_type": "TABLE_NUMERIC",
+      "l5_time": 2.2,
+      "l5_expansions": 0,
+      "four_layer": {
+        "L1": "LOW",
+        "L2": "LOW",
+        "L3": "LOW",
+        "L4": "LOW"
+      },
+      "reason": "TLD page-global contamination. Human corrects trivially. DCE-07 closed fix route. No reusable signal."
+    },
+    "AMB-262": {
+      "case_class": "Type_D_LOW",
+      "machine_outcome": "ABSTAIN",
+      "gt": "KEEP_SEPARATE",
+      "content_type": "TABLE_TEXT",
+      "l5_time": 2.6,
+      "l5_expansions": 0,
+      "four_layer": {
+        "L1": "LOW",
+        "L2": "LOW",
+        "L3": "LOW",
+        "L4": "LOW"
+      },
+      "reason": "TLD page-global contamination. Human snap judgment. Temporary gain. No reusable signal."
+    },
+    "AMB-313": {
+      "case_class": "Type_D_LOW",
+      "machine_outcome": "ABSTAIN",
+      "gt": "KEEP_SEPARATE",
+      "content_type": "TABLE_TEXT",
+      "l5_time": 2.8,
+      "l5_expansions": 0,
+      "four_layer": {
+        "L1": "LOW",
+        "L2": "LOW",
+        "L3": "LOW",
+        "L4": "LOW"
+      },
+      "reason": "TLD page-global contamination. Human snap judgment with override."
+    },
+    "AMB-462": {
+      "case_class": "Type_D_LOW",
+      "machine_outcome": "ABSTAIN",
+      "gt": "KEEP_SEPARATE",
+      "content_type": "TABLE_TEXT",
+      "l5_time": 2.3,
+      "l5_expansions": 0,
+      "four_layer": {
+        "L1": "LOW",
+        "L2": "LOW",
+        "L3": "LOW",
+        "L4": "LOW"
+      },
+      "reason": "TLD Mechanism 2 (inherent low text_ratio). Human overrides cue. Case-specific."
+    },
+    "AMB-032": {
+      "case_class": "Type_E",
+      "machine_outcome": "TN",
+      "gt": "KEEP_SEPARATE",
+      "content_type": "TABLE_NUMERIC",
+      "l5_b2_time": 45.9,
+      "l5_expansions": 7,
+      "four_layer": {
+        "L1": "HIGH",
+        "L2": "HIGH",
+        "L3": "MEDIUM",
+        "L4": "MEDIUM-HIGH"
+      },
+      "reason": "TLD correct but B2 evidence distillation fails to expose different_cell. Human UNKNOWN in B2. Reveals L3 gap."
+    },
+    "AMB-375": {
+      "case_class": "Type_E",
+      "machine_outcome": "ABSTAIN",
+      "gt": "KEEP_SEPARATE (adjudicated)",
+      "content_type": "TABLE_TEXT",
+      "l5_b2_time": 31.3,
+      "l5_expansions": 7,
+      "four_layer": {
+        "L1": "MEDIUM",
+        "L2": "HIGH",
+        "L3": "HIGH",
+        "L4": "MEDIUM"
+      },
+      "reason": "Adjudicated (reviewer disagreement). B2 UNKNOWN. Genuine boundary. When should system abstain?"
+    },
+    "AMB-008": {
+      "case_class": "NEGATIVE_CONTROL",
+      "machine_outcome": "N/A",
+      "gt": "N/A",
+      "content_type": "PROSE",
+      "note": "Not in IS-11 GT. Analyzed in DCE-07 as negative control.",
+      "four_layer": {
+        "L1": "HIGH",
+        "L2": "LOW",
+        "L3": "N/A",
+        "L4": "LOW"
+      },
+      "reason": "Prose with citations. TLD correctly rejects. Underrepresented in IS-11 (only 3 PROSE)."
+    },
+    "AMB-042": {
+      "case_class": "NEGATIVE_CONTROL",
+      "machine_outcome": "N/A",
+      "gt": "N/A",
+      "content_type": "PROSE",
+      "note": "Not in IS-11 GT. Analyzed in DCE-07 as negative control.",
+      "four_layer": {
+        "L1": "HIGH",
+        "L2": "LOW",
+        "L3": "N/A",
+        "L4": "LOW"
+      },
+      "reason": "Prose + table-like content. TLD correctly rejects. Underrepresented content type."
+    }
+  },
+  "locality_safety_analysis": {
+    "not_applicable": true,
+    "note": "Locality safety was analyzed in DCE-07. HVA-01 does not re-analyze locality. DCE-07 conclusion: PLAUSIBLE_BUT_UNSAFE, route CLOSED."
+  },
+  "mechanism_comparison": {
+    "mechanism_1_tld": {
+      "impact_on_human_learning": "LOW — 83% of TLD failures resolved as snap judgments",
+      "high_learning_cases_from_tld_failure": 0,
+      "reason": "TLD failure is Evidence Quality (L1) problem. Human uses page visual, not TLD output. No reusable signal."
+    },
+    "mechanism_2_text_ratio": {
+      "impact_on_human_learning": "LOW — AMB-462 resolved as snap judgment with override",
+      "reason": "Inherent TLD threshold issue. Human corrects trivially."
+    },
+    "evidence_distillation_gap": {
+      "impact_on_human_learning": "HIGH — AMB-032 shows B2 fails to expose TLD different_cell",
+      "reason": "Evidence exists but is not distilled for human use. L3 problem."
+    },
+    "case_selection_bias": {
+      "impact_on_human_learning": "HIGH — 53% wasted review, 88% TABLE bias",
+      "reason": "Selection optimizes geometric ambiguity, not learning value. L2 problem."
+    },
+    "ceiling_effect": {
+      "impact_on_human_learning": "BLOCKING — 96% KEEP_SEPARATE, no negative cases",
+      "reason": "Cannot learn boundaries. L4 blocked."
+    }
+  },
+  "anti_overdesign_gate": {
+    "new_observation_needed": false,
+    "new_module_needed": false,
+    "new_engine_needed": false,
+    "llm_needed": false,
+    "forbidden_escalations": [
+      "Case Selection → Learning Engine",
+      "Evidence Distillation → Evidence Organization Engine",
+      "TLD Failure → Document Understanding Engine",
+      "Feedback Reuse → Pattern Engine",
+      "Any problem → LLM"
+    ]
+  },
+  "learning_signal_gate": {
+    "true_reusable_signal_found": false,
+    "current_learning_level": "L3",
+    "reason": "No candidate reached L4. 91% BOUNDARY_CONFIRMATION. HIGH gain temporary. No future case validation. No HRR measurement."
+  },
+  "evidence_gaps": [
+    "P7 human review data incomplete (69 cases, all labels UNKNOWN)",
+    "Single participant (P01) pilot — n=1, image confound",
+    "L5 experiment limited — 55 judgments, only 2 high engagement",
+    "No future case validation — no candidate tested on independent cases",
+    "Ceiling effect — 96% KEEP_SEPARATE, 0 negative cases",
+    "Content type bias — IS-11 88% TABLE, P7 more diverse but no human review",
+    "No HRR measurement — no experiment measured Human Review Reduction"
+  ],
+  "next_research_route": {
+    "route": "ROUTE_E_MIXED",
+    "L2_contribution": "Case Selection optimizes wrong metric (geometric ambiguity ≠ learning value). 53% wasted. Need value-aware selection.",
+    "L3_contribution": "Evidence Distillation does not expose decision-relevant structure. AMB-032 proves B2 fails. Need better evidence presentation.",
+    "L1_contribution": "TLD failure exists but NOT primary. DCE-07 closed locality route. Independent Evidence Quality problem.",
+    "L4_contribution": "Blocked downstream. Ceiling effect, insufficient future cases. Cannot resolve until L2/L3 improve.",
+    "note": "ROUTE E selected because no single layer explains all phenomena. L2 (wrong cases) + L3 (wrong evidence presentation) are co-primary."
+  },
+  "final_verdict": {
+    "hva01_status": "CONDITIONAL",
+    "primary_bottleneck": "MIXED (L2 Case Selection + L3 Evidence Distillation)",
+    "secondary_bottleneck": "L1 (Evidence/Perception — TLD, but NOT primary for human learning)",
+    "case_selection_current_objective": "GEOMETRIC_AMBIGUITY (not LEARNING_VALUE)",
+    "low_value_human_review": "39/45 (87%) — 24 Type A + 15 Type D_LOW",
+    "high_value_human_review": "5/45 (11%) — Type E (but only 2/5 had high engagement)",
+    "high_learning_value_cases": [
+      "IS11-AMB-032 (evidence distillation gap)",
+      "IS11-AMB-375 (genuine boundary)"
+    ],
+    "missed_high_value_cases": [
+      "P7 BODY_TEXT_CONTINUATION (27)",
+      "P7 REFERENCE_LIST_ENTRY (16)",
+      "P7 OTHER_AMBIGUOUS (9)",
+      "P7 MERGE (24)"
+    ],
+    "tld_relationship": "INDEPENDENT — TLD failure does NOT systematically produce high learning value",
+    "feedback_reuse_status": "NOT_ACHIEVED — L3 only, no L4/L5/L6",
+    "counterfactual_selection_result": "INSUFFICIENT EVIDENCE — plausible but unproven",
+    "next_route": "ROUTE_E_MIXED",
+    "implementation_authorized": false,
+    "experiment_authorized": false,
+    "frozen_baseline": "INTACT",
+    "production": false,
+    "stop": true
+  },
+  "governance_gate": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "P2_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "IS11_MODIFICATION": false,
+    "M_B_MODIFICATION": false,
+    "GT_MODIFICATION": false,
+    "SIGNAL_MODIFICATION": false,
+    "EVIDENCE_CUE_MODIFICATION": false,
+    "LLM": false,
+    "NEW_OBSERVATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "RUNTIME_CHANGE": false,
+    "CAPABILITY_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "FROZEN_EXPERIMENT": "INTACT",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "FORMAL_EXPERIMENT": "NOT_STARTED",
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  }
+}

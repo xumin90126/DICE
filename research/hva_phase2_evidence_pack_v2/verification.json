@@ -1,0 +1,27 @@
+{
+  "all_pass": true,
+  "criteria": {
+    "C1_evidence_preservation": true,
+    "C2_deterministic": true,
+    "C3_semantic_leakage": 0,
+    "C4_human_interaction_minimal": true,
+    "C5_context_compression": true,
+    "C6_decision_relevant_preserved": true,
+    "C6_details": [
+      "IND-AMB-003: 5 marker types found (source=distilled_context)",
+      "IND-AMB-002: 7 marker types found (source=distilled_context)",
+      "IND-AMB-052: 2 marker types found (source=raw_page_context)",
+      "IND-AMB-033: 3 marker types found (source=raw_page_context)",
+      "IND-AMB-049: 2 marker types found (source=raw_page_context)"
+    ],
+    "C7_provenance": true,
+    "C8_no_new_authority": 0,
+    "C9_frozen_baseline": true
+  },
+  "frozen_baseline": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "machine_eval_hash": "437aa665210ccd04",
+    "drift": "0/7 INTACT"
+  }
+}

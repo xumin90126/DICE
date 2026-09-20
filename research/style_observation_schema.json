@@ -1,0 +1,58 @@
+{
+  "schema_name": "StyleObservation",
+  "version": "p3",
+  "description": "Pure style facts from P1 AtomicTextObservation. Font/size/flags/bold/italic/superscript + style_signature + comparison. NO semantic classification (no is_heading/is_title/is_body/is_caption/region_type).",
+  "design_principles": [
+    "P3 produces only style facts, not interpretations.",
+    "bold/italic from flags BITS (authoritative), not font-name guessing.",
+    "No semantic rules (if-large-then-heading, if-bold-then-title).",
+    "underline/subscript null where PyMuPDF 1.26.5 does not reliably encode.",
+    "style_signature is deterministic, no text/bbox/semantics.",
+    "All thresholds centralized in StyleConfig."
+  ],
+  "fields": {
+    "observation_id": "str",
+    "document_id": "str",
+    "page_number": "int",
+    "source_observation_id": "str",
+    "source_type": "str",
+    "font_name": "Optional[str]",
+    "font_family": "Optional[str]",
+    "raw_font_size": "Optional[float]",
+    "normalized_font_size": "Optional[float]",
+    "raw_font_flags": "Optional[int]",
+    "bold": "Optional[bool]",
+    "italic": "Optional[bool]",
+    "underline": "Optional[bool]",
+    "superscript": "Optional[bool]",
+    "subscript": "Optional[bool]",
+    "style_signature": "str",
+    "provenance": "Dict[str, Any]"
+  },
+  "comparison_fields": {
+    "comparison_id": "str",
+    "document_id": "str",
+    "page_number": "int",
+    "observation_a_id": "str",
+    "observation_b_id": "str",
+    "same_font": "bool",
+    "same_font_family": "bool",
+    "same_font_size": "bool",
+    "same_bold": "bool",
+    "same_italic": "bool",
+    "same_underline": "bool",
+    "same_style_signature": "bool",
+    "font_size_delta": "Optional[float]",
+    "style_difference": "str",
+    "provenance": "Dict[str, Any]"
+  },
+  "flag_bit_definitions": {
+    "bit0_superscript": 1,
+    "bit1_italic": 2,
+    "bit4_bold": 16,
+    "underline": "null — not encoded in PyMuPDF 1.26.5 span flags",
+    "subscript": "null — not reliably encoded in PyMuPDF 1.26.5 span flags",
+    "verification": "empirically verified across test corpus (Arial-BoldMT=16, Arial-ItalicMT=2, ArialMT=0)"
+  },
+  "style_signature_format": "family|size|bold|italic|underline|superscript|subscript (null='-')"
+}

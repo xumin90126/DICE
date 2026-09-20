@@ -1,0 +1,369 @@
+{
+  "metadata": {
+    "audit_type": "human_minimal_feedback_learning_signal_audit",
+    "date": "2026-09-12",
+    "mode": "READ-ONLY / NO IMPLEMENTATION / NO NEW MODULE / FROZEN INTACT / STOP",
+    "objective": "Determine if minimal Human feedback contains extractable, verifiable, reusable Learning Signal"
+  },
+  "executive_summary": {
+    "status": "PARTIAL",
+    "current_learning_level": "L3",
+    "finding": "4/5 candidates are evidence-grounded but have LOW info gain; 1/5 has HIGH info gain but is unstable (reviewer disagreement). Stability-Novelty Paradox prevents reaching L4.",
+    "key_paradox": "Stable signals are redundant (Machine already has evidence); novel signals are unstable (Human reviewers disagree)"
+  },
+  "feedback_inventory": {
+    "p722_judgments": 55,
+    "pilot_judgments": 27,
+    "reviewer_a_rationales": 45,
+    "reviewer_b_rationales": 45,
+    "free_text_feedbacks": 4,
+    "total_feedback_instances": 172,
+    "gt_distribution": {
+      "KEEP_SEPARATE": 43,
+      "MERGE": 2
+    },
+    "p722_distribution": {
+      "KEEP_SEPARATE": 47,
+      "MERGE": 6,
+      "UNKNOWN": 2
+    }
+  },
+  "feedback_information_taxonomy": {
+    "BOUNDARY_CONFIRMATION": 116,
+    "CONFLICT_SIGNAL": 4,
+    "HUMAN_ONLY_INFORMATION": 4,
+    "EVIDENCE_SUFFICIENCY_SIGNAL": 2,
+    "BOUNDARY_CORRECTION": 1,
+    "key_observation": "91% of feedback is BOUNDARY_CONFIRMATION — Human mainly confirms Machine existing evidence"
+  },
+  "learning_signal_candidates": [
+    {
+      "candidate_id": "LSC-01",
+      "name": "TABLE_NUMERIC_DIFF_CELL → SPLIT",
+      "evidence": "BOTH_NUMERIC + DIFF_CELL + TABLE (TLD)",
+      "feedback_type": "SPLIT",
+      "case_count": 9,
+      "document_count": 3,
+      "page_count": 4,
+      "independent_setting_count": 3,
+      "evidence_supported_count": 9,
+      "evidence_partial_count": 0,
+      "human_only_count": 0,
+      "recurrence_status": "STABLE — 9/9 uniform GT",
+      "independence_status": "PARTIAL — 55% on resnet p6",
+      "evidence_grounding_status": "EVIDENCE_SUPPORTED",
+      "boundary_status": "NO_BOUNDARY_CASES",
+      "future_reuse_status": "PARTIAL — TLD coverage 41%",
+      "human_validation_status": "NOT_VALIDATED",
+      "negative_cases": 0,
+      "conflict_cases": 0,
+      "counterfactual": "POTENTIALLY_EVIDENCE_GROUNDED",
+      "info_gain": "LOW — BOUNDARY_CONFIRMATION",
+      "reusability_readiness": "PARTIAL"
+    },
+    {
+      "candidate_id": "LSC-02",
+      "name": "SENTENCE_BOUNDARY_PERIOD_CAPITAL → SPLIT",
+      "evidence": "CAPITAL + PERIOD",
+      "feedback_type": "SPLIT (GT level)",
+      "case_count": 3,
+      "document_count": 3,
+      "page_count": 3,
+      "independent_setting_count": 3,
+      "evidence_supported_count": 3,
+      "evidence_partial_count": 0,
+      "human_only_count": 0,
+      "recurrence_status": "STABLE at GT level — 3/3 KEEP_SEPARATE",
+      "independence_status": "INDEPENDENT — 3 docs, 3 pages",
+      "evidence_grounding_status": "PARTIAL — period+capital detectable but NOT SUFFICIENT",
+      "boundary_status": "CRITICAL — reviewer disagreement IS the boundary",
+      "future_reuse_status": "NOT_READY — reviewer disagreement",
+      "human_validation_status": "NOT_VALIDATED",
+      "negative_cases": 0,
+      "conflict_cases": 3,
+      "counterfactual": "DEPENDENT_ON_HUMAN_EXPLANATION",
+      "info_gain": "HIGH — SEMANTIC_CORRECTION",
+      "reusability_readiness": "NOT_READY"
+    },
+    {
+      "candidate_id": "LSC-03",
+      "name": "FIGURE_CAPTION → MERGE",
+      "evidence": "CAPITAL + FIG",
+      "feedback_type": "MERGE",
+      "case_count": 2,
+      "document_count": 1,
+      "page_count": 2,
+      "independent_setting_count": 1,
+      "evidence_supported_count": 2,
+      "evidence_partial_count": 0,
+      "human_only_count": 0,
+      "recurrence_status": "STABLE — 2/2 MERGE",
+      "independence_status": "NOT_INDEPENDENT — 1 doc",
+      "evidence_grounding_status": "EVIDENCE_SUPPORTED",
+      "boundary_status": "NO_BOUNDARY_CASES",
+      "future_reuse_status": "NOT_READY — insufficient independence",
+      "human_validation_status": "NOT_VALIDATED",
+      "negative_cases": 0,
+      "conflict_cases": 0,
+      "counterfactual": "POTENTIALLY_EVIDENCE_GROUNDED",
+      "info_gain": "LOW — BOUNDARY_CONFIRMATION",
+      "reusability_readiness": "NOT_READY"
+    },
+    {
+      "candidate_id": "LSC-04",
+      "name": "MIXED_NUMERIC_TEXT → SPLIT",
+      "evidence": "MIXED_NUMERIC_TEXT",
+      "feedback_type": "SPLIT",
+      "case_count": 5,
+      "document_count": 4,
+      "page_count": 5,
+      "independent_setting_count": 5,
+      "evidence_supported_count": 5,
+      "evidence_partial_count": 0,
+      "human_only_count": 0,
+      "recurrence_status": "STABLE — 5/5 KEEP_SEPARATE",
+      "independence_status": "INDEPENDENT — 4 docs, 5 pages",
+      "evidence_grounding_status": "EVIDENCE_SUPPORTED",
+      "boundary_status": "NO_BOUNDARY_CASES",
+      "future_reuse_status": "PARTIAL — but very low info gain",
+      "human_validation_status": "NOT_VALIDATED",
+      "negative_cases": 0,
+      "conflict_cases": 0,
+      "counterfactual": "POTENTIALLY_EVIDENCE_GROUNDED",
+      "info_gain": "LOW — REDUNDANT_CONFIRMATION",
+      "reusability_readiness": "PARTIAL"
+    },
+    {
+      "candidate_id": "LSC-05",
+      "name": "TABLE_DIFF_CELL_NON_NUMERIC → SPLIT",
+      "evidence": "CAPITAL + DIFF_CELL + TABLE",
+      "feedback_type": "SPLIT",
+      "case_count": 4,
+      "document_count": 2,
+      "page_count": 4,
+      "independent_setting_count": 4,
+      "evidence_supported_count": 4,
+      "evidence_partial_count": 0,
+      "human_only_count": 0,
+      "recurrence_status": "STABLE — 4/4 KEEP_SEPARATE",
+      "independence_status": "INDEPENDENT — 2 docs, 4 pages",
+      "evidence_grounding_status": "EVIDENCE_SUPPORTED",
+      "boundary_status": "NO_BOUNDARY_CASES",
+      "future_reuse_status": "PARTIAL — ceiling effect",
+      "human_validation_status": "NOT_VALIDATED",
+      "negative_cases": 0,
+      "conflict_cases": 0,
+      "counterfactual": "POTENTIALLY_EVIDENCE_GROUNDED",
+      "info_gain": "LOW — BOUNDARY_CONFIRMATION",
+      "reusability_readiness": "PARTIAL"
+    }
+  ],
+  "counterfactual_test": {
+    "description": "Can Machine find structure WITHOUT Human explanation?",
+    "results": {
+      "LSC-01": "POTENTIALLY_EVIDENCE_GROUNDED",
+      "LSC-02": "DEPENDENT_ON_HUMAN_EXPLANATION",
+      "LSC-03": "POTENTIALLY_EVIDENCE_GROUNDED",
+      "LSC-04": "POTENTIALLY_EVIDENCE_GROUNDED",
+      "LSC-05": "POTENTIALLY_EVIDENCE_GROUNDED"
+    },
+    "evidence_grounded_count": 4,
+    "human_dependent_count": 1,
+    "key_insight": "Evidence-grounded candidates have LOW info gain; human-dependent candidate has HIGH info gain"
+  },
+  "information_gain": {
+    "type_a_semantic_correction": {
+      "candidates": [
+        "LSC-02"
+      ],
+      "gain": "HIGH",
+      "description": "Human resolves ambiguity Machine cannot",
+      "problem": "But Human reviewers disagree → signal unstable"
+    },
+    "type_b_boundary_confirmation": {
+      "candidates": [
+        "LSC-01",
+        "LSC-03",
+        "LSC-05"
+      ],
+      "gain": "LOW",
+      "description": "Human confirms Machine existing evidence",
+      "problem": "Machine already has evidence → reuse saves minimal effort"
+    },
+    "type_c_redundant_confirmation": {
+      "candidates": [
+        "LSC-04"
+      ],
+      "gain": "VERY_LOW",
+      "description": "Human repeats what Machine already computed",
+      "problem": "LOW_INFORMATION_GAIN"
+    },
+    "paradox": "Stable signals are redundant; novel signals are unstable. This is the fundamental tension in minimal feedback learning."
+  },
+  "reusability_readiness": {
+    "LSC-01": "PARTIAL",
+    "LSC-02": "NOT_READY",
+    "LSC-03": "NOT_READY",
+    "LSC-04": "PARTIAL",
+    "LSC-05": "PARTIAL",
+    "none_ready_for_human_validation": true,
+    "reason": "All candidates lack negative cases and boundary cases"
+  },
+  "learning_level": {
+    "current": "L3",
+    "L0_feedback_storage": true,
+    "L1_feedback_accumulation": true,
+    "L2_evidence_linked_feedback": true,
+    "L3_candidate_discovery": true,
+    "L4_human_validated_reusable_signal": false,
+    "L5_future_case_reuse": false,
+    "L6_measured_effort_reduction": false,
+    "L7_stable_iterative_learning": false,
+    "note": "L3 != Learning. Only L4+L5+L6 allows discussing Iterative Learning."
+  },
+  "bottlenecks": {
+    "bottleneck_1": {
+      "name": "CEILING_EFFECT",
+      "description": "GT is 96% KEEP_SEPARATE. All 5 candidates are positive-only. No negative cases (same evidence → different feedback). Cannot learn boundaries → reuse unsafe.",
+      "type": "DATA_DISTRIBUTION",
+      "solution": "Collect more MERGE cases"
+    },
+    "bottleneck_2": {
+      "name": "STABILITY_NOVELTY_PARADOX",
+      "description": "Stable signals (LSC-01,04,05) are redundant (Machine has evidence). Novel signal (LSC-02) is unstable (reviewer disagreement). Minimal feedback cannot resolve this tension.",
+      "type": "FUNDAMENTAL_TENSION",
+      "solution": "No immediate solution without additional evidence (paragraph context) or more diverse data"
+    }
+  },
+  "cs1_cs4_review": {
+    "CS1": {
+      "from_human_feedback": true,
+      "evidence_grounding": "YES (TLD)",
+      "independent_recurrence": "PARTIAL (55% one page)",
+      "negatives": 0,
+      "conflicts": 1,
+      "reusable": "PARTIAL",
+      "correction": "CS1 keyword recurrence (70) does correspond to evidence structure, but ceiling effect and false positive (AMB-005) limit reusability"
+    },
+    "CS2": {
+      "from_human_feedback": true,
+      "evidence_grounding": "PARTIAL (period+capital detectable but not sufficient)",
+      "independent_recurrence": "YES (3 docs)",
+      "negatives": 0,
+      "conflicts": 3,
+      "reusable": "NOT_READY",
+      "correction": "keyword recurrence (8) does NOT equal stable signal — reviewer disagreement proves ambiguity"
+    },
+    "CS3": {
+      "from_human_feedback": true,
+      "evidence_grounding": "YES (FIG pattern)",
+      "independent_recurrence": "NO (1 doc)",
+      "negatives": 0,
+      "conflicts": 0,
+      "reusable": "NOT_READY"
+    },
+    "CS4": {
+      "from_human_feedback": true,
+      "evidence_grounding": "YES (numeric detection)",
+      "independent_recurrence": "YES (4 docs)",
+      "negatives": 0,
+      "conflicts": 0,
+      "reusable": "PARTIAL (low info gain)"
+    },
+    "key_correction": "Previous CS1 \"validated\" conclusion needs correction: CS1 is evidence-grounded but only PARTIAL reusability (no negatives, ceiling effect, TLD coverage limit)"
+  },
+  "evidence_structure_grouping": {
+    "total_groups": 11,
+    "uniform_gt_groups": 11,
+    "mixed_gt_groups": 0,
+    "groups_with_reviewer_disagreement": 2,
+    "key_finding": "All evidence structures produce uniform GT, but CAPITAL|PERIOD group has reviewer disagreement (A=SPLIT, B=MERGE) — GT stable != Human judgment stable"
+  },
+  "next_step_recommendation": {
+    "allowed": [
+      "Collect more MERGE cases to address ceiling effect",
+      "Collect independent Human Feedback from more participants",
+      "Do minimal Human Validation on LSC-04 (most independent, most stable candidate)",
+      "Do not advance LSC-02 until paragraph context is available"
+    ],
+    "forbidden": [
+      "Learning Engine",
+      "Pattern Engine",
+      "ML training",
+      "LLM fine-tuning",
+      "New DICE Core layer"
+    ]
+  },
+  "confidence": {
+    "five_candidates_found": "HIGH — 45 GT cases fully grouped",
+    "four_fifths_evidence_grounded": "HIGH — evidence structure computable by Machine",
+    "LSC-02_reviewer_disagreement": "HIGH — 3/3 cases Reviewer B said MERGE",
+    "ceiling_effect_limits_reuse": "HIGH — 96% KEEP_SEPARATE, 0 negatives",
+    "stability_novelty_paradox": "MEDIUM-HIGH — based on 5 candidate analysis"
+  },
+  "limitations": [
+    "n=1 P722 participant + 2 reviewers, cross-participant stability unverified",
+    "4 documents (3 tech + 1 medical), limited corpus diversity",
+    "TLD coverage 41%, non-TLD analysis based on limited sample",
+    "No future case test (L4 not reached)",
+    "GT is adjudicated, may not reflect real-time Human judgment",
+    "Only 4 free-text feedbacks, insufficient for statistical inference"
+  ],
+  "final_answer": {
+    "question": "Can minimal feedback (ACCEPT/SPLIT/MERGE/UNKNOWN) support Machine discovery of reusable Evidence-Grounded Learning Signal?",
+    "answer": "PARTIAL",
+    "reasons_for_partial_not_yes": [
+      "4/5 candidates evidence-grounded but LOW info gain — Human confirms what Machine knows",
+      "1/5 HIGH info gain candidate is unstable — reviewer disagreement",
+      "Ceiling Effect: 96% SPLIT, 0 negative cases, cannot learn boundaries",
+      "No future case test (L4 not reached)",
+      "Stability-Novelty Paradox prevents simultaneous stability and novelty"
+    ],
+    "reasons_for_partial_not_no": [
+      "Feedback IS linked to evidence (L2 achieved)",
+      "Candidates ARE discoverable (L3 achieved)",
+      "4/5 pass counterfactual test",
+      "Framework works in principle — bottleneck is data, not architecture"
+    ]
+  },
+  "principle_verification": {
+    "human_minimal_feedback": "ACHIEVED — 172 instances of ACCEPT/SPLIT/MERGE/UNKNOWN collected",
+    "machine_abstraction": "ACHIEVED — evidence structure grouping completed",
+    "recurrence_detection": "ACHIEVED — 5 candidates found",
+    "evidence_linkage": "ACHIEVED — 4/5 evidence-grounded",
+    "reusable_signal_discovery": "NOT_ACHIEVED — no candidate reached L4",
+    "human_corrects_machine": "PARTIALLY_ACHIEVED — 91% is confirmation, 9% is correction/new info",
+    "feedback_is_candidate_source": "CONFIRMED — all candidates are L3, none is L4+"
+  },
+  "governance": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "ATOMIC_OBSERVATION_MODIFICATION": false,
+    "AGGREGATION_CHANGE": false,
+    "COMPRESSION_CHANGE": false,
+    "EVIDENCE_CUE_CHANGE": false,
+    "SIGNAL_MODIFICATION": false,
+    "UI_MODIFICATION": false,
+    "NEW_OBJECT_IMPLEMENTATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "RUNTIME_CHANGE": false,
+    "ML_TRAINING": false,
+    "LLM_TRAINING": false,
+    "CAPABILITY_REGISTRATION_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "FROZEN_EXPERIMENT": "INTACT",
+    "FORMAL_EXPERIMENT": "NOT_STARTED",
+    "CS1_REUSE": "BLOCKED",
+    "HUMAN_VALIDATION": "BLOCKED",
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "audit_type": "final_case_exposure_integrity_audit",
+  "audit_date": "2026-09-12",
+  "mode": "READ-ONLY, AUDIT ONLY",
+  "scope": "Audit whether 30-case dataset and exposure design support fair A/B1/B2 Human Experiment",
+  "audited_artifacts": [
+    "tmp/l5_evidence_distillation_experiment/data/experiment_cases.json",
+    "tmp/l5_evidence_distillation_experiment/app/experiment_ui.html",
+    "tmp/l5_evidence_distillation_experiment/experiment_server.py"
+  ],
+  "executive_conclusion": "CONDITIONAL",
+  "conclusion_rationale": "B1-vs-B2 causal comparison is NOT broken for cue-available cases (23/30). Zero-cue cases (7/30) add noise not bias. All hard gates PASS. But unstratified random splitting and 2/4 fake conflict cases require mandatory reporting constraints.",
+  "case_identity": {
+    "unique_case_id": "PASS",
+    "stable_doc_page": "PASS",
+    "stable_underlying_evidence": "PASS",
+    "gt_consistency": "PASS",
+    "near_duplicate_check": "PASS",
+    "result": "PASS"
+  },
+  "three_condition_exposure": {
+    "can_case_appear_in_A": true,
+    "can_case_appear_in_B1": true,
+    "can_case_appear_in_B2": true,
+    "exposure_guaranteed_balanced": false,
+    "same_case_within_participant": false,
+    "splitting_mechanism": "random Fisher-Yates shuffle, 3 sets of 10",
+    "result": "PASS (between-participant, cross-condition possible)"
+  },
+  "case_difficulty_balance": {
+    "two_tier_structure": true,
+    "tier1_count": 21,
+    "tier2_count": 9,
+    "tier1_types": {
+      "P": 17,
+      "B": 2,
+      "C": 2,
+      "S": 2
+    },
+    "tier2_types": {
+      "N": 5,
+      "B": 2,
+      "U": 2,
+      "S": 2
+    },
+    "all_N_in_tier2": true,
+    "all_U_in_tier2": true,
+    "simulation_tier2_per_condition": {
+      "min": 0,
+      "max": 8,
+      "mean": 3.0
+    },
+    "result": "LIMITATION"
+  },
+  "image_availability": {
+    "total_cases": 30,
+    "with_image": 21,
+    "without_image": 9,
+    "consistency_across_conditions": "PASS (same per case)",
+    "balance_across_conditions": "LIMITATION (random, not stratified)",
+    "result": "LIMITATION"
+  },
+  "tld_availability": {
+    "total_cases": 30,
+    "with_tld": 21,
+    "without_tld": 9,
+    "consistency_across_conditions": "PASS (same per case)",
+    "balance_across_conditions": "LIMITATION (random, not stratified)",
+    "no_synthetic_cues": true,
+    "result": "LIMITATION"
+  },
+  "cue_availability": {
+    "zero_cue_cases": 7,
+    "zero_cue_case_ids": [
+      "IS11-AMB-052",
+      "IS11-AMB-163",
+      "IS11-AMB-168",
+      "IS11-AMB-198",
+      "IS11-AMB-205",
+      "IS11-AMB-032",
+      "IS11-AMB-064"
+    ],
+    "b1_equals_b2_for_zero_cue": true,
+    "cue_available_cases": 23,
+    "impact": "Zero-cue cases dilute B1-vs-B2 comparison but do not bias direction",
+    "result": "LIMITATION"
+  },
+  "conflict_cases": {
+    "total_classified_conflicts": 4,
+    "genuine_cue_conflicts": 2,
+    "genuine_conflict_ids": [
+      "IS11-AMB-313",
+      "IS11-AMB-462"
+    ],
+    "fake_conflicts": 2,
+    "fake_conflict_ids": [
+      "IS11-AMB-032",
+      "IS11-AMB-064"
+    ],
+    "fake_conflict_reason": "No cue displayed in B2; conflict is conceptual (absence of boundary markers), not observable",
+    "wcar_cor_measurable_on": 2,
+    "amb_414_422": {
+      "type": "P",
+      "gt": "MERGE",
+      "correctly_not_conflict": true
+    },
+    "result": "FAIL (2/4 not genuine)"
+  },
+  "unknown_exposure": {
+    "u_type_cases": 2,
+    "u_type_ids": [
+      "IS11-AMB-375",
+      "IS11-AMB-418"
+    ],
+    "both_in_tier2": true,
+    "reviewer_disagreement": true,
+    "unknown_option_all_conditions": true,
+    "random_distribution_risk": "Some conditions may have 0 UNKNOWN cases",
+    "result": "LIMITATION"
+  },
+  "boundary_cases": {
+    "b_type_cases": 4,
+    "tier1_b_cases": 2,
+    "tier2_b_cases": 2,
+    "genuinely_ambiguous": 2,
+    "result": "PASS"
+  },
+  "negative_cases": {
+    "n_type_cases": 5,
+    "all_in_tier2": true,
+    "all_zero_cue": true,
+    "cannot_test_cue_induced_errors": true,
+    "result": "LIMITATION"
+  },
+  "system_gt": {
+    "s_type_cases": 4,
+    "genuine_s_type": 2,
+    "fake_s_type": 2,
+    "no_gt_modified": true,
+    "no_artificial_conflict": true,
+    "result": "PARTIAL"
+  },
+  "latin_square": {
+    "method": "3-group Latin Square",
+    "group_0": "A → B1 → B2",
+    "group_1": "B1 → B2 → A",
+    "group_2": "B2 → A → B1",
+    "each_condition_in_each_position": true,
+    "no_fixed_order": true,
+    "result": "PASS"
+  },
+  "learning_effect": {
+    "same_case_repetition": false,
+    "condition_order_counterbalanced": true,
+    "transfer_learning_risk": "MEDIUM",
+    "within_session_trend_measurable": true,
+    "result": "PASS"
+  },
+  "timing_integrity": {
+    "timer_start": "end of loadCase() (after content rendered)",
+    "timer_end": "submitDecision click",
+    "formula": "(endTime - caseStartTime) / 1000",
+    "same_for_all_conditions": true,
+    "image_render_delay": "50-200ms for Tier-1 (not excluded)",
+    "abstraction_burden_hardcoded": true,
+    "abstraction_burden_values": {
+      "A": "HIGH",
+      "B1": "MEDIUM",
+      "B2": "LOW"
+    },
+    "result": "PASS (with latency caveat and abstraction_burden confound)"
+  },
+  "decision_option_integrity": {
+    "options": [
+      "MERGE",
+      "KEEP_SEPARATE",
+      "UNKNOWN"
+    ],
+    "same_in_all_conditions": true,
+    "no_auto_select": true,
+    "no_default_highlight": true,
+    "result": "PASS"
+  },
+  "presentation_only": {
+    "only_presentation_differs": true,
+    "same_image": true,
+    "same_evidence": true,
+    "same_gt": true,
+    "same_decision_options": true,
+    "same_interaction": true,
+    "result": "PASS"
+  },
+  "gt_leakage": {
+    "gt_in_cue_text": false,
+    "cue_from_gt": false,
+    "cue_from_frozen_evidence": true,
+    "checks_performed": 210,
+    "result": "PASS"
+  },
+  "hard_gates": {
+    "CASE_IDENTITY": "PASS",
+    "CASE_MATCHING": "PASS",
+    "INFORMATION_AVAILABILITY_BALANCE": "LIMITATION",
+    "GT_INTEGRITY": "PASS",
+    "CUE_PROVENANCE": "PASS",
+    "GT_LEAKAGE": "PASS",
+    "DECISION_OPTION_INTEGRITY": "PASS",
+    "TIMING_INTEGRITY": "PASS",
+    "any_fail": false
+  },
+  "remaining_limitations": [
+    {
+      "id": 1,
+      "limitation": "7/30 cases have zero cues in B2",
+      "severity": "HIGH",
+      "impact": "Dilutes B1-vs-B2",
+      "reporting": "Filter to cue-available cases (23/30)"
+    },
+    {
+      "id": 2,
+      "limitation": "Unstratified random case splitting",
+      "severity": "HIGH",
+      "impact": "Uneven Tier-1/Tier-2",
+      "reporting": "Report Tier distribution per condition"
+    },
+    {
+      "id": 3,
+      "limitation": "Only 2 genuine conflict cases",
+      "severity": "HIGH",
+      "impact": "WCAR/COR low stability",
+      "reporting": "Case-level, not rate-level"
+    },
+    {
+      "id": 4,
+      "limitation": "AMB-032/064 misclassified as conflicts",
+      "severity": "MEDIUM",
+      "impact": "Inflates conflict count",
+      "reporting": "Reclassify as EVIDENCE_MISSING"
+    },
+    {
+      "id": 5,
+      "limitation": "abstraction_burden hardcoded by condition",
+      "severity": "MEDIUM",
+      "impact": "Pre-assumes hypothesis",
+      "reporting": "Exclude from analysis"
+    },
+    {
+      "id": 6,
+      "limitation": "Image render delay 50-200ms",
+      "severity": "LOW",
+      "impact": "Inflates Tier-1 timing",
+      "reporting": "Acknowledge"
+    },
+    {
+      "id": 7,
+      "limitation": "All N/U cases in Tier 2",
+      "severity": "MEDIUM",
+      "impact": "Cannot test cue on negatives",
+      "reporting": "Subgroup limitation"
+    },
+    {
+      "id": 8,
+      "limitation": "No matched case sets X/Y/Z",
+      "severity": "MEDIUM",
+      "impact": "Between-participant only",
+      "reporting": "Lower power"
+    },
+    {
+      "id": 9,
+      "limitation": "9/30 cases lack page image",
+      "severity": "LOW",
+      "impact": "Visual evidence absent",
+      "reporting": "Subgroup"
+    },
+    {
+      "id": 10,
+      "limitation": "n=15 exploratory",
+      "severity": "INHERENT",
+      "impact": "No statistical generalization",
+      "reporting": "Exploratory pilot"
+    }
+  ],
+  "minimal_corrections_proposed": [
+    {
+      "id": "A",
+      "correction": "Reclassify AMB-032/064 from S-type conflict to EVIDENCE_MISSING",
+      "authorized": false
+    },
+    {
+      "id": "B",
+      "correction": "Remove hardcoded abstraction_burden (replace with null)",
+      "authorized": false
+    },
+    {
+      "id": "C",
+      "correction": "Replace random shuffle with stratified case splitting (Tier-1/Tier-2 balanced)",
+      "authorized": false
+    },
+    {
+      "id": "D",
+      "correction": "Analysis-stage filtering: B1-vs-B2 on cue-available cases only",
+      "authorized": false
+    }
+  ],
+  "mandatory_reporting_constraints": [
+    "B1-vs-B2 analysis must filter to cue-available cases (23/30)",
+    "WCAR/COR on 2 genuine conflict cases only (not 4)",
+    "AMB-032/064 reclassified as EVIDENCE_MISSING",
+    "abstraction_burden excluded from analysis",
+    "Tier-1/Tier-2 distribution per condition reported",
+    "Image render delay acknowledged",
+    "NO_STATISTICAL_GENERALIZATION at n=15"
+  ],
+  "final_gate": {
+    "CASE_EXPOSURE_AUDIT": "CONDITIONAL",
+    "CASE_IDENTITY": "PASS",
+    "CASE_MATCHING": "PASS",
+    "CASE_DIFFICULTY_BALANCE": "LIMITATION",
+    "IMAGE_AVAILABILITY": "LIMITATION",
+    "TLD_AVAILABILITY": "LIMITATION",
+    "CUE_AVAILABILITY": "LIMITATION",
+    "CONFLICT_CASE_INTEGRITY": "FAIL",
+    "UNKNOWN_EXPOSURE": "LIMITATION",
+    "BOUNDARY_CASE_INTEGRITY": "PASS",
+    "NEGATIVE_CASE_INTEGRITY": "LIMITATION",
+    "SYSTEM_GT_INTEGRITY": "PARTIAL",
+    "LATIN_SQUARE": "PASS",
+    "LEARNING_EFFECT_CONTROL": "PASS",
+    "TIMING_INTEGRITY": "PASS",
+    "DECISION_OPTION_INTEGRITY": "PASS",
+    "PRESENTATION_ONLY": "PASS",
+    "GT_LEAKAGE": "PASS",
+    "FORMAL_HUMAN_EXPERIMENT_READY": true,
+    "FROZEN_BASELINE": "INTACT",
+    "PRODUCTION": false,
+    "RUNTIME_AUTHORITY": "ZERO",
+    "ITERATIVE_LEARNING": "INSUFFICIENT_EVIDENCE",
+    "STOP": true
+  }
+}

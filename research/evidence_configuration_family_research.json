@@ -1,0 +1,221 @@
+{
+  "gate_id": "evidence_configuration_family_design_research",
+  "date": "2026-09-19",
+  "mode": "READ_ONLY_NO_IMPLEMENTATION",
+  "governance": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_FIELD": "NONE",
+    "NEW_SCHEMA": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_SIGNAL": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  },
+
+  "data_used": {
+    "source": "M-A 79-case Human Validation + prior Reusable Signal Validation Gate",
+    "cases_analyzed": 50,
+    "documents": 5,
+    "fields_used": ["fig_prefix", "e1_evidence_state", "e1_extent", "e1_ctx_count", "vertical_relation", "x_overlap", "drawing_extent_present", "distance_pt", "burden_e1"],
+    "no_new_fields": true
+  },
+
+  "q1_exact_configuration": {
+    "exact_identical": false,
+    "identical_fields": ["case_type", "e1_evidence_state", "fig_prefix", "e1_extent", "e1_ctx_count", "drawing_extent_present", "vertical_relation"],
+    "identical_count": 7,
+    "variable_fields": ["x_overlap", "distance_pt"],
+    "variable_count": 2,
+    "x_overlap_distribution": {"True": 29, "False": 5},
+    "distance_range": "2.5 to 55.2pt",
+    "distance_unique_values": 28,
+    "interpretation": "Family of similar configs, not identical instances. 7/9 fields shared; 2 vary but judgment remains consistent."
+  },
+
+  "q2_allowed_variations": {
+    "distance": {
+      "allowed_in_caption_like": true,
+      "range": "2.5 to 55.2pt, all YES",
+      "structural_boundary": "dist>20 introduces counterexamples in structural-only grouping",
+      "conclusion": "ALLOWED within semantic family; BOUNDARY INDICATOR for structural-only"
+    },
+    "x_overlap": {
+      "allowed_in_caption_like": true,
+      "true_count": 29,
+      "false_count": 5,
+      "structural_yes_rate_true": "94.6%",
+      "structural_yes_rate_false": "77.8%",
+      "conclusion": "ALLOWED within semantic family; XO=False lower YES rate structurally"
+    },
+    "text_content": {
+      "allowed": true,
+      "conclusion": "INSTANCE variation, not Configuration variation"
+    }
+  },
+
+  "q3_counterexample_root_cause": {
+    "total_counterexamples": 4,
+    "classification": "SEMANTIC_DIFFERENCE",
+    "ce1": {
+      "case_id": "arxiv_2402.18619_p19_339_297",
+      "judgment": "NO",
+      "case_type": "ambiguous_fragment",
+      "structural_config": "FIG=True+EXTENT+VR=below+XO=True+dist=56.8",
+      "nearby_yes": "arxiv_2402.18619_p28_457_234 (dist=55.2, same config, caption_like, YES)",
+      "difference": "SEMANTIC_DIFFERENCE (case_type differs, not structural)"
+    },
+    "ce2": {
+      "case_id": "is11_efficientnet_p8_467_415",
+      "judgment": "NO",
+      "case_type": "ambiguous_fragment",
+      "structural_config": "FIG=True+EXTENT+VR=below+XO=True+dist=25.5",
+      "nearby_yes": "is11_resnet_p6_478_168 (dist=25.1, SAME case_type=ambiguous_fragment, YES)",
+      "difference": "SEMANTIC_DIFFERENCE (CRITICAL: ALL fields identical including case_type, different judgment)",
+      "significance": "DECISIVE — proves evidence cannot determine judgment for ambiguous cases"
+    },
+    "ce3": {
+      "case_id": "is11_efficientnet_p4_188_461",
+      "judgment": "NO",
+      "case_type": "ambiguous_fragment",
+      "structural_config": "FIG=True+EXTENT+VR=below+XO=False+dist=20.1",
+      "nearby_yes": "is11_med_001_p16_85_484 (dist=15.3, same config, caption_like, YES)",
+      "difference": "SEMANTIC_DIFFERENCE (case_type differs)"
+    },
+    "ce4": {
+      "case_id": "is11_resnet_p4_464_620",
+      "judgment": "UNCERTAIN",
+      "case_type": "ambiguous_fragment",
+      "structural_config": "FIG=True+EXTENT+VR=below+XO=False+dist=38.4",
+      "analysis_note": "Could be caption or reference — semantic ambiguity",
+      "difference": "SEMANTIC_DIFFERENCE (G5 boundary confirmed)"
+    },
+    "evidence_family_cannot_determine_judgment": true,
+    "decisive_case": "CE2: identical evidence + same case_type → different judgment (NO vs YES)"
+  },
+
+  "q4_grouping_without_semantic_label": {
+    "family_definition_structural_only": "NOT_SUPPORTED",
+    "best_structural_group": {
+      "config": "FIG=YES + EXTENT + VR=below + XO=True + dist≤25",
+      "cases": 18,
+      "yes_rate": "100.0%",
+      "coverage": "52.9% of 34 caption_like YES cases"
+    },
+    "broadest_structural_group": {
+      "config": "FIG=YES + EXTENT + VR=below",
+      "cases": 46,
+      "yes_rate": "91.3%",
+      "counterexamples": 4
+    },
+    "sub_configs_needed_for_full_coverage": 10,
+    "case_type_required": true,
+    "interpretation": "Structural-only grouping cannot achieve stable family. case_type (semantic label) is required for 100% consistency."
+  },
+
+  "q5_one_case_one_patch_risk": {
+    "risk": "MEDIUM",
+    "reasons_not_high": [
+      "34 cases share 7/9 fields → genuine family",
+      "2 variable fields → not per-case conditions",
+      "Judgment consistent (34/34 YES)"
+    ],
+    "reasons_not_low": [
+      "10 sub-configs needed for structural-only coverage",
+      "Some sub-configs have 1-2 cases → fragile",
+      "No structural threshold cleanly separates YES from NO",
+      "CE2: identical config → different judgment"
+    ]
+  },
+
+  "q6_final_decision": {
+    "evidence_configuration_family": "CONDITIONAL",
+    "family_exists": true,
+    "boundary_determinable": false,
+    "conditions": [
+      "case_type (semantic label) needed for clean separation",
+      "semantic content needed for ambiguous cases (CE2 proof)",
+      "structural boundary unclear (no threshold separates YES from NO)"
+    ],
+    "ready_for_reusable_signal_research": false,
+    "blockers": [
+      "Semantic label dependency: family requires case_type (not structural)",
+      "Evidence cannot determine judgment: CE2 proves identical evidence → different judgment",
+      "G5 boundary confirmed: ambiguous cases require semantic interpretation"
+    ]
+  },
+
+  "g5_convergent_validation": {
+    "finding": "G5 Semantic Boundary independently re-confirmed through Evidence Configuration Family analysis",
+    "original_path": "Evidence Boundary Structure Research (13 G5 cases in academic corpus)",
+    "new_path": "CE2 in Evidence Configuration Family Research (identical evidence → different judgment)",
+    "convergence": "Both paths arrive at same boundary: structural evidence has ceiling; semantic identity cannot be determined from structure alone",
+    "implication": "Evidence Configuration Family is bounded by G5. Within non-ambiguous cases, family is stable. At ambiguous boundary, G5 prevents structural resolution."
+  },
+
+  "over_design_audit": {
+    "O1_new_schema": false,
+    "O2_new_evidence_field": false,
+    "O3_created_semantic_label": false,
+    "O4_created_rule": false,
+    "O5_created_detector": false,
+    "O6_introduced_similarity_embedding": false,
+    "O7_treated_candidate_as_signal": false,
+    "O8_treated_signal_as_capability": false,
+    "O9_one_case_one_patch": false,
+    "O10_increased_human_burden": false,
+    "all_false": true,
+    "result": "PASS"
+  },
+
+  "limitations": [
+    {"id": "ECF-L-01", "limitation": "SINGLE HUMAN REVIEWER — CE2 distinction may be reviewer-specific"},
+    {"id": "ECF-L-02", "limitation": "CE2 IS DECISIVE BUT SINGLE INSTANCE — more pairs would strengthen finding"},
+    {"id": "ECF-L-03", "limitation": "STRUCTURAL BOUNDARY UNTESTED AT FINER GRAIN — but CE2 suggests fine-grain won't help"},
+    {"id": "ECF-L-04", "limitation": "case_type IS HUMAN-ASSIGNED — not machine-derivable"},
+    {"id": "ECF-L-05", "limitation": "SAME DOMAIN — all academic papers, cross-domain untested"}
+  ],
+
+  "final_questions": {
+    "Q1_family_exists": "YES — CONDITIONAL family exists (7/9 fields shared, consistent judgment within case_type)",
+    "Q2_variations_allowed": "YES — distance and x_overlap are allowed within caption_like; text is instance variation",
+    "Q3_counterexample_difference": "SEMANTIC_DIFFERENCE — CE2 proves identical evidence + same case_type → different judgment",
+    "Q4_semantic_label_required": "YES — structural-only grouping NOT_SUPPORTED; case_type needed",
+    "Q5_patch_risk": "MEDIUM — genuine family but 10 sub-configs needed structurally; no clean threshold",
+    "Q6_ready_for_reusable_signal": "NO — three blockers (semantic label, evidence ceiling, G5 boundary)"
+  },
+
+  "files_created": [
+    "tmp/evidence_configuration_family_research.md",
+    "tmp/evidence_configuration_family_research.json",
+    "tmp/evidence_configuration_family_case_table.csv"
+  ],
+  "files_modified": 0,
+
+  "conclusion": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_FIELD": "NONE",
+    "NEW_SCHEMA": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_SIGNAL": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  }
+}

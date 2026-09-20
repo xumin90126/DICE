@@ -1,0 +1,746 @@
+{
+  "metadata": {
+    "audit_name": "DCE-06 TLD Failure Mechanism Audit",
+    "date": "2026-09-14",
+    "mode": "READ-ONLY / FORENSIC FAILURE ANALYSIS / NO MODIFICATION / FROZEN INTACT / STOP",
+    "predecessor": "DCE-05 Table Column Identity Expressibility Audit",
+    "cases_analyzed": 8,
+    "cases": [
+      "IS11-AMB-135",
+      "IS11-AMB-262",
+      "IS11-AMB-313",
+      "IS11-AMB-462",
+      "IS11-AMB-032",
+      "IS11-AMB-024",
+      "IS11-AMB-074",
+      "IS11-AMB-346"
+    ]
+  },
+  "executive_summary": {
+    "final_status": "TLD_FAILURE_MECHANISM_LOCATED",
+    "mechanism_1": {
+      "name": "Page-Global Contamination",
+      "cases": [
+        "AMB-135 (primary)",
+        "AMB-262 (only)",
+        "AMB-313 (only)"
+      ],
+      "root_cause": "TLD band formation has no locality constraint. Only breaks on is_wide_text (single-fragment wide rows). Multi-fragment prose (from PDF citation/math splitting) does not break the band. Band extends from table to page bottom. Non-table multicol rows pollute column centers. Column stability drops below 0.75.",
+      "proof": "Local isolation test: alignment rises from 0.23-0.27 (global) to 0.96-1.00 (local)"
+    },
+    "mechanism_2": {
+      "name": "Inherent Low Text Ratio",
+      "cases": [
+        "AMB-135 (secondary)",
+        "AMB-462 (only)"
+      ],
+      "root_cause": "Table is numeric/symbolic-heavy. _is_text_cell rejects short numeric strings and math symbols. text_ratio < 0.45 even in perfect isolation.",
+      "proof": "AMB-135 local text_ratio=0.195 (74/118 math fragments). AMB-462 text_ratio=0.163 (67/80 numeric cells), band properly isolated."
+    },
+    "greedy_band_proven": true,
+    "greedy_band_evidence": {
+      "failure_table_coverage": "11-15% of page",
+      "failure_contaminating_mc": "17-28 rows",
+      "success_table_coverage": "95-97% of page",
+      "success_contaminating_mc": "0 rows"
+    },
+    "tld_vs_consumer": "Case B (TLD has capability but Detection fails)",
+    "tld_change_necessity": "POSSIBLY_NEEDED",
+    "possible_external_route": true,
+    "llm_needed": false,
+    "new_observation_needed": false,
+    "new_module_needed": false,
+    "new_engine_needed": false,
+    "true_reusable_signal_found": false,
+    "stop": true
+  },
+  "case_trace": {
+    "AMB-135": {
+      "stage_a": {
+        "input_line_count": 402
+      },
+      "stage_b": {
+        "row_count": 82,
+        "multicol_count": 31,
+        "wide_text_count": 1,
+        "short_single_count": 0,
+        "target_row_idx": 14,
+        "target_row_type": "MULTICOL"
+      },
+      "stage_c": {
+        "band_count": 1,
+        "band_0": {
+          "y_range": "69.5-706.7",
+          "height": 637.2,
+          "members": 81,
+          "anchors": 56,
+          "target_in_band": true,
+          "member_types": {
+            "MULTICOL": 31,
+            "OTHER": 50
+          }
+        }
+      },
+      "stage_d": {
+        "col_center_count": 5,
+        "col_centers": [
+          55.3,
+          109.5,
+          258.7,
+          284.0,
+          336.1,
+          472.8
+        ]
+      },
+      "stage_e": {
+        "avg_alignment": 0.268,
+        "threshold": 0.75,
+        "result": "FAIL",
+        "first_failure": true
+      },
+      "stage_f": {
+        "text_ratio": 0.382,
+        "text_cells": 153,
+        "total_cells": 401,
+        "threshold": 0.45,
+        "result": "FAIL (would also fail)"
+      },
+      "final": {
+        "table_count": 0
+      },
+      "local_isolation": {
+        "y_range": "111-210",
+        "anchor_count": 14,
+        "col_centers": 14,
+        "alignment": 0.991,
+        "text_ratio": 0.195,
+        "result": "alignment PASS, text_ratio FAIL (inherent)"
+      }
+    },
+    "AMB-262": {
+      "stage_a": {
+        "input_line_count": 414
+      },
+      "stage_b": {
+        "row_count": 82,
+        "multicol_count": 37,
+        "wide_text_count": 2,
+        "short_single_count": 6,
+        "target_row_idx": 7,
+        "target_row_type": "MULTICOL"
+      },
+      "stage_c": {
+        "band_count": 1,
+        "band_0": {
+          "y_range": "107.8-706.2",
+          "height": 598.4,
+          "members": 79,
+          "anchors": 54,
+          "target_in_band": true,
+          "member_types": {
+            "MULTICOL": 37,
+            "OTHER": 36,
+            "SHORT_SINGLE": 6
+          }
+        }
+      },
+      "stage_d": {
+        "col_center_count": 4,
+        "col_centers": [
+          64.2,
+          170.9,
+          353.1,
+          488.2
+        ]
+      },
+      "stage_e": {
+        "avg_alignment": 0.226,
+        "threshold": 0.75,
+        "result": "FAIL",
+        "first_failure": true
+      },
+      "stage_f": {
+        "text_ratio": 0.518,
+        "text_cells": 212,
+        "total_cells": 409,
+        "threshold": 0.45,
+        "result": "PASS (but never reached)"
+      },
+      "final": {
+        "table_count": 0
+      },
+      "local_isolation": {
+        "y_range": "107-177",
+        "anchor_count": 9,
+        "col_centers": 14,
+        "alignment": 1.0,
+        "text_ratio": 0.822,
+        "result": "ALL PASS (pure contamination)"
+      }
+    },
+    "AMB-313": {
+      "stage_a": {
+        "input_line_count": 249
+      },
+      "stage_b": {
+        "row_count": 62,
+        "multicol_count": 31,
+        "wide_text_count": 1,
+        "short_single_count": 10,
+        "target_row_idx": 9,
+        "target_row_type": "MULTICOL"
+      },
+      "stage_c": {
+        "band_count": 1,
+        "band_0": {
+          "y_range": "70.9-707.5",
+          "height": 636.6,
+          "members": 61,
+          "anchors": 41,
+          "target_in_band": true,
+          "member_types": {
+            "MULTICOL": 31,
+            "OTHER": 20,
+            "SHORT_SINGLE": 10
+          }
+        }
+      },
+      "stage_d": {
+        "col_center_count": 9
+      },
+      "stage_e": {
+        "avg_alignment": 0.538,
+        "threshold": 0.75,
+        "result": "FAIL",
+        "first_failure": true
+      },
+      "stage_f": {
+        "text_ratio": 0.585,
+        "threshold": 0.45,
+        "result": "PASS (but never reached)"
+      },
+      "final": {
+        "table_count": 0
+      },
+      "local_isolation": {
+        "y_range": "260-340",
+        "anchor_count": 9,
+        "col_centers": 9,
+        "alignment": 0.958,
+        "text_ratio": 0.516,
+        "result": "ALL PASS (pure contamination)"
+      }
+    },
+    "AMB-462": {
+      "stage_a": {
+        "input_line_count": 244
+      },
+      "stage_b": {
+        "row_count": 47,
+        "multicol_count": 17,
+        "wide_text_count": 5,
+        "short_single_count": 2,
+        "target_row_idx": 9,
+        "target_row_type": "MULTICOL"
+      },
+      "stage_c": {
+        "band_count": 2,
+        "band_0": {
+          "y_range": "75.7-167.7",
+          "members": 8,
+          "anchors": 8,
+          "target_in_band": false
+        },
+        "band_1": {
+          "y_range": "216.1-308.1",
+          "members": 8,
+          "anchors": 8,
+          "target_in_band": true
+        }
+      },
+      "stage_d_band1": {
+        "col_center_count": 10
+      },
+      "stage_e_band1": {
+        "avg_alignment": 1.0,
+        "threshold": 0.75,
+        "result": "PASS"
+      },
+      "stage_f_band1": {
+        "text_ratio": 0.163,
+        "text_cells": 13,
+        "total_cells": 80,
+        "threshold": 0.45,
+        "result": "FAIL",
+        "first_failure": true
+      },
+      "final": {
+        "table_count": 1,
+        "note": "Band 0 accepted (wrong table), Band 1 rejected (target table)"
+      },
+      "failure_type": "Inherent low text ratio (numeric benchmark table). No contamination. Band properly isolated."
+    },
+    "AMB-032": {
+      "stage_a": {
+        "input_line_count": 204
+      },
+      "stage_b": {
+        "row_count": 86,
+        "multicol_count": 38,
+        "wide_text_count": 0,
+        "short_single_count": 6
+      },
+      "stage_c": {
+        "band_count": 1,
+        "band_0": {
+          "y_range": "74.8-733.3",
+          "members": 86,
+          "anchors": 47,
+          "target_in_band": true
+        }
+      },
+      "stage_d": {
+        "col_center_count": 20
+      },
+      "stage_e": {
+        "avg_alignment": 0.986,
+        "result": "PASS"
+      },
+      "stage_f": {
+        "text_ratio": 0.76,
+        "result": "PASS"
+      },
+      "final": {
+        "table_count": 1,
+        "result": "CORRECT"
+      },
+      "table_page_coverage": "95%"
+    },
+    "AMB-074": {
+      "stage_a": {
+        "input_line_count": 206
+      },
+      "stage_b": {
+        "row_count": 82,
+        "multicol_count": 41,
+        "wide_text_count": 0,
+        "short_single_count": 11
+      },
+      "stage_c": {
+        "band_count": 1,
+        "band_0": {
+          "y_range": "72.6-733.3",
+          "members": 82,
+          "anchors": 48,
+          "target_in_band": true
+        }
+      },
+      "stage_d": {
+        "col_center_count": 8
+      },
+      "stage_e": {
+        "avg_alignment": 0.75,
+        "result": "PASS (barely)"
+      },
+      "stage_f": {
+        "text_ratio": 0.694,
+        "result": "PASS"
+      },
+      "final": {
+        "table_count": 1,
+        "result": "CORRECT"
+      },
+      "table_page_coverage": "95%"
+    },
+    "AMB-346": {
+      "stage_a": {
+        "input_line_count": 176
+      },
+      "stage_b": {
+        "row_count": 67,
+        "multicol_count": 24,
+        "wide_text_count": 1,
+        "short_single_count": 6
+      },
+      "stage_c": {
+        "band_count": 1,
+        "band_0": {
+          "y_range": "67.8-707.5",
+          "members": 66,
+          "anchors": 36,
+          "target_in_band": true
+        }
+      },
+      "stage_d": {
+        "col_center_count": 18
+      },
+      "stage_e": {
+        "avg_alignment": 0.995,
+        "result": "PASS"
+      },
+      "stage_f": {
+        "text_ratio": 0.909,
+        "result": "PASS"
+      },
+      "final": {
+        "table_count": 1,
+        "result": "CORRECT"
+      },
+      "table_page_coverage": "97%"
+    }
+  },
+  "band_analysis": {
+    "finding": "TLD band formation only breaks on is_wide_text (single-fragment, width > 0.40*page_width, text > 40 chars). Multi-fragment prose (from PDF citation/math splitting) appears as is_multicol=True and does NOT break the band.",
+    "band_breaker_logic": "is_wide_text is the ONLY breaker. is_multicol = anchor. is_short_single + OTHER = absorb.",
+    "failure_band_pattern": "Small table (11-15% of page) + no wide_text below table → band extends to page bottom → contamination",
+    "success_band_pattern": "Table dominates page (95-97%) → global band = table → no contamination",
+    "contamination_source": "TLD band formation itself (page-global, no locality constraint). NOT line grouping."
+  },
+  "column_stability_analysis": {
+    "amb_135": {
+      "global_alignment": 0.268,
+      "local_alignment": 0.991,
+      "delta": 0.723,
+      "global_col_centers": 5,
+      "local_col_centers": 14,
+      "missing_table_columns": 12,
+      "extra_contaminant_columns": 3,
+      "reason": "Global centers merged table columns with formula/prose positions. 12 of 14 table columns missing from global centers. Table fragments do not align to contaminated centers."
+    },
+    "amb_262": {
+      "global_alignment": 0.226,
+      "local_alignment": 1.0,
+      "delta": 0.774,
+      "global_col_centers": 4,
+      "local_col_centers": 14,
+      "reason": "Global centers too few (4) for 13-14 fragment rows. Contaminating rows shift center positions. Table fragments do not align."
+    },
+    "amb_313": {
+      "global_alignment": 0.538,
+      "local_alignment": 0.958,
+      "delta": 0.42,
+      "reason": "Contamination from page-global band. Local isolation passes."
+    },
+    "amb_462": {
+      "alignment": 1.0,
+      "result": "PASS (no contamination, band properly isolated)",
+      "note": "Failure is NOT column stability. Failure is text_ratio."
+    }
+  },
+  "text_ratio_analysis": {
+    "amb_135": {
+      "global_text_ratio": 0.382,
+      "local_text_ratio": 0.195,
+      "target_table_cells": 118,
+      "target_text_cells": 23,
+      "target_math_fragments": 74,
+      "contamination_cells": 283,
+      "contamination_text_ratio": 0.459,
+      "combined_ratio": 0.382,
+      "conclusion": "C (both contribute). Target table inherently low (0.195). Contamination makes it worse (0.382). Both < 0.45.",
+      "math_fragment_examples": [
+        "1",
+        "224",
+        "x",
+        "32",
+        "alpha",
+        "phi",
+        "beta",
+        "gamma",
+        "i",
+        "F",
+        "H",
+        "W",
+        "C",
+        "L"
+      ]
+    },
+    "amb_262": {
+      "global_text_ratio": 0.518,
+      "local_text_ratio": 0.822,
+      "conclusion": "Target table passes (0.822). Contamination dilutes to 0.518 but still > 0.45. Text ratio is NOT a failure point."
+    },
+    "amb_462": {
+      "text_ratio": 0.163,
+      "cells": 80,
+      "text_cells": 13,
+      "numeric_cells": 67,
+      "conclusion": "Pure inherent failure. Band properly isolated (no contamination). 80% of cells are numeric benchmark scores. _is_text_cell rejects short numeric strings.",
+      "numeric_examples": [
+        "54.7",
+        "23.0",
+        "37.0",
+        "60.0",
+        "20.2",
+        "68.9",
+        "54.8",
+        "45.5"
+      ]
+    }
+  },
+  "failure_stage_analysis": {
+    "amb_135": {
+      "first_failure_stage": "Stage E (column stability)",
+      "would_also_fail_at": "Stage F (text ratio)"
+    },
+    "amb_262": {
+      "first_failure_stage": "Stage E (column stability)",
+      "would_also_fail_at": "NONE (text ratio passes)"
+    },
+    "amb_313": {
+      "first_failure_stage": "Stage E (column stability)",
+      "would_also_fail_at": "NONE (text ratio passes)"
+    },
+    "amb_462": {
+      "first_failure_stage": "Stage F (text ratio)",
+      "would_also_fail_at": "NONE (column stability = 1.0)"
+    }
+  },
+  "success_failure_comparison": {
+    "table": {
+      "mechanism": [
+        "Anchor count",
+        "Band count",
+        "Band height",
+        "Band locality",
+        "Column stability",
+        "Text ratio",
+        "Column count",
+        "Table/page coverage",
+        "Contaminating MC"
+      ],
+      "AMB_135_FAIL": [
+        31,
+        1,
+        637,
+        "PAGE-GLOBAL",
+        0.268,
+        0.382,
+        5,
+        "15%",
+        17
+      ],
+      "AMB_262_FAIL": [
+        37,
+        1,
+        598,
+        "PAGE-GLOBAL",
+        0.226,
+        0.518,
+        4,
+        "11%",
+        28
+      ],
+      "AMB_313_FAIL": [
+        31,
+        1,
+        637,
+        "PAGE-GLOBAL",
+        0.538,
+        0.585,
+        9,
+        "12%",
+        22
+      ],
+      "AMB_462_FAIL": [
+        17,
+        2,
+        92,
+        "LOCAL",
+        1.0,
+        0.163,
+        10,
+        "14%",
+        0
+      ],
+      "AMB_032_SUCCESS": [
+        38,
+        1,
+        659,
+        "PAGE-GLOBAL",
+        0.986,
+        0.76,
+        20,
+        "95%",
+        0
+      ],
+      "AMB_074_SUCCESS": [
+        41,
+        1,
+        661,
+        "PAGE-GLOBAL",
+        0.75,
+        0.694,
+        8,
+        "95%",
+        0
+      ],
+      "AMB_346_SUCCESS": [
+        24,
+        1,
+        640,
+        "PAGE-GLOBAL",
+        0.995,
+        0.909,
+        18,
+        "97%",
+        0
+      ]
+    },
+    "root_causes": {
+      "mechanism_1": "Table/page coverage (11-15% vs 95-97%) + Contaminating MC (17-28 vs 0) → column stability (0.23-0.54 vs 0.75-1.0)",
+      "mechanism_2": "Text ratio (0.16-0.19 vs 0.60-0.91) for numeric-heavy tables"
+    },
+    "symptom_vs_mechanism_vs_root_cause": {
+      "mechanism_1": {
+        "SYMPTOM": "column_stability < 0.75, low column center count",
+        "MECHANISM": "page-global contamination (non-table multicol rows pollute column centers)",
+        "ROOT_CAUSE": "TLD band formation has no locality constraint + PDF splits prose into multicol"
+      },
+      "mechanism_2": {
+        "SYMPTOM": "text_ratio < 0.45",
+        "MECHANISM": "_is_text_cell rejects numeric/symbolic cells",
+        "ROOT_CAUSE": "table is inherently numeric-heavy (architecture spec / benchmark results)"
+      }
+    }
+  },
+  "failure_mechanism_classification": {
+    "AMB-135": {
+      "primary": "T8 (Page-global contamination)",
+      "secondary": "T7 (Text ratio threshold)",
+      "overall": "T9 (Mixed)"
+    },
+    "AMB-262": {
+      "primary": "T8 (Page-global contamination)",
+      "secondary": null,
+      "overall": "T8"
+    },
+    "AMB-313": {
+      "primary": "T8 (Page-global contamination)",
+      "secondary": null,
+      "overall": "T8"
+    },
+    "AMB-462": {
+      "primary": "T7 (Text ratio threshold)",
+      "secondary": null,
+      "overall": "T7"
+    },
+    "note": "T1-T6, T10 NOT APPLICABLE. T3 (Band formation) partially applies to AMB-135/262/313 but the band formation logic works per its own rules — the issue is it lacks locality, which is classified as T8 (contamination)."
+  },
+  "tld_vs_consumer_analysis": {
+    "case_a": false,
+    "case_a_reason": "TLD data model CAN express different_column (proven on 13/45 success cases)",
+    "case_b": true,
+    "case_b_reason": "TLD detection algorithm fails at Stage E (column stability) or Stage F (text ratio)",
+    "case_c": false,
+    "case_c_reason": "IS-11 consumes different_cell when TLD provides it (13/45 TN, 0 FP)",
+    "verdict": "Case B (TLD Detection Failure)"
+  },
+  "p2_sufficiency_analysis": {
+    "p2_provides": [
+      "same_y_band (L1)",
+      "h_gap (L1)",
+      "fragment x0/y0/x1/y1 (L1)",
+      "fragment count on same y (L2)",
+      "x-gap pattern (L2)"
+    ],
+    "p2_cannot_express": [
+      "table membership (L3)",
+      "column membership (L3)",
+      "different_column (L3)"
+    ],
+    "verdict": "P2_SUFFICIENT = YES (for L1/L2 evidence provision). L3 interpretation is TLD responsibility."
+  },
+  "change_necessity_analysis": {
+    "tld_change_necessity": "POSSIBLY_NEEDED",
+    "mechanism_1_issue": "Band formation has no locality constraint",
+    "mechanism_1_potential_direction": "Add locality break when consecutive multicol rows have column x-positions significantly different from band established centers",
+    "mechanism_1_impact": "Would resolve AMB-262, AMB-313, AMB-135 primary",
+    "mechanism_1_risk": "May break success cases where table spans entire page",
+    "mechanism_1_status": "POSSIBLY_NEEDED but NOT CLEARLY_NEEDED (only 2/45 IS-11 cases affected)",
+    "mechanism_2_issue": "_is_text_cell rejects numeric table cells",
+    "mechanism_2_potential_direction": "Adjust text_ratio computation or threshold (FORBIDDEN: threshold tuning)",
+    "mechanism_2_status": "POSSIBLY_NEEDED but involves threshold tuning (FORBIDDEN)",
+    "overall": "POSSIBLY_NEEDED. Even if CLEARLY_NEEDED: NOT AUTHORIZED this round (TLD is FROZEN)."
+  },
+  "anti_overdesign_gate": {
+    "new_observation_needed": false,
+    "new_module_needed": false,
+    "new_engine_needed": false,
+    "llm_needed": false,
+    "forbidden_escalations": [
+      "TLD Failure -> Document Understanding (NO)",
+      "TLD Failure -> Discourse Understanding (NO)",
+      "TLD Failure -> Semantic Organization (NO)",
+      "TLD Failure -> LLM (NO)"
+    ]
+  },
+  "learning_signal_gate": {
+    "true_reusable_signal_found": false,
+    "observed_failure_mechanisms": [
+      "greedy band (page-global band formation)",
+      "column stability < 0.75 (contaminated centers)",
+      "text ratio < 0.45 (inherent numeric table)"
+    ],
+    "reason": "Observed Failure Mechanism != Generalizable Learning Signal. These are algorithm-specific properties, not patterns that generalize."
+  },
+  "possible_external_route": {
+    "possible": true,
+    "description": "P2 geometry (same_y_band + h_gap + fragment count) could support consumer-side locality pre-filter",
+    "risk": "May introduce new false positives",
+    "status": "Only REPORTED. NOT designed or implemented."
+  },
+  "final_verdict": {
+    "mechanism_1_proven": true,
+    "mechanism_2_identified": true,
+    "greedy_band_proven": true,
+    "first_failure_stage_amb135": "Stage E (column stability)",
+    "first_failure_stage_amb262": "Stage E (column stability)",
+    "first_failure_stage_amb462": "Stage F (text ratio)",
+    "same_mechanism_amb135_amb262": "PARTIALLY (same primary T8, AMB-135 has additional T7)",
+    "success_reason": "Table dominates page (95-97%) → no contamination",
+    "tld_case": "Case B (Detection Failure, not Representation, not Consumer)",
+    "p2_sufficient": true,
+    "need_new_observation": false,
+    "need_llm": false,
+    "need_new_module": false,
+    "tld_change_necessity": "POSSIBLY_NEEDED",
+    "next_minimal_research": "TLD Band Formation Locality",
+    "bottleneck_primary": "D (Evidence Perception / TLD Detection)",
+    "bottleneck_secondary": null,
+    "true_reusable_signal_found": false,
+    "current_learning_level": "L3",
+    "recommended_next_step": "READ_ONLY_AUDIT",
+    "stop": true
+  },
+  "governance_gate": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "P2_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "IS11_MODIFICATION": false,
+    "M_B_MODIFICATION": false,
+    "GT_MODIFICATION": false,
+    "SIGNAL_MODIFICATION": false,
+    "EVIDENCE_CUE_MODIFICATION": false,
+    "LLM": false,
+    "NEW_OBSERVATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "RUNTIME_CHANGE": false,
+    "CAPABILITY_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "FROZEN_EXPERIMENT": "INTACT",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "FORMAL_EXPERIMENT": "NOT_STARTED",
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  }
+}

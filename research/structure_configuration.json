@@ -1,0 +1,21 @@
+{
+  "construction_version": "v1",
+  "coord_origin": "PDF_TOP_LEFT",
+  "heading_min_signals": 2,
+  "heading_size_ratio": 1.15,
+  "heading_gap_threshold": 14.0,
+  "heading_position_max": 2,
+  "heading_short_line_ratio": 0.8,
+  "paragraph_gap_threshold": 24.0,
+  "paragraph_min_spans": 1,
+  "section_min_heading_signals": 2,
+  "list_min_items": 2,
+  "list_left_align_tolerance": 6.0,
+  "list_vertical_gap_max": 30.0,
+  "list_short_line_ratio": 0.85,
+  "header_min_repeat_pages": 2,
+  "header_position_tolerance": 0.04,
+  "footer_position_tolerance": 0.04,
+  "multicont_min_cols": 2,
+  "multicont_style_required": true
+}

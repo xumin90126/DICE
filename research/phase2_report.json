@@ -1,0 +1,218 @@
+{
+  "phase2_status": "COMPLETE",
+  "learning_level": "L4_CANDIDATE_VALIDATION",
+  "metadata": {
+    "date": "2026-09-17",
+    "scope": "SC-05 Human Boundary Validation -> ValidatedSignal -> Unseen Case Replay",
+    "authorization": "Phase 1 PASS + explicit Phase 2 authorization"
+  },
+  "executive_summary": {
+    "reuse_demonstrated": true,
+    "human_effort_reduction": "NOT_FEASIBLE",
+    "iterative_learning": "INSUFFICIENT_EVIDENCE",
+    "final_status": "REUSE_DEMONSTRATED_BUT_INSUFFICIENT",
+    "stop": true,
+    "core_finding": "Signal matches 13 unseen cases across 4 new documents but FP rate 38.5% makes it unreliable"
+  },
+  "research_question": {
+    "question": "Can a SignalCandidate formed from Human Feedback, after Human Validation, be reused on truly Unseen Cases?",
+    "answer": "Yes but unreliable. Signal matched 13 unseen cases across 4 new documents, but FP rate=38.5%. Signal cannot distinguish sentence boundary from reference continuation."
+  },
+  "sc05_profile": {
+    "signal_id": "SC-05",
+    "pattern": "text_a ends with period + text_b starts with capital + not numeric + has text",
+    "s3_signature": "(False, False, False, True, True, True)",
+    "source_cases": [
+      "IS11-AMB-375",
+      "IS11-AMB-418",
+      "IS11-AMB-519"
+    ],
+    "source_documents": [
+      "is11_cs_001",
+      "is11_med_001"
+    ],
+    "all_adjudicated": true,
+    "all_conflict": true,
+    "majority_decision": "KEEP_SEPARATE"
+  },
+  "human_boundary_validation": {
+    "signal_id": "VS-05",
+    "source_signal_candidate": "SC-05",
+    "validated_by_human": true,
+    "validation_result": "SUPPORTED",
+    "validation_basis": "IS-11 adjudication: all 3 conflict cases resolved as KEEP_SEPARATE",
+    "validation_limitation": "Adjudicator did NOT see P7 counterexamples",
+    "evidence_preconditions": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "predicted_decision": "KEEP_SEPARATE",
+    "positive_cases": 3,
+    "negative_cases": 0,
+    "conflict_cases": 3,
+    "forbidden_fields_absent": true
+  },
+  "unseen_cases": {
+    "source": "P7",
+    "total_p7_cases": 69,
+    "matching_cases": 13,
+    "match_criteria": "4-field partial match (GAP-3: P7 lacks is_in_table/different_cell)",
+    "case_id_overlap_with_is11": 0,
+    "document_overlap_with_is11": 0,
+    "gt_distribution": {
+      "KEEP_SEPARATE": 8,
+      "MERGE": 5
+    },
+    "boundary_class_distribution": {
+      "REFERENCE_LIST_ENTRY": 6,
+      "BODY_TEXT_CONTINUATION": 6,
+      "OTHER_AMBIGUOUS": 1
+    },
+    "documents": [
+      "ind_arxiv_2402",
+      "ind_arxiv_bio2",
+      "ind_qbio_genomics",
+      "ind_qbio_rna"
+    ],
+    "truly_unseen": true,
+    "coverage_check": "PASS"
+  },
+  "replay_results": {
+    "total_replays": 13,
+    "signal_matches": 13,
+    "true_positive": 8,
+    "false_positive": 5,
+    "precision": 0.615,
+    "fp_rate": 0.385,
+    "outcome_by_boundary_class": {
+      "BODY_TEXT_CONTINUATION": {
+        "TP": 4,
+        "FP": 2
+      },
+      "REFERENCE_LIST_ENTRY": {
+        "TP": 4,
+        "FP": 2
+      },
+      "OTHER_AMBIGUOUS": {
+        "TP": 0,
+        "FP": 1
+      }
+    },
+    "outcome_by_document": {
+      "ind_arxiv_2402": {
+        "TP": 1,
+        "FP": 2
+      },
+      "ind_arxiv_bio2": {
+        "TP": 5,
+        "FP": 3
+      },
+      "ind_qbio_genomics": {
+        "TP": 1,
+        "FP": 0
+      },
+      "ind_qbio_rna": {
+        "TP": 1,
+        "FP": 0
+      }
+    }
+  },
+  "hrr_analysis": {
+    "baseline": "P7 machine: INSUFFICIENT_EVIDENCE for all 13, Human must review all",
+    "signal_assisted": "All 13 SIGNAL_MATCH, FP rate 38.5%",
+    "conclusion": "NOT_FEASIBLE",
+    "reason": "FP rate > 30%, Human must verify each case, no effort reduction"
+  },
+  "conflict_explanation": {
+    "structural_cause": "period+capital ambiguous between (a) sentence boundary -> KEEP_SEPARATE and (b) within-reference/author continuation -> MERGE",
+    "is_boundary_not_failure": true,
+    "explained": true
+  },
+  "learning_level_assessment": {
+    "L3_candidate_discovery": "ACHIEVED (Phase 1)",
+    "L4_candidate_validation": "ACHIEVED (Phase 2)",
+    "L5_reliable_reuse": "NOT ACHIEVED (FP 38.5%)",
+    "iterative_learning": "INSUFFICIENT_EVIDENCE"
+  },
+  "key_findings": [
+    {
+      "id": 1,
+      "finding": "Signal CAN match Unseen Cases",
+      "detail": "13 cases across 4 new documents, 0 overlap"
+    },
+    {
+      "id": 2,
+      "finding": "Signal is NOT reliable",
+      "detail": "38.5% FP rate, 5/13 wrong"
+    },
+    {
+      "id": 3,
+      "finding": "Conflict has structural cause",
+      "detail": "period+capital ambiguous between sentence boundary and reference continuation"
+    },
+    {
+      "id": 4,
+      "finding": "HRR NOT feasible",
+      "detail": "FP too high, Human must verify each case"
+    },
+    {
+      "id": 5,
+      "finding": "HVA-02 prediction confirmed",
+      "detail": "HVA-02 predicted 33% FP, Phase 2 measured 38.5%"
+    }
+  ],
+  "stop_conditions": {
+    "fp_rate_over_30": true,
+    "signal_stopped": true,
+    "signal_modified": false,
+    "signal_expanded": false
+  },
+  "proven": [
+    "Human Feedback can form SignalCandidates",
+    "SignalCandidate can be Human-validated",
+    "ValidatedSignal can match Unseen Cases",
+    "Signal generalizes across documents",
+    "Conflict has structural explanation",
+    "Mechanism works end-to-end: Feedback -> Signal -> Replay"
+  ],
+  "not_proven": [
+    "Signal reliability (FP 38.5%)",
+    "Human Effort Reduction",
+    "Iterative Learning",
+    "L5 (Reliable Reuse)"
+  ],
+  "final_gate": {
+    "learning_level": "L4_CANDIDATE_VALIDATION",
+    "reuse_demonstrated": true,
+    "human_effort_reduction": "NOT_FEASIBLE",
+    "iterative_learning": "INSUFFICIENT_EVIDENCE",
+    "final_status": "REUSE_DEMONSTRATED_BUT_INSUFFICIENT",
+    "dice_core_modification": false,
+    "p1_p7_modification": false,
+    "tld_modification": false,
+    "is11_modification": false,
+    "gt_modification": false,
+    "signal_modification": false,
+    "llm": false,
+    "new_observation": false,
+    "new_module": false,
+    "new_engine": false,
+    "runtime_change": false,
+    "capability_change": false,
+    "frozen_baseline": "INTACT",
+    "production": false,
+    "stop": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "machine_eval_hash": "437aa665210ccd04",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  }
+}

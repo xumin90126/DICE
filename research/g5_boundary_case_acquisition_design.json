@@ -1,0 +1,204 @@
+{
+  "gate_id": "g5_boundary_case_acquisition_design_research",
+  "date": "2026-09-19",
+  "mode": "READ_ONLY_RESEARCH_DESIGN_ONLY",
+  "governance": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "MODEL_TRAINING": false,
+    "EXTERNAL_DATASET_IMPORTED": false,
+    "CAPABILITY_CREATED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_FIELD": "NONE",
+    "NEW_SCHEMA": "NONE",
+    "NEW_OBSERVATION": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_SIGNAL": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "NEXT_GATE": "NEW_G5_HUMAN_VALIDATION",
+    "STOP": true
+  },
+
+  "data_used": {
+    "new_cases_total": 192,
+    "sources": {"ma_definitive": 63, "academic_g1_g4": 46, "biotech": 37, "fin_edu": 35, "ecf_new": 11},
+    "original_29_excluded": true
+  },
+
+  "historical_g5_pattern": {
+    "true_g5_case_types": {"ambiguous_fragment": 5, "Type_B_negative": 4},
+    "true_g5_drawing_extent": "True (9/9 = 100%)",
+    "true_g5_judgment": {"uncertain": 7, "yes": 1, "no": 1},
+    "false_g5_pattern": "Type_A_negative + dep=False + UNCERTAIN (7/7 = 100%)",
+    "machine_resolvable_pattern": "caption_like + standard config + dep=True (39/39 = 100% YES)",
+    "case_type_overlap": "ambiguous_fragment and Type_B_negative appear in BOTH TRUE_G5 and MACHINE_RESOLVABLE → NOT reliable alone"
+  },
+
+  "ce2_like_discovery": {
+    "mixed_judgment_configs": 3,
+    "mixed_judgment_cases": 12,
+    "description": "Cases with identical structural evidence but different Human judgments (YES vs NO) = CE2 pattern",
+    "configs": [
+      {"config": "fig=True|dep=True|VR=below|XO=True|type=ambiguous_fragment", "cases": 6, "judgments": {"yes": 5, "no": 1}},
+      {"config": "fig=True|dep=True|VR=below|XO=False|type=ambiguous_fragment", "cases": 3, "judgments": {"yes": 2, "no": 1}},
+      {"config": "fig=True|dep=True|VR=above|XO=True|type=ambiguous_fragment", "cases": 3, "judgments": {"yes": 2, "no": 1}}
+    ],
+    "significance": "Strongest G5 signal — identical evidence → different judgment → semantic content is differentiator"
+  },
+
+  "tier_classification": {
+    "Tier_1a": {
+      "count": 12,
+      "criteria": "ambiguous_fragment + dep=True + CE2-like mixed-judgment config",
+      "priority": "HIGHEST",
+      "expected_g5_rate": "HIGHEST (CE2-like signature)",
+      "human_review": "YES"
+    },
+    "Tier_1b": {
+      "count": 6,
+      "criteria": "ambiguous_fragment or Type_B_negative + dep=True + not in mixed config",
+      "priority": "HIGH",
+      "expected_g5_rate": "12-35% (historical 26-50% for case_type)",
+      "human_review": "YES"
+    },
+    "Tier_2": {
+      "count": 15,
+      "criteria": "subfigure_label, reference_like, or non-standard caption_like",
+      "priority": "MODERATE",
+      "expected_g5_rate": "NOT_ESTIMABLE (new case_types)",
+      "human_review": "Phase 2 (conditional)"
+    },
+    "Tier_3": {
+      "count": 130,
+      "criteria": "academic/biotech/fin-edu G1-G4 or Type_A_negative dep=False",
+      "priority": "SKIP",
+      "expected_g5_rate": "0%",
+      "human_review": "NO (negative examples)"
+    },
+    "Tier_4": {
+      "count": 29,
+      "criteria": "caption_like standard config (fig=True, dep=True, VR=below, XO=True)",
+      "priority": "SKIP",
+      "expected_g5_rate": "0% (100% YES)",
+      "human_review": "NO (negative examples)"
+    }
+  },
+
+  "minimal_human_task": {
+    "question": "现有 Evidence 是否已经足够让机器完成该任务？",
+    "options": {
+      "A": "足够 → MACHINE_RESOLVABLE",
+      "B": "不足，但可以通过已有/可获得 Evidence 解决 → FALSE_G5 (G1-G4)",
+      "C": "Evidence 已经充分，但仍需要语义判断 → TRUE_G5 candidate",
+      "D": "UNCERTAIN → INDETERMINATE"
+    },
+    "human_does_not": ["write YES/NO answer", "write rules", "write explanations", "write detectors", "write features", "write semantic labels", "modify Evidence"],
+    "design_principle": "Asks about EVIDENCE SUFFICIENCY, not SEMANTIC ANSWER → Boundary Signal, not Answer Learning"
+  },
+
+  "strategy_comparison": {
+    "A_all_181": {"human_cases": 192, "expected_g5": "2-6", "reduction": "0%", "coverage": "100%", "bias": "NONE", "missed_risk": "LOW"},
+    "B_tiered_t1_t2": {"human_cases": 33, "expected_g5": "2-6", "reduction": "82.8%", "coverage": "17.2%", "bias": "MODERATE", "missed_risk": "LOW", "recommended": true},
+    "C_top_k_t1": {"human_cases": 18, "expected_g5": "2-6", "reduction": "90.6%", "coverage": "9.4%", "bias": "HIGH", "missed_risk": "MODERATE"}
+  },
+
+  "targeted_vs_random": {
+    "result": "CONDITIONAL",
+    "targeted_expected_g5": "2-6 (from 18 Tier 1 cases)",
+    "random_expected_g5": "~1 (from 18 random cases)",
+    "efficiency_ratio": "2-6x",
+    "evidence_for": ["same case_type as historical TRUE_G5", "12 CE2-like mixed configs", "historical 26-50% G5 rate"],
+    "evidence_against": ["only 2 CE2 definitive TRUE_G5 cases", "0/18 new Tier 1 confirmed", "definitive G5 rate 12.5% << UNCERTAIN 100%", "NOT_ACHIEVABLE statistical significance"]
+  },
+
+  "acceptance_metrics": {
+    "NEW_TRUE_G5_COUNT": {"target": 3, "minimum": 1, "failure": 0},
+    "NEW_FALSE_G5_COUNT": {"expected": 0, "note": "Tier 1 has dep=True, no G1/G2"},
+    "NEW_MACHINE_RESOLVABLE_COUNT": {"expected": "12-16"},
+    "HUMAN_CASE_COUNT": {"phase_1": 18, "phase_2": 15, "maximum": 33},
+    "G5_YIELD": {"target": "≥17%", "historical": "12-35%"},
+    "HUMAN_REVIEW_REDUCTION": {"phase_1": "90.6%", "phase_2": "82.8%"},
+    "CANDIDATE_COVERAGE": "33/192 = 17.2%",
+    "MISSED_G5_RISK": "LOW (Tier 3/4 have 0% historical G5)"
+  },
+
+  "selection_bias": {
+    "case_type_bias": "Tier 1 only ambiguous_fragment + Type_B_negative; mitigated by Tier 2",
+    "definitive_bias": "All 181 new cases are definitive; original TRUE_G5 mostly UNCERTAIN; NOT eliminable",
+    "domain_bias": "All academic; biotech/fin-edu 0 G5; acknowledged",
+    "mixed_config_bias": "Tier 1a over-represents CE2-like; justified (strongest signal)",
+    "mitigations": ["Tier 2 includes new case_types", "Tier 3/4 as negative examples", "Record ALL results", "Minimal task doesn't ask YES/NO"]
+  },
+
+  "over_design_audit": {
+    "all_false": true,
+    "result": "PASS",
+    "checks": 18
+  },
+
+  "limitations": [
+    {"id": "ACQ-L-01", "limitation": "SMALL TIER 1 SAMPLE — 18 cases, expected 2-6 G5, may yield 0"},
+    {"id": "ACQ-L-02", "limitation": "DEFINITIVE BIAS — all definitive, original TRUE_G5 mostly UNCERTAIN"},
+    {"id": "ACQ-L-03", "limitation": "NO CROSS-DOMAIN — all academic, biotech/fin-edu 0 G5"},
+    {"id": "ACQ-L-04", "limitation": "SINGLE REVIEWER — inter-rater reliability unknown"},
+    {"id": "ACQ-L-05", "limitation": "MIXED-CONFIG OVER-REPRESENTATION — may over-estimate G5 rate"},
+    {"id": "ACQ-L-06", "limitation": "NOT_ESTIMABLE G5 YIELD — 2-6 based on historical UNCERTAIN rate, definitive rate may be lower"},
+    {"id": "ACQ-L-07", "limitation": "NO STATISTICAL THRESHOLD — sample sizes too small, pattern-based only"}
+  ],
+
+  "seven_layer_convergence": {
+    "layer_1": "Evidence Boundary Structure — 13 G5, 4 reclassified",
+    "layer_2": "Evidence Configuration Family (CE2) — Answer NOT learnable, Signal IS",
+    "layer_3": "Evidence Boundary Expansion — 62.1% TRUE_G5, 37.9% FALSE_G5",
+    "layer_4": "Human Review Reduction — 77.8% irreducible",
+    "layer_5": "G5 Evidence Boundary Governance — 37.9% FALSE_G5, Signal 100% on 14",
+    "layer_6": "G5 Boundary Generalization — Signal UNVALIDATED, 0 new TRUE_G5",
+    "layer_7": "Case Acquisition Design (this study) — 18 Tier 1 candidates, 2-6 expected G5",
+    "convergence": "G5 genuine. FALSE_G5 widespread. Signal promising but UNVALIDATED. 18 Tier 1 candidates identified. 12 CE2-like strongest. Minimal task designed. NEXT_GATE = NEW_G5_HUMAN_VALIDATION."
+  },
+
+  "final_questions": {
+    "Q1_which_cases": "Tier 1: 18 cases (12 Tier 1a CE2-like + 6 Tier 1b same-case-type)",
+    "Q2_why": "Historical G5 pattern (ambiguous_fragment+Type_B_negative, dep=True) + 12 CE2-like mixed configs + multi-field combination",
+    "Q3_reduce_human": "Tier screening 192→18 (90.6%), minimal task (A/B/C/D), Phase 2 conditional, Tier 3/4 excluded",
+    "Q4_selection_bias": "Acknowledged: case_type, definitive, domain biases. Mitigated by Tier 2, negative examples, transparent reporting",
+    "Q5_minimal_protocol": "ONE question per case (A/B/C/D), 18-33 tasks, ~15 minutes total, no YES/NO, no rules, no system modification",
+    "Q6_how_many_g5_needed": "Minimum 1, Target 3, Ideal 6. No statistical threshold (pattern-based only). If 0: valid finding (G5 may be UNCERTAIN-specific)",
+    "Q7_worth_it": "SUPPORTED — low cost (18 tasks, ~15 min), high potential (2-6 G5), no system risk, no alternative path",
+    "Q8_next_phase_only_human_validation": "YES — NEXT_GATE = NEW_G5_HUMAN_VALIDATION. Execute protocol, classify, re-test Signal. No system development."
+  },
+
+  "files_created": [
+    "tmp/g5_boundary_case_acquisition_design.md",
+    "tmp/g5_boundary_case_acquisition_design.json",
+    "tmp/g5_boundary_case_acquisition_candidates.csv"
+  ],
+  "files_modified": 0,
+
+  "conclusion": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "MODEL_TRAINING": false,
+    "EXTERNAL_DATASET_IMPORTED": false,
+    "CAPABILITY_CREATED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_FIELD": "NONE",
+    "NEW_SCHEMA": "NONE",
+    "NEW_OBSERVATION": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_SIGNAL": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "NEXT_GATE": "NEW_G5_HUMAN_VALIDATION",
+    "STOP": true
+  }
+}

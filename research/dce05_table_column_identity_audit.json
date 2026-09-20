@@ -1,0 +1,369 @@
+{
+  "metadata": {
+    "audit_name": "DCE-05 Table Column Identity Expressibility Audit",
+    "date": "2026-09-13",
+    "mode": "READ-ONLY / FORENSIC RESEARCH / NO MODIFICATION / FROZEN INTACT / STOP",
+    "predecessor": "Decision-Critical Evidence Consumption Audit",
+    "cases_analyzed": 10
+  },
+  "executive_summary": {
+    "final_status": "DCE05_IS_DIFFERENT_COLUMN_NOT_COLUMN_IDENTITY",
+    "key_finding": "DCE-05 is NOT \"table_column_identity\" (semantic, L4) but \"different_column\" (structural, L3). TLD data model CAN express it (13/45 correct). TLD Detection Algorithm fails on 2/45 cases. NOT Consumer Integration, NOT Representation Missing, NOT Semantic Judgment.",
+    "dce05_type": "D5-G (Mixed: D5-A when TLD works + D5-C when TLD fails)",
+    "primary_bottleneck_dce05": "D (Evidence Perception / TLD Detection Failure)",
+    "llm_needed": false,
+    "new_observation_needed": false,
+    "stop": true
+  },
+  "case_analysis": {
+    "AMB-135": {
+      "text_a": "4",
+      "text_b": "MBConv6, k5x5",
+      "gt": "KEEP_SEPARATE",
+      "machine_outcome": "FP",
+      "tld_result": "MISS (0 tables)",
+      "tld_failure_reason": "column_stability=0.27 (<0.75) + text_ratio=0.38 (<0.45)",
+      "tld_failure_detail": "Band too greedy (56 anchor rows from entire page). Formula fragments dont align to table columns. Many math fragments fail text ratio.",
+      "human_decision": "KEEP_SEPARATE",
+      "human_critical_evidence": "different_column (structural)",
+      "human_explanation": "4=stage index, MBConv6=operator (column identity, semantic, NOT decision-critical)",
+      "dce05_necessity": "R3 (Decision incorrect without DCE-05)",
+      "dce05_sufficiency": "S3 (different_column alone sufficient)"
+    },
+    "AMB-262": {
+      "text_a": "41M",
+      "text_b": "EfficientNet-B5",
+      "gt": "KEEP_SEPARATE",
+      "machine_outcome": "ABSTAIN",
+      "tld_result": "MISS (0 tables)",
+      "tld_failure_reason": "column_stability=0.23 (<0.75)",
+      "tld_failure_detail": "Band too greedy (54 anchor rows). Rows have varying column structures. Text ratio 0.52 (PASS) but column stability FAILS.",
+      "human_decision": "KEEP_SEPARATE",
+      "human_critical_evidence": "different_column (structural)",
+      "dce05_necessity": "R2 (Decision UNKNOWN without DCE-05)",
+      "dce05_sufficiency": "S3 (different_column alone sufficient)",
+      "re_verification": "DOWNGRADED from Type D (Missing Observation) to D5-C (Representation not achieved due to Detection Failure)"
+    },
+    "AMB-032": {
+      "text_a": "-",
+      "text_b": "8.43",
+      "gt": "KEEP_SEPARATE",
+      "machine_outcome": "TN",
+      "tld_result": "CORRECT (1 table, A=[29,1], B=[29,2], different_cell=True)",
+      "human_decision": "KEEP_SEPARATE",
+      "human_critical_evidence": "different_column (via TLD)",
+      "p722_behavior": "UNKNOWN (45.9s) — TLD cell info not exposed to participant",
+      "dce05_necessity": "R0 (DCE-05 provided by TLD)"
+    },
+    "AMB-313": {
+      "text_a": "Test Size",
+      "text_b": "#Classes",
+      "gt": "KEEP_SEPARATE",
+      "machine_outcome": "ABSTAIN",
+      "tld_result": "MISS (0 tables)",
+      "tld_failure_reason": "consecutive multicol=1 from target (band not formed with target row)",
+      "dce05_necessity": "R0 (resolved by DCE-04 both_text)"
+    },
+    "AMB-462": {
+      "text_a": "WGe",
+      "text_b": "Avg.",
+      "gt": "KEEP_SEPARATE",
+      "machine_outcome": "ABSTAIN",
+      "tld_result": "PARTIAL (1 table detected but WRONG — detected LLaMA table at y=75-177, missed target table at y=216)",
+      "tld_failure_reason": "TLD detected different table, missed target table header row",
+      "dce05_necessity": "R0 (resolved by DCE-04 both_text)"
+    }
+  },
+  "human_dependency_analysis": {
+    "finding": "ALL table cases: Human dependency = different_column (structural), NOT column_identity (semantic)",
+    "column_identity_role": "EXPLANATION in rationale, NOT decision-critical",
+    "different_column_role": "DECISION-CRITICAL evidence",
+    "human_column_dependency_count": 8,
+    "human_semantic_dependency_count": 0,
+    "human_usage_uncertain_count": 0
+  },
+  "dce05_necessity_analysis": {
+    "R0_count": 8,
+    "R1_count": 0,
+    "R2_count": 1,
+    "R3_count": 1,
+    "critical_cases": [
+      "AMB-135 (R3)",
+      "AMB-262 (R2)"
+    ]
+  },
+  "dce05_sufficiency_analysis": {
+    "S0_count": 0,
+    "S1_count": 0,
+    "S2_count": 0,
+    "S3_count": 2,
+    "finding": "different_column alone is SUFFICIENT (S3) for KEEP_SEPARATE. Already implemented in IS-11 (different_cell -> KEEP_SEPARATE override, FROZEN)."
+  },
+  "p2_expressibility": {
+    "same_horizontal_band": "FULL (same_y_band)",
+    "horizontally_separated": "FULL (h_gap)",
+    "same_local_structure": "PARTIAL (same_y + multiple fragments, but no table interpretation)",
+    "same_table": "NOT_EXPRESSIBLE (P2 has no table concept)",
+    "same_row": "PARTIAL (same_y_band = same visual row, but cannot confirm table row)",
+    "different_columns": "NOT_EXPRESSIBLE (P2 has no column concept)",
+    "different_cells": "NOT_EXPRESSIBLE (P2 has no cell concept)",
+    "summary": "P2 provides L1 (geometry) and partial L2 (structural relation), but NOT L3 (structural interpretation)"
+  },
+  "tld_expressibility": {
+    "table_membership": "CAN_EXPRESS (is_in_table)",
+    "row_membership": "CAN_EXPRESS (a_cell[0])",
+    "column_membership": "CAN_EXPRESS (a_cell[1])",
+    "cell_membership": "CAN_EXPRESS (a_cell=[row,col])",
+    "different_cell": "CAN_EXPRESS (a_cell != b_cell)",
+    "headers": "CAN_EXPRESS (headers list)",
+    "case_results": {
+      "AMB-135": {
+        "tld_can_express": true,
+        "result": "MISS",
+        "reason": "column_stability=0.27 + text_ratio=0.38"
+      },
+      "AMB-262": {
+        "tld_can_express": true,
+        "result": "MISS",
+        "reason": "column_stability=0.23"
+      },
+      "AMB-032": {
+        "tld_can_express": true,
+        "result": "CORRECT",
+        "reason": ""
+      },
+      "AMB-313": {
+        "tld_can_express": true,
+        "result": "MISS",
+        "reason": "band not formed with target"
+      },
+      "AMB-462": {
+        "tld_can_express": true,
+        "result": "PARTIAL",
+        "reason": "detected wrong table"
+      },
+      "AMB-024": {
+        "tld_can_express": true,
+        "result": "CORRECT",
+        "reason": ""
+      },
+      "AMB-074": {
+        "tld_can_express": true,
+        "result": "CORRECT",
+        "reason": ""
+      },
+      "AMB-346": {
+        "tld_can_express": true,
+        "result": "CORRECT",
+        "reason": ""
+      },
+      "AMB-414": {
+        "tld_can_express": true,
+        "result": "CORRECT",
+        "reason": "not a table (figure)"
+      },
+      "AMB-519": {
+        "tld_can_express": true,
+        "result": "WRONG",
+        "reason": "FP on prose"
+      }
+    },
+    "tld_correct_count": 6,
+    "tld_miss_count": 3,
+    "tld_partial_count": 1,
+    "tld_wrong_count": 1
+  },
+  "counterfactual_analysis": {
+    "AMB-135": {
+      "remove_different_column": "Human cannot determine -> UNKNOWN",
+      "only_different_column": "Sufficient -> KEEP_SEPARATE",
+      "tld_doesnt_provide": "Machine FP (MERGE instead of KEEP)",
+      "tld_provides": "Would resolve FP -> TN",
+      "machine_without_tld": "CANNOT determine different_column from P1/P2 alone (NOT EXPRESSIBLE)"
+    },
+    "AMB-262": {
+      "remove_different_column": "Human cannot determine -> UNKNOWN",
+      "only_different_column": "Sufficient -> KEEP_SEPARATE",
+      "tld_doesnt_provide": "Machine ABSTAIN",
+      "tld_provides": "Would resolve ABSTAIN -> TN"
+    }
+  },
+  "dce_comparison": {
+    "DCE-01": {
+      "existing": true,
+      "derivable": true,
+      "decision_critical": true,
+      "cross_corpus": false,
+      "semantic_leap": false,
+      "status": "Corpus-specific pattern"
+    },
+    "DCE-02": {
+      "existing": true,
+      "derivable": true,
+      "decision_critical": true,
+      "cross_corpus": false,
+      "semantic_leap": false,
+      "status": "Corpus-specific + standard"
+    },
+    "DCE-03": {
+      "existing": true,
+      "derivable": true,
+      "decision_critical": true,
+      "cross_corpus": "UNKNOWN",
+      "semantic_leap": false,
+      "status": "Unvalidated"
+    },
+    "DCE-04": {
+      "existing": true,
+      "derivable": true,
+      "decision_critical": true,
+      "cross_corpus": false,
+      "semantic_leap": false,
+      "status": "Corpus-specific pattern"
+    },
+    "DCE-05": {
+      "existing": true,
+      "derivable": true,
+      "decision_critical": true,
+      "cross_corpus": true,
+      "semantic_leap": false,
+      "status": "TLD Detection Failure (universal capability, detection gap)"
+    }
+  },
+  "bottleneck_analysis": {
+    "dce05_primary": "D (Evidence Perception / TLD Detection Failure)",
+    "dce05_secondary": "G (Evidence Insufficient on 2 cases)",
+    "overall_primary": "C (Consumer Integration) — 17/45 cases (DCE-01 to DCE-04)",
+    "overall_secondary": "D (Evidence Perception) — 2/45 cases (DCE-05)",
+    "correction_from_previous": "Previous: DCE-05 = Type D (Missing Observation). This: DCE-05 = D5-G (TLD Detection Failure, NOT missing observation)",
+    "key_distinction": "TLD CAN express different_column (data model) but Detection Algorithm fails on specific pages. NOT Consumer Integration (IS-11 consumes when available). NOT Representation Missing (TLD model can express)."
+  },
+  "learning_signal_analysis": {
+    "LS_0": 8,
+    "LS_1": 0,
+    "LS_2": 0,
+    "LS_3": 0,
+    "finding": "0% LS-3. DCE-05 gap is TLD Detection Algorithm, not Learning."
+  },
+  "semantic_leakage_test": {
+    "different_column_to_keep_separate": "NOT semantic leap. Structural inference: different cells = different structural units = KEEP_SEPARATE. Already implemented (FROZEN).",
+    "dce05_not_decision_rule": "DCE-05 is NOT a new rule. It is EXISTING decision policy (different_cell -> KEEP_SEPARATE). The issue is EVIDENCE AVAILABILITY, not rule creation."
+  },
+  "e4_reexamination": {
+    "raw_evidence_exists": true,
+    "raw_evidence_exists_count": 10,
+    "decision_relevant_representation": "PARTIAL",
+    "representation_exists_count": 8,
+    "representation_missing_count": 2,
+    "missing_cases": [
+      "AMB-135",
+      "AMB-262"
+    ],
+    "missing_reason": "TLD Detection Failure (column stability / text ratio check fails)",
+    "not_raw_evidence_missing": true
+  },
+  "information_layer": {
+    "same_y_band": "L1 (Raw/Geometry)",
+    "h_gap": "L1",
+    "multiple_fragments_same_y": "L2 (Deterministic Structural Relation)",
+    "different_column": "L3 (Structural Interpretation) — TLD CAN express, P2 CANNOT",
+    "column_identity": "L4 (Semantic Interpretation) — NOT needed for Boundary Decision"
+  },
+  "llm_and_observation": {
+    "llm_needed": false,
+    "llm_reason": "different_column is structural, not semantic. TLD computes it deterministically.",
+    "new_observation_needed": false,
+    "new_observation_reason": "TLD already provides the observation (is_in_table, different_cell, a_cell, b_cell). Issue is detection algorithm, not missing observation."
+  },
+  "final_verdict": {
+    "dce05_is_column_identity": false,
+    "dce05_is_different_column": true,
+    "tld_can_express": true,
+    "tld_detection_fails": true,
+    "is_consumer_integration": false,
+    "is_representation_missing": false,
+    "is_tld_detection_failure": true,
+    "bottleneck": "D (Evidence Perception / TLD Detection Failure)",
+    "recommended_next_step": "READ_ONLY_AUDIT",
+    "true_reusable_signal_found": false,
+    "current_learning_level": "L3"
+  },
+  "statistics": {
+    "TOTAL_CASES_ANALYZED": 10,
+    "DCE05_CASES": 10,
+    "DCE05_CRITICAL_COUNT": 2,
+    "DCE05_RELEVANT_COUNT": 3,
+    "DCE05_SUPPORTING_COUNT": 5,
+    "DCE05_REDUNDANT_COUNT": 0,
+    "R0_COUNT": 8,
+    "R1_COUNT": 0,
+    "R2_COUNT": 1,
+    "R3_COUNT": 1,
+    "S0_COUNT": 0,
+    "S1_COUNT": 0,
+    "S2_COUNT": 0,
+    "S3_COUNT": 2,
+    "RAW_EVIDENCE_EXISTS_COUNT": 10,
+    "DECISION_RELEVANT_REPRESENTATION_EXISTS_COUNT": 8,
+    "DECISION_RELEVANT_REPRESENTATION_PARTIAL_COUNT": 0,
+    "DECISION_RELEVANT_REPRESENTATION_MISSING_COUNT": 2,
+    "P2_FULL_COUNT": 2,
+    "P2_PARTIAL_COUNT": 2,
+    "P2_NOT_EXPRESSIBLE_COUNT": 3,
+    "TLD_CAN_EXPRESS_COUNT": 10,
+    "TLD_CORRECT_COUNT": 6,
+    "TLD_MISS_COUNT": 3,
+    "TLD_PARTIAL_COUNT": 1,
+    "TLD_WRONG_COUNT": 1,
+    "HUMAN_COLUMN_DEPENDENCY_COUNT": 8,
+    "HUMAN_TABLE_DEPENDENCY_COUNT": 8,
+    "HUMAN_TEXT_DEPENDENCY_COUNT": 10,
+    "HUMAN_SEMANTIC_DEPENDENCY_COUNT": 0,
+    "HUMAN_USAGE_UNCERTAIN_COUNT": 0,
+    "DCE05_TYPE": "D5-G (Mixed)",
+    "LLM_NEEDED": false,
+    "NEW_OBSERVATION_NEEDED": false,
+    "LS0_COUNT": 8,
+    "LS1_COUNT": 0,
+    "LS2_COUNT": 0,
+    "LS3_COUNT": 0,
+    "PRIMARY_BOTTLENECK": "D (Evidence Perception / TLD Detection Failure)",
+    "SECONDARY_BOTTLENECK": "G (Evidence Insufficient on 2 cases)",
+    "TRUE_REUSABLE_SIGNAL_FOUND": false,
+    "CURRENT_LEARNING_LEVEL": "L3",
+    "RECOMMENDED_NEXT_STEP": "READ_ONLY_AUDIT"
+  },
+  "governance_gate": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "P2_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "IS11_MODIFICATION": false,
+    "M_B_MODIFICATION": false,
+    "GT_MODIFICATION": false,
+    "SIGNAL_MODIFICATION": false,
+    "EVIDENCE_CUE_MODIFICATION": false,
+    "LLM": false,
+    "NEW_OBSERVATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "RUNTIME_CHANGE": false,
+    "CAPABILITY_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "FROZEN_EXPERIMENT": "INTACT",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "FORMAL_EXPERIMENT": "NOT_STARTED",
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "p2_engine_hash": "388e7939d334458e",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "expected_p2_engine": "388e7939d334458e",
+    "drift": "0/7 INTACT"
+  },
+  "stop": true
+}

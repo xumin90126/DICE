@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-09-13T14:39:33.943974+00:00",
+  "validated_signals": [
+    {
+      "signal_id": "VS-05",
+      "source_signal_candidate": "SC-05",
+      "validated_by_human": true,
+      "validation_result": "SUPPORTED",
+      "validation_basis": "IS-11 adjudication: all 3 conflict cases resolved as KEEP_SEPARATE. Adjudicator saw period+capital pattern and ruled KEEP_SEPARATE.",
+      "validation_limitation": "Adjudicator did NOT see P7 counterexamples. Validation made WITHOUT counterexample evidence. Replay will test if this holds.",
+      "evidence_preconditions": {
+        "is_in_table": false,
+        "different_cell": false,
+        "is01_a": false,
+        "is02_b": true,
+        "text_a_ends_period": true,
+        "text_b_starts_capital": true,
+        "description": "text_a ends with period + text_b starts with capital + not numeric + has text"
+      },
+      "positive_cases": [
+        "IS11-AMB-375",
+        "IS11-AMB-418",
+        "IS11-AMB-519"
+      ],
+      "negative_cases": [],
+      "unknown_cases": [
+        "IS11-AMB-375"
+      ],
+      "conflict_cases": [
+        "IS11-AMB-375",
+        "IS11-AMB-418",
+        "IS11-AMB-519"
+      ],
+      "boundary_cases": [
+        "IS11-AMB-375",
+        "IS11-AMB-418",
+        "IS11-AMB-519"
+      ],
+      "predicted_decision": "KEEP_SEPARATE",
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "sc_hash": "341b48843cbb1e21",
+        "validation_source": "IS-11 adjudication records (gt_level=LEVEL_2_ADJUDICATED)",
+        "timestamp": "2026-09-13T14:39:33.943974+00:00"
+      },
+      "supersedes": null
+    }
+  ],
+  "validation_summary": {
+    "total_candidates_validated": 1,
+    "supported": 1,
+    "unsupported": 0,
+    "unknown": 0,
+    "out_of_scope": 0
+  },
+  "frozen_baseline": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "machine_eval_hash": "437aa665210ccd04",
+    "drift": "0/7 INTACT"
+  }
+}

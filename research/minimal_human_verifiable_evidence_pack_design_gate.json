@@ -1,0 +1,127 @@
+{
+  "design_gate_status": "CONDITIONAL",
+  "design_ready": "CONDITIONAL",
+  "gate_results": {
+    "G1_drawing_extent_policy": "CONDITIONAL",
+    "G2_context_scope": "CONDITIONAL",
+    "G3_same_y_policy": "CONDITIONAL",
+    "G4_negative_control_context": "FAIL",
+    "G5_evidence_state": "FAIL",
+    "G6_human_reconstruction_boundary": "CONDITIONAL",
+    "G7_minimum_sufficient_evidence": "CONDITIONAL",
+    "G8_case_type_consistency": "FAIL",
+    "G9_m_a_boundary": "PASS",
+    "G10_implementation_scope": "PASS"
+  },
+  "gate_summary": {
+    "pass": 2,
+    "conditional": 6,
+    "fail": 3
+  },
+  "minimal_sufficient_evidence": [
+    "TARGET_TEXT",
+    "NEAREST_DRAWING_EXTENT (always; or NO_VISUAL_EVIDENCE_OBSERVED)",
+    "SPATIAL_RELATION (distance + vertical_ordering + x_overlap)",
+    "SAME_Y_CONTEXT (unified collection for ALL cases)",
+    "EVIDENCE_STATE (4-state model, conditional for Type A)"
+  ],
+  "drawing_extent_policy": "B+ (nearest extent always, even if far; page image shows rest)",
+  "context_scope": {
+    "same_y_context": "REQUIRED",
+    "sentence_context": "NOT_REQUIRED",
+    "paragraph_context": "NOT_REQUIRED",
+    "page_context": "NOT_REQUIRED",
+    "cross_page_context": "NOT_REQUIRED"
+  },
+  "same_y_policy": {
+    "status": "REQUIRED",
+    "parameter": "NOT_YET_DETERMINED",
+    "parameter_status": "TO_BE_PRE_REGISTERED",
+    "evidence": {
+      "plus_minus_3pt": "insufficient — causes total context loss for 'max' (0 atoms)",
+      "plus_minus_5pt": "promising — resolves 'max' (19 atoms), but may introduce noise",
+      "cases_where_3pt_ne_5pt_negatives": 6,
+      "cases_where_3pt_ne_5pt_candidates": 11,
+      "critical_case": "is11_med_001_p15_244_342 ('max'): ±3pt=0, ±5pt=19"
+    }
+  },
+  "negative_control_context": {
+    "status": "MUST_BE_UNIFIED",
+    "evidence_pipeline": "SHOULD_BE_UNIFIED (currently DIFFERENT_BY_SCRIPT_DESIGN)",
+    "empty_context_meaning": "must distinguish TRUE_EMPTY (no atoms) from COLLECTOR_EMPTY (not collected)",
+    "current_state": "16 negatives have context_text hardcoded to empty"
+  },
+  "evidence_state_model": {
+    "status": "4_STATE",
+    "states": [
+      "NO_VISUAL_EVIDENCE_OBSERVED (DGF=0, DEF=0)",
+      "PRIMITIVES_EXIST_NO_EXTENT (DGF>0, DEF=0)",
+      "EXTENT_EXISTS_BUT_FAR (DEF>0, min_dist>threshold)",
+      "EXTENT_NEAR (DEF>0, min_dist<=threshold)"
+    ],
+    "semantic_leakage": false
+  },
+  "human_reconstruction_burden": {
+    "current": "PAGE_CONTEXT / MULTI_SENTENCE_CONTEXT (for negatives)",
+    "desired": "LOCAL_CONTEXT_ONLY (for all cases)",
+    "boundary": "compression ends at same_y context; reconstruction starts beyond same_y line"
+  },
+  "pack_remains_non_semantic": true,
+  "not_required": [
+    "ALL extents on page (page image shows them)",
+    "sentence-level context",
+    "paragraph-level context",
+    "cross-page context",
+    "semantic labels (caption/figure/table)",
+    "confidence score",
+    "machine recommendation",
+    "LLM interpretation"
+  ],
+  "semantic_boundary_reassessment": {
+    "previous_count": 5,
+    "confirmed_semantic_boundary": 3,
+    "inconclusive_pack_incomplete": 2,
+    "evidence_insufficiency_fixable": 9,
+    "note": "2 of 5 'possible semantic boundary' cases are Pack-incomplete (context not shown); cannot assess until Pack is fixed"
+  },
+  "implementation_scope": {
+    "authorized": false,
+    "files_likely_affected": [
+      "tmp/m_a_human_review_pilot/generate_data.py",
+      "tmp/m_a_human_review_pilot/assets/app.js"
+    ],
+    "files_must_remain_frozen": [
+      "perception/sandbox/observations/atomic_text.py (P1)",
+      "tmp/perception/atomic_observation/drawing_geometry.py (DGF)",
+      "tmp/perception/atomic_observation/drawing_extent.py (DEF)",
+      "chunker/table_line_detector.py (TLD)",
+      "chunker/layout_analyzer.py",
+      "tmp/is11_semantic_ground_truth.json (GT)"
+    ],
+    "pre_registration_required": [
+      "PR1: same_y threshold (±3pt vs ±5pt vs other)",
+      "PR2: near/far distance threshold (current 60pt)",
+      "PR3: evidence_state definitions (4-state model)"
+    ]
+  },
+  "design_gaps": [
+    "DG1: Unify evidence collection pipeline (remove hardcoded empty context for negatives)",
+    "DG2: Store nearest extent for Type A (even if >60pt, instead of None)",
+    "DG3: Add 4-state evidence_state model to replace binary extent_bbox=None",
+    "DG4: Pre-register same_y threshold (±3pt insufficient, ±5pt promising, not yet determined)",
+    "DG5: Pre-register near/far distance threshold (current 60pt needs review)"
+  ],
+  "governance": {
+    "implementation_authorized": false,
+    "experiment_authorized": false,
+    "human_validation_authorized": false,
+    "human_feedback": "NOT_AUTHORIZED",
+    "l3": "NOT_AUTHORIZED",
+    "capability": "NOT_AUTHORIZED",
+    "runtime_authority": "ZERO",
+    "production": false,
+    "frozen_baseline": "INTACT",
+    "frozen_drift": 0,
+    "stop": true
+  }
+}

@@ -1,0 +1,1052 @@
+{
+  "audit_type": "evidence_relevance_distillation_audit",
+  "audit_date": "2026-09-12",
+  "read_only": true,
+  "governance": {
+    "CODE_MODIFICATION": 0,
+    "UI_MODIFICATION": 0,
+    "GT_MODIFICATION": 0,
+    "TLD_MODIFICATION": 0,
+    "ATOMIC_MODIFICATION": 0,
+    "IS11_DECISION_MODIFICATION": 0,
+    "L5.5_MODIFICATION": 0,
+    "NEW_PRIMITIVE": 0,
+    "NEW_CONTRACT": 0,
+    "NEW_ARCHITECTURE": 0,
+    "NEW_PATTERN_ENGINE": 0,
+    "PRODUCTION": false,
+    "FROZEN_BASELINE": "INTACT",
+    "HUMAN_DATA": "REAL_PILOT_ONLY",
+    "NO_SIMULATION": true
+  },
+  "pilot_context": {
+    "participant": "P01",
+    "total_judgments": 27,
+    "workflow_order": [
+      "B",
+      "C",
+      "A"
+    ],
+    "a_phase_accuracy": "21/21 = 100%",
+    "merge_correct": "2/2",
+    "keep_separate_correct": "19/19",
+    "evidence_class": "B (engineering proxy, single pilot, n=1)"
+  },
+  "research_question": "RQ-ER1: Is there a gap between Evidence Human actually relied on and Evidence System provides/distills?",
+  "per_case_audit": [
+    {
+      "case_id": "IS11-AMB-005",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 5.92,
+      "text_a": "unsurprising) and then degrade",
+      "text_b": "Unexpectedly,",
+      "content_type": "prose_sentence_boundary",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": null,
+        "rsc_region_forms": false,
+        "sce_status": "region_not_formed"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 10.0,
+        "same_style": true,
+        "line_obs_count": 3
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "region_forms=False",
+        "left_neighbor='1. Introduction'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-024",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 9.58,
+      "text_a": "28.54",
+      "text_b": "10.02",
+      "content_type": "table_content",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": null,
+        "rsc_region_forms": true,
+        "sce_status": "partition_unresolvable"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 25.0,
+        "same_style": true,
+        "line_obs_count": 3
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "region_forms=True",
+        "left_neighbor='plain-34'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-034",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 4.58,
+      "text_a": "21.59",
+      "text_b": "5.71",
+      "content_type": "table_content",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": true,
+        "rsc_region_forms": true,
+        "sce_status": "admitted"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 27.2,
+        "same_style": true,
+        "line_obs_count": 3
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "different_local_partition=True",
+        "region_forms=True",
+        "left_neighbor='PReLU-net [13]'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-074",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 3.05,
+      "text_a": "41.5",
+      "text_b": "21.2",
+      "content_type": "table_content",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": null,
+        "rsc_region_forms": true,
+        "sce_status": "partition_unresolvable"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 45.6,
+        "same_style": true,
+        "line_obs_count": 3
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "region_forms=True",
+        "data_row(10_items)",
+        "left_neighbor='0'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-130",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 2.98,
+      "text_a": "Resolution",
+      "text_b": "#Channels",
+      "content_type": "table_content",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": true,
+        "rsc_region_forms": true,
+        "sce_status": "admitted"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 9.1,
+        "same_style": true,
+        "line_obs_count": 5
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "different_local_partition=True",
+        "region_forms=True",
+        "data_row(8_items)",
+        "left_neighbor='In this paper, we pr'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-135",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 3.32,
+      "text_a": "4",
+      "text_b": "MBConv6, k5x5",
+      "content_type": "table_content",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": true,
+        "rsc_region_forms": true,
+        "sce_status": "admitted"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 30.0,
+        "same_style": true,
+        "line_obs_count": 8
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "different_local_partition=True",
+        "region_forms=True",
+        "data_row(12_items)",
+        "left_neighbor='depth:'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-262",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 3.44,
+      "text_a": "41M",
+      "text_b": "EfﬁcientNet-B5",
+      "content_type": "table_content",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": true,
+        "rsc_region_forms": true,
+        "sce_status": "admitted"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 12.0,
+        "same_style": true,
+        "line_obs_count": 13
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "different_local_partition=True",
+        "region_forms=True",
+        "data_row(13_items)",
+        "left_neighbor='Birdsnap'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-313",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 6.38,
+      "text_a": "Test Size",
+      "text_b": "#Classes",
+      "content_type": "other",
+      "system_evidence": {
+        "tld_is_in_table": false,
+        "tld_different_cell": false,
+        "sce_different_local_partition": null,
+        "rsc_region_forms": false,
+        "sce_status": "region_not_formed"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 8.4,
+        "same_style": true,
+        "line_obs_count": 4
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=False",
+        "region_forms=False",
+        "data_row(5_items)",
+        "left_neighbor='Dataset'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-346",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 3.51,
+      "text_a": "83.95",
+      "text_b": "84.26",
+      "content_type": "table_content",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": true,
+        "rsc_region_forms": true,
+        "sce_status": "admitted"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 8.4,
+        "same_style": true,
+        "line_obs_count": 9
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "different_local_partition=True",
+        "region_forms=True",
+        "data_row(9_items)",
+        "left_neighbor='Val top1'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-350",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 2.9,
+      "text_a": "80.16",
+      "text_b": "81.72",
+      "content_type": "table_content",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": true,
+        "rsc_region_forms": true,
+        "sce_status": "admitted"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 8.4,
+        "same_style": true,
+        "line_obs_count": 10
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "different_local_partition=True",
+        "region_forms=True",
+        "data_row(10_items)",
+        "left_neighbor='Test top1'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-414",
+      "gt": "MERGE",
+      "human_decision": "MERGE",
+      "human_time_seconds": 3.1,
+      "text_a": "FIG. 9:",
+      "text_b": "Left:",
+      "content_type": "caption",
+      "system_evidence": {
+        "tld_is_in_table": false,
+        "tld_different_cell": false,
+        "sce_different_local_partition": null,
+        "rsc_region_forms": false,
+        "sce_status": "region_not_formed"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 18.1,
+        "same_style": true,
+        "line_obs_count": 5
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=False",
+        "region_forms=False",
+        "data_row(5_items)",
+        "caption_pattern"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-422",
+      "gt": "MERGE",
+      "human_decision": "MERGE",
+      "human_time_seconds": 1.82,
+      "text_a": "FIG. 12:",
+      "text_b": "Distribution of errors for pre",
+      "content_type": "caption",
+      "system_evidence": {
+        "tld_is_in_table": false,
+        "tld_different_cell": false,
+        "sce_different_local_partition": null,
+        "rsc_region_forms": false,
+        "sce_status": "region_not_formed"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 10.5,
+        "same_style": true,
+        "line_obs_count": 2
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=False",
+        "region_forms=False",
+        "isolated_pair",
+        "caption_pattern"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-457",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 11.18,
+      "text_a": "Models",
+      "text_b": "Size",
+      "content_type": "table_content",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": true,
+        "rsc_region_forms": true,
+        "sce_status": "admitted"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 40.4,
+        "same_style": true,
+        "line_obs_count": 10
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "different_local_partition=True",
+        "region_forms=True",
+        "data_row(10_items)"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-462",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 3.16,
+      "text_a": "WGe",
+      "text_b": "Avg.",
+      "content_type": "other",
+      "system_evidence": {
+        "tld_is_in_table": false,
+        "tld_different_cell": false,
+        "sce_different_local_partition": null,
+        "rsc_region_forms": true,
+        "sce_status": "partition_unresolvable"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 12.0,
+        "same_style": true,
+        "line_obs_count": 10
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=False",
+        "region_forms=True",
+        "data_row(10_items)",
+        "left_neighbor='Models'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-467",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 3.23,
+      "text_a": "37.0",
+      "text_b": "60.0",
+      "content_type": "table_content",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": true,
+        "rsc_region_forms": true,
+        "sce_status": "admitted"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 11.9,
+        "same_style": true,
+        "line_obs_count": 10
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "different_local_partition=True",
+        "region_forms=True",
+        "data_row(10_items)",
+        "left_neighbor='LLaMA LLM'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-483",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 2.63,
+      "text_a": "23.5",
+      "text_b": "38.5",
+      "content_type": "table_content",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": true,
+        "rsc_region_forms": true,
+        "sce_status": "admitted"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 16.2,
+        "same_style": true,
+        "line_obs_count": 10
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "different_local_partition=True",
+        "region_forms=True",
+        "data_row(10_items)",
+        "left_neighbor='LLaMA LLM'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-505",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 2.59,
+      "text_a": "61.4",
+      "text_b": "28.3",
+      "content_type": "table_content",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": true,
+        "rsc_region_forms": true,
+        "sce_status": "admitted"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 20.5,
+        "same_style": true,
+        "line_obs_count": 10
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "different_local_partition=True",
+        "region_forms=True",
+        "data_row(10_items)",
+        "left_neighbor='BitNet b1.58'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-514",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 2.55,
+      "text_a": "44.2",
+      "text_b": "63.5",
+      "content_type": "table_content",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": true,
+        "rsc_region_forms": true,
+        "sce_status": "admitted"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 11.9,
+        "same_style": true,
+        "line_obs_count": 10
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "different_local_partition=True",
+        "region_forms=True",
+        "data_row(10_items)",
+        "left_neighbor='BitNet b1.58'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-519",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 2.23,
+      "text_a": "facto backbone for open-source",
+      "text_b": "To embrace the open-source com",
+      "content_type": "prose_sentence_boundary",
+      "system_evidence": {
+        "tld_is_in_table": false,
+        "tld_different_cell": false,
+        "sce_different_local_partition": null,
+        "rsc_region_forms": false,
+        "sce_status": "region_not_formed"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 8.6,
+        "same_style": true,
+        "line_obs_count": 2
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=False",
+        "region_forms=False",
+        "isolated_pair"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-522",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 1.75,
+      "text_a": "Size",
+      "text_b": "Max Batch Size",
+      "content_type": "table_content",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": null,
+        "rsc_region_forms": true,
+        "sce_status": "partition_unresolvable"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 19.9,
+        "same_style": true,
+        "line_obs_count": 4
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "region_forms=True",
+        "left_neighbor='Models'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    },
+    {
+      "case_id": "IS11-AMB-530",
+      "gt": "KEEP_SEPARATE",
+      "human_decision": "KEEP_SEPARATE",
+      "human_time_seconds": 2.13,
+      "text_a": "PIQA",
+      "text_b": "SciQ",
+      "content_type": "table_content",
+      "system_evidence": {
+        "tld_is_in_table": true,
+        "tld_different_cell": true,
+        "sce_different_local_partition": null,
+        "rsc_region_forms": false,
+        "sce_status": "region_not_formed"
+      },
+      "ui_presented": {
+        "text_a": true,
+        "text_b": true,
+        "page_image": true,
+        "line_spans": true,
+        "h_gap": 12.3,
+        "same_style": true,
+        "line_obs_count": 8
+      },
+      "distillable_but_not_presented": [
+        "is_in_table=True",
+        "different_cell=True",
+        "region_forms=False",
+        "data_row(8_items)",
+        "left_neighbor='Models'"
+      ],
+      "gap_type": "DISTILLATION_GAP",
+      "low_value_presented": [
+        "h_gap_numeric",
+        "same_style",
+        "style_sig",
+        "width"
+      ]
+    }
+  ],
+  "feedback_analysis": [
+    {
+      "item_id": "B|grp|16bfcb76b820",
+      "workflow": "B",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 132.87,
+      "raw_transcript": "是这样的,例子1我判断他们不属于同一个内容单元因为这两个是前一句话的后半部分和后一句话的前半部分例子二我也不认为他们是同一个语意单元因为他们是同一个表格中的不同列的名称,实例三我认可他们是同一内容单元，实例4我认可他们是同一语义单元，实力5我不认为他们是同一语义单元因为他们是一句话的后半部分和下一句话的前半部，例子6我不认为他们是同一内容单元因为他们是同一张表格的不同列的名称",
+      "evidence_cues_mentioned": [
+        {
+          "instance": "AMB-005",
+          "cue": "sentence_boundary",
+          "observation": "前一句话后半部分+后一句话前半部分",
+          "decision": "KEEP_SEPARATE"
+        },
+        {
+          "instance": "AMB-313",
+          "cue": "table_column_header",
+          "observation": "表格中不同列的名称",
+          "decision": "KEEP_SEPARATE"
+        },
+        {
+          "instance": "AMB-414",
+          "cue": "caption_continuity",
+          "observation": "认可同一内容单元",
+          "decision": "MERGE"
+        },
+        {
+          "instance": "AMB-422",
+          "cue": "caption_continuity",
+          "observation": "认可同一语义单元",
+          "decision": "MERGE"
+        },
+        {
+          "instance": "AMB-519",
+          "cue": "sentence_boundary",
+          "observation": "一句话后半+下一句前半",
+          "decision": "KEEP_SEPARATE"
+        },
+        {
+          "instance": "AMB-530",
+          "cue": "table_column_header",
+          "observation": "同一张表格的不同列的名称",
+          "decision": "KEEP_SEPARATE"
+        }
+      ]
+    },
+    {
+      "item_id": "B|grp|885e943771cd",
+      "workflow": "B",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 66.46,
+      "raw_transcript": "我认为这些例子的每一项都应该分开因为他们基本都是表格中的内容，要么就是表格中同一行的不同列数据，要么就是同一表格中的不同列的名称",
+      "evidence_cues_mentioned": [
+        {
+          "instance": "ALL",
+          "cue": "table_membership",
+          "observation": "表格中的内容",
+          "decision": "KEEP_SEPARATE"
+        },
+        {
+          "instance": "ALL",
+          "cue": "different_columns_data",
+          "observation": "同一行的不同列数据",
+          "decision": "KEEP_SEPARATE"
+        },
+        {
+          "instance": "ALL",
+          "cue": "different_columns_header",
+          "observation": "不同列的名称",
+          "decision": "KEEP_SEPARATE"
+        }
+      ]
+    },
+    {
+      "item_id": "B|grp|1ad8a7b55945",
+      "workflow": "B",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 73.78,
+      "raw_transcript": "跟上一个差不多的问题就是他们都是同一个表格中的内容但他们都基本上是同一行的不同列的内容然后他们是没有什么语义完整性的因为他们是属于不同行的就是不同方向层面的内容然后可能有的是数据啊有的是object对象啊",
+      "evidence_cues_mentioned": [
+        {
+          "instance": "ALL",
+          "cue": "table_membership",
+          "observation": "同一个表格中的内容",
+          "decision": "KEEP_SEPARATE"
+        },
+        {
+          "instance": "ALL",
+          "cue": "same_row_different_columns",
+          "observation": "同一行的不同列的内容",
+          "decision": "KEEP_SEPARATE"
+        },
+        {
+          "instance": "ALL",
+          "cue": "no_semantic_continuity",
+          "observation": "没有什么语义完整性",
+          "decision": "KEEP_SEPARATE"
+        },
+        {
+          "instance": "ALL",
+          "cue": "content_type_diversity",
+          "observation": "有的是数据有的是object对象",
+          "decision": "KEEP_SEPARATE"
+        }
+      ]
+    },
+    {
+      "item_id": "C|grp|16bfcb76b820",
+      "workflow": "C",
+      "decision": "KEEP_SEPARATE",
+      "time_seconds": 116.45,
+      "raw_transcript": "是的确实是这样我认可你的这个判断但是你这个你这个给我的判断选项我觉得和你要让我做的事情不贴合你的判断选项还是应该分开是同一个不确定这三个选项但是我觉得像这一类比如说你做了一个判断然后你问我你这个判断合不合适的问题你应该给我的判断按钮是合适不合适所以你可能需要修改但是我这里可以跟你说你这个判断目前在这边的这个判断是对的，但是就是这个里面提到的这些例子我之前有跟你说过我的理解和判断你去之前找一下他们的类别还是不一样的就虽然我都赞同说你需要结构上更加去看他有什么样的排布或者说根据理解他在一个什么行文思路上但是他们每一个处的问题处的类别还是不一样的",
+      "evidence_cues_mentioned": [
+        {
+          "instance": "GROUP",
+          "cue": "group_heterogeneity",
+          "observation": "每一个处的类别还是不一样的",
+          "decision": "KEEP_SEPARATE"
+        },
+        {
+          "instance": "GROUP",
+          "cue": "layout_importance",
+          "observation": "需要结构上更加去看排布",
+          "decision": "(feedback)"
+        },
+        {
+          "instance": "GROUP",
+          "cue": "button_task_mismatch",
+          "observation": "判断选项不贴合",
+          "decision": "(feedback)"
+        }
+      ]
+    }
+  ],
+  "ui_field_value_classification": {
+    "HIGH": [
+      "text_a",
+      "text_b",
+      "page_image_annotated",
+      "line_spans",
+      "A/B_highlight"
+    ],
+    "MEDIUM": [
+      "line_obs_count",
+      "dy_same_line"
+    ],
+    "LOW": [
+      "h_gap_numeric",
+      "same_style",
+      "width_a",
+      "width_b"
+    ],
+    "IRRELEVANT": [
+      "style_sig_a",
+      "style_sig_b"
+    ],
+    "MISSING_HIGH_VALUE": [
+      "is_in_table",
+      "same_cell",
+      "different_cell",
+      "different_local_partition",
+      "caption_pattern",
+      "sentence_boundary",
+      "row_context_label"
+    ]
+  },
+  "gap_summary": {
+    "DISTILLATION_GAP": "21/21 cases",
+    "RELEVANCE_GAP": "21/21 cases (low-value fields shown)",
+    "PRESENTATION_GAP": "0/21 cases",
+    "OBSERVATION_GAP": "0/21 cases"
+  },
+  "conclusion": {
+    "result": "A. EVIDENCE_SUFFICIENT_BUT_POORLY_DISTILLED",
+    "primary_gap": "DISTILLATION_GAP",
+    "secondary_gap": "RELEVANCE_GAP",
+    "evidence": [
+      "Human feedback consistently references table/column/caption/sentence — all distillable from TLD + text pattern",
+      "All 21 cases have TLD evidence not shown to Human",
+      "MERGE cases have is_in_table=False — key distinguishing signal not distilled",
+      "KEEP_SEPARATE table cases have different_cell=True — directly maps to Human cue"
+    ],
+    "counterevidence": [
+      "Human achieved 100% accuracy despite gap — page images compensated",
+      "A-phase was fast (avg 3.9s) — visual evidence was sufficient for this corpus",
+      "n=1, single pilot — cannot generalize",
+      "4 cases have is_in_table=False but still KEEP_SEPARATE — TLD alone insufficient"
+    ],
+    "confidence": "MEDIUM-HIGH for DISTILLATION_GAP (systematic 21/21); MEDIUM for RELEVANCE_GAP"
+  },
+  "scalability_assessment": {
+    "current_n21": "Works with page images compensating for distillation gap",
+    "scaled_n1000": "Distillation gap would worsen — page images insufficient for diverse corpus",
+    "bottleneck": "TLD/SCE evidence not propagated to Human-facing layer"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "audit_metadata": {
+    "date": "2026-09-14",
+    "mode": "READ-ONLY / AUDIT / NO SCORE / FROZEN INTACT / STOP",
+    "discipline": "Machine Error ≠ High Learning Value. Human Difficulty ≠ High Learning Value. Case 数量 ≠ Learning Value. 只寻找 Pre-review Case Value Signal Candidate, 不建score.",
+    "data_sources": [
+      "hva01_human_value_case_selection_audit.md (45-case Type A-E distribution)",
+      "l3_learning_signal_candidate_validation_audit.md (L3 not L4)",
+      "minimal_human_feedback_information_gain_audit.md (info gain temporary)",
+      "human_feedback_reusable_signal_audit.md (CS1 R3 highest, no R5)",
+      "is11_human_review_report.md (45 GT)",
+      "independent_machine_resolvability_results.json (P7 69)",
+      "pilot_48_working_set.json",
+      "potential_evaluation_case_set.json (83)",
+      "hva01_human_value_case_selection_audit.json"
+    ],
+    "case_sets": {
+      "historical_45": "IS-11 GT 45 cases (4 docs)",
+      "potential_83": "potential_evaluation_case_set.json",
+      "human_construction_54": "potential_case_human_construction_audit",
+      "working_set_48": "pilot_48_working_set.json",
+      "P7_69": "independent evaluation 69 cases (4 docs)",
+      "HVA_01": "hva01 audit"
+    }
+  },
+
+  "case_value_taxonomy_reassessment": {
+    "Case_A_machine_correct_human_confirms": {
+      "definition": "Machine 正确 + Human 确认",
+      "learning_value": "LOW_LEARNING_VALUE",
+      "is11_count": "24/45 (53%)",
+      "evidence": "Machine TN, human confirms <3s, 0 evidence expansions [OBSERVED]",
+      "example": "table cell pairs ('28.54' vs '10.02') — both machine and human trivially see different numbers",
+      "what_system_learns": "几乎什么都没学到 — 机器已有证据, 人审只是确认"
+    },
+    "Case_B_machine_error_case_specific": {
+      "definition": "Machine 错误 + Human 修正, 但只针对单个实例",
+      "learning_value": "CASE_SPECIFIC_VALUE",
+      "is11_count": "1/45 (AMB-135, 2%)",
+      "evidence": "Machine FP (MERGE), human corrects 2.2s snap; DCE-07 proved no safe fix; TLD page-global contamination case-specific [OBSERVED]",
+      "example": "AMB-135: '4'+'MBConv6,k5x5' 误MERGE → human KEEP_SEPARATE",
+      "what_system_learns": "case-specific correction; no reusable pattern; DCE-07 closed locality route"
+    },
+    "Case_C_machine_error_reusable_mechanism": {
+      "definition": "Machine 错误 + Human 修正 + 背后存在重复的 Document Perception Failure Mechanism",
+      "learning_value": "HIGH_POTENTIAL_LEARNING_VALUE",
+      "is11_count": "0/45 (NOT FOUND)",
+      "evidence": "HVA-01: no Type C exists in current data [OBSERVED]",
+      "what_system_learns": "N/A — none found. 但 M-B 机制本身是 reusable (6 DIRECT cases), 只是当前 human review 把它们都当 snap judgment 处理了, 未提取信号."
+    },
+    "Case_D_machine_uncertain_human_resolves": {
+      "definition": "Machine 不确定 + Human 能解决",
+      "learning_value_split": {
+        "D_LOW": "Human resolves as snap judgment (<5s, 0 expansion) → TEMPORARY value (Machine LOGIC GAP, info gain temporary)",
+        "D_HIGH": "Human resolves + 跨文档/跨页面/跨结构重复结构 → HIGH_POTENTIAL"
+      },
+      "is11_count": "D_LOW: 15/45 (33%); D_HIGH: 0/45 (NOT FOUND)",
+      "evidence": "Info Gain Audit: 10/10 Quadrant B cases could be resolved by Machine with BETTER LOGIC → HIGH info gain is TEMPORARY [OBSERVED]",
+      "what_system_learns": "D_LOW: feedback confirms what human sees visually, no reusable signal extracted. D_HIGH: 未出现."
+    },
+    "Case_E_human_also_uncertain": {
+      "definition": "Human 也无法确定 → UNKNOWN / BOUNDARY",
+      "learning_value": "HIGH_POTENTIAL_LEARNING_VALUE (if cross-doc repeatable) / UNKNOWN",
+      "is11_count": "5/45 (11%); only 2/5 high engagement (AMB-032, AMB-375)",
+      "evidence": "Adjudicated cases (reviewer disagreement): AMB-005/375/418/519; 2 had 7 expansions + UNKNOWN [OBSERVED]",
+      "what_system_learns": "genuine boundary; learning value in BOUNDARY DEFINITION (when should system abstain), not correction"
+    }
+  },
+
+  "Q11_case_selection_reassessment": {
+    "Q11.1_what_did_selection_optimize": {
+      "answer": "GEOMETRIC_AMBIGUITY (not LEARNING_VALUE)",
+      "evidence": "Pipeline: Geometry Filter (same_y, close_x, h_gap) → Ambiguity Filter (IS-01/IS-02 mixed) → Sampling. Optimizes geometric proximity + machine uncertainty, NOT expected system improvement per judgment. [OBSERVED]",
+      "result": "53% Type A (machine already correct, wasted); 88% TABLE content bias; 0 REFERENCE, 0 OTHER_AMBIGUOUS in IS-11"
+    },
+    "Q11.2_cases_where_system_learns_nothing": {
+      "answer": "24/45 (53%) Type A + 15/45 (33%) Type_D_LOW = 87% low value",
+      "evidence": "Machine correct, human snap <3s, 0 expansion; or machine abstain, human snap <5s, 0 expansion [OBSERVED]",
+      "detail": "table cell pairs where both machine and human trivially see different numbers/cells. Human uses page visual, not machine evidence."
+    },
+    "Q11.3_cases_that_could_produce_new_failure_mechanism": {
+      "answer": "AMB-375 (reviewer disagreement → abstain boundary); P7 BODY_TEXT_CONTINUATION (27) / REFERENCE_LIST_ENTRY (16) — missing types in IS-11",
+      "evidence": "AMB-375: adjudicated, B2 UNKNOWN, 7 expansions → genuine boundary where 'when should system abstain' [OBSERVED]. P7 has 39% PROSE + 23% REFERENCE vs IS-11 7%+0% → could reveal sentence/reference boundary mechanisms absent in IS-11 [OBSERVED]",
+      "mechanism_potential": "M-F (prose) + OTHER (reference continuation) are F_genuine_semantic_boundary — currently UNDERREPRESENTED"
+    },
+    "Q11.4_cross_doc_cross_page_cross_structure_repeatable": {
+      "answer": "Caption (cross-framework 6.08%); Header (cross-corpus APS template); Table cell column (3 docs); Reference list (P7 16 cases cross-doc)",
+      "evidence": "M-A caption: Phase3 79/1299 cross-framework [OBSERVED]. M-D header: cross-corpus APS [OBSERVED]. M-B table: 2-3 docs ≥6 settings [OBSERVED]. P7 REFERENCE: 16 cases [OBSERVED]",
+      "note": "Cross-page (M-G) has NO repeatable cases — observation gap."
+    },
+    "Q11.5_pre_review_case_value_signal_candidate": {
+      "answer": "3 signal candidates identified (NO score):",
+      "candidates": [
+        {
+          "signal": "reviewer_disagreement (adjudicated)",
+          "evidence": "AMB-005/375/418/519 — only cases where human judgment unstable → genuine boundary [OBSERVED]",
+          "pre_review_detectable": "YES (if two independent reviewers split → high boundary value)",
+          "caveat": "only 4/45; needs more adjudicated cases"
+        },
+        {
+          "signal": "MERGE_class_GT",
+          "evidence": "IS-11 only 2 MERGE (4%); P7 has 24 MERGE (35%). MERGE cases harder, more likely boundary learning [OBSERVED]",
+          "pre_review_detectable": "PARTIAL (GT label is post-review, but MERGE-class cases can be pre-filtered by boundary_class)",
+          "caveat": "ceiling effect: 96% KEEP_SEPARATE in IS-11"
+        },
+        {
+          "signal": "content_type_diversity",
+          "evidence": "IS-11 88% TABLE vs P7 22% TABLE/39% PROSE/23% REFERENCE → diverse types more likely new mechanism [OBSERVED]",
+          "pre_review_detectable": "YES (boundary_class / content type is pre-review observable)",
+          "caveat": "P7 human labels all UNKNOWN (not yet reviewed)"
+        }
+      ],
+      "note": "这些是 Pre-review Case Value Signal Candidate, 非score. 不声称已验证可改善系统."
+    }
+  },
+
+  "Q12_l3_to_l5_chain_validation": {
+    "chain_question": "Human Answer → Feedback → New Information → Reusable Pattern → Validated Signal → Algorithm Hypothesis → Algorithm Improvement → Future Replay. 每步是否有证据?",
+    "chain_steps": {
+      "human_answer": {"status": "ACHIEVED", "evidence": "L5 experiment 55 judgments + P01 pilot 27 [OBSERVED]"},
+      "feedback_storage_L0": {"status": "ACHIEVED", "evidence": "FeedbackRecord implemented [OBSERVED]"},
+      "feedback_accumulation_L1": {"status": "ACHIEVED", "evidence": "[OBSERVED]"},
+      "evidence_linked_feedback_L2": {"status": "ACHIEVED", "evidence": "[OBSERVED]"},
+      "candidate_discovery_L3": {"status": "ACHIEVED (5 candidates found)", "evidence": "LSC-01..05 [OBSERVED]"},
+      "new_information": {"status": "WEAK", "evidence": "91% of feedback is BOUNDARY_CONFIRMATION (no new info); only 9% contains new information (correction) [OBSERVED]"},
+      "reusable_pattern": {"status": "NOT_DEMONSTRATED", "evidence": "3 signal candidates all TEMPORARY_MACHINE_GAP; features already in P1/P2; info gain in rule-discovery layer not feature layer [OBSERVED, L3 audit]"},
+      "validated_signal_L4": {"status": "NOT_ACHIEVED", "evidence": "No candidate reached L4 (Human-Validated Reusable Signal); all 3 fail L4 9-criteria [OBSERVED]"},
+      "algorithm_hypothesis": {"status": "NOT_DEMONSTRATED", "evidence": "PH-01/02/03 are design-only hypotheses; PH-02 REJECTED 15/15; no algorithm improvement derived from human feedback [OBSERVED]"},
+      "algorithm_improvement": {"status": "NOT_DEMONSTRATED", "evidence": "No algorithm changed as result of human feedback [OBSERVED]"},
+      "future_replay_L5": {"status": "NOT_ACHIEVED", "evidence": "0 future cases validated; CS1 at R3 highest, none at R5 [OBSERVED]"},
+      "measured_effort_reduction_L6": {"status": "NOT_ACHIEVED", "evidence": "No HRR measurement [OBSERVED]"}
+    },
+    "chain_verdict": "NOT_DEMONSTRATED — 链条在 L3 (Candidate Discovery) 停滞. L4→L5→L6 全部 NOT_ACHIEVED. 不因有 SignalCandidate 文件就认为 Learning 已发生.",
+    "stability_novelty_paradox": {
+      "finding": "Stable signals are redundant (Machine already has evidence); Novel signals are unstable (Human reviewers disagree) [OBSERVED]",
+      "implication": "当前 human feedback 既难以产生稳定新信号 (stable=redundant), 也难以产生可靠新信号 (novel=unstable). 这是 L3→L5 的结构性障碍, 非工程问题."
+    },
+    "image_confound": {
+      "finding": "Human uses page visual, not machine evidence. 83% TLD failures resolved as snap judgments using visual inspection [OBSERVED]",
+      "implication": "Human feedback is NOT evidence-grounded in most cases → feedback cannot improve machine evidence path. This is why HVA-09 real-human test was repositioned (collect first real feedback, not prove pack quality)."
+    }
+  },
+
+  "current_case_selection_reality": {
+    "total_selected": 45,
+    "low_value_wasted": "24 (53%) Type A + 15 (33%) Type_D_LOW = 39 (87%)",
+    "genuine_value": "5 (11%) Type E, but only 2/5 high engagement",
+    "high_learning_value_cases": ["AMB-032 (TLD correct, B2 UNKNOWN, evidence distillation gap)", "AMB-375 (adjudicated, B2 UNKNOWN, genuine boundary)"],
+    "missed_high_value": ["P7 BODY_TEXT_CONTINUATION (27)", "P7 REFERENCE_LIST_ENTRY (16)", "P7 OTHER_AMBIGUOUS (9)", "P7 MERGE (24)"],
+    "content_bias": "IS-11 88% TABLE; P7 22% TABLE / 39% PROSE / 23% REFERENCE",
+    "ceiling_effect": "96% KEEP_SEPARATE in IS-11 → no negative cases (same evidence → different feedback) → cannot learn boundaries"
+  },
+
+  "human_role_redefinition": {
+    "principle": "Human 不应替机器做大量普通判断. Human 价值应逐渐变成: 确认机器无法自行确定、但一旦确认就可能推动系统改进的高价值 Failure/Boundary.",
+    "current_state": "Human 做了大量普通判断 (87% low value). 69% decisions <3s, 96% no expansion, 96% only 1 level [OBSERVED]",
+    "target_state": "Human review cost ↓ + Evidence Quality ↑ + Reusable Improvement ↑ + Future Failure ↓ + VGA Evidence Reliability ↑",
+    "gap": "当前 Human feedback 既不 evidence-grounded (image confound) 也不 reusable (no L4). 需先解决 Case Selection (L2) + Evidence Distillation (L3) 再谈 Human scaling.",
+    "genuine_human_boundary_types": ["reference/citation continuation (F)", "reviewer-disagreement adjudicated (E)", "when-should-system-abstain (E)"],
+    "note": "这些是真正需要 Human 的, 但当前 selection 把大量 Type A 也送给人审 → 浪费."
+  },
+
+  "governance_gate": {
+    "DICE_CORE_MODIFICATION": "NO",
+    "GT_MODIFICATION": "NO",
+    "FROZEN_BASELINE": "INTACT (drift=0/7)",
+    "NEW_CASE_SELECTOR": "NO (not authorized)",
+    "NEW_LEARNING_ENGINE": "NO (L3→L5 NOT_DEMONSTRATED)",
+    "LLM": "NO",
+    "IMPLEMENTATION_AUTHORIZED": "FALSE",
+    "EXPERIMENT_AUTHORIZED": "FALSE",
+    "STOP": "TRUE"
+  }
+}

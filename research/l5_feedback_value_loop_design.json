@@ -1,0 +1,434 @@
+{
+  "design_type": "human_feedback_value_loop_design",
+  "design_date": "2026-09-12",
+  "read_only": true,
+  "design_only": true,
+  "governance": {
+    "CODE_MODIFICATION": 0,
+    "UI_MODIFICATION": 0,
+    "GT_MODIFICATION": 0,
+    "TLD_MODIFICATION": 0,
+    "ATOMIC_MODIFICATION": 0,
+    "IS11_DECISION_MODIFICATION": 0,
+    "AGGREGATION_MODIFICATION": 0,
+    "COMPRESSION_MODIFICATION": 0,
+    "L5.5_MODIFICATION": 0,
+    "NEW_PRIMITIVE": 0,
+    "NEW_CONTRACT": 0,
+    "NEW_ARCHITECTURE": 0,
+    "NEW_PATTERN_ENGINE": 0,
+    "PATTERN_REGISTRY": 0,
+    "PATTERN_MINER": 0,
+    "CLASSIFIER": 0,
+    "FEEDBACK_ENGINE": 0,
+    "LEARNING_ENGINE": 0,
+    "AUTO_TRAINING_PIPELINE": 0,
+    "AUTO_RULE_GENERATOR": 0,
+    "SEMANTIC_CLASSIFIER": 0,
+    "DECISION_POLICY": 0,
+    "RUNTIME_POLICY": 0,
+    "AUTOMATIC_CAPABILITY_REGISTRATION": 0,
+    "PRODUCTION": false,
+    "FROZEN_BASELINE": "INTACT",
+    "HUMAN_DATA": "REAL_PILOT_ONLY",
+    "NO_SIMULATION": true,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "STOP": true
+  },
+  "executive_conclusion": {
+    "has_feedback_reuse_basis": "PARTIAL — capture + evidence exist, signal extraction + reuse missing",
+    "max_gap": "FEEDBACK_SIGNAL_EXTRACTION — gap between stored feedback and reusable signal",
+    "recommendation": "DESIGN_READY_WITH_EXPERIMENT_BLOCKER",
+    "blockers": [
+      "n=1 participant — cannot verify signal recurrence",
+      "4 detailed feedbacks — insufficient for pattern detection",
+      "System!=GT=0 — cannot test automation bias",
+      "conflict=0 — cannot test signal override",
+      "no reuse mechanism — cannot demonstrate effort reduction",
+      "no baseline comparison — cannot measure improvement"
+    ]
+  },
+  "current_state_map": [
+    {
+      "stage": "Human Review",
+      "status": "IMPLEMENTED",
+      "evidence": "Pilot UI, 27 judgments, A/B/C workflows"
+    },
+    {
+      "stage": "Raw Feedback Capture",
+      "status": "IMPLEMENTED",
+      "evidence": "Recording Schema L5.7_v1, auto-save server"
+    },
+    {
+      "stage": "Evidence Linkage",
+      "status": "PARTIAL",
+      "evidence": "case_id link exists; feedback_text->evidence link missing"
+    },
+    {
+      "stage": "Feedback Signal Extraction",
+      "status": "MISSING",
+      "evidence": "No mechanism to extract structured signals from voice transcripts"
+    },
+    {
+      "stage": "Signal Recurrence Detection",
+      "status": "MISSING",
+      "evidence": "No mechanism to find recurring signals across feedbacks"
+    },
+    {
+      "stage": "Reusable Candidate Construction",
+      "status": "MISSING",
+      "evidence": "No candidate generation from feedback signals"
+    },
+    {
+      "stage": "Human Validation of Candidates",
+      "status": "MISSING",
+      "evidence": "No validation workflow for extracted signals"
+    },
+    {
+      "stage": "Reuse Application",
+      "status": "MISSING",
+      "evidence": "No mechanism to apply validated signals to new cases"
+    },
+    {
+      "stage": "Reuse Outcome Measurement",
+      "status": "MISSING",
+      "evidence": "No measurement of effort reduction or quality impact"
+    },
+    {
+      "stage": "Feedback Recurrence / Correction",
+      "status": "MISSING",
+      "evidence": "No longitudinal tracking"
+    }
+  ],
+  "feedback_taxonomy": [
+    {
+      "type": "Human Decision",
+      "description": "KEEP_SEPARATE/MERGE/UNKNOWN",
+      "reusable": "One-off (case-specific)"
+    },
+    {
+      "type": "Human Correction",
+      "description": "Disagreement with System candidate",
+      "reusable": "High value (if occurs)"
+    },
+    {
+      "type": "Human Explanation",
+      "description": "Why this decision was made",
+      "reusable": "Potentially reusable"
+    },
+    {
+      "type": "Human Boundary Judgment",
+      "description": "Uncertain when evidence insufficient",
+      "reusable": "Boundary signal"
+    },
+    {
+      "type": "Human Uncertainty",
+      "description": "UNKNOWN selection",
+      "reusable": "Negative evidence"
+    },
+    {
+      "type": "Human Voice Feedback",
+      "description": "Free-text/voice reasoning",
+      "reusable": "Contains reusable signals"
+    },
+    {
+      "type": "Human Evidence Relevance Feedback",
+      "description": "Which evidence helped",
+      "reusable": "Design feedback"
+    },
+    {
+      "type": "Human Semantic Interpretation",
+      "description": "Semantic judgment",
+      "reusable": "Semantic (Human authority)"
+    },
+    {
+      "type": "One-off Case Judgment",
+      "description": "Decision without explanation",
+      "reusable": "Not reusable alone"
+    }
+  ],
+  "minimum_reusable_unit": {
+    "description": "A single decision is NOT reusable. A Potentially Reusable Signal links Human reasoning to Evidence.",
+    "example": {
+      "signal_type": "TABLE_DIFFERENT_COLUMNS",
+      "evidence_basis": "TLD is_in_table=True, different_cell=True",
+      "human_observation": "表格中同一行的不同列数据",
+      "human_decision": "KEEP_SEPARATE",
+      "source": "P01/B|grp|885e943771cd",
+      "status": "CANDIDATE"
+    },
+    "not_a_rule": true,
+    "not_a_classifier": true,
+    "not_automatic": true
+  },
+  "feedback_lifecycle": [
+    {
+      "state": "Raw Human Feedback",
+      "why": "Human output must be captured",
+      "independent_object": false,
+      "status": "IMPLEMENTED"
+    },
+    {
+      "state": "Evidence-Linked Feedback",
+      "why": "Feedback must connect to evidence",
+      "independent_object": false,
+      "status": "PARTIAL"
+    },
+    {
+      "state": "Interpretable Feedback Signal",
+      "why": "Free text not processable",
+      "independent_object": "POTENTIALLY (at n>10)",
+      "status": "MISSING"
+    },
+    {
+      "state": "Reusable Candidate",
+      "why": "Recurring signals indicate potential reusability",
+      "independent_object": "POTENTIALLY (requires State 3)",
+      "status": "MISSING"
+    },
+    {
+      "state": "Human-Validated Reusable Signal",
+      "why": "Candidates must be validated (authority boundary)",
+      "independent_object": false,
+      "status": "MISSING"
+    },
+    {
+      "state": "Reuse + Outcome",
+      "why": "Must measure if reuse helps",
+      "independent_object": false,
+      "status": "MISSING"
+    }
+  ],
+  "reusability_boundary": {
+    "system_can": [
+      "Group cases by structural signature (Aggregation, frozen)",
+      "Compress groups into summaries (Compression, frozen)",
+      "Detect structural similarity (Aggregation signature)",
+      "Extract evidence fields per case (Sampling frame)",
+      "Match new case to existing group (concept exists)",
+      "Present evidence cue to Human (L5.10 translation table)"
+    ],
+    "human_must": [
+      "Semantic interpretation (no System semantic capability)",
+      "Boundary adequacy judgment",
+      "Scope acceptance for reusable signal",
+      "Final validation of reusable knowledge (authority=0 at L5)",
+      "Override of System proposal (automation bias prevention)",
+      "UNKNOWN selection when uncertain"
+    ],
+    "principle": "System may propose reusable knowledge; only Human validation can grant reusable semantic authority."
+  },
+  "learning_definition": {
+    "learning_true_requires_all": [
+      "Feedback accumulated (multiple feedbacks for similar patterns)",
+      "Signal extracted (reusable signals identified)",
+      "Signal validated (Human validated as reusable)",
+      "Signal applied (to NEW cases, not originals)",
+      "Effort reduced (review count or time DECREASED)",
+      "Quality maintained (accuracy NOT decreased)",
+      "Error recurrence reduced (same error type less frequent)"
+    ],
+    "not_learning": [
+      "Storage (feedback in database)",
+      "Retrieval (keyword search)",
+      "Aggregation (similar feedbacks grouped)",
+      "Candidate Discovery (recurring signal identified)",
+      "Validation (signal validated)",
+      "Reuse Attempt (signal shown for new case)"
+    ],
+    "learning_equals": "REUSE WITH MEASURED EFFORT REDUCTION + QUALITY MAINTENANCE"
+  },
+  "maturity_model": [
+    {
+      "level": "L0",
+      "description": "Human-only decision (no system support)",
+      "dice_status": "PASSED"
+    },
+    {
+      "level": "L1",
+      "description": "Feedback captured",
+      "dice_status": "CURRENT"
+    },
+    {
+      "level": "L2",
+      "description": "Feedback evidence-linked",
+      "dice_status": "PARTIAL"
+    },
+    {
+      "level": "L3",
+      "description": "Feedback aggregated / reusable candidate discovered",
+      "dice_status": "MISSING"
+    },
+    {
+      "level": "L4",
+      "description": "Human validates reusable signal",
+      "dice_status": "MISSING"
+    },
+    {
+      "level": "L5",
+      "description": "Validated knowledge reused across future cases",
+      "dice_status": "MISSING"
+    },
+    {
+      "level": "L6",
+      "description": "Reuse reduces Human effort while maintaining quality",
+      "dice_status": "MISSING"
+    },
+    {
+      "level": "L7",
+      "description": "Continuous closed-loop improvement",
+      "dice_status": "MISSING (future research)"
+    }
+  ],
+  "evaluation_metrics": [
+    {
+      "metric": "Human Effort Reduction",
+      "type": "CONCEPTUAL",
+      "definition": "(baseline_time - reuse_time) / baseline_time"
+    },
+    {
+      "metric": "Feedback Reuse Ratio",
+      "type": "CONCEPTUAL",
+      "definition": "cases_covered_by_reuse / total_new_cases"
+    },
+    {
+      "metric": "Generalization Scope",
+      "type": "CONCEPTUAL",
+      "definition": "{same_doc, same_family, cross_doc, cross_domain}"
+    },
+    {
+      "metric": "Decision Quality",
+      "type": "CONCEPTUAL",
+      "definition": "accuracy maintained or improved after reuse"
+    },
+    {
+      "metric": "Error Recurrence Rate",
+      "type": "CONCEPTUAL",
+      "definition": "same_error_type_count_batch2 / batch2_total"
+    },
+    {
+      "metric": "UNKNOWN Preservation",
+      "type": "CONCEPTUAL",
+      "definition": "unknown_count not suppressed by reuse"
+    },
+    {
+      "metric": "Automation Bias Index",
+      "type": "CONCEPTUAL",
+      "definition": "blind_accept_rate / total_reuse_matches"
+    },
+    {
+      "metric": "Provenance Completeness",
+      "type": "CONCEPTUAL",
+      "definition": "feedback->evidence->signal->validation chain traceable"
+    },
+    {
+      "metric": "Signal Extraction Precision",
+      "type": "CONCEPTUAL",
+      "definition": "correct_signals / extracted_signals"
+    },
+    {
+      "metric": "Signal Recurrence Rate",
+      "type": "CONCEPTUAL",
+      "definition": "recurring_signals / total_extracted_signals"
+    }
+  ],
+  "minimal_experiment_design": {
+    "goal": "Prove Feedback -> Reuse -> Effort Reduction + Quality Maintenance",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Baseline",
+        "participants": 10,
+        "cases": 50,
+        "measure": "review_time, accuracy, UNKNOWN, expansion"
+      },
+      {
+        "phase": 2,
+        "name": "Signal Extraction",
+        "description": "Extract signals from Phase 1 feedbacks offline"
+      },
+      {
+        "phase": 3,
+        "name": "Signal Validation",
+        "validators": 3,
+        "description": "Validate candidate signals, specify scope"
+      },
+      {
+        "phase": 4,
+        "name": "Treatment",
+        "participants": 10,
+        "cases": "50 old + 50 new",
+        "description": "Show validated signals for matching cases"
+      },
+      {
+        "phase": 5,
+        "name": "Comparison",
+        "description": "Compare baseline vs treatment on all metrics"
+      }
+    ],
+    "critical_controls": [
+      "System!=GT test cases (>=10) for automation bias",
+      "Conflict cases (>=5) for signal override",
+      "Cross-document cases (>=20) for generalization",
+      "Signal shown as CANDIDATE not conclusion"
+    ],
+    "prerequisites": [
+      "n>5 Phase 1 participants for signal extraction",
+      "Diverse case corpus (not just tables)",
+      "Evidence Cue implementation (L5.10 design-ready)",
+      "Feedback signal extraction process (design identified)"
+    ],
+    "not_implemented": true
+  },
+  "anti_overdesign_gate": {
+    "G1_new_feedback_object": {
+      "answer": "NO",
+      "justification": "ValidationRecord + feedback_text sufficient at L1"
+    },
+    "G2_new_signal_object": {
+      "answer": "NO",
+      "justification": "Concept identified but n=1 insufficient; express as annotation"
+    },
+    "G3_pattern": {
+      "answer": "NO",
+      "justification": "Requires n>10 + cross-participant validation; premature"
+    },
+    "G4_learning_engine": {
+      "answer": "NO",
+      "justification": "End goal, not starting point; requires validated signals first"
+    },
+    "G5_ml_llm_training": {
+      "answer": "NO",
+      "justification": "n=1, 21 cases too small; authority boundary prohibits"
+    },
+    "G6_existing_objects_express": {
+      "answer": "7/12 concepts expressible",
+      "expressible": 7,
+      "not_expressible": 5
+    },
+    "G7_max_gap": {
+      "answer": "FEEDBACK_SIGNAL_EXTRACTION",
+      "description": "Gap between stored feedback and reusable signal; requires PROCESS not MODULE"
+    },
+    "G8_evidence_for_next_level": {
+      "answer": "n>5 + cross-participant recurrence + 1 reuse demo + automation bias test",
+      "partially_met": [
+        "Signal identifiability (L5.10 + P01)",
+        "Signal-evidence linkage (L5.10)"
+      ],
+      "not_met": [
+        "Signal recurrence (need multiple participants)",
+        "Reuse feasibility (no mechanism)",
+        "Automation bias resistance (System!=GT=0)"
+      ]
+    }
+  },
+  "final_recommendation": "DESIGN_READY_WITH_EXPERIMENT_BLOCKER",
+  "evidence_classification": {
+    "design": "B-class (engineering design based on single pilot)",
+    "signal_identifiability": "B-class (derived from P01 analysis)",
+    "learning_definition": "C-class (conceptual, not validated)",
+    "maturity_positioning": "B-class (implemented vs missing analysis)",
+    "reuse_feasibility": "C-class (hypothesis, requires experimental validation)"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "research_id": "human_evidence_binding_design_research",
+  "date": "2026-09-18",
+  "mode": "READ_ONLY_DESIGN_RESEARCH",
+  "governance": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "DESIGN_IMPLEMENTATION": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true,
+    "NEW_CAPABILITY": "NONE"
+  },
+
+  "data_used": {
+    "ma_human_validation": "79 cases (61 YES, 4 NO, 14 UNCERTAIN)",
+    "ma_p0_counterfactual": "79 cases E0 vs E1",
+    "p0_p1_translation_gap": "24 P1 A/B cases",
+    "evidence_sufficiency": "149 cases",
+    "evidence_boundary_structure": "13 G5 cases, Structure A"
+  },
+
+  "h1_h4_classification": {
+    "H1_EXISTING_EVIDENCE": {"count": 21, "percentage": 26.6, "description": "Human used evidence Machine already had"},
+    "H2_NEW_OBSERVATION": {"count": 4, "percentage": 5.1, "description": "Human accessed document for missing observation"},
+    "H3_WORLD_KNOWLEDGE": {"count": 0, "percentage": 0, "description": "External knowledge needed"},
+    "H4_SEMANTIC_CONFIRMATION": {"count": 40, "percentage": 50.6, "description": "Human confirmed structural=semantic"},
+    "H4_SEMANTIC_BOUNDARY": {"count": 14, "percentage": 17.7, "description": "Human uncertain even with complete evidence (G5)"}
+  },
+
+  "type_a_e_classification": {
+    "Type_A": {"count": 61, "description": "Machine evidence sufficient; Human judges quickly"},
+    "Type_B": {"count": 4, "description": "Pack incomplete; system has info but not exposed"},
+    "Type_C": {"count": 0, "description": "Pack missing; document has it"},
+    "Type_D": {"count": 0, "description": "Even with document, Human can't judge"},
+    "Type_E": {"count": 14, "description": "Human needs semantic knowledge (G5)"}
+  },
+
+  "key_statistics": {
+    "total_cases": 79,
+    "human_added_no_new_evidence": "61 (77.2%)",
+    "human_added_new_observation": "4 (5.1%)",
+    "human_needed_document_access_yes": 18,
+    "human_needed_explanation_yes": 14,
+    "evidence_anchor_possible_yes": 74,
+    "reusable_signal_candidate_yes": 21,
+    "case_specific_only_yes": 14,
+    "low_burden": 61,
+    "medium_burden": 4,
+    "high_burden": 14
+  },
+
+  "minimum_feedback_scheme": {
+    "recommended": "Scheme B: YES/NO/UNCERTAIN + Evidence ID",
+    "fields": 2,
+    "human_burden": "LOW (1 click + 1 selection)",
+    "provenance": "YES (judgment linked to Evidence Pack element)",
+    "applicable_to": "65/79 (82.3%) definitive judgment cases + 14 UNCERTAIN cases",
+    "free_text_required": false,
+    "rationale": "Evidence configuration (F1-F12 active) IS the explanation; no text needed"
+  },
+
+  "scheme_comparison": {
+    "A_judgment_only": {"info_value": "LOW", "burden": "MINIMAL", "provenance": "NONE", "verdict": "INSUFFICIENT"},
+    "B_judgment_plus_evidence_id": {"info_value": "MEDIUM", "burden": "LOW", "provenance": "YES", "verdict": "SUFFICIENT (RECOMMENDED)"},
+    "C_judgment_plus_span": {"info_value": "HIGH", "burden": "MEDIUM", "provenance": "HIGH", "verdict": "OVERKILL for most cases"},
+    "D_judgment_plus_relation": {"info_value": "MEDIUM", "burden": "MEDIUM", "provenance": "MEDIUM", "verdict": "UNNECESSARY (relation in Pack)"},
+    "E_judgment_plus_freetext": {"info_value": "VARIABLE", "burden": "HIGH", "provenance": "LOW", "verdict": "NOT RECOMMENDED (turns Human into Annotation Worker)"},
+    "F_judgment_plus_id_plus_access_log": {"info_value": "MEDIUM-HIGH", "burden": "LOW", "provenance": "YES+", "verdict": "OPTIMAL (B + automatic provenance)"}
+  },
+
+  "binding_chain": {
+    "valid": "Human Judgment → Evidence Reference → Evidence Configuration → Validated Evidence Instance",
+    "forbidden": "Human Judgment → Rule → Capability",
+    "provenance_without_text": "Judgment + Evidence ID + Evidence Configuration = sufficient provenance for ALL 79 cases"
+  },
+
+  "five_level_hierarchy": {
+    "Level_1_CASE_SPECIFIC": "One judgment, no generalization (14 UNCERTAIN cases stuck here)",
+    "Level_2_EVIDENCE_LINKED": "Judgment + Evidence ID + Config (65 definitive cases reach this with Scheme B)",
+    "Level_3_REPEATED_PATTERN": "≥2 cases with same config + same judgment (POTENTIAL: caption_like 39 YES, Type_A_neg 8 NO)",
+    "Level_4_REUSABLE_SIGNAL": "Repeated + cross-document + provenance + boundary (NOT_DEMONSTRATED)",
+    "Level_5_CAPABILITY": "Validated signal + system integration (NOT_AUTHORIZED)",
+    "critical_rule": "Single case CANNOT skip levels. H4_SEMANTIC_BOUNDARY cannot become reusable (no judgment to repeat)."
+  },
+
+  "reusable_signal_conditions": [
+    "≥2 cases with same evidence configuration",
+    "Evidence similarity (same F1-F12 combination)",
+    "Cross-case consistency (same judgment for same config)",
+    "Cross-document evidence (≥2 independent documents)",
+    "Provenance (Judgment + Evidence ID for each instance)",
+    "Evidence boundary clearly identified"
+  ],
+
+  "three_boundaries": {
+    "Boundary_A_EVIDENCE": "Machine observable/organizable facts (F1-F12, P1-P7, DGF/DEF, Evidence Pack)",
+    "Boundary_B_HUMAN_VALIDATION": "Human judgment on specific case (YES/NO/UNCERTAIN + Evidence ID)",
+    "Boundary_C_REUSABLE_SIGNAL": "Multiple validated cases with repeated pattern (requires accumulation)",
+    "rule": "B ≠ C; Single Human Judgment ≠ Reusable Signal; Human Validation ≠ Capability"
+  },
+
+  "extra_information_recording": {
+    "recommended": "Option B: Document Access Log (page/region viewed)",
+    "burden": "LOW (automatic or 1 click)",
+    "principle": "Human should validate, not reconstruct",
+    "principle_holds": true,
+    "cases_requiring_reconstruction": 0
+  },
+
+  "over_design_audit": {
+    "O1_large_feedback_schema": false,
+    "O2_required_explanation": false,
+    "O3_judgment_as_rule": false,
+    "O4_single_case_as_pattern": false,
+    "O5_new_capability": false,
+    "O6_new_evidence_layer": false,
+    "O7_semantic_in_evidence": false,
+    "O8_decision_score_confidence": false,
+    "O9_llm_semantic_judge": false,
+    "O10_human_as_annotation_worker": false,
+    "all_false": true,
+    "over_design_risk": "NONE"
+  },
+
+  "limitations": [
+    {"id": "HEB-L-01", "limitation": "SINGLE HUMAN REVIEWER — no inter-rater reliability", "impact": "Binding scheme validity unverified across reviewers"},
+    {"id": "HEB-L-02", "limitation": "SINGLE TASK (Text-Drawing only) — T2/T3 not tested", "impact": "Scheme B may not generalize"},
+    {"id": "HEB-L-03", "limitation": "NO IMPLEMENTATION TEST — design proposal only", "impact": "Actual burden and provenance unverified"},
+    {"id": "HEB-L-04", "limitation": "EVIDENCE CONFIG SIMILARITY NOT VERIFIED — Level 3 not confirmed", "impact": "Pattern formation unverified"},
+    {"id": "HEB-L-05", "limitation": "REUSABLE SIGNAL NOT DEMONSTRATED — cross-document not analyzed", "impact": "Level 4 not reached"},
+    {"id": "HEB-L-06", "limitation": "P1 INCONCLUSIVE — no Human-level benefit demonstrated", "impact": "Cannot claim Scheme B improves performance"},
+    {"id": "HEB-L-07", "limitation": "NO G5 BINDING — 14 UNCERTAIN cases cannot be bound", "impact": "Scheme B works for definitive, not boundary cases"}
+  ],
+
+  "final_questions": {
+    "Q1_minimum_info_unit": "Scheme B: YES/NO/UNCERTAIN + Evidence ID (2 fields, LOW burden)",
+    "Q2_free_text_required": "NO — provenance via Evidence ID + Configuration, not text",
+    "Q3_provenance_via_anchor": "YES — 74/79 (93.7%) full anchor, 5/79 partial",
+    "Q4_how_much_is_existing_evidence": "77.2% (61/79) — Human added NO new evidence; used existing or confirmed",
+    "Q5_how_much_genuinely_new": "5.1% (4/79) — new observation from document; 0% external knowledge",
+    "Q6_case_specific_only": "14 UNCERTAIN (G5 boundary) + 4 new observation = 18 cases cannot generalize",
+    "Q7_reusable_signal_capable": "61 definitive cases with complete evidence; 21 H1 + potential 40 H4_CONFIRMATION patterns",
+    "Q8_reusable_signal_minimum_conditions": "≥2 cases + ≥2 documents + same config + same judgment + provenance + boundary",
+    "Q9_evidence_semantic_boundary": "At L2→L3 transition: Structural Claim (Evidence) ← → Semantic Identity (Human Judgment)",
+    "Q10_next_phase_design_gate": "CONDITIONAL — needs config similarity verification + multi-reviewer test (requires Human Validation authorization)"
+  },
+
+  "files_created": [
+    "tmp/human_evidence_binding_design_research.md",
+    "tmp/human_evidence_binding_design_research.json",
+    "tmp/human_evidence_binding_case_table.csv"
+  ],
+  "files_modified": 0,
+
+  "conclusion": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "DESIGN_IMPLEMENTATION": false,
+    "SYSTEM_MODIFIED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  }
+}

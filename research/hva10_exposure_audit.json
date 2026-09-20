@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "audit": "HVA-10 Evidence Exposure Adaptation Audit",
+    "date": "2026-09-17 (corrected)",
+    "type": "READ-ONLY / DESIGN + COUNTERFACTUAL AUDIT",
+    "hva09_freeze": "PASS (consistency) / FAIL (data validity - HVA-09 data was mechanical simulation)",
+    "cases_analyzed": 15
+  },
+  "final_status": {
+    "hva09_freeze": "PASS_CONSISTENCY_FAIL_VALIDITY",
+    "hva09_status": "INSUFFICIENT_EVIDENCE",
+    "hva09_status_note": "corrected from PARTIAL — previous data was mechanical simulation",
+    "exposure_design": "CONDITIONAL",
+    "evidence_already_exists": true,
+    "new_observation_required": false,
+    "new_module_required": false,
+    "new_rule_required": false,
+    "r1_case_dependent_exposure": "PLAUSIBLE",
+    "r1_note": "downgraded from SUPPORTED — previous SUPPORTED was based on fabricated HVA-09 data; logical derivation valid but needs real Human verification",
+    "r2_e0_to_e1_sufficient_path": "YES",
+    "r2_note": "based on Evidence structure (text content + S3 facts), not Human behavior — still valid",
+    "r3_e0_sufficient_to_e1_overexposure": "PLAUSIBLE",
+    "r3_note": "downgraded from YES — logical derivation from Evidence Sufficiency, but overexposure effect not observed with real Human",
+    "r4_progressive_exposure_without_new_observation": "YES_CONDITIONAL",
+    "r4_note": "based on Evidence sources, not Human behavior — still valid",
+    "frozen_baseline": "INTACT",
+    "dice_core_drift": 0,
+    "implementation_authorized": false,
+    "experiment_authorized": false,
+    "stop": true
+  },
+  "correction_notice": {
+    "what_happened": "HVA-10 audit was built on HVA-09 'PARTIAL' conclusion, which was based on fabricated mechanical simulation data. HVA-09 data has been deleted, status reverted to INSUFFICIENT_EVIDENCE.",
+    "still_valid": [
+      "E0/E1/E2 three-layer exposure model (based on existing Evidence structure)",
+      "Evidence Sufficiency Counterfactual (based on text content + S3 facts, not Human behavior)",
+      "IND-AMB-134 marker limitation analysis (based on marker definition)",
+      "D0/D1/D2 judgment (based on Evidence source analysis)",
+      "Semantic Field / Exposure Score prohibition checks"
+    ],
+    "invalid": [
+      "All references to 'Human A decision' / 'Human B decision'",
+      "R1 SUPPORTED (downgraded to PLAUSIBLE)",
+      "R3 YES (downgraded to PLAUSIBLE)",
+      "time/char reading efficiency analysis",
+      "UNKNOWN behavior analysis",
+      "raw_context expansion behavior analysis"
+    ]
+  },
+  "exposure_model": {
+    "e0": {
+      "description": "Current Minimal Evidence",
+      "contents": ["text_a", "text_b", "S3 structural_facts", "machine_decision"],
+      "source": "existing Current Evidence Pack",
+      "new_evidence": false
+    },
+    "e1": {
+      "description": "Targeted Distilled Evidence",
+      "contents": ["E0 all", "distilled_context", "structural_markers"],
+      "source": "existing Evidence Pack v2 (HVA-08)",
+      "new_evidence": false
+    },
+    "e2": {
+      "description": "Expanded Context",
+      "contents": ["E1 all", "raw_context"],
+      "source": "existing P7 page_context",
+      "new_evidence": false,
+      "trigger": "Human-initiated (optional)"
+    }
+  },
+  "evidence_sufficiency_audit": {
+    "note": "Based on existing Evidence (text content, S3 facts, machine state), NOT on Human behavior. Still valid.",
+    "e0_insufficient": 5,
+    "e0_ambiguous": 1,
+    "e0_sufficient": 9,
+    "e1_targeted_opportunity": 6,
+    "e1_overexposure_risk": 9,
+    "e2_progressive_opportunity": 3
+  },
+  "governance": {
+    "dice_core_modification": false,
+    "p1_p7_modification": false,
+    "tld_modification": false,
+    "is11_modification": false,
+    "gt_modification": false,
+    "s3_modification": false,
+    "signal_modification": false,
+    "llm": false,
+    "new_observation": false,
+    "new_module": false,
+    "new_engine": false,
+    "new_rule": false,
+    "new_classifier": false,
+    "new_detector": false,
+    "runtime_change": false,
+    "capability_change": false,
+    "semantic_leakage": 0,
+    "authority_leakage": 0,
+    "frozen_baseline": "INTACT",
+    "dice_core_drift": 0,
+    "implementation_authorized": false,
+    "experiment_authorized": false,
+    "production": false,
+    "stop": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "machine_eval_hash": "437aa665210ccd04",
+    "drift": "0/7 INTACT"
+  },
+  "next_step": "HVA-09 infrastructure ready for real Human participation. When real Human data available, re-evaluate R1/R3."
+}

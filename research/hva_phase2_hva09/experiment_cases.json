@@ -1,0 +1,742 @@
+{
+  "metadata": {
+    "experiment": "HVA-09 Evidence Pack v2 Human Effect Experiment",
+    "date": "2026-09-13T15:21:12.962678+00:00",
+    "total_cases": 15,
+    "conditions": [
+      "A (Current Pack)",
+      "B (Evidence Pack v2)"
+    ],
+    "human_task": "MERGE / KEEP_SEPARATE / UNKNOWN",
+    "counterbalancing": "AB/BA (pilot)",
+    "status": "PILOT / EXPLORATORY",
+    "frozen_baseline": {
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "machine_eval_hash": "437aa665210ccd04",
+      "drift": "0/7 INTACT"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "IND-AMB-003",
+      "document_id": "ind_arxiv_2402",
+      "page": 30,
+      "text_a": ".",
+      "text_b": "Philadelphia, PA: Society for",
+      "semantic_gt": "MERGE",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_agrees_with_gt": false,
+      "condition_a": {
+        "view": "=== Text A ===\n.\n\n=== Text B ===\nPhiladelphia, PA: Society for\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 264,
+        "has_context": false,
+        "has_markers": false,
+        "visible_fields": 6
+      },
+      "condition_b": {
+        "view": "=== Text A ===\n.\n\n=== Text B ===\nPhiladelphia, PA: Society for\n\n=== Relevant Context ===\n[30] C. Grossmann, H.-G. Roos, and M. Stynes, Numerical Treatment of Partial Differential Equations.\nSpringer Berlin Heidelberg,\nAug 2007. [Online]. Available: https://doi.org/10.1007/978-3-540-71584-9\n[A] [31] R. Glowinski, Variational Methods for the Numerical Solution of Nonlinear Elliptic Problems.\n[B] Philadelphia, PA: Society for\nIndustrial and Applied Mathematics, Nov 2015. [Online]. Available: https://doi.org/10.1137/1.9781611973785\n\n=== Structural Markers (in context) ===\n  citation_marker: 2\n  online_marker: 2\n  doi_marker: 2\n  available_marker: 2\n  publisher_city_marker: 1\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 881,
+        "has_context": true,
+        "has_markers": true,
+        "markers": {
+          "citation_marker": 2,
+          "online_marker": 2,
+          "doi_marker": 2,
+          "available_marker": 2,
+          "publisher_city_marker": 1
+        },
+        "markers_source": "distilled_context",
+        "distilled_context": {
+          "available": true,
+          "context_text": "[30] C. Grossmann, H.-G. Roos, and M. Stynes, Numerical Treatment of Partial Differential Equations.\nSpringer Berlin Heidelberg,\nAug 2007. [Online]. Available: https://doi.org/10.1007/978-3-540-71584-9\n[A] [31] R. Glowinski, Variational Methods for the Numerical Solution of Nonlinear Elliptic Problems.\n[B] Philadelphia, PA: Society for\nIndustrial and Applied Mathematics, Nov 2015. [Online]. Available: https://doi.org/10.1137/1.9781611973785",
+          "human_view": "[30] C. Grossmann, H.-G. Roos, and M. Stynes, Numerical Treatment of Partial Differential Equations.\nSpringer Berlin Heidelberg,\nAug 2007. [Online]. Available: https://doi.org/10.1007/978-3-540-71584-9\n[A] [31] R. Glowinski, Variational Methods for the Numerical Solution of Nonlinear Elliptic Problems.\n[B] Philadelphia, PA: Society for\nIndustrial and Applied Mathematics, Nov 2015. [Online]. Available: https://doi.org/10.1137/1.9781611973785",
+          "compression_ratio": 0.08,
+          "raw_length": 5569,
+          "distilled_length": 444,
+          "window_start": 43,
+          "window_end": 49
+        },
+        "raw_context": "    30\n>>> [12] Y. Cao, A. Papageorgiou, I. Petras, J. Traub, and S. Kais, “Quantum algorithm and circuit design solving the Poisson equation,”  [TEXT A]\n>>> New Journal of Physics, vol. 15, no. 1, Jan 2013. [Online]. Available: https://doi.org/10.1088/1367-2630/15/1/013021  [TEXT A]\n>>> [13] Z.-Y. Chen, C. Xue, S.-M. Chen, B.-H. Lu, Y.-C. Wu, J.-C. Ding, S.-H. Huang, and G.-P. Guo, “Quantum finite volume  [TEXT A]\n>>> method for computational fluid dynamics with classical input and output,” arXiv (pre-print), Feb 2021. [Online]. Available:  [TEXT A]\n>>> https://doi.org/10.48550/arXiv.2102.03557  [TEXT A]\n>>> [14] B. Kacewicz, “Almost optimal solution of initial-value problems by randomized and quantum algorithms,” Journal of Complexity,  [TEXT A]\n>>> vol. 22, no. 5, pp. 676–690, Oct 2006. [Online]. Available: https://doi.org/10.1016/j.jco.2006.03.001  [TEXT A]\n>>> [15] A. Peruzzo, J. McClean, P. Shadbolt, M.-H. Yung, X.-Q. Zhou, P. J. Love, A. Aspuru-Guzik, and J. L. O’Brien, “A variational  [TEXT A]\n>>> eigenvalue solver on a photonic quantum processor,” Nature Communications, vol. 5, no. 1, Jul 2014. [Online]. Available:  [TEXT A]\n>>> https://doi.org/10.1038/ncomms5213  [TEXT A]\n>>> [16] M. Cerezo, A. Arrasmith, R. Babbush, S. C. Benjamin, S. Endo, K. Fujii, J. R. McClean, K. Mitarai, X. Yuan, L. Cincio,  [TEXT A]\n>>> and P. J. Coles, “Variational quantum algorithms,” Nature Reviews Physics, vol. 3, no. 9, Aug 2021. [Online]. Available:  [TEXT A]\n>>> https://doi.org/10.1038/s42254-021-00348-9  [TEXT A]\n>>> [17] R. Demirdjian, D. Gunlycke, C. A. Reynolds, J. D. Doyle, and S. Tafur, “Variational quantum solutions to the advection–diffusion  [TEXT A]\n>>> equation for applications in fluid dynamics,” Quantum Information Processing, vol. 21, no. 9, Sep 2022. [Online]. Available:  [TEXT A]\n>>> https://doi.org/10.1007/s11128-022-03667-7  [TEXT A]\n>>> [18] C. Bravo-Prieto, R. LaRose, M. Cerezo, Y. Subasi, L. Cincio, and P. J. Coles, “Variational quantum linear solver,” Quantum, vol. 7,  [TEXT A]\n>>> Nov 2023. [Online]. Available: http://doi.org/10.22331/q-2023-11-22-1188  [TEXT A]\n>>> [19] O. Kyriienko, A. E. Paine, and V. E. Elfving, “Solving nonlinear differential equations with differentiable quantum circuits,”  [TEXT A]\n>>> Physical Review A, vol. 103, no. 5, May 2021. [Online]. Available: https://doi.org/10.1103/physreva.103.052416  [TEXT A]\n>>> [20] Y. Sato, R. Kondo, S. Koide, H. Takamatsu, and N. Imoto, “Variational quantum algorithm based on the minimum  [TEXT A]\n>>> potential energy for solving the Poisson equation,” Physical Review A, vol. 104, no. 5, Nov 2021. [Online]. Available:  [TEXT A]\n>>> https://doi.org/10.1103/physreva.104.052409  [TEXT A]\n>>> [21] F. Y. Leong, W.-B. Ewe, and D. E. Koh, “Variational quantum evolution equation solver,” Scientific Reports, vol. 12, no. 1, Jun  [TEXT A]\n>>> 2022. [Online]. Available: https://doi.org/10.1038/s41598-022-14906-3  [TEXT A]\n>>> [22] F. Y. Leong, D. E. Koh, W.-B. Ewe, and J. F. Kong, “Variational quantum simulation of partial differential equations: applications  [TEXT A]\n>>> in colloidal transport,” International Journal of Numerical Methods for Heat & Fluid Flow, vol. 33, no. 11, Jul 2023. [Online].  [TEXT A]\n>>> Available: https://doi.org/10.1108/hff-05-2023-0265  [TEXT A]\n>>> [23] D. Jaksch, P. Givi, A. J. Daley, and T. Rung, “Variational quantum algorithms for computational fluid dynamics,” AIAA Journal,  [TEXT A]\n>>> vol. 61, no. 5, pp. 1885–1894, 2023. [Online]. Available: https://doi.org/10.2514/1.J062426  [TEXT A]\n>>> [24] M. Lubasch, J. Joo, P. Moinier, M. Kiffner, and D. Jaksch, “Variational quantum algorithms for nonlinear problems,” Physical  [TEXT A]\n>>> Review A, vol. 101, no. 1, Jan 2020. [Online]. Available: https://doi.org/10.1103/physreva.101.010301  [TEXT A]\n>>> [25] N. M. Guseynov, A. A. Zhukov, W. V. Pogosov, and A. V. Lebedev, “Depth analysis of variational quantum algorithms for the heat  [TEXT A]\n>>> equation,” Physical Review A, vol. 107, no. 5, May 2023. [Online]. Available: http://doi.org/10.1103/physreva.107.052422  [TEXT A]\n>>> [26] P. C. S. Costa, S. Jordan, and A. Ostrander, “Quantum algorithm for simulating the wave equation,” Physical Review A, vol. 99,  [TEXT A]\n>>> no. 1, Jan 2019. [Online]. Available: https://doi.org/10.1103/physreva.99.012323  [TEXT A]\n>>> [27] Qiskit contributors, “Qiskit: An open-source framework for quantum computing,” 2023. [Online]. Available: https://doi.org/10.5281/  [TEXT A]\n>>> zenodo.2573505  [TEXT A]\n>>> [28] R. E. Lynch, J. R. Rice, and D. H. Thomas, “Direct solution of partial difference equations by tensor product methods,” Numerische  [TEXT A]\n>>> Mathematik, vol. 6, no. 1, pp. 185–199, Dec 1964. [Online]. Available: https://doi.org/10.1007/bf01386067  [TEXT A]\n>>> [29] J. M. Arrazola, T. Kalajdzievski, C. Weedbrook, and S. Lloyd, “Quantum algorithm for nonhomogeneous linear partial differential  [TEXT A]\n>>> equations,” Physical Review A, vol. 100, no. 3, Sep 2019. [Online]. Available: https://doi.org/10.1103/physreva.100.032306  [TEXT A]\n>>> [30] C. Grossmann, H.-G. Roos, and M. Stynes, Numerical Treatment of Partial Differential Equations.  [TEXT A]\n    Springer Berlin Heidelberg,\n>>> Aug 2007. [Online]. Available: https://doi.org/10.1007/978-3-540-71584-9  [TEXT A]\n>>> [31] R. Glowinski, Variational Methods for the Numerical Solution of Nonlinear Elliptic Problems.  [TEXT A]\n>>> Philadelphia, PA: Society for  [TEXT B]\n>>> Industrial and Applied Mathematics, Nov 2015. [Online]. Available: https://doi.org/10.1137/1.9781611973785  [TEXT A]",
+        "raw_context_length": 5569,
+        "visible_fields": 8,
+        "compression_ratio": 0.08
+      },
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "timestamp": "2026-09-13T15:21:12.962678+00:00"
+      }
+    },
+    {
+      "case_id": "IND-AMB-002",
+      "document_id": "ind_arxiv_2402",
+      "page": 30,
+      "text_a": ".",
+      "text_b": "Springer Berlin Heidelberg,",
+      "semantic_gt": "MERGE",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_agrees_with_gt": false,
+      "condition_a": {
+        "view": "=== Text A ===\n.\n\n=== Text B ===\nSpringer Berlin Heidelberg,\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 262,
+        "has_context": false,
+        "has_markers": false,
+        "visible_fields": 6
+      },
+      "condition_b": {
+        "view": "=== Text A ===\n.\n\n=== Text B ===\nSpringer Berlin Heidelberg,\n\n=== Relevant Context ===\nMathematik, vol. 6, no. 1, pp. 185–199, Dec 1964. [Online]. Available: https://doi.org/10.1007/bf01386067\n[29] J. M. Arrazola, T. Kalajdzievski, C. Weedbrook, and S. Lloyd, “Quantum algorithm for nonhomogeneous linear partial differential\nequations,” Physical Review A, vol. 100, no. 3, Sep 2019. [Online]. Available: https://doi.org/10.1103/physreva.100.032306\n[A] [30] C. Grossmann, H.-G. Roos, and M. Stynes, Numerical Treatment of Partial Differential Equations.\n[B] Springer Berlin Heidelberg,\nAug 2007. [Online]. Available: https://doi.org/10.1007/978-3-540-71584-9\n[31] R. Glowinski, Variational Methods for the Numerical Solution of Nonlinear Elliptic Problems.\nPhiladelphia, PA: Society for\n\n=== Structural Markers (in context) ===\n  citation_marker: 3\n  volume_marker: 2\n  pages_marker: 1\n  online_marker: 3\n  doi_marker: 3\n  available_marker: 3\n  publisher_city_marker: 1\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 1171,
+        "has_context": true,
+        "has_markers": true,
+        "markers": {
+          "citation_marker": 3,
+          "volume_marker": 2,
+          "pages_marker": 1,
+          "online_marker": 3,
+          "doi_marker": 3,
+          "available_marker": 3,
+          "publisher_city_marker": 1
+        },
+        "markers_source": "distilled_context",
+        "distilled_context": {
+          "available": true,
+          "context_text": "Mathematik, vol. 6, no. 1, pp. 185–199, Dec 1964. [Online]. Available: https://doi.org/10.1007/bf01386067\n[29] J. M. Arrazola, T. Kalajdzievski, C. Weedbrook, and S. Lloyd, “Quantum algorithm for nonhomogeneous linear partial differential\nequations,” Physical Review A, vol. 100, no. 3, Sep 2019. [Online]. Available: https://doi.org/10.1103/physreva.100.032306\n[A] [30] C. Grossmann, H.-G. Roos, and M. Stynes, Numerical Treatment of Partial Differential Equations.\n[B] Springer Berlin Heidelberg,\nAug 2007. [Online]. Available: https://doi.org/10.1007/978-3-540-71584-9\n[31] R. Glowinski, Variational Methods for the Numerical Solution of Nonlinear Elliptic Problems.\nPhiladelphia, PA: Society for",
+          "human_view": "Mathematik, vol. 6, no. 1, pp. 185–199, Dec 1964. [Online]. Available: https://doi.org/10.1007/bf01386067\n[29] J. M. Arrazola, T. Kalajdzievski, C. Weedbrook, and S. Lloyd, “Quantum algorithm for nonhomogeneous linear partial differential\nequations,” Physical Review A, vol. 100, no. 3, Sep 2019. [Online]. Available: https://doi.org/10.1103/physreva.100.032306\n[A] [30] C. Grossmann, H.-G. Roos, and M. Stynes, Numerical Treatment of Partial Differential Equations.\n[B] Springer Berlin Heidelberg,\nAug 2007. [Online]. Available: https://doi.org/10.1007/978-3-540-71584-9\n[31] R. Glowinski, Variational Methods for the Numerical Solution of Nonlinear Elliptic Problems.\nPhiladelphia, PA: Society for",
+          "compression_ratio": 0.126,
+          "raw_length": 5569,
+          "distilled_length": 699,
+          "window_start": 40,
+          "window_end": 48
+        },
+        "raw_context": "    30\n>>> [12] Y. Cao, A. Papageorgiou, I. Petras, J. Traub, and S. Kais, “Quantum algorithm and circuit design solving the Poisson equation,”  [TEXT A]\n>>> New Journal of Physics, vol. 15, no. 1, Jan 2013. [Online]. Available: https://doi.org/10.1088/1367-2630/15/1/013021  [TEXT A]\n>>> [13] Z.-Y. Chen, C. Xue, S.-M. Chen, B.-H. Lu, Y.-C. Wu, J.-C. Ding, S.-H. Huang, and G.-P. Guo, “Quantum finite volume  [TEXT A]\n>>> method for computational fluid dynamics with classical input and output,” arXiv (pre-print), Feb 2021. [Online]. Available:  [TEXT A]\n>>> https://doi.org/10.48550/arXiv.2102.03557  [TEXT A]\n>>> [14] B. Kacewicz, “Almost optimal solution of initial-value problems by randomized and quantum algorithms,” Journal of Complexity,  [TEXT A]\n>>> vol. 22, no. 5, pp. 676–690, Oct 2006. [Online]. Available: https://doi.org/10.1016/j.jco.2006.03.001  [TEXT A]\n>>> [15] A. Peruzzo, J. McClean, P. Shadbolt, M.-H. Yung, X.-Q. Zhou, P. J. Love, A. Aspuru-Guzik, and J. L. O’Brien, “A variational  [TEXT A]\n>>> eigenvalue solver on a photonic quantum processor,” Nature Communications, vol. 5, no. 1, Jul 2014. [Online]. Available:  [TEXT A]\n>>> https://doi.org/10.1038/ncomms5213  [TEXT A]\n>>> [16] M. Cerezo, A. Arrasmith, R. Babbush, S. C. Benjamin, S. Endo, K. Fujii, J. R. McClean, K. Mitarai, X. Yuan, L. Cincio,  [TEXT A]\n>>> and P. J. Coles, “Variational quantum algorithms,” Nature Reviews Physics, vol. 3, no. 9, Aug 2021. [Online]. Available:  [TEXT A]\n>>> https://doi.org/10.1038/s42254-021-00348-9  [TEXT A]\n>>> [17] R. Demirdjian, D. Gunlycke, C. A. Reynolds, J. D. Doyle, and S. Tafur, “Variational quantum solutions to the advection–diffusion  [TEXT A]\n>>> equation for applications in fluid dynamics,” Quantum Information Processing, vol. 21, no. 9, Sep 2022. [Online]. Available:  [TEXT A]\n>>> https://doi.org/10.1007/s11128-022-03667-7  [TEXT A]\n>>> [18] C. Bravo-Prieto, R. LaRose, M. Cerezo, Y. Subasi, L. Cincio, and P. J. Coles, “Variational quantum linear solver,” Quantum, vol. 7,  [TEXT A]\n>>> Nov 2023. [Online]. Available: http://doi.org/10.22331/q-2023-11-22-1188  [TEXT A]\n>>> [19] O. Kyriienko, A. E. Paine, and V. E. Elfving, “Solving nonlinear differential equations with differentiable quantum circuits,”  [TEXT A]\n>>> Physical Review A, vol. 103, no. 5, May 2021. [Online]. Available: https://doi.org/10.1103/physreva.103.052416  [TEXT A]\n>>> [20] Y. Sato, R. Kondo, S. Koide, H. Takamatsu, and N. Imoto, “Variational quantum algorithm based on the minimum  [TEXT A]\n>>> potential energy for solving the Poisson equation,” Physical Review A, vol. 104, no. 5, Nov 2021. [Online]. Available:  [TEXT A]\n>>> https://doi.org/10.1103/physreva.104.052409  [TEXT A]\n>>> [21] F. Y. Leong, W.-B. Ewe, and D. E. Koh, “Variational quantum evolution equation solver,” Scientific Reports, vol. 12, no. 1, Jun  [TEXT A]\n>>> 2022. [Online]. Available: https://doi.org/10.1038/s41598-022-14906-3  [TEXT A]\n>>> [22] F. Y. Leong, D. E. Koh, W.-B. Ewe, and J. F. Kong, “Variational quantum simulation of partial differential equations: applications  [TEXT A]\n>>> in colloidal transport,” International Journal of Numerical Methods for Heat & Fluid Flow, vol. 33, no. 11, Jul 2023. [Online].  [TEXT A]\n>>> Available: https://doi.org/10.1108/hff-05-2023-0265  [TEXT A]\n>>> [23] D. Jaksch, P. Givi, A. J. Daley, and T. Rung, “Variational quantum algorithms for computational fluid dynamics,” AIAA Journal,  [TEXT A]\n>>> vol. 61, no. 5, pp. 1885–1894, 2023. [Online]. Available: https://doi.org/10.2514/1.J062426  [TEXT A]\n>>> [24] M. Lubasch, J. Joo, P. Moinier, M. Kiffner, and D. Jaksch, “Variational quantum algorithms for nonlinear problems,” Physical  [TEXT A]\n>>> Review A, vol. 101, no. 1, Jan 2020. [Online]. Available: https://doi.org/10.1103/physreva.101.010301  [TEXT A]\n>>> [25] N. M. Guseynov, A. A. Zhukov, W. V. Pogosov, and A. V. Lebedev, “Depth analysis of variational quantum algorithms for the heat  [TEXT A]\n>>> equation,” Physical Review A, vol. 107, no. 5, May 2023. [Online]. Available: http://doi.org/10.1103/physreva.107.052422  [TEXT A]\n>>> [26] P. C. S. Costa, S. Jordan, and A. Ostrander, “Quantum algorithm for simulating the wave equation,” Physical Review A, vol. 99,  [TEXT A]\n>>> no. 1, Jan 2019. [Online]. Available: https://doi.org/10.1103/physreva.99.012323  [TEXT A]\n>>> [27] Qiskit contributors, “Qiskit: An open-source framework for quantum computing,” 2023. [Online]. Available: https://doi.org/10.5281/  [TEXT A]\n>>> zenodo.2573505  [TEXT A]\n>>> [28] R. E. Lynch, J. R. Rice, and D. H. Thomas, “Direct solution of partial difference equations by tensor product methods,” Numerische  [TEXT A]\n>>> Mathematik, vol. 6, no. 1, pp. 185–199, Dec 1964. [Online]. Available: https://doi.org/10.1007/bf01386067  [TEXT A]\n>>> [29] J. M. Arrazola, T. Kalajdzievski, C. Weedbrook, and S. Lloyd, “Quantum algorithm for nonhomogeneous linear partial differential  [TEXT A]\n>>> equations,” Physical Review A, vol. 100, no. 3, Sep 2019. [Online]. Available: https://doi.org/10.1103/physreva.100.032306  [TEXT A]\n>>> [30] C. Grossmann, H.-G. Roos, and M. Stynes, Numerical Treatment of Partial Differential Equations.  [TEXT A]\n>>> Springer Berlin Heidelberg,  [TEXT B]\n>>> Aug 2007. [Online]. Available: https://doi.org/10.1007/978-3-540-71584-9  [TEXT A]\n>>> [31] R. Glowinski, Variational Methods for the Numerical Solution of Nonlinear Elliptic Problems.  [TEXT A]\n    Philadelphia, PA: Society for\n>>> Industrial and Applied Mathematics, Nov 2015. [Online]. Available: https://doi.org/10.1137/1.9781611973785  [TEXT A]",
+        "raw_context_length": 5569,
+        "visible_fields": 8,
+        "compression_ratio": 0.126
+      },
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "timestamp": "2026-09-13T15:21:12.962678+00:00"
+      }
+    },
+    {
+      "case_id": "IND-AMB-052",
+      "document_id": "ind_arxiv_bio2",
+      "page": 10,
+      "text_a": "Guo, Jian Zhao, and Furao Shen.",
+      "text_b": "Image data aug-",
+      "semantic_gt": "MERGE",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_agrees_with_gt": false,
+      "condition_a": {
+        "view": "=== Text A ===\nGuo, Jian Zhao, and Furao Shen.\n\n=== Text B ===\nImage data aug-\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 280,
+        "has_context": false,
+        "has_markers": false,
+        "visible_fields": 6
+      },
+      "condition_b": {
+        "view": "=== Text A ===\nGuo, Jian Zhao, and Furao Shen.\n\n=== Text B ===\nImage data aug-\n\n=== Relevant Context ===\nInformation Processing Systems, 32, 2019. 2\n[30] Tom Ching LingChen, Ava Khonsari, Amirreza Lashkari,\nMina Rafi Nazari, Jaspreet Singh Sambee, and Mario A\n[A] Nascimento.\n[B] Uniformaugment:\nA search-free prob-\nabilistic data augmentation approach.\narXiv preprint\n\n=== Structural Markers (in context) ===\n  citation_marker: 1\n  arxiv_marker: 1\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 650,
+        "has_context": true,
+        "has_markers": true,
+        "markers": {
+          "citation_marker": 1,
+          "arxiv_marker": 1
+        },
+        "markers_source": "distilled_context",
+        "distilled_context": {
+          "available": true,
+          "context_text": "Information Processing Systems, 32, 2019. 2\n[30] Tom Ching LingChen, Ava Khonsari, Amirreza Lashkari,\nMina Rafi Nazari, Jaspreet Singh Sambee, and Mario A\n[A] Nascimento.\n[B] Uniformaugment:\nA search-free prob-\nabilistic data augmentation approach.\narXiv preprint",
+          "human_view": "Information Processing Systems, 32, 2019. 2\n[30] Tom Ching LingChen, Ava Khonsari, Amirreza Lashkari,\nMina Rafi Nazari, Jaspreet Singh Sambee, and Mario A\n[A] Nascimento.\n[B] Uniformaugment:\nA search-free prob-\nabilistic data augmentation approach.\narXiv preprint",
+          "compression_ratio": 0.1,
+          "raw_length": 2641,
+          "distilled_length": 263,
+          "window_start": 21,
+          "window_end": 29
+        },
+        "raw_context": "    [24] Alex Krizhevsky, Ilya Sutskever, and Geoffrey E Hinton.\n    Imagenet classification with deep convolutional neural net-\n    works. Communications of the ACM, 60(6):84–90, 2017. 1\n    [25] Da Li, Yongxin Yang, Yi-Zhe Song, and Timothy M\n    Hospedales. Deeper, broader and artier domain generaliza-\n    tion. In Proceedings of the IEEE international conference on\n    computer vision, pages 5542–5550, 2017. 5, 11\n    [26] Haoliang Li, Sinno Jialin Pan, Shiqi Wang, and Alex C Kot.\n    Domain generalization with adversarial feature learning. In\n    Proceedings of the IEEE conference on computer vision and\n    pattern recognition, pages 5400–5409, 2018. 3, 6, 15, 16, 17\n    [27] Ya Li, Mingming Gong, Xinmei Tian, Tongliang Liu, and\n    Dacheng Tao. Domain generalization via conditional invari-\n    ant representations. In Proceedings of the AAAI conference\n    on artificial intelligence, volume 32, 2018. 3\n    [28] Yonggang Li, Guosheng Hu, Yongtao Wang, Timothy\n    Hospedales, Neil M Robertson, and Yongxin Yang. Dada:\n    Differentiable automatic data augmentation. arXiv preprint\n    arXiv:2003.03780, 2020. 2\n    [29] Sungbin Lim, Ildoo Kim, Taesup Kim, Chiheon Kim, and\n    Sungwoong Kim. Fast autoaugment. Advances in Neural\n    Information Processing Systems, 32, 2019. 2\n    [30] Tom Ching LingChen, Ava Khonsari, Amirreza Lashkari,\n    Mina Rafi Nazari, Jaspreet Singh Sambee, and Mario A\n    Nascimento.\n    Uniformaugment:\n    A search-free prob-\n    abilistic data augmentation approach.\n    arXiv preprint\n    arXiv:2003.14348, 2020. 2\n    [31] Ziquan Liu, Yi Xu, Yuanhong Xu, Qi Qian, Hao Li, Rong\n    Jin, Xiangyang Ji, and Antoni B Chan.\n    An empirical\n    study on distribution shift robustness from the perspec-\n    tive of pre-training and data augmentation. arXiv preprint\n    arXiv:2205.12753, 2022. 7\n    [32] Saypraseuth Mounsaveng, Issam Laradji, Ismail Ben Ayed,\n    David Vazquez, and Marco Pedersoli. Learning data aug-\n    mentation with online bilevel optimization for image clas-\n    sification. In Proceedings of the IEEE/CVF Winter Confer-\n    ence on Applications of Computer Vision, pages 1691–1700,\n    2021. 2\n    [33] Samuel G M¨uller and Frank Hutter. Trivialaugment: Tuning-\n    free yet state-of-the-art data augmentation. In Proceedings\n    of the IEEE/CVF International Conference on Computer Vi-\n    sion, pages 774–782, 2021. 2, 3, 4, 8, 12\n    [34] Hyeonseob Nam, HyunJae Lee, Jongchan Park, Wonjun\n    Yoon, and Donggeun Yoo. Reducing domain gap by reduc-\n    ing style bias. In Proceedings of the IEEE/CVF Conference\n    on Computer Vision and Pattern Recognition, pages 8690–",
+        "raw_context_length": 2641,
+        "visible_fields": 8,
+        "compression_ratio": 0.1
+      },
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "timestamp": "2026-09-13T15:21:12.962678+00:00"
+      }
+    },
+    {
+      "case_id": "IND-AMB-033",
+      "document_id": "ind_arxiv_bio2",
+      "page": 9,
+      "text_a": "Le.",
+      "text_b": "Randaugment:",
+      "semantic_gt": "MERGE",
+      "boundary_class": "OTHER_AMBIGUOUS",
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_agrees_with_gt": false,
+      "condition_a": {
+        "view": "=== Text A ===\nLe.\n\n=== Text B ===\nRandaugment:\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 249,
+        "has_context": false,
+        "has_markers": false,
+        "visible_fields": 6
+      },
+      "condition_b": {
+        "view": "=== Text A ===\nLe.\n\n=== Text B ===\nRandaugment:\n\n=== Relevant Context ===\nAd-\nvances in Neural Information Processing Systems, 35:8265–\n8277, 2022. 5\n[A] [4] Sara Beery, Grant Van Horn, and Pietro Perona. Recognition\n[B] in terra incognita. In Proceedings of the European confer-\nence on computer vision (ECCV), pages 456–473, 2018. 5,\n11\n[5] Gilles Blanchard, Gyemin Lee, and Clayton Scott. Gener-\n\n=== Structural Markers (in context) ===\n  citation_marker: 2\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 662,
+        "has_context": true,
+        "has_markers": true,
+        "markers": {
+          "citation_marker": 2
+        },
+        "markers_source": "distilled_context",
+        "distilled_context": {
+          "available": true,
+          "context_text": "Ad-\nvances in Neural Information Processing Systems, 35:8265–\n8277, 2022. 5\n[A] [4] Sara Beery, Grant Van Horn, and Pietro Perona. Recognition\n[B] in terra incognita. In Proceedings of the European confer-\nence on computer vision (ECCV), pages 456–473, 2018. 5,\n11\n[5] Gilles Blanchard, Gyemin Lee, and Clayton Scott. Gener-",
+          "human_view": "Ad-\nvances in Neural Information Processing Systems, 35:8265–\n8277, 2022. 5\n[A] [4] Sara Beery, Grant Van Horn, and Pietro Perona. Recognition\n[B] in terra incognita. In Proceedings of the European confer-\nence on computer vision (ECCV), pages 456–473, 2018. 5,\n11\n[5] Gilles Blanchard, Gyemin Lee, and Clayton Scott. Gener-",
+          "compression_ratio": 0.141,
+          "raw_length": 2304,
+          "distilled_length": 324,
+          "window_start": 21,
+          "window_end": 29
+        },
+        "raw_context": "    harmful transformations during training based on a reward\n    function that compares the performance of a label classi-\n    fier with an exponential moving average of it. All these\n    contributions allowed our method to achieve equal or better\n    results than state-of-the-art methods on five challenging do-\n    main generalization datasets with a minimum intervention\n    in the standard ERM pipeline.\n    References\n    [1] Isabela Albuquerque, Jo˜ao Monteiro, Mohammad Darvishi,\n    Tiago H Falk, and Ioannis Mitliagkas.\n    Generalizing to\n    unseen domains via distribution matching. arXiv preprint\n    arXiv:1911.00804, 2019. 3\n    [2] Martin Arjovsky, L´eon Bottou, Ishaan Gulrajani, and David\n    Lopez-Paz.\n    Invariant risk minimization.\n    arXiv preprint\n    arXiv:1907.02893, 2019. 3, 6, 15, 16, 17\n    [3] Devansh Arpit, Huan Wang, Yingbo Zhou, and Caiming\n    Xiong. Ensemble of averages: Improving model selection\n    and boosting performance in domain generalization.\n    Ad-\n    vances in Neural Information Processing Systems, 35:8265–\n    8277, 2022. 5\n    [4] Sara Beery, Grant Van Horn, and Pietro Perona. Recognition\n    in terra incognita. In Proceedings of the European confer-\n    ence on computer vision (ECCV), pages 456–473, 2018. 5,\n    11\n    [5] Gilles Blanchard, Gyemin Lee, and Clayton Scott. Gener-\n    alizing from several related classification tasks to a new un-\n    labeled sample. Advances in neural information processing\n    systems, 24, 2011. 1\n    [6] Manh-Ha Bui, Toan Tran, Anh Tran, and Dinh Phung. Ex-\n    ploiting domain-specific features to enhance domain gener-\n    alization. Advances in Neural Information Processing Sys-\n    tems, 34:21189–21201, 2021. 3, 6, 15, 16, 17\n    [7] Junbum Cha,\n    Sanghyuk Chun,\n    Kyungjae Lee,\n    Han-\n    Cheol Cho, Seunghyun Park, Yunsung Lee, and Sungrae\n    Park.\n    Swad: Domain generalization by seeking flat min-\n    ima. Advances in Neural Information Processing Systems,\n    34:22405–22418, 2021. 5, 6, 11, 14\n    [8] Ekin D Cubuk, Barret Zoph, Dandelion Mane, Vijay Vasude-\n>>> van, and Quoc V Le. Autoaugment: Learning augmentation  [TEXT A]\n    strategies from data. In Proceedings of the IEEE/CVF Con-\n    ference on Computer Vision and Pattern Recognition, pages\n    113–123, 2019. 2, 3, 4, 8",
+        "raw_context_length": 2304,
+        "visible_fields": 8,
+        "compression_ratio": 0.141
+      },
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "timestamp": "2026-09-13T15:21:12.962678+00:00"
+      }
+    },
+    {
+      "case_id": "IND-AMB-049",
+      "document_id": "ind_arxiv_bio2",
+      "page": 10,
+      "text_a": "Levine.",
+      "text_b": "Bitrate-constrained dro:",
+      "semantic_gt": "MERGE",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_agrees_with_gt": false,
+      "condition_a": {
+        "view": "=== Text A ===\nLevine.\n\n=== Text B ===\nBitrate-constrained dro:\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 265,
+        "has_context": false,
+        "has_markers": false,
+        "visible_fields": 6
+      },
+      "condition_b": {
+        "view": "=== Text A ===\nLevine.\n\n=== Text B ===\nBitrate-constrained dro:\n\n=== Relevant Context ===\nInformation Processing Systems, 32, 2019. 2\n[30] Tom Ching LingChen, Ava Khonsari, Amirreza Lashkari,\nMina Rafi Nazari, Jaspreet Singh Sambee, and Mario A\n[A] Nascimento.\n[B] Uniformaugment:\nA search-free prob-\nabilistic data augmentation approach.\narXiv preprint\n\n=== Structural Markers (in context) ===\n  citation_marker: 1\n  arxiv_marker: 1\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 635,
+        "has_context": true,
+        "has_markers": true,
+        "markers": {
+          "citation_marker": 1,
+          "arxiv_marker": 1
+        },
+        "markers_source": "distilled_context",
+        "distilled_context": {
+          "available": true,
+          "context_text": "Information Processing Systems, 32, 2019. 2\n[30] Tom Ching LingChen, Ava Khonsari, Amirreza Lashkari,\nMina Rafi Nazari, Jaspreet Singh Sambee, and Mario A\n[A] Nascimento.\n[B] Uniformaugment:\nA search-free prob-\nabilistic data augmentation approach.\narXiv preprint",
+          "human_view": "Information Processing Systems, 32, 2019. 2\n[30] Tom Ching LingChen, Ava Khonsari, Amirreza Lashkari,\nMina Rafi Nazari, Jaspreet Singh Sambee, and Mario A\n[A] Nascimento.\n[B] Uniformaugment:\nA search-free prob-\nabilistic data augmentation approach.\narXiv preprint",
+          "compression_ratio": 0.1,
+          "raw_length": 2641,
+          "distilled_length": 263,
+          "window_start": 21,
+          "window_end": 29
+        },
+        "raw_context": "    [24] Alex Krizhevsky, Ilya Sutskever, and Geoffrey E Hinton.\n    Imagenet classification with deep convolutional neural net-\n    works. Communications of the ACM, 60(6):84–90, 2017. 1\n    [25] Da Li, Yongxin Yang, Yi-Zhe Song, and Timothy M\n    Hospedales. Deeper, broader and artier domain generaliza-\n    tion. In Proceedings of the IEEE international conference on\n    computer vision, pages 5542–5550, 2017. 5, 11\n    [26] Haoliang Li, Sinno Jialin Pan, Shiqi Wang, and Alex C Kot.\n    Domain generalization with adversarial feature learning. In\n    Proceedings of the IEEE conference on computer vision and\n    pattern recognition, pages 5400–5409, 2018. 3, 6, 15, 16, 17\n    [27] Ya Li, Mingming Gong, Xinmei Tian, Tongliang Liu, and\n    Dacheng Tao. Domain generalization via conditional invari-\n    ant representations. In Proceedings of the AAAI conference\n    on artificial intelligence, volume 32, 2018. 3\n    [28] Yonggang Li, Guosheng Hu, Yongtao Wang, Timothy\n    Hospedales, Neil M Robertson, and Yongxin Yang. Dada:\n    Differentiable automatic data augmentation. arXiv preprint\n    arXiv:2003.03780, 2020. 2\n    [29] Sungbin Lim, Ildoo Kim, Taesup Kim, Chiheon Kim, and\n    Sungwoong Kim. Fast autoaugment. Advances in Neural\n    Information Processing Systems, 32, 2019. 2\n    [30] Tom Ching LingChen, Ava Khonsari, Amirreza Lashkari,\n    Mina Rafi Nazari, Jaspreet Singh Sambee, and Mario A\n    Nascimento.\n    Uniformaugment:\n    A search-free prob-\n    abilistic data augmentation approach.\n    arXiv preprint\n    arXiv:2003.14348, 2020. 2\n    [31] Ziquan Liu, Yi Xu, Yuanhong Xu, Qi Qian, Hao Li, Rong\n    Jin, Xiangyang Ji, and Antoni B Chan.\n    An empirical\n    study on distribution shift robustness from the perspec-\n    tive of pre-training and data augmentation. arXiv preprint\n    arXiv:2205.12753, 2022. 7\n    [32] Saypraseuth Mounsaveng, Issam Laradji, Ismail Ben Ayed,\n    David Vazquez, and Marco Pedersoli. Learning data aug-\n    mentation with online bilevel optimization for image clas-\n    sification. In Proceedings of the IEEE/CVF Winter Confer-\n    ence on Applications of Computer Vision, pages 1691–1700,\n    2021. 2\n    [33] Samuel G M¨uller and Frank Hutter. Trivialaugment: Tuning-\n    free yet state-of-the-art data augmentation. In Proceedings\n    of the IEEE/CVF International Conference on Computer Vi-\n    sion, pages 774–782, 2021. 2, 3, 4, 8, 12\n    [34] Hyeonseob Nam, HyunJae Lee, Jongchan Park, Wonjun\n    Yoon, and Donggeun Yoo. Reducing domain gap by reduc-\n    ing style bias. In Proceedings of the IEEE/CVF Conference\n    on Computer Vision and Pattern Recognition, pages 8690–",
+        "raw_context_length": 2641,
+        "visible_fields": 8,
+        "compression_ratio": 0.1
+      },
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "timestamp": "2026-09-13T15:21:12.962678+00:00"
+      }
+    },
+    {
+      "case_id": "IND-AMB-008",
+      "document_id": "ind_arxiv_bio2",
+      "page": 3,
+      "text_a": "in improving out-of-distribution generalization.",
+      "text_b": "Our ap-",
+      "semantic_gt": "KEEP_SEPARATE",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_agrees_with_gt": false,
+      "condition_a": {
+        "view": "=== Text A ===\nin improving out-of-distribution generalization.\n\n=== Text B ===\nOur ap-\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 289,
+        "has_context": false,
+        "has_markers": false,
+        "visible_fields": 6
+      },
+      "condition_b": {
+        "view": "=== Text A ===\nin improving out-of-distribution generalization.\n\n=== Text B ===\nOur ap-\n\n=== Relevant Context ===\nvariance in the data.\nIn this work, we build upon observations from [15, 47,\n52], which show that data augmentation plays a vital role\n[A] in improving out-of-distribution generalization.\n[B] Our ap-\nproach employs uniform sampling, similar to TrivialAug-\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 571,
+        "has_context": true,
+        "has_markers": false,
+        "markers": {},
+        "markers_source": "distilled_context",
+        "distilled_context": {
+          "available": true,
+          "context_text": "variance in the data.\nIn this work, we build upon observations from [15, 47,\n52], which show that data augmentation plays a vital role\n[A] in improving out-of-distribution generalization.\n[B] Our ap-\nproach employs uniform sampling, similar to TrivialAug-",
+          "human_view": "variance in the data.\nIn this work, we build upon observations from [15, 47,\n52], which show that data augmentation plays a vital role\n[A] in improving out-of-distribution generalization.\n[B] Our ap-\nproach employs uniform sampling, similar to TrivialAug-",
+          "compression_ratio": 0.084,
+          "raw_length": 3045,
+          "distilled_length": 255,
+          "window_start": 44,
+          "window_end": 50
+        },
+        "raw_context": "    uses GAN, to enforce that the features cannot be predic-\n    tive of the domain. Albuquerque et al. [1] build on top of\n    DANN by considering one-versus-all adversaries that try\n    to predict to which training domain each of the examples\n    belongs. Later work, consider a number of ways to en-\n    force invariance, such as minimizing the maximum mean\n    discrepancy (MMD) [26], enforcing class-conditional dis-\n    tributions across domains [27], and matching the feature\n    covariance (second order statistics) across training domains\n    at some level of representation [41]. Although popular, en-\n    forcing invariance is challenging and often too restrictive.\n    As a result, Arjovsky et al. [2] propose to enforce the opti-\n    mal classifier for different domains. GroupDRO [39] pro-\n    poses to minimize the worst-case training loss by putting\n    more mass on samples from the more challenging domains\n    at train time. Bui et al. [6] use meta-learning and adver-\n    sarial training in tandem to disentangle features in the la-\n    tent space while jointly learning both domain-invariant and\n    domain-specific features in a unified framework. However,\n    Zhao et al. [54] show that learning an invariant representa-\n    tion, in addition to possibly ignoring signals that can be im-\n    portant for new domains, is not enough to guarantee target\n    generalization. Furthermore as evidenced by the strong per-\n    formance of ERM [15], these methods are either too strong\n    to optimize reliably or too weak to achieve their goals [51].\n    Data Augmentation for Domain Generalization: An-\n    other effective strategy to address domain generalization\n    [15, 47] is by using data augmentation. These methods fo-\n    cus on manipulating the inputs to assist in learning general\n    representations. Zhou et al. [55] use domain information for\n    creating an additive noise to increase the diversity of train-\n    ing data distribution while preserving the semantic informa-\n    tion of data. Yan et al. [48] use mixup to blend examples\n    from the different training distributions. In RSC [19], the\n    authors iteratively discard the dominant features from the\n    training data, aiming to improve generalization. This ap-\n    proach is inspired by the style transfer literature, where the\n    feature statistics encode domain-related information. Sim-\n    ilarly, MixStyle [56] synthesizes novel domains by mixing\n    the feature statistics of two instances. SagNets [34] pro-\n    pose to disentangle style encodings from class categories\n    to prevent style-biased predictions and focus more on the\n    contents. The performance of these methods depends on\n    whether the augmentation can help the model to learn in-\n    variance in the data.\n    In this work, we build upon observations from [15, 47,\n    52], which show that data augmentation plays a vital role\n>>> in improving out-of-distribution generalization.  [TEXT A]\n>>> Our ap-  [TEXT B]\n    proach employs uniform sampling, similar to TrivialAug-",
+        "raw_context_length": 3045,
+        "visible_fields": 7,
+        "compression_ratio": 0.084
+      },
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "timestamp": "2026-09-13T15:21:12.962678+00:00"
+      }
+    },
+    {
+      "case_id": "IND-AMB-005",
+      "document_id": "ind_arxiv_bio2",
+      "page": 1,
+      "text_a": "distribution.",
+      "text_b": "For the out-of-domain case, where the test",
+      "semantic_gt": "KEEP_SEPARATE",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_agrees_with_gt": false,
+      "condition_a": {
+        "view": "=== Text A ===\ndistribution.\n\n=== Text B ===\nFor the out-of-domain case, where the test\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 289,
+        "has_context": false,
+        "has_markers": false,
+        "visible_fields": 6
+      },
+      "condition_b": {
+        "view": "=== Text A ===\ndistribution.\n\n=== Text B ===\nFor the out-of-domain case, where the test\n\n=== Relevant Context ===\ning their recognition performance in a variety of tasks and\ndomains. However, this holds for standard in-domain set-\ntings, in which the training and test data follow the same\n[A] distribution.\n[B] For the out-of-domain case, where the test\ndata follow a different and unknown distribution, the best\nrecipe for data augmentation is unclear. In this paper, we\nshow that for out-of-domain and domain generalization set-\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 733,
+        "has_context": true,
+        "has_markers": false,
+        "markers": {},
+        "markers_source": "distilled_context",
+        "distilled_context": {
+          "available": true,
+          "context_text": "ing their recognition performance in a variety of tasks and\ndomains. However, this holds for standard in-domain set-\ntings, in which the training and test data follow the same\n[A] distribution.\n[B] For the out-of-domain case, where the test\ndata follow a different and unknown distribution, the best\nrecipe for data augmentation is unclear. In this paper, we\nshow that for out-of-domain and domain generalization set-",
+          "human_view": "ing their recognition performance in a variety of tasks and\ndomains. However, this holds for standard in-domain set-\ntings, in which the training and test data follow the same\n[A] distribution.\n[B] For the out-of-domain case, where the test\ndata follow a different and unknown distribution, the best\nrecipe for data augmentation is unclear. In this paper, we\nshow that for out-of-domain and domain generalization set-",
+          "compression_ratio": 0.167,
+          "raw_length": 2495,
+          "distilled_length": 417,
+          "window_start": 18,
+          "window_end": 26
+        },
+        "raw_context": "    Domain Generalization by Rejecting Extreme Augmentations\n    Masih Aminbeidokhti\n    masih.aminbeidokhti.1@ens.etsmtl.ca\n    Fidel A. Guerrero Pe˜na\n    fidel-alejandro.guerrero-pena@etsmtl.ca\n    Heitor Rapela Medeiros\n    heitor.rapela-medeiros.1@ens.etsmtl.ca\n    Thomas Dubail\n    thomas.dubail.1@ens.etsmtl.ca\n    Eric Granger\n    eric.granger@etsmtl.ca\n    Marco Pedersoli\n    marco.pedersoli@etsmtl.ca\n    LIVIA, Dept. of Systems Engineering\n    ETS Montreal, Canada\n    Abstract\n    Data augmentation is one of the most effective tech-\n    niques for regularizing deep learning models and improv-\n    ing their recognition performance in a variety of tasks and\n    domains. However, this holds for standard in-domain set-\n    tings, in which the training and test data follow the same\n>>> distribution.  [TEXT A]\n>>> For the out-of-domain case, where the test  [TEXT B]\n    data follow a different and unknown distribution, the best\n    recipe for data augmentation is unclear. In this paper, we\n    show that for out-of-domain and domain generalization set-\n    tings, data augmentation can provide a conspicuous and ro-\n    bust improvement in performance. To do that, we propose\n    a simple training procedure: (i) use uniform sampling on\n    standard data augmentation transformations; (ii) increase\n    the strength transformations to account for the higher data\n    variance expected when working out-of-domain; and (iii)\n    devise a new reward function to reject extreme transfor-\n    mations that can harm the training. With this procedure,\n    our data augmentation scheme achieves a level of accuracy\n    that is comparable to or better than state-of-the-art meth-\n    ods on benchmark domain generalization datasets. Code:\n    https://github.com/Masseeh/DCAug\n    1. Introduction\n    The main assumption of commonly used deep learning\n    methods is that all examples used for training and testing\n    models are independently and identically sampled from the\n    same distribution [44]. In practice, such an assumption does\n    not always hold and this can limit the applicability of the\n    learned models in real-world scenarios [22].\n    In order to tackle this problem, domain generalization\n    (DG) [5] aims to predict well data distributions different\n    Figure 1. A conceptual illustration of our method. The inner circle\n    and outer circle represent the space of weak (safe) and wider (pos-\n    sibly harmful) augmentations, respectively. Our method is able",
+        "raw_context_length": 2495,
+        "visible_fields": 7,
+        "compression_ratio": 0.167
+      },
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "timestamp": "2026-09-13T15:21:12.962678+00:00"
+      }
+    },
+    {
+      "case_id": "IND-AMB-134",
+      "document_id": "ind_qbio_genomics",
+      "page": 12,
+      "text_a": ").",
+      "text_b": "Profiles",
+      "semantic_gt": "KEEP_SEPARATE",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_agrees_with_gt": false,
+      "condition_a": {
+        "view": "=== Text A ===\n).\n\n=== Text B ===\nProfiles\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 244,
+        "has_context": false,
+        "has_markers": false,
+        "visible_fields": 6
+      },
+      "condition_b": {
+        "view": "=== Text A ===\n).\n\n=== Text B ===\nProfiles\n\n=== Relevant Context ===\nin bigwig format from accession number GSE146749 [55]. Pseudo-bulk ATAC-seq acquired in differ-\nent adult cell-types were downloaded from https://flybrain.aertslab.org/downloads/bigw\nig_adult.html) in bigwig format. When necessary, the dataset was lifted over from dm3 to dm6\n[A] coordinates using the LiftOver tool (http://genome.ucsc.edu/cgi-bin/hgLiftOver).\n[B] Profiles\nof the genomic data were plotted along the rut locus (chrX:14785864-14876400, dm6) using CoolBox\n(https://gangcaolab.github.io/CoolBox/quick_start_API.html). RNA-seq acquired in adult\nfly brains were downloaded from GSE37027 in bigwig format [56]. Annotated single-cell RNA sequenc-\n\n=== Structural Markers (in context) ===\n  citation_marker: 2\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: YES\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 989,
+        "has_context": true,
+        "has_markers": true,
+        "markers": {
+          "citation_marker": 2
+        },
+        "markers_source": "distilled_context",
+        "distilled_context": {
+          "available": true,
+          "context_text": "in bigwig format from accession number GSE146749 [55]. Pseudo-bulk ATAC-seq acquired in differ-\nent adult cell-types were downloaded from https://flybrain.aertslab.org/downloads/bigw\nig_adult.html) in bigwig format. When necessary, the dataset was lifted over from dm3 to dm6\n[A] coordinates using the LiftOver tool (http://genome.ucsc.edu/cgi-bin/hgLiftOver).\n[B] Profiles\nof the genomic data were plotted along the rut locus (chrX:14785864-14876400, dm6) using CoolBox\n(https://gangcaolab.github.io/CoolBox/quick_start_API.html). RNA-seq acquired in adult\nfly brains were downloaded from GSE37027 in bigwig format [56]. Annotated single-cell RNA sequenc-",
+          "human_view": "in bigwig format from accession number GSE146749 [55]. Pseudo-bulk ATAC-seq acquired in differ-\nent adult cell-types were downloaded from https://flybrain.aertslab.org/downloads/bigw\nig_adult.html) in bigwig format. When necessary, the dataset was lifted over from dm3 to dm6\n[A] coordinates using the LiftOver tool (http://genome.ucsc.edu/cgi-bin/hgLiftOver).\n[B] Profiles\nof the genomic data were plotted along the rut locus (chrX:14785864-14876400, dm6) using CoolBox\n(https://gangcaolab.github.io/CoolBox/quick_start_API.html). RNA-seq acquired in adult\nfly brains were downloaded from GSE37027 in bigwig format [56]. Annotated single-cell RNA sequenc-",
+          "compression_ratio": 0.213,
+          "raw_length": 3073,
+          "distilled_length": 656,
+          "window_start": 41,
+          "window_end": 49
+        },
+        "raw_context": "    the non-proximal state (RNP ) was constrained to be greater than 200 nm. These thresholds were cho-\n    sen based on previous experimental considerations regarding the spatial scales of enhancer-promoter\n    interactions, as validated in Fig. S2B.\n    The parameters of the model, including the fraction of the proximal state (fP ) and the characteristic\n    radii of the proximal and non-proximal states (RP , RNP ), were determined using non-linear least squares\n    optimization on the empirical probability density functions. The uncertainties on each parameter were\n    obtained from the covariance matrix of the fits. The quality of the fits was assessed using the coefficient\n>>> of determination (R2).  [TEXT A]\n    R2 = 1 −\n    PNbins\n    i=1\n    \u0000pexp\n    i\n    −pmodel\n    i\n    \u00012\n    PNbins\n    i=1\n    (pexp\n    i\n    −¯pexp)2 ,\n    (3)\n    where pexp\n    i\n    and pmodel\n    i\n    denote the experimental and model-predicted probability densities in bin i, re-\n    spectively, and ¯pexp is the mean of the experimental probability densities. The resulting R2 values\n    (where R2 = 1 indicates a perfect fit) were compared to those obtained from a single-Gaussian fit in\n    order to quantify the improvement provided by the two-state description.\n    The fraction of the proximal state (fP ) for each pair of genomic regions was compared between Kenyon\n    cells (KCs) and non-Kenyon cells (non-KCs) by calculating their respective uncertainties from the fitting\n    procedure. The error bars presented in the manuscript represent the standard error derived from these\n    uncertainties, facilitating a direct comparison of fP values between cell-types. This comparison enables\n    a statistical assessment of the differences in enhancer-promoter engagement dynamics.\n    Enhancer prediction\n    Predicted enhancers along the rut locus were identified using resources provided by the Janelia FlyLight\n>>> Project Team (https://flweb.janelia.org/cgi-bin/flew.cgi).  [TEXT A]\n    Hi-C, ChIP-seq, ATAC-seq, RNA-seq and snRNA-seq data processing\n    Hi-C data acquired in adult fly brains were downloaded in .mcool format from accession number\n    GSE228095 [13]. CTCF and CP190 ChIP-seq acquired in third-instar larval CNSs were downloaded\n    in bigwig format from accession number GSE146749 [55]. Pseudo-bulk ATAC-seq acquired in differ-\n    ent adult cell-types were downloaded from https://flybrain.aertslab.org/downloads/bigw\n    ig_adult.html) in bigwig format. When necessary, the dataset was lifted over from dm3 to dm6\n>>> coordinates using the LiftOver tool (http://genome.ucsc.edu/cgi-bin/hgLiftOver).  [TEXT A]\n>>> Profiles  [TEXT B]\n    of the genomic data were plotted along the rut locus (chrX:14785864-14876400, dm6) using CoolBox\n>>> (https://gangcaolab.github.io/CoolBox/quick_start_API.html). RNA-seq acquired in adult  [TEXT A]\n    fly brains were downloaded from GSE37027 in bigwig format [56]. Annotated single-cell RNA sequenc-\n    ing (snRNA-seq) data were downloaded from the SCope [4] and re-plotted using a custom Python script.",
+        "raw_context_length": 3073,
+        "visible_fields": 8,
+        "compression_ratio": 0.213
+      },
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "timestamp": "2026-09-13T15:21:12.962678+00:00"
+      }
+    },
+    {
+      "case_id": "IND-AMB-001",
+      "document_id": "ind_arxiv_2402",
+      "page": 27,
+      "text_a": "Fig. 14a",
+      "text_b": "Fig. 14b",
+      "semantic_gt": "KEEP_SEPARATE",
+      "boundary_class": "FIGURE_LABEL",
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_agrees_with_gt": false,
+      "condition_a": {
+        "view": "=== Text A ===\nFig. 14a\n\n=== Text B ===\nFig. 14b\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: NO\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 249,
+        "has_context": false,
+        "has_markers": false,
+        "visible_fields": 6
+      },
+      "condition_b": {
+        "view": "=== Text A ===\nFig. 14a\n\n=== Text B ===\nFig. 14b\n\n=== Relevant Context ===\ntl [s]\nεl\nl2\n[A] Fig. 14a\n[B] Fig. 14b\nFig. 14c\n(a) Evolution for coarse-grid results displayed in Fig. 14a-c.\n0.002\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: NO\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 392,
+        "has_context": true,
+        "has_markers": false,
+        "markers": {},
+        "markers_source": "distilled_context",
+        "distilled_context": {
+          "available": true,
+          "context_text": "tl [s]\nεl\nl2\n[A] Fig. 14a\n[B] Fig. 14b\nFig. 14c\n(a) Evolution for coarse-grid results displayed in Fig. 14a-c.\n0.002",
+          "human_view": "tl [s]\nεl\nl2\n[A] Fig. 14a\n[B] Fig. 14b\nFig. 14c\n(a) Evolution for coarse-grid results displayed in Fig. 14a-c.\n0.002",
+          "compression_ratio": 0.052,
+          "raw_length": 2211,
+          "distilled_length": 116,
+          "window_start": 17,
+          "window_end": 25
+        },
+        "raw_context": "    27\n    for the initial Nt = 7 time instants. Results indicate that the predictive accuracy is similar on both grids.\n    The time evolution of the εl2 measure is displayed, using a log-log representation in Fig. 15a and a semi-log\n    representation in Fig. 15b. For the inhomogeneous Dirichlet and the mixed boundary condition, the maximum\n    error occurs during the initial time steps and decays as the solution advances in time until approximately\n    t = 0.1s (5 time steps). Subsequently, the measure remains at a low level for these cases. For the homogeneous\n>>> Dirichlet case with d = 1, displayed in Fig. 14a, the error increases significantly after approximately 10 time  [TEXT A]\n    steps but remains small. In contrast, the ansatz with d = 7 that was used to compute the inhomogeneous steady\n    state solution depicted in Fig. 14c outperforms the trainability in the homogeneous Dirichlet setting (d = 1).\n    Despite a general temporal error transport, the implicit numerical scheme remains stable and does not indicate\n    any amplification of the error, which is in the range of the error of the steady-state solution, cf. Sec. VIII-A.\n    10−1\n    100\n    10−8\n    10−7\n    10−6\n    10−5\n    tl [s]\n    εl\n    l2\n>>> Fig. 14a  [TEXT A]\n>>> Fig. 14b  [TEXT B]\n    Fig. 14c\n>>> (a) Evolution for coarse-grid results displayed in Fig. 14a-c.  [TEXT A]\n    0.002\n    0.004\n    0.006\n    0.008\n    0.010\n    10−3.5\n    10−3\n    10−2.5\n    tl [s]\n    Fig. 14d\n    (b) Evolution of fine-grid results displayed Fig. 14d.\n    Fig. 15: Temporal evolution of the deviation measure εl\n    l2 for the results displayed in Fig. 14.\n    As indicated by Fig. 15a, the maximum values agree with the results of the steady heat conduction case provided\n    by Table I. The corresponding Table II lists the time-averaged values of the l2-norm ¯εl2 and the trace distance\n    measure ¯εtr. Since the changes of the solution over time are small, maximum values of ¯εl2 and ¯εtr are bounded,\n    and the averaged values remain within the range of the steady state results.\n    Boundary Setting\n    l2-norm ¯εl2\n    trace distance ¯εtr\n    DOF c\n    interior points\n    Np = 4\n    Np = 16\n    Np = 4\n    Np = 16",
+        "raw_context_length": 2211,
+        "visible_fields": 7,
+        "compression_ratio": 0.052
+      },
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "timestamp": "2026-09-13T15:21:12.962678+00:00"
+      }
+    },
+    {
+      "case_id": "IND-AMB-090",
+      "document_id": "ind_arxiv_bio2",
+      "page": 16,
+      "text_a": "Caltech101",
+      "text_b": "LabelMe",
+      "semantic_gt": "KEEP_SEPARATE",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_agrees_with_gt": false,
+      "condition_a": {
+        "view": "=== Text A ===\nCaltech101\n\n=== Text B ===\nLabelMe\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: NO\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 250,
+        "has_context": false,
+        "has_markers": false,
+        "visible_fields": 6
+      },
+      "condition_b": {
+        "view": "=== Text A ===\nCaltech101\n\n=== Text B ===\nLabelMe\n\n=== Relevant Context ===\nMethod\nCategory\nDomain\n[A] Caltech101\n[B] LabelMe\nSUN09\nVOC2007\nAvg.\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: NO\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 345,
+        "has_context": true,
+        "has_markers": false,
+        "markers": {},
+        "markers_source": "distilled_context",
+        "distilled_context": {
+          "available": true,
+          "context_text": "Method\nCategory\nDomain\n[A] Caltech101\n[B] LabelMe\nSUN09\nVOC2007\nAvg.",
+          "human_view": "Method\nCategory\nDomain\n[A] Caltech101\n[B] LabelMe\nSUN09\nVOC2007\nAvg.",
+          "compression_ratio": 0.105,
+          "raw_length": 650,
+          "distilled_length": 68,
+          "window_start": 0,
+          "window_end": 8
+        },
+        "raw_context": "    Method\n    Category\n    Domain\n>>> Caltech101  [TEXT A]\n>>> LabelMe  [TEXT B]\n    SUN09\n    VOC2007\n    Avg.\n    ERM [44]\n    Baseline\n    98.0±0.3\n    64.7±1.2\n    71.4±1.2\n    75.2±1.6\n    77.3\n    MMD [26]\n    Domain-Invariant\n    97.7±0.1\n    64.0±1.1\n    72.8±0.2\n    75.3±3.3\n    77.5\n    IRM [2]\n    98.6±0.1\n    64.9±0.9\n    73.4±0.6\n    77.3±0.9\n    78.6\n    GroupDRO [39]\n    97.3±0.3\n    63.4±0.9\n    69.5±0.8\n    76.7±0.7\n    76.7\n    DANN [12]\n    99.0±0.3\n    65.1±1.4\n    73.1±0.3\n    77.2±0.6\n    78.6\n    CORAL [41]\n    98.3±0.1\n    66.1±1.2\n    73.4±0.3\n    77.5±1.2\n    78.8\n    mDSDI [6]\n    97.6±0.1\n    66.4±0.4\n    74.0±0.6",
+        "raw_context_length": 650,
+        "visible_fields": 7,
+        "compression_ratio": 0.105
+      },
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "timestamp": "2026-09-13T15:21:12.962678+00:00"
+      }
+    },
+    {
+      "case_id": "IND-AMB-084",
+      "document_id": "ind_arxiv_bio2",
+      "page": 15,
+      "text_a": "Cartoon",
+      "text_b": "Photo",
+      "semantic_gt": "KEEP_SEPARATE",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_agrees_with_gt": false,
+      "condition_a": {
+        "view": "=== Text A ===\nCartoon\n\n=== Text B ===\nPhoto\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: NO\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 245,
+        "has_context": false,
+        "has_markers": false,
+        "visible_fields": 6
+      },
+      "condition_b": {
+        "view": "=== Text A ===\nCartoon\n\n=== Text B ===\nPhoto\n\n=== Relevant Context ===\nCategory\nDomain\nArt\n[A] Cartoon\n[B] Photo\nSketch\nAvg.\nERM [44]\n\n=== Structural Markers (in context) ===\n  citation_marker: 1\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: NO\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 396,
+        "has_context": true,
+        "has_markers": true,
+        "markers": {
+          "citation_marker": 1
+        },
+        "markers_source": "distilled_context",
+        "distilled_context": {
+          "available": true,
+          "context_text": "Category\nDomain\nArt\n[A] Cartoon\n[B] Photo\nSketch\nAvg.\nERM [44]",
+          "human_view": "Category\nDomain\nArt\n[A] Cartoon\n[B] Photo\nSketch\nAvg.\nERM [44]",
+          "compression_ratio": 0.063,
+          "raw_length": 977,
+          "distilled_length": 62,
+          "window_start": 4,
+          "window_end": 12
+        },
+        "raw_context": "    Figure 10. Visual changes of the selected images by our proposed data augmentation schema. For each sample within a minibatch, our\n    method produces two augmentations of Tweak (top row) and Twider (bottom row). After calculating Rdiv and Rcon for each, our method\n    selects the transformation with the highest reward (green box) and rejects the other one (red box).\n    Method\n    Category\n    Domain\n    Art\n>>> Cartoon  [TEXT A]\n>>> Photo  [TEXT B]\n    Sketch\n    Avg.\n    ERM [44]\n    Baseline\n    85.7±0.6\n    77.1±0.8\n    97.4±0.4\n    76.6±0.7\n    84.2\n    MMD [26]\n    Domain-Invariant\n    86.1±1.4\n    79.4±0.9\n    96.6±0.2\n    76.5±0.5\n    84.7\n    IRM [2]\n    84.8±1.3\n    76.4±1.1\n    96.7±0.6\n    76.1±1.0\n    83.5\n    GroupDRO [39]\n    83.5±0.9\n    79.1±0.6\n    96.7±0.3\n    78.3±2.0\n    84.4\n    DANN [12]\n    86.4±0.8\n    77.4±0.8\n    97.3±0.4\n    73.5±2.3\n    83.7\n    CORAL [41]\n    88.3±0.2\n    80.0±0.5\n    97.5±0.3\n    78.8±1.3\n    86.2\n    mDSDI [6]",
+        "raw_context_length": 977,
+        "visible_fields": 8,
+        "compression_ratio": 0.063
+      },
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "timestamp": "2026-09-13T15:21:12.962678+00:00"
+      }
+    },
+    {
+      "case_id": "IND-AMB-054",
+      "document_id": "ind_arxiv_bio2",
+      "page": 11,
+      "text_a": "Hyperparameter",
+      "text_b": "Search Space",
+      "semantic_gt": "MERGE",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_agrees_with_gt": false,
+      "condition_a": {
+        "view": "=== Text A ===\nHyperparameter\n\n=== Text B ===\nSearch Space\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: NO\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 259,
+        "has_context": false,
+        "has_markers": false,
+        "visible_fields": 6
+      },
+      "condition_b": {
+        "view": "=== Text A ===\nHyperparameter\n\n=== Text B ===\nSearch Space\n\n=== Relevant Context ===\nIn International conference on machine\nlearning, pages 7523–7532. PMLR, 2019. 3\n[55] Kaiyang Zhou, Yongxin Yang, Timothy Hospedales, and Tao\n[A] Xiang. Deep domain-adversarial image generation for do-\n[B] main generalisation. In Proceedings of the AAAI Conference\non Artificial Intelligence, volume 34, pages 13025–13032,\n2020. 2, 3, 6, 8, 15, 16\n[56] Kaiyang Zhou, Yongxin Yang, Yu Qiao, and Tao Xi-\n\n=== Structural Markers (in context) ===\n  citation_marker: 2\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: NO\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 748,
+        "has_context": true,
+        "has_markers": true,
+        "markers": {
+          "citation_marker": 2
+        },
+        "markers_source": "distilled_context",
+        "distilled_context": {
+          "available": true,
+          "context_text": "In International conference on machine\nlearning, pages 7523–7532. PMLR, 2019. 3\n[55] Kaiyang Zhou, Yongxin Yang, Timothy Hospedales, and Tao\n[A] Xiang. Deep domain-adversarial image generation for do-\n[B] main generalisation. In Proceedings of the AAAI Conference\non Artificial Intelligence, volume 34, pages 13025–13032,\n2020. 2, 3, 6, 8, 15, 16\n[56] Kaiyang Zhou, Yongxin Yang, Yu Qiao, and Tao Xi-",
+          "human_view": "In International conference on machine\nlearning, pages 7523–7532. PMLR, 2019. 3\n[55] Kaiyang Zhou, Yongxin Yang, Timothy Hospedales, and Tao\n[A] Xiang. Deep domain-adversarial image generation for do-\n[B] main generalisation. In Proceedings of the AAAI Conference\non Artificial Intelligence, volume 34, pages 13025–13032,\n2020. 2, 3, 6, 8, 15, 16\n[56] Kaiyang Zhou, Yongxin Yang, Yu Qiao, and Tao Xi-",
+          "compression_ratio": 0.16,
+          "raw_length": 2504,
+          "distilled_length": 400,
+          "window_start": 21,
+          "window_end": 29
+        },
+        "raw_context": "    [50] Zihan Yang, Richard O Sinnott, James Bailey, and Qiuhong\n    Ke. A survey of automated data augmentation algorithms for\n    deep learning-based image classication tasks. arXiv preprint\n    arXiv:2206.06544, 2022. 1, 2\n    [51] Jianyu Zhang, David Lopez-Paz, and L´eon Bottou.\n    Rich\n    feature construction for the optimization-generalization\n    dilemma. In International Conference on Machine Learn-\n    ing, pages 26397–26411. PMLR, 2022. 3\n    [52] Ling Zhang, Xiaosong Wang, Dong Yang, Thomas Sanford,\n    Stephanie Harmon, Baris Turkbey, Holger Roth, Andriy My-\n    ronenko, Daguang Xu, and Ziyue Xu. When unseen domain\n    generalization is unnecessary?\n    rethinking data augmenta-\n    tion. arXiv preprint arXiv:1906.03347, 2019. 3\n    [53] Xinyu Zhang, Qiang Wang, Jian Zhang, and Zhao Zhong.\n    Adversarial autoaugment. arXiv preprint arXiv:1912.11188,\n    2019. 2\n    [54] Han Zhao, Remi Tachet Des Combes, Kun Zhang, and Ge-\n    offrey Gordon. On learning invariant representations for do-\n    main adaptation.\n    In International conference on machine\n    learning, pages 7523–7532. PMLR, 2019. 3\n    [55] Kaiyang Zhou, Yongxin Yang, Timothy Hospedales, and Tao\n    Xiang. Deep domain-adversarial image generation for do-\n    main generalisation. In Proceedings of the AAAI Conference\n    on Artificial Intelligence, volume 34, pages 13025–13032,\n    2020. 2, 3, 6, 8, 15, 16\n    [56] Kaiyang Zhou, Yongxin Yang, Yu Qiao, and Tao Xi-\n    ang. Domain generalization with mixstyle. arXiv preprint\n    arXiv:2104.02008, 2021. 3, 6, 15, 16, 17\n    Appendices\n    In this supplementary material, we give additional infor-\n    mation to reproduce our work. Here, we provide imple-\n    mentation details, characterization of computational cost,\n    the definition of affinity and diversity, visual changes of\n    the selected by our proposed data augmentation schema,\n    the effect of ViT-backbone, the effect of hyperparameter\n    λ, and finally, show detailed results of Table 3 in the main\n    manuscript.\n    A. Implementation details\n    The evaluation protocol by [15] is computationally too\n    expensive, therefore we use the reduced search space from\n    [7] for the common parameters. Table 5 summarizes the\n    hyperparameter search space.\n    We use the same search\n    space for all datasets. To further reduce the hyperparam-\n    eter search, we start by finding the optimal hyperparameter\n    for TA and then use those to find the best λ for our proposed\n    method.",
+        "raw_context_length": 2504,
+        "visible_fields": 8,
+        "compression_ratio": 0.16
+      },
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "timestamp": "2026-09-13T15:21:12.962678+00:00"
+      }
+    },
+    {
+      "case_id": "IND-AMB-041",
+      "document_id": "ind_arxiv_bio2",
+      "page": 9,
+      "text_a": "Shiori",
+      "text_b": "Sagawa,",
+      "semantic_gt": "MERGE",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "machine_agrees_with_gt": false,
+      "condition_a": {
+        "view": "=== Text A ===\nShiori\n\n=== Text B ===\nSagawa,\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: NO\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 246,
+        "has_context": false,
+        "has_markers": false,
+        "visible_fields": 6
+      },
+      "condition_b": {
+        "view": "=== Text A ===\nShiori\n\n=== Text B ===\nSagawa,\n\n=== Relevant Context ===\nAd-\nvances in Neural Information Processing Systems, 35:8265–\n8277, 2022. 5\n[A] [4] Sara Beery, Grant Van Horn, and Pietro Perona. Recognition\n[B] in terra incognita. In Proceedings of the European confer-\nence on computer vision (ECCV), pages 456–473, 2018. 5,\n11\n[5] Gilles Blanchard, Gyemin Lee, and Clayton Scott. Gener-\n\n=== Structural Markers (in context) ===\n  citation_marker: 2\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): YES\nText A ends with period: NO\nText B starts with capital: YES\n\n=== Machine State ===\nMachine Decision (may be wrong): INSUFFICIENT_EVIDENCE",
+        "view_length": 659,
+        "has_context": true,
+        "has_markers": true,
+        "markers": {
+          "citation_marker": 2
+        },
+        "markers_source": "distilled_context",
+        "distilled_context": {
+          "available": true,
+          "context_text": "Ad-\nvances in Neural Information Processing Systems, 35:8265–\n8277, 2022. 5\n[A] [4] Sara Beery, Grant Van Horn, and Pietro Perona. Recognition\n[B] in terra incognita. In Proceedings of the European confer-\nence on computer vision (ECCV), pages 456–473, 2018. 5,\n11\n[5] Gilles Blanchard, Gyemin Lee, and Clayton Scott. Gener-",
+          "human_view": "Ad-\nvances in Neural Information Processing Systems, 35:8265–\n8277, 2022. 5\n[A] [4] Sara Beery, Grant Van Horn, and Pietro Perona. Recognition\n[B] in terra incognita. In Proceedings of the European confer-\nence on computer vision (ECCV), pages 456–473, 2018. 5,\n11\n[5] Gilles Blanchard, Gyemin Lee, and Clayton Scott. Gener-",
+          "compression_ratio": 0.141,
+          "raw_length": 2294,
+          "distilled_length": 324,
+          "window_start": 21,
+          "window_end": 29
+        },
+        "raw_context": "    harmful transformations during training based on a reward\n    function that compares the performance of a label classi-\n    fier with an exponential moving average of it. All these\n    contributions allowed our method to achieve equal or better\n    results than state-of-the-art methods on five challenging do-\n    main generalization datasets with a minimum intervention\n    in the standard ERM pipeline.\n    References\n    [1] Isabela Albuquerque, Jo˜ao Monteiro, Mohammad Darvishi,\n    Tiago H Falk, and Ioannis Mitliagkas.\n    Generalizing to\n    unseen domains via distribution matching. arXiv preprint\n    arXiv:1911.00804, 2019. 3\n    [2] Martin Arjovsky, L´eon Bottou, Ishaan Gulrajani, and David\n    Lopez-Paz.\n    Invariant risk minimization.\n    arXiv preprint\n    arXiv:1907.02893, 2019. 3, 6, 15, 16, 17\n    [3] Devansh Arpit, Huan Wang, Yingbo Zhou, and Caiming\n    Xiong. Ensemble of averages: Improving model selection\n    and boosting performance in domain generalization.\n    Ad-\n    vances in Neural Information Processing Systems, 35:8265–\n    8277, 2022. 5\n    [4] Sara Beery, Grant Van Horn, and Pietro Perona. Recognition\n    in terra incognita. In Proceedings of the European confer-\n    ence on computer vision (ECCV), pages 456–473, 2018. 5,\n    11\n    [5] Gilles Blanchard, Gyemin Lee, and Clayton Scott. Gener-\n    alizing from several related classification tasks to a new un-\n    labeled sample. Advances in neural information processing\n    systems, 24, 2011. 1\n    [6] Manh-Ha Bui, Toan Tran, Anh Tran, and Dinh Phung. Ex-\n    ploiting domain-specific features to enhance domain gener-\n    alization. Advances in Neural Information Processing Sys-\n    tems, 34:21189–21201, 2021. 3, 6, 15, 16, 17\n    [7] Junbum Cha,\n    Sanghyuk Chun,\n    Kyungjae Lee,\n    Han-\n    Cheol Cho, Seunghyun Park, Yunsung Lee, and Sungrae\n    Park.\n    Swad: Domain generalization by seeking flat min-\n    ima. Advances in Neural Information Processing Systems,\n    34:22405–22418, 2021. 5, 6, 11, 14\n    [8] Ekin D Cubuk, Barret Zoph, Dandelion Mane, Vijay Vasude-\n    van, and Quoc V Le. Autoaugment: Learning augmentation\n    strategies from data. In Proceedings of the IEEE/CVF Con-\n    ference on Computer Vision and Pattern Recognition, pages\n    113–123, 2019. 2, 3, 4, 8",
+        "raw_context_length": 2294,
+        "visible_fields": 8,
+        "compression_ratio": 0.141
+      },
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "timestamp": "2026-09-13T15:21:12.962678+00:00"
+      }
+    },
+    {
+      "case_id": "IND-AMB-062",
+      "document_id": "ind_arxiv_bio2",
+      "page": 12,
+      "text_a": "[-32, 32]",
+      "text_b": "[-32, 32]",
+      "semantic_gt": "KEEP_SEPARATE",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_agrees_with_gt": true,
+      "condition_a": {
+        "view": "=== Text A ===\n[-32, 32]\n\n=== Text B ===\n[-32, 32]\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): NO\nText A ends with period: NO\nText B starts with capital: NO\n\n=== Machine State ===\nMachine Decision (may be wrong): KEEP_SEPARATE",
+        "view_length": 241,
+        "has_context": false,
+        "has_markers": false,
+        "visible_fields": 6
+      },
+      "condition_b": {
+        "view": "=== Text A ===\n[-32, 32]\n\n=== Text B ===\n[-32, 32]\n\n=== Relevant Context ===\n[-1.0, 1.0]\n[-1.0, 1.0]\nTranslateX(Y)\n[A] [-32, 32]\n[-32, 32]\n[-224.0, 224.0]\nRotate\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): NO\nText A ends with period: NO\nText B starts with capital: NO\n\n=== Machine State ===\nMachine Decision (may be wrong): KEEP_SEPARATE",
+        "view_length": 352,
+        "has_context": true,
+        "has_markers": false,
+        "markers": {},
+        "markers_source": "distilled_context",
+        "distilled_context": {
+          "available": true,
+          "context_text": "[-1.0, 1.0]\n[-1.0, 1.0]\nTranslateX(Y)\n[A] [-32, 32]\n[-32, 32]\n[-224.0, 224.0]\nRotate",
+          "human_view": "[-1.0, 1.0]\n[-1.0, 1.0]\nTranslateX(Y)\n[A] [-32, 32]\n[-32, 32]\n[-224.0, 224.0]\nRotate",
+          "compression_ratio": 0.113,
+          "raw_length": 741,
+          "distilled_length": 84,
+          "window_start": 7,
+          "window_end": 14
+        },
+        "raw_context": "    Transform\n    Search Space Ranges\n    Default [9,33]\n    Wide [33]\n    Wider (Ours)\n    ShearX(Y)\n    [-0.3, 0.3]\n    [-1.0, 1.0]\n    [-1.0, 1.0]\n    TranslateX(Y)\n>>> [-32, 32]  [TEXT A]\n>>> [-32, 32]  [TEXT A]\n    [-224.0, 224.0]\n    Rotate\n    [-30.0, 30.0]\n    [-135.0, 135.0]\n    [-135.0, 135.0]\n    Posterize\n    [4, 8]\n    [2, 8]\n    [0, 8]\n    Solarize\n    [0, 255]\n    [0, 255]\n    [0, 255]\n    Contrast\n    [-1.0, 1.0]\n    [-1.0, 1.0]\n    [-10.0, 10.0]\n    Color\n    [-1.0, 1.0]\n    [-1.0, 1.0]\n    [-10.0, 10.0]\n    Sharpness\n    [-1.0, 1.0]\n    [-1.0, 1.0]\n    [-10.0, 10.0]\n    Brightness\n    [-1.0, 1.0]\n    [-1.0, 1.0]\n    [-1.0, 10.0]\n    AutoContrast\n    N/A\n    N/A\n    N/A\n    Equalize\n    N/A\n    N/A\n    N/A\n    Grey",
+        "raw_context_length": 741,
+        "visible_fields": 7,
+        "compression_ratio": 0.113
+      },
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "timestamp": "2026-09-13T15:21:12.962678+00:00"
+      }
+    },
+    {
+      "case_id": "IND-AMB-067",
+      "document_id": "ind_arxiv_bio2",
+      "page": 12,
+      "text_a": "[4, 8]",
+      "text_b": "[2, 8]",
+      "semantic_gt": "KEEP_SEPARATE",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "machine_decision": "KEEP_SEPARATE",
+      "machine_agrees_with_gt": true,
+      "condition_a": {
+        "view": "=== Text A ===\n[4, 8]\n\n=== Text B ===\n[2, 8]\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): NO\nText A ends with period: NO\nText B starts with capital: NO\n\n=== Machine State ===\nMachine Decision (may be wrong): KEEP_SEPARATE",
+        "view_length": 235,
+        "has_context": false,
+        "has_markers": false,
+        "visible_fields": 6
+      },
+      "condition_b": {
+        "view": "=== Text A ===\n[4, 8]\n\n=== Text B ===\n[2, 8]\n\n=== Relevant Context ===\n[-135.0, 135.0]\n[-135.0, 135.0]\nPosterize\n[A] [4, 8]\n[B] [2, 8]\n[0, 8]\nSolarize\n[0, 255]\n\n=== Structural Facts ===\nIS-01 (Number): NO\nIS-02 (Text): NO\nText A ends with period: NO\nText B starts with capital: NO\n\n=== Machine State ===\nMachine Decision (may be wrong): KEEP_SEPARATE",
+        "view_length": 350,
+        "has_context": true,
+        "has_markers": false,
+        "markers": {},
+        "markers_source": "distilled_context",
+        "distilled_context": {
+          "available": true,
+          "context_text": "[-135.0, 135.0]\n[-135.0, 135.0]\nPosterize\n[A] [4, 8]\n[B] [2, 8]\n[0, 8]\nSolarize\n[0, 255]",
+          "human_view": "[-135.0, 135.0]\n[-135.0, 135.0]\nPosterize\n[A] [4, 8]\n[B] [2, 8]\n[0, 8]\nSolarize\n[0, 255]",
+          "compression_ratio": 0.119,
+          "raw_length": 741,
+          "distilled_length": 88,
+          "window_start": 15,
+          "window_end": 23
+        },
+        "raw_context": "    Transform\n    Search Space Ranges\n    Default [9,33]\n    Wide [33]\n    Wider (Ours)\n    ShearX(Y)\n    [-0.3, 0.3]\n    [-1.0, 1.0]\n    [-1.0, 1.0]\n    TranslateX(Y)\n    [-32, 32]\n    [-32, 32]\n    [-224.0, 224.0]\n    Rotate\n    [-30.0, 30.0]\n    [-135.0, 135.0]\n    [-135.0, 135.0]\n    Posterize\n>>> [4, 8]  [TEXT A]\n>>> [2, 8]  [TEXT B]\n    [0, 8]\n    Solarize\n    [0, 255]\n    [0, 255]\n    [0, 255]\n    Contrast\n    [-1.0, 1.0]\n    [-1.0, 1.0]\n    [-10.0, 10.0]\n    Color\n    [-1.0, 1.0]\n    [-1.0, 1.0]\n    [-10.0, 10.0]\n    Sharpness\n    [-1.0, 1.0]\n    [-1.0, 1.0]\n    [-10.0, 10.0]\n    Brightness\n    [-1.0, 1.0]\n    [-1.0, 1.0]\n    [-1.0, 10.0]\n    AutoContrast\n    N/A\n    N/A\n    N/A\n    Equalize\n    N/A\n    N/A\n    N/A\n    Grey",
+        "raw_context_length": 741,
+        "visible_fields": 7,
+        "compression_ratio": 0.119
+      },
+      "provenance": {
+        "machine_eval_hash": "437aa665210ccd04",
+        "tld_hash": "022f5c21e872ad9e",
+        "gt_hash": "7349963d0d23b5ef",
+        "timestamp": "2026-09-13T15:21:12.962678+00:00"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4027 @@
+{
+  "metadata": {
+    "experiment": "Independent Machine-Resolvability Evaluation",
+    "type": "FROZEN OUT-OF-SAMPLE EVALUATION",
+    "timestamp": "2026-09-09T21:09:00",
+    "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+    "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+    "experiment_version": "FROZEN_v1.0",
+    "deterministic": true,
+    "determinism_verified": true,
+    "run_1_timestamp": "2026-09-09T21:09:00",
+    "run_2_timestamp": "2026-09-09T21:09:00"
+  },
+  "frozen_inputs": {
+    "evaluation_set_hash": "3ce33d89b12019e615b81ea135950c8af5dd08578c4ae3b0512a6b0a16254e73",
+    "semantic_gt_hash": "6b84193bfa94c59a0e3034fc8dd5c5185ed3c591d4b146eb463db674ac9ed7a1",
+    "feature_spec_hash": "FROZEN in independent_machine_resolvability_experiment_design.md §6.2-6.3",
+    "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+    "is01_definition": "re.match(r'^\\d+(\\.\\d+)*\\.?$', text.strip()) OR re.match(r'^[A-Z]\\.\\d+$', text.strip())",
+    "is02_definition": "any(len(re.sub(r'[^a-zA-Z]', '', w)) > 2 for w in text.split())",
+    "decision_protocol": "IS-01_a=True AND IS-02_b=True → MERGE; IS-01_a=False AND IS-02_b=False → KEEP_SEPARATE; Otherwise → INSUFFICIENT_EVIDENCE"
+  },
+  "machine_results": [
+    {
+      "case_id": "IND-AMB-001",
+      "document_id": "ind_arxiv_2402",
+      "page": 27,
+      "text_a": "Fig. 14a",
+      "text_b": "Fig. 14b",
+      "geometry_provenance": {
+        "bbox_a": [
+          151.9,
+          291.0,
+          185.6,
+          303.0
+        ],
+        "bbox_b": [
+          207.2,
+          291.0,
+          241.4,
+          303.0
+        ],
+        "w_a": 33.7,
+        "w_b": 34.2,
+        "h_gap": 21.6,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 2,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Fig. 14a"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Fig. 14b"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "FIGURE_LABEL",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-003",
+      "document_id": "ind_arxiv_2402",
+      "page": 30,
+      "text_a": ".",
+      "text_b": "Philadelphia, PA: Society for",
+      "geometry_provenance": {
+        "bbox_a": [
+          413.0,
+          732.8,
+          415.0,
+          742.4
+        ],
+        "bbox_b": [
+          424.1,
+          732.8,
+          523.3,
+          742.4
+        ],
+        "w_a": 2.0,
+        "w_b": 99.2,
+        "h_gap": 9.1,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 4,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "."
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "Philadelphia, PA: Society for"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-004",
+      "document_id": "ind_arxiv_2402",
+      "page": 31,
+      "text_a": ", 2nd ed.",
+      "text_b": "New York, NY: Springer, 2006. [Online]. Available:",
+      "geometry_provenance": {
+        "bbox_a": [
+          286.1,
+          643.1,
+          321.8,
+          652.7
+        ],
+        "bbox_b": [
+          332.6,
+          643.1,
+          523.3,
+          652.7
+        ],
+        "w_a": 35.8,
+        "w_b": 190.7,
+        "h_gap": 10.8,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 4,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": ", 2nd ed."
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "New York, NY: Springer, 2006. [Online]. Available:"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-002",
+      "document_id": "ind_arxiv_2402",
+      "page": 30,
+      "text_a": ".",
+      "text_b": "Springer Berlin Heidelberg,",
+      "geometry_provenance": {
+        "bbox_a": [
+          421.1,
+          702.9,
+          423.1,
+          712.5
+        ],
+        "bbox_b": [
+          431.6,
+          702.9,
+          523.3,
+          712.5
+        ],
+        "w_a": 2.0,
+        "w_b": 91.6,
+        "h_gap": 8.6,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 4,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "."
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "Springer Berlin Heidelberg,"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-090",
+      "document_id": "ind_arxiv_bio2",
+      "page": 16,
+      "text_a": "Caltech101",
+      "text_b": "LabelMe",
+      "geometry_provenance": {
+        "bbox_a": [
+          287.7,
+          141.8,
+          333.1,
+          151.8
+        ],
+        "bbox_b": [
+          345.0,
+          141.8,
+          381.0,
+          151.8
+        ],
+        "w_a": 45.4,
+        "w_b": 36.0,
+        "h_gap": 12.0,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 5,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Caltech101"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "LabelMe"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-084",
+      "document_id": "ind_arxiv_bio2",
+      "page": 15,
+      "text_a": "Cartoon",
+      "text_b": "Photo",
+      "geometry_provenance": {
+        "bbox_a": [
+          344.6,
+          446.3,
+          376.7,
+          456.3
+        ],
+        "bbox_b": [
+          394.9,
+          446.3,
+          418.2,
+          456.3
+        ],
+        "w_a": 32.1,
+        "w_b": 23.2,
+        "h_gap": 18.2,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 5,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Cartoon"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Photo"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-054",
+      "document_id": "ind_arxiv_bio2",
+      "page": 11,
+      "text_a": "Hyperparameter",
+      "text_b": "Search Space",
+      "geometry_provenance": {
+        "bbox_a": [
+          348.6,
+          76.3,
+          420.4,
+          86.3
+        ],
+        "bbox_b": [
+          440.6,
+          76.3,
+          497.2,
+          86.3
+        ],
+        "w_a": 71.8,
+        "w_b": 56.6,
+        "h_gap": 20.2,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 3,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Hyperparameter"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Search Space"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-008",
+      "document_id": "ind_arxiv_bio2",
+      "page": 3,
+      "text_a": "in improving out-of-distribution generalization.",
+      "text_b": "Our ap-",
+      "geometry_provenance": {
+        "bbox_a": [
+          50.1,
+          643.7,
+          244.8,
+          653.6
+        ],
+        "bbox_b": [
+          253.7,
+          643.7,
+          286.4,
+          653.6
+        ],
+        "w_a": 194.7,
+        "w_b": 32.6,
+        "h_gap": 8.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 2,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "in improving out-of-distribution generalization."
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Our ap-"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-041",
+      "document_id": "ind_arxiv_bio2",
+      "page": 9,
+      "text_a": "Shiori",
+      "text_b": "Sagawa,",
+      "geometry_provenance": {
+        "bbox_a": [
+          404.5,
+          604.3,
+          426.4,
+          613.3
+        ],
+        "bbox_b": [
+          434.7,
+          604.3,
+          464.6,
+          613.3
+        ],
+        "w_a": 21.9,
+        "w_b": 29.9,
+        "h_gap": 8.3,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 8,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Shiori"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Sagawa,"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-052",
+      "document_id": "ind_arxiv_bio2",
+      "page": 10,
+      "text_a": "Guo, Jian Zhao, and Furao Shen.",
+      "text_b": "Image data aug-",
+      "geometry_provenance": {
+        "bbox_a": [
+          328.8,
+          682.3,
+          466.0,
+          691.2
+        ],
+        "bbox_b": [
+          480.4,
+          682.3,
+          545.1,
+          691.2
+        ],
+        "w_a": 137.2,
+        "w_b": 64.7,
+        "h_gap": 14.4,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 4,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Guo, Jian Zhao, and Furao Shen."
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Image data aug-"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-062",
+      "document_id": "ind_arxiv_bio2",
+      "page": 12,
+      "text_a": "[-32, 32]",
+      "text_b": "[-32, 32]",
+      "geometry_provenance": {
+        "bbox_a": [
+          243.3,
+          141.2,
+          278.2,
+          151.2
+        ],
+        "bbox_b": [
+          314.9,
+          141.2,
+          349.7,
+          151.2
+        ],
+        "w_a": 34.9,
+        "w_b": 34.9,
+        "h_gap": 36.7,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 4,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "[-32, 32]"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "[-32, 32]"
+      },
+      "machine_decision": "KEEP_SEPARATE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": false,
+        "protocol_step": "STEP_3"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-067",
+      "document_id": "ind_arxiv_bio2",
+      "page": 12,
+      "text_a": "[4, 8]",
+      "text_b": "[2, 8]",
+      "geometry_provenance": {
+        "bbox_a": [
+          249.9,
+          169.6,
+          271.5,
+          179.6
+        ],
+        "bbox_b": [
+          321.5,
+          169.6,
+          343.1,
+          179.6
+        ],
+        "w_a": 21.6,
+        "w_b": 21.6,
+        "h_gap": 50.0,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 4,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "[4, 8]"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "[2, 8]"
+      },
+      "machine_decision": "KEEP_SEPARATE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": false,
+        "protocol_step": "STEP_3"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-072",
+      "document_id": "ind_arxiv_bio2",
+      "page": 12,
+      "text_a": "[-1.0, 1.0]",
+      "text_b": "[-10.0, 10.0]",
+      "geometry_provenance": {
+        "bbox_a": [
+          312.4,
+          198.0,
+          352.2,
+          208.0
+        ],
+        "bbox_b": [
+          379.1,
+          198.0,
+          428.9,
+          208.0
+        ],
+        "w_a": 39.8,
+        "w_b": 49.8,
+        "h_gap": 26.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 4,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "[-1.0, 1.0]"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "[-10.0, 10.0]"
+      },
+      "machine_decision": "KEEP_SEPARATE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": false,
+        "protocol_step": "STEP_3"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-033",
+      "document_id": "ind_arxiv_bio2",
+      "page": 9,
+      "text_a": "Le.",
+      "text_b": "Randaugment:",
+      "geometry_provenance": {
+        "bbox_a": [
+          70.0,
+          581.5,
+          81.7,
+          590.4
+        ],
+        "bbox_b": [
+          94.5,
+          581.5,
+          146.8,
+          590.4
+        ],
+        "w_a": 11.7,
+        "w_b": 52.3,
+        "h_gap": 12.8,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 6,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Le."
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "Randaugment:"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "OTHER_AMBIGUOUS",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-082",
+      "document_id": "ind_arxiv_bio2",
+      "page": 14,
+      "text_a": ".",
+      "text_b": "The Affinity,",
+      "geometry_provenance": {
+        "bbox_a": [
+          149.7,
+          226.7,
+          152.2,
+          236.6
+        ],
+        "bbox_b": [
+          161.5,
+          226.7,
+          211.6,
+          236.6
+        ],
+        "w_a": 2.5,
+        "w_b": 50.1,
+        "h_gap": 9.3,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 13,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "."
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "The Affinity,"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-019",
+      "document_id": "ind_arxiv_bio2",
+      "page": 6,
+      "text_a": "-",
+      "text_b": "65.5",
+      "geometry_provenance": {
+        "bbox_a": [
+          322.2,
+          389.8,
+          325.5,
+          399.7
+        ],
+        "bbox_b": [
+          368.6,
+          389.8,
+          386.0,
+          399.7
+        ],
+        "w_a": 3.3,
+        "w_b": 17.4,
+        "h_gap": 43.1,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 9,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": true,
+        "text_a_stripped": "-"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "65.5"
+      },
+      "machine_decision": "KEEP_SEPARATE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "TABLE_CELL_PAIR",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": false,
+        "protocol_step": "STEP_3"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-083",
+      "document_id": "ind_arxiv_bio2",
+      "page": 15,
+      "text_a": "Art",
+      "text_b": "Cartoon",
+      "geometry_provenance": {
+        "bbox_a": [
+          308.1,
+          446.3,
+          321.3,
+          456.3
+        ],
+        "bbox_b": [
+          344.6,
+          446.3,
+          376.7,
+          456.3
+        ],
+        "w_a": 13.3,
+        "w_b": 32.1,
+        "h_gap": 23.2,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 5,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Art"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Cartoon"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "OTHER_AMBIGUOUS",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-032",
+      "document_id": "ind_arxiv_bio2",
+      "page": 9,
+      "text_a": "Kyungjae Lee,",
+      "text_b": "Han-",
+      "geometry_provenance": {
+        "bbox_a": [
+          202.9,
+          458.7,
+          260.2,
+          467.7
+        ],
+        "bbox_b": [
+          268.4,
+          458.7,
+          286.4,
+          467.7
+        ],
+        "w_a": 57.3,
+        "w_b": 17.9,
+        "h_gap": 8.2,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 5,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Kyungjae Lee,"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Han-"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_ADJUDICATED",
+      "agreement_status": "ADJUDICATED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-016",
+      "document_id": "ind_arxiv_bio2",
+      "page": 6,
+      "text_a": "VLCS",
+      "text_b": "OfficeHome",
+      "geometry_provenance": {
+        "bbox_a": [
+          311.1,
+          288.3,
+          336.6,
+          298.3
+        ],
+        "bbox_b": [
+          352.8,
+          288.3,
+          401.8,
+          298.3
+        ],
+        "w_a": 25.5,
+        "w_b": 49.0,
+        "h_gap": 16.2,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 6,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "VLCS"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "OfficeHome"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-034",
+      "document_id": "ind_arxiv_bio2",
+      "page": 9,
+      "text_a": "Randaugment:",
+      "text_b": "Practical automated data augmen-",
+      "geometry_provenance": {
+        "bbox_a": [
+          94.5,
+          581.5,
+          146.8,
+          590.4
+        ],
+        "bbox_b": [
+          155.6,
+          581.5,
+          286.4,
+          590.4
+        ],
+        "w_a": 52.3,
+        "w_b": 130.7,
+        "h_gap": 8.8,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 6,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Randaugment:"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Practical automated data augmen-"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-009",
+      "document_id": "ind_arxiv_bio2",
+      "page": 3,
+      "text_a": "eralization for classification.",
+      "text_b": "During training, we as-",
+      "geometry_provenance": {
+        "bbox_a": [
+          308.9,
+          137.2,
+          428.7,
+          147.1
+        ],
+        "bbox_b": [
+          441.8,
+          137.2,
+          545.1,
+          147.1
+        ],
+        "w_a": 119.8,
+        "w_b": 103.3,
+        "h_gap": 13.1,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 2,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "eralization for classification."
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "During training, we as-"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-057",
+      "document_id": "ind_arxiv_bio2",
+      "page": 12,
+      "text_a": "]",
+      "text_b": "Wider (Ours)",
+      "geometry_provenance": {
+        "bbox_a": [
+          349.8,
+          110.0,
+          353.1,
+          120.0
+        ],
+        "bbox_b": [
+          375.2,
+          110.0,
+          432.8,
+          120.0
+        ],
+        "w_a": 3.3,
+        "w_b": 57.6,
+        "h_gap": 22.1,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 9,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "]"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "Wider (Ours)"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "OTHER_AMBIGUOUS",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-030",
+      "document_id": "ind_arxiv_bio2",
+      "page": 9,
+      "text_a": "[7] Junbum Cha,",
+      "text_b": "Sanghyuk Chun,",
+      "geometry_provenance": {
+        "bbox_a": [
+          54.6,
+          458.7,
+          122.0,
+          467.7
+        ],
+        "bbox_b": [
+          130.2,
+          458.7,
+          194.7,
+          467.7
+        ],
+        "w_a": 67.3,
+        "w_b": 64.5,
+        "h_gap": 8.2,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 5,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "[7] Junbum Cha,"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Sanghyuk Chun,"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-049",
+      "document_id": "ind_arxiv_bio2",
+      "page": 10,
+      "text_a": "Levine.",
+      "text_b": "Bitrate-constrained dro:",
+      "geometry_provenance": {
+        "bbox_a": [
+          328.8,
+          251.6,
+          355.7,
+          260.6
+        ],
+        "bbox_b": [
+          370.8,
+          251.6,
+          459.9,
+          260.6
+        ],
+        "w_a": 26.9,
+        "w_b": 89.1,
+        "h_gap": 15.1,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 3,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Levine."
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Bitrate-constrained dro:"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-104",
+      "document_id": "ind_arxiv_bio2",
+      "page": 17,
+      "text_a": "Infograph",
+      "text_b": "Painting",
+      "geometry_provenance": {
+        "bbox_a": [
+          286.7,
+          476.4,
+          323.6,
+          485.7
+        ],
+        "bbox_b": [
+          337.1,
+          476.4,
+          368.1,
+          485.7
+        ],
+        "w_a": 36.8,
+        "w_b": 31.0,
+        "h_gap": 13.5,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 7,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Infograph"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Painting"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-010",
+      "document_id": "ind_arxiv_bio2",
+      "page": 3,
+      "text_a": ".",
+      "text_b": "Here,",
+      "geometry_provenance": {
+        "bbox_a": [
+          321.2,
+          208.9,
+          323.7,
+          218.9
+        ],
+        "bbox_b": [
+          332.1,
+          208.9,
+          353.9,
+          218.9
+        ],
+        "w_a": 2.5,
+        "w_b": 21.9,
+        "h_gap": 8.4,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 9,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "."
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "Here,"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-101",
+      "document_id": "ind_arxiv_bio2",
+      "page": 17,
+      "text_a": "L38",
+      "text_b": "L43",
+      "geometry_provenance": {
+        "bbox_a": [
+          349.7,
+          148.3,
+          365.7,
+          158.2
+        ],
+        "bbox_b": [
+          395.6,
+          148.3,
+          411.6,
+          158.2
+        ],
+        "w_a": 16.1,
+        "w_b": 16.0,
+        "h_gap": 29.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 5,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "L38"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "L43"
+      },
+      "machine_decision": "KEEP_SEPARATE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "OTHER_AMBIGUOUS",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": false,
+        "protocol_step": "STEP_3"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-005",
+      "document_id": "ind_arxiv_bio2",
+      "page": 1,
+      "text_a": "distribution.",
+      "text_b": "For the out-of-domain case, where the test",
+      "geometry_provenance": {
+        "bbox_a": [
+          50.1,
+          387.4,
+          98.9,
+          397.3
+        ],
+        "bbox_b": [
+          107.3,
+          387.4,
+          286.4,
+          397.3
+        ],
+        "w_a": 48.8,
+        "w_b": 179.1,
+        "h_gap": 8.4,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 2,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "distribution."
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "For the out-of-domain case, where the test"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-093",
+      "document_id": "ind_arxiv_bio2",
+      "page": 16,
+      "text_a": "Art",
+      "text_b": "Clipart",
+      "geometry_provenance": {
+        "bbox_a": [
+          308.1,
+          459.3,
+          321.3,
+          469.3
+        ],
+        "bbox_b": [
+          346.8,
+          459.3,
+          374.4,
+          469.3
+        ],
+        "w_a": 13.3,
+        "w_b": 27.7,
+        "h_gap": 25.4,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 5,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Art"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Clipart"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "OTHER_AMBIGUOUS",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-154",
+      "document_id": "ind_qbio_genomics",
+      "page": 14,
+      "text_a": "[20]",
+      "text_b": "Nezha S Benabdallah et al. “Decreased Enhancer-Promoter Proximity Accompanying Enhancer",
+      "geometry_provenance": {
+        "bbox_a": [
+          52.8,
+          521.3,
+          69.8,
+          532.2
+        ],
+        "bbox_b": [
+          80.7,
+          521.3,
+          542.5,
+          532.2
+        ],
+        "w_a": 17.0,
+        "w_b": 461.8,
+        "h_gap": 10.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 2,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "[20]"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "Nezha S Benabdallah et al. “Decreased Enhancer-Promoter Proximity Accompanying Enhancer"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-109",
+      "document_id": "ind_qbio_genomics",
+      "page": 2,
+      "text_a": "brain, we performed Hi-M imaging in brain cryosections at",
+      "text_b": "3kb resolution (Figs.",
+      "geometry_provenance": {
+        "bbox_a": [
+          133.4,
+          629.1,
+          431.4,
+          640.0
+        ],
+        "bbox_b": [
+          441.4,
+          629.1,
+          542.5,
+          640.0
+        ],
+        "w_a": 298.0,
+        "w_b": 101.2,
+        "h_gap": 9.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 4,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "brain, we performed Hi-M imaging in brain cryosections at"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "3kb resolution (Figs."
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-113",
+      "document_id": "ind_qbio_genomics",
+      "page": 10,
+      "text_a": "Label",
+      "text_b": "Post-processed table",
+      "geometry_provenance": {
+        "bbox_a": [
+          372.5,
+          47.2,
+          402.7,
+          58.2
+        ],
+        "bbox_b": [
+          420.7,
+          47.2,
+          533.3,
+          58.2
+        ],
+        "w_a": 30.2,
+        "w_b": 112.6,
+        "h_gap": 18.0,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 3,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Label"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Post-processed table"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-114",
+      "document_id": "ind_qbio_genomics",
+      "page": 10,
+      "text_a": "non-KCs",
+      "text_b": "traces non KCs.ecsv",
+      "geometry_provenance": {
+        "bbox_a": [
+          366.8,
+          118.4,
+          408.4,
+          129.3
+        ],
+        "bbox_b": [
+          428.7,
+          118.4,
+          525.3,
+          129.3
+        ],
+        "w_a": 41.6,
+        "w_b": 96.5,
+        "h_gap": 20.4,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 2,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "non-KCs"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "traces non KCs.ecsv"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-115",
+      "document_id": "ind_qbio_genomics",
+      "page": 10,
+      "text_a": "KCs",
+      "text_b": "traces KCs.ecsv",
+      "geometry_provenance": {
+        "bbox_a": [
+          377.4,
+          143.8,
+          397.8,
+          154.7
+        ],
+        "bbox_b": [
+          439.5,
+          143.8,
+          514.5,
+          154.7
+        ],
+        "w_a": 20.4,
+        "w_b": 75.0,
+        "h_gap": 41.7,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 2,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "KCs"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "traces KCs.ecsv"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "OTHER_AMBIGUOUS",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-116",
+      "document_id": "ind_qbio_genomics",
+      "page": 10,
+      "text_a": "Trace table",
+      "text_b": "Cell-type",
+      "geometry_provenance": {
+        "bbox_a": [
+          103.1,
+          266.7,
+          164.8,
+          277.6
+        ],
+        "bbox_b": [
+          208.6,
+          266.7,
+          258.8,
+          277.6
+        ],
+        "w_a": 61.6,
+        "w_b": 50.2,
+        "h_gap": 43.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 5,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Trace table"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Cell-type"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-117",
+      "document_id": "ind_qbio_genomics",
+      "page": 10,
+      "text_a": "Cell-type",
+      "text_b": "N unique traces",
+      "geometry_provenance": {
+        "bbox_a": [
+          208.6,
+          266.7,
+          258.8,
+          277.6
+        ],
+        "bbox_b": [
+          285.1,
+          266.7,
+          372.5,
+          277.6
+        ],
+        "w_a": 50.2,
+        "w_b": 87.4,
+        "h_gap": 26.4,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 5,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Cell-type"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "N unique traces"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-118",
+      "document_id": "ind_qbio_genomics",
+      "page": 10,
+      "text_a": "N unique traces",
+      "text_b": "ROIs",
+      "geometry_provenance": {
+        "bbox_a": [
+          285.1,
+          266.7,
+          372.5,
+          277.6
+        ],
+        "bbox_b": [
+          384.9,
+          266.7,
+          413.1,
+          277.6
+        ],
+        "w_a": 87.4,
+        "w_b": 28.2,
+        "h_gap": 12.4,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 5,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "N unique traces"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "ROIs"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-119",
+      "document_id": "ind_qbio_genomics",
+      "page": 10,
+      "text_a": "ROIs",
+      "text_b": "Figures used",
+      "geometry_provenance": {
+        "bbox_a": [
+          384.9,
+          266.7,
+          413.1,
+          277.6
+        ],
+        "bbox_b": [
+          432.9,
+          266.7,
+          502.2,
+          277.6
+        ],
+        "w_a": 28.2,
+        "w_b": 69.3,
+        "h_gap": 19.8,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 5,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "ROIs"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Figures used"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "FIGURE_LABEL",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-122",
+      "document_id": "ind_qbio_genomics",
+      "page": 10,
+      "text_a": "332,537",
+      "text_b": "211",
+      "geometry_provenance": {
+        "bbox_a": [
+          310.9,
+          280.7,
+          346.7,
+          291.6
+        ],
+        "bbox_b": [
+          390.8,
+          280.7,
+          407.1,
+          291.6
+        ],
+        "w_a": 35.8,
+        "w_b": 16.4,
+        "h_gap": 44.1,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 5,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": true,
+        "text_a_stripped": "332,537"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "211"
+      },
+      "machine_decision": "KEEP_SEPARATE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "TABLE_CELL_PAIR",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": false,
+        "protocol_step": "STEP_3"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-132",
+      "document_id": "ind_qbio_genomics",
+      "page": 10,
+      "text_a": "33",
+      "text_b": "1, 4, S1, S2, S4",
+      "geometry_provenance": {
+        "bbox_a": [
+          393.5,
+          350.4,
+          404.4,
+          361.3
+        ],
+        "bbox_b": [
+          431.5,
+          350.4,
+          503.6,
+          361.3
+        ],
+        "w_a": 10.9,
+        "w_b": 72.1,
+        "h_gap": 27.1,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 6,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": true,
+        "is01_b": false,
+        "text_a_stripped": "33"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "1, 4, S1, S2, S4"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "TABLE_CELL",
+      "decision_evidence": {
+        "is01_a": true,
+        "is02_b": false,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-126",
+      "document_id": "ind_qbio_genomics",
+      "page": 10,
+      "text_a": "11",
+      "text_b": "2, 3, 4, S3, S4",
+      "geometry_provenance": {
+        "bbox_a": [
+          393.5,
+          308.6,
+          404.4,
+          319.5
+        ],
+        "bbox_b": [
+          434.5,
+          308.6,
+          500.6,
+          319.5
+        ],
+        "w_a": 10.9,
+        "w_b": 66.1,
+        "h_gap": 30.1,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 5,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": true,
+        "is01_b": false,
+        "text_a_stripped": "11"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "2, 3, 4, S3, S4"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "TABLE_CELL",
+      "decision_evidence": {
+        "is01_a": true,
+        "is02_b": false,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-129",
+      "document_id": "ind_qbio_genomics",
+      "page": 10,
+      "text_a": "traces KC ABp.ecsv",
+      "text_b": "KC-",
+      "geometry_provenance": {
+        "bbox_a": [
+          85.6,
+          336.4,
+          182.2,
+          347.4
+        ],
+        "bbox_b": [
+          214.2,
+          336.4,
+          233.9,
+          347.4
+        ],
+        "w_a": 96.6,
+        "w_b": 19.7,
+        "h_gap": 31.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 7,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "traces KC ABp.ecsv"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": false,
+        "text_b_stripped": "KC-"
+      },
+      "machine_decision": "KEEP_SEPARATE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "OTHER_AMBIGUOUS",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": false,
+        "protocol_step": "STEP_3"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-130",
+      "document_id": "ind_qbio_genomics",
+      "page": 10,
+      "text_a": "40",
+      "text_b": "1, 4, S1, S2, S4",
+      "geometry_provenance": {
+        "bbox_a": [
+          393.5,
+          336.4,
+          404.4,
+          347.4
+        ],
+        "bbox_b": [
+          431.5,
+          336.4,
+          503.6,
+          347.4
+        ],
+        "w_a": 10.9,
+        "w_b": 72.1,
+        "h_gap": 27.1,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 7,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": true,
+        "is01_b": false,
+        "text_a_stripped": "40"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "1, 4, S1, S2, S4"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "TABLE_CELL",
+      "decision_evidence": {
+        "is01_a": true,
+        "is02_b": false,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-134",
+      "document_id": "ind_qbio_genomics",
+      "page": 12,
+      "text_a": ").",
+      "text_b": "Profiles",
+      "geometry_provenance": {
+        "bbox_a": [
+          490.5,
+          536.9,
+          497.7,
+          547.9
+        ],
+        "bbox_b": [
+          507.1,
+          536.9,
+          542.5,
+          547.9
+        ],
+        "w_a": 7.3,
+        "w_b": 35.4,
+        "h_gap": 9.3,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 4,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": ")."
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "Profiles"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-138",
+      "document_id": "ind_qbio_genomics",
+      "page": 13,
+      "text_a": "[4]",
+      "text_b": "Jasper Janssens et al. “Decoding gene regulation in the fly brain”. en. In:",
+      "geometry_provenance": {
+        "bbox_a": [
+          58.3,
+          614.6,
+          69.8,
+          625.5
+        ],
+        "bbox_b": [
+          80.7,
+          614.6,
+          432.8,
+          625.5
+        ],
+        "w_a": 11.5,
+        "w_b": 352.0,
+        "h_gap": 10.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 4,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "[4]"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "Jasper Janssens et al. “Decoding gene regulation in the fly brain”. en. In:"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-139",
+      "document_id": "ind_qbio_genomics",
+      "page": 13,
+      "text_a": "[5]",
+      "text_b": "Jesse R Dixon et al. “Topological domains in mammalian genomes identified by analysis of chro-",
+      "geometry_provenance": {
+        "bbox_a": [
+          58.3,
+          659.7,
+          69.8,
+          670.6
+        ],
+        "bbox_b": [
+          80.7,
+          659.7,
+          542.5,
+          670.6
+        ],
+        "w_a": 11.5,
+        "w_b": 461.7,
+        "h_gap": 10.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 2,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "[5]"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "Jesse R Dixon et al. “Topological domains in mammalian genomes identified by analysis of chro-"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-185",
+      "document_id": "ind_qbio_genomics",
+      "page": 16,
+      "text_a": "[51]",
+      "text_b": "P.G. de Gennes.",
+      "geometry_provenance": {
+        "bbox_a": [
+          52.8,
+          305.5,
+          69.8,
+          316.4
+        ],
+        "bbox_b": [
+          80.7,
+          305.5,
+          161.7,
+          316.4
+        ],
+        "w_a": 17.0,
+        "w_b": 80.9,
+        "h_gap": 10.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 5,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "[51]"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "P.G. de Gennes."
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-167",
+      "document_id": "ind_qbio_genomics",
+      "page": 15,
+      "text_a": "[33]",
+      "text_b": "David Ll`eres, Andres Cardozo Gizzi, and Marcelo Nollmann. “Redefining enhancer action: In-",
+      "geometry_provenance": {
+        "bbox_a": [
+          52.8,
+          292.0,
+          69.8,
+          302.9
+        ],
+        "bbox_b": [
+          80.7,
+          292.0,
+          542.5,
+          302.9
+        ],
+        "w_a": 17.0,
+        "w_b": 461.8,
+        "h_gap": 10.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 2,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "[33]"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "David Ll`eres, Andres Cardozo Gizzi, and Marcelo Nollmann. “Redefining enhancer action: In-"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-125",
+      "document_id": "ind_qbio_genomics",
+      "page": 10,
+      "text_a": "traces non KC.ecsv",
+      "text_b": "non-KC",
+      "geometry_provenance": {
+        "bbox_a": [
+          87.8,
+          308.6,
+          180.1,
+          319.5
+        ],
+        "bbox_b": [
+          215.1,
+          308.6,
+          252.3,
+          319.5
+        ],
+        "w_a": 92.2,
+        "w_b": 37.3,
+        "h_gap": 35.0,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 5,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "traces non KC.ecsv"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "non-KC"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-152",
+      "document_id": "ind_qbio_genomics",
+      "page": 14,
+      "text_a": "[18]",
+      "text_b": "Elizabeth Ing-Simmons et al. “Independence of chromatin conformation and gene regulation dur-",
+      "geometry_provenance": {
+        "bbox_a": [
+          52.8,
+          444.7,
+          69.8,
+          455.6
+        ],
+        "bbox_b": [
+          80.7,
+          444.7,
+          542.5,
+          455.6
+        ],
+        "w_a": 17.0,
+        "w_b": 461.8,
+        "h_gap": 10.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 2,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "[18]"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "Elizabeth Ing-Simmons et al. “Independence of chromatin conformation and gene regulation dur-"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-188",
+      "document_id": "ind_qbio_genomics",
+      "page": 16,
+      "text_a": "[54]",
+      "text_b": "Nimish Khanna et al. “Chromosome dynamics near the sol-gel phase transition dictate the timing",
+      "geometry_provenance": {
+        "bbox_a": [
+          52.8,
+          440.9,
+          69.8,
+          451.9
+        ],
+        "bbox_b": [
+          80.7,
+          440.9,
+          542.5,
+          451.9
+        ],
+        "w_a": 17.0,
+        "w_b": 461.8,
+        "h_gap": 10.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 2,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "[54]"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "Nimish Khanna et al. “Chromosome dynamics near the sol-gel phase transition dictate the timing"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-175",
+      "document_id": "ind_qbio_genomics",
+      "page": 15,
+      "text_a": "[41]",
+      "text_b": "Luciana I G´omez Acu˜na et al. “Transcription decouples estrogen-dependent changes in enhancer-",
+      "geometry_provenance": {
+        "bbox_a": [
+          52.8,
+          612.4,
+          69.8,
+          623.3
+        ],
+        "bbox_b": [
+          80.7,
+          612.4,
+          542.5,
+          623.3
+        ],
+        "w_a": 17.0,
+        "w_b": 461.7,
+        "h_gap": 10.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 2,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "[41]"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "Luciana I G´omez Acu˜na et al. “Transcription decouples estrogen-dependent changes in enhancer-"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-193",
+      "document_id": "ind_qbio_rna",
+      "page": 26,
+      "text_a": "was",
+      "text_b": "published",
+      "geometry_provenance": {
+        "bbox_a": [
+          77.4,
+          710.0,
+          98.0,
+          721.2
+        ],
+        "bbox_b": [
+          110.6,
+          710.0,
+          156.2,
+          721.2
+        ],
+        "w_a": 20.6,
+        "w_b": 45.6,
+        "h_gap": 12.6,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 8,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "was"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "published"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "OTHER_AMBIGUOUS",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-194",
+      "document_id": "ind_qbio_rna",
+      "page": 26,
+      "text_a": "published",
+      "text_b": "under",
+      "geometry_provenance": {
+        "bbox_a": [
+          110.6,
+          710.0,
+          156.2,
+          721.2
+        ],
+        "bbox_b": [
+          168.8,
+          710.0,
+          197.2,
+          721.2
+        ],
+        "w_a": 45.6,
+        "w_b": 28.4,
+        "h_gap": 12.6,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 8,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "published"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "under"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-195",
+      "document_id": "ind_qbio_rna",
+      "page": 26,
+      "text_a": "a",
+      "text_b": "Creative",
+      "geometry_provenance": {
+        "bbox_a": [
+          209.7,
+          710.0,
+          218.1,
+          721.2
+        ],
+        "bbox_b": [
+          230.6,
+          710.0,
+          270.7,
+          721.2
+        ],
+        "w_a": 8.4,
+        "w_b": 40.1,
+        "h_gap": 12.6,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 8,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "a"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "Creative"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "OTHER_AMBIGUOUS",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-197",
+      "document_id": "ind_qbio_rna",
+      "page": 26,
+      "text_a": "Commons",
+      "text_b": "Attribution-Non-Commercial",
+      "geometry_provenance": {
+        "bbox_a": [
+          283.3,
+          710.0,
+          331.7,
+          721.2
+        ],
+        "bbox_b": [
+          344.2,
+          710.0,
+          470.5,
+          721.2
+        ],
+        "w_a": 48.4,
+        "w_b": 126.2,
+        "h_gap": 12.6,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 8,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "Commons"
+      },
+      "is02_observation": {
+        "is02_a": true,
+        "is02_b": true,
+        "text_b_stripped": "Attribution-Non-Commercial"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-201",
+      "document_id": "ind_qbio_rna",
+      "page": 32,
+      "text_a": "al.,",
+      "text_b": "2025).",
+      "geometry_provenance": {
+        "bbox_a": [
+          202.8,
+          719.1,
+          218.9,
+          730.3
+        ],
+        "bbox_b": [
+          229.2,
+          719.1,
+          260.4,
+          730.3
+        ],
+        "w_a": 16.1,
+        "w_b": 31.3,
+        "h_gap": 10.3,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 13,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "al.,"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "2025)."
+      },
+      "machine_decision": "KEEP_SEPARATE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": false,
+        "protocol_step": "STEP_3"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-200",
+      "document_id": "ind_qbio_rna",
+      "page": 32,
+      "text_a": "et",
+      "text_b": "al.,",
+      "geometry_provenance": {
+        "bbox_a": [
+          181.4,
+          719.1,
+          192.5,
+          730.3
+        ],
+        "bbox_b": [
+          202.8,
+          719.1,
+          218.9,
+          730.3
+        ],
+        "w_a": 11.1,
+        "w_b": 16.1,
+        "h_gap": 10.3,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 13,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "et"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "al.,"
+      },
+      "machine_decision": "KEEP_SEPARATE",
+      "semantic_gt": "MERGE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": false,
+        "protocol_step": "STEP_3"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-202",
+      "document_id": "ind_qbio_rna",
+      "page": 32,
+      "text_a": "2025).",
+      "text_b": "They",
+      "geometry_provenance": {
+        "bbox_a": [
+          229.2,
+          719.1,
+          260.4,
+          730.3
+        ],
+        "bbox_b": [
+          270.7,
+          719.1,
+          295.7,
+          730.3
+        ],
+        "w_a": 31.3,
+        "w_b": 25.0,
+        "h_gap": 10.3,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 13,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "2025)."
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "They"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "BODY_TEXT_CONTINUATION",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-240",
+      "document_id": "ind_qbio_rna",
+      "page": 34,
+      "text_a": "232",
+      "text_b": "25 mM",
+      "geometry_provenance": {
+        "bbox_a": [
+          210.4,
+          480.1,
+          226.1,
+          490.1
+        ],
+        "bbox_b": [
+          262.5,
+          480.1,
+          290.6,
+          490.1
+        ],
+        "w_a": 15.8,
+        "w_b": 28.1,
+        "h_gap": 36.4,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 13,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": true,
+        "is01_b": false,
+        "text_a_stripped": "232"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "25 mM"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "TABLE_CELL",
+      "decision_evidence": {
+        "is01_a": true,
+        "is02_b": false,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-247",
+      "document_id": "ind_qbio_rna",
+      "page": 35,
+      "text_a": "121",
+      "text_b": "40 mM Hepes",
+      "geometry_provenance": {
+        "bbox_a": [
+          210.4,
+          260.3,
+          226.1,
+          270.2
+        ],
+        "bbox_b": [
+          262.5,
+          260.3,
+          315.8,
+          270.2
+        ],
+        "w_a": 15.8,
+        "w_b": 53.2,
+        "h_gap": 36.4,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 11,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": true,
+        "is01_b": false,
+        "text_a_stripped": "121"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "40 mM Hepes"
+      },
+      "machine_decision": "MERGE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "TABLE_CELL",
+      "decision_evidence": {
+        "is01_a": true,
+        "is02_b": true,
+        "protocol_step": "STEP_2"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-211",
+      "document_id": "ind_qbio_rna",
+      "page": 33,
+      "text_a": "~450",
+      "text_b": "150",
+      "geometry_provenance": {
+        "bbox_a": [
+          174.2,
+          178.7,
+          194.8,
+          188.6
+        ],
+        "bbox_b": [
+          210.4,
+          178.7,
+          226.1,
+          188.6
+        ],
+        "w_a": 20.6,
+        "w_b": 15.8,
+        "h_gap": 15.6,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 12,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": true,
+        "text_a_stripped": "~450"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "150"
+      },
+      "machine_decision": "KEEP_SEPARATE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "TABLE_CELL_PAIR",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": false,
+        "protocol_step": "STEP_3"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-254",
+      "document_id": "ind_qbio_rna",
+      "page": 35,
+      "text_a": "3.0-3.2",
+      "text_b": "Dynamics of",
+      "geometry_provenance": {
+        "bbox_a": [
+          582.2,
+          322.9,
+          609.9,
+          332.8
+        ],
+        "bbox_b": [
+          634.5,
+          322.9,
+          683.0,
+          332.8
+        ],
+        "w_a": 27.8,
+        "w_b": 48.5,
+        "h_gap": 24.6,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 12,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": false,
+        "is01_b": false,
+        "text_a_stripped": "3.0-3.2"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "Dynamics of"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "TABLE_CELL",
+      "decision_evidence": {
+        "is01_a": false,
+        "is02_b": true,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-223",
+      "document_id": "ind_qbio_rna",
+      "page": 34,
+      "text_a": "5.",
+      "text_b": "SARS-CoV-2",
+      "geometry_provenance": {
+        "bbox_a": [
+          77.6,
+          89.0,
+          86.6,
+          98.9
+        ],
+        "bbox_b": [
+          110.3,
+          89.0,
+          162.5,
+          98.9
+        ],
+        "w_a": 9.0,
+        "w_b": 52.2,
+        "h_gap": 23.7,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 12,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": true,
+        "is01_b": false,
+        "text_a_stripped": "5."
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "SARS-CoV-2"
+      },
+      "machine_decision": "MERGE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "TABLE_CELL",
+      "decision_evidence": {
+        "is01_a": true,
+        "is02_b": true,
+        "protocol_step": "STEP_2"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-231",
+      "document_id": "ind_qbio_rna",
+      "page": 34,
+      "text_a": "43",
+      "text_b": "50 mM Na–",
+      "geometry_provenance": {
+        "bbox_a": [
+          210.4,
+          292.3,
+          221.6,
+          302.3
+        ],
+        "bbox_b": [
+          262.5,
+          292.3,
+          306.1,
+          302.3
+        ],
+        "w_a": 11.2,
+        "w_b": 43.6,
+        "h_gap": 40.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 11,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": true,
+        "is01_b": false,
+        "text_a_stripped": "43"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "50 mM Na–"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "TABLE_CELL",
+      "decision_evidence": {
+        "is01_a": true,
+        "is02_b": false,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-234",
+      "document_id": "ind_qbio_rna",
+      "page": 34,
+      "text_a": "6.5",
+      "text_b": "N/A",
+      "geometry_provenance": {
+        "bbox_a": [
+          582.2,
+          354.9,
+          595.6,
+          364.9
+        ],
+        "bbox_b": [
+          634.5,
+          354.9,
+          652.2,
+          364.9
+        ],
+        "w_a": 13.5,
+        "w_b": 17.7,
+        "h_gap": 38.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 11,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": true,
+        "is01_b": false,
+        "text_a_stripped": "6.5"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "N/A"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "TABLE_CELL",
+      "decision_evidence": {
+        "is01_a": true,
+        "is02_b": false,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-235",
+      "document_id": "ind_qbio_rna",
+      "page": 34,
+      "text_a": "6.",
+      "text_b": "RNA",
+      "geometry_provenance": {
+        "bbox_a": [
+          77.6,
+          417.5,
+          86.6,
+          427.5
+        ],
+        "bbox_b": [
+          110.3,
+          417.5,
+          131.5,
+          427.5
+        ],
+        "w_a": 9.0,
+        "w_b": 21.2,
+        "h_gap": 23.7,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 12,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": true,
+        "is01_b": false,
+        "text_a_stripped": "6."
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": true,
+        "text_b_stripped": "RNA"
+      },
+      "machine_decision": "MERGE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "TABLE_CELL",
+      "decision_evidence": {
+        "is01_a": true,
+        "is02_b": true,
+        "protocol_step": "STEP_2"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-251",
+      "document_id": "ind_qbio_rna",
+      "page": 35,
+      "text_a": "124",
+      "text_b": "~40",
+      "geometry_provenance": {
+        "bbox_a": [
+          174.2,
+          322.9,
+          189.9,
+          332.8
+        ],
+        "bbox_b": [
+          210.4,
+          322.9,
+          226.5,
+          332.8
+        ],
+        "w_a": 15.8,
+        "w_b": 16.1,
+        "h_gap": 20.4,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 12,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": true,
+        "is01_b": false,
+        "text_a_stripped": "124"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "~40"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "TABLE_CELL_PAIR",
+      "decision_evidence": {
+        "is01_a": true,
+        "is02_b": false,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    },
+    {
+      "case_id": "IND-AMB-221",
+      "document_id": "ind_qbio_rna",
+      "page": 33,
+      "text_a": "55",
+      "text_b": "50 mM Na-",
+      "geometry_provenance": {
+        "bbox_a": [
+          210.4,
+          459.6,
+          221.6,
+          469.6
+        ],
+        "bbox_b": [
+          262.5,
+          459.6,
+          304.6,
+          469.6
+        ],
+        "w_a": 11.2,
+        "w_b": 42.1,
+        "h_gap": 40.9,
+        "dy": 0.0,
+        "same_style": true,
+        "line_obs_count": 12,
+        "p4_decision": "KEEP_SEPARATE",
+        "geometric_state": "AMBIGUOUS"
+      },
+      "is01_observation": {
+        "is01_a": true,
+        "is01_b": false,
+        "text_a_stripped": "55"
+      },
+      "is02_observation": {
+        "is02_a": false,
+        "is02_b": false,
+        "text_b_stripped": "50 mM Na-"
+      },
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "semantic_gt": "KEEP_SEPARATE",
+      "gt_level": "LEVEL_2_AGREED",
+      "agreement_status": "AGREED",
+      "boundary_class": "TABLE_CELL",
+      "decision_evidence": {
+        "is01_a": true,
+        "is02_b": false,
+        "protocol_step": "STEP_4"
+      },
+      "experiment_version": "FROZEN_v1.0",
+      "feature_spec_version": "IS-01_FROZEN / IS-02_FROZEN",
+      "decision_protocol_version": "experiment_design_§9.3_FROZEN",
+      "provenance": {
+        "evaluation_set_source": "independent_evaluation_sampling_frame.json",
+        "gt_source": "independent_evaluation_semantic_gt.json",
+        "feature_source": "independent_machine_resolvability_experiment_design.md §6.2-6.3",
+        "decision_protocol_source": "independent_machine_resolvability_experiment_design.md §9.3"
+      }
+    }
+  ]
+}

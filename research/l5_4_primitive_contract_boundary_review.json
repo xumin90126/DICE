@@ -1,0 +1,148 @@
+{
+ "phase": "L5.4 Minimum Primitive Contract Boundary Review",
+ "status": "DESIGN-ONLY / READ-ONLY (no implementation, no experiment, no frozen artifact/schema/code modification)",
+ "objective": "Establish minimal, falsifiable, non-overreaching Primitive Contract for Aggregation + Evidence Compression",
+ "core_principles": ["Compress evidence, not meaning", "Human should validate, not reconstruct"],
+ "l5_3_baseline": "Minimum System Capability Set = {Aggregation, Evidence Compression} + 6 Fidelity Constraints",
+
+ "primitive_A_aggregation": {
+  "definition": "organize existing Evidence into explicitly structured groups according to declared structural relations, without assigning semantic roles",
+  "audit": {
+   "grouping_input": "frozen structural features only (same_y_band/co_density/region_forms/partition_id/localization) [O]",
+   "legal_grouping_relation": "structural signature equality (frozen feature value match)",
+   "min_output": "{group_id, signature, member_instance_refs}",
+   "cross_document_page": "YES (structural signature cross-document comparable; provenance per-source preserved)",
+   "based_on_frozen_relations": "YES (StructuralRelation 8 types [O] + EIC-1 structural context [O])",
+   "semantic_label_allowed": false,
+   "auto_semantic_judgment": false,
+   "auto_representative": false,
+   "ranking_scoring": false,
+   "recommendation": false},
+  "can_hold_without_semantic_inference": true,
+  "key_distinction": "Structural Similarity != Semantic Equivalence; Same Structure != Same Meaning"},
+
+ "primitive_B_compression": {
+  "definition": "reduce Human evidence exposure while preserving the ability to recover, inspect, and audit the underlying Evidence",
+  "audit": {
+   "input": "aggregation output + per-instance EIC-1 candidate [O] + per-instance provenance [O] + per-instance INSUFFICIENT_EVIDENCE [O]",
+   "output": "summary (consistent/conflict/UNKNOWN/coverage counts) + Semantic Claim Candidate (aggregated EIC-1, status=candidate)",
+   "compressible": "instance-level detail (bbox/text/per-instance trace) -> counts + grouped candidate",
+   "must_not_lose": "F1-F7 (positive/negative/boundary/UNKNOWN/conflict/provenance/claim-traceable)",
+   "semantic_language_in_summary": "ONLY from existing EIC-1 governed candidate wording [O]; no new semantic language",
+   "can_generate_semantic_claim": "Candidate only (aggregated per-instance EIC-1, template); no conclusion",
+   "can_auto_judge_support": false,
+   "can_hide_negative_UNKNOWN_conflict": false,
+   "can_judge_boundary": false,
+   "must_support_L4_provenance": true},
+  "key_distinction": "Evidence Compression != Semantic Compression; if summary requires auto semantic interpretation to generate = illegal"},
+
+ "contract_matrix": {
+  "dimensions": ["Input","Output","Operation","Authority","Semantic_Interpretation","Semantic_Claim","Ranking","Scoring","Selection","Recommendation","Decision","Provenance","UNKNOWN","Conflict","Negative_Evidence","Boundary_Evidence","Human_Override","Runtime_Authority"],
+  "aggregation": {"Input": "frozen structural features [O]", "Output": "groups {group_id, signature, member_refs}", "Operation": "group by structural signature equality", "Authority": 0, "Semantic_Interpretation": "FORBIDDEN", "Semantic_Claim": "forbidden final conclusion", "Ranking": "FORBIDDEN", "Scoring": "FORBIDDEN", "Selection": "FORBIDDEN", "Recommendation": "FORBIDDEN", "Decision": "FORBIDDEN", "Provenance": "must be traceable", "UNKNOWN": "must not disappear", "Conflict": "must not disappear", "Negative_Evidence": "no silent suppression", "Boundary_Evidence": "no fabrication", "Human_Override": "N/A (no judgment produced)", "Runtime_Authority": 0},
+  "compression": {"Input": "aggregation output + EIC-1 candidate + provenance + INSUFFICIENT_EVIDENCE [O]", "Output": "summary + Semantic Claim Candidate (status=candidate)", "Operation": "count + aggregate existing candidates (template) + preserve fidelity", "Authority": 0, "Semantic_Interpretation": "FORBIDDEN", "Semantic_Claim": "candidate only (status=candidate [O]); no auto-confirm", "Ranking": "FORBIDDEN", "Scoring": "FORBIDDEN", "Selection": "FORBIDDEN", "Recommendation": "FORBIDDEN", "Decision": "FORBIDDEN", "Provenance": "must preserve (Level 4 recoverable)", "UNKNOWN": "must preserve (UNKNOWN_count)", "Conflict": "must preserve (conflict_count)", "Negative_Evidence": "must be recoverable (non-positive group preserved)", "Boundary_Evidence": "must be recoverable (grouping criteria stated)", "Human_Override": "N/A (no judgment produced)", "Runtime_Authority": 0}},
+
+ "allowed_forbidden": {
+  "aggregation_allowed": ["read frozen structural features", "group by structural signature equality (deterministic)", "output group_id+signature+member_refs", "preserve per-instance provenance ref", "mark UNKNOWN instances", "mark CONFLICT instances", "preserve non-positive groups", "declare grouping criteria"],
+  "aggregation_forbidden": ["semantic clustering", "semantic labeling", "automatic pattern discovery", "prototype semantic selection", "negative semantic classification", "boundary semantic inference", "scope inference", "confidence score", "ranking", "best representative selection", "decision/routing/recommendation", "any forbidden field (is_table/is_cell/.../winner [O])"],
+  "compression_allowed": ["count group members (consistent/conflict/UNKNOWN/coverage)", "aggregate existing EIC-1 candidate wording (template)", "preserve per-instance provenance ref (Level 4)", "output summary with explicit counts", "output Semantic Claim Candidate (status=candidate)", "declare grouping criteria in summary", "preserve non-positive groups", "preserve UNKNOWN_count/conflict_count/coverage_count"],
+  "compression_forbidden": ["semantic conclusion generation", "semantic closure", "silent removal of contradictory evidence", "silent removal of UNKNOWN", "silent removal of negative evidence", "automatic boundary judgment", "automatic scope judgment", "automatic support judgment", "confidence score", "ranking", "recommendation", "fallback/correction/override", "runtime action", "create new semantic interpretation (Y not from EIC-1)", "any forbidden field"],
+  "key_distinction": "'must not lose' != 'must auto-judge'; negative/UNKNOWN/conflict preserved but System does NOT assign semantic role"},
+
+ "semantic_claim_candidate_audit": {
+  "Q1_aggregation_produces_claim": false,
+  "Q1_reason": "Aggregation only groups (structural); claim comes from EIC-1 governed mapping (per-instance candidate [O])",
+  "Q2_compression_only_compresses_existing": true,
+  "Q3_system_can_create_claim_without_EIC1": "if occurs = semantic leakage FORBIDDEN; structural similarity -> semantic claim = FORBIDDEN",
+  "Q4_system_generated_semantic_content_nature": "recombination/organization of already governed candidate evidence (EIC-1); NOT new semantic interpretation",
+  "distinction": "Template of Existing Candidate Claims (ALLOWED) vs New Semantic Interpretation (FORBIDDEN); multiple similar candidates != 'system discovered a pattern'"},
+
+ "compression_fidelity_contract": [
+  {"id": "F1", "name": "Positive Evidence Preservation", "definition": "positive group structural signature + member refs retained", "source": "aggregation output", "failure": "loss -> claim unsupported"},
+  {"id": "F2", "name": "Negative Evidence Preservation", "definition": "non-positive group retained (no silent suppression)", "source": "aggregation output", "failure": "loss -> overgeneralization"},
+  {"id": "F3", "name": "Boundary Evidence Preservation", "definition": "grouping criteria (signature definition) explicit in summary", "source": "aggregation criteria", "failure": "loss -> scope unclear"},
+  {"id": "F4", "name": "UNKNOWN Preservation", "definition": "UNKNOWN_count explicit (partition-unresolvable instances)", "source": "IS-11 INSUFFICIENT_EVIDENCE [O]", "failure": "loss -> false closure"},
+  {"id": "F5", "name": "Conflict Preservation", "definition": "conflict_count explicit (EVIDENCE_CONFLICT instances)", "source": "EIC-1 coexistence [O]", "failure": "loss -> silent suppression"},
+  {"id": "F6", "name": "Provenance Recoverability", "definition": "claim -> instance -> frozen source full chain expandable (Level 4)", "source": "EIC-1 case_ref + frozen_p2 [O]", "failure": "loss -> unauditable"},
+  {"id": "F7", "name": "Semantic Claim Traceability", "definition": "claim candidate -> per-instance EIC-1 candidate -> EIC-1 governed mapping -> frozen evidence full chain traceable", "source": "EIC-1 chain [O]", "failure": "loss -> Human cannot verify"}],
+  "F7_traceability_chain": "Claim Candidate (aggregated) -> Compressed Evidence (summary) -> Evidence Group (signature+refs) -> Original Evidence (per-instance EIC-1+provenance) -> Observation/Frozen Source; any break = Compression Fidelity Failure",
+
+ "progressive_disclosure_contract": {
+  "principle": "Hidden Evidence != Absent Evidence; Compressed Evidence != Less Authoritative Evidence",
+  "recoverability_guarantee": "Human can return from Level 0/1 to Level 4; if not guaranteed -> Contract incomplete",
+  "level_4": "full provenance (per-instance case_ref + frozen source sha) [O EXISTS]",
+  "risks": [{"risk": "visibility mistaken for authority", "mitigation": "explicit 'N items hidden, expandable'"}, {"risk": "compressed mistaken as less authoritative", "mitigation": "explicit 'compression preserves all evidence; Level 4 full'"}, {"risk": "Human forced to trust compression", "mitigation": "Level 4 always reachable"}],
+  "verdict": "contracted as F6 recoverability constraint; not implemented as UI"},
+
+ "authority_gradient": {
+  "ladder": "Observation -> Evidence -> Structural Abstraction (Aggregation authority=0) -> Evidence Compression (authority=0) -> Semantic Claim Candidate (governed by EIC-1, candidate) -> Human Semantic Validation -> Capability (Human Controlled)",
+  "system_can": ["read observation/evidence", "group by structural signature", "count + aggregate existing candidates", "output candidate (status=candidate)"],
+  "system_cannot": ["create/modify observation", "semantic label/infer meaning", "create new interpretation/judge support", "confirm/close/conclude", "auto-validate", "auto-register capability"],
+  "human_regains_authority_at": "Semantic Claim Candidate -> Human Validation (interpretation + validation)",
+  "interpretation_point": "EIC-1 governed mapping (per-instance candidate, EXISTS [O]); System produces candidate not conclusion",
+  "validation_point": "Human (SUPPORTED/UNSUPPORTED/UNKNOWN)",
+  "capability_authorization_point": "Human registration decision (FROZEN_CAPABILITY_TABLE [O])",
+  "forbidden_transitions": ["Aggregation->Semantic Interpretation", "Compression->Semantic Interpretation", "Compression->Capability", "Aggregation->Decision", "Compression->Decision", "Structural Similarity->Semantic Claim (without EIC-1)"],
+  "no_boundary_violation": true},
+
+ "semantic_closure_redteam": [
+  {"id": "R1", "scenario": "10 structurally similar but semantically different instances", "aggregation_behavior": "group by structural signature (same group)", "overreach": false, "reason": "group is structural relation, no semantic role; 'same structure != same meaning' declared in contract", "mitigation": "summary explicit 'structural signature group, not semantic class'", "verdict": "SAFE by contract"},
+  {"id": "R2", "scenario": "9 support + 1 conflict", "compression_behavior": "summary must contain conflict_count (F5)", "overreach_if": "conflict_count=0 but Level 3 has conflict = F5 Failure", "mitigation": "F5 mandatory; Level 3 expandable; consistency check", "verdict": "F5 covers; residual=System dishonesty [H]"},
+  {"id": "R3", "scenario": "many UNKNOWN instances", "compression_behavior": "summary must contain UNKNOWN_count (F4)", "overreach_if": "UNKNOWN omitted = F4 Failure (false closure)", "mitigation": "F4 mandatory; UNKNOWN-group preserved", "verdict": "F4 covers; residual [H]"},
+  {"id": "R4", "scenario": "negative far fewer than positive", "compression_behavior": "non-positive group must be preserved (F2)", "overreach_if": "non-positive group deleted = F2 Failure", "mitigation": "F2 mandatory; System must NOT label 'this is negative' (semantic role=Human)", "verdict": "F2 covers; 'must not lose' != 'must auto-judge'"},
+  {"id": "R5", "scenario": "different structure but same semantic meaning", "aggregation_behavior": "different signature -> different group", "is_problem": false, "reason": "semantic equivalence problem; System does NOT need to solve; Human authority", "verdict": "System correctly does nothing; semantic equivalence=Human"},
+  {"id": "R6", "scenario": "structurally similar caption/table/code/TOC", "aggregation_behavior": "group by structural signature (may same group)", "overreach_if": "System labels 'this is caption' = Semantic Closure FORBIDDEN", "mitigation": "Aggregation FORBIDDEN semantic labeling; group only signature+refs; label=Human post-validation", "verdict": "SAFE by contract"},
+  {"id": "R7", "scenario": "EIC-1 candidate wording partially similar", "compression_behavior": "aggregate existing EIC-1 candidates (template)", "overreach_if": "Compression creates new wording (Y not from EIC-1) = semantic leakage FORBIDDEN", "mitigation": "Compression only recombines governed candidate wording; F7 traceability", "verdict": "SAFE by contract (F7 + compress-not-mean)"},
+  {"id": "R8", "scenario": "single instance with very high evidence volume", "compression_behavior": "count group members (1 instance=1 count, not volume-weighted)", "overreach_if": "count weighted by evidence volume = hidden ranking FORBIDDEN", "mitigation": "count=instance count (1-per-instance); summary explicit 'N instances' not 'N evidence units'", "verdict": "SAFE by contract (count != weighting)"}],
+  "redteam_summary": "8 scenarios all SAFE by contract; residual risk = System dishonesty in counting (R2/R3/R4) -> needs audit [H, future]",
+
+ "no_new_capability": {
+  "representative_engine": "NOT primitive (DEFERRED L5.3; L0 not needed; intelligent=bias; first/random=view)",
+  "boundary_engine": "NOT primitive (DEFERRED L5.3; grouping criteria=boundary; edge=optimization)",
+  "negative_detector": "NOT primitive (DERIVED; =non-positive group preserve, not semantic discovery)",
+  "conflict_engine": "NOT primitive (MERGED; =F5 constraint)",
+  "coverage_engine": "NOT primitive (MERGED; =count in summary)",
+  "pattern_miner": "FORBIDDEN (semantic pattern discovery=Human)",
+  "pattern_classifier": "FORBIDDEN (semantic classification=Human)",
+  "verdict": "all = derived/constraint/view/forbidden; no new primitive passes Deletion Test; Minimum Set unchanged"},
+
+ "three_core_products": {
+  "product_1_minimum_primitive_contract": {
+   "aggregation_MUST": ["read frozen structural features only", "group by structural signature equality", "output {group_id, signature, member_refs}", "preserve per-instance provenance ref", "mark UNKNOWN instances", "mark CONFLICT instances", "preserve non-positive groups", "declare grouping criteria", "enforce forbidden-field assertions [O]"],
+   "aggregation_MAY": ["group cross document/page", "use frozen StructuralRelation + EIC-1 structural context as signature components", "output UNKNOWN-group/conflict-tag as metadata"],
+   "aggregation_MUST_NOT": ["assign semantic labels", "infer semantic equivalence", "select representative/prototype", "rank/score/recommend/decide/route", "infer semantic boundary/scope", "create new relations", "output any forbidden field"],
+   "compression_MUST": ["take aggregation output + EIC-1 candidate + provenance + INSUFFICIENT_EVIDENCE", "output summary (consistent/conflict/UNKNOWN/coverage counts)", "output Semantic Claim Candidate (aggregated EIC-1, status=candidate, template)", "preserve F1-F7", "declare grouping criteria in summary", "support Level 4 provenance recovery (F6)", "enforce forbidden-field assertions [O]"],
+   "compression_MAY": ["aggregate existing EIC-1 candidate wording (template)", "output non-positive group as separate claim or negative-count", "compress instance-level detail into counts + grouped candidate"],
+   "compression_MUST_NOT": ["create new semantic interpretation", "generate semantic conclusion", "close semantic boundary", "judge SUPPORTED/UNSUPPORTED", "judge boundary adequacy", "silently remove conflict/UNKNOWN/negative", "score/rank/recommend/fallback/correct/override", "execute runtime action", "weight by evidence volume", "output any forbidden field"]},
+  "product_2_semantic_boundary_map": {"system_authority": 0, "human_semantic_authority": "interpretation+validation+authorization (sole)", "capability_registration_authority": "Human (FROZEN_CAPABILITY_TABLE [O])", "runtime_authority": 0, "allowed_transitions": ["Observation->Evidence (read)", "Evidence->Structural Abstraction (group)", "Structural Abstraction->Compression (count+aggregate)", "Compression->Claim Candidate (status=candidate)", "Claim Candidate->Human Validation", "Human Validation->Capability"], "forbidden_transitions": ["Aggregation->Semantic Interpretation", "Compression->Semantic Interpretation", "Compression->Capability", "Aggregation->Decision", "Compression->Decision", "Structural Similarity->Semantic Claim (without EIC-1)"]},
+  "product_3_implementation_readiness_checklist": [{"prerequisite": "frozen structural features", "status": "EXISTS [O,EV]", "contract_requirement": "Aggregation MUST read"}, {"prerequisite": "EIC-1 governed mapping", "status": "EXISTS [O]", "contract_requirement": "Compression MUST aggregate (not create)"}, {"prerequisite": "per-instance provenance", "status": "EXISTS [O]", "contract_requirement": "F6 recoverability"}, {"prerequisite": "IS-11 INSUFFICIENT_EVIDENCE", "status": "EXISTS [O]", "contract_requirement": "F4 UNKNOWN preservation"}, {"prerequisite": "EIC-1 EVIDENCE_CONFLICT", "status": "EXISTS [O]", "contract_requirement": "F5 conflict preservation"}, {"prerequisite": "forbidden-field assertion mechanism", "status": "EXISTS [O]", "contract_requirement": "both MUST enforce"}, {"prerequisite": "Aggregation layer", "status": "MISSING", "contract_requirement": "implement per contract"}, {"prerequisite": "Compression layer", "status": "MISSING", "contract_requirement": "implement per contract"}, {"prerequisite": "Level 4 recovery path", "status": "EXISTS [O]", "contract_requirement": "F6 MUST support"}, {"prerequisite": "new observation", "status": "NONE", "contract_requirement": "not needed [EV]"}]},
+
+ "contract_status": "READY",
+ "implementation_authorization": "NOT AUTHORIZED",
+
+ "final_judgment": {
+  "sufficient_for_workflow_C": true,
+  "no_semantic_closure": true,
+  "no_decision_authority": true,
+  "no_pattern_engine": true,
+  "no_burden_transfer": true,
+  "compression_fidelity_guaranteed": "F1-F7 formalized; recoverability enforced; Level 4 always reachable",
+  "authority_gradient_preserved": true,
+  "success_criterion_met": "if future implementation follows L5.4 Contract, Workflow C supported without Semantic Closure/Decision Authority/Pattern Engine/Burden Transfer"},
+
+ "gate": {
+  "L5_4_STATUS": "CONDITIONAL PASS",
+  "AGGREGATION_CONTRACT": "READY (MUST/MAY/MUST NOT defined; forbidden-field enforced; authority=0)",
+  "COMPRESSION_CONTRACT": "READY (MUST/MAY/MUST NOT defined; F1-F7 fidelity; authority=0; compress-evidence-not-meaning)",
+  "SEMANTIC_CLOSURE_RISK": "NONE by contract; residual=System dishonesty in counting -> needs audit [H future]",
+  "AUTHORITY_BOUNDARY": "System=0 structural; Human=sole semantic; Capability=Human-controlled; Runtime=0; no forbidden transition",
+  "COMPRESSION_FIDELITY": "F1-F7 formalized; F7 traceability chain complete; any break=Failure",
+  "PROGRESSIVE_DISCLOSURE": "CONTRACTED (not implemented; =F6 recoverability); Hidden!=Absent; Compressed!=Less-Authoritative; Level 4 always reachable",
+  "NEW_CAPABILITY_REQUIRED": false,
+  "NEW_OBSERVATION_MEASUREMENT_REQUEST": "NONE",
+  "IMPLEMENTATION_AUTHORIZATION": "NOT AUTHORIZED",
+  "EXPERIMENT_AUTHORIZATION": "NOT AUTHORIZED",
+  "GT": "INTACT", "TLD": "INTACT", "ATOMIC_OBSERVATION": "INTACT", "IS11_DECISION": "INTACT",
+  "PRODUCTION": false, "FROZEN_BASELINE": "INTACT", "STOP": true},
+
+ "frozen_baseline_verify": {"gt_modified": false, "tld_modified": false, "atomic_observation_modified": false, "is11_decision_modified": false, "production_code_modified": false, "schema_modified": false, "html_modified": false}
+}

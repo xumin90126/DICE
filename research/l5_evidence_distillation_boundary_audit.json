@@ -1,0 +1,276 @@
+{
+  "audit_type": "evidence_distillation_boundary_audit",
+  "audit_date": "2026-09-12",
+  "read_only": true,
+  "governance": {
+    "CODE_MODIFICATION": 0,
+    "UI_MODIFICATION": 0,
+    "GT_MODIFICATION": 0,
+    "TLD_MODIFICATION": 0,
+    "ATOMIC_MODIFICATION": 0,
+    "IS11_DECISION_MODIFICATION": 0,
+    "AGGREGATION_MODIFICATION": 0,
+    "COMPRESSION_MODIFICATION": 0,
+    "L5.5_MODIFICATION": 0,
+    "NEW_PRIMITIVE": 0,
+    "NEW_CONTRACT": 0,
+    "NEW_ARCHITECTURE": 0,
+    "NEW_PATTERN_ENGINE": 0,
+    "PATTERN_REGISTRY": 0,
+    "PATTERN_MINER": 0,
+    "CLASSIFIER": 0,
+    "L5_9": 0,
+    "PRODUCTION": false,
+    "FROZEN_BASELINE": "INTACT",
+    "HUMAN_DATA": "REAL_PILOT_ONLY",
+    "NO_SIMULATION": true,
+    "STOP": true
+  },
+  "research_question": "RQ-ED1: Can System construct non-judgmental Decision-Relevant Evidence Cues from existing Frozen Evidence?",
+  "pilot_context": {
+    "participant": "P01",
+    "a_phase_accuracy": "21/21 = 100%",
+    "merge_correct": "2/2",
+    "keep_separate_correct": "19/19",
+    "n": 1,
+    "evidence_class": "B (engineering proxy)"
+  },
+  "layer_classification": {
+    "L1_raw": [
+      "text_a",
+      "text_b",
+      "bbox_a/b",
+      "page_image",
+      "line_spans",
+      "width_a/b",
+      "style_sig"
+    ],
+    "L2_structural": [
+      "h_gap",
+      "dy",
+      "same_style",
+      "line_obs_count",
+      "is_in_table",
+      "same_cell",
+      "different_cell",
+      "different_local_partition",
+      "same_structural_region",
+      "region_forms"
+    ],
+    "L3_cue_not_yet_constructed": [
+      "safe_translation_of_TLD",
+      "punctuation_check",
+      "fig_pattern_match",
+      "is_numeric_check"
+    ],
+    "L4_interpretation": [
+      "caption",
+      "sentence_boundary",
+      "data_value",
+      "content_unit"
+    ]
+  },
+  "tld_audit": {
+    "is_in_table": {
+      "layer": "L2 Structural",
+      "provenance": "frozen TLD (hash 022f5c21e872ad9e)",
+      "detection_method": "y-alignment + x-gap >= 12pt + >= 3 consecutive multi-column rows + column stability >= 70%",
+      "semantic_content": "NONE (purely structural)",
+      "field_name_leakage_risk": "MEDIUM (word \"table\" implies semantic concept)",
+      "safe_translation": "within a detected multi-column aligned structure",
+      "automation_bias_risk_if_shown_directly": "MEDIUM",
+      "traceability_after_translation": "FULL",
+      "independently_determines_judgment": false
+    },
+    "different_cell": {
+      "layer": "L2 Structural",
+      "provenance": "frozen TLD + IS-11 harness",
+      "detection_method": "(row_idx, col_idx) comparison after x-position grouping",
+      "semantic_content": "NONE (purely positional)",
+      "field_name_leakage_risk": "HIGH (implies \"should separate\")",
+      "safe_translation": "in different structural positions",
+      "automation_bias_risk_if_shown_directly": "HIGH",
+      "traceability_after_translation": "FULL",
+      "independently_determines_judgment": false
+    },
+    "same_cell": {
+      "layer": "L2 Structural",
+      "field_name_leakage_risk": "HIGH (implies \"should merge\")",
+      "safe_translation": "in the same structural position",
+      "automation_bias_risk_if_shown_directly": "HIGH"
+    },
+    "critical_finding": "is_in_table=False appears in both MERGE (AMB-414/422) and KEEP_SEPARATE (AMB-313/519) cases — TLD alone does NOT determine judgment. This is a feature: the cue provides context without dictating the answer."
+  },
+  "five_human_evidence_types": [
+    {
+      "type": "table_membership",
+      "human_mentions": 4,
+      "system_has_raw": true,
+      "can_construct_without_semantic": true,
+      "missing_layer": "NONE (L2 exists, not propagated)",
+      "minimal_cue": "A and B are within a detected multi-column aligned structure",
+      "leakage_risk": "MEDIUM",
+      "traceability": "FULL",
+      "status": "IDENTIFIABLE"
+    },
+    {
+      "type": "column_distinction",
+      "human_mentions": 3,
+      "system_has_raw": true,
+      "can_construct_without_semantic": true,
+      "missing_layer": "NONE (L2 exists, not propagated)",
+      "minimal_cue": "A and B are in different structural positions within the aligned structure",
+      "leakage_risk": "HIGH (if unsafe) / LOW (if translated)",
+      "traceability": "FULL",
+      "status": "IDENTIFIABLE (requires safe translation)"
+    },
+    {
+      "type": "sentence_boundary",
+      "human_mentions": 2,
+      "system_has_raw": "PARTIALLY (P1 text exists, punctuation not computed)",
+      "can_construct_without_semantic": "PARTIALLY (L1 facts yes, L3 interpretation no)",
+      "missing_layer": "L3 (punctuation check not computed)",
+      "minimal_cue": "Text A ends with a period. Text B starts with a capital letter.",
+      "leakage_risk": "LOW (for L1 facts)",
+      "traceability": "PARTIAL",
+      "status": "IDENTIFIABLE (requires trivial computation)"
+    },
+    {
+      "type": "caption_continuity",
+      "human_mentions": 2,
+      "system_has_raw": "PARTIALLY (P1 text + line_obs_count exist, FIG. pattern not computed)",
+      "can_construct_without_semantic": "PARTIALLY (L1+L2 facts yes, L4 interpretation no)",
+      "missing_layer": "L3 (FIG. pattern match not computed)",
+      "minimal_cue": "Text A starts with FIG. Only 2 items on this line.",
+      "leakage_risk": "MEDIUM",
+      "traceability": "PARTIAL",
+      "status": "IDENTIFIABLE (requires trivial computation)"
+    },
+    {
+      "type": "content_type_diversity",
+      "human_mentions": 1,
+      "system_has_raw": true,
+      "can_construct_without_semantic": true,
+      "missing_layer": "L3 (is_numeric not computed)",
+      "minimal_cue": "Text A is a number. Text B contains letters.",
+      "leakage_risk": "LOW",
+      "traceability": "PARTIAL",
+      "status": "IDENTIFIABLE (requires trivial computation)"
+    }
+  ],
+  "evidence_relevance_analysis": {
+    "question": "Why does h_gap=27.2pt produce no Human feedback despite being correct?",
+    "answer": "RELEVANCE_GAP — correct but not decision-relevant",
+    "reasons": [
+      "Information form mismatch (numeric vs categorical)",
+      "Decision relevance gap (relationship matters, not distance)",
+      "Comparison without reference (27.2pt has no meaning without context)",
+      "Redundancy with visual evidence (page image already shows gap)",
+      "Cognitive cost of irrelevant information"
+    ]
+  },
+  "information_abundance_analysis": {
+    "fields_shown": 15,
+    "fields_used_by_human": 3,
+    "fields_never_referenced": 12,
+    "verdict": "Information Abundance is a RELEVANCE problem, not a quantity problem",
+    "caveat": "n=1; P01 achieved 3.9s/item suggesting fast selection; other participants might differ"
+  },
+  "b_c_phase_analysis": {
+    "b_phase": {
+      "finding": "Structural group contains 3 semantic sub-categories",
+      "attribution": "DISTILLATION_GAP (TLD data not propagated to group representation)",
+      "is_aggregation_error": false,
+      "minimum_exposure": "per-case TLD status within group"
+    },
+    "c_phase": {
+      "compression_output": "6 instances: relationship undetermined",
+      "technically_correct": true,
+      "human_utility": "LOW",
+      "attribution": "Mixed: Relevance Loss + Missing Heterogeneity Exposure",
+      "root_cause": "TLD data not propagated from L2 to L4 Compression",
+      "is_compression_contract_violation": false
+    }
+  },
+  "distillation_boundary": {
+    "boundary_0": "Raw Evidence only — too much cognitive load",
+    "boundary_1": "Structural Evidence — correct but not actionable (current UI)",
+    "boundary_2": "Decision-Relevant Evidence Cue — actionable but not judgmental (PROPOSED SAFE)",
+    "boundary_3": "Semantic Interpretation Candidate — risks automation bias",
+    "boundary_4": "Human Judgment — forbidden for System",
+    "dice_current_internal": "Boundary 3 (EIC-1)",
+    "dice_current_ui": "Boundary 1 (subset of L2)",
+    "gap": "Boundary 1 -> Boundary 2 distillation missing",
+    "proposed_safe_boundary": "Boundary 2",
+    "is_stable_layer": "POTENTIALLY (more than presentation trick, less than new architecture)",
+    "stability_verified": false,
+    "stability_requires": [
+      "multi-participant testing (n>1)",
+      "System!=GT test cases",
+      "conflict cases"
+    ]
+  },
+  "safe_translations": [
+    {
+      "internal": "is_in_table=True",
+      "unsafe": "in a table",
+      "safe": "within a detected multi-column aligned structure",
+      "leakage_reduction": "MEDIUM -> LOW"
+    },
+    {
+      "internal": "different_cell=True",
+      "unsafe": "in different cells",
+      "safe": "in different structural positions",
+      "leakage_reduction": "HIGH -> LOW"
+    },
+    {
+      "internal": "same_cell=True",
+      "unsafe": "in the same cell",
+      "safe": "in the same structural position",
+      "leakage_reduction": "HIGH -> LOW"
+    },
+    {
+      "internal": "different_local_partition=True",
+      "unsafe": "in different partitions",
+      "safe": "assigned to different x-position groups",
+      "leakage_reduction": "MEDIUM -> LOW"
+    }
+  ],
+  "counter_evidence": [
+    "A-phase 21/21 correct without distilled cues",
+    "Average 3.9s/item — fast selection",
+    "Page images compensated for distillation gap",
+    "n=1 — cannot verify boundary stability",
+    "MERGE=2 — both captions, cannot generalize",
+    "System!=GT=0 — cannot test automation bias",
+    "conflict=0 — no contradictory evidence test",
+    "is_in_table=False appears in both MERGE and KEEP_SEPARATE — TLD alone insufficient (feature, not bug)"
+  ],
+  "conclusion": {
+    "result": "B. DISTILLATION_GAP_IS_REAL_AND_MINIMAL_CUE_IS_IDENTIFIABLE",
+    "primary_gap": "DISTILLATION_GAP",
+    "secondary_gap": "RELEVANCE_GAP",
+    "evidence": [
+      "21/21 cases have TLD evidence not propagated to Human",
+      "Human feedback consistently references cue-level concepts derivable from L2",
+      "Safe translations exist for all high-leakage fields",
+      "TLD does not independently determine judgment (good: cue doesnt dictate answer)"
+    ],
+    "counterevidence": [
+      "100% accuracy without cues (page images compensated)",
+      "n=1, MERGE=2, conflict=0, System!=GT=0",
+      "3/5 types require trivial computation not yet done",
+      "Boundary stability not verified"
+    ],
+    "confidence": {
+      "distillation_gap_primary": "MEDIUM (systematic 21/21, but n=1)",
+      "evidence_cue_stability": "MEDIUM-LOW (identifiable but not verified)",
+      "relevance_gap_secondary": "MEDIUM (12/15 fields unused, but Human still succeeded)"
+    }
+  },
+  "answer_to_core_question": {
+    "can_construct_without_semantic_judgment": "YES for 2/5 types; PARTIALLY for 3/5 (trivial computation needed)",
+    "minimal_safe_boundary": "Boundary 2: Decision-Relevant Evidence Cue",
+    "boundary_stability": "NOT YET VERIFIED (requires multi-participant + System!=GT + conflict testing)"
+  }
+}

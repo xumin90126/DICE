@@ -1,0 +1,10575 @@
+{
+ "Q_answers": {
+  "Q1": "+4 docs/+80pp/+131 clusters/+1 boundary family/0 positive",
+  "Q10": "Yes CONFIRMED",
+  "Q11": "No",
+  "Q12": "table row-index settings themselves (all variants missing)",
+  "Q13": "acquire non-ML table-dense docs OR reconsider object scope",
+  "Q2": "No (GT_CONFIRMED=1)",
+  "Q3": "N/A",
+  "Q4": "N/A",
+  "Q5": "No",
+  "Q6": "No",
+  "Q7": "Yes (code-token neighbors)",
+  "Q8": "No new table",
+  "Q9": "Yes (131:0 this round)"
+ },
+ "acquisition": {
+  "criterion": "table-dense + template/venue/era diversity + independent of 4-doc corpus; declared before scan",
+  "document_family": "UNKNOWN for all (no publisher metadata; not guessed)",
+  "documents_acquired": [
+   {
+    "arxiv": "1910.10683",
+    "clusters": 3,
+    "id": "T5",
+    "limitation": "appendix dense pages unscannable (memory blowup); tool/env limitation",
+    "pages": 67,
+    "scanned": 10,
+    "sha256": "ad07e47cedf437a4156419ce5d3076e08a3e59bbfd6dac7cc53df1009cdcbe7f"
+   },
+   {
+    "arxiv": "2302.13971",
+    "clusters": 74,
+    "id": "LLaMA",
+    "pages": 27,
+    "scanned": 27,
+    "sha256": "2e663675ae36ad12adb2f5a05281bac2747ecf8d23d92bedd9f937a89fee7136"
+   },
+   {
+    "arxiv": "1810.04805",
+    "clusters": 37,
+    "id": "BERT",
+    "pages": 16,
+    "scanned": 16,
+    "sha256": "5692a5514787a8c6727b4ff3b726a3385798bc68e12138d1d4af83947e2acf6e"
+   },
+   {
+    "arxiv": "2009.03300",
+    "clusters": 17,
+    "id": "MMLU",
+    "pages": 27,
+    "scanned": 27,
+    "sha256": "d3a7b0f8589f5365ebfd34a3876a9a8b3fde83e0adb9ed19ccf8f0034bb48fc1"
+   }
+  ],
+  "documents_failed": [
+   "2005.14165 (GPT-3) timeout",
+   "2106.09685 (LoRA) timeout"
+  ],
+  "source": "public arXiv PDFs (curl)",
+  "totals": {
+   "new_clusters": 131,
+   "new_documents": 4,
+   "new_pages_scanned": 80
+  }
+ },
+ "clusters_full": [
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    112.09,
+    174.66
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 2,
+    "INT": 1
+   },
+   "members": [
+    {
+     "content": "2",
+     "w": 5.97,
+     "x0": 70.87,
+     "y": 78.62
+    },
+    {
+     "content": "2.1",
+     "w": 13.63,
+     "x0": 70.87,
+     "y": 190.71
+    },
+    {
+     "content": "2020",
+     "w": 22.25,
+     "x0": 70.87,
+     "y": 365.37
+    }
+   ],
+   "n": 3,
+   "page": 2,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 1.56,
+   "sublabel": "",
+   "w_mean": 13.95,
+   "w_range": [
+    6.0,
+    22.2
+   ],
+   "x0": 70.87,
+   "y_span": 286.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.56,
+    13.55,
+    13.54
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 1,
+   "kinds": {
+    "DEC": 5
+   },
+   "members": [
+    {
+     "content": "4.5%",
+     "w": 22.72,
+     "x0": 398.4,
+     "y": 128.57
+    },
+    {
+     "content": "4.5%",
+     "w": 22.72,
+     "x0": 398.4,
+     "y": 142.12
+    },
+    {
+     "content": "4.5%",
+     "w": 22.72,
+     "x0": 398.4,
+     "y": 155.68
+    },
+    {
+     "content": "2.5%",
+     "w": 22.72,
+     "x0": 398.4,
+     "y": 169.23
+    },
+    {
+     "content": "2.0%",
+     "w": 22.72,
+     "x0": 398.4,
+     "y": 182.77
+    }
+   ],
+   "n": 5,
+   "page": 2,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 22.72,
+   "w_range": [
+    22.7,
+    22.7
+   ],
+   "x0": 398.4,
+   "y_span": 54.2
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.54,
+    13.55,
+    13.56,
+    13.55,
+    13.54
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 1,
+   "kinds": {
+    "DEC": 7
+   },
+   "members": [
+    {
+     "content": "1.10",
+     "w": 19.09,
+     "x0": 453.16,
+     "y": 101.48
+    },
+    {
+     "content": "1.06",
+     "w": 19.09,
+     "x0": 453.16,
+     "y": 115.03
+    },
+    {
+     "content": "0.64",
+     "w": 19.09,
+     "x0": 453.16,
+     "y": 128.57
+    },
+    {
+     "content": "2.45",
+     "w": 19.09,
+     "x0": 453.16,
+     "y": 142.12
+    },
+    {
+     "content": "2.23",
+     "w": 19.09,
+     "x0": 453.16,
+     "y": 155.68
+    },
+    {
+     "content": "1.06",
+     "w": 19.09,
+     "x0": 453.16,
+     "y": 169.23
+    },
+    {
+     "content": "1.03",
+     "w": 19.09,
+     "x0": 453.16,
+     "y": 182.77
+    }
+   ],
+   "n": 7,
+   "page": 2,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 453.16,
+   "y_span": 81.3
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    260.9,
+    8.05,
+    108.38
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 2,
+    "INT": 2
+   },
+   "members": [
+    {
+     "content": "2.2",
+     "w": 13.63,
+     "x0": 70.87,
+     "y": 291.56
+    },
+    {
+     "content": "2",
+     "w": 4.23,
+     "x0": 72.06,
+     "y": 552.46
+    },
+    {
+     "content": "3",
+     "w": 4.23,
+     "x0": 72.06,
+     "y": 560.51
+    },
+    {
+     "content": "2.3",
+     "w": 13.63,
+     "x0": 70.87,
+     "y": 668.89
+    }
+   ],
+   "n": 4,
+   "page": 3,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 32.41,
+   "sublabel": "",
+   "w_mean": 8.93,
+   "w_range": [
+    4.2,
+    13.6
+   ],
+   "x0": 71.47,
+   "y_span": 377.3
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.55,
+    13.55
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 4
+   },
+   "members": [
+    {
+     "content": "4096",
+     "w": 21.82,
+     "x0": 175.95,
+     "y": 100.48
+    },
+    {
+     "content": "5120",
+     "w": 21.82,
+     "x0": 175.95,
+     "y": 114.03
+    },
+    {
+     "content": "6656",
+     "w": 21.82,
+     "x0": 175.95,
+     "y": 127.58
+    },
+    {
+     "content": "8192",
+     "w": 21.82,
+     "x0": 175.95,
+     "y": 141.13
+    }
+   ],
+   "n": 4,
+   "page": 3,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 21.82,
+   "w_range": [
+    21.8,
+    21.8
+   ],
+   "x0": 175.95,
+   "y_span": 40.6
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (OTHER_INT_STRUCT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.55,
+    13.55
+   ],
+   "family": "OTHER_INT_STRUCT",
+   "grid_siblings": 5,
+   "kinds": {
+    "INT": 4
+   },
+   "members": [
+    {
+     "content": "32",
+     "w": 10.91,
+     "x0": 233.15,
+     "y": 100.48
+    },
+    {
+     "content": "40",
+     "w": 10.91,
+     "x0": 233.15,
+     "y": 114.03
+    },
+    {
+     "content": "52",
+     "w": 10.91,
+     "x0": 233.15,
+     "y": 127.58
+    },
+    {
+     "content": "64",
+     "w": 10.91,
+     "x0": 233.15,
+     "y": 141.13
+    }
+   ],
+   "n": 4,
+   "page": 3,
+   "prelabel": "OTHER_INT_STRUCT",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 10.91,
+   "w_range": [
+    10.9,
+    10.9
+   ],
+   "x0": 233.15,
+   "y_span": 40.6
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (OTHER_INT_STRUCT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.55,
+    13.55
+   ],
+   "family": "OTHER_INT_STRUCT",
+   "grid_siblings": 5,
+   "kinds": {
+    "INT": 4
+   },
+   "members": [
+    {
+     "content": "32",
+     "w": 10.91,
+     "x0": 279.82,
+     "y": 100.48
+    },
+    {
+     "content": "40",
+     "w": 10.91,
+     "x0": 279.82,
+     "y": 114.03
+    },
+    {
+     "content": "60",
+     "w": 10.91,
+     "x0": 279.82,
+     "y": 127.58
+    },
+    {
+     "content": "80",
+     "w": 10.91,
+     "x0": 279.82,
+     "y": 141.13
+    }
+   ],
+   "n": 4,
+   "page": 3,
+   "prelabel": "OTHER_INT_STRUCT",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 10.91,
+   "w_range": [
+    10.9,
+    10.9
+   ],
+   "x0": 279.82,
+   "y_span": 40.6
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    16.85,
+    16.85,
+    16.86,
+    16.85,
+    16.85,
+    16.86,
+    16.85
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 8
+   },
+   "members": [
+    {
+     "content": "2.2",
+     "w": 12.08,
+     "x0": 321.67,
+     "y": 199.37
+    },
+    {
+     "content": "2.1",
+     "w": 12.08,
+     "x0": 321.67,
+     "y": 216.22
+    },
+    {
+     "content": "2.0",
+     "w": 12.08,
+     "x0": 321.67,
+     "y": 233.07
+    },
+    {
+     "content": "1.9",
+     "w": 12.08,
+     "x0": 321.67,
+     "y": 249.93
+    },
+    {
+     "content": "1.8",
+     "w": 12.08,
+     "x0": 321.67,
+     "y": 266.78
+    },
+    {
+     "content": "1.7",
+     "w": 12.08,
+     "x0": 321.67,
+     "y": 283.63
+    },
+    {
+     "content": "1.6",
+     "w": 12.08,
+     "x0": 321.67,
+     "y": 300.49
+    },
+    {
+     "content": "1.5",
+     "w": 12.08,
+     "x0": 321.67,
+     "y": 317.34
+    }
+   ],
+   "n": 8,
+   "page": 3,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 12.08,
+   "w_range": [
+    12.1,
+    12.1
+   ],
+   "x0": 321.67,
+   "y_span": 118.0
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (DIGIT_GRID); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.55,
+    13.55
+   ],
+   "family": "DIGIT_GRID",
+   "grid_siblings": 5,
+   "kinds": {
+    "INT": 4
+   },
+   "members": [
+    {
+     "content": "3",
+     "w": 5.46,
+     "x0": 327.14,
+     "y": 100.23
+    },
+    {
+     "content": "3",
+     "w": 5.46,
+     "x0": 327.14,
+     "y": 113.78
+    },
+    {
+     "content": "1",
+     "w": 5.46,
+     "x0": 327.14,
+     "y": 127.33
+    },
+    {
+     "content": "1",
+     "w": 5.46,
+     "x0": 327.14,
+     "y": 140.88
+    }
+   ],
+   "n": 4,
+   "page": 3,
+   "prelabel": "DIGIT_GRID",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 5.46,
+   "w_range": [
+    5.5,
+    5.5
+   ],
+   "x0": 327.14,
+   "y_span": 40.6
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (DIGIT_GRID); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.55,
+    13.55
+   ],
+   "family": "DIGIT_GRID",
+   "grid_siblings": 5,
+   "kinds": {
+    "INT": 4
+   },
+   "members": [
+    {
+     "content": "0",
+     "w": 5.45,
+     "x0": 335.63,
+     "y": 100.23
+    },
+    {
+     "content": "0",
+     "w": 5.45,
+     "x0": 335.63,
+     "y": 113.78
+    },
+    {
+     "content": "5",
+     "w": 5.45,
+     "x0": 335.63,
+     "y": 127.33
+    },
+    {
+     "content": "5",
+     "w": 5.45,
+     "x0": 335.63,
+     "y": 140.88
+    }
+   ],
+   "n": 4,
+   "page": 3,
+   "prelabel": "DIGIT_GRID",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 5.45,
+   "w_range": [
+    5.5,
+    5.5
+   ],
+   "x0": 335.63,
+   "y_span": 40.6
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (DIGIT_GRID); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.53,
+    13.55,
+    13.56
+   ],
+   "family": "DIGIT_GRID",
+   "grid_siblings": 5,
+   "kinds": {
+    "INT": 4
+   },
+   "members": [
+    {
+     "content": "4",
+     "w": 4.23,
+     "x0": 352.75,
+     "y": 97.11
+    },
+    {
+     "content": "4",
+     "w": 4.23,
+     "x0": 352.75,
+     "y": 110.64
+    },
+    {
+     "content": "4",
+     "w": 4.23,
+     "x0": 352.75,
+     "y": 124.19
+    },
+    {
+     "content": "4",
+     "w": 4.23,
+     "x0": 352.75,
+     "y": 137.75
+    }
+   ],
+   "n": 4,
+   "page": 3,
+   "prelabel": "DIGIT_GRID",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 4.23,
+   "w_range": [
+    4.2,
+    4.2
+   ],
+   "x0": 352.75,
+   "y_span": 40.6
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.55,
+    13.55,
+    13.56,
+    13.44,
+    19.12,
+    13.56,
+    13.55,
+    13.55,
+    540.29
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 1,
+   "kinds": {
+    "DEC": 11
+   },
+   "members": [
+    {
+     "content": "60.5",
+     "w": 19.09,
+     "x0": 184.85,
+     "y": 100.48
+    },
+    {
+     "content": "79.3",
+     "w": 19.09,
+     "x0": 184.85,
+     "y": 114.03
+    },
+    {
+     "content": "83.7",
+     "w": 19.09,
+     "x0": 184.85,
+     "y": 127.58
+    },
+    {
+     "content": "84.8",
+     "w": 19.09,
+     "x0": 184.85,
+     "y": 141.13
+    },
+    {
+     "content": "83.9",
+     "w": 19.09,
+     "x0": 184.85,
+     "y": 154.69
+    },
+    {
+     "content": "88.0",
+     "w": 19.09,
+     "x0": 184.85,
+     "y": 168.13
+    },
+    {
+     "content": "76.5",
+     "w": 19.09,
+     "x0": 184.85,
+     "y": 187.25
+    },
+    {
+     "content": "78.1",
+     "w": 19.09,
+     "x0": 184.85,
+     "y": 200.81
+    },
+    {
+     "content": "83.1",
+     "w": 19.09,
+     "x0": 184.85,
+     "y": 214.36
+    },
+    {
+     "content": "85.3",
+     "w": 19.09,
+     "x0": 184.85,
+     "y": 227.91
+    },
+    {
+     "content": "2022",
+     "w": 24.55,
+     "x0": 183.12,
+     "y": 768.2
+    }
+   ],
+   "n": 11,
+   "page": 4,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 40.2,
+   "sublabel": "",
+   "w_mean": 19.59,
+   "w_range": [
+    19.1,
+    24.6
+   ],
+   "x0": 184.69,
+   "y_span": 667.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.55,
+    13.55,
+    13.56,
+    13.54,
+    19.02,
+    13.56,
+    13.55,
+    13.45
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 6,
+   "kinds": {
+    "DEC": 10
+   },
+   "members": [
+    {
+     "content": "81.0",
+     "w": 19.09,
+     "x0": 222.08,
+     "y": 100.48
+    },
+    {
+     "content": "81.8",
+     "w": 19.09,
+     "x0": 222.08,
+     "y": 114.03
+    },
+    {
+     "content": "81.8",
+     "w": 19.09,
+     "x0": 222.08,
+     "y": 127.58
+    },
+    {
+     "content": "80.5",
+     "w": 19.09,
+     "x0": 222.08,
+     "y": 141.13
+    },
+    {
+     "content": "81.4",
+     "w": 19.09,
+     "x0": 222.08,
+     "y": 154.69
+    },
+    {
+     "content": "82.3",
+     "w": 19.09,
+     "x0": 222.08,
+     "y": 168.23
+    },
+    {
+     "content": "79.8",
+     "w": 19.09,
+     "x0": 222.08,
+     "y": 187.25
+    },
+    {
+     "content": "80.1",
+     "w": 19.09,
+     "x0": 222.08,
+     "y": 200.81
+    },
+    {
+     "content": "82.3",
+     "w": 19.09,
+     "x0": 222.08,
+     "y": 214.36
+    },
+    {
+     "content": "82.8",
+     "w": 19.09,
+     "x0": 222.08,
+     "y": 227.81
+    }
+   ],
+   "n": 10,
+   "page": 4,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.41,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 222.08,
+   "y_span": 127.3
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    59.67,
+    13.56,
+    13.55,
+    13.45
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 6,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "50.6",
+     "w": 19.09,
+     "x0": 257.49,
+     "y": 114.03
+    },
+    {
+     "content": "51.3",
+     "w": 19.09,
+     "x0": 257.49,
+     "y": 127.58
+    },
+    {
+     "content": "48.9",
+     "w": 19.09,
+     "x0": 257.49,
+     "y": 187.25
+    },
+    {
+     "content": "50.4",
+     "w": 19.09,
+     "x0": 257.49,
+     "y": 200.81
+    },
+    {
+     "content": "50.4",
+     "w": 19.09,
+     "x0": 257.49,
+     "y": 214.36
+    },
+    {
+     "content": "52.3",
+     "w": 19.09,
+     "x0": 257.49,
+     "y": 227.81
+    }
+   ],
+   "n": 6,
+   "page": 4,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 4.44,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 257.49,
+   "y_span": 113.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.55,
+    13.55,
+    13.56,
+    13.54,
+    19.02,
+    13.56,
+    13.55,
+    13.45
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 6,
+   "kinds": {
+    "DEC": 10
+   },
+   "members": [
+    {
+     "content": "78.9",
+     "w": 19.09,
+     "x0": 299.7,
+     "y": 100.48
+    },
+    {
+     "content": "79.2",
+     "w": 19.09,
+     "x0": 299.7,
+     "y": 114.03
+    },
+    {
+     "content": "80.8",
+     "w": 19.09,
+     "x0": 299.7,
+     "y": 127.58
+    },
+    {
+     "content": "79.7",
+     "w": 19.09,
+     "x0": 299.7,
+     "y": 141.13
+    },
+    {
+     "content": "80.6",
+     "w": 19.09,
+     "x0": 299.7,
+     "y": 154.69
+    },
+    {
+     "content": "83.4",
+     "w": 19.09,
+     "x0": 299.7,
+     "y": 168.23
+    },
+    {
+     "content": "76.1",
+     "w": 19.09,
+     "x0": 299.7,
+     "y": 187.25
+    },
+    {
+     "content": "79.2",
+     "w": 19.09,
+     "x0": 299.7,
+     "y": 200.81
+    },
+    {
+     "content": "82.8",
+     "w": 19.09,
+     "x0": 299.7,
+     "y": 214.36
+    },
+    {
+     "content": "84.2",
+     "w": 19.09,
+     "x0": 299.7,
+     "y": 227.81
+    }
+   ],
+   "n": 10,
+   "page": 4,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.41,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 299.7,
+   "y_span": 127.3
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.55,
+    13.55,
+    13.56,
+    13.44,
+    19.12,
+    13.56,
+    13.55,
+    13.55
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 6,
+   "kinds": {
+    "DEC": 10
+   },
+   "members": [
+    {
+     "content": "70.2",
+     "w": 19.09,
+     "x0": 352.78,
+     "y": 100.48
+    },
+    {
+     "content": "70.1",
+     "w": 19.09,
+     "x0": 352.78,
+     "y": 114.03
+    },
+    {
+     "content": "74.9",
+     "w": 19.09,
+     "x0": 352.78,
+     "y": 127.58
+    },
+    {
+     "content": "77.0",
+     "w": 19.09,
+     "x0": 352.78,
+     "y": 141.13
+    },
+    {
+     "content": "77.0",
+     "w": 19.09,
+     "x0": 352.78,
+     "y": 154.69
+    },
+    {
+     "content": "81.1",
+     "w": 19.09,
+     "x0": 352.78,
+     "y": 168.13
+    },
+    {
+     "content": "70.1",
+     "w": 19.09,
+     "x0": 352.78,
+     "y": 187.25
+    },
+    {
+     "content": "73.0",
+     "w": 19.09,
+     "x0": 352.78,
+     "y": 200.81
+    },
+    {
+     "content": "76.0",
+     "w": 19.09,
+     "x0": 352.78,
+     "y": 214.36
+    },
+    {
+     "content": "77.0",
+     "w": 19.09,
+     "x0": 352.78,
+     "y": 227.91
+    }
+   ],
+   "n": 10,
+   "page": 4,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.42,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 352.78,
+   "y_span": 127.4
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    88.86,
+    13.55,
+    13.55,
+    32.58,
+    13.55,
+    19.03,
+    13.54,
+    13.46,
+    13.64,
+    123.44
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 1,
+   "kinds": {
+    "DEC": 11
+   },
+   "members": [
+    {
+     "content": "2020",
+     "w": 22.25,
+     "x0": 387.16,
+     "y": 422.99
+    },
+    {
+     "content": "14.6",
+     "w": 19.09,
+     "x0": 388.67,
+     "y": 511.85
+    },
+    {
+     "content": "10.1",
+     "w": 19.09,
+     "x0": 388.67,
+     "y": 525.4
+    },
+    {
+     "content": "16.6",
+     "w": 19.09,
+     "x0": 388.67,
+     "y": 538.95
+    },
+    {
+     "content": "18.1",
+     "w": 19.09,
+     "x0": 388.68,
+     "y": 571.53
+    },
+    {
+     "content": "21.2",
+     "w": 19.09,
+     "x0": 388.68,
+     "y": 585.08
+    },
+    {
+     "content": "16.8",
+     "w": 19.09,
+     "x0": 388.68,
+     "y": 604.11
+    },
+    {
+     "content": "20.1",
+     "w": 19.09,
+     "x0": 388.68,
+     "y": 617.65
+    },
+    {
+     "content": "24.9",
+     "w": 19.09,
+     "x0": 388.67,
+     "y": 631.11
+    },
+    {
+     "content": "23.8",
+     "w": 19.09,
+     "x0": 388.68,
+     "y": 644.75
+    },
+    {
+     "content": "2020",
+     "w": 24.75,
+     "x0": 385.26,
+     "y": 768.19
+    }
+   ],
+   "n": 11,
+   "page": 4,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 9.17,
+   "sublabel": "",
+   "w_mean": 19.89,
+   "w_range": [
+    19.1,
+    24.8
+   ],
+   "x0": 388.23,
+   "y_span": 345.2
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    40.65,
+    27.1,
+    19.02,
+    13.56,
+    13.44,
+    13.66
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 6,
+   "kinds": {
+    "DEC": 7
+   },
+   "members": [
+    {
+     "content": "68.8",
+     "w": 19.09,
+     "x0": 401.8,
+     "y": 100.48
+    },
+    {
+     "content": "75.2",
+     "w": 19.09,
+     "x0": 401.8,
+     "y": 141.13
+    },
+    {
+     "content": "76.6",
+     "w": 19.09,
+     "x0": 401.79,
+     "y": 168.23
+    },
+    {
+     "content": "72.8",
+     "w": 19.09,
+     "x0": 401.79,
+     "y": 187.25
+    },
+    {
+     "content": "74.8",
+     "w": 19.09,
+     "x0": 401.79,
+     "y": 200.81
+    },
+    {
+     "content": "80.0",
+     "w": 19.09,
+     "x0": 401.79,
+     "y": 214.25
+    },
+    {
+     "content": "78.9",
+     "w": 19.1,
+     "x0": 401.79,
+     "y": 227.91
+    }
+   ],
+   "n": 7,
+   "page": 4,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 3.02,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 401.79,
+   "y_span": 127.4
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    46.14,
+    13.54,
+    13.55,
+    19.03,
+    13.54,
+    13.55,
+    13.45
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 2,
+   "kinds": {
+    "DEC": 8
+   },
+   "members": [
+    {
+     "content": "23.0",
+     "w": 19.09,
+     "x0": 423.92,
+     "y": 511.85
+    },
+    {
+     "content": "10.6",
+     "w": 19.09,
+     "x0": 423.91,
+     "y": 557.99
+    },
+    {
+     "content": "26.5",
+     "w": 19.1,
+     "x0": 423.91,
+     "y": 571.53
+    },
+    {
+     "content": "29.3",
+     "w": 19.09,
+     "x0": 423.91,
+     "y": 585.08
+    },
+    {
+     "content": "18.7",
+     "w": 19.09,
+     "x0": 423.91,
+     "y": 604.11
+    },
+    {
+     "content": "23.4",
+     "w": 19.1,
+     "x0": 423.91,
+     "y": 617.65
+    },
+    {
+     "content": "28.3",
+     "w": 19.09,
+     "x0": 423.92,
+     "y": 631.2
+    },
+    {
+     "content": "31.0",
+     "w": 19.09,
+     "x0": 423.92,
+     "y": 644.65
+    }
+   ],
+   "n": 8,
+   "page": 4,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 3.43,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 423.91,
+   "y_span": 132.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    40.65,
+    27.1,
+    19.02,
+    13.56,
+    13.44,
+    13.66
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 6,
+   "kinds": {
+    "DEC": 7
+   },
+   "members": [
+    {
+     "content": "51.4",
+     "w": 19.09,
+     "x0": 442.66,
+     "y": 100.48
+    },
+    {
+     "content": "52.5",
+     "w": 19.09,
+     "x0": 442.66,
+     "y": 141.13
+    },
+    {
+     "content": "53.0",
+     "w": 19.09,
+     "x0": 442.66,
+     "y": 168.23
+    },
+    {
+     "content": "47.6",
+     "w": 19.09,
+     "x0": 442.66,
+     "y": 187.25
+    },
+    {
+     "content": "52.7",
+     "w": 19.09,
+     "x0": 442.66,
+     "y": 200.81
+    },
+    {
+     "content": "57.8",
+     "w": 19.09,
+     "x0": 442.66,
+     "y": 214.25
+    },
+    {
+     "content": "56.0",
+     "w": 19.09,
+     "x0": 442.66,
+     "y": 227.91
+    }
+   ],
+   "n": 7,
+   "page": 4,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 3.02,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 442.66,
+   "y_span": 127.4
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    65.16,
+    13.54,
+    13.55,
+    13.45
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 2,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "24.5",
+     "w": 19.09,
+     "x0": 459.16,
+     "y": 525.4
+    },
+    {
+     "content": "31.5",
+     "w": 19.09,
+     "x0": 459.16,
+     "y": 538.95
+    },
+    {
+     "content": "22.0",
+     "w": 19.09,
+     "x0": 459.16,
+     "y": 604.11
+    },
+    {
+     "content": "28.1",
+     "w": 19.09,
+     "x0": 459.16,
+     "y": 617.65
+    },
+    {
+     "content": "32.9",
+     "w": 19.09,
+     "x0": 459.16,
+     "y": 631.2
+    },
+    {
+     "content": "35.0",
+     "w": 19.09,
+     "x0": 459.16,
+     "y": 644.65
+    }
+   ],
+   "n": 6,
+   "page": 4,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 4.84,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 459.16,
+   "y_span": 119.2
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    40.65,
+    27.1,
+    19.02,
+    13.56,
+    13.55,
+    13.45
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 6,
+   "kinds": {
+    "DEC": 7
+   },
+   "members": [
+    {
+     "content": "57.6",
+     "w": 19.09,
+     "x0": 483.53,
+     "y": 100.48
+    },
+    {
+     "content": "50.4",
+     "w": 19.09,
+     "x0": 483.53,
+     "y": 141.13
+    },
+    {
+     "content": "53.4",
+     "w": 19.09,
+     "x0": 483.52,
+     "y": 168.23
+    },
+    {
+     "content": "57.2",
+     "w": 19.09,
+     "x0": 483.53,
+     "y": 187.25
+    },
+    {
+     "content": "56.4",
+     "w": 19.09,
+     "x0": 483.53,
+     "y": 200.81
+    },
+    {
+     "content": "58.6",
+     "w": 19.09,
+     "x0": 483.53,
+     "y": 214.36
+    },
+    {
+     "content": "60.2",
+     "w": 19.09,
+     "x0": 483.53,
+     "y": 227.81
+    }
+   ],
+   "n": 7,
+   "page": 4,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 3.02,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 483.53,
+   "y_span": 127.3
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.55,
+    19.04,
+    13.54,
+    13.55,
+    19.03,
+    13.54,
+    13.55,
+    13.45
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 2,
+   "kinds": {
+    "DEC": 10
+   },
+   "members": [
+    {
+     "content": "29.9",
+     "w": 19.09,
+     "x0": 497.13,
+     "y": 511.85
+    },
+    {
+     "content": "28.2",
+     "w": 19.09,
+     "x0": 497.13,
+     "y": 525.4
+    },
+    {
+     "content": "35.5",
+     "w": 19.09,
+     "x0": 497.13,
+     "y": 538.95
+    },
+    {
+     "content": "14.6",
+     "w": 19.1,
+     "x0": 497.12,
+     "y": 557.99
+    },
+    {
+     "content": "27.6",
+     "w": 19.09,
+     "x0": 497.13,
+     "y": 571.53
+    },
+    {
+     "content": "39.6",
+     "w": 19.1,
+     "x0": 497.12,
+     "y": 585.08
+    },
+    {
+     "content": "26.1",
+     "w": 19.1,
+     "x0": 497.12,
+     "y": 604.11
+    },
+    {
+     "content": "31.9",
+     "w": 19.09,
+     "x0": 497.13,
+     "y": 617.65
+    },
+    {
+     "content": "36.0",
+     "w": 19.09,
+     "x0": 497.13,
+     "y": 631.2
+    },
+    {
+     "content": "39.9",
+     "w": 19.09,
+     "x0": 497.13,
+     "y": 644.65
+    }
+   ],
+   "n": 10,
+   "page": 4,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.42,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 497.13,
+   "y_span": 132.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    173.0,
+    416.55
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 3
+   },
+   "members": [
+    {
+     "content": "2018",
+     "w": 21.38,
+     "x0": 70.87,
+     "y": 119.68
+    },
+    {
+     "content": "3.2",
+     "w": 13.63,
+     "x0": 70.87,
+     "y": 292.68
+    },
+    {
+     "content": "3.3",
+     "w": 13.63,
+     "x0": 70.87,
+     "y": 709.23
+    }
+   ],
+   "n": 3,
+   "page": 5,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 2.41,
+   "sublabel": "",
+   "w_mean": 16.21,
+   "w_range": [
+    13.6,
+    21.4
+   ],
+   "x0": 70.87,
+   "y_span": 589.5
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    19.03,
+    13.55,
+    13.54,
+    13.46
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 2,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "43.5",
+     "w": 19.09,
+     "x0": 153.4,
+     "y": 561.75
+    },
+    {
+     "content": "55.4",
+     "w": 19.09,
+     "x0": 153.4,
+     "y": 575.3
+    },
+    {
+     "content": "50.0",
+     "w": 19.09,
+     "x0": 153.4,
+     "y": 594.33
+    },
+    {
+     "content": "56.6",
+     "w": 19.09,
+     "x0": 153.4,
+     "y": 607.88
+    },
+    {
+     "content": "65.1",
+     "w": 19.09,
+     "x0": 153.4,
+     "y": 621.42
+    },
+    {
+     "content": "68.2",
+     "w": 19.09,
+     "x0": 153.4,
+     "y": 634.88
+    }
+   ],
+   "n": 6,
+   "page": 5,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.41,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 153.4,
+   "y_span": 73.1
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.54,
+    13.46
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 2,
+   "kinds": {
+    "DEC": 4
+   },
+   "members": [
+    {
+     "content": "53.4",
+     "w": 19.09,
+     "x0": 188.64,
+     "y": 594.33
+    },
+    {
+     "content": "60.5",
+     "w": 19.09,
+     "x0": 188.64,
+     "y": 607.88
+    },
+    {
+     "content": "67.9",
+     "w": 19.09,
+     "x0": 188.64,
+     "y": 621.42
+    },
+    {
+     "content": "71.6",
+     "w": 19.1,
+     "x0": 188.64,
+     "y": 634.88
+    }
+   ],
+   "n": 4,
+   "page": 5,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.01,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 188.64,
+   "y_span": 40.5
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    19.03,
+    13.55,
+    13.54,
+    13.46
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 2,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "57.0",
+     "w": 19.09,
+     "x0": 223.89,
+     "y": 561.75
+    },
+    {
+     "content": "64.1",
+     "w": 19.09,
+     "x0": 223.89,
+     "y": 575.3
+    },
+    {
+     "content": "56.3",
+     "w": 19.09,
+     "x0": 223.89,
+     "y": 594.33
+    },
+    {
+     "content": "63.1",
+     "w": 19.09,
+     "x0": 223.89,
+     "y": 607.88
+    },
+    {
+     "content": "69.9",
+     "w": 19.09,
+     "x0": 223.89,
+     "y": 621.42
+    },
+    {
+     "content": "72.6",
+     "w": 19.09,
+     "x0": 223.88,
+     "y": 634.88
+    }
+   ],
+   "n": 6,
+   "page": 5,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.41,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 223.89,
+   "y_span": 73.1
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    155.94,
+    13.55,
+    19.03,
+    13.55,
+    13.54,
+    13.46
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 1,
+   "kinds": {
+    "DEC": 6,
+    "INT": 1
+   },
+   "members": [
+    {
+     "content": "4",
+     "w": 8.99,
+     "x0": 260.78,
+     "y": 405.81
+    },
+    {
+     "content": "57.2",
+     "w": 19.09,
+     "x0": 261.85,
+     "y": 561.75
+    },
+    {
+     "content": "64.6",
+     "w": 19.09,
+     "x0": 261.85,
+     "y": 575.3
+    },
+    {
+     "content": "57.6",
+     "w": 19.09,
+     "x0": 261.85,
+     "y": 594.33
+    },
+    {
+     "content": "64.0",
+     "w": 19.09,
+     "x0": 261.85,
+     "y": 607.88
+    },
+    {
+     "content": "70.4",
+     "w": 19.09,
+     "x0": 261.85,
+     "y": 621.42
+    },
+    {
+     "content": "73.0",
+     "w": 19.09,
+     "x0": 261.86,
+     "y": 634.88
+    }
+   ],
+   "n": 7,
+   "page": 5,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 11.59,
+   "sublabel": "",
+   "w_mean": 17.65,
+   "w_range": [
+    9.0,
+    19.1
+   ],
+   "x0": 261.7,
+   "y_span": 229.1
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    45.28,
+    240.22
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 1,
+   "kinds": {
+    "DEC": 3
+   },
+   "members": [
+    {
+     "content": "3.4",
+     "w": 13.64,
+     "x0": 306.14,
+     "y": 356.1
+    },
+    {
+     "content": "2021",
+     "w": 22.26,
+     "x0": 306.14,
+     "y": 401.38
+    },
+    {
+     "content": "3.5",
+     "w": 13.64,
+     "x0": 306.14,
+     "y": 641.6
+    }
+   ],
+   "n": 3,
+   "page": 5,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 5.31,
+   "sublabel": "",
+   "w_mean": 16.51,
+   "w_range": [
+    13.6,
+    22.3
+   ],
+   "x0": 306.14,
+   "y_span": 285.5
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    19.03,
+    13.55,
+    13.45,
+    19.12,
+    13.56,
+    13.55,
+    13.55,
+    85.73
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 1,
+   "kinds": {
+    "DEC": 9
+   },
+   "members": [
+    {
+     "content": "58.4",
+     "w": 19.09,
+     "x0": 416.93,
+     "y": 100.48
+    },
+    {
+     "content": "57.9",
+     "w": 19.09,
+     "x0": 416.92,
+     "y": 119.51
+    },
+    {
+     "content": "64.3",
+     "w": 19.09,
+     "x0": 416.92,
+     "y": 133.06
+    },
+    {
+     "content": "68.1",
+     "w": 19.09,
+     "x0": 416.92,
+     "y": 146.51
+    },
+    {
+     "content": "61.1",
+     "w": 19.09,
+     "x0": 416.92,
+     "y": 165.63
+    },
+    {
+     "content": "61.6",
+     "w": 19.09,
+     "x0": 416.92,
+     "y": 179.19
+    },
+    {
+     "content": "64.1",
+     "w": 19.09,
+     "x0": 416.92,
+     "y": 192.74
+    },
+    {
+     "content": "67.9",
+     "w": 19.09,
+     "x0": 416.92,
+     "y": 206.29
+    },
+    {
+     "content": "2020",
+     "w": 22.25,
+     "x0": 418.16,
+     "y": 292.02
+    }
+   ],
+   "n": 9,
+   "page": 5,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 6.37,
+   "sublabel": "",
+   "w_mean": 19.44,
+   "w_range": [
+    19.1,
+    22.2
+   ],
+   "x0": 417.06,
+   "y_span": 191.5
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    19.03,
+    13.55,
+    13.55,
+    19.02,
+    13.56,
+    13.55,
+    13.45
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 1,
+   "kinds": {
+    "DEC": 8
+   },
+   "members": [
+    {
+     "content": "45.5",
+     "w": 19.1,
+     "x0": 486.02,
+     "y": 100.48
+    },
+    {
+     "content": "42.3",
+     "w": 19.09,
+     "x0": 486.02,
+     "y": 119.51
+    },
+    {
+     "content": "47.5",
+     "w": 19.09,
+     "x0": 486.02,
+     "y": 133.06
+    },
+    {
+     "content": "49.1",
+     "w": 19.09,
+     "x0": 486.02,
+     "y": 146.61
+    },
+    {
+     "content": "46.9",
+     "w": 19.09,
+     "x0": 486.02,
+     "y": 165.63
+    },
+    {
+     "content": "47.2",
+     "w": 19.09,
+     "x0": 486.02,
+     "y": 179.19
+    },
+    {
+     "content": "48.3",
+     "w": 19.09,
+     "x0": 486.02,
+     "y": 192.74
+    },
+    {
+     "content": "51.6",
+     "w": 19.09,
+     "x0": 486.02,
+     "y": 206.19
+    }
+   ],
+   "n": 8,
+   "page": 5,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.41,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 486.02,
+   "y_span": 105.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.45,
+    46.22,
+    13.55
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 5
+   },
+   "members": [
+    {
+     "content": "25.4",
+     "w": 19.09,
+     "x0": 179.73,
+     "y": 146.61
+    },
+    {
+     "content": "43.4",
+     "w": 19.09,
+     "x0": 179.73,
+     "y": 160.16
+    },
+    {
+     "content": "50.3",
+     "w": 19.09,
+     "x0": 179.72,
+     "y": 173.61
+    },
+    {
+     "content": "15.2",
+     "w": 19.09,
+     "x0": 179.73,
+     "y": 219.83
+    },
+    {
+     "content": "20.5",
+     "w": 19.09,
+     "x0": 179.73,
+     "y": 233.38
+    }
+   ],
+   "n": 5,
+   "page": 6,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 3.44,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 179.73,
+   "y_span": 86.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    19.03,
+    13.55,
+    13.45,
+    19.13,
+    13.55,
+    13.54,
+    13.55
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 9
+   },
+   "members": [
+    {
+     "content": "33.0",
+     "w": 19.09,
+     "x0": 220.95,
+     "y": 114.03
+    },
+    {
+     "content": "56.5",
+     "w": 19.1,
+     "x0": 220.95,
+     "y": 127.58
+    },
+    {
+     "content": "16.2",
+     "w": 19.09,
+     "x0": 220.95,
+     "y": 146.61
+    },
+    {
+     "content": "52.4",
+     "w": 19.09,
+     "x0": 220.95,
+     "y": 160.16
+    },
+    {
+     "content": "68.5",
+     "w": 19.09,
+     "x0": 220.95,
+     "y": 173.61
+    },
+    {
+     "content": "11.0",
+     "w": 19.09,
+     "x0": 220.95,
+     "y": 192.74
+    },
+    {
+     "content": "17.8",
+     "w": 19.09,
+     "x0": 220.95,
+     "y": 206.29
+    },
+    {
+     "content": "35.6",
+     "w": 19.09,
+     "x0": 220.95,
+     "y": 219.83
+    },
+    {
+     "content": "50.9",
+     "w": 19.09,
+     "x0": 220.95,
+     "y": 233.38
+    }
+   ],
+   "n": 9,
+   "page": 6,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.42,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 220.95,
+   "y_span": 119.3
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.45,
+    19.13,
+    13.55,
+    13.54,
+    13.55
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 7
+   },
+   "members": [
+    {
+     "content": "28.4",
+     "w": 19.09,
+     "x0": 258.19,
+     "y": 146.61
+    },
+    {
+     "content": "68.5",
+     "w": 19.09,
+     "x0": 258.19,
+     "y": 160.16
+    },
+    {
+     "content": "78.5",
+     "w": 19.09,
+     "x0": 258.19,
+     "y": 173.61
+    },
+    {
+     "content": "18.1",
+     "w": 19.09,
+     "x0": 258.19,
+     "y": 192.74
+    },
+    {
+     "content": "29.3",
+     "w": 19.09,
+     "x0": 258.19,
+     "y": 206.29
+    },
+    {
+     "content": "53.1",
+     "w": 19.09,
+     "x0": 258.19,
+     "y": 219.83
+    },
+    {
+     "content": "69.7",
+     "w": 19.09,
+     "x0": 258.19,
+     "y": 233.38
+    }
+   ],
+   "n": 7,
+   "page": 6,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.42,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 258.19,
+   "y_span": 86.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    54.2,
+    19.02,
+    13.56,
+    13.55,
+    13.45
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "47.3",
+     "w": 19.09,
+     "x0": 438.54,
+     "y": 114.03
+    },
+    {
+     "content": "76.2",
+     "w": 19.09,
+     "x0": 438.54,
+     "y": 168.23
+    },
+    {
+     "content": "36.5",
+     "w": 19.09,
+     "x0": 438.55,
+     "y": 187.25
+    },
+    {
+     "content": "52.5",
+     "w": 19.09,
+     "x0": 438.55,
+     "y": 200.81
+    },
+    {
+     "content": "70.7",
+     "w": 19.09,
+     "x0": 438.55,
+     "y": 214.36
+    },
+    {
+     "content": "79.3",
+     "w": 19.09,
+     "x0": 438.54,
+     "y": 227.81
+    }
+   ],
+   "n": 6,
+   "page": 6,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 4.03,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 438.55,
+   "y_span": 113.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    27.11,
+    13.54,
+    19.02,
+    13.56,
+    13.55,
+    13.45
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 8
+   },
+   "members": [
+    {
+     "content": "14.8",
+     "w": 19.09,
+     "x0": 469.26,
+     "y": 114.03
+    },
+    {
+     "content": "5.0",
+     "w": 13.64,
+     "x0": 469.62,
+     "y": 127.58
+    },
+    {
+     "content": "31.2",
+     "w": 19.09,
+     "x0": 469.26,
+     "y": 154.69
+    },
+    {
+     "content": "36.8",
+     "w": 19.09,
+     "x0": 469.26,
+     "y": 168.23
+    },
+    {
+     "content": "17.7",
+     "w": 19.09,
+     "x0": 469.27,
+     "y": 187.25
+    },
+    {
+     "content": "22.0",
+     "w": 19.09,
+     "x0": 469.27,
+     "y": 200.81
+    },
+    {
+     "content": "30.2",
+     "w": 19.09,
+     "x0": 469.27,
+     "y": 214.36
+    },
+    {
+     "content": "37.7",
+     "w": 19.09,
+     "x0": 469.26,
+     "y": 227.81
+    }
+   ],
+   "n": 8,
+   "page": 6,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 2.02,
+   "sublabel": "",
+   "w_mean": 18.41,
+   "w_range": [
+    13.6,
+    19.1
+   ],
+   "x0": 469.31,
+   "y_span": 113.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    54.2,
+    19.02,
+    13.56,
+    13.55,
+    13.45
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "62.4",
+     "w": 19.1,
+     "x0": 498.69,
+     "y": 114.03
+    },
+    {
+     "content": "75.0",
+     "w": 19.09,
+     "x0": 498.7,
+     "y": 168.23
+    },
+    {
+     "content": "56.2",
+     "w": 19.09,
+     "x0": 498.69,
+     "y": 187.25
+    },
+    {
+     "content": "64.0",
+     "w": 19.09,
+     "x0": 498.69,
+     "y": 200.81
+    },
+    {
+     "content": "73.4",
+     "w": 19.09,
+     "x0": 498.69,
+     "y": 214.36
+    },
+    {
+     "content": "76.8",
+     "w": 19.09,
+     "x0": 498.7,
+     "y": 227.81
+    }
+   ],
+   "n": 6,
+   "page": 6,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 4.03,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 498.69,
+   "y_span": 113.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.54,
+    13.55,
+    13.55,
+    13.55,
+    13.55,
+    19.03,
+    13.54,
+    13.55,
+    13.55,
+    13.45
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 11
+   },
+   "members": [
+    {
+     "content": "26.1",
+     "w": 19.09,
+     "x0": 230.51,
+     "y": 574.6
+    },
+    {
+     "content": "44.8",
+     "w": 19.09,
+     "x0": 230.51,
+     "y": 588.14
+    },
+    {
+     "content": "55.1",
+     "w": 19.09,
+     "x0": 230.51,
+     "y": 601.69
+    },
+    {
+     "content": "62.8",
+     "w": 19.09,
+     "x0": 230.51,
+     "y": 615.24
+    },
+    {
+     "content": "67.5",
+     "w": 19.09,
+     "x0": 230.51,
+     "y": 628.79
+    },
+    {
+     "content": "63.4",
+     "w": 19.09,
+     "x0": 230.51,
+     "y": 642.34
+    },
+    {
+     "content": "43.2",
+     "w": 19.09,
+     "x0": 230.51,
+     "y": 661.37
+    },
+    {
+     "content": "55.1",
+     "w": 19.09,
+     "x0": 230.51,
+     "y": 674.91
+    },
+    {
+     "content": "59.6",
+     "w": 19.09,
+     "x0": 230.51,
+     "y": 688.46
+    },
+    {
+     "content": "66.1",
+     "w": 19.09,
+     "x0": 230.51,
+     "y": 702.01
+    },
+    {
+     "content": "68.9",
+     "w": 19.09,
+     "x0": 230.51,
+     "y": 715.46
+    }
+   ],
+   "n": 11,
+   "page": 7,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.41,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 230.51,
+   "y_span": 140.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.55,
+    13.55,
+    19.03,
+    13.54,
+    13.46,
+    19.13,
+    13.54,
+    13.55,
+    13.55
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 11
+   },
+   "members": [
+    {
+     "content": "29.8",
+     "w": 19.09,
+     "x0": 233.56,
+     "y": 100.48
+    },
+    {
+     "content": "40.8",
+     "w": 19.09,
+     "x0": 233.56,
+     "y": 114.03
+    },
+    {
+     "content": "56.2",
+     "w": 19.09,
+     "x0": 233.56,
+     "y": 127.58
+    },
+    {
+     "content": "63.6",
+     "w": 19.09,
+     "x0": 233.56,
+     "y": 141.13
+    },
+    {
+     "content": "25.6",
+     "w": 19.09,
+     "x0": 233.56,
+     "y": 160.16
+    },
+    {
+     "content": "59.5",
+     "w": 19.09,
+     "x0": 233.56,
+     "y": 173.7
+    },
+    {
+     "content": "77.0",
+     "w": 19.09,
+     "x0": 233.56,
+     "y": 187.16
+    },
+    {
+     "content": "34.0",
+     "w": 19.09,
+     "x0": 233.56,
+     "y": 206.29
+    },
+    {
+     "content": "45.0",
+     "w": 19.09,
+     "x0": 233.56,
+     "y": 219.83
+    },
+    {
+     "content": "55.8",
+     "w": 19.09,
+     "x0": 233.56,
+     "y": 233.38
+    },
+    {
+     "content": "61.8",
+     "w": 19.09,
+     "x0": 233.56,
+     "y": 246.93
+    }
+   ],
+   "n": 11,
+   "page": 7,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.42,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 233.56,
+   "y_span": 146.4
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.55,
+    13.55,
+    19.03,
+    13.54,
+    13.46,
+    19.13,
+    13.54,
+    13.55,
+    13.55
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 11
+   },
+   "members": [
+    {
+     "content": "34.9",
+     "w": 19.09,
+     "x0": 285.21,
+     "y": 100.48
+    },
+    {
+     "content": "36.7",
+     "w": 19.09,
+     "x0": 285.21,
+     "y": 114.03
+    },
+    {
+     "content": "47.4",
+     "w": 19.09,
+     "x0": 285.21,
+     "y": 127.58
+    },
+    {
+     "content": "54.9",
+     "w": 19.09,
+     "x0": 285.21,
+     "y": 141.13
+    },
+    {
+     "content": "23.8",
+     "w": 19.09,
+     "x0": 285.21,
+     "y": 160.16
+    },
+    {
+     "content": "41.9",
+     "w": 19.09,
+     "x0": 285.21,
+     "y": 173.7
+    },
+    {
+     "content": "55.6",
+     "w": 19.1,
+     "x0": 285.21,
+     "y": 187.16
+    },
+    {
+     "content": "30.5",
+     "w": 19.09,
+     "x0": 285.21,
+     "y": 206.29
+    },
+    {
+     "content": "35.8",
+     "w": 19.09,
+     "x0": 285.21,
+     "y": 219.83
+    },
+    {
+     "content": "46.0",
+     "w": 19.09,
+     "x0": 285.21,
+     "y": 233.38
+    },
+    {
+     "content": "51.7",
+     "w": 19.09,
+     "x0": 285.21,
+     "y": 246.93
+    }
+   ],
+   "n": 11,
+   "page": 7,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.42,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 285.21,
+   "y_span": 146.4
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.55,
+    13.55,
+    19.03,
+    13.54,
+    13.46,
+    19.13,
+    13.54,
+    13.55,
+    13.55
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 11
+   },
+   "members": [
+    {
+     "content": "33.7",
+     "w": 19.09,
+     "x0": 345.8,
+     "y": 100.48
+    },
+    {
+     "content": "50.4",
+     "w": 19.09,
+     "x0": 345.8,
+     "y": 114.03
+    },
+    {
+     "content": "71.9",
+     "w": 19.09,
+     "x0": 345.8,
+     "y": 127.58
+    },
+    {
+     "content": "79.3",
+     "w": 19.09,
+     "x0": 345.8,
+     "y": 141.13
+    },
+    {
+     "content": "24.1",
+     "w": 19.09,
+     "x0": 345.8,
+     "y": 160.16
+    },
+    {
+     "content": "62.7",
+     "w": 19.09,
+     "x0": 345.8,
+     "y": 173.7
+    },
+    {
+     "content": "81.0",
+     "w": 19.09,
+     "x0": 345.8,
+     "y": 187.16
+    },
+    {
+     "content": "38.3",
+     "w": 19.09,
+     "x0": 345.8,
+     "y": 206.29
+    },
+    {
+     "content": "53.8",
+     "w": 19.09,
+     "x0": 345.8,
+     "y": 219.83
+    },
+    {
+     "content": "66.7",
+     "w": 19.09,
+     "x0": 345.8,
+     "y": 233.38
+    },
+    {
+     "content": "72.9",
+     "w": 19.09,
+     "x0": 345.8,
+     "y": 246.93
+    }
+   ],
+   "n": 11,
+   "page": 7,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.42,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 345.8,
+   "y_span": 146.4
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.55,
+    13.46,
+    19.12,
+    13.54,
+    13.55,
+    19.04,
+    13.54,
+    13.55,
+    13.55
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 11
+   },
+   "members": [
+    {
+     "content": "37.7",
+     "w": 19.09,
+     "x0": 404.26,
+     "y": 100.48
+    },
+    {
+     "content": "48.8",
+     "w": 19.09,
+     "x0": 404.26,
+     "y": 114.03
+    },
+    {
+     "content": "66.1",
+     "w": 19.09,
+     "x0": 404.26,
+     "y": 127.58
+    },
+    {
+     "content": "73.9",
+     "w": 19.09,
+     "x0": 404.26,
+     "y": 141.04
+    },
+    {
+     "content": "27.8",
+     "w": 19.09,
+     "x0": 404.26,
+     "y": 160.16
+    },
+    {
+     "content": "55.8",
+     "w": 19.09,
+     "x0": 404.26,
+     "y": 173.7
+    },
+    {
+     "content": "69.6",
+     "w": 19.09,
+     "x0": 404.26,
+     "y": 187.25
+    },
+    {
+     "content": "38.1",
+     "w": 19.09,
+     "x0": 404.26,
+     "y": 206.29
+    },
+    {
+     "content": "53.3",
+     "w": 19.09,
+     "x0": 404.26,
+     "y": 219.83
+    },
+    {
+     "content": "63.4",
+     "w": 19.09,
+     "x0": 404.26,
+     "y": 233.38
+    },
+    {
+     "content": "67.4",
+     "w": 19.09,
+     "x0": 404.26,
+     "y": 246.93
+    }
+   ],
+   "n": 11,
+   "page": 7,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.42,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 404.26,
+   "y_span": 146.4
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.55,
+    13.55,
+    19.03,
+    13.54,
+    13.46,
+    19.13,
+    13.54,
+    13.55,
+    13.55,
+    113.81
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 12
+   },
+   "members": [
+    {
+     "content": "33.6",
+     "w": 19.09,
+     "x0": 446.62,
+     "y": 100.48
+    },
+    {
+     "content": "43.9",
+     "w": 19.09,
+     "x0": 446.62,
+     "y": 114.03
+    },
+    {
+     "content": "60.0",
+     "w": 19.09,
+     "x0": 446.62,
+     "y": 127.58
+    },
+    {
+     "content": "67.5",
+     "w": 19.09,
+     "x0": 446.62,
+     "y": 141.13
+    },
+    {
+     "content": "25.4",
+     "w": 19.09,
+     "x0": 446.62,
+     "y": 160.16
+    },
+    {
+     "content": "53.7",
+     "w": 19.09,
+     "x0": 446.62,
+     "y": 173.7
+    },
+    {
+     "content": "69.3",
+     "w": 19.09,
+     "x0": 446.62,
+     "y": 187.16
+    },
+    {
+     "content": "35.1",
+     "w": 19.09,
+     "x0": 446.62,
+     "y": 206.29
+    },
+    {
+     "content": "46.9",
+     "w": 19.09,
+     "x0": 446.62,
+     "y": 219.83
+    },
+    {
+     "content": "57.8",
+     "w": 19.09,
+     "x0": 446.62,
+     "y": 233.38
+    },
+    {
+     "content": "63.4",
+     "w": 19.09,
+     "x0": 446.62,
+     "y": 246.93
+    },
+    {
+     "content": "2022",
+     "w": 24.67,
+     "x0": 446.72,
+     "y": 360.74
+    }
+   ],
+   "n": 12,
+   "page": 7,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 8.46,
+   "sublabel": "",
+   "w_mean": 19.55,
+   "w_range": [
+    19.1,
+    24.7
+   ],
+   "x0": 446.63,
+   "y_span": 260.3
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    19.39,
+    19.39,
+    19.39,
+    19.39,
+    19.39,
+    37.34,
+    16.45,
+    16.44,
+    16.45,
+    16.45,
+    16.45,
+    16.45,
+    439.05
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 1,
+   "kinds": {
+    "INT": 14
+   },
+   "members": [
+    {
+     "content": "70",
+     "w": 7.9,
+     "x0": 85.05,
+     "y": 93.64
+    },
+    {
+     "content": "60",
+     "w": 7.9,
+     "x0": 85.05,
+     "y": 113.03
+    },
+    {
+     "content": "50",
+     "w": 7.9,
+     "x0": 85.05,
+     "y": 132.42
+    },
+    {
+     "content": "40",
+     "w": 7.9,
+     "x0": 85.05,
+     "y": 151.81
+    },
+    {
+     "content": "30",
+     "w": 7.9,
+     "x0": 85.05,
+     "y": 171.2
+    },
+    {
+     "content": "20",
+     "w": 7.9,
+     "x0": 85.05,
+     "y": 190.59
+    },
+    {
+     "content": "52",
+     "w": 7.9,
+     "x0": 85.05,
+     "y": 227.93
+    },
+    {
+     "content": "50",
+     "w": 7.9,
+     "x0": 85.05,
+     "y": 244.38
+    },
+    {
+     "content": "48",
+     "w": 7.9,
+     "x0": 85.05,
+     "y": 260.82
+    },
+    {
+     "content": "46",
+     "w": 7.9,
+     "x0": 85.05,
+     "y": 277.27
+    },
+    {
+     "content": "44",
+     "w": 7.9,
+     "x0": 85.05,
+     "y": 293.72
+    },
+    {
+     "content": "42",
+     "w": 7.9,
+     "x0": 85.05,
+     "y": 310.17
+    },
+    {
+     "content": "40",
+     "w": 7.9,
+     "x0": 85.05,
+     "y": 326.62
+    },
+    {
+     "content": "3",
+     "w": 2.99,
+     "x0": 83.52,
+     "y": 765.67
+    }
+   ],
+   "n": 14,
+   "page": 8,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 26.71,
+   "sublabel": "",
+   "w_mean": 7.55,
+   "w_range": [
+    3.0,
+    7.9
+   ],
+   "x0": 84.94,
+   "y_span": 672.0
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (AXIS_TICK); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    14.64,
+    14.64,
+    14.64,
+    14.64,
+    14.63,
+    14.64,
+    14.64,
+    30.71,
+    17.55,
+    17.55,
+    17.56,
+    17.55,
+    17.55,
+    17.56
+   ],
+   "family": "AXIS_TICK",
+   "grid_siblings": 0,
+   "kinds": {
+    "INT": 15
+   },
+   "members": [
+    {
+     "content": "85",
+     "w": 7.9,
+     "x0": 231.91,
+     "y": 88.12
+    },
+    {
+     "content": "80",
+     "w": 7.9,
+     "x0": 231.91,
+     "y": 102.76
+    },
+    {
+     "content": "75",
+     "w": 7.9,
+     "x0": 231.91,
+     "y": 117.4
+    },
+    {
+     "content": "70",
+     "w": 7.9,
+     "x0": 231.91,
+     "y": 132.04
+    },
+    {
+     "content": "65",
+     "w": 7.9,
+     "x0": 231.91,
+     "y": 146.68
+    },
+    {
+     "content": "60",
+     "w": 7.9,
+     "x0": 231.91,
+     "y": 161.31
+    },
+    {
+     "content": "55",
+     "w": 7.9,
+     "x0": 231.91,
+     "y": 175.95
+    },
+    {
+     "content": "50",
+     "w": 7.9,
+     "x0": 231.91,
+     "y": 190.59
+    },
+    {
+     "content": "80",
+     "w": 7.9,
+     "x0": 231.91,
+     "y": 221.3
+    },
+    {
+     "content": "75",
+     "w": 7.9,
+     "x0": 231.91,
+     "y": 238.85
+    },
+    {
+     "content": "70",
+     "w": 7.9,
+     "x0": 231.91,
+     "y": 256.4
+    },
+    {
+     "content": "65",
+     "w": 7.9,
+     "x0": 231.91,
+     "y": 273.96
+    },
+    {
+     "content": "60",
+     "w": 7.9,
+     "x0": 231.91,
+     "y": 291.51
+    },
+    {
+     "content": "55",
+     "w": 7.9,
+     "x0": 231.91,
+     "y": 309.06
+    },
+    {
+     "content": "50",
+     "w": 7.9,
+     "x0": 231.91,
+     "y": 326.62
+    }
+   ],
+   "n": 15,
+   "page": 8,
+   "prelabel": "AXIS_TICK",
+   "ratio": 2.1,
+   "sublabel": "",
+   "w_mean": 7.9,
+   "w_range": [
+    7.9,
+    7.9
+   ],
+   "x0": 231.91,
+   "y_span": 238.5
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.96,
+    13.95,
+    13.96,
+    13.96,
+    13.95,
+    13.96,
+    13.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 8
+   },
+   "members": [
+    {
+     "content": "82.5",
+     "w": 13.83,
+     "x0": 372.84,
+     "y": 228.92
+    },
+    {
+     "content": "80.0",
+     "w": 13.83,
+     "x0": 372.84,
+     "y": 242.88
+    },
+    {
+     "content": "77.5",
+     "w": 13.83,
+     "x0": 372.84,
+     "y": 256.83
+    },
+    {
+     "content": "75.0",
+     "w": 13.83,
+     "x0": 372.84,
+     "y": 270.79
+    },
+    {
+     "content": "72.5",
+     "w": 13.83,
+     "x0": 372.84,
+     "y": 284.75
+    },
+    {
+     "content": "70.0",
+     "w": 13.83,
+     "x0": 372.84,
+     "y": 298.7
+    },
+    {
+     "content": "67.5",
+     "w": 13.83,
+     "x0": 372.84,
+     "y": 312.66
+    },
+    {
+     "content": "65.0",
+     "w": 13.83,
+     "x0": 372.84,
+     "y": 326.62
+    }
+   ],
+   "n": 8,
+   "page": 8,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 13.83,
+   "w_range": [
+    13.8,
+    13.8
+   ],
+   "x0": 372.84,
+   "y_span": 97.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (AXIS_TICK); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.24,
+    13.24,
+    13.25,
+    13.25,
+    13.24
+   ],
+   "family": "AXIS_TICK",
+   "grid_siblings": 0,
+   "kinds": {
+    "INT": 6
+   },
+   "members": [
+    {
+     "content": "35",
+     "w": 7.91,
+     "x0": 378.77,
+     "y": 97.88
+    },
+    {
+     "content": "30",
+     "w": 7.91,
+     "x0": 378.77,
+     "y": 111.12
+    },
+    {
+     "content": "25",
+     "w": 7.91,
+     "x0": 378.77,
+     "y": 124.36
+    },
+    {
+     "content": "20",
+     "w": 7.91,
+     "x0": 378.77,
+     "y": 137.61
+    },
+    {
+     "content": "15",
+     "w": 7.91,
+     "x0": 378.77,
+     "y": 150.86
+    },
+    {
+     "content": "10",
+     "w": 7.91,
+     "x0": 378.77,
+     "y": 164.1
+    }
+   ],
+   "n": 6,
+   "page": 8,
+   "prelabel": "AXIS_TICK",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 7.91,
+   "w_range": [
+    7.9,
+    7.9
+   ],
+   "x0": 378.77,
+   "y_span": 66.2
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    136.02,
+    340.03
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 2,
+   "kinds": {
+    "DEC": 1,
+    "INT": 2
+   },
+   "members": [
+    {
+     "content": "0",
+     "w": 3.95,
+     "x0": 389.05,
+     "y": 197.3
+    },
+    {
+     "content": "0",
+     "w": 3.95,
+     "x0": 389.05,
+     "y": 333.32
+    },
+    {
+     "content": "2022",
+     "w": 24.74,
+     "x0": 389.6,
+     "y": 673.35
+    }
+   ],
+   "n": 3,
+   "page": 8,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 2.5,
+   "sublabel": "",
+   "w_mean": 10.88,
+   "w_range": [
+    4.0,
+    24.7
+   ],
+   "x0": 389.23,
+   "y_span": 476.1
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.56,
+    13.54,
+    223.59
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 1,
+   "kinds": {
+    "DEC": 5
+   },
+   "members": [
+    {
+     "content": "0.106",
+     "w": 24.55,
+     "x0": 413.98,
+     "y": 422.64
+    },
+    {
+     "content": "0.104",
+     "w": 24.55,
+     "x0": 413.98,
+     "y": 436.19
+    },
+    {
+     "content": "0.107",
+     "w": 24.55,
+     "x0": 413.98,
+     "y": 449.75
+    },
+    {
+     "content": "0.128",
+     "w": 24.55,
+     "x0": 413.98,
+     "y": 463.29
+    },
+    {
+     "content": "2022",
+     "w": 22.25,
+     "x0": 415.28,
+     "y": 686.88
+    }
+   ],
+   "n": 5,
+   "page": 8,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 16.51,
+   "sublabel": "",
+   "w_mean": 24.09,
+   "w_range": [
+    22.2,
+    24.6
+   ],
+   "x0": 414.24,
+   "y_span": 264.2
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.56,
+    13.54
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 4
+   },
+   "members": [
+    {
+     "content": "0.081",
+     "w": 24.54,
+     "x0": 461.54,
+     "y": 422.64
+    },
+    {
+     "content": "0.095",
+     "w": 24.54,
+     "x0": 461.54,
+     "y": 436.19
+    },
+    {
+     "content": "0.087",
+     "w": 24.54,
+     "x0": 461.54,
+     "y": 449.75
+    },
+    {
+     "content": "0.141",
+     "w": 24.54,
+     "x0": 461.54,
+     "y": 463.29
+    }
+   ],
+   "n": 4,
+   "page": 8,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 24.54,
+   "w_range": [
+    24.5,
+    24.5
+   ],
+   "x0": 461.54,
+   "y_span": 40.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.45,
+    13.64,
+    13.56,
+    13.55,
+    13.45,
+    13.64,
+    13.45,
+    19.04
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 2,
+   "kinds": {
+    "DEC": 10
+   },
+   "members": [
+    {
+     "content": "70.6",
+     "w": 19.09,
+     "x0": 187.99,
+     "y": 101.48
+    },
+    {
+     "content": "79.0",
+     "w": 19.09,
+     "x0": 187.99,
+     "y": 115.03
+    },
+    {
+     "content": "57.0",
+     "w": 19.09,
+     "x0": 187.99,
+     "y": 128.48
+    },
+    {
+     "content": "81.0",
+     "w": 19.09,
+     "x0": 187.99,
+     "y": 142.12
+    },
+    {
+     "content": "70.1",
+     "w": 19.09,
+     "x0": 187.99,
+     "y": 155.68
+    },
+    {
+     "content": "64.2",
+     "w": 19.09,
+     "x0": 187.99,
+     "y": 169.23
+    },
+    {
+     "content": "66.7",
+     "w": 19.09,
+     "x0": 187.99,
+     "y": 182.68
+    },
+    {
+     "content": "77.8",
+     "w": 19.09,
+     "x0": 187.99,
+     "y": 196.32
+    },
+    {
+     "content": "71.5",
+     "w": 19.09,
+     "x0": 187.99,
+     "y": 209.77
+    },
+    {
+     "content": "66.6",
+     "w": 19.09,
+     "x0": 187.99,
+     "y": 228.81
+    }
+   ],
+   "n": 10,
+   "page": 9,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.42,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 187.99,
+   "y_span": 127.3
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.64,
+    13.54,
+    13.45,
+    13.55,
+    13.55,
+    13.65,
+    13.46,
+    13.65,
+    19.02
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 2,
+   "kinds": {
+    "DEC": 10
+   },
+   "members": [
+    {
+     "content": "62.6",
+     "w": 19.09,
+     "x0": 232.84,
+     "y": 101.39
+    },
+    {
+     "content": "73.3",
+     "w": 19.09,
+     "x0": 232.83,
+     "y": 115.03
+    },
+    {
+     "content": "64.7",
+     "w": 19.09,
+     "x0": 232.84,
+     "y": 128.57
+    },
+    {
+     "content": "76.2",
+     "w": 19.09,
+     "x0": 232.84,
+     "y": 142.02
+    },
+    {
+     "content": "64.4",
+     "w": 19.09,
+     "x0": 232.84,
+     "y": 155.57
+    },
+    {
+     "content": "61.6",
+     "w": 19.09,
+     "x0": 232.84,
+     "y": 169.12
+    },
+    {
+     "content": "76.7",
+     "w": 19.09,
+     "x0": 232.84,
+     "y": 182.77
+    },
+    {
+     "content": "74.6",
+     "w": 19.09,
+     "x0": 232.84,
+     "y": 196.23
+    },
+    {
+     "content": "73.8",
+     "w": 19.09,
+     "x0": 232.84,
+     "y": 209.88
+    },
+    {
+     "content": "67.2",
+     "w": 19.09,
+     "x0": 232.84,
+     "y": 228.9
+    }
+   ],
+   "n": 10,
+   "page": 9,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.41,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 232.84,
+   "y_span": 127.5
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.45,
+    13.64,
+    13.55,
+    13.56,
+    13.55,
+    13.54,
+    13.55,
+    13.56,
+    19.02
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 2,
+   "kinds": {
+    "DEC": 10
+   },
+   "members": [
+    {
+     "content": "65.7",
+     "w": 19.09,
+     "x0": 270.12,
+     "y": 101.48
+    },
+    {
+     "content": "68.6",
+     "w": 19.09,
+     "x0": 270.12,
+     "y": 114.93
+    },
+    {
+     "content": "68.6",
+     "w": 19.09,
+     "x0": 270.13,
+     "y": 128.57
+    },
+    {
+     "content": "78.6",
+     "w": 19.09,
+     "x0": 270.12,
+     "y": 142.12
+    },
+    {
+     "content": "67.8",
+     "w": 19.09,
+     "x0": 270.12,
+     "y": 155.68
+    },
+    {
+     "content": "62.9",
+     "w": 19.09,
+     "x0": 270.12,
+     "y": 169.23
+    },
+    {
+     "content": "76.7",
+     "w": 19.09,
+     "x0": 270.13,
+     "y": 182.77
+    },
+    {
+     "content": "76.2",
+     "w": 19.09,
+     "x0": 270.12,
+     "y": 196.32
+    },
+    {
+     "content": "76.2",
+     "w": 19.09,
+     "x0": 270.13,
+     "y": 209.88
+    },
+    {
+     "content": "69.5",
+     "w": 19.09,
+     "x0": 270.13,
+     "y": 228.9
+    }
+   ],
+   "n": 10,
+   "page": 9,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.41,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 270.12,
+   "y_span": 127.4
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    19.02,
+    13.56,
+    13.55,
+    19.02,
+    13.55
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 2,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "66.0",
+     "w": 19.09,
+     "x0": 176.79,
+     "y": 101.48
+    },
+    {
+     "content": "65.0",
+     "w": 19.09,
+     "x0": 176.79,
+     "y": 120.5
+    },
+    {
+     "content": "60.8",
+     "w": 19.09,
+     "x0": 176.79,
+     "y": 134.06
+    },
+    {
+     "content": "72.1",
+     "w": 19.09,
+     "x0": 176.79,
+     "y": 147.61
+    },
+    {
+     "content": "64.2",
+     "w": 19.09,
+     "x0": 176.79,
+     "y": 166.63
+    },
+    {
+     "content": "55.0",
+     "w": 19.09,
+     "x0": 176.79,
+     "y": 180.18
+    }
+   ],
+   "n": 6,
+   "page": 10,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.4,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 176.79,
+   "y_span": 78.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.56,
+    19.02,
+    13.55,
+    13.55,
+    13.54
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 7
+   },
+   "members": [
+    {
+     "content": "0.31",
+     "w": 19.09,
+     "x0": 180.42,
+     "y": 313.39
+    },
+    {
+     "content": "0.22",
+     "w": 19.1,
+     "x0": 180.41,
+     "y": 326.94
+    },
+    {
+     "content": "0.28",
+     "w": 19.09,
+     "x0": 180.42,
+     "y": 340.5
+    },
+    {
+     "content": "0.33",
+     "w": 19.1,
+     "x0": 180.41,
+     "y": 359.52
+    },
+    {
+     "content": "0.47",
+     "w": 19.09,
+     "x0": 180.42,
+     "y": 373.07
+    },
+    {
+     "content": "0.52",
+     "w": 19.09,
+     "x0": 180.42,
+     "y": 386.62
+    },
+    {
+     "content": "0.57",
+     "w": 19.09,
+     "x0": 180.42,
+     "y": 400.16
+    }
+   ],
+   "n": 7,
+   "page": 10,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.4,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 180.42,
+   "y_span": 86.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    19.02,
+    13.56,
+    13.55,
+    19.02,
+    13.55
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 2,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "64.7",
+     "w": 19.09,
+     "x0": 207.84,
+     "y": 101.48
+    },
+    {
+     "content": "66.7",
+     "w": 19.09,
+     "x0": 207.84,
+     "y": 120.5
+    },
+    {
+     "content": "62.5",
+     "w": 19.09,
+     "x0": 207.84,
+     "y": 134.06
+    },
+    {
+     "content": "65.0",
+     "w": 19.09,
+     "x0": 207.84,
+     "y": 147.61
+    },
+    {
+     "content": "65.8",
+     "w": 19.09,
+     "x0": 207.84,
+     "y": 166.63
+    },
+    {
+     "content": "55.8",
+     "w": 19.09,
+     "x0": 207.84,
+     "y": 180.18
+    }
+   ],
+   "n": 6,
+   "page": 10,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.4,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 207.84,
+   "y_span": 78.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    19.02,
+    13.56,
+    13.55,
+    19.02,
+    13.55,
+    133.21,
+    13.55,
+    13.56,
+    19.02,
+    13.55,
+    13.55,
+    13.54
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 13
+   },
+   "members": [
+    {
+     "content": "69.0",
+     "w": 19.09,
+     "x0": 238.89,
+     "y": 101.48
+    },
+    {
+     "content": "66.7",
+     "w": 19.09,
+     "x0": 238.89,
+     "y": 120.5
+    },
+    {
+     "content": "62.1",
+     "w": 19.09,
+     "x0": 238.89,
+     "y": 134.06
+    },
+    {
+     "content": "78.3",
+     "w": 19.09,
+     "x0": 238.89,
+     "y": 147.61
+    },
+    {
+     "content": "61.7",
+     "w": 19.09,
+     "x0": 238.89,
+     "y": 166.63
+    },
+    {
+     "content": "55.8",
+     "w": 19.09,
+     "x0": 238.89,
+     "y": 180.18
+    },
+    {
+     "content": "0.19",
+     "w": 19.09,
+     "x0": 237.44,
+     "y": 313.39
+    },
+    {
+     "content": "0.19",
+     "w": 19.09,
+     "x0": 237.44,
+     "y": 326.94
+    },
+    {
+     "content": "0.25",
+     "w": 19.09,
+     "x0": 237.44,
+     "y": 340.5
+    },
+    {
+     "content": "0.29",
+     "w": 19.09,
+     "x0": 237.44,
+     "y": 359.52
+    },
+    {
+     "content": "0.41",
+     "w": 19.09,
+     "x0": 237.44,
+     "y": 373.07
+    },
+    {
+     "content": "0.48",
+     "w": 19.09,
+     "x0": 237.44,
+     "y": 386.62
+    },
+    {
+     "content": "0.53",
+     "w": 19.09,
+     "x0": 237.44,
+     "y": 400.16
+    }
+   ],
+   "n": 13,
+   "page": 10,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 9.84,
+   "sublabel": "",
+   "w_mean": 19.09,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 238.11,
+   "y_span": 298.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    19.02,
+    13.56,
+    13.55,
+    19.02,
+    13.55
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 2,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "77.5",
+     "w": 19.1,
+     "x0": 269.92,
+     "y": 101.48
+    },
+    {
+     "content": "78.8",
+     "w": 19.1,
+     "x0": 269.92,
+     "y": 120.5
+    },
+    {
+     "content": "72.1",
+     "w": 19.1,
+     "x0": 269.92,
+     "y": 134.06
+    },
+    {
+     "content": "81.7",
+     "w": 19.1,
+     "x0": 269.92,
+     "y": 147.61
+    },
+    {
+     "content": "75.0",
+     "w": 19.09,
+     "x0": 269.93,
+     "y": 166.63
+    },
+    {
+     "content": "63.3",
+     "w": 19.09,
+     "x0": 269.93,
+     "y": 180.18
+    }
+   ],
+   "n": 6,
+   "page": 10,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.4,
+   "sublabel": "",
+   "w_mean": 19.1,
+   "w_range": [
+    19.1,
+    19.1
+   ],
+   "x0": 269.92,
+   "y_span": 78.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    27.09,
+    81.3,
+    467.43
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 1,
+    "INT": 3
+   },
+   "members": [
+    {
+     "content": "2",
+     "w": 4.23,
+     "x0": 364.0,
+     "y": 135.42
+    },
+    {
+     "content": "2",
+     "w": 4.24,
+     "x0": 363.98,
+     "y": 162.51
+    },
+    {
+     "content": "2",
+     "w": 4.23,
+     "x0": 361.61,
+     "y": 243.81
+    },
+    {
+     "content": "1987",
+     "w": 24.39,
+     "x0": 362.87,
+     "y": 711.24
+    }
+   ],
+   "n": 4,
+   "page": 10,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 17.25,
+   "sublabel": "",
+   "w_mean": 9.27,
+   "w_range": [
+    4.2,
+    24.4
+   ],
+   "x0": 363.12,
+   "y_span": 575.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    81.33,
+    314.27,
+    27.1
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 3,
+   "kinds": {
+    "DEC": 4
+   },
+   "members": [
+    {
+     "content": "2000",
+     "w": 22.25,
+     "x0": 70.87,
+     "y": 291.28
+    },
+    {
+     "content": "2017",
+     "w": 21.81,
+     "x0": 70.87,
+     "y": 372.61
+    },
+    {
+     "content": "2018",
+     "w": 22.25,
+     "x0": 70.87,
+     "y": 686.88
+    },
+    {
+     "content": "2020",
+     "w": 22.25,
+     "x0": 70.87,
+     "y": 713.98
+    }
+   ],
+   "n": 4,
+   "page": 11,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 11.6,
+   "sublabel": "",
+   "w_mean": 22.14,
+   "w_range": [
+    21.8,
+    22.2
+   ],
+   "x0": 70.87,
+   "y_span": 422.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    258.1,
+    56.18
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 3
+   },
+   "members": [
+    {
+     "content": "2010",
+     "w": 24.56,
+     "x0": 134.86,
+     "y": 304.86
+    },
+    {
+     "content": "2013",
+     "w": 22.25,
+     "x0": 137.03,
+     "y": 562.96
+    },
+    {
+     "content": "2016",
+     "w": 22.26,
+     "x0": 135.8,
+     "y": 619.14
+    }
+   ],
+   "n": 3,
+   "page": 11,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 4.59,
+   "sublabel": "",
+   "w_mean": 23.02,
+   "w_range": [
+    22.2,
+    24.6
+   ],
+   "x0": 135.9,
+   "y_span": 314.3
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    54.85,
+    272.97
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 3,
+   "kinds": {
+    "DEC": 3
+   },
+   "members": [
+    {
+     "content": "2018",
+     "w": 24.54,
+     "x0": 160.86,
+     "y": 372.61
+    },
+    {
+     "content": "2007",
+     "w": 22.25,
+     "x0": 160.02,
+     "y": 427.46
+    },
+    {
+     "content": "2019",
+     "w": 25.71,
+     "x0": 159.56,
+     "y": 700.43
+    }
+   ],
+   "n": 3,
+   "page": 11,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 4.98,
+   "sublabel": "",
+   "w_mean": 24.17,
+   "w_range": [
+    22.2,
+    25.7
+   ],
+   "x0": 160.15,
+   "y_span": 327.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    40.6,
+    158.23
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 1,
+   "kinds": {
+    "DEC": 2,
+    "INT": 1
+   },
+   "members": [
+    {
+     "content": "2022",
+     "w": 21.51,
+     "x0": 306.14,
+     "y": 277.78
+    },
+    {
+     "content": "2022",
+     "w": 22.26,
+     "x0": 306.14,
+     "y": 318.38
+    },
+    {
+     "content": "8",
+     "w": 5.98,
+     "x0": 306.14,
+     "y": 476.61
+    }
+   ],
+   "n": 3,
+   "page": 11,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 3.9,
+   "sublabel": "",
+   "w_mean": 16.58,
+   "w_range": [
+    6.0,
+    22.3
+   ],
+   "x0": 306.14,
+   "y_span": 198.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    59.67,
+    144.7,
+    368.53
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 3,
+   "kinds": {
+    "DEC": 4
+   },
+   "members": [
+    {
+     "content": "1,082,880",
+     "w": 43.64,
+     "x0": 308.31,
+     "y": 127.58
+    },
+    {
+     "content": "1,022,362",
+     "w": 43.64,
+     "x0": 308.31,
+     "y": 187.25
+    },
+    {
+     "content": "2019",
+     "w": 21.9,
+     "x0": 309.43,
+     "y": 331.95
+    },
+    {
+     "content": "2022",
+     "w": 21.47,
+     "x0": 309.36,
+     "y": 700.48
+    }
+   ],
+   "n": 4,
+   "page": 11,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 6.18,
+   "sublabel": "",
+   "w_mean": 32.66,
+   "w_range": [
+    21.5,
+    43.6
+   ],
+   "x0": 308.85,
+   "y_span": 572.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    46.13,
+    13.54
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 1,
+   "kinds": {
+    "DEC": 3
+   },
+   "members": [
+    {
+     "content": "809,472",
+     "w": 35.46,
+     "x0": 312.4,
+     "y": 114.03
+    },
+    {
+     "content": "135,168",
+     "w": 35.46,
+     "x0": 312.4,
+     "y": 160.16
+    },
+    {
+     "content": "530,432",
+     "w": 35.46,
+     "x0": 312.4,
+     "y": 173.7
+    }
+   ],
+   "n": 3,
+   "page": 11,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 3.41,
+   "sublabel": "",
+   "w_mean": 35.46,
+   "w_range": [
+    35.5,
+    35.5
+   ],
+   "x0": 312.4,
+   "y_span": 59.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (OTHER_INT_STRUCT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    59.67
+   ],
+   "family": "OTHER_INT_STRUCT",
+   "grid_siblings": 1,
+   "kinds": {
+    "INT": 3
+   },
+   "members": [
+    {
+     "content": "137",
+     "w": 16.37,
+     "x0": 460.85,
+     "y": 114.03
+    },
+    {
+     "content": "183",
+     "w": 16.37,
+     "x0": 460.85,
+     "y": 127.58
+    },
+    {
+     "content": "173",
+     "w": 16.37,
+     "x0": 460.85,
+     "y": 187.25
+    }
+   ],
+   "n": 3,
+   "page": 11,
+   "prelabel": "OTHER_INT_STRUCT",
+   "ratio": 4.4,
+   "sublabel": "",
+   "w_mean": 16.37,
+   "w_range": [
+    16.4,
+    16.4
+   ],
+   "x0": 460.85,
+   "y_span": 73.2
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (OTHER_INT_STRUCT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    13.55,
+    13.54
+   ],
+   "family": "OTHER_INT_STRUCT",
+   "grid_siblings": 0,
+   "kinds": {
+    "INT": 3
+   },
+   "members": [
+    {
+     "content": "14",
+     "w": 10.91,
+     "x0": 464.94,
+     "y": 146.61
+    },
+    {
+     "content": "23",
+     "w": 10.91,
+     "x0": 464.94,
+     "y": 160.16
+    },
+    {
+     "content": "90",
+     "w": 10.91,
+     "x0": 464.94,
+     "y": 173.7
+    }
+   ],
+   "n": 3,
+   "page": 11,
+   "prelabel": "OTHER_INT_STRUCT",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 10.91,
+   "w_range": [
+    10.9,
+    10.9
+   ],
+   "x0": 464.94,
+   "y_span": 27.1
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.77,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.77,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    13.7,
+    9.75,
+    9.76,
+    9.75,
+    13.7
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 3,
+   "kinds": {
+    "DEC": 62
+   },
+   "members": [
+    {
+     "content": "30.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 136.76
+    },
+    {
+     "content": "48.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 146.52
+    },
+    {
+     "content": "49.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 156.27
+    },
+    {
+     "content": "46.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 166.03
+    },
+    {
+     "content": "48.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 175.79
+    },
+    {
+     "content": "45.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 185.54
+    },
+    {
+     "content": "26.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 195.3
+    },
+    {
+     "content": "46.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 205.05
+    },
+    {
+     "content": "34.5",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 214.81
+    },
+    {
+     "content": "48.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 224.56
+    },
+    {
+     "content": "28.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 234.31
+    },
+    {
+     "content": "57.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 244.07
+    },
+    {
+     "content": "36.5",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 253.82
+    },
+    {
+     "content": "33.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 263.59
+    },
+    {
+     "content": "50.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 273.34
+    },
+    {
+     "content": "30.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 283.1
+    },
+    {
+     "content": "29.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 292.85
+    },
+    {
+     "content": "37.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 302.61
+    },
+    {
+     "content": "48.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 312.36
+    },
+    {
+     "content": "33.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 322.12
+    },
+    {
+     "content": "39.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 331.87
+    },
+    {
+     "content": "54.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 341.62
+    },
+    {
+     "content": "58.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 351.38
+    },
+    {
+     "content": "58.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 361.13
+    },
+    {
+     "content": "40.5",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 370.89
+    },
+    {
+     "content": "28.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 380.64
+    },
+    {
+     "content": "42.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 390.4
+    },
+    {
+     "content": "28.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 400.16
+    },
+    {
+     "content": "61.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 409.91
+    },
+    {
+     "content": "30.5",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 419.67
+    },
+    {
+     "content": "53.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 429.43
+    },
+    {
+     "content": "56.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 439.18
+    },
+    {
+     "content": "50.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 448.94
+    },
+    {
+     "content": "54.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 458.69
+    },
+    {
+     "content": "55.5",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 468.44
+    },
+    {
+     "content": "55.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 478.2
+    },
+    {
+     "content": "48.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 487.95
+    },
+    {
+     "content": "31.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 497.72
+    },
+    {
+     "content": "56.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 507.47
+    },
+    {
+     "content": "60.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 517.22
+    },
+    {
+     "content": "40.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 526.98
+    },
+    {
+     "content": "60.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 536.73
+    },
+    {
+     "content": "44.5",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 546.49
+    },
+    {
+     "content": "26.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 556.25
+    },
+    {
+     "content": "47.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 566.0
+    },
+    {
+     "content": "51.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 575.75
+    },
+    {
+     "content": "53.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 585.51
+    },
+    {
+     "content": "33.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 595.27
+    },
+    {
+     "content": "34.5",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 605.02
+    },
+    {
+     "content": "36.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 614.78
+    },
+    {
+     "content": "44.5",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 624.54
+    },
+    {
+     "content": "48.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 634.29
+    },
+    {
+     "content": "52.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 644.05
+    },
+    {
+     "content": "53.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 653.8
+    },
+    {
+     "content": "69.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 663.56
+    },
+    {
+     "content": "46.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 673.31
+    },
+    {
+     "content": "55.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 683.07
+    },
+    {
+     "content": "40.6",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 696.77
+    },
+    {
+     "content": "36.7",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 706.52
+    },
+    {
+     "content": "50.5",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 716.28
+    },
+    {
+     "content": "49.0",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 726.03
+    },
+    {
+     "content": "43.9",
+     "w": 13.75,
+     "x0": 278.57,
+     "y": 739.73
+    }
+   ],
+   "n": 62,
+   "page": 18,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.41,
+   "sublabel": "",
+   "w_mean": 13.75,
+   "w_range": [
+    13.8,
+    13.8
+   ],
+   "x0": 278.57,
+   "y_span": 603.0
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.77,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.77,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    13.7,
+    9.75,
+    9.76,
+    9.75,
+    13.7
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 3,
+   "kinds": {
+    "DEC": 62
+   },
+   "members": [
+    {
+     "content": "25.0",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 136.76
+    },
+    {
+     "content": "56.3",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 146.52
+    },
+    {
+     "content": "65.8",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 156.27
+    },
+    {
+     "content": "70.0",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 166.03
+    },
+    {
+     "content": "67.2",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 175.79
+    },
+    {
+     "content": "70.8",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 185.54
+    },
+    {
+     "content": "45.0",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 195.3
+    },
+    {
+     "content": "49.0",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 205.05
+    },
+    {
+     "content": "37.0",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 214.81
+    },
+    {
+     "content": "60.1",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 224.56
+    },
+    {
+     "content": "34.3",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 234.31
+    },
+    {
+     "content": "65.0",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 244.07
+    },
+    {
+     "content": "49.4",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 253.82
+    },
+    {
+     "content": "43.0",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 263.59
+    },
+    {
+     "content": "60.0",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 273.34
+    },
+    {
+     "content": "33.6",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 283.1
+    },
+    {
+     "content": "35.7",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 292.85
+    },
+    {
+     "content": "38.0",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 302.61
+    },
+    {
+     "content": "71.3",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 312.36
+    },
+    {
+     "content": "47.8",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 322.12
+    },
+    {
+     "content": "54.0",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 331.87
+    },
+    {
+     "content": "72.1",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 341.62
+    },
+    {
+     "content": "76.8",
+     "w": 13.74,
+     "x0": 312.16,
+     "y": 351.38
+    },
+    {
+     "content": "83.9",
+     "w": 13.74,
+     "x0": 312.16,
+     "y": 361.13
+    },
+    {
+     "content": "65.1",
+     "w": 13.74,
+     "x0": 312.16,
+     "y": 370.89
+    },
+    {
+     "content": "23.7",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 380.64
+    },
+    {
+     "content": "66.4",
+     "w": 13.74,
+     "x0": 312.16,
+     "y": 390.4
+    },
+    {
+     "content": "33.8",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 400.16
+    },
+    {
+     "content": "81.8",
+     "w": 13.74,
+     "x0": 312.16,
+     "y": 409.91
+    },
+    {
+     "content": "50.0",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 419.67
+    },
+    {
+     "content": "78.9",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 429.43
+    },
+    {
+     "content": "75.1",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 439.18
+    },
+    {
+     "content": "66.4",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 448.94
+    },
+    {
+     "content": "67.2",
+     "w": 13.74,
+     "x0": 312.16,
+     "y": 458.69
+    },
+    {
+     "content": "77.7",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 468.44
+    },
+    {
+     "content": "71.3",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 478.2
+    },
+    {
+     "content": "72.4",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 487.95
+    },
+    {
+     "content": "41.1",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 497.72
+    },
+    {
+     "content": "77.7",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 507.47
+    },
+    {
+     "content": "83.3",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 517.22
+    },
+    {
+     "content": "69.0",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 526.98
+    },
+    {
+     "content": "75.7",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 536.73
+    },
+    {
+     "content": "66.8",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 546.49
+    },
+    {
+     "content": "40.2",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 556.25
+    },
+    {
+     "content": "69.9",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 566.0
+    },
+    {
+     "content": "68.8",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 575.75
+    },
+    {
+     "content": "67.6",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 585.51
+    },
+    {
+     "content": "44.3",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 595.27
+    },
+    {
+     "content": "44.5",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 605.02
+    },
+    {
+     "content": "64.0",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 614.78
+    },
+    {
+     "content": "68.1",
+     "w": 13.74,
+     "x0": 312.16,
+     "y": 624.54
+    },
+    {
+     "content": "71.8",
+     "w": 13.74,
+     "x0": 312.16,
+     "y": 634.29
+    },
+    {
+     "content": "64.9",
+     "w": 13.74,
+     "x0": 312.16,
+     "y": 644.05
+    },
+    {
+     "content": "84.1",
+     "w": 13.74,
+     "x0": 312.16,
+     "y": 653.8
+    },
+    {
+     "content": "81.0",
+     "w": 13.74,
+     "x0": 312.16,
+     "y": 663.56
+    },
+    {
+     "content": "47.0",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 673.31
+    },
+    {
+     "content": "84.2",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 683.07
+    },
+    {
+     "content": "56.2",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 696.77
+    },
+    {
+     "content": "47.4",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 706.52
+    },
+    {
+     "content": "71.9",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 716.28
+    },
+    {
+     "content": "66.1",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 726.03
+    },
+    {
+     "content": "60.0",
+     "w": 13.75,
+     "x0": 312.16,
+     "y": 739.73
+    }
+   ],
+   "n": 62,
+   "page": 18,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.41,
+   "sublabel": "",
+   "w_mean": 13.75,
+   "w_range": [
+    13.7,
+    13.8
+   ],
+   "x0": 312.16,
+   "y_span": 603.0
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.77,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.77,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    13.7,
+    9.75,
+    9.76,
+    9.75,
+    13.7
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 3,
+   "kinds": {
+    "DEC": 62
+   },
+   "members": [
+    {
+     "content": "31.0",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 136.76
+    },
+    {
+     "content": "70.4",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 146.52
+    },
+    {
+     "content": "73.0",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 156.27
+    },
+    {
+     "content": "72.0",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 166.03
+    },
+    {
+     "content": "75.1",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 175.79
+    },
+    {
+     "content": "79.9",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 185.54
+    },
+    {
+     "content": "51.0",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 195.3
+    },
+    {
+     "content": "51.0",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 205.05
+    },
+    {
+     "content": "32.0",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 214.81
+    },
+    {
+     "content": "66.5",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 224.56
+    },
+    {
+     "content": "46.1",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 234.31
+    },
+    {
+     "content": "76.0",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 244.07
+    },
+    {
+     "content": "67.2",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 253.82
+    },
+    {
+     "content": "38.6",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 263.59
+    },
+    {
+     "content": "62.1",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 273.34
+    },
+    {
+     "content": "41.5",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 283.1
+    },
+    {
+     "content": "33.3",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 292.85
+    },
+    {
+     "content": "39.0",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 302.61
+    },
+    {
+     "content": "80.3",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 312.36
+    },
+    {
+     "content": "58.1",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 322.12
+    },
+    {
+     "content": "58.0",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 331.87
+    },
+    {
+     "content": "78.8",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 341.62
+    },
+    {
+     "content": "86.4",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 351.38
+    },
+    {
+     "content": "91.2",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 361.13
+    },
+    {
+     "content": "70.5",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 370.89
+    },
+    {
+     "content": "31.9",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 380.64
+    },
+    {
+     "content": "77.7",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 390.4
+    },
+    {
+     "content": "36.4",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 400.16
+    },
+    {
+     "content": "86.6",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 409.91
+    },
+    {
+     "content": "58.8",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 419.67
+    },
+    {
+     "content": "83.3",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 429.43
+    },
+    {
+     "content": "85.2",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 439.18
+    },
+    {
+     "content": "77.6",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 448.94
+    },
+    {
+     "content": "86.3",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 458.69
+    },
+    {
+     "content": "90.9",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 468.44
+    },
+    {
+     "content": "79.6",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 478.2
+    },
+    {
+     "content": "80.4",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 487.95
+    },
+    {
+     "content": "41.1",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 497.72
+    },
+    {
+     "content": "82.5",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 507.47
+    },
+    {
+     "content": "89.7",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 517.22
+    },
+    {
+     "content": "69.0",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 526.98
+    },
+    {
+     "content": "84.5",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 536.73
+    },
+    {
+     "content": "77.5",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 546.49
+    },
+    {
+     "content": "36.5",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 556.25
+    },
+    {
+     "content": "77.1",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 566.0
+    },
+    {
+     "content": "79.4",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 575.75
+    },
+    {
+     "content": "81.2",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 585.51
+    },
+    {
+     "content": "52.1",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 595.27
+    },
+    {
+     "content": "56.5",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 605.02
+    },
+    {
+     "content": "75.4",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 614.78
+    },
+    {
+     "content": "75.7",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 624.54
+    },
+    {
+     "content": "73.6",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 634.29
+    },
+    {
+     "content": "75.9",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 644.05
+    },
+    {
+     "content": "91.0",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 653.8
+    },
+    {
+     "content": "92.0",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 663.56
+    },
+    {
+     "content": "53.6",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 673.31
+    },
+    {
+     "content": "87.7",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 683.07
+    },
+    {
+     "content": "63.6",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 696.77
+    },
+    {
+     "content": "54.9",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 706.52
+    },
+    {
+     "content": "79.3",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 716.28
+    },
+    {
+     "content": "73.9",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 726.03
+    },
+    {
+     "content": "67.6",
+     "w": 13.74,
+     "x0": 351.78,
+     "y": 739.73
+    }
+   ],
+   "n": 62,
+   "page": 18,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.41,
+   "sublabel": "",
+   "w_mean": 13.74,
+   "w_range": [
+    13.7,
+    13.7
+   ],
+   "x0": 351.78,
+   "y_span": 603.0
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.77,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.77,
+    9.75,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    9.75,
+    9.76,
+    13.7,
+    9.75,
+    9.76,
+    9.75,
+    13.7
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 3,
+   "kinds": {
+    "DEC": 62
+   },
+   "members": [
+    {
+     "content": "31.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 136.76
+    },
+    {
+     "content": "62.2",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 146.52
+    },
+    {
+     "content": "81.6",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 156.27
+    },
+    {
+     "content": "72.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 166.03
+    },
+    {
+     "content": "69.1",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 175.79
+    },
+    {
+     "content": "81.9",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 185.54
+    },
+    {
+     "content": "45.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 195.3
+    },
+    {
+     "content": "51.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 205.05
+    },
+    {
+     "content": "36.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 214.81
+    },
+    {
+     "content": "63.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 224.56
+    },
+    {
+     "content": "46.1",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 234.31
+    },
+    {
+     "content": "79.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 244.07
+    },
+    {
+     "content": "66.4",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 253.82
+    },
+    {
+     "content": "52.6",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 263.59
+    },
+    {
+     "content": "60.7",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 273.34
+    },
+    {
+     "content": "42.9",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 283.1
+    },
+    {
+     "content": "47.6",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 292.85
+    },
+    {
+     "content": "40.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 302.61
+    },
+    {
+     "content": "82.9",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 312.36
+    },
+    {
+     "content": "44.8",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 322.12
+    },
+    {
+     "content": "73.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 331.87
+    },
+    {
+     "content": "86.1",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 341.62
+    },
+    {
+     "content": "87.9",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 351.38
+    },
+    {
+     "content": "92.8",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 361.13
+    },
+    {
+     "content": "69.2",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 370.89
+    },
+    {
+     "content": "37.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 380.64
+    },
+    {
+     "content": "78.6",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 390.4
+    },
+    {
+     "content": "41.7",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 400.16
+    },
+    {
+     "content": "87.9",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 409.91
+    },
+    {
+     "content": "59.3",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 419.67
+    },
+    {
+     "content": "90.7",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 429.43
+    },
+    {
+     "content": "89.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 439.18
+    },
+    {
+     "content": "72.2",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 448.94
+    },
+    {
+     "content": "87.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 458.69
+    },
+    {
+     "content": "87.6",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 468.44
+    },
+    {
+     "content": "85.2",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 478.2
+    },
+    {
+     "content": "80.4",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 487.95
+    },
+    {
+     "content": "52.7",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 497.72
+    },
+    {
+     "content": "83.5",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 507.47
+    },
+    {
+     "content": "92.7",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 517.22
+    },
+    {
+     "content": "68.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 526.98
+    },
+    {
+     "content": "84.3",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 536.73
+    },
+    {
+     "content": "76.9",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 546.49
+    },
+    {
+     "content": "55.9",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 556.25
+    },
+    {
+     "content": "74.5",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 566.0
+    },
+    {
+     "content": "79.1",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 575.75
+    },
+    {
+     "content": "79.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 585.51
+    },
+    {
+     "content": "56.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 595.27
+    },
+    {
+     "content": "54.4",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 605.02
+    },
+    {
+     "content": "70.6",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 614.78
+    },
+    {
+     "content": "71.4",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 624.54
+    },
+    {
+     "content": "74.6",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 634.29
+    },
+    {
+     "content": "77.6",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 644.05
+    },
+    {
+     "content": "88.1",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 653.8
+    },
+    {
+     "content": "87.0",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 663.56
+    },
+    {
+     "content": "57.8",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 673.31
+    },
+    {
+     "content": "84.2",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 683.07
+    },
+    {
+     "content": "67.4",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 696.77
+    },
+    {
+     "content": "56.6",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 706.52
+    },
+    {
+     "content": "79.2",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 716.28
+    },
+    {
+     "content": "72.6",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 726.03
+    },
+    {
+     "content": "68.9",
+     "w": 13.74,
+     "x0": 478.78,
+     "y": 739.73
+    }
+   ],
+   "n": 62,
+   "page": 18,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.41,
+   "sublabel": "",
+   "w_mean": 13.74,
+   "w_range": [
+    13.7,
+    13.7
+   ],
+   "x0": 478.78,
+   "y_span": 603.0
+  },
+  {
+   "adjudication_basis": "升序连续1..9 + 左对齐 + 均匀dy(ratio=1.0) + sib=0; 右邻=Python代码token; 语义=代码块行号(MANUAL override of DIGIT_GRID prelabel, w<=6 rule不适用); M4排除; 独立佐证M4",
+   "doc": "LLaMA",
+   "dy": [
+    9.95,
+    9.97,
+    9.96,
+    9.96,
+    9.97,
+    9.97,
+    9.95,
+    9.96
+   ],
+   "family": "NUMBERED_LIST",
+   "grid_siblings": 0,
+   "kinds": {
+    "INT": 9
+   },
+   "members": [
+    {
+     "content": "1",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 636.06
+    },
+    {
+     "content": "2",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 646.01
+    },
+    {
+     "content": "3",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 655.98
+    },
+    {
+     "content": "4",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 665.94
+    },
+    {
+     "content": "5",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 675.9
+    },
+    {
+     "content": "6",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 685.87
+    },
+    {
+     "content": "7",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 695.84
+    },
+    {
+     "content": "8",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 705.79
+    },
+    {
+     "content": "9",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 715.75
+    }
+   ],
+   "n": 9,
+   "page": 19,
+   "prelabel": "DIGIT_GRID",
+   "ratio": 1.0,
+   "sublabel": "CODE_LINE_NUMBER",
+   "w_mean": 4.48,
+   "w_range": [
+    4.5,
+    4.5
+   ],
+   "x0": 87.16,
+   "y_span": 79.7
+  },
+  {
+   "adjudication_basis": "升序连续整数 + 左对齐 + 均匀dy(ratio=1.0) + sib=0; 右邻=代码token(def/return/request.send等); 语义=代码块行号, 非表格行号; M4(grid embedding)排除 — MANUAL_ADJUDICATION; 独立佐证M4必要性",
+   "doc": "LLaMA",
+   "dy": [
+    9.96,
+    9.97
+   ],
+   "family": "NUMBERED_LIST",
+   "grid_siblings": 0,
+   "kinds": {
+    "INT": 3
+   },
+   "members": [
+    {
+     "content": "10",
+     "w": 8.96,
+     "x0": 82.68,
+     "y": 461.66
+    },
+    {
+     "content": "11",
+     "w": 8.96,
+     "x0": 82.68,
+     "y": 471.62
+    },
+    {
+     "content": "12",
+     "w": 8.96,
+     "x0": 82.68,
+     "y": 481.59
+    }
+   ],
+   "n": 3,
+   "page": 22,
+   "prelabel": "ROW_INDEX_LIKE?",
+   "ratio": 1.0,
+   "sublabel": "CODE_LINE_NUMBER",
+   "w_mean": 8.96,
+   "w_range": [
+    9.0,
+    9.0
+   ],
+   "x0": 82.68,
+   "y_span": 19.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "LLaMA",
+   "dy": [
+    9.97,
+    9.96,
+    9.95,
+    9.97,
+    9.96,
+    9.96,
+    9.97,
+    9.96,
+    100.72,
+    9.96,
+    9.97,
+    73.75,
+    9.96,
+    9.95,
+    49.02,
+    9.97,
+    9.96
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 0,
+   "kinds": {
+    "INT": 18
+   },
+   "members": [
+    {
+     "content": "1",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 372.0
+    },
+    {
+     "content": "2",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 381.97
+    },
+    {
+     "content": "3",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 391.93
+    },
+    {
+     "content": "4",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 401.88
+    },
+    {
+     "content": "5",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 411.85
+    },
+    {
+     "content": "6",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 421.81
+    },
+    {
+     "content": "7",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 431.77
+    },
+    {
+     "content": "8",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 441.74
+    },
+    {
+     "content": "9",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 451.7
+    },
+    {
+     "content": "1",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 552.42
+    },
+    {
+     "content": "2",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 562.38
+    },
+    {
+     "content": "3",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 572.35
+    },
+    {
+     "content": "1",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 646.1
+    },
+    {
+     "content": "2",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 656.06
+    },
+    {
+     "content": "3",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 666.01
+    },
+    {
+     "content": "1",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 715.03
+    },
+    {
+     "content": "2",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 725.0
+    },
+    {
+     "content": "3",
+     "w": 4.48,
+     "x0": 87.16,
+     "y": 734.96
+    }
+   ],
+   "n": 18,
+   "page": 22,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 10.12,
+   "sublabel": "",
+   "w_mean": 4.48,
+   "w_range": [
+    4.5,
+    4.5
+   ],
+   "x0": 87.16,
+   "y_span": 363.0
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    69.88,
+    85.32
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 2,
+    "INT": 1
+   },
+   "members": [
+    {
+     "content": "2",
+     "w": 5.98,
+     "x0": 72.0,
+     "y": 496.55
+    },
+    {
+     "content": "2.1",
+     "w": 13.64,
+     "x0": 72.0,
+     "y": 566.43
+    },
+    {
+     "content": "2014",
+     "w": 21.82,
+     "x0": 72.0,
+     "y": 651.75
+    }
+   ],
+   "n": 3,
+   "page": 2,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 1.22,
+   "sublabel": "",
+   "w_mean": 13.81,
+   "w_range": [
+    6.0,
+    21.8
+   ],
+   "x0": 72.0,
+   "y_span": 155.2
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    13.55,
+    286.22,
+    122.96
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 4
+   },
+   "members": [
+    {
+     "content": "2018",
+     "w": 21.81,
+     "x0": 307.28,
+     "y": 111.59
+    },
+    {
+     "content": "2014",
+     "w": 21.81,
+     "x0": 307.28,
+     "y": 125.14
+    },
+    {
+     "content": "2003",
+     "w": 21.81,
+     "x0": 307.28,
+     "y": 411.36
+    },
+    {
+     "content": "2.2",
+     "w": 13.63,
+     "x0": 307.28,
+     "y": 534.32
+    }
+   ],
+   "n": 4,
+   "page": 2,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 21.12,
+   "sublabel": "",
+   "w_mean": 19.77,
+   "w_range": [
+    13.6,
+    21.8
+   ],
+   "x0": 307.28,
+   "y_span": 422.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    23.5,
+    58.92,
+    13.54,
+    78.8
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 4,
+    "INT": 1
+   },
+   "members": [
+    {
+     "content": "2018",
+     "w": 21.82,
+     "x0": 72.0,
+     "y": 373.19
+    },
+    {
+     "content": "2.3",
+     "w": 13.64,
+     "x0": 72.0,
+     "y": 396.69
+    },
+    {
+     "content": "2017",
+     "w": 21.82,
+     "x0": 72.0,
+     "y": 455.61
+    },
+    {
+     "content": "2017",
+     "w": 21.82,
+     "x0": 72.0,
+     "y": 469.15
+    },
+    {
+     "content": "3",
+     "w": 5.98,
+     "x0": 72.0,
+     "y": 547.95
+    }
+   ],
+   "n": 5,
+   "page": 3,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 5.82,
+   "sublabel": "",
+   "w_mean": 17.02,
+   "w_range": [
+    6.0,
+    21.8
+   ],
+   "x0": 72.0,
+   "y_span": 174.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (DIGIT_GRID); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    10.87,
+    10.87,
+    20.84
+   ],
+   "family": "DIGIT_GRID",
+   "grid_siblings": 0,
+   "kinds": {
+    "INT": 4
+   },
+   "members": [
+    {
+     "content": "1",
+     "w": 2.99,
+     "x0": 319.93,
+     "y": 715.03
+    },
+    {
+     "content": "2",
+     "w": 2.99,
+     "x0": 319.93,
+     "y": 725.9
+    },
+    {
+     "content": "3",
+     "w": 2.99,
+     "x0": 319.93,
+     "y": 736.77
+    },
+    {
+     "content": "4",
+     "w": 2.99,
+     "x0": 319.93,
+     "y": 757.61
+    }
+   ],
+   "n": 4,
+   "page": 3,
+   "prelabel": "DIGIT_GRID",
+   "ratio": 1.92,
+   "sublabel": "",
+   "w_mean": 2.99,
+   "w_range": [
+    3.0,
+    3.0
+   ],
+   "x0": 319.93,
+   "y_span": 42.6
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    48.54,
+    351.39
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 1,
+    "INT": 2
+   },
+   "members": [
+    {
+     "content": "1",
+     "w": 2.06,
+     "x0": 377.12,
+     "y": 104.82
+    },
+    {
+     "content": "1",
+     "w": 2.06,
+     "x0": 377.28,
+     "y": 153.36
+    },
+    {
+     "content": "2017",
+     "w": 21.82,
+     "x0": 377.18,
+     "y": 504.75
+    }
+   ],
+   "n": 3,
+   "page": 3,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 7.24,
+   "sublabel": "",
+   "w_mean": 8.65,
+   "w_range": [
+    2.1,
+    21.8
+   ],
+   "x0": 377.19,
+   "y_span": 399.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    11.96,
+    11.95,
+    12.36,
+    11.87
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 6,
+   "kinds": {
+    "DEC": 5
+   },
+   "members": [
+    {
+     "content": "66.1",
+     "w": 15.69,
+     "x0": 237.2,
+     "y": 97.09
+    },
+    {
+     "content": "64.8",
+     "w": 15.69,
+     "x0": 237.2,
+     "y": 109.05
+    },
+    {
+     "content": "70.3",
+     "w": 15.69,
+     "x0": 237.2,
+     "y": 121.0
+    },
+    {
+     "content": "71.2",
+     "w": 15.69,
+     "x0": 237.2,
+     "y": 133.36
+    },
+    {
+     "content": "72.1",
+     "w": 15.69,
+     "x0": 237.2,
+     "y": 145.23
+    }
+   ],
+   "n": 5,
+   "page": 6,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.04,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 237.2,
+   "y_span": 48.1
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    11.96,
+    11.95,
+    12.36,
+    11.87
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 6,
+   "kinds": {
+    "DEC": 5
+   },
+   "members": [
+    {
+     "content": "82.3",
+     "w": 15.69,
+     "x0": 271.97,
+     "y": 97.09
+    },
+    {
+     "content": "79.8",
+     "w": 15.69,
+     "x0": 271.97,
+     "y": 109.05
+    },
+    {
+     "content": "87.4",
+     "w": 15.69,
+     "x0": 271.97,
+     "y": 121.0
+    },
+    {
+     "content": "90.5",
+     "w": 15.69,
+     "x0": 271.97,
+     "y": 133.36
+    },
+    {
+     "content": "92.7",
+     "w": 15.69,
+     "x0": 271.97,
+     "y": 145.23
+    }
+   ],
+   "n": 5,
+   "page": 6,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.04,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 271.97,
+   "y_span": 48.1
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    11.96,
+    11.95,
+    12.36,
+    11.87,
+    417.51
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "93.2",
+     "w": 15.69,
+     "x0": 308.83,
+     "y": 97.09
+    },
+    {
+     "content": "90.4",
+     "w": 15.69,
+     "x0": 308.83,
+     "y": 109.05
+    },
+    {
+     "content": "91.3",
+     "w": 15.69,
+     "x0": 308.83,
+     "y": 121.0
+    },
+    {
+     "content": "93.5",
+     "w": 15.69,
+     "x0": 308.83,
+     "y": 133.36
+    },
+    {
+     "content": "94.9",
+     "w": 15.69,
+     "x0": 308.83,
+     "y": 145.23
+    },
+    {
+     "content": "2017",
+     "w": 21.81,
+     "x0": 307.28,
+     "y": 562.74
+    }
+   ],
+   "n": 6,
+   "page": 6,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 35.17,
+   "sublabel": "",
+   "w_mean": 16.71,
+   "w_range": [
+    15.7,
+    21.8
+   ],
+   "x0": 308.57,
+   "y_span": 465.6
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    11.96,
+    11.95,
+    12.36,
+    11.87
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 6,
+   "kinds": {
+    "DEC": 5
+   },
+   "members": [
+    {
+     "content": "35.0",
+     "w": 15.69,
+     "x0": 346.19,
+     "y": 97.09
+    },
+    {
+     "content": "36.0",
+     "w": 15.7,
+     "x0": 346.18,
+     "y": 109.05
+    },
+    {
+     "content": "45.4",
+     "w": 15.7,
+     "x0": 346.18,
+     "y": 121.0
+    },
+    {
+     "content": "52.1",
+     "w": 15.69,
+     "x0": 346.19,
+     "y": 133.36
+    },
+    {
+     "content": "60.5",
+     "w": 15.69,
+     "x0": 346.19,
+     "y": 145.23
+    }
+   ],
+   "n": 5,
+   "page": 6,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.04,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 346.19,
+   "y_span": 48.1
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    11.96,
+    11.95,
+    12.36,
+    11.87
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 6,
+   "kinds": {
+    "DEC": 5
+   },
+   "members": [
+    {
+     "content": "81.0",
+     "w": 15.69,
+     "x0": 384.71,
+     "y": 97.09
+    },
+    {
+     "content": "73.3",
+     "w": 15.69,
+     "x0": 384.71,
+     "y": 109.05
+    },
+    {
+     "content": "80.0",
+     "w": 15.69,
+     "x0": 384.71,
+     "y": 121.0
+    },
+    {
+     "content": "85.8",
+     "w": 15.69,
+     "x0": 384.71,
+     "y": 133.36
+    },
+    {
+     "content": "86.5",
+     "w": 15.69,
+     "x0": 384.71,
+     "y": 145.23
+    }
+   ],
+   "n": 5,
+   "page": 6,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.04,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 384.71,
+   "y_span": 48.1
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    11.96,
+    11.95,
+    12.36,
+    11.87
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 6,
+   "kinds": {
+    "DEC": 5
+   },
+   "members": [
+    {
+     "content": "86.0",
+     "w": 15.69,
+     "x0": 424.48,
+     "y": 97.09
+    },
+    {
+     "content": "84.9",
+     "w": 15.69,
+     "x0": 424.48,
+     "y": 109.05
+    },
+    {
+     "content": "82.3",
+     "w": 15.69,
+     "x0": 424.48,
+     "y": 121.0
+    },
+    {
+     "content": "88.9",
+     "w": 15.69,
+     "x0": 424.48,
+     "y": 133.36
+    },
+    {
+     "content": "89.3",
+     "w": 15.69,
+     "x0": 424.48,
+     "y": 145.23
+    }
+   ],
+   "n": 5,
+   "page": 6,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.04,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 424.48,
+   "y_span": 48.1
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    11.96,
+    11.95,
+    12.36,
+    11.87
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 6,
+   "kinds": {
+    "DEC": 5
+   },
+   "members": [
+    {
+     "content": "61.7",
+     "w": 15.69,
+     "x0": 460.25,
+     "y": 97.09
+    },
+    {
+     "content": "56.8",
+     "w": 15.69,
+     "x0": 460.25,
+     "y": 109.05
+    },
+    {
+     "content": "56.0",
+     "w": 15.69,
+     "x0": 460.25,
+     "y": 121.0
+    },
+    {
+     "content": "66.4",
+     "w": 15.69,
+     "x0": 460.24,
+     "y": 133.36
+    },
+    {
+     "content": "70.1",
+     "w": 15.69,
+     "x0": 460.24,
+     "y": 145.23
+    }
+   ],
+   "n": 5,
+   "page": 6,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.04,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 460.25,
+   "y_span": 48.1
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    11.96,
+    11.95,
+    12.36,
+    11.87
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 6,
+   "kinds": {
+    "DEC": 5
+   },
+   "members": [
+    {
+     "content": "74.0",
+     "w": 15.69,
+     "x0": 498.99,
+     "y": 97.09
+    },
+    {
+     "content": "71.0",
+     "w": 15.69,
+     "x0": 498.99,
+     "y": 109.05
+    },
+    {
+     "content": "75.1",
+     "w": 15.69,
+     "x0": 498.99,
+     "y": 121.0
+    },
+    {
+     "content": "79.6",
+     "w": 15.69,
+     "x0": 498.98,
+     "y": 133.36
+    },
+    {
+     "content": "82.1",
+     "w": 15.69,
+     "x0": 498.98,
+     "y": 145.23
+    }
+   ],
+   "n": 5,
+   "page": 6,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.04,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 498.99,
+   "y_span": 48.1
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    41.83,
+    10.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 3
+   },
+   "members": [
+    {
+     "content": "78.0",
+     "w": 15.69,
+     "x0": 465.14,
+     "y": 106.75
+    },
+    {
+     "content": "85.0",
+     "w": 15.69,
+     "x0": 465.14,
+     "y": 148.58
+    },
+    {
+     "content": "88.0",
+     "w": 15.69,
+     "x0": 465.14,
+     "y": 159.54
+    }
+   ],
+   "n": 3,
+   "page": 7,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 3.82,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 465.14,
+   "y_span": 52.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    9.97,
+    9.96,
+    9.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 4
+   },
+   "members": [
+    {
+     "content": "84.4",
+     "w": 15.69,
+     "x0": 144.35,
+     "y": 106.75
+    },
+    {
+     "content": "83.9",
+     "w": 15.69,
+     "x0": 144.35,
+     "y": 116.72
+    },
+    {
+     "content": "82.1",
+     "w": 15.69,
+     "x0": 144.35,
+     "y": 126.68
+    },
+    {
+     "content": "82.1",
+     "w": 15.69,
+     "x0": 144.35,
+     "y": 136.64
+    }
+   ],
+   "n": 4,
+   "page": 8,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 144.35,
+   "y_span": 29.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    9.97,
+    9.96,
+    9.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 4
+   },
+   "members": [
+    {
+     "content": "88.4",
+     "w": 15.69,
+     "x0": 178.04,
+     "y": 106.75
+    },
+    {
+     "content": "84.9",
+     "w": 15.69,
+     "x0": 178.04,
+     "y": 116.72
+    },
+    {
+     "content": "84.3",
+     "w": 15.69,
+     "x0": 178.04,
+     "y": 126.68
+    },
+    {
+     "content": "84.1",
+     "w": 15.69,
+     "x0": 178.04,
+     "y": 136.64
+    }
+   ],
+   "n": 4,
+   "page": 8,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 178.04,
+   "y_span": 29.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    9.97,
+    9.96,
+    9.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 4
+   },
+   "members": [
+    {
+     "content": "86.7",
+     "w": 15.69,
+     "x0": 207.74,
+     "y": 106.75
+    },
+    {
+     "content": "86.5",
+     "w": 15.69,
+     "x0": 207.74,
+     "y": 116.72
+    },
+    {
+     "content": "77.5",
+     "w": 15.69,
+     "x0": 207.74,
+     "y": 126.68
+    },
+    {
+     "content": "75.7",
+     "w": 15.69,
+     "x0": 207.74,
+     "y": 136.64
+    }
+   ],
+   "n": 4,
+   "page": 8,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 207.74,
+   "y_span": 29.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    9.97,
+    9.96,
+    9.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 4
+   },
+   "members": [
+    {
+     "content": "92.7",
+     "w": 15.69,
+     "x0": 237.8,
+     "y": 106.75
+    },
+    {
+     "content": "92.6",
+     "w": 15.69,
+     "x0": 237.8,
+     "y": 116.72
+    },
+    {
+     "content": "92.1",
+     "w": 15.69,
+     "x0": 237.8,
+     "y": 126.68
+    },
+    {
+     "content": "91.6",
+     "w": 15.69,
+     "x0": 237.8,
+     "y": 136.64
+    }
+   ],
+   "n": 4,
+   "page": 8,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 237.8,
+   "y_span": 29.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    9.97,
+    9.96,
+    9.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 4
+   },
+   "members": [
+    {
+     "content": "88.5",
+     "w": 15.7,
+     "x0": 269.83,
+     "y": 106.75
+    },
+    {
+     "content": "87.9",
+     "w": 15.7,
+     "x0": 269.83,
+     "y": 116.72
+    },
+    {
+     "content": "77.8",
+     "w": 15.7,
+     "x0": 269.83,
+     "y": 126.68
+    },
+    {
+     "content": "84.9",
+     "w": 15.7,
+     "x0": 269.83,
+     "y": 136.64
+    }
+   ],
+   "n": 4,
+   "page": 8,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 15.7,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 269.83,
+   "y_span": 29.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (DIGIT_GRID); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    9.96,
+    9.96
+   ],
+   "family": "DIGIT_GRID",
+   "grid_siblings": 1,
+   "kinds": {
+    "INT": 3
+   },
+   "members": [
+    {
+     "content": "3",
+     "w": 4.48,
+     "x0": 91.05,
+     "y": 642.33
+    },
+    {
+     "content": "6",
+     "w": 4.48,
+     "x0": 91.05,
+     "y": 652.29
+    },
+    {
+     "content": "6",
+     "w": 4.48,
+     "x0": 91.05,
+     "y": 662.25
+    }
+   ],
+   "n": 3,
+   "page": 9,
+   "prelabel": "DIGIT_GRID",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 4.48,
+   "w_range": [
+    4.5,
+    4.5
+   ],
+   "x0": 91.05,
+   "y_span": 19.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (OTHER_INT_STRUCT); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    9.96,
+    9.96,
+    9.97
+   ],
+   "family": "OTHER_INT_STRUCT",
+   "grid_siblings": 6,
+   "kinds": {
+    "INT": 4
+   },
+   "members": [
+    {
+     "content": "768",
+     "w": 13.45,
+     "x0": 106.56,
+     "y": 642.33
+    },
+    {
+     "content": "768",
+     "w": 13.45,
+     "x0": 106.56,
+     "y": 652.29
+    },
+    {
+     "content": "768",
+     "w": 13.45,
+     "x0": 106.56,
+     "y": 662.25
+    },
+    {
+     "content": "768",
+     "w": 13.45,
+     "x0": 106.56,
+     "y": 672.22
+    }
+   ],
+   "n": 4,
+   "page": 9,
+   "prelabel": "OTHER_INT_STRUCT",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 13.45,
+   "w_range": [
+    13.4,
+    13.4
+   ],
+   "x0": 106.56,
+   "y_span": 29.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (OTHER_INT_STRUCT); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    19.92,
+    9.97,
+    9.96,
+    9.96
+   ],
+   "family": "OTHER_INT_STRUCT",
+   "grid_siblings": 5,
+   "kinds": {
+    "INT": 5
+   },
+   "members": [
+    {
+     "content": "12",
+     "w": 8.96,
+     "x0": 128.55,
+     "y": 642.33
+    },
+    {
+     "content": "12",
+     "w": 8.96,
+     "x0": 128.55,
+     "y": 662.25
+    },
+    {
+     "content": "12",
+     "w": 8.96,
+     "x0": 128.55,
+     "y": 672.22
+    },
+    {
+     "content": "16",
+     "w": 8.96,
+     "x0": 128.55,
+     "y": 682.18
+    },
+    {
+     "content": "16",
+     "w": 8.96,
+     "x0": 128.55,
+     "y": 692.14
+    }
+   ],
+   "n": 5,
+   "page": 9,
+   "prelabel": "OTHER_INT_STRUCT",
+   "ratio": 2.0,
+   "sublabel": "",
+   "w_mean": 8.96,
+   "w_range": [
+    9.0,
+    9.0
+   ],
+   "x0": 128.55,
+   "y_span": 49.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    9.96,
+    9.96,
+    9.97,
+    9.96,
+    9.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "5.84",
+     "w": 15.69,
+     "x0": 152.77,
+     "y": 642.33
+    },
+    {
+     "content": "5.24",
+     "w": 15.69,
+     "x0": 152.77,
+     "y": 652.29
+    },
+    {
+     "content": "4.68",
+     "w": 15.69,
+     "x0": 152.77,
+     "y": 662.25
+    },
+    {
+     "content": "3.99",
+     "w": 15.7,
+     "x0": 152.77,
+     "y": 672.22
+    },
+    {
+     "content": "3.54",
+     "w": 15.7,
+     "x0": 152.77,
+     "y": 682.18
+    },
+    {
+     "content": "3.23",
+     "w": 15.7,
+     "x0": 152.77,
+     "y": 692.14
+    }
+   ],
+   "n": 6,
+   "page": 9,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 15.7,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 152.77,
+   "y_span": 49.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    9.96,
+    9.96,
+    9.97,
+    9.96,
+    9.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "77.9",
+     "w": 15.69,
+     "x0": 192.32,
+     "y": 642.33
+    },
+    {
+     "content": "80.6",
+     "w": 15.69,
+     "x0": 192.32,
+     "y": 652.29
+    },
+    {
+     "content": "81.9",
+     "w": 15.69,
+     "x0": 192.32,
+     "y": 662.25
+    },
+    {
+     "content": "84.4",
+     "w": 15.69,
+     "x0": 192.32,
+     "y": 672.22
+    },
+    {
+     "content": "85.7",
+     "w": 15.69,
+     "x0": 192.32,
+     "y": 682.18
+    },
+    {
+     "content": "86.6",
+     "w": 15.69,
+     "x0": 192.32,
+     "y": 692.14
+    }
+   ],
+   "n": 6,
+   "page": 9,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 192.32,
+   "y_span": 49.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    9.96,
+    9.96,
+    9.97,
+    9.96,
+    9.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "79.8",
+     "w": 15.69,
+     "x0": 227.75,
+     "y": 642.33
+    },
+    {
+     "content": "82.2",
+     "w": 15.69,
+     "x0": 227.75,
+     "y": 652.29
+    },
+    {
+     "content": "84.8",
+     "w": 15.69,
+     "x0": 227.75,
+     "y": 662.25
+    },
+    {
+     "content": "86.7",
+     "w": 15.69,
+     "x0": 227.75,
+     "y": 672.22
+    },
+    {
+     "content": "86.9",
+     "w": 15.69,
+     "x0": 227.75,
+     "y": 682.18
+    },
+    {
+     "content": "87.8",
+     "w": 15.69,
+     "x0": 227.75,
+     "y": 692.14
+    }
+   ],
+   "n": 6,
+   "page": 9,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 227.75,
+   "y_span": 49.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    9.96,
+    9.96,
+    9.97,
+    9.96,
+    9.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "88.4",
+     "w": 15.69,
+     "x0": 257.81,
+     "y": 642.33
+    },
+    {
+     "content": "90.7",
+     "w": 15.69,
+     "x0": 257.81,
+     "y": 652.29
+    },
+    {
+     "content": "91.3",
+     "w": 15.69,
+     "x0": 257.81,
+     "y": 662.25
+    },
+    {
+     "content": "92.9",
+     "w": 15.69,
+     "x0": 257.81,
+     "y": 672.22
+    },
+    {
+     "content": "93.3",
+     "w": 15.69,
+     "x0": 257.81,
+     "y": 682.18
+    },
+    {
+     "content": "93.7",
+     "w": 15.69,
+     "x0": 257.81,
+     "y": 692.14
+    }
+   ],
+   "n": 6,
+   "page": 9,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 257.81,
+   "y_span": 49.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    45.33,
+    9.96,
+    25.4,
+    9.97,
+    9.96,
+    9.97,
+    9.96,
+    9.95
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 9
+   },
+   "members": [
+    {
+     "content": "95.7",
+     "w": 15.69,
+     "x0": 461.68,
+     "y": 86.83
+    },
+    {
+     "content": "96.6",
+     "w": 15.69,
+     "x0": 461.68,
+     "y": 132.16
+    },
+    {
+     "content": "96.4",
+     "w": 15.69,
+     "x0": 461.68,
+     "y": 142.12
+    },
+    {
+     "content": "91.0",
+     "w": 15.69,
+     "x0": 461.68,
+     "y": 167.52
+    },
+    {
+     "content": "95.6",
+     "w": 15.69,
+     "x0": 461.68,
+     "y": 177.49
+    },
+    {
+     "content": "94.9",
+     "w": 15.69,
+     "x0": 461.68,
+     "y": 187.45
+    },
+    {
+     "content": "95.9",
+     "w": 15.69,
+     "x0": 461.68,
+     "y": 197.42
+    },
+    {
+     "content": "96.1",
+     "w": 15.69,
+     "x0": 461.68,
+     "y": 207.38
+    },
+    {
+     "content": "95.5",
+     "w": 15.69,
+     "x0": 461.68,
+     "y": 217.33
+    }
+   ],
+   "n": 9,
+   "page": 9,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 4.56,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 461.68,
+   "y_span": 130.5
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    9.97,
+    9.87,
+    25.49,
+    9.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 5
+   },
+   "members": [
+    {
+     "content": "92.2",
+     "w": 15.69,
+     "x0": 494.69,
+     "y": 86.83
+    },
+    {
+     "content": "92.6",
+     "w": 15.69,
+     "x0": 494.69,
+     "y": 96.8
+    },
+    {
+     "content": "93.1",
+     "w": 15.69,
+     "x0": 494.7,
+     "y": 106.67
+    },
+    {
+     "content": "92.8",
+     "w": 15.69,
+     "x0": 494.7,
+     "y": 132.16
+    },
+    {
+     "content": "92.4",
+     "w": 15.69,
+     "x0": 494.7,
+     "y": 142.12
+    }
+   ],
+   "n": 5,
+   "page": 9,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 2.58,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 494.7,
+   "y_span": 55.3
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (DIGIT_GRID); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    55.47,
+    27.69,
+    105.43,
+    55.47,
+    27.69
+   ],
+   "family": "DIGIT_GRID",
+   "grid_siblings": 1,
+   "kinds": {
+    "INT": 6
+   },
+   "members": [
+    {
+     "content": "1",
+     "w": 2.06,
+     "x0": 145.17,
+     "y": 103.92
+    },
+    {
+     "content": "1",
+     "w": 2.05,
+     "x0": 145.33,
+     "y": 159.39
+    },
+    {
+     "content": "1",
+     "w": 2.05,
+     "x0": 143.48,
+     "y": 187.08
+    },
+    {
+     "content": "1",
+     "w": 2.06,
+     "x0": 147.94,
+     "y": 292.51
+    },
+    {
+     "content": "1",
+     "w": 2.06,
+     "x0": 148.1,
+     "y": 347.98
+    },
+    {
+     "content": "1",
+     "w": 2.06,
+     "x0": 146.25,
+     "y": 375.67
+    }
+   ],
+   "n": 6,
+   "page": 15,
+   "prelabel": "DIGIT_GRID",
+   "ratio": 3.81,
+   "sublabel": "",
+   "w_mean": 2.06,
+   "w_range": [
+    2.0,
+    2.1
+   ],
+   "x0": 146.04,
+   "y_span": 271.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (DIGIT_GRID); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    55.47,
+    27.69,
+    105.43,
+    55.47,
+    27.69
+   ],
+   "family": "DIGIT_GRID",
+   "grid_siblings": 1,
+   "kinds": {
+    "INT": 6
+   },
+   "members": [
+    {
+     "content": "1",
+     "w": 2.06,
+     "x0": 224.98,
+     "y": 103.92
+    },
+    {
+     "content": "1",
+     "w": 2.06,
+     "x0": 227.91,
+     "y": 159.39
+    },
+    {
+     "content": "1",
+     "w": 2.05,
+     "x0": 226.68,
+     "y": 187.08
+    },
+    {
+     "content": "1",
+     "w": 2.05,
+     "x0": 227.76,
+     "y": 292.51
+    },
+    {
+     "content": "1",
+     "w": 2.06,
+     "x0": 230.68,
+     "y": 347.98
+    },
+    {
+     "content": "1",
+     "w": 2.06,
+     "x0": 229.45,
+     "y": 375.67
+    }
+   ],
+   "n": 6,
+   "page": 15,
+   "prelabel": "DIGIT_GRID",
+   "ratio": 3.81,
+   "sublabel": "",
+   "w_mean": 2.06,
+   "w_range": [
+    2.0,
+    2.1
+   ],
+   "x0": 227.91,
+   "y_span": 271.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (AXIS_TICK); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    21.58,
+    21.59,
+    21.6,
+    21.59
+   ],
+   "family": "AXIS_TICK",
+   "grid_siblings": 0,
+   "kinds": {
+    "INT": 5
+   },
+   "members": [
+    {
+     "content": "84",
+     "w": 7.95,
+     "x0": 86.82,
+     "y": 583.71
+    },
+    {
+     "content": "82",
+     "w": 7.95,
+     "x0": 86.82,
+     "y": 605.29
+    },
+    {
+     "content": "80",
+     "w": 7.95,
+     "x0": 86.82,
+     "y": 626.88
+    },
+    {
+     "content": "78",
+     "w": 7.95,
+     "x0": 86.82,
+     "y": 648.48
+    },
+    {
+     "content": "76",
+     "w": 7.95,
+     "x0": 86.82,
+     "y": 670.07
+    }
+   ],
+   "n": 5,
+   "page": 16,
+   "prelabel": "AXIS_TICK",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 7.95,
+   "w_range": [
+    8.0,
+    8.0
+   ],
+   "x0": 86.82,
+   "y_span": 86.4
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    19.93,
+    9.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 3
+   },
+   "members": [
+    {
+     "content": "80%",
+     "w": 16.44,
+     "x0": 314.93,
+     "y": 257.77
+    },
+    {
+     "content": "80%",
+     "w": 16.44,
+     "x0": 314.93,
+     "y": 277.7
+    },
+    {
+     "content": "80%",
+     "w": 16.44,
+     "x0": 314.93,
+     "y": 287.66
+    }
+   ],
+   "n": 3,
+   "page": 16,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 2.0,
+   "sublabel": "",
+   "w_mean": 16.44,
+   "w_range": [
+    16.4,
+    16.4
+   ],
+   "x0": 314.93,
+   "y_span": 29.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    29.89,
+    9.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 3
+   },
+   "members": [
+    {
+     "content": "10%",
+     "w": 16.44,
+     "x0": 344.18,
+     "y": 257.77
+    },
+    {
+     "content": "20%",
+     "w": 16.44,
+     "x0": 344.18,
+     "y": 287.66
+    },
+    {
+     "content": "20%",
+     "w": 16.44,
+     "x0": 344.18,
+     "y": 297.62
+    }
+   ],
+   "n": 3,
+   "page": 16,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 3.0,
+   "sublabel": "",
+   "w_mean": 16.44,
+   "w_range": [
+    16.4,
+    16.4
+   ],
+   "x0": 344.18,
+   "y_span": 39.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    19.93,
+    19.92
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 3
+   },
+   "members": [
+    {
+     "content": "10%",
+     "w": 16.43,
+     "x0": 371.65,
+     "y": 257.77
+    },
+    {
+     "content": "20%",
+     "w": 16.43,
+     "x0": 371.65,
+     "y": 277.7
+    },
+    {
+     "content": "80%",
+     "w": 16.43,
+     "x0": 371.65,
+     "y": 297.62
+    }
+   ],
+   "n": 3,
+   "page": 16,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 16.43,
+   "w_range": [
+    16.4,
+    16.4
+   ],
+   "x0": 371.65,
+   "y_span": 39.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    9.97,
+    9.96,
+    9.96,
+    9.96,
+    9.97
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "84.2",
+     "w": 15.69,
+     "x0": 403.96,
+     "y": 257.77
+    },
+    {
+     "content": "84.3",
+     "w": 15.69,
+     "x0": 403.97,
+     "y": 267.74
+    },
+    {
+     "content": "84.1",
+     "w": 15.69,
+     "x0": 403.96,
+     "y": 277.7
+    },
+    {
+     "content": "84.4",
+     "w": 15.69,
+     "x0": 403.96,
+     "y": 287.66
+    },
+    {
+     "content": "83.7",
+     "w": 15.69,
+     "x0": 403.96,
+     "y": 297.62
+    },
+    {
+     "content": "83.6",
+     "w": 15.69,
+     "x0": 403.96,
+     "y": 307.59
+    }
+   ],
+   "n": 6,
+   "page": 16,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 403.96,
+   "y_span": 49.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    9.97,
+    9.96,
+    9.96,
+    9.96,
+    9.97
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "95.4",
+     "w": 15.7,
+     "x0": 444.87,
+     "y": 257.77
+    },
+    {
+     "content": "94.9",
+     "w": 15.69,
+     "x0": 444.87,
+     "y": 267.74
+    },
+    {
+     "content": "95.2",
+     "w": 15.7,
+     "x0": 444.87,
+     "y": 277.7
+    },
+    {
+     "content": "95.2",
+     "w": 15.7,
+     "x0": 444.87,
+     "y": 287.66
+    },
+    {
+     "content": "94.8",
+     "w": 15.7,
+     "x0": 444.87,
+     "y": 297.62
+    },
+    {
+     "content": "94.9",
+     "w": 15.7,
+     "x0": 444.87,
+     "y": 307.59
+    }
+   ],
+   "n": 6,
+   "page": 16,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 15.7,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 444.87,
+   "y_span": 49.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "BERT",
+   "dy": [
+    9.97,
+    9.96,
+    9.96,
+    9.96,
+    9.97
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 5,
+   "kinds": {
+    "DEC": 6
+   },
+   "members": [
+    {
+     "content": "94.9",
+     "w": 15.69,
+     "x0": 493.75,
+     "y": 257.77
+    },
+    {
+     "content": "94.0",
+     "w": 15.69,
+     "x0": 493.75,
+     "y": 267.74
+    },
+    {
+     "content": "94.6",
+     "w": 15.69,
+     "x0": 493.75,
+     "y": 277.7
+    },
+    {
+     "content": "94.7",
+     "w": 15.69,
+     "x0": 493.75,
+     "y": 287.66
+    },
+    {
+     "content": "94.6",
+     "w": 15.69,
+     "x0": 493.75,
+     "y": 297.62
+    },
+    {
+     "content": "94.6",
+     "w": 15.69,
+     "x0": 493.75,
+     "y": 307.59
+    }
+   ],
+   "n": 6,
+   "page": 16,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 15.69,
+   "w_range": [
+    15.7,
+    15.7
+   ],
+   "x0": 493.75,
+   "y_span": 49.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    21.91,
+    151.07
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 1,
+    "INT": 2
+   },
+   "members": [
+    {
+     "content": "43",
+     "w": 9.96,
+     "x0": 107.65,
+     "y": 382.78
+    },
+    {
+     "content": "70%",
+     "w": 18.26,
+     "x0": 107.75,
+     "y": 404.69
+    },
+    {
+     "content": "2",
+     "w": 5.98,
+     "x0": 108.3,
+     "y": 555.76
+    }
+   ],
+   "n": 3,
+   "page": 2,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 6.9,
+   "sublabel": "",
+   "w_mean": 11.4,
+   "w_range": [
+    6.0,
+    18.3
+   ],
+   "x0": 107.9,
+   "y_span": 173.0
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (AXIS_TICK); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    18.66,
+    18.67,
+    18.67,
+    18.66,
+    18.68,
+    18.66,
+    18.67
+   ],
+   "family": "AXIS_TICK",
+   "grid_siblings": 0,
+   "kinds": {
+    "INT": 8
+   },
+   "members": [
+    {
+     "content": "90",
+     "w": 9.62,
+     "x0": 317.81,
+     "y": 73.34
+    },
+    {
+     "content": "80",
+     "w": 9.62,
+     "x0": 317.81,
+     "y": 92.0
+    },
+    {
+     "content": "70",
+     "w": 9.62,
+     "x0": 317.81,
+     "y": 110.67
+    },
+    {
+     "content": "60",
+     "w": 9.62,
+     "x0": 317.81,
+     "y": 129.34
+    },
+    {
+     "content": "50",
+     "w": 9.62,
+     "x0": 317.81,
+     "y": 148.0
+    },
+    {
+     "content": "40",
+     "w": 9.62,
+     "x0": 317.81,
+     "y": 166.68
+    },
+    {
+     "content": "30",
+     "w": 9.62,
+     "x0": 317.81,
+     "y": 185.34
+    },
+    {
+     "content": "20",
+     "w": 9.62,
+     "x0": 317.81,
+     "y": 204.01
+    }
+   ],
+   "n": 8,
+   "page": 2,
+   "prelabel": "AXIS_TICK",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 9.62,
+   "w_range": [
+    9.6,
+    9.6
+   ],
+   "x0": 317.81,
+   "y_span": 130.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    164.91,
+    121.07
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 3
+   },
+   "members": [
+    {
+     "content": "3.1",
+     "w": 13.45,
+     "x0": 108.25,
+     "y": 408.55
+    },
+    {
+     "content": "3.2",
+     "w": 13.45,
+     "x0": 108.25,
+     "y": 573.46
+    },
+    {
+     "content": "3.3",
+     "w": 13.45,
+     "x0": 108.25,
+     "y": 694.53
+    }
+   ],
+   "n": 3,
+   "page": 4,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.36,
+   "sublabel": "",
+   "w_mean": 13.45,
+   "w_range": [
+    13.4,
+    13.4
+   ],
+   "x0": 108.25,
+   "y_span": 286.0
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    111.47,
+    23.93
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 2,
+    "INT": 1
+   },
+   "members": [
+    {
+     "content": "3.4",
+     "w": 13.45,
+     "x0": 108.25,
+     "y": 279.04
+    },
+    {
+     "content": "4",
+     "w": 5.98,
+     "x0": 108.3,
+     "y": 390.51
+    },
+    {
+     "content": "4.1",
+     "w": 13.45,
+     "x0": 108.25,
+     "y": 414.44
+    }
+   ],
+   "n": 3,
+   "page": 5,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 4.66,
+   "sublabel": "",
+   "w_mean": 10.96,
+   "w_range": [
+    6.0,
+    13.4
+   ],
+   "x0": 108.27,
+   "y_span": 135.4
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    10.96,
+    10.96,
+    10.96,
+    10.96,
+    10.95,
+    10.97,
+    10.95,
+    10.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 9
+   },
+   "members": [
+    {
+     "content": "25.0",
+     "w": 17.43,
+     "x0": 255.34,
+     "y": 593.09
+    },
+    {
+     "content": "27.9",
+     "w": 17.43,
+     "x0": 255.34,
+     "y": 604.05
+    },
+    {
+     "content": "27.2",
+     "w": 17.43,
+     "x0": 255.34,
+     "y": 615.01
+    },
+    {
+     "content": "32.8",
+     "w": 17.43,
+     "x0": 255.34,
+     "y": 625.97
+    },
+    {
+     "content": "45.6",
+     "w": 17.43,
+     "x0": 255.34,
+     "y": 636.93
+    },
+    {
+     "content": "24.4",
+     "w": 17.43,
+     "x0": 255.34,
+     "y": 647.88
+    },
+    {
+     "content": "26.1",
+     "w": 17.43,
+     "x0": 255.34,
+     "y": 658.85
+    },
+    {
+     "content": "27.1",
+     "w": 17.43,
+     "x0": 255.34,
+     "y": 669.8
+    },
+    {
+     "content": "40.8",
+     "w": 17.43,
+     "x0": 255.34,
+     "y": 680.76
+    }
+   ],
+   "n": 9,
+   "page": 5,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 17.43,
+   "w_range": [
+    17.4,
+    17.4
+   ],
+   "x0": 255.34,
+   "y_span": 87.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    10.96,
+    10.96,
+    10.96,
+    10.96,
+    10.95,
+    10.97,
+    10.95,
+    10.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 9
+   },
+   "members": [
+    {
+     "content": "25.0",
+     "w": 17.44,
+     "x0": 325.43,
+     "y": 593.09
+    },
+    {
+     "content": "28.8",
+     "w": 17.44,
+     "x0": 325.43,
+     "y": 604.05
+    },
+    {
+     "content": "25.7",
+     "w": 17.44,
+     "x0": 325.43,
+     "y": 615.01
+    },
+    {
+     "content": "33.3",
+     "w": 17.44,
+     "x0": 325.43,
+     "y": 625.97
+    },
+    {
+     "content": "56.6",
+     "w": 17.44,
+     "x0": 325.43,
+     "y": 636.93
+    },
+    {
+     "content": "30.9",
+     "w": 17.44,
+     "x0": 325.43,
+     "y": 647.88
+    },
+    {
+     "content": "21.6",
+     "w": 17.44,
+     "x0": 325.43,
+     "y": 658.85
+    },
+    {
+     "content": "25.6",
+     "w": 17.44,
+     "x0": 325.43,
+     "y": 669.8
+    },
+    {
+     "content": "50.4",
+     "w": 17.44,
+     "x0": 325.43,
+     "y": 680.76
+    }
+   ],
+   "n": 9,
+   "page": 5,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 17.44,
+   "w_range": [
+    17.4,
+    17.4
+   ],
+   "x0": 325.43,
+   "y_span": 87.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    10.96,
+    10.96,
+    10.96,
+    10.96,
+    10.95,
+    10.97,
+    10.95,
+    10.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 9
+   },
+   "members": [
+    {
+     "content": "25.0",
+     "w": 17.43,
+     "x0": 385.84,
+     "y": 593.09
+    },
+    {
+     "content": "27.0",
+     "w": 17.43,
+     "x0": 385.84,
+     "y": 604.05
+    },
+    {
+     "content": "27.7",
+     "w": 17.43,
+     "x0": 385.84,
+     "y": 615.01
+    },
+    {
+     "content": "30.2",
+     "w": 17.43,
+     "x0": 385.84,
+     "y": 625.97
+    },
+    {
+     "content": "40.2",
+     "w": 17.43,
+     "x0": 385.84,
+     "y": 636.93
+    },
+    {
+     "content": "26.0",
+     "w": 17.43,
+     "x0": 385.84,
+     "y": 647.88
+    },
+    {
+     "content": "25.6",
+     "w": 17.43,
+     "x0": 385.84,
+     "y": 658.85
+    },
+    {
+     "content": "24.3",
+     "w": 17.43,
+     "x0": 385.84,
+     "y": 669.8
+    },
+    {
+     "content": "36.7",
+     "w": 17.43,
+     "x0": 385.84,
+     "y": 680.76
+    }
+   ],
+   "n": 9,
+   "page": 5,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 17.43,
+   "w_range": [
+    17.4,
+    17.4
+   ],
+   "x0": 385.84,
+   "y_span": 87.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    10.96,
+    10.96,
+    10.96,
+    10.96,
+    10.95,
+    10.97,
+    10.95,
+    10.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 9
+   },
+   "members": [
+    {
+     "content": "25.0",
+     "w": 17.43,
+     "x0": 428.4,
+     "y": 593.09
+    },
+    {
+     "content": "27.7",
+     "w": 17.43,
+     "x0": 428.4,
+     "y": 604.05
+    },
+    {
+     "content": "27.9",
+     "w": 17.43,
+     "x0": 428.4,
+     "y": 615.01
+    },
+    {
+     "content": "33.1",
+     "w": 17.43,
+     "x0": 428.4,
+     "y": 625.97
+    },
+    {
+     "content": "54.6",
+     "w": 17.43,
+     "x0": 428.4,
+     "y": 636.93
+    },
+    {
+     "content": "24.1",
+     "w": 17.43,
+     "x0": 428.4,
+     "y": 647.88
+    },
+    {
+     "content": "25.5",
+     "w": 17.43,
+     "x0": 428.4,
+     "y": 658.85
+    },
+    {
+     "content": "26.5",
+     "w": 17.43,
+     "x0": 428.4,
+     "y": 669.8
+    },
+    {
+     "content": "48.8",
+     "w": 17.43,
+     "x0": 428.4,
+     "y": 680.76
+    }
+   ],
+   "n": 9,
+   "page": 5,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 17.43,
+   "w_range": [
+    17.4,
+    17.4
+   ],
+   "x0": 428.4,
+   "y_span": 87.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    10.96,
+    10.96,
+    10.96,
+    10.96,
+    10.95,
+    10.97,
+    10.95,
+    10.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 4,
+   "kinds": {
+    "DEC": 9
+   },
+   "members": [
+    {
+     "content": "25.0",
+     "w": 17.44,
+     "x0": 474.5,
+     "y": 593.09
+    },
+    {
+     "content": "27.9",
+     "w": 17.44,
+     "x0": 474.5,
+     "y": 604.05
+    },
+    {
+     "content": "27.1",
+     "w": 17.44,
+     "x0": 474.5,
+     "y": 615.01
+    },
+    {
+     "content": "32.4",
+     "w": 17.44,
+     "x0": 474.5,
+     "y": 625.97
+    },
+    {
+     "content": "48.9",
+     "w": 17.44,
+     "x0": 474.5,
+     "y": 636.93
+    },
+    {
+     "content": "25.9",
+     "w": 17.44,
+     "x0": 474.5,
+     "y": 647.88
+    },
+    {
+     "content": "24.9",
+     "w": 17.44,
+     "x0": 474.5,
+     "y": 658.85
+    },
+    {
+     "content": "26.0",
+     "w": 17.44,
+     "x0": 474.5,
+     "y": 669.8
+    },
+    {
+     "content": "43.9",
+     "w": 17.44,
+     "x0": 474.5,
+     "y": 680.76
+    }
+   ],
+   "n": 9,
+   "page": 5,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 17.44,
+   "w_range": [
+    17.4,
+    17.4
+   ],
+   "x0": 474.5,
+   "y_span": 87.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    33.12,
+    213.96
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 2,
+    "INT": 1
+   },
+   "members": [
+    {
+     "content": "9%",
+     "w": 13.28,
+     "x0": 282.0,
+     "y": 347.48
+    },
+    {
+     "content": "10",
+     "w": 12.37,
+     "x0": 283.67,
+     "y": 380.6
+    },
+    {
+     "content": "9%",
+     "w": 13.28,
+     "x0": 283.17,
+     "y": 594.56
+    }
+   ],
+   "n": 3,
+   "page": 6,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 6.46,
+   "sublabel": "",
+   "w_mean": 12.98,
+   "w_range": [
+    12.4,
+    13.3
+   ],
+   "x0": 282.95,
+   "y_span": 247.1
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (AXIS_TICK); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    30.98,
+    30.98,
+    30.98,
+    30.98
+   ],
+   "family": "AXIS_TICK",
+   "grid_siblings": 0,
+   "kinds": {
+    "INT": 5
+   },
+   "members": [
+    {
+     "content": "60",
+     "w": 9.56,
+     "x0": 316.3,
+     "y": 73.19
+    },
+    {
+     "content": "50",
+     "w": 9.56,
+     "x0": 316.3,
+     "y": 104.17
+    },
+    {
+     "content": "40",
+     "w": 9.56,
+     "x0": 316.3,
+     "y": 135.15
+    },
+    {
+     "content": "30",
+     "w": 9.56,
+     "x0": 316.3,
+     "y": 166.13
+    },
+    {
+     "content": "20",
+     "w": 9.56,
+     "x0": 316.3,
+     "y": 197.11
+    }
+   ],
+   "n": 5,
+   "page": 7,
+   "prelabel": "AXIS_TICK",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 9.56,
+   "w_range": [
+    9.6,
+    9.6
+   ],
+   "x0": 316.3,
+   "y_span": 123.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (OTHER_INT_STRUCT); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    503.42,
+    91.08
+   ],
+   "family": "OTHER_INT_STRUCT",
+   "grid_siblings": 0,
+   "kinds": {
+    "INT": 3
+   },
+   "members": [
+    {
+     "content": "11",
+     "w": 13.42,
+     "x0": 293.49,
+     "y": 121.6
+    },
+    {
+     "content": "100",
+     "w": 9.59,
+     "x0": 292.46,
+     "y": 625.02
+    },
+    {
+     "content": "10",
+     "w": 12.44,
+     "x0": 294.46,
+     "y": 716.1
+    }
+   ],
+   "n": 3,
+   "page": 11,
+   "prelabel": "OTHER_INT_STRUCT",
+   "ratio": 5.53,
+   "sublabel": "",
+   "w_mean": 11.82,
+   "w_range": [
+    9.6,
+    13.4
+   ],
+   "x0": 293.47,
+   "y_span": 594.5
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    10.96,
+    71.73
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 1,
+    "INT": 2
+   },
+   "members": [
+    {
+     "content": "25",
+     "w": 12.45,
+     "x0": 222.73,
+     "y": 160.75
+    },
+    {
+     "content": "32",
+     "w": 12.45,
+     "x0": 224.26,
+     "y": 171.71
+    },
+    {
+     "content": "4%",
+     "w": 13.29,
+     "x0": 225.82,
+     "y": 243.44
+    }
+   ],
+   "n": 3,
+   "page": 12,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 6.54,
+   "sublabel": "",
+   "w_mean": 12.73,
+   "w_range": [
+    12.4,
+    13.3
+   ],
+   "x0": 224.27,
+   "y_span": 82.7
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (VALUE_COLUMN); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    31.9,
+    31.9,
+    31.9,
+    31.89,
+    210.28,
+    24.61,
+    24.61,
+    24.61,
+    24.61,
+    24.61
+   ],
+   "family": "VALUE_COLUMN",
+   "grid_siblings": 1,
+   "kinds": {
+    "DEC": 6,
+    "INT": 5
+   },
+   "members": [
+    {
+     "content": "50",
+     "w": 9.4,
+     "x0": 118.09,
+     "y": 114.35
+    },
+    {
+     "content": "45",
+     "w": 9.4,
+     "x0": 118.09,
+     "y": 146.25
+    },
+    {
+     "content": "40",
+     "w": 9.4,
+     "x0": 118.09,
+     "y": 178.15
+    },
+    {
+     "content": "35",
+     "w": 9.4,
+     "x0": 118.09,
+     "y": 210.05
+    },
+    {
+     "content": "30",
+     "w": 9.4,
+     "x0": 118.09,
+     "y": 241.94
+    },
+    {
+     "content": "1.0",
+     "w": 11.32,
+     "x0": 117.74,
+     "y": 452.22
+    },
+    {
+     "content": "0.8",
+     "w": 11.32,
+     "x0": 117.74,
+     "y": 476.83
+    },
+    {
+     "content": "0.6",
+     "w": 11.32,
+     "x0": 117.74,
+     "y": 501.44
+    },
+    {
+     "content": "0.4",
+     "w": 11.32,
+     "x0": 117.74,
+     "y": 526.05
+    },
+    {
+     "content": "0.2",
+     "w": 11.32,
+     "x0": 117.74,
+     "y": 550.66
+    },
+    {
+     "content": "0.0",
+     "w": 11.32,
+     "x0": 117.74,
+     "y": 575.27
+    }
+   ],
+   "n": 11,
+   "page": 13,
+   "prelabel": "VALUE_COLUMN",
+   "ratio": 8.54,
+   "sublabel": "",
+   "w_mean": 10.45,
+   "w_range": [
+    9.4,
+    11.3
+   ],
+   "x0": 117.9,
+   "y_span": 460.9
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    23.19,
+    23.19,
+    23.18,
+    23.19,
+    23.18,
+    233.47,
+    25.81,
+    25.82,
+    25.81,
+    25.81,
+    25.83
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 1,
+   "kinds": {
+    "DEC": 6,
+    "INT": 6
+   },
+   "members": [
+    {
+     "content": "70",
+     "w": 9.38,
+     "x0": 320.05,
+     "y": 104.57
+    },
+    {
+     "content": "60",
+     "w": 9.38,
+     "x0": 320.05,
+     "y": 127.76
+    },
+    {
+     "content": "50",
+     "w": 9.38,
+     "x0": 320.05,
+     "y": 150.95
+    },
+    {
+     "content": "40",
+     "w": 9.38,
+     "x0": 320.05,
+     "y": 174.13
+    },
+    {
+     "content": "30",
+     "w": 9.38,
+     "x0": 320.05,
+     "y": 197.32
+    },
+    {
+     "content": "20",
+     "w": 9.38,
+     "x0": 320.05,
+     "y": 220.5
+    },
+    {
+     "content": "1.0",
+     "w": 11.88,
+     "x0": 320.17,
+     "y": 453.97
+    },
+    {
+     "content": "0.8",
+     "w": 11.88,
+     "x0": 320.17,
+     "y": 479.78
+    },
+    {
+     "content": "0.6",
+     "w": 11.88,
+     "x0": 320.17,
+     "y": 505.6
+    },
+    {
+     "content": "0.4",
+     "w": 11.88,
+     "x0": 320.17,
+     "y": 531.41
+    },
+    {
+     "content": "0.2",
+     "w": 11.88,
+     "x0": 320.17,
+     "y": 557.22
+    },
+    {
+     "content": "0.0",
+     "w": 11.88,
+     "x0": 320.17,
+     "y": 583.05
+    }
+   ],
+   "n": 12,
+   "page": 13,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 10.07,
+   "sublabel": "",
+   "w_mean": 10.63,
+   "w_range": [
+    9.4,
+    11.9
+   ],
+   "x0": 320.11,
+   "y_span": 478.5
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (AXIS_TICK); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    31.11,
+    31.11,
+    31.12,
+    31.11
+   ],
+   "family": "AXIS_TICK",
+   "grid_siblings": 1,
+   "kinds": {
+    "INT": 5
+   },
+   "members": [
+    {
+     "content": "60",
+     "w": 9.62,
+     "x0": 118.34,
+     "y": 221.16
+    },
+    {
+     "content": "50",
+     "w": 9.62,
+     "x0": 118.34,
+     "y": 252.27
+    },
+    {
+     "content": "40",
+     "w": 9.62,
+     "x0": 118.34,
+     "y": 283.38
+    },
+    {
+     "content": "30",
+     "w": 9.62,
+     "x0": 118.34,
+     "y": 314.5
+    },
+    {
+     "content": "20",
+     "w": 9.62,
+     "x0": 118.34,
+     "y": 345.61
+    }
+   ],
+   "n": 5,
+   "page": 14,
+   "prelabel": "AXIS_TICK",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 9.62,
+   "w_range": [
+    9.6,
+    9.6
+   ],
+   "x0": 118.34,
+   "y_span": 124.5
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (AXIS_TICK); MANUAL_REVIEW confirmed",
+   "doc": "MMLU",
+   "dy": [
+    23.76,
+    23.77,
+    23.75,
+    23.77,
+    23.76
+   ],
+   "family": "AXIS_TICK",
+   "grid_siblings": 1,
+   "kinds": {
+    "INT": 6
+   },
+   "members": [
+    {
+     "content": "70",
+     "w": 9.62,
+     "x0": 320.3,
+     "y": 233.03
+    },
+    {
+     "content": "60",
+     "w": 9.62,
+     "x0": 320.3,
+     "y": 256.79
+    },
+    {
+     "content": "50",
+     "w": 9.62,
+     "x0": 320.3,
+     "y": 280.56
+    },
+    {
+     "content": "40",
+     "w": 9.62,
+     "x0": 320.3,
+     "y": 304.31
+    },
+    {
+     "content": "30",
+     "w": 9.62,
+     "x0": 320.3,
+     "y": 328.08
+    },
+    {
+     "content": "20",
+     "w": 9.62,
+     "x0": 320.3,
+     "y": 351.84
+    }
+   ],
+   "n": 6,
+   "page": 14,
+   "prelabel": "AXIS_TICK",
+   "ratio": 1.0,
+   "sublabel": "",
+   "w_mean": 9.62,
+   "w_range": [
+    9.6,
+    9.6
+   ],
+   "x0": 320.3,
+   "y_span": 118.8
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "T5",
+   "dy": [
+    13.55,
+    83.04
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 1,
+   "kinds": {
+    "DEC": 3
+   },
+   "members": [
+    {
+     "content": "2017",
+     "w": 26.61,
+     "x0": 159.99,
+     "y": 398.38
+    },
+    {
+     "content": "2018",
+     "w": 25.46,
+     "x0": 157.34,
+     "y": 411.93
+    },
+    {
+     "content": "2019",
+     "w": 24.92,
+     "x0": 158.04,
+     "y": 494.97
+    }
+   ],
+   "n": 3,
+   "page": 2,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 6.13,
+   "sublabel": "",
+   "w_mean": 25.66,
+   "w_range": [
+    24.9,
+    26.6
+   ],
+   "x0": 158.46,
+   "y_span": 96.6
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "T5",
+   "dy": [
+    13.56,
+    83.03
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 1,
+   "kinds": {
+    "DEC": 3
+   },
+   "members": [
+    {
+     "content": "2017",
+     "w": 25.78,
+     "x0": 494.86,
+     "y": 384.82
+    },
+    {
+     "content": "2019",
+     "w": 26.6,
+     "x0": 493.98,
+     "y": 398.38
+    },
+    {
+     "content": "2018",
+     "w": 26.5,
+     "x0": 494.08,
+     "y": 481.41
+    }
+   ],
+   "n": 3,
+   "page": 2,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 6.12,
+   "sublabel": "",
+   "w_mean": 26.29,
+   "w_range": [
+    25.8,
+    26.6
+   ],
+   "x0": 494.31,
+   "y_span": 96.6
+  },
+  {
+   "adjudication_basis": "rule-assisted prelabel (MIXED_ARTIFACT); MANUAL_REVIEW confirmed",
+   "doc": "T5",
+   "dy": [
+    563.75,
+    10.96
+   ],
+   "family": "MIXED_ARTIFACT",
+   "grid_siblings": 0,
+   "kinds": {
+    "DEC": 3
+   },
+   "members": [
+    {
+     "content": "2018",
+     "w": 22.19,
+     "x0": 93.04,
+     "y": 125.64
+    },
+    {
+     "content": "8.",
+     "w": 7.17,
+     "x0": 93.68,
+     "y": 689.39
+    },
+    {
+     "content": "9.",
+     "w": 7.17,
+     "x0": 93.68,
+     "y": 700.35
+    }
+   ],
+   "n": 3,
+   "page": 7,
+   "prelabel": "MIXED_ARTIFACT",
+   "ratio": 51.44,
+   "sublabel": "",
+   "w_mean": 12.18,
+   "w_range": [
+    7.2,
+    22.2
+   ],
+   "x0": 93.47,
+   "y_span": 574.7
+  }
+ ],
+ "coverage_verdict": {
+  "C2": "REQUIRES_REDESIGN",
+  "CORPUS_LIMITATION": "CONFIRMED",
+  "NEW_HYPOTHESIS": "DESIGN BLOCKED",
+  "POSITIVE_COVERAGE": "INSUFFICIENT",
+  "PREREGISTRATION": "NOT READY",
+  "stop_conditions": "A+D"
+ },
+ "diversity": {
+  "D1_document": "+4 but 0 new positive",
+  "D2_page_layout": "+80pp, 0 new positive setting",
+  "D3_structural": "+1 boundary family, 0 positive",
+  "D4_neighborhood": "NEW: code-token right neighbors",
+  "D5_spacing": "none new (ratio 1.0 same as ideal)",
+  "POSITIVE_DIVERSITY": "INSUFFICIENT",
+  "structurally_distinct_positive_vs_eff_p5": "NONE"
+ },
+ "document": "tmp/candidate_column_segment_corpus_acquisition.md",
+ "family_distribution": {
+  "AXIS_TICK": 7,
+  "DIGIT_GRID": 7,
+  "MIXED_ARTIFACT": 30,
+  "NUMBERED_LIST": 2,
+  "OTHER_INT_STRUCT": 7,
+  "VALUE_COLUMN": 78
+ },
+ "frozen_evidence_sufficiency": "all new structures describable; NEW_OBSERVATION_MEASUREMENT_REQUEST=NONE (no Stop C)",
+ "governance": {
+  "ATOMIC_OBSERVATION_MODIFICATION": "NONE",
+  "C2": "REQUIRES_REDESIGN",
+  "CORPUS_LIMITATION": "CONFIRMED",
+  "EXPERIMENT": "NOT AUTHORIZED",
+  "FROZEN_BASELINE": "INTACT",
+  "GT_CONFIRMED_POSITIVE": 1,
+  "GT_HISTORICAL_MODIFICATION": "NONE",
+  "IMPLEMENTATION": "NOT AUTHORIZED",
+  "NEW_HYPOTHESIS": "DESIGN BLOCKED",
+  "NEW_OBSERVATION_MEASUREMENT_REQUEST": "NONE",
+  "PERCEPTION_PRODUCTION_MODIFICATION": "NONE",
+  "PH02": "REJECTED",
+  "PH02B": "NOT AUTHORIZED",
+  "POSITIVE_COVERAGE": "INSUFFICIENT",
+  "PREREGISTRATION": "NOT READY",
+  "PRODUCTION": "FALSE",
+  "RESEARCH_OBJECT_REASSESSMENT": "NOT AUTHORIZED",
+  "STOP": "TRUE"
+ },
+ "independence": {
+  "cumulative": "18 documents, ~413 pages, GT_CONFIRMED=1",
+  "instance_count_new": 131,
+  "positive_setting_increment": 0,
+  "unique_documents_new": 4,
+  "unique_structural_settings_new": "~110"
+ },
+ "near_miss_cumulative": [
+  "NM-01 reference numbers (2309)",
+  "NM-02 TOC+page (2212)",
+  "NM-03 isolated ticks (med p8)",
+  "NM-04 eff p5 [2,3]",
+  "NM-05 resnet p6 value col",
+  "NM-06 CODE_LINE_NUMBER (LLaMA p19/p22)"
+ ],
+ "new_boundary_family": {
+  "independence": "SAME_TEMPLATE_REPETITION (same doc, same pattern, continuation) = 1 setting",
+  "instances": [
+   {
+    "doc": "LLaMA",
+    "n": 9,
+    "page": 19,
+    "ratio": 1.0,
+    "right_neighbors": "Python code tokens",
+    "sib": 0,
+    "values": "1..9",
+    "x0": 87.2
+   },
+   {
+    "doc": "LLaMA",
+    "n": 3,
+    "page": 22,
+    "ratio": 1.0,
+    "right_neighbors": "JS code tokens",
+    "sib": 0,
+    "values": "10 11 12",
+    "x0": 82.7
+   }
+  ],
+  "name": "CODE_LINE_NUMBER (NUMBERED_LIST)",
+  "significance": "structurally similar to row-index (left-aligned+ascending+uniform dy) but sib=0; M4 grid-embedding excludes it; SECOND independent corroboration of M4 necessity",
+  "unique_settings": 1
+ },
+ "phase": "Independent Structural Corpus Acquisition (READ/ENUMERATE/CLASSIFY/ADJUDICATE/AUDIT/REPORT)",
+ "positives": {
+  "GT_CONFIRMED_POSITIVE_new": 0,
+  "GT_CONFIRMED_POSITIVE_total": 1,
+  "MANUAL_CANDIDATE_row_index_like": 0,
+  "new_table_row_number_columns": 0
+ },
+ "recommended_next": [
+  "acquire non-ML table-dense docs (stats/financial/audit/manuals/parts) + human GT",
+  "if still no growth: reconsider whether row-number role is the right object",
+  "C2-prime paper redesign may proceed, stays DESIGN BLOCKED",
+  "no predicate/threshold work on current corpus"
+ ]
+}

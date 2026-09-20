@@ -1,0 +1,710 @@
+{
+  "audit_status": "CONDITIONAL",
+  "metadata": {
+    "audit_name": "HVA-04 Phase 1 Minimal Prototype Contract Audit",
+    "date": "2026-09-17",
+    "mode": "READ-ONLY CONTRACT AUDIT / NO CODE / NO IMPLEMENTATION / FROZEN INTACT / STOP",
+    "predecessors": "HVA-01, HVA-02, HVA-03",
+    "scope": "Phase 1 Minimal Prototype Contract Audit (P4 + P6 + P7 + Counterexample Search)"
+  },
+  "executive_summary": {
+    "status": "CONDITIONAL",
+    "phase1_ready": false,
+    "contract_gaps_found": 4,
+    "minimal_prototype": "C (FeedbackRecord + Evidence Pack + Evidence Signature + SignalCandidate)",
+    "key_finding": "Phase 1 is NOT ready for implementation. 4 contract gaps identified. GAP-1 (content_type) and GAP-4 (L5 vs machine_eval TLD inconsistency) must be resolved before code. GAP-2 (P2 geometry) resolved by dropping L2. GAP-3 (P7 lacks TLD) documented as limitation.",
+    "stop": true
+  },
+  "contract_gaps": {
+    "GAP-1": {
+      "description": "content_type field does not exist in ANY data file",
+      "hva03_usage": "Evidence Pack L0 + Evidence Signature",
+      "actual_source": "Manually derived in HVA-01 case profiles",
+      "resolution": "Define derivation rule: is_in_table+is01_a→TABLE_NUMERIC, is_in_table+!is01_a→TABLE_TEXT, !is_in_table+period→PROSE, text starts with Fig→FIGURE",
+      "status": "DERIVABLE but rule must be documented before implementation",
+      "severity": "MEDIUM"
+    },
+    "GAP-2": {
+      "description": "P2 geometry fields (h_gap, dy, same_style, width_a/b, style_sig_a/b) exist ONLY in L5 experiment_cases, NOT in IS-11 machine_eval",
+      "hva03_usage": "Evidence Pack L2 (Supporting Evidence)",
+      "actual_source": "L5 experiment_cases (30 cases only)",
+      "resolution": "Drop L2 from Phase 1. Use L0-L1 only.",
+      "status": "RESOLVED (drop L2)",
+      "severity": "LOW"
+    },
+    "GAP-3": {
+      "description": "P7 has NO TLD fields (is_in_table, different_cell) — 0/69 cases",
+      "hva03_usage": "Counterexample Search cross-corpus matching",
+      "actual_source": "P7 machine_results has decision_evidence (is01_a, is02_b) but no TLD",
+      "resolution": "Document as known limitation. P7 can match on 4 fields (is01_a, is02_b, period, capital) but NOT on is_in_table/different_cell. SIG-01 counterexample search is PARTIAL on P7. SIG-02 counterexample search is FULL on P7.",
+      "status": "DOCUMENTED limitation",
+      "severity": "MEDIUM"
+    },
+    "GAP-4": {
+      "description": "L5 experiment has_tld=False for 9/30 cases where machine_eval HAS TLD data. L5 cues show TLD=None but machine_eval is11_observation has TLD results.",
+      "hva03_usage": "Evidence Pack TLD field source",
+      "actual_source": "L5 experiment_cases cues vs machine_eval is11_observation",
+      "evidence": "AMB-032: L5 has_tld=False, cues TLD=None; machine_eval is_in_table=True, different_cell=True",
+      "resolution": "Evidence Pack MUST read TLD data from machine_eval (is11_observation), NOT from L5 experiment_cases (cues). L5 cues are experiment presentation, not ground truth.",
+      "status": "RESOLVED (read from machine_eval)",
+      "severity": "HIGH (data source decision critical for correctness)"
+    }
+  },
+  "p4_evidence_pack_audit": {
+    "input_fields": [
+      {
+        "field": "text_a",
+        "source": "GT/machine_eval",
+        "authority": "Evidence Fact (P1)",
+        "required": true
+      },
+      {
+        "field": "text_b",
+        "source": "GT/machine_eval",
+        "authority": "Evidence Fact (P1)",
+        "required": true
+      },
+      {
+        "field": "page",
+        "source": "machine_eval",
+        "authority": "Evidence Fact (P1)",
+        "required": true
+      },
+      {
+        "field": "document_id",
+        "source": "machine_eval",
+        "authority": "Evidence Fact (P1)",
+        "required": true
+      },
+      {
+        "field": "content_type",
+        "source": "DERIVED (GAP-1)",
+        "authority": "Machine-derived",
+        "required": true
+      },
+      {
+        "field": "is_in_table",
+        "source": "machine_eval is11_observation",
+        "authority": "Machine-derived (TLD)",
+        "required": true
+      },
+      {
+        "field": "different_cell",
+        "source": "machine_eval is11_observation",
+        "authority": "Machine-derived (TLD)",
+        "required": true
+      },
+      {
+        "field": "is01_a",
+        "source": "machine_eval experimental_c",
+        "authority": "Machine-derived (IS-01)",
+        "required": true
+      },
+      {
+        "field": "is02_b",
+        "source": "machine_eval experimental_c",
+        "authority": "Machine-derived (IS-02)",
+        "required": true
+      },
+      {
+        "field": "machine_decision",
+        "source": "machine_eval experimental_c",
+        "authority": "Machine Interpretation",
+        "required": true
+      },
+      {
+        "field": "machine_outcome",
+        "source": "machine_eval experimental_c",
+        "authority": "Machine Interpretation",
+        "required": false,
+        "note": "AUDIT_ONLY — do NOT show to Human in L1"
+      },
+      {
+        "field": "text_a_ends_period",
+        "source": "DERIVED from text_a",
+        "authority": "Evidence Fact (derived)",
+        "required": true
+      },
+      {
+        "field": "text_b_starts_capital",
+        "source": "DERIVED from text_b",
+        "authority": "Evidence Fact (derived)",
+        "required": true
+      },
+      {
+        "field": "h_gap",
+        "source": "L5 experiment_cases ONLY (GAP-2)",
+        "authority": "Evidence Fact (P2)",
+        "required": false
+      },
+      {
+        "field": "dy",
+        "source": "L5 experiment_cases ONLY (GAP-2)",
+        "authority": "Evidence Fact (P2)",
+        "required": false
+      },
+      {
+        "field": "same_style",
+        "source": "L5 experiment_cases ONLY (GAP-2)",
+        "authority": "Evidence Fact (P2)",
+        "required": false
+      }
+    ],
+    "semantic_leakage_check": {
+      "different_cell": {
+        "classification": "Machine-derived (TLD structural fact)",
+        "leakage": false,
+        "ui_requirement": "Show as \"TLD Detection: Different Cell = YES\", NOT \"Correct Answer\""
+      },
+      "machine_decision": {
+        "classification": "Machine Interpretation (IS-11 decision)",
+        "leakage": "POTENTIAL",
+        "ui_requirement": "Show as \"Machine Decision (may be wrong)\", NOT \"Recommended\" or \"Correct\""
+      },
+      "content_type": {
+        "classification": "Machine-derived (from is_in_table+is01_a)",
+        "leakage": "POTENTIAL",
+        "ui_requirement": "Show as \"Classified as: TABLE_NUMERIC\", NOT \"This is a table\""
+      },
+      "machine_outcome": {
+        "classification": "Machine Interpretation",
+        "leakage": "POTENTIAL",
+        "ui_requirement": "AUDIT_ONLY — do NOT show in L1 (reveals correctness)"
+      },
+      "overall": "SEMANTIC_LEAKAGE = 0 (with UI labeling requirements)"
+    },
+    "progressive_disclosure": {
+      "L0": {
+        "needed": true,
+        "fields": "text_a, text_b, page, doc, content_type",
+        "question": "What is this case?"
+      },
+      "L1": {
+        "needed": true,
+        "fields": "is_in_table, different_cell, is01_a, is02_b, ends_period, starts_capital, machine_decision, insufficiency",
+        "question": "What evidence helps me decide?"
+      },
+      "L2": {
+        "needed": false,
+        "reason": "GAP-2: P2 geometry fields not in machine_eval. Drop from Phase 1."
+      },
+      "L3": {
+        "needed": false,
+        "reason": "Requires cross-case search (Phase 1.5). Not in minimal prototype C."
+      },
+      "L4": {
+        "needed": false,
+        "reason": "Audit only. Not needed for prototype."
+      },
+      "phase1_decision": "L0 + L1 only"
+    },
+    "contract_status": "GAP (GAP-1 content_type + GAP-4 data source decision)"
+  },
+  "p6_feedbackrecord_audit": {
+    "fields": [
+      {
+        "field": "record_id",
+        "type": "str",
+        "required": true,
+        "source": "Generated"
+      },
+      {
+        "field": "case_id",
+        "type": "str",
+        "required": true,
+        "source": "Input"
+      },
+      {
+        "field": "human_id",
+        "type": "str",
+        "required": true,
+        "source": "Input"
+      },
+      {
+        "field": "human_decision",
+        "type": "str",
+        "required": true,
+        "source": "Human input (KEEP_SEPARATE/MERGE/UNKNOWN)"
+      },
+      {
+        "field": "evidence_snapshot",
+        "type": "dict",
+        "required": true,
+        "source": "Frozen from machine_eval"
+      },
+      {
+        "field": "evidence_viewed",
+        "type": "dict",
+        "required": true,
+        "source": "From interaction log (levels_viewed, fields_expanded, decision_time_ms, expansion_count)"
+      },
+      {
+        "field": "provenance",
+        "type": "dict",
+        "required": true,
+        "source": "From system (tld_hash, gt_hash, timestamp, experiment_condition)"
+      },
+      {
+        "field": "evidence_relations",
+        "type": "list",
+        "required": "DERIVED",
+        "source": "Auto-extracted from snapshot"
+      },
+      {
+        "field": "human_rationale",
+        "type": "str",
+        "required": "OPTIONAL",
+        "source": "Human input if provided — NOT required, NOT depended on"
+      }
+    ],
+    "evidence_snapshot_fields": [
+      "is_in_table",
+      "different_cell",
+      "is01_a",
+      "is02_b",
+      "machine_decision",
+      "text_a_ends_period",
+      "text_b_starts_capital",
+      "document_id",
+      "page",
+      "content_type"
+    ],
+    "human_rationale_required": false,
+    "rationale_reason": "L5 data: 96% no expansion, 91% GT rationales formulaic. Rationale not reliable signal source. Machine constructs Signal from Decision + Evidence Context, not from rationale.",
+    "forbidden_fields": [
+      "rule",
+      "pattern",
+      "inference",
+      "conclusion",
+      "suggested_signal",
+      "signal_id",
+      "confidence",
+      "score",
+      "weight"
+    ],
+    "contract_status": "READY — all required fields available from existing data"
+  },
+  "evidence_signature_audit": {
+    "definition": "Structural fingerprint = dict of boolean/enum fields from evidence_snapshot. NOT semantic label, NOT rule, NOT embedding, NOT confidence, NOT text matching.",
+    "signature_fields": [
+      {
+        "field": "is_in_table",
+        "type": "bool",
+        "is11_available": true,
+        "p7_available": false
+      },
+      {
+        "field": "different_cell",
+        "type": "bool",
+        "is11_available": true,
+        "p7_available": false
+      },
+      {
+        "field": "is01_a",
+        "type": "bool",
+        "is11_available": true,
+        "p7_available": true
+      },
+      {
+        "field": "is02_b",
+        "type": "bool",
+        "is11_available": true,
+        "p7_available": true
+      },
+      {
+        "field": "text_a_ends_period",
+        "type": "bool",
+        "is11_available": true,
+        "p7_available": true
+      },
+      {
+        "field": "text_b_starts_capital",
+        "type": "bool",
+        "is11_available": true,
+        "p7_available": true
+      },
+      {
+        "field": "content_type",
+        "type": "enum",
+        "is11_available": "DERIVED (GAP-1)",
+        "p7_available": "DERIVED"
+      }
+    ],
+    "semantic_boundary_check": {
+      "contains_semantic_labels": false,
+      "produces_decisions": false,
+      "interprets_evidence": false,
+      "same_signature_different_semantics": "YES — AMB-375 (KS) and P7 IND-AMB-049 (MERGE) have same signature but different decisions. Signature does NOT resolve semantic ambiguity. Human does.",
+      "conclusion": "Evidence Signature does NOT cross Semantic Boundary."
+    },
+    "contract_status": "GAP (GAP-1 content_type derivation needed; GAP-3 P7 lacks TLD fields for full match)"
+  },
+  "signalcandidate_audit": {
+    "state_machine": {
+      "DISCOVERED": "≥1 FeedbackRecord with Evidence Signature",
+      "REPEATED": "≥2 FeedbackRecords with same Signature",
+      "INDEPENDENCE_VERIFIED": "independence check passed (≥2 independent doc-page groups)",
+      "COUNTEREXAMPLE_CHECKED": "Counterexample Search executed (Phase 1.5)",
+      "BOUNDARY_REVIEW_REQUIRED": "counterexamples found OR ceiling effect → MUST go to Human (Phase 2)"
+    },
+    "phase1_allowed_states": [
+      "DISCOVERED",
+      "REPEATED",
+      "INDEPENDENCE_VERIFIED",
+      "BOUNDARY_REVIEW_REQUIRED"
+    ],
+    "phase1_forbidden_states": [
+      "AUTO_VALIDATED",
+      "VALIDATED",
+      "REGISTERED",
+      "ACTIVE",
+      "RETIRED"
+    ],
+    "candidate_not_rule_check": {
+      "contains": [
+        "evidence_signature (structural)",
+        "source_cases (history)",
+        "human_decisions (what humans said)",
+        "independence (statistics)",
+        "status (state machine)"
+      ],
+      "does_not_contain": [
+        "rule (no IF-THEN)",
+        "decision_function (no f(x)→y)",
+        "confidence (no probability)",
+        "score (no ranking)",
+        "recommendation (no should)",
+        "override (no authority)"
+      ],
+      "conclusion": "Candidate = \"Here are N cases with similar evidence and similar decisions.\" NOT \"When you see this evidence, decide this way.\""
+    },
+    "contract_status": "READY (with Phase 1 state restrictions)"
+  },
+  "counterexample_search_audit": {
+    "search_input": "SignalCandidate (evidence_signature + human_decisions) + all records (IS-11 + P7)",
+    "search_unit": "Evidence Signature match (boolean field comparison)",
+    "search_method": "Exact boolean match on Evidence Signature fields. NO model/LLM/embedding needed.",
+    "is11_match_fields": [
+      "is_in_table",
+      "different_cell",
+      "is01_a",
+      "is02_b",
+      "text_a_ends_period",
+      "text_b_starts_capital"
+    ],
+    "p7_match_fields": [
+      "is01_a",
+      "is02_b",
+      "text_a_ends_period",
+      "text_b_starts_capital"
+    ],
+    "p7_missing_fields": [
+      "is_in_table",
+      "different_cell"
+    ],
+    "output_categories": [
+      "POSITIVE (same sig, same decision)",
+      "NEGATIVE (same sig, different decision)",
+      "UNKNOWN (same sig, decision=UNKNOWN)",
+      "CONFLICT (same sig, reviewer disagreement)",
+      "CEILING (0 counterexamples AND 0 unknowns)"
+    ],
+    "contract_status": "GAP (GAP-3: P7 lacks TLD → PARTIAL match for SIG-01 type signals. FULL match for SIG-02 type signals.)",
+    "phase1_scope": "DEFERRED to Phase 1.5 (not in minimal prototype C)"
+  },
+  "ceiling_effect_audit": {
+    "principle": "0 counterexamples ≠ Signal validated",
+    "enforcement": "ceiling_effect=True → status=INSUFFICIENT_EVIDENCE → BOUNDARY_REVIEW_REQUIRED → CANNOT auto-promote",
+    "safest_state": "INSUFFICIENT_EVIDENCE (clearer than CEILING_EFFECT — prevents misinterpretation as positive validation)",
+    "phase1_handling": "ceiling cases stop at BOUNDARY_REVIEW_REQUIRED. No VALIDATED state reachable in Phase 1.",
+    "enforced": true
+  },
+  "case_selection_audit": {
+    "constraints": [
+      {
+        "constraint": "max_table_pct",
+        "value": 0.5,
+        "classification": "Design heuristic",
+        "evidence": "HVA-01: current 88% TABLE → 50% is reduction target, not validated"
+      },
+      {
+        "constraint": "min_prose_pct",
+        "value": 0.15,
+        "classification": "Design heuristic",
+        "evidence": "HVA-01: current 7% → 15% is minimum for diversity"
+      },
+      {
+        "constraint": "max_type_a_pct",
+        "value": 0.3,
+        "classification": "Design heuristic",
+        "evidence": "HVA-01: current 53% → 30% is waste reduction target"
+      },
+      {
+        "constraint": "min_merge_count",
+        "value": 2,
+        "classification": "Observed evidence",
+        "evidence": "HVA-02: IS-11 has 2 MERGE cases"
+      }
+    ],
+    "recommendation": "Label as \"sampling_guardrail\" not \"hard_rule\". Retain adjustability. No experimental validation.",
+    "authority_check": {
+      "case_selector_can": [
+        "Choose which cases Human reviews",
+        "Apply guardrails for diversity",
+        "Prioritize by review value"
+      ],
+      "case_selector_cannot": [
+        "Judge case correctness",
+        "Decide case answer",
+        "Decide Signal validity",
+        "Decide Runtime behavior"
+      ],
+      "conclusion": "Case Selection = SAMPLING (structural), not JUDGING (semantic). NO new Selection Authority."
+    }
+  },
+  "human_boundary_audit": {
+    "human_actions": [
+      "Case Judgment: KEEP_SEPARATE / MERGE / UNKNOWN",
+      "Signal Validation: SUPPORTED / UNSUPPORTED / UNKNOWN",
+      "Boundary Validation: IN_SCOPE / OUT_OF_SCOPE / NEEDS_SCOPING / UNKNOWN"
+    ],
+    "machine_substitution_check": {
+      "Evidence Pack L0-L1": {
+        "substitutes": false,
+        "note": "Presents facts, no recommendation"
+      },
+      "Evidence Signature": {
+        "substitutes": false,
+        "note": "Structural fingerprint, no interpretation"
+      },
+      "SignalCandidate": {
+        "substitutes": false,
+        "note": "Groups cases, no decision"
+      },
+      "Counterexample Search": {
+        "substitutes": false,
+        "note": "Finds facts, no modification"
+      },
+      "machine_decision in L1": {
+        "substitutes": false,
+        "note": "POTENTIAL risk — UI must label \"Machine Decision (may be wrong)\""
+      },
+      "content_type in L0": {
+        "substitutes": false,
+        "note": "POTENTIAL risk — UI must label \"Classified as\" not \"Is\""
+      }
+    },
+    "conclusion": "NO Machine output substitutes Human Semantic Judgment. Human retains sole authority over decisions.",
+    "boundary_status": "CLEAR"
+  },
+  "failure_routing_audit": {
+    "routes": [
+      {
+        "failure": "Evidence Missing",
+        "detection": "P1 completeness",
+        "route": "Flag insufficiency → L1 shows Insufficient → Human UNKNOWN",
+        "fallback_guess": false
+      },
+      {
+        "failure": "Case Selection uncertain",
+        "detection": "P3 guardrail violation",
+        "route": "RESELECT with diversity",
+        "fallback_guess": false
+      },
+      {
+        "failure": "Evidence Pack insufficient",
+        "detection": "High expansion_count",
+        "route": "Human expands → still insufficient → UNKNOWN",
+        "fallback_guess": false
+      },
+      {
+        "failure": "Feedback insufficient",
+        "detection": "Human UNKNOWN",
+        "route": "Do not create Signal Candidate",
+        "fallback_guess": false
+      },
+      {
+        "failure": "Signal unstable",
+        "detection": "has_conflict=True",
+        "route": "BOUNDARY_REVIEW_REQUIRED",
+        "fallback_guess": false
+      },
+      {
+        "failure": "Counterexample found",
+        "detection": "Search returns NEGATIVE",
+        "route": "BOUNDARY_REVIEW_REQUIRED",
+        "fallback_guess": false
+      },
+      {
+        "failure": "No counterexample",
+        "detection": "Search returns CEILING",
+        "route": "INSUFFICIENT_EVIDENCE",
+        "fallback_guess": false
+      },
+      {
+        "failure": "Boundary unresolved",
+        "detection": "Human UNKNOWN",
+        "route": "Signal stays CANDIDATE",
+        "fallback_guess": false
+      },
+      {
+        "failure": "Future case fails",
+        "detection": "Replay UNSUPPORTED",
+        "route": "Signal REVIEW (Phase 2)",
+        "fallback_guess": false
+      }
+    ],
+    "forbidden": [
+      "fallback = guess",
+      "retry = change decision"
+    ],
+    "all_routes_lead_to": [
+      "UNKNOWN",
+      "BOUNDARY_REVIEW_REQUIRED",
+      "INSUFFICIENT_EVIDENCE"
+    ],
+    "none_lead_to": [
+      "Auto-decision",
+      "Auto-modification",
+      "Auto-promotion",
+      "Auto-rule"
+    ],
+    "status": "COMPLETE"
+  },
+  "sig_walkthrough": {
+    "SIG-01": {
+      "feedbackrecord": "OK — 9 cases, all is_in_table=True, different_cell=True, is01_a=True",
+      "evidence_signature": "OK — {is_in_table:True, different_cell:True, is01_a:True, is02_b:False, period:False, capital:False, content_type:TABLE_NUMERIC}",
+      "signalcandidate": "OK — 9 cases, consistency=True, independence_ratio=0.33 (5 on resnet p6)",
+      "counterexample": "PARTIAL — P7 lacks is_in_table/different_cell (GAP-3). Can match on 4 fields only.",
+      "phase1_status": "BOUNDARY_REVIEW_REQUIRED (with PARTIAL search)",
+      "contract_gap": "GAP-3"
+    },
+    "SIG-02": {
+      "feedbackrecord": "OK — 4 cases, all is_in_table=False, is01_a=False, is02_b=True, period=True, capital=True",
+      "evidence_signature": "OK — {is_in_table:False, different_cell:False, is01_a:False, is02_b:True, period:True, capital:True, content_type:PROSE}",
+      "signalcandidate": "OK — 4 cases, has_conflict=True, independence_ratio=0.75",
+      "counterexample": "FULL — P7 has all 4 needed fields (is01_a, is02_b, text, text). 5 P7 MERGE counterexamples found.",
+      "phase1_status": "BOUNDARY_REVIEW_REQUIRED (with 5 counterexamples)",
+      "contract_gap": "NONE"
+    },
+    "SIG-07": {
+      "feedbackrecord": "OK — AMB-032, reads from machine_eval (different_cell=True) not L5 cues (None). Resolves GAP-4.",
+      "evidence_signature": "OK — {is_in_table:True, different_cell:True, is01_a:False, is02_b:False, period:False, capital:False}",
+      "signalcandidate": "1 case only → cannot form Candidate (need ≥2)",
+      "counterexample": "N/A — no candidate",
+      "phase1_status": "One-off observation (not a SignalCandidate)",
+      "contract_gap": "NONE"
+    },
+    "SIG-08": {
+      "feedbackrecord": "OK — AMB-375, same as SIG-02",
+      "evidence_signature": "OK — same as SIG-02",
+      "signalcandidate": "OK — same as SIG-02 (4 cases total)",
+      "counterexample": "OK — same as SIG-02 (5 P7 counterexamples)",
+      "phase1_status": "BOUNDARY_REVIEW_REQUIRED (= SIG-02)",
+      "contract_gap": "NONE",
+      "note": "SIG-08 and SIG-02 have same Evidence Signature → same SignalCandidate"
+    }
+  },
+  "minimal_data_flow_table": [
+    {
+      "stage": "Evidence Pack",
+      "input": "machine_eval (is11_observation, experimental_c) + GT (text_a/b)",
+      "process": "organize into L0-L1",
+      "output": "EvidencePack",
+      "human": "No",
+      "authority": "0 (Machine)"
+    },
+    {
+      "stage": "Human Review",
+      "input": "EvidencePack",
+      "process": "semantic judgment",
+      "output": "FeedbackRecord",
+      "human": "YES",
+      "authority": "Human"
+    },
+    {
+      "stage": "Signature",
+      "input": "FeedbackRecord.evidence_snapshot",
+      "process": "structural extraction",
+      "output": "EvidenceSignature",
+      "human": "No",
+      "authority": "0 (Machine)"
+    },
+    {
+      "stage": "Candidate",
+      "input": "EvidenceSignatures (≥2 matching)",
+      "process": "recurrence + independence",
+      "output": "SignalCandidate",
+      "human": "No",
+      "authority": "0 (Machine)"
+    },
+    {
+      "stage": "Counterexample",
+      "input": "Candidate + IS-11/P7 pool",
+      "process": "boolean signature match",
+      "output": "CounterexampleSet",
+      "human": "No",
+      "authority": "0 (Machine)"
+    },
+    {
+      "stage": "Boundary",
+      "input": "Candidate + Counterexamples",
+      "process": "semantic validation",
+      "output": "BoundaryStatus",
+      "human": "YES",
+      "authority": "Human"
+    }
+  ],
+  "minimal_prototype_selection": {
+    "selected": "C",
+    "components": [
+      "FeedbackRecord",
+      "Evidence Pack (L0-L1)",
+      "Evidence Signature",
+      "SignalCandidate"
+    ],
+    "not_included": [
+      "Counterexample Search (deferred to Phase 1.5)",
+      "Human Boundary Validation (Phase 2)",
+      "ValidatedSignal (Phase 2)",
+      "Future Case Replay (Phase 2)"
+    ],
+    "rationale": "Core hypothesis = \"Human feedback can be linked to Evidence and grouped by structural similarity into Signal Candidates.\" C proves this minimal closed loop. Counterexample Search (D) proves safety, not core hypothesis. Defer to Phase 1.5.",
+    "principle": "Choose minimal closed loop that proves core hypothesis, not most feature-complete version."
+  },
+  "implementation_blockers": [
+    "GAP-1: content_type derivation rule must be documented before implementation",
+    "GAP-4: Evidence Pack must read TLD from machine_eval (is11_observation), NOT from L5 experiment_cases (cues) — data source decision",
+    "Case Selection guardrails must be labeled as \"sampling_guardrail\" not \"hard_rule\""
+  ],
+  "final_gate": {
+    "hva04_status": "CONDITIONAL",
+    "p4_contract": "GAP",
+    "p6_contract": "READY",
+    "p7_contract": "GAP",
+    "counterexample_contract": "GAP",
+    "human_boundary": "CLEAR",
+    "failure_routing": "COMPLETE",
+    "authority_boundary": "PASS",
+    "semantic_leakage": 0,
+    "minimal_prototype": "C",
+    "implementation_authorized": false,
+    "experiment_authorized": false,
+    "dice_core_modification": false,
+    "tld_modification": false,
+    "is11_modification": false,
+    "p1_p7_modification": false,
+    "gt_modification": false,
+    "frozen_baseline": "INTACT",
+    "production": false,
+    "stop": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  }
+}

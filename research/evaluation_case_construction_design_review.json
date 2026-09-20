@@ -1,0 +1,295 @@
+{
+  "review_type": "evaluation_case_construction_design_review",
+  "review_date": "2026-09-12",
+  "mode": "READ-ONLY, DESIGN-ONLY, RESEARCH-METHODOLOGY REVIEW",
+  "predecessor": "tmp/evaluation_case_construction_audit.md",
+  "core_questions_answered": {
+    "Q1_why_h_gap_invalid": {
+      "answer": "h_gap measures geometric proximity, not semantic difficulty. 63% of geometric-adjacent pairs are trivial table cells. Tables have many closely-spaced cells, so the filter is overwhelmed by table structure.",
+      "evidence": "545 candidates: 252 TRIVIAL_NUMERIC + 93 TRIVIAL_HEADER = 345 (63%) trivial"
+    },
+    "Q2_which_types_to_keep": {
+      "high_value": {
+        "PROSE_BOUNDARY": 30,
+        "FIGURE_CAPTION": 11,
+        "partial_ROW_LABEL_VALUE": "~30 of 121"
+      },
+      "rationale": "These have genuine MERGE/KEEP_SEPARATE ambiguity with plausible alternative interpretations"
+    },
+    "Q3_which_types_to_exclude": {
+      "low_value": {
+        "TRIVIAL_NUMERIC_PAIR": 252,
+        "TRIVIAL_HEADER_PAIR": 93
+      },
+      "rationale": "Two numbers in different columns or two column headers are trivially separable",
+      "important_note": "Exclude trivial RELATIONS, not entire TABLE type. Ambiguous table structures (merged headers, irregular alignment) may still have HIGH value."
+    },
+    "Q4_how_to_avoid_84pct_trivial": {
+      "solution": "Add structural classification + low-value filter AFTER geometric filter, BEFORE sampling",
+      "pipeline": "geometric filter → structural classification → trivial exclusion → coverage selection",
+      "expected_output": "~113 evaluation-valuable candidates from 545"
+    },
+    "Q5_how_to_make_B1_vs_B2_measurable": {
+      "conditions": [
+        "Non-trivially solvable (time > 3s)",
+        "Evidence accessibility difference between B1/B2",
+        "Accuracy not at ceiling (<90%)",
+        "Cue relevant to judgment"
+      ],
+      "pilot_validation": "If B1 accuracy >90% or <3s rate >50%, cases still too easy"
+    },
+    "Q6_five_cue_test_types": {
+      "Type1_Cue_Informative": "B1 evidence exists but hard to access; B2 Cue reduces retrieval cost",
+      "Type2_Cue_Redundant": "Human can easily understand without Cue (control cases, minimal)",
+      "Type3_Cue_Misleading": "Cue looks helpful but cannot alone support correct judgment",
+      "Type4_Evidence_Missing": "Cue cannot compensate for missing evidence (UNKNOWN test)",
+      "Type5_System_Not_GT": "Cue direction ≠ GT direction (automation bias test)",
+      "requirement": "Each type needs ≥5 cases for statistical power"
+    },
+    "Q7_leakage_prevention": {
+      "GT_leakage": "GT assigned AFTER selection, not used FOR selection",
+      "Pilot_leakage": "Pilot cases separated from formal evaluation set",
+      "Experiment_leakage": "Analysis contract pre-registered before experiment",
+      "Cue_leakage": "Cue computed after case selection; selection based on structure not Cue content",
+      "data_separation": "Discovery → Pilot → Frozen Evaluation → Independent Holdout"
+    },
+    "Q8_ceiling_floor_control": {
+      "ceiling_target": "B1 accuracy < 90%, avg time > 3s",
+      "floor_target": "B1 accuracy > 50%, task completable",
+      "target_zone": "Judgable + Non-instantaneous + Evidence potentially useful",
+      "method": "Exclude trivial cases, ensure evidence sufficiency, pilot validation"
+    },
+    "Q9_case_independence": {
+      "current_problem": "is11_efficientnet_p6: 95 candidates, is11_cs_001_p3: 87 candidates from single pages",
+      "limits": {
+        "same_doc_page": "≤3 cases",
+        "same_table": "≤2 cases",
+        "same_document": "≤30%",
+        "near_duplicate_threshold": "text similarity > 0.8"
+      },
+      "reporting": "case_count, document_count, page_count, independent_settings, near_duplicate_groups",
+      "best_subset": "PROSE+FIGURE: 41 candidates from 25 pages, 4 docs — most independent"
+    },
+    "Q10_minimal_protocol": {
+      "steps": [
+        "1. Research Question Definition",
+        "2. Structural Candidate Classification (script, ~50 lines)",
+        "3. Low-value/Trivial Exclusion (exclude TRIVIAL_NUMERIC + TRIVIAL_HEADER)",
+        "4. Coverage Selection (target distribution, NOT GT-based)",
+        "5. Evidence Availability Check (record image/TLD/cue availability)",
+        "6. Diversity/Independence Check (page limit, near-duplicate detection)",
+        "7. Potential Boundary/Conflict/UNKNOWN Coverage",
+        "8. Pilot (Discovery Set, 10-15 cases, behavioral observation)",
+        "9. Observe Human Difficulty (time, accuracy, expansion, UNKNOWN — NOT pre-assumed)",
+        "10. Freeze Evaluation Set (pre-register analysis contract)"
+      ]
+    }
+  },
+  "evaluation_opportunity": {
+    "definition": "A Candidate has worth-measuring research space via Human Experiment",
+    "conditions": [
+      "A. Human has meaningful semantic decision",
+      "B. Evidence can potentially help",
+      "C. Cue could change accessibility",
+      "D. Not trivially solvable (<3s)",
+      "E. Not impossible (missing evidence)"
+    ],
+    "current_545_assessment": {
+      "HIGH": "~41 (8%)",
+      "MEDIUM": "~70 (13%)",
+      "LOW": "345 (63%)",
+      "UNKNOWN": "~89 (16%)"
+    }
+  },
+  "challenge_vs_prevalence": {
+    "current_experiment_type": "Challenge Set",
+    "rationale": "Research question tests boundary support, not real-world prevalence",
+    "warning": "Challenge Set results are NOT prevalence estimates. Cannot infer real-world error rates from challenge set."
+  },
+  "merge_keep_imbalance": {
+    "current": "43 KEEP / 2 MERGE",
+    "risks": [
+      "Decision ceiling (default KEEP bias)",
+      "Cue effect on MERGE undetectable",
+      "Automation bias confounded with prior",
+      "Boundary safety untestable"
+    ],
+    "solution": "Select MERGE-plausible candidates (prose same-sentence, figure caption), adjudicate GT, accept natural distribution but ensure boundary coverage",
+    "prohibited": [
+      "No GT modification",
+      "No case fabrication",
+      "No GT flipping",
+      "No case duplication"
+    ]
+  },
+  "matched_cases": {
+    "needed": "Conceptually valuable for controlling case difficulty confound",
+    "example": "Same structural pattern (sentence boundary) + different semantic context → isolate Cue effect from structure effect",
+    "implementation": "Deferred to post-pilot refinement, not initial case set"
+  },
+  "pilot_redefinition": {
+    "is": "Discovery of Evaluation Case Quality",
+    "is_not": "Pre-running the experiment to see results",
+    "discovers": [
+      "trivial cases",
+      "too-difficult cases",
+      "redundant cases",
+      "cue-irrelevant cases",
+      "cue-misleading cases",
+      "genuinely discriminative cases"
+    ],
+    "principle": "Pilot → Case Quality Feedback, NOT Pilot → System Optimization"
+  },
+  "data_separation": {
+    "discovery": "Find candidates, observe quality, iterable",
+    "pilot": "Discover Human difficulty, iterable, NOT for final analysis",
+    "frozen_evaluation": "Pre-registered analysis, frozen, formal experiment",
+    "holdout": "Untouched until independent validation needed",
+    "risk_prevented": "Discover failure → adjust system → same cases → false generalization"
+  },
+  "evidence_availability": {
+    "required_fields": [
+      "image_available",
+      "TLD_available",
+      "structural_evidence_available",
+      "cue_available"
+    ],
+    "principle": "Evidence missing ≠ semantic difficulty. Must record and report separately."
+  },
+  "human_feedback_role": {
+    "type": "Evaluation Design Feedback, NOT Runtime Rule",
+    "uses": [
+      "Improve future evaluation set",
+      "Label case types",
+      "Reference for future Cue design"
+    ],
+    "prohibited": [
+      "Auto-convert to system rule",
+      "Become Learning Engine input"
+    ]
+  },
+  "anti_overdesign": {
+    "NEW_MODULE_REQUIRED": false,
+    "NEW_RUNTIME_OBJECT": false,
+    "NEW_PRIMITIVE": false,
+    "NEW_PATTERN": false,
+    "NEW_LEARNING_ENGINE": false,
+    "NEW_DIFFICULTY_MODEL": false,
+    "NEW_SEMANTIC_CLASSIFIER": false,
+    "what_is_needed": [
+      "Structural classification script (~50 lines)",
+      "Coverage accounting script (~30 lines)",
+      "Near-duplicate detection script (~20 lines)",
+      "Research protocol document"
+    ],
+    "all_scripts": "No new DICE runtime modules. All are standalone scripts and documentation."
+  },
+  "coverage_matrix": {
+    "current_vs_target": {
+      "TABLE": {
+        "current": "78%",
+        "target": "20-30%",
+        "gap": "severely over"
+      },
+      "PROSE": {
+        "current": "9%",
+        "target": "20-35%",
+        "gap": "severely under"
+      },
+      "FIGURE": {
+        "current": "4%",
+        "target": "10-15%",
+        "gap": "under"
+      },
+      "MERGE": {
+        "current": "4%",
+        "target": "20-30%",
+        "gap": "severely under"
+      },
+      "KEEP_SEPARATE_nontrivial": {
+        "current": "minimal",
+        "target": "30-40%",
+        "gap": "under"
+      },
+      "UNKNOWN": {
+        "current": "0%",
+        "target": "10-15%",
+        "gap": "completely missing"
+      },
+      "Boundary": {
+        "current": "13%",
+        "target": "15-20%",
+        "gap": "close but quality insufficient"
+      },
+      "Conflict": {
+        "current": "4%",
+        "target": "5-10%",
+        "gap": "close"
+      }
+    }
+  },
+  "candidate_pool_assessment": {
+    "total_545": {
+      "TRIVIAL_NUMERIC_PAIR": 252,
+      "TRIVIAL_HEADER_PAIR": 93,
+      "ROW_LABEL_VALUE": 121,
+      "PROSE_BOUNDARY": 30,
+      "FIGURE_CAPTION": 11,
+      "OTHER_AMBIGUOUS": 42
+    },
+    "evaluation_valuable": "~113 (PROSE + FIGURE + partial ROW_LABEL_VALUE + OTHER)",
+    "high_value_independent": "41 (PROSE+FIGURE from 25 pages, 4 docs)",
+    "untapped_with_potential": "~228 candidates not in current experiment",
+    "estimated_genuine_boundary": "~68 (30% of 228)",
+    "sufficient_for_balanced_set": "YES (if ~45 needed, 68 > 45, but requires GT adjudication + Pilot)"
+  },
+  "p722_behavioral_evidence": {
+    "total_judgments": 55,
+    "trivial_behavior": "37/55 (67%) — fast + correct + no expansion + not UNKNOWN",
+    "non_trivial_behavior": "18/55 (33%) — provided meaningful signal",
+    "non_trivial_by_family": "PROSE=6, TABLE=11, FIGURE=1",
+    "ceiling_confirmed": "B1: 100% accuracy, 100% <3s",
+    "unknown_only_in_B2": "2 UNKNOWN in B2 (AMB-032, AMB-375), 0 in A/B1",
+    "cue_induced_uncertainty": "B2 slower (5.9s vs 1.7s), possibly Cue added load on easy cases"
+  },
+  "known_vs_hypothesized_vs_pilot": {
+    "known": [
+      "Current 45 cases have severe ceiling effect",
+      "Geometric filter overwhelmed by table structure (63% trivial)",
+      "545 pool has ~41 high-value independent candidates",
+      "Current GT 43:2 cannot test MERGE boundary",
+      "Design principles and pipeline defined"
+    ],
+    "hypothesized": [
+      "~113 evaluation-valuable candidates, ~30% genuine boundary",
+      "PROSE+FIGURE may yield 20-30% MERGE labels",
+      "B1 accuracy can drop to 70-85% after removing trivial cases",
+      "B1 vs B2 may have measurable difference on non-trivial cases"
+    ],
+    "requires_pilot": [
+      "Which specific cases are non-trivial (time > 3s)",
+      "B1 accuracy distribution on non-trivial cases",
+      "Which cases produce disagreement",
+      "Where Cue actually changes behavior",
+      "UNKNOWN rate sufficiency",
+      "True independence after near-duplicate detection"
+    ]
+  },
+  "final_decision": {
+    "EVALUATION_CASE_CONSTRUCTION_DESIGN": "CONDITIONAL",
+    "rationale": "Design principles, pipeline, and protocol are fully defined. Candidate pool analysis shows sufficient evaluation-valuable candidates (~113) exist. However, actual case construction has NOT been performed — no new case set exists, no GT has been adjudicated for untapped candidates, no Pilot has been run to validate difficulty assumptions. The design is ready to guide future implementation, but implementation itself is not authorized.",
+    "what_is_known": "Design framework complete; candidate pool analyzed; sufficient candidates exist; P722 confirms ceiling effect",
+    "what_is_hypothesized": "~30% of evaluation-valuable candidates are genuine boundary; non-trivial B1 accuracy 70-85%; sufficient MERGE cases available",
+    "what_requires_pilot": "Actual difficulty distribution; Cue effect on non-trivial cases; UNKNOWN rate; true independence after dedup"
+  },
+  "governance_gate": {
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "PRODUCTION": false,
+    "RUNTIME_AUTHORITY": "ZERO",
+    "ITERATIVE_LEARNING": "INSUFFICIENT_EVIDENCE",
+    "DICE_CORE_MODIFICATION": false,
+    "STOP": true
+  }
+}

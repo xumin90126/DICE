@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DICE 2.0 — Human Gate 核对台</title>
+<style>
+  :root { --yes:#16a34a; --no:#dc2626; --bg:#0f172a; --card:#1e293b; --fg:#e2e8f0; --muted:#94a3b8; --hl:#facc15; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC",system-ui,sans-serif; background:var(--bg); color:var(--fg); padding:24px; max-width:1000px; margin:0 auto; }
+  h1 { font-size:20px; margin-bottom:6px; }
+  .sub { color:var(--muted); font-size:13px; margin-bottom:20px; }
+  .banner { background:#713f12; border:1px solid #ca8a04; color:#fef3c7; padding:10px 14px; border-radius:8px; font-size:13px; margin-bottom:18px; line-height:1.6; }
+  .stats { display:flex; gap:14px; margin-bottom:18px; flex-wrap:wrap; }
+  .stat { background:var(--card); border:1px solid #334155; border-radius:8px; padding:10px 16px; min-width:90px; }
+  .stat b { font-size:22px; display:block; }
+  .stat span { color:var(--muted); font-size:12px; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; flex-wrap:wrap; }
+  .tab { background:var(--card); border:1px solid #334155; color:var(--fg); padding:8px 14px; border-radius:8px; cursor:pointer; font-size:14px; }
+  .tab.active { background:#2563eb; border-color:#2563eb; }
+  .doc-panel { display:none; }
+  .doc-panel.active { display:block; }
+  .field { background:var(--card); border:1px solid #334155; border-radius:8px; padding:12px 14px; margin-bottom:12px; }
+  .field-head { display:flex; align-items:center; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
+  .field .tag { font-size:11px; padding:2px 8px; border-radius:4px; background:#334155; color:#cbd5e1; white-space:nowrap; }
+  .field .page-tag { font-size:11px; padding:2px 8px; border-radius:4px; background:#1e3a5f; color:#93c5fd; white-space:nowrap; }
+  .field .text { flex:1; font-size:14px; font-weight:600; min-width:160px; }
+  .btns { display:flex; gap:6px; }
+  .btn { border:none; padding:6px 13px; border-radius:6px; cursor:pointer; font-size:13px; color:#fff; opacity:.45; transition:opacity .1s; }
+  .btn.yes { background:var(--yes); }
+  .btn.no { background:var(--no); }
+  .btn.active { opacity:1; font-weight:600; }
+  .btn:hover { opacity:.8; }
+  .quote-line { font-size:12.5px; margin:4px 0; line-height:1.5; }
+  .quote-line .lbl { color:var(--muted); }
+  .quote-line .sq { color:#fbbf24; }
+  .quote-line .ctx { color:#cbd5e1; background:#0b1220; padding:4px 8px; border-radius:6px; border:1px solid #1e293b; display:block; margin-top:3px; white-space:pre-wrap; }
+  .quote-line mark { background:var(--hl); color:#000; padding:0 2px; border-radius:2px; }
+  .toggle-src { background:none; border:none; color:#60a5fa; cursor:pointer; font-size:12px; padding:0; margin-left:8px; text-decoration:underline; }
+  .src-panel { display:none; background:#0b1220; border:1px solid #1e293b; border-radius:8px; padding:12px; margin-top:10px; max-height:340px; overflow-y:auto; }
+  .src-panel.show { display:block; }
+  .src-panel .page { margin-bottom:10px; }
+  .src-panel .page b { color:#60a5fa; font-size:12px; display:block; margin-bottom:4px; }
+  .src-panel .page pre { white-space:pre-wrap; font-family:inherit; font-size:12.5px; color:#cbd5e1; line-height:1.5; }
+  .toolbar { margin-top:20px; display:flex; gap:10px; }
+  .export { background:#2563eb; color:#fff; border:none; padding:10px 18px; border-radius:8px; cursor:pointer; font-size:14px; }
+  .export:hover { background:#1d4ed8; }
+</style>
+</head>
+<body>
+  <h1>DICE 2.0 · Human Gate 核对台</h1>
+  <div class="sub">对 LLM 提取的每个字段做二选一审判。每个字段附「原文上下文 + 页码」，黄色高亮=要核对的关键值。</div>
+  <div class="banner">⚠️ 判定依据：看「上下文」里的原文是否真的支持这条提取。若提取值与原文一致 → YES；若提取错误/张冠李戴/无中生有 → NO。裁定权在你，系统零权威。</div>
+
+  <div class="stats" id="stats"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="panels"></div>
+  <div class="toolbar">
+    <button class="export" onclick="exportResult()">导出裁定结果 (JSON)</button>
+  </div>
+
+<script src="human_gate_data.js"></script>
+<script>
+  const VERDICTS = {};
+  function fieldKey(di, fi) { return `${di}:${fi}`; }
+
+  function renderTabs() {
+    const tabs = document.getElementById("tabs");
+    const panels = document.getElementById("panels");
+    tabs.innerHTML = ""; panels.innerHTML = "";
+    GATE_DATA.forEach((doc, di) => {
+      const t = document.createElement("button");
+      t.className = "tab" + (di === 0 ? " active" : "");
+      t.textContent = `${doc.document_id} (${doc.fields.length})`;
+      t.onclick = () => switchTab(di);
+      tabs.appendChild(t);
+
+      const p = document.createElement("div");
+      p.className = "doc-panel" + (di === 0 ? " active" : "");
+      p.id = `panel-${di}`;
+
+      let head = `<div class="sub" style="margin-bottom:10px">Guardrails 断言：${doc.guardrails_passed ? "✅ 通过" : "❌ 有拦截"} · trace: ${doc.invocation_id}</div>`;
+      head += `<button class="toggle-src" onclick="toggleSrc(${di})">📄 查看完整原文（${doc.pages.length} 页）</button>`;
+      head += `<div class="src-panel" id="src-${di}">`;
+      doc.pages.forEach(pg => {
+        head += `<div class="page"><b>Page ${pg.page}</b><pre>${escapeHtml(pg.text)}</pre></div>`;
+      });
+      head += `</div>`;
+      p.innerHTML = head;
+
+      doc.fields.forEach((f, fi) => {
+        const key = fieldKey(di, fi);
+        const row = document.createElement("div");
+        row.className = "field";
+        row.innerHTML = `
+          <div class="field-head">
+            <span class="tag">${f.label}</span>
+            ${f.page ? `<span class="page-tag">Page ${f.page}</span>` : ""}
+            <span class="text">${escapeHtml(f.text)}</span>
+            <div class="btns">
+              <button class="btn yes" id="yes-${key}" onclick="setVerdict(${di},${fi},'YES')">✅ YES</button>
+              <button class="btn no" id="no-${key}" onclick="setVerdict(${di},${fi},'NO')">❌ NO</button>
+            </div>
+          </div>
+          ${f.parsed ? `<div class="quote-line"><span class="lbl">解析结果：</span><span class="sq">${escapeHtml(f.parsed)}</span></div>` : ""}
+          ${f.context ? `<div class="quote-line"><span class="lbl">原文上下文（黄色=要核对的关键值）：</span><span class="ctx">${highlight(f.context, f.text)}</span></div>` : ""}`;
+        p.appendChild(row);
+      });
+      panels.appendChild(p);
+    });
+  }
+
+  function keyTokens(text) {
+    const stop = new Set(["store","at","and","ship","the","of","for","in","is","to","with","on","are","or","be","a","an","content"]);
+    return text.split(/[\s~·×=(),;:'"\[\]+\-/]+/)
+      .filter(t => t.length >= 2 && !stop.has(t.toLowerCase()))
+      .sort((a, b) => b.length - a.length);
+  }
+
+  function highlight(ctx, text) {
+    let out = escapeHtml(ctx);
+    if (!text) return out;
+    const tokens = keyTokens(text);
+    if (!tokens.length) return out;
+    const pattern = tokens.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|");
+    out = out.replace(new RegExp(`(${pattern})`, "gi"), "<mark>$1</mark>");
+    return out;
+  }
+
+  function toggleSrc(di) {
+    const el = document.getElementById(`src-${di}`);
+    el.classList.toggle("show");
+  }
+
+  function switchTab(di) {
+    document.querySelectorAll(".tab").forEach((t, i) => t.classList.toggle("active", i === di));
+    document.querySelectorAll(".doc-panel").forEach((p, i) => p.classList.toggle("active", i === di));
+  }
+
+  function setVerdict(di, fi, verdict) {
+    const key = fieldKey(di, fi);
+    VERDICTS[key] = (VERDICTS[key] === verdict) ? undefined : verdict;
+    document.getElementById(`yes-${key}`).classList.toggle("active", VERDICTS[key] === "YES");
+    document.getElementById(`no-${key}`).classList.toggle("active", VERDICTS[key] === "NO");
+    renderStats();
+  }
+
+  function renderStats() {
+    let yes = 0, no = 0, pending = 0;
+    GATE_DATA.forEach((doc, di) => doc.fields.forEach((_, fi) => {
+      const v = VERDICTS[fieldKey(di, fi)];
+      if (v === "YES") yes++; else if (v === "NO") no++; else pending++;
+    }));
+    const total = GATE_DATA.reduce((a,d)=>a+d.fields.length,0);
+    document.getElementById("stats").innerHTML = `
+      <div class="stat"><b>${total}</b><span>总字段</span></div>
+      <div class="stat"><b style="color:#16a34a">${yes}</b><span>YES 接受</span></div>
+      <div class="stat"><b style="color:#dc2626">${no}</b><span>NO 拒绝</span></div>
+      <div class="stat"><b style="color:#94a3b8">${pending}</b><span>未裁定</span></div>`;
+  }
+
+  function exportResult() {
+    const records = GATE_DATA.map((doc, di) => ({
+      document_id: doc.document_id,
+      invocation_id: doc.invocation_id,
+      fields: doc.fields.map((f, fi) => ({
+        kind: f.label, text: f.text, parsed: f.parsed,
+        verdict: VERDICTS[fieldKey(di, fi)] || "PENDING",
+      })),
+    }));
+    const blob = new Blob([JSON.stringify(records, null, 2)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "human_gate_records.json";
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+
+  renderTabs();
+  renderStats();
+</script>
+</body>
+</html>

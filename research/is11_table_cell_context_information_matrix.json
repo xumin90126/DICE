@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "document": "IS-11 TABLE_CELL_CONTEXT Information Availability Matrix",
+    "type": "READ-ONLY analysis matrix",
+    "timestamp": "2026-09-09T22:00:00",
+    "constraint": "DESIGN ONLY — NO IMPLEMENTATION"
+  },
+  "information_components": [
+    {
+      "information_component": "table_region",
+      "definition": "Whether candidate text pair is located within a table region on the page",
+      "human_observable": "YES — Human can visually identify table structure from PDF page image",
+      "machine_observable": "PARTIALLY — table_line_detector.py EXISTS in chunker/ but NOT integrated into P1-P6 pipeline; P6 DENSE_REGION correlates but is NOT table-specific",
+      "existing_source": "chunker/table_line_detector.py (detect_tables_from_lines); P6 DENSE_REGION (proxy only)",
+      "pipeline_stage": "P1 (skips non-text blocks) / P6 (DENSE/SPARSE only, explicitly bans table labels)",
+      "stability": "MEDIUM — table_line_detector has column stability verification (≥75% alignment) and text-ratio check (≥45% text cells); but not tested on independent biology paper tables",
+      "cross_document": "PARTIALLY — tested on device manuals (RA101, C216) in chunker context; NOT tested on qbio_rna/qbio_genomics table layouts",
+      "evidence": "3/3 FP cases: Human explicitly cited 'table', 'different columns', 'separate cells' as decision basis",
+      "risk": "FALSE TABLE DETECTION — DENSE_REGION may fire on dense body text; table_line_detector may miss borderless tables or non-standard layouts",
+      "status": "PARTIALLY_AVAILABLE — detection capability exists but NOT in P1-P6 pipeline"
+    },
+    {
+      "information_component": "cell_boundary",
+      "definition": "Bounding box of individual table cells containing text_a and text_b",
+      "human_observable": "YES — Human can visually identify cell boundaries from table grid lines or spacing",
+      "machine_observable": "NO — P1-P6 does not detect cell boundaries; table_line_detector.py produces cell-level grid but is NOT integrated",
+      "existing_source": "chunker/table_line_detector.py (row_cells function produces grid); P1 bbox per observation (not per cell)",
+      "pipeline_stage": "N/A in P1-P6; available in chunker pipeline only",
+      "stability": "UNKNOWN — not tested on independent evaluation corpus",
+      "cross_document": "UNKNOWN",
+      "evidence": "3/3 FP: Human cited 'separate cells' — cell boundary is the structural unit that distinguishes TOC heading from table data",
+      "risk": "CELL BOUNDARY UNAVAILABLE — without cell detection, cannot determine if text_a and text_b are in same or different cells",
+      "status": "NOT_AVAILABLE in P1-P6 pipeline"
+    },
+    {
+      "information_component": "row_position",
+      "definition": "Which table row contains text_a and text_b (same row = horizontal neighbors; different row = vertical neighbors)",
+      "human_observable": "YES — Human can identify row membership from visual layout",
+      "machine_observable": "NO — P1-P6 does not detect rows; dy=0.0 (same y) is available but is NOT row-specific (also true for same-line body text)",
+      "existing_source": "P2 geometry (dy); chunker/table_line_detector.py (group_lines_into_rows)",
+      "pipeline_stage": "P2 (dy available) / chunker (row detection not in P1-P6)",
+      "stability": "LOW for row detection — dy=0.0 is necessary but not sufficient for same-row (body text also has dy=0.0)",
+      "cross_document": "UNKNOWN",
+      "evidence": "3/3 FP: all have dy=0.0 (same y), confirming same-row; but dy=0.0 also true for 351 DETERMINISTIC_MERGE pairs — not discriminative alone",
+      "risk": "ROW AMBIGUITY — dy=0.0 cannot distinguish table row from body text line",
+      "status": "NOT_AVAILABLE — row detection not in P1-P6"
+    },
+    {
+      "information_component": "column_position",
+      "definition": "Which table column contains text_a and text_b (same column = vertical; different column = horizontal neighbors)",
+      "human_observable": "YES — Human can identify column membership from x-position alignment",
+      "machine_observable": "PARTIALLY — bbox x-coordinates available in P2; could be clustered into columns; but P1-P6 does not perform column clustering for table cells",
+      "existing_source": "P2 geometry (bbox_a[0], bbox_b[0]); chunker/table_line_detector.py (_cluster_xs)",
+      "pipeline_stage": "P2 (x-coordinates available) / chunker (column clustering not in P1-P6)",
+      "stability": "MEDIUM — x-coordinate clustering is geometrically stable; but requires knowing it's a table first",
+      "cross_document": "UNKNOWN — not tested on independent corpus",
+      "evidence": "3/3 FP: bbox_a and bbox_b have significantly different x-coordinates (e.g., IND-AMB-247: bbox_a=[390,280,407,291], bbox_b=[446,280,488,291] — 39pt x-gap); Human cited 'different columns'",
+      "risk": "COLUMN AMBIGUITY — without table region detection, x-gap could be intra-cell spacing or inter-column gap",
+      "status": "PARTIALLY_AVAILABLE — raw x-coordinates available, column clustering not performed"
+    },
+    {
+      "information_component": "cell_membership",
+      "definition": "Whether text_a and text_b belong to the SAME cell or DIFFERENT cells",
+      "human_observable": "YES — Human can visually determine if two text fragments are in the same cell or different cells",
+      "machine_observable": "NO — P1-P6 does not detect cells; no cell boundary information available",
+      "existing_source": "chunker/table_line_detector.py (grid structure); NOT in P1-P6",
+      "pipeline_stage": "N/A in P1-P6",
+      "stability": "UNKNOWN",
+      "cross_document": "UNKNOWN",
+      "evidence": "3/3 FP: Human determined text_a and text_b are in DIFFERENT cells (different columns) — this is the core discriminating information",
+      "risk": "CRITICAL — without cell membership, cannot distinguish 'number+title in same cell' (TOC heading) from 'number+text in different cells' (table row)",
+      "status": "NOT_AVAILABLE in P1-P6 pipeline"
+    },
+    {
+      "information_component": "table_header_relation",
+      "definition": "Whether text_a or text_b is a table header; what column header applies to each",
+      "human_observable": "YES — Human can identify header row and map cells to column headers",
+      "machine_observable": "NO — P1-P6 does not detect headers; table_line_detector.py has header absorption but NOT integrated",
+      "existing_source": "chunker/table_line_detector.py (head_rows, header extraction); NOT in P1-P6",
+      "pipeline_stage": "N/A in P1-P6",
+      "stability": "LOW — header detection relies on position + text length heuristics; may fail on multi-row headers or merged cells",
+      "cross_document": "UNKNOWN",
+      "evidence": "IND-AMB-223: Human identified 'Case study' column vs 'RNA Specimen' column — header relation provides semantic role",
+      "risk": "HEADER/BODY CONFUSION — without header detection, cannot determine semantic role of cell content",
+      "status": "NOT_AVAILABLE in P1-P6 pipeline"
+    },
+    {
+      "information_component": "table_body_membership",
+      "definition": "Whether text pair is in table body (data cells) vs header vs caption",
+      "human_observable": "YES",
+      "machine_observable": "NO — not in P1-P6",
+      "existing_source": "N/A",
+      "pipeline_stage": "N/A",
+      "stability": "UNKNOWN",
+      "cross_document": "UNKNOWN",
+      "evidence": "3/3 FP: all in table body (data cells, not headers)",
+      "risk": "MEDIUM — body/header distinction affects semantic interpretation",
+      "status": "NOT_AVAILABLE"
+    },
+    {
+      "information_component": "neighboring_cells",
+      "definition": "Content of adjacent cells in the same row/column (provides context for semantic role)",
+      "human_observable": "YES — Human can read surrounding cells to infer column meaning",
+      "machine_observable": "NO — P1-P6 does not detect cells or neighbors",
+      "existing_source": "chunker/table_line_detector.py (grid); NOT in P1-P6",
+      "pipeline_stage": "N/A",
+      "stability": "UNKNOWN",
+      "cross_document": "UNKNOWN",
+      "evidence": "IND-AMB-247: Human identified '121' as 'molecular weight' / 'RNA length' by reading column context",
+      "risk": "HIGH — neighboring cells provide semantic context that may be necessary for correct interpretation",
+      "status": "NOT_AVAILABLE"
+    },
+    {
+      "information_component": "row_column_alignment",
+      "definition": "Whether text_a and text_b align to stable column centers across multiple rows",
+      "human_observable": "YES — Human perceives column alignment visually",
+      "machine_observable": "PARTIALLY — x-coordinates available; column center clustering possible; but NOT performed in P1-P6",
+      "existing_source": "P2 (x-coordinates); chunker/table_line_detector.py (_cluster_xs); NOT integrated",
+      "pipeline_stage": "P2 (raw data) / chunker (clustering not in P1-P6)",
+      "stability": "MEDIUM — geometric clustering is deterministic; but requires table region detection first",
+      "cross_document": "UNKNOWN",
+      "evidence": "3/3 FP: x-coordinates show clear column separation (bbox_a x0 vs bbox_b x0 differ by 23-56pt)",
+      "risk": "REQUIRES TABLE DETECTION FIRST — column alignment is meaningful only within a table context",
+      "status": "PARTIALLY_AVAILABLE — raw coordinates available, alignment analysis not performed"
+    }
+  ],
+  "summary": {
+    "total_components": 9,
+    "available_in_p1_p6": 0,
+    "partially_available": 3,
+    "not_available": 6,
+    "existing_but_not_integrated": "table_line_detector.py in chunker/ provides table_region + cell_boundary + row + column + header + grid, but is NOT integrated into P1-P6 perception pipeline",
+    "p6_region_types": ["PAGE_TOP_REGION", "PAGE_BOTTOM_REGION", "FULL_WIDTH_REGION", "COLUMN_REGION", "DENSE_REGION", "SPARSE_REGION", "UNKNOWN_REGION"],
+    "p6_table_labels": "NONE — P6 explicitly bans table/image/figure/heading labels (geometric only)",
+    "key_finding": "IS-11 evidence EXISTS in the codebase (table_line_detector.py) but is NOT accessible through P1-P6 pipeline. P6 DENSE_REGION is a weak proxy (correlates with table density but also fires on dense body text). Cell membership — the core discriminating information — is completely unavailable."
+  }
+}

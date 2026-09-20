@@ -1,0 +1,182 @@
+{
+ "phase": "L5.2 Evidence Compression Feasibility Review",
+ "status": "DESIGN-ONLY / READ-ONLY (no implementation, no experiment, no frozen artifact/schema/code modification)",
+ "research_question": "RQ-L5.2: Can DICE, without introducing new semantic authority or Semantic Closure, have System automatically perform Evidence Aggregation / Structural Comparison / Evidence Compression / Coverage Construction / Conflict+UNKNOWN Preservation, so Human only validates a minimal Semantic Claim?",
+ "inherited_principles": ["Human should validate, not reconstruct", "Pattern compresses evidence for humans, not transfers abstraction"],
+
+ "allocation_matrix": {
+  "system_owned": [
+   {"task": "aggregation", "current": "MISSING", "authority_risk": "LOW", "evidence": "no cross-instance grouping; StructuralRelation instance-pair; region_engine page-internal"},
+   {"task": "structural comparison", "current": "PARTIAL", "authority_risk": "LOW", "evidence": "pairwise geometry frozen P2; no cross-instance signature comparison"},
+   {"task": "commonality discovery", "current": "MISSING", "authority_risk": "LOW-MED", "evidence": "grep 0 for common_structure/repeated_pattern"},
+   {"task": "prototype construction", "current": "MISSING", "authority_risk": "MED", "evidence": "prototype selection = system bias entry"},
+   {"task": "boundary discovery", "current": "MISSING", "authority_risk": "MED", "evidence": "localization has spatial boundary; no pattern boundary"},
+   {"task": "negative discovery", "current": "MISSING", "authority_risk": "MED", "evidence": "negatives cataloged in docs (manual); not system-discovered"},
+   {"task": "UNKNOWN discovery", "current": "PARTIAL", "authority_risk": "LOW", "evidence": "IS-11 INSUFFICIENT_EVIDENCE + P6 UNKNOWN_REGION instance-level; no cross-instance aggregation"},
+   {"task": "evidence summarization", "current": "MISSING", "authority_risk": "LOW-MED", "evidence": "grep 0 for evidence_summary"},
+   {"task": "evidence compression", "current": "MISSING", "authority_risk": "MED", "evidence": "compression=selection=potential silent suppression"},
+   {"task": "contradiction detection", "current": "PARTIAL", "authority_risk": "LOW", "evidence": "EIC-1 coexistence conflict=tmp artifact only; no architecture conflict object"},
+   {"task": "provenance preservation", "current": "EXISTS", "authority_risk": "LOW", "evidence": "ValidationRecord.provenance + StructuralRelation.provenance + audit_chain + layer_registry sha"},
+   {"task": "coverage construction", "current": "MISSING", "authority_risk": "MED", "evidence": "grep 0"}],
+  "human_owned": [
+   {"task": "semantic interpretation", "current": "HUMAN", "authority_risk": "-"},
+   {"task": "semantic claim validation", "current": "MISSING (object absent)", "authority_risk": "-"},
+   {"task": "semantic authorization", "current": "EXISTS (FROZEN_CAPABILITY_TABLE human-controlled)"}],
+  "summary": "EXISTS=2, PARTIAL=3, MISSING=8, HUMAN-only=3; System-side 8/12 core capabilities MISSING"},
+
+ "current_capability_inventory": {
+  "exists": ["pairwise geometry (frozen P2)", "StructuralRelation 8 types (instance-pair per doc/page/src/tgt)", "region clustering (page-internal density/sparse)", "provenance (instance-level: ValidationRecord/audit_chain/layer_registry)", "UNKNOWN (instance-level: IS-11 INSUFFICIENT_EVIDENCE/P6 UNKNOWN_REGION/CONFIDENCE_UNKNOWN)", "conflict (tmp EIC-1 only, not architecture)", "validation memory (33 records: 1 ACCEPT/32 REJECT, all instance-level)"],
+  "missing": ["aggregation", "commonality", "common_structure", "repeated_pattern", "evidence_summary", "compress", "coverage", "prototype", "boundary_discovery", "negative_discovery"],
+  "name_similar_not_capability": ["REPEATS_ACROSS_PAGES = instance-pair relation not pattern", "region clustering = page-internal not cross-instance", "audit_chain = single-evidence reverse-trace not compressed-multi", "UNKNOWN_REGION = single-region not cross-instance UNKNOWN"]},
+
+ "compression_definition": {
+  "not": "15 instances -> 1 sentence (over-compression = silent suppression)",
+  "is": "High Compression + High Fidelity",
+  "compression_gain": ["human evidence exposure", "human interaction", "cross-instance comparison"],
+  "compression_fidelity": ["positive evidence preserved", "contradiction preserved", "UNKNOWN preserved", "boundary evidence preserved", "negative evidence traceable", "provenance preserved"],
+  "goal": "High Compression + High Fidelity, not Maximum Compression"},
+
+ "compression_fidelity_indicators": [
+  {"indicator": "positive_preserved", "risk": "loss -> claim unsupported"},
+  {"indicator": "negative_preserved", "risk": "loss -> overgeneralization"},
+  {"indicator": "boundary_preserved", "risk": "loss -> scope inflation"},
+  {"indicator": "UNKNOWN_preserved", "risk": "loss -> false closure"},
+  {"indicator": "conflict_preserved", "risk": "loss -> silent suppression"},
+  {"indicator": "provenance_preserved", "risk": "loss -> unauditable"},
+  {"indicator": "semantic_claim_traceable", "risk": "loss -> Human cannot verify"}],
+
+ "compression_fidelity_detail": {
+  "key_evidence_definition": "evidence supporting/refuting/limiting claim (positive/negative/boundary/UNKNOWN/conflict); not all instances",
+  "who_defines": "System proposes (structural role); Human confirms (boundary adequacy); System cannot unilaterally delete",
+  "semantic_authority_risk": "System using semantic heuristic to select key evidence = Semantic Closure; mitigation = structural-role-only",
+  "human_can_expand": true,
+  "silent_suppression_residual": "unverified [H]"},
+
+ "progressive_disclosure": {
+  "levels": ["L0 Minimal Claim+summary (default)", "L1 Evidence Summary (on-demand)", "L2 Representative (on-demand)", "L3 Boundary/Negative/UNKNOWN (on-demand)", "L4 Full Provenance (on-demand, always reachable)"],
+  "benefits": ["default exposure low", "interaction low", "cross-instance comparison low"],
+  "risks": ["silent suppression", "system-selected evidence bias", "important negative hidden", "conflict hidden", "Human over-trust summary (automation bias)"],
+  "principle": "Evidence visibility != Evidence authority; not-shown != deleted; all levels expandable/traceable/auditable",
+  "safety_verdict": "safe by design IF honest summary + provenance + Level4 reachable + independently recomputable; residual risk unverified [H]"},
+
+ "semantic_authority_boundary": {
+  "system_can": ["discover structure (LSP/RSC)", "aggregate evidence (group by structural signature)", "compare structure", "compress evidence (count)", "indicate conflict (EVIDENCE_CONFLICT no winner)", "indicate UNKNOWN (INSUFFICIENT_EVIDENCE)", "construct Candidate (Semantic Claim CANDIDATE not conclusion)"],
+  "system_cannot_without_human": ["complete semantic interpretation", "auto-close semantic boundary", "auto-decide table/row-number/capability", "auto-upgrade capability"],
+  "hard_constraint": "Compression Layer authority = 0; only changes evidence organization, not semantic authority",
+  "flow": "Evidence -> Compression -> Semantic Claim CANDIDATE -> Human Validation -> Validated Semantic Claim"},
+
+ "design_simulation_21_cases": {
+  "step1_aggregation": {"capability": "NO", "gap": "no cross-instance grouping; need aggregation layer", "groups": {"G1": "16 cases (135+6direct+262+8controls) co-structure signature", "G2": "2 cases (414/422) caption density=0", "G3": "2 cases (313/462) unresolvable", "G4": "3 cases (519/034/074) margin/prose"}},
+  "step2_structural_comparison": {"capability": "PARTIAL", "gap": "pairwise frozen but no cross-instance signature"},
+  "step3_commonality_contradiction_UNKNOWN": {"capability": "PARTIAL", "gap": "UNKNOWN instance EXISTS; conflict tmp; commonality MISSING"},
+  "step4_compression": {"capability": "NO", "gap": "no summarization/compression object"},
+  "step5_semantic_claim_candidate": {"capability": "NO", "gap": "no Semantic Claim object; EIC-1 is interpretation not validation-unit claim"},
+  "gap_classification": "Step1-2 = Pattern abstraction gap (new layer, not observation not consumer); Step3 = needs cross-instance aggregation; Step4-5 = fully MISSING; no semantic authority introduced (all structural + Candidate); no new observation needed"},
+
+ "system_abstraction_capability_test": {
+  "commonality_discovery": "MISSING",
+  "prototype_construction": "MISSING",
+  "boundary_discovery": "MISSING",
+  "negative_discovery": "MISSING",
+  "UNKNOWN_discovery": "PARTIAL (instance-level EXISTS; cross-instance MISSING)",
+  "conflict_detection": "PARTIAL (tmp EIC-1; architecture absent)",
+  "evidence_compression": "MISSING",
+  "coverage_construction": "MISSING",
+  "provenance_preservation": "PARTIAL (instance EXISTS; compressed-multi MISSING)",
+  "summary": "MISSING=6, PARTIAL=3, SUPPORTED=0",
+  "workflow_C_viable_now": "NO; 6/9 MISSING; forcing Human to compensate = HUMAN_ABSTRACTION_BURDEN"},
+
+ "burden_transfer_redteam": [
+  {"id": "R1", "risk": "System hides 2 negatives in '15 consistent' -> Human false-approve", "present": true, "mitigation": "honest summary (conflict/negative/UNKNOWN count) + provenance + Level3 expandable", "residual": "unverified [H]"},
+  {"id": "R2", "risk": "System prototype misrepresents boundary -> Human misled", "present": true, "mitigation": "prototype + boundary-edge case; Human on-demand Level2; boundary adequacy confirmation", "residual": "unverified [H]"},
+  {"id": "R3", "risk": "Human cannot know why these 15 / what excluded / why same group -> over-trust", "present": true, "mitigation": "summary includes grouping rationale (structural signature) + coverage count + Level1 criteria", "residual": "unverified [H]"},
+  {"id": "R4", "risk": "System negative discovery uses semantic heuristic -> Semantic Closure", "present": true, "mitigation": "structural-signature-only negative (density=0/margin/sib=0); semantic labels post-Human-validation", "residual": "structural signature may hide semantic assumption [H]"},
+  {"id": "R5", "risk": "Candidate vs Conclusion boundary blurred", "present": true, "mitigation": "explicit interpretation_status=candidate; Human ACCEPT before authority", "residual": "compression wording may imply conclusion [H]"},
+  {"id": "R6", "risk": "1000 summaries -> automation bias", "present": true, "mitigation": "periodic forced audit + summary-vs-Level3 consistency alarm + high-impact claim forced boundary expand", "residual": "cannot fully eliminate habituation [H]"}],
+  "burden_transfer_summary": "all 6 PRESENT with design mitigations; residuals unverified; burden reduction design-feasible but not experimentally-validated",
+
+ "pattern_redefinition": {
+  "human_validation_object": "REJECT (L5.1 Model 1 = burden transfer)",
+  "evidence_organization_layer": "insufficient (no compression)",
+  "evidence_compression_reuse_layer": "KEEP — most accurate; organizes+compresses+enables reuse; transparent to Human; no runtime authority; BUT depends on 6 MISSING capabilities"},
+
+ "semantic_claim_counterargument": {
+  "small_enough": true, "clear_enough": true, "falsifiable": true, "produces_UNKNOWN": true,
+  "provenance_bindable": true, "boundary_preserved": true, "no_massive_reread": true,
+  "pattern_reusable": true, "enters_capability_candidate": true, "human_controlled_registration": true,
+  "dimensions_passed": "10/10 (4 need implementation)",
+  "verdict": "still suitable as minimal Human Validation Unit"},
+
+ "structural_vs_semantic_abstraction": {
+  "structural_abstraction": {"system_can": true, "reason": "structural facts, authority=0, no semantic overreach"},
+  "semantic_abstraction": {"system_can": false, "reason": "semantic authority requires Human"},
+  "boundary": "System: '15 instances share these structural features' ALLOWED; System: 'so they belong to semantic pattern (table row-number)' FORBIDDEN"},
+
+ "minimum_system_abstraction": {
+  "minimum": ["aggregation (group by structural signature)", "evidence compression (consistent/conflict/UNKNOWN counts)", "provenance preservation", "conflict preservation", "UNKNOWN preservation", "commonality (structural)", "negative (structural)"],
+  "deferrable": ["boundary discovery (optimization, not first-phase must)"],
+  "principle": "do not over-design; minimum = make Human only validate Semantic Claim"},
+
+ "three_layer_capability_model": {
+  "L1_evidence_organization": {"content": "group/aggregate/link/provenance", "automation": "System (structural)", "current": "provenance EXISTS; group/aggregate MISSING"},
+  "L2_evidence_compression": {"content": "summarize/compress/preserve contradiction/preserve UNKNOWN/progressive disclosure", "automation": "System (structural)", "current": "all MISSING (progressive disclosure design only)"},
+  "L3_semantic_abstraction": {"content": "semantic pattern/semantic claim/scope/boundary", "automation": "Human (System produces Candidate only)", "current": "Semantic Claim object MISSING; Human authorization EXISTS"}},
+
+ "hvc_impact": {
+  "review_count": "down (N instance -> M claims)",
+  "evidence_exposure": "down (default Level 0 summary)",
+  "cross_instance_comparison": "down (System does it)",
+  "interaction_cost": "down (less expansion)",
+  "decision_complexity": "down (1-dim SUPPORTED/UNSUPPORTED/UNKNOWN)",
+  "fatigue": "down (simple + reusable)",
+  "error_risk": "must NOT increase (if increases = fake HVC reduction via evidence hiding)",
+  "forbidden": "evidence hiding / semantic over-compression for fake review_count reduction"},
+
+ "evidence_levels": {
+  "O": ["8/12 System capabilities MISSING (grep+code)", "current validation all instance-level (33 records)", "frozen observation sufficient"],
+  "EV": ["M-B audit: frozen observation sufficient for pattern prerequisites"],
+  "D": ["Workflow C design", "Compression Fidelity definition", "Pattern=compression+reuse layer", "Semantic Claim suitability", "three-layer model"],
+  "I": ["burden transfer risks 6 PRESENT", "Workflow C reduces HVC by design"],
+  "H": ["mitigation effectiveness unverified", "long-term sustainability @10000", "progressive disclosure safety residual"],
+  "note": "no [E] (no human subject experiment); design NOT written as experimentally verified"},
+
+ "ten_questions": {
+  "Q1_current_capability": "Aggregation=MISSING; Comparison=PARTIAL; Compression=MISSING; Coverage=MISSING; Conflict=PARTIAL; UNKNOWN=PARTIAL; 0 EXISTS, 3 PARTIAL, 3 MISSING; insufficient for Workflow C",
+  "Q2_biggest_engineering_gap": "cross-instance Evidence Aggregation + Structural Signature layer (L1); not observation gap, not consumer gap, new abstraction layer",
+  "Q3_biggest_governance_risk": "Silent Suppression + Automation Bias; System hides conflict/negative -> false approve; long-term over-trust; mitigations designed but unverified",
+  "Q4_compression_fidelity": "key evidence (positive/negative/boundary/UNKNOWN/conflict/provenance) recoverable/traceable/auditable after compression; System proposes (structural role), Human confirms; System cannot unilaterally delete",
+  "Q5_progressive_disclosure_safe": "safe by design IF honest summary + provenance + Level4 reachable + recomputable; residual risk unverified",
+  "Q6_system_abstraction_level": "Structural Abstraction only (L1/L2 authority=0); Semantic Abstraction = Human",
+  "Q7_human_final_job": "semantic interpretation validation + final authorization (SUPPORTED/UNSUPPORTED/UNKNOWN); boundary on-demand; not reconstruct",
+  "Q8_semantic_claim_suitable": "YES (10/10 pass, 4 need implementation)",
+  "Q9_pattern_final": "Evidence Compression + Reuse Layer (transparent, no runtime authority; concept KEEP but not implementable now)",
+  "Q10_long_term_sustainability": "100 design-feasible; 1000 design-sustainable [H]; 10000 theoretically [H]; 100000 theoretically-if-audit [H]; theoretical != empirically-verified"},
+
+ "core_principle_final": {
+  "statement": "DICE Pattern core value is NOT replacing Human semantic judgment but completing evidence organization/compression/comparison so Human completes minimal Semantic Validation at lower Cognitive Load",
+  "holds": true,
+  "supplements": ["Pattern=compression+reuse layer not semantic authority", "System=structural abstraction authority=0", "Human=semantic abstraction sole authority", "Compression Fidelity hard constraint", "Evidence visibility!=authority", "residual risks unverified need audit+experiment", "6/9 MISSING -> not immediately implementable"]},
+
+ "new_observation_measurement_request": "NONE (frozen observation sufficient; gap=abstraction layer not measurement)",
+
+ "gate": {
+  "L5_2_STATUS": "CONDITIONAL PASS",
+  "PATTERN_ROLE": "Evidence Compression + Reuse Layer (transparent to Human, no runtime authority)",
+  "HUMAN_VALIDATION_UNIT": "Semantic Claim (confirmed 10/10; 4 need implementation)",
+  "SYSTEM_ABSTRACTION_LEVEL": "Structural Abstraction only (L1/L2 authority=0); Semantic Abstraction = Human",
+  "EVIDENCE_COMPRESSION_STATUS": "MISSING (design only)",
+  "COMPRESSION_FIDELITY_STATUS": "DEFINED (7 indicators; System-proposes/Human-confirms; residual unverified)",
+  "PROGRESSIVE_DISCLOSURE_STATUS": "DESIGN PROPOSED (Level 0-4); safe by design IF honest+provenance+audit; residual unverified",
+  "HUMAN_ABSTRACTION_BURDEN": "ELIMINATED by design in C IF System built; currently would transfer if forced",
+  "BURDEN_TRANSFER_RISK": "6 RED-TEAM PRESENT (R1-R6); mitigations designed; residuals unverified",
+  "SEMANTIC_AUTHORITY_RISK": "Compression Layer authority=0 by design; residual=structural signature may hide semantic assumption (R4); needs audit",
+  "CURRENT_SYSTEM_CAPABILITY": "EXISTS=2, PARTIAL=3, MISSING=8",
+  "MINIMUM_REQUIRED_SYSTEM_CAPABILITY": "aggregation+compression+provenance-preserved+conflict-preserved+UNKNOWN-preserved+commonality(structural)+negative(structural); boundary deferrable",
+  "NEW_OBSERVATION_MEASUREMENT_REQUEST": "NONE",
+  "IMPLEMENTATION_AUTHORIZATION": "NOT AUTHORIZED",
+  "EXPERIMENT_AUTHORIZATION": "NOT AUTHORIZED",
+  "FROZEN_BASELINE": "INTACT",
+  "STOP": true},
+
+ "frozen_baseline_verify": {"gt_modified": false, "tld_modified": false, "atomic_observation_modified": false, "is11_decision_modified": false, "production_code_modified": false, "schema_modified": false, "html_modified": false}
+}

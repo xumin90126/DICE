@@ -1,0 +1,392 @@
+{
+  "status": "COMPLETE",
+  "evidence_context_status": "PARTIALLY_SUPPORTED",
+  "date": "2026-09-17",
+  "mode": "READ-ONLY / AUDIT ONLY / NO IMPLEMENTATION",
+  "executive_summary": {
+    "hva07_status": "COMPLETE",
+    "evidence_context_status": "PARTIALLY_SUPPORTED",
+    "primary_bottleneck": "EVIDENCE_ORGANIZATION_GAP (page_context exists, not composed)",
+    "secondary_bottleneck": "SEMANTIC_BOUNDARY (author-name recognition, 2/5 FP)",
+    "new_observation": "NOT_REQUIRED",
+    "llm_required": false,
+    "minimal_adapter_required": false,
+    "architecture_impact": "D1 (Existing Evidence + better organization)",
+    "implementation_authorized": false,
+    "frozen_baseline_intact": true,
+    "dice_core_drift": 0,
+    "stop": true,
+    "core_finding": "page_context exists in P7 reviewer data (13/13 cases). If organized into Evidence Pack: 3/5 FP fully explainable, 2/5 FP need semantic knowledge, 3/3 TP safe."
+  },
+  "fp_analysis": [
+    {
+      "case_id": "IND-AMB-003",
+      "text_a": ".",
+      "text_b": "Philadelphia, PA: Society for",
+      "outcome": "FALSE_POSITIVE",
+      "gt": "MERGE",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "classification": "A_INSUFFICIENT_B_SUFFICIENT",
+      "context_provides": "Reference list [12]-[31], entry pattern, publisher location format",
+      "semantic_needed": "MINIMAL (geographic format recognition)",
+      "evidence_source": "SYSTEM-AVAILABLE (page_context)",
+      "page_context_length": 5569
+    },
+    {
+      "case_id": "IND-AMB-002",
+      "text_a": ".",
+      "text_b": "Springer Berlin Heidelberg,",
+      "outcome": "FALSE_POSITIVE",
+      "gt": "MERGE",
+      "boundary_class": "REFERENCE_LIST_ENTRY",
+      "classification": "A_INSUFFICIENT_B_SUFFICIENT",
+      "context_provides": "Reference list [12]-[31], publisher name pattern",
+      "semantic_needed": "MINIMAL (publisher name recognition)",
+      "evidence_source": "SYSTEM-AVAILABLE (page_context)",
+      "page_context_length": 5569
+    },
+    {
+      "case_id": "IND-AMB-052",
+      "text_a": "Guo, Jian Zhao, and Furao Shen.",
+      "text_b": "Image data aug-",
+      "outcome": "FALSE_POSITIVE",
+      "gt": "MERGE",
+      "boundary_class": "BODY_TEXT_CONTINUATION (MISLABELED)",
+      "classification": "A_INSUFFICIENT_B_SUFFICIENT",
+      "context_provides": "Reference list [24]-[34], author-name pattern (comma-separated + and)",
+      "semantic_needed": "LOW (structural pattern detection)",
+      "evidence_source": "SYSTEM-AVAILABLE (page_context + text pattern)",
+      "page_context_length": 2641
+    },
+    {
+      "case_id": "IND-AMB-033",
+      "text_a": "Le.",
+      "text_b": "Randaugment:",
+      "outcome": "FALSE_POSITIVE",
+      "gt": "MERGE",
+      "boundary_class": "OTHER_AMBIGUOUS",
+      "classification": "A_INSUFFICIENT_B_PARTIAL",
+      "context_provides": "References header + [1]-[8] entries",
+      "semantic_needed": "YES (Le. surname recognition — 2-char token, no structural pattern)",
+      "evidence_source": "SYSTEM-AVAILABLE (page_context) + HUMAN SEMANTIC (name recognition)",
+      "page_context_length": 2304
+    },
+    {
+      "case_id": "IND-AMB-049",
+      "text_a": "Levine.",
+      "text_b": "Bitrate-constrained dro:",
+      "outcome": "FALSE_POSITIVE",
+      "gt": "MERGE",
+      "boundary_class": "BODY_TEXT_CONTINUATION (MISLABELED)",
+      "classification": "A_INSUFFICIENT_B_PARTIAL",
+      "context_provides": "Reference list [24]-[34]",
+      "semantic_needed": "MILD (Levine surname recognition — recognizable but still semantic)",
+      "evidence_source": "SYSTEM-AVAILABLE (page_context) + MILD HUMAN SEMANTIC",
+      "page_context_length": 2641
+    }
+  ],
+  "tp_analysis": [
+    {
+      "case_id": "IND-AMB-008",
+      "text_a": "in improving out-of-distribution generalization.",
+      "text_b": "Our ap-",
+      "outcome": "TRUE_POSITIVE",
+      "gt": "KEEP_SEPARATE",
+      "safety": "SAFE",
+      "context_effect": "CONFIRMS body text → sentence boundary",
+      "new_ambiguity": false,
+      "overwhelms": false,
+      "decision_relevant": true
+    },
+    {
+      "case_id": "IND-AMB-005",
+      "text_a": "distribution.",
+      "text_b": "For the out-of-domain case, where the test",
+      "outcome": "TRUE_POSITIVE",
+      "gt": "KEEP_SEPARATE",
+      "safety": "SAFE",
+      "context_effect": "CONFIRMS abstract body text → sentence boundary",
+      "new_ambiguity": false,
+      "overwhelms": false,
+      "decision_relevant": true
+    },
+    {
+      "case_id": "IND-AMB-134",
+      "text_a": ").",
+      "text_b": "Profiles",
+      "outcome": "TRUE_POSITIVE",
+      "gt": "KEEP_SEPARATE",
+      "safety": "SAFE",
+      "context_effect": "CORRECTS mislabeled boundary_class (REF→actual BODY), confirms body text with equations",
+      "new_ambiguity": false,
+      "overwhelms": false,
+      "decision_relevant": true
+    }
+  ],
+  "evidence_matrix": [
+    {
+      "evidence": "page_context (neighboring text)",
+      "exists": true,
+      "relevant": true,
+      "sufficient": "PARTIAL (3/5 FP + 3/3 TP)",
+      "safely_composable": true
+    },
+    {
+      "evidence": "citation_markers ([N] in text)",
+      "exists": true,
+      "relevant": true,
+      "sufficient": "PARTIAL (detects reference list)",
+      "safely_composable": true
+    },
+    {
+      "evidence": "reference_header (References string)",
+      "exists": true,
+      "relevant": true,
+      "sufficient": "PARTIAL (strong when present)",
+      "safely_composable": true
+    },
+    {
+      "evidence": "bibliographic_markers (vol., pp., [Online], DOI)",
+      "exists": true,
+      "relevant": true,
+      "sufficient": "PARTIAL (confirms reference list)",
+      "safely_composable": true
+    },
+    {
+      "evidence": "author_name_pattern (comma-separated names)",
+      "exists": true,
+      "relevant": true,
+      "sufficient": "PARTIAL (catches some, not Le.)",
+      "safely_composable": "PARTIAL"
+    },
+    {
+      "evidence": "publisher_pattern (City, State: Publisher)",
+      "exists": true,
+      "relevant": true,
+      "sufficient": true,
+      "safely_composable": true
+    },
+    {
+      "evidence": "period (S3 field)",
+      "exists": true,
+      "relevant": true,
+      "sufficient": false,
+      "safely_composable": true
+    },
+    {
+      "evidence": "capital (S3 field)",
+      "exists": true,
+      "relevant": true,
+      "sufficient": false,
+      "safely_composable": true
+    },
+    {
+      "evidence": "text_content (text_a, text_b)",
+      "exists": true,
+      "relevant": true,
+      "sufficient": false,
+      "safely_composable": true
+    },
+    {
+      "evidence": "boundary_class",
+      "exists": true,
+      "relevant": false,
+      "sufficient": false,
+      "safely_composable": false
+    },
+    {
+      "evidence": "geometry (bbox, width)",
+      "exists": true,
+      "relevant": false,
+      "sufficient": false,
+      "safely_composable": true
+    },
+    {
+      "evidence": "author_name_recognition",
+      "exists": false,
+      "relevant": true,
+      "sufficient": false,
+      "safely_composable": false
+    }
+  ],
+  "human_evidence_dependency": [
+    {
+      "case_id": "IND-AMB-003",
+      "primary_source": "SYSTEM-AVAILABLE (page_context)",
+      "semantic_knowledge": "MINIMAL",
+      "human_only_semantic": false
+    },
+    {
+      "case_id": "IND-AMB-002",
+      "primary_source": "SYSTEM-AVAILABLE (page_context)",
+      "semantic_knowledge": "MINIMAL",
+      "human_only_semantic": false
+    },
+    {
+      "case_id": "IND-AMB-052",
+      "primary_source": "SYSTEM-AVAILABLE (page_context + text pattern)",
+      "semantic_knowledge": "LOW",
+      "human_only_semantic": false
+    },
+    {
+      "case_id": "IND-AMB-033",
+      "primary_source": "SYSTEM-AVAILABLE + HUMAN SEMANTIC",
+      "semantic_knowledge": "YES (Le. surname)",
+      "human_only_semantic": true
+    },
+    {
+      "case_id": "IND-AMB-049",
+      "primary_source": "SYSTEM-AVAILABLE + MILD HUMAN SEMANTIC",
+      "semantic_knowledge": "MILD (Levine surname)",
+      "human_only_semantic": true
+    }
+  ],
+  "evidence_source_classification": {
+    "system_available": {
+      "count": "5 items (page_context, citation_markers, reference_header, bibliographic_markers, publisher_pattern)",
+      "status": "EXISTS in P7 reviewer data, NOT in Evidence Pack",
+      "gap_type": "EVIDENCE_NOT_COMPOSED"
+    },
+    "human_only_semantic": {
+      "count": "1 item (author_name_recognition)",
+      "status": "NOT in any system layer",
+      "gap_type": "SEMANTIC_BOUNDARY",
+      "cases_affected": [
+        "IND-AMB-033",
+        "IND-AMB-049"
+      ]
+    }
+  },
+  "semantic_boundary": {
+    "explainable_by_evidence": [
+      "Reference list detection (3/5 FP + 3/3 TP) — [N] markers, header, bib markers",
+      "Publisher/location recognition (2/5 FP: 003, 002) — format patterns",
+      "Author-name pattern (1/5 FP: 052) — comma-separated + and pattern"
+    ],
+    "human_semantic_boundary": [
+      "Short surname recognition (2/5 FP: 033, 049) — Le. and Levine. require world knowledge",
+      "Paper-title recognition (1/5 FP: 033) — Randaugment: requires understanding reference"
+    ],
+    "assessment": "PARTIAL — 3/5 FP explainable, 2/5 FP remain as Semantic Boundary"
+  },
+  "context_enrichment_counterfactual": {
+    "a_current_pack": {
+      "fp_distinguishable": "0/5 (all ambiguous)",
+      "tp_safe": "3/3 correct",
+      "cognitive_load": "LOW (5 items, <100 chars)"
+    },
+    "b_context_enriched": {
+      "fp_distinguishable": "3/5 fully + 2/5 partially",
+      "tp_safe": "3/3 correct (confirmed, no harm)",
+      "cognitive_load": "MODERATE (5 items + 2000-5000 chars context)",
+      "new_ambiguity": false,
+      "semantic_leakage": 0,
+      "automation_bias_risk": "LOW"
+    },
+    "decision_relevant": true,
+    "cognitive_load_justified": true,
+    "context_overwhelms": false
+  },
+  "architecture_impact": "D1",
+  "architecture_impact_detail": {
+    "d1_selected": "Existing Evidence + better Evidence organization",
+    "reason": "page_context exists in P7 reviewer data, just not in Evidence Pack. No new module/observation/engine needed.",
+    "d2_not_needed": "page_context is already extracted and formatted. Minimal filtering (neighboring lines) is organization, not adaptation.",
+    "d3_not_needed": "For 3/5 FP, evidence exists. For 2/5 FP, it is semantic boundary not observation gap. Do NOT propose new observation for author-name recognition."
+  },
+  "semantic_leakage_check": {
+    "semantic_leakage": 0,
+    "forbidden_additions": [
+      "is_reference",
+      "reference_detected",
+      "author_detected",
+      "recommended_merge",
+      "boundary_class",
+      "confidence",
+      "score",
+      "correct_answer"
+    ],
+    "legal_structure": "Existing Context (raw text) → Evidence Pack → Human",
+    "forbidden_structure": "Context → Reference Detector → MERGE (NOT created)"
+  },
+  "cognitive_load_check": {
+    "a_load": "LOW (<100 chars, <5 seconds)",
+    "b_load": "MODERATE (2000-5000 chars, 15-30 seconds)",
+    "justified": true,
+    "reason": "Without context: 0/5 FP distinguishable. With context: 3/5 FP + 2/5 partial. Additional reading produces correct decisions.",
+    "tp_redundancy": "Context confirms TP but does not change decision. Not harmful but not strictly necessary."
+  },
+  "evidence_dependency_chain": {
+    "system_has_it": [
+      "E1 period",
+      "E2 capital",
+      "E3 text content",
+      "E12 IS-01/IS-02 (S3 fields)"
+    ],
+    "system_has_but_not_exposed": [
+      "page_context (in P7 reviewer data, not in Evidence Pack)"
+    ],
+    "system_has_but_not_composed": [
+      "citation markers",
+      "bibliographic markers",
+      "reference header (detectable from page_context)"
+    ],
+    "system_does_not_have": [
+      "author-name recognition (2/5 FP)"
+    ],
+    "human_semantic_knowledge": [
+      "surname recognition (Le., Levine.)",
+      "paper-title recognition (Randaugment:)"
+    ]
+  },
+  "new_observation_required": false,
+  "llm_required": false,
+  "implementation_authorized": false,
+  "experiment_authorized": false,
+  "final_gate": {
+    "hva07_status": "COMPLETE",
+    "evidence_context_status": "PARTIALLY_SUPPORTED",
+    "primary_bottleneck": "EVIDENCE_ORGANIZATION_GAP",
+    "secondary_bottleneck": "SEMANTIC_BOUNDARY (author-name recognition, 2/5 FP)",
+    "new_observation": false,
+    "llm_required": false,
+    "minimal_adapter_required": false,
+    "architecture_impact": "D1",
+    "implementation_authorized": false,
+    "experiment_authorized": false,
+    "dice_core_modification": false,
+    "p1_p7_modification": false,
+    "tld_modification": false,
+    "is11_modification": false,
+    "gt_modification": false,
+    "signal_modification": false,
+    "s3_modification": false,
+    "sc05_modification": false,
+    "vs05_modification": false,
+    "llm": false,
+    "new_module": false,
+    "new_engine": false,
+    "new_rule": false,
+    "new_classifier": false,
+    "new_detector": false,
+    "reference_detector": false,
+    "runtime_change": false,
+    "capability_change": false,
+    "threshold_adjustment": false,
+    "semantic_leakage": 0,
+    "authority_leakage": 0,
+    "frozen_baseline": "INTACT",
+    "production": false,
+    "stop": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "machine_eval_hash": "437aa665210ccd04",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT",
+    "frozen_baseline_intact": true,
+    "dice_core_drift": 0
+  }
+}

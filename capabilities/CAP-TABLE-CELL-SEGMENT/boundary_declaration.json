@@ -1,0 +1,42 @@
+{
+  "capability_id": "CAP-TABLE-CELL-SEGMENT",
+  "layer": "L1_structural",
+  "positive_boundary": {
+    "definition": "Structural cell segmentation of a merged single-column text block within a Human-confirmed table region.",
+    "allowed_operations": [
+      "row boundary detection (line split)",
+      "merged-cell geometric split (proportional bbox slice)",
+      "column_index echo (Human-confirmed, default 0)",
+      "cell identity generation (deterministic cell_id)"
+    ],
+    "boundary_reason": "A merged block is acceptable for segmentation when it is a single-column text block carrying newline-separated rows; segmentation is geometry-only and never interprets meaning."
+  },
+  "negative_boundary": {
+    "forbidden_operations": [
+      "header interpretation",
+      "column meaning inference",
+      "row matching",
+      "cell joining",
+      "fact generation",
+      "value extraction",
+      "unit extraction",
+      "semantic association"
+    ],
+    "exclusions": [
+      {
+        "excluded_operations": ["semantic association", "fact generation"],
+        "reason": "L2 semantic operations are permanently owned by Human / the extraction layer."
+      }
+    ]
+  },
+  "boundary_constraints": {
+    "output_fields_exact": [
+      "table_region_reference", "cell_id", "row_index", "column_index", "raw_text", "bbox"
+    ],
+    "forbidden_output_fields": [
+      "value", "normalized_value", "unit", "product", "property",
+      "relation", "confidence", "semantic_label", "fact", "attribute_name"
+    ],
+    "required_unit_tokens": []
+  }
+}

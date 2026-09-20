@@ -1,0 +1,40 @@
+{
+  "audit_type": "IS-11 Stage 3 GT Provenance Audit",
+  "timestamp": "2026-09-09T23:18:31",
+  "checks": [
+    {
+      "check": "P1_Sampling_Integrity",
+      "pass": true,
+      "details": "SF cases=45, GT cases=45, missing=0, extra=0"
+    },
+    {
+      "check": "P2_Case_Integrity",
+      "pass": true,
+      "details": "text_modified=0, duplicates=0"
+    },
+    {
+      "check": "P3_Reviewer_Independence",
+      "pass": true,
+      "details": "A_complete=True(45), B_complete=True(45), A_in_B=0, B_in_A=0"
+    },
+    {
+      "check": "P4_Machine_Leakage",
+      "pass": true,
+      "details": "machine_field_keys_in_review=0, is11_machine_files=0, is11_metric_files=0, note='human_review_data_files_are_expected_artifacts'"
+    },
+    {
+      "check": "P5_Posthoc_Selection",
+      "pass": true,
+      "details": "SF==GT: True"
+    },
+    {
+      "check": "P6_Baseline_Integrity",
+      "pass": true,
+      "details": "P7.1_drift=0, P7.2_drift=0, P4_config=True, table_detector_imports=0"
+    }
+  ],
+  "overall": "PASS",
+  "total_checks": 6,
+  "passed": 6,
+  "failed": 0
+}

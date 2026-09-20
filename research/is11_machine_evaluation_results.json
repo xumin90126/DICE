@@ -1,0 +1,2686 @@
+{
+  "metadata": {
+    "description": "IS-11 Machine Evaluation Results",
+    "type": "EXPERIMENT-ONLY evaluation (Stage 4)",
+    "creation_timestamp": "2026-09-09T23:28:17",
+    "conditions": {
+      "A": "Geometry only (P4 DETERMINISTIC + AMBIGUOUS → INSUFFICIENT_EVIDENCE for AMBIGUOUS)",
+      "B": "Geometry + IS-01 + IS-02 (frozen §9.3 protocol)",
+      "C": "Geometry + IS-01 + IS-02 + IS-11 (experimental)"
+    },
+    "is01_definition": "FROZEN: ^\\d+(\\.\\d+)*\\.?$ or ^[A-Z]\\.\\d+$",
+    "is02_definition": "FROZEN: any word with >2 alpha chars",
+    "is11_definition": "TABLE_CELL_CONTEXT (experimental observer using table_line_detector.py)",
+    "is11_implementation": "EXPERIMENT-ONLY (not integrated into P1-P6)",
+    "evaluation_set": "Frozen 45-case Sampling Frame",
+    "gt_source": "Frozen Semantic GT (Stage 3)",
+    "p1_p6_modified": false,
+    "p7_3": "NOT AUTHORIZED",
+    "production": false
+  },
+  "metrics": {
+    "baseline_a": {
+      "total": 45,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "abstain": 45,
+      "precision": 0.0,
+      "recall": 0.0,
+      "coverage": 0.0,
+      "abstention_rate": 1.0
+    },
+    "baseline_b": {
+      "total": 45,
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "tn": 18,
+      "abstain": 26,
+      "precision": 0.0,
+      "recall": 0.0,
+      "coverage": 0.4222,
+      "abstention_rate": 0.5778
+    },
+    "experimental_c": {
+      "total": 45,
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "tn": 26,
+      "abstain": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "coverage": 0.6,
+      "abstention_rate": 0.4
+    },
+    "incremental_c_vs_b": {
+      "delta_fp": 0,
+      "delta_recall": 0.0,
+      "delta_coverage": 0.1778,
+      "delta_precision": 0.0
+    }
+  },
+  "gates": {
+    "G7_fp_reduction": {
+      "threshold": "ΔFP < 0",
+      "actual": 0,
+      "pass": false
+    },
+    "G8_recall_coverage_safety": {
+      "threshold": "ΔRecall≥0 AND ΔCoverage≥0",
+      "actual_delta_recall": 0.0,
+      "actual_delta_coverage": 0.1778,
+      "pass": true
+    }
+  },
+  "cross_document": {
+    "is11_cs_001": {
+      "a": {
+        "total": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "abstain": 10,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.0,
+        "abstention_rate": 1.0
+      },
+      "b": {
+        "total": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "abstain": 9,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.1,
+        "abstention_rate": 0.9
+      },
+      "c": {
+        "total": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "abstain": 7,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.3,
+        "abstention_rate": 0.7
+      },
+      "delta_fp": 0,
+      "n": 10
+    },
+    "is11_efficientnet": {
+      "a": {
+        "total": 18,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "abstain": 18,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.0,
+        "abstention_rate": 1.0
+      },
+      "b": {
+        "total": 18,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "tn": 12,
+        "abstain": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.7222,
+        "abstention_rate": 0.2778
+      },
+      "c": {
+        "total": 18,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "tn": 14,
+        "abstain": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.8333,
+        "abstention_rate": 0.1667
+      },
+      "delta_fp": 0,
+      "n": 18
+    },
+    "is11_med_001": {
+      "a": {
+        "total": 8,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "abstain": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.0,
+        "abstention_rate": 1.0
+      },
+      "b": {
+        "total": 8,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "abstain": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.0,
+        "abstention_rate": 1.0
+      },
+      "c": {
+        "total": 8,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "abstain": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.0,
+        "abstention_rate": 1.0
+      },
+      "delta_fp": 0,
+      "n": 8
+    },
+    "is11_resnet": {
+      "a": {
+        "total": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "abstain": 9,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.0,
+        "abstention_rate": 1.0
+      },
+      "b": {
+        "total": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 5,
+        "abstain": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 0.5556,
+        "abstention_rate": 0.4444
+      },
+      "c": {
+        "total": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 9,
+        "abstain": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0
+      },
+      "delta_fp": 0,
+      "n": 9
+    }
+  },
+  "cross_document_stability": {
+    "established": false,
+    "docs_with_fp_reduction": 0,
+    "total_docs": 4
+  },
+  "determinism": {
+    "mismatches": 0,
+    "pass": true
+  },
+  "case_results": [
+    {
+      "case_id": "IS11-AMB-005",
+      "document_id": "is11_resnet",
+      "page": 1,
+      "text_a": "unsurprising) and then degrades rapidly.",
+      "text_b": "Unexpectedly,",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": true,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": true
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": true,
+        "is11_observation": {
+          "is_in_table": true,
+          "same_cell": false,
+          "different_cell": true,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": true,
+            "b_in_table": true,
+            "a_cell": [
+              36,
+              1
+            ],
+            "b_cell": [
+              36,
+              2
+            ]
+          }
+        }
+      },
+      "c_vs_b_difference": true
+    },
+    {
+      "case_id": "IS11-AMB-024",
+      "document_id": "is11_resnet",
+      "page": 6,
+      "text_a": "28.54",
+      "text_b": "10.02",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": true,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": true,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": true,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": true,
+          "same_cell": false,
+          "different_cell": true,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": true,
+            "b_in_table": true,
+            "a_cell": [
+              3,
+              1
+            ],
+            "b_cell": [
+              3,
+              2
+            ]
+          }
+        }
+      },
+      "c_vs_b_difference": true
+    },
+    {
+      "case_id": "IS11-AMB-032",
+      "document_id": "is11_resnet",
+      "page": 6,
+      "text_a": "-",
+      "text_b": "8.43",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": true,
+          "same_cell": false,
+          "different_cell": true,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": true,
+            "b_in_table": true,
+            "a_cell": [
+              27,
+              1
+            ],
+            "b_cell": [
+              27,
+              2
+            ]
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-034",
+      "document_id": "is11_resnet",
+      "page": 6,
+      "text_a": "21.59",
+      "text_b": "5.71",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": true,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": true,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": true,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": true,
+          "same_cell": false,
+          "different_cell": true,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": true,
+            "b_in_table": true,
+            "a_cell": [
+              31,
+              1
+            ],
+            "b_cell": [
+              31,
+              2
+            ]
+          }
+        }
+      },
+      "c_vs_b_difference": true
+    },
+    {
+      "case_id": "IS11-AMB-052",
+      "document_id": "is11_resnet",
+      "page": 7,
+      "text_a": "0.46M",
+      "text_b": "7.51",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-064",
+      "document_id": "is11_resnet",
+      "page": 8,
+      "text_a": "training data",
+      "text_b": "07+12",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": true,
+          "same_cell": false,
+          "different_cell": true,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": true,
+            "b_in_table": true,
+            "a_cell": [
+              19,
+              1
+            ],
+            "b_cell": [
+              19,
+              2
+            ]
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-074",
+      "document_id": "is11_resnet",
+      "page": 8,
+      "text_a": "41.5",
+      "text_b": "21.2",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": true,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": true,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": true,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": true,
+          "same_cell": false,
+          "different_cell": true,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": true,
+            "b_in_table": true,
+            "a_cell": [
+              32,
+              1
+            ],
+            "b_cell": [
+              32,
+              2
+            ]
+          }
+        }
+      },
+      "c_vs_b_difference": true
+    },
+    {
+      "case_id": "IS11-AMB-101",
+      "document_id": "is11_resnet",
+      "page": 11,
+      "text_a": "-",
+      "text_b": "43.9",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": true,
+          "same_cell": false,
+          "different_cell": true,
+          "table_info": {
+            "tables_detected": 3,
+            "a_in_table": true,
+            "b_in_table": true,
+            "a_cell": [
+              7,
+              1
+            ],
+            "b_cell": [
+              7,
+              2
+            ]
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-102",
+      "document_id": "is11_resnet",
+      "page": 11,
+      "text_a": "our single model (ILSVRC’15)",
+      "text_b": "60.5",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": true,
+          "same_cell": false,
+          "different_cell": true,
+          "table_info": {
+            "tables_detected": 3,
+            "a_in_table": true,
+            "b_in_table": true,
+            "a_cell": [
+              8,
+              1
+            ],
+            "b_cell": [
+              7,
+              1
+            ]
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-130",
+      "document_id": "is11_efficientnet",
+      "page": 5,
+      "text_a": "Resolution",
+      "text_b": "#Channels",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": true,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": true
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": true,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-135",
+      "document_id": "is11_efficientnet",
+      "page": 5,
+      "text_a": "4",
+      "text_b": "MBConv6, k5x5",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": true,
+      "is02_b": true,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "MERGE",
+        "outcome": "FP",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": true,
+        "is02_b": true
+      },
+      "experimental_c": {
+        "decision": "MERGE",
+        "outcome": "FP",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": true,
+        "is02_b": true,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-163",
+      "document_id": "is11_efficientnet",
+      "page": 6,
+      "text_a": "93.9%",
+      "text_b": "34M",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-168",
+      "document_id": "is11_efficientnet",
+      "page": 6,
+      "text_a": "3.0x",
+      "text_b": "5.7B",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-198",
+      "document_id": "is11_efficientnet",
+      "page": 6,
+      "text_a": "82.9%",
+      "text_b": "96.2%",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-205",
+      "document_id": "is11_efficientnet",
+      "page": 6,
+      "text_a": "96.5%",
+      "text_b": "155M",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-218",
+      "document_id": "is11_efficientnet",
+      "page": 6,
+      "text_a": "1.2B",
+      "text_b": "76.8%",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-257",
+      "document_id": "is11_efficientnet",
+      "page": 7,
+      "text_a": "Gpipe",
+      "text_b": "91.3%",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-261",
+      "document_id": "is11_efficientnet",
+      "page": 7,
+      "text_a": "Inception-v4",
+      "text_b": "81.8%",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-262",
+      "document_id": "is11_efficientnet",
+      "page": 7,
+      "text_a": "41M",
+      "text_b": "EfﬁcientNet-B5",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": true,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": true
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": true,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-267",
+      "document_id": "is11_efficientnet",
+      "page": 7,
+      "text_a": "83.6%",
+      "text_b": "556M",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-279",
+      "document_id": "is11_efficientnet",
+      "page": 7,
+      "text_a": "EfﬁcientNet-B5",
+      "text_b": "98.5%",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-313",
+      "document_id": "is11_efficientnet",
+      "page": 8,
+      "text_a": "Test Size",
+      "text_b": "#Classes",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": true,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": true
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": true,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-318",
+      "document_id": "is11_efficientnet",
+      "page": 8,
+      "text_a": ")",
+      "text_b": "47,386",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-321",
+      "document_id": "is11_efficientnet",
+      "page": 8,
+      "text_a": "8,144",
+      "text_b": "8,041",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-323",
+      "document_id": "is11_efficientnet",
+      "page": 8,
+      "text_a": "2,040",
+      "text_b": "6,149",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-346",
+      "document_id": "is11_efficientnet",
+      "page": 9,
+      "text_a": "83.95",
+      "text_b": "84.26",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": true,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": true,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": true,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": true,
+          "same_cell": false,
+          "different_cell": true,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": true,
+            "b_in_table": true,
+            "a_cell": [
+              40,
+              6
+            ],
+            "b_cell": [
+              40,
+              7
+            ]
+          }
+        }
+      },
+      "c_vs_b_difference": true
+    },
+    {
+      "case_id": "IS11-AMB-350",
+      "document_id": "is11_efficientnet",
+      "page": 9,
+      "text_a": "80.16",
+      "text_b": "81.72",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": true,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": true,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": true,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": true,
+          "same_cell": false,
+          "different_cell": true,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": true,
+            "b_in_table": true,
+            "a_cell": [
+              40,
+              2
+            ],
+            "b_cell": [
+              40,
+              3
+            ]
+          }
+        }
+      },
+      "c_vs_b_difference": true
+    },
+    {
+      "case_id": "IS11-AMB-375",
+      "document_id": "is11_med_001",
+      "page": 6,
+      "text_a": "[23].",
+      "text_b": "Each",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": true,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": true
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": true,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-380",
+      "document_id": "is11_med_001",
+      "page": 13,
+      "text_a": "RBF",
+      "text_b": "Matérn",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": true,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": true
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": true,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-401",
+      "document_id": "is11_med_001",
+      "page": 19,
+      "text_a": "0.70",
+      "text_b": "0.75",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": true,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": true,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": true,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-407",
+      "document_id": "is11_med_001",
+      "page": 19,
+      "text_a": "1.35",
+      "text_b": "1.40",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": true,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": true,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": true,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-409",
+      "document_id": "is11_med_001",
+      "page": 19,
+      "text_a": "0.65",
+      "text_b": "0.70",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": true,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": true,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": true,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-414",
+      "document_id": "is11_med_001",
+      "page": 20,
+      "text_a": "FIG. 9:",
+      "text_b": "Left:",
+      "gt_label": "MERGE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": true,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": true
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": true,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-418",
+      "document_id": "is11_med_001",
+      "page": 20,
+      "text_a": "), but with the different kernels illustrated in the left panel.",
+      "text_b": "The",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": true,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": true
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": true,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-422",
+      "document_id": "is11_med_001",
+      "page": 24,
+      "text_a": "FIG. 12:",
+      "text_b": "Distribution of errors for predictions of entropy (upper) and ZPVE (lower)",
+      "gt_label": "MERGE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": true,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": true
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": true,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 0,
+            "reason": "no tables detected"
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-440",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "700M",
+      "text_b": "0.80 (2.60x)",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": true,
+          "same_cell": false,
+          "different_cell": true,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": true,
+            "b_in_table": true,
+            "a_cell": [
+              0,
+              1
+            ],
+            "b_cell": [
+              0,
+              2
+            ]
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-457",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "Models",
+      "text_b": "Size",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": true,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": true
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": true,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": false,
+            "b_in_table": false,
+            "a_cell": null,
+            "b_cell": null
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-462",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "WGe",
+      "text_b": "Avg.",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": true,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": true
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": true,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": false,
+            "b_in_table": false,
+            "a_cell": null,
+            "b_cell": null
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-467",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "37.0",
+      "text_b": "60.0",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": true,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": true,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": true,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": false,
+            "b_in_table": false,
+            "a_cell": null,
+            "b_cell": null
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-483",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "23.5",
+      "text_b": "38.5",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": true,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": true,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": true,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": false,
+            "b_in_table": false,
+            "a_cell": null,
+            "b_cell": null
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-505",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "61.4",
+      "text_b": "28.3",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": true,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": true,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": true,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": false,
+            "b_in_table": false,
+            "a_cell": null,
+            "b_cell": null
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-514",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "44.2",
+      "text_b": "63.5",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": true,
+      "is02_b": false,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": true,
+        "is02_b": false
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": true,
+        "is02_b": false,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": false,
+            "b_in_table": false,
+            "a_cell": null,
+            "b_cell": null
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-519",
+      "document_id": "is11_cs_001",
+      "page": 3,
+      "text_a": "facto backbone for open-source LLMs.",
+      "text_b": "To embrace the open-source community, our design",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": true,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": true
+      },
+      "experimental_c": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": true,
+        "is11_observation": {
+          "is_in_table": false,
+          "same_cell": false,
+          "different_cell": false,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": false,
+            "b_in_table": false,
+            "a_cell": null,
+            "b_cell": null
+          }
+        }
+      },
+      "c_vs_b_difference": false
+    },
+    {
+      "case_id": "IS11-AMB-522",
+      "document_id": "is11_cs_001",
+      "page": 4,
+      "text_a": "Size",
+      "text_b": "Max Batch Size",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": true,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": true
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": true,
+        "is11_observation": {
+          "is_in_table": true,
+          "same_cell": false,
+          "different_cell": true,
+          "table_info": {
+            "tables_detected": 1,
+            "a_in_table": true,
+            "b_in_table": true,
+            "a_cell": [
+              18,
+              1
+            ],
+            "b_cell": [
+              18,
+              2
+            ]
+          }
+        }
+      },
+      "c_vs_b_difference": true
+    },
+    {
+      "case_id": "IS11-AMB-530",
+      "document_id": "is11_cs_001",
+      "page": 5,
+      "text_a": "PIQA",
+      "text_b": "SciQ",
+      "gt_label": "KEEP_SEPARATE",
+      "geometric_state": "AMBIGUOUS",
+      "is01_a": false,
+      "is02_b": true,
+      "baseline_a": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry"
+        ]
+      },
+      "baseline_b": {
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "outcome": "ABSTAIN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02"
+        ],
+        "is01_a": false,
+        "is02_b": true
+      },
+      "experimental_c": {
+        "decision": "KEEP_SEPARATE",
+        "outcome": "TN",
+        "evidence_used": [
+          "geometry",
+          "IS-01",
+          "IS-02",
+          "IS-11"
+        ],
+        "is01_a": false,
+        "is02_b": true,
+        "is11_observation": {
+          "is_in_table": true,
+          "same_cell": false,
+          "different_cell": true,
+          "table_info": {
+            "tables_detected": 2,
+            "a_in_table": true,
+            "b_in_table": true,
+            "a_cell": [
+              0,
+              3
+            ],
+            "b_cell": [
+              0,
+              4
+            ]
+          }
+        }
+      },
+      "c_vs_b_difference": true
+    }
+  ],
+  "c_vs_b_differences": 8,
+  "processing_time_seconds": 2.8
+}

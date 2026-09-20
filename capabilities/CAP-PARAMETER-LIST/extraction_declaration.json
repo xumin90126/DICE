@@ -1,0 +1,11 @@
+{
+  "capability_id": "CAP-PARAMETER-LIST",
+  "attribute_name": "pore_size",
+  "strategy": {
+    "kind": "deterministic_regex",
+    "pattern": "(?P<value>-?\\d+(?:\\.\\d+)?)\\s*(?P<unit>\\u03bcm|\\u00b5m|um)",
+    "capture_value_group": "value",
+    "capture_unit_group": "unit",
+    "unit_normalization": "unit_canon"
+  }
+}

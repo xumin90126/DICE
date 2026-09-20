@@ -1,0 +1,82 @@
+{
+  "layer": "atomic_observation",
+  "observation_schema_version": "1.0.0",
+  "authority": "tmp/atomic_observation_implementation_contract.md",
+  "coordinate_system": "pymupdf_page_1.26.x_y_down",
+  "atoms": {
+    "TEXT_ATOM": {
+      "atom_kind": "TEXT_ATOM",
+      "atom_id": {"source": "P1 AtomicTextObservation.observation_id (frozen _make_obs_id)", "rule": "passthrough - never regenerated"},
+      "required_fields": ["atom_id", "atom_kind", "document_id", "page_reference", "bbox", "content", "coordinate_system", "source_sha", "params_hash", "schema_version", "pymupdf_version", "geometry_source"],
+      "field_rules": {
+        "atom_id": "P1 observation_id verbatim",
+        "document_id": "P1 verbatim",
+        "page_reference": "P1 page_number verbatim (1-based)",
+        "bbox": "P1 verbatim (frozen _round_bbox convention, 2 decimals)",
+        "content": "P1 text verbatim - no normalize, no rewrite, no classification",
+        "geometry_source": "one of registry.geometry_sources values"
+      },
+      "source_filter": {"field": "source_type", "value": "span", "reason": "P1 primary layer (atomic_text.py docstring); basis of P2 bundle facts"},
+      "not_exposed_in_v1": ["style_signature (P3 function not on frozen whitelist)", "font fields (stay in P1 source; minimal schema)"]
+    },
+    "NON_TEXT_BLOCK_ATOM": {
+      "atom_kind": "NON_TEXT_BLOCK_ATOM",
+      "atom_id": {"rule": "NTB|{document_id}|p{page_reference}|{block_index}", "pure_function": true},
+      "required_fields": ["atom_id", "atom_kind", "document_id", "page_reference", "bbox", "pdf_block_type", "content", "coordinate_system", "source_sha", "params_hash", "schema_version", "pymupdf_version", "geometry_source"],
+      "field_rules": {
+        "bbox": "PyMuPDF block bbox verbatim under frozen _round_bbox convention",
+        "pdf_block_type": "PDF-declared block type integer, verbatim",
+        "content": {"value": null, "permanent": true, "no_ocr": true}
+      },
+      "enumeration": "page.get_text('dict') blocks with type != 0; same parse surface as frozen P1 _extract_block_observations",
+      "dedup_arbitration": "forbidden - overlapping blocks all retained"
+    }
+  },
+  "region_fact": {
+    "required_fields": ["region_id", "source_detector", "source_sha", "params_hash", "bbox", "coordinate_system"],
+    "region_id_rule": "{source_short}|{document_id}|p{page_reference}|{seq}",
+    "region_id_pure_function": true,
+    "admission": "registered detectors only (layer_registry.registered_detectors)",
+    "semantic_type_names": "forbidden - no TABLE_REGION / GRAPHIC_REGION / FIGURE_REGION or any is_* role",
+    "arbitration": "forbidden - multiple detectors coexist; layer never selects truth"
+  },
+  "relations": {
+    "IN_REGION": {
+      "relation_def": "bbox_containment_v1",
+      "definition": "contained = (region.bbox[0] <= atom_center_x <= region.bbox[2]) and (region.bbox[1] <= atom_center_y <= region.bbox[3]); atom center = ((bbox[0]+bbox[2])/2, (bbox[1]+bbox[3])/2) over frozen coordinates",
+      "inputs": ["atom (either kind)", "region_id (registered RegionFact)"],
+      "output_fields": ["atom_id", "region_id", "contained", "relation_def", "params_hash", "geometry_source", "document_id", "page_reference"],
+      "registered_exception": "center-point predicate over frozen coordinates, sanctioned by contract section 4.1"
+    },
+    "GAP_SEQUENCE": {
+      "measurement_identity": "GAP_SEQUENCE_v1",
+      "components": {
+        "grouping": "frozen P2 same_y_band output (y_center diff <= 3.0, GeometryConfig frozen); consumed as anchor-neighborhood sets {anchor} U same_y_band_members(anchor), unique frozensets, deterministic",
+        "gap": "frozen compute_pairwise(a,b).horizontal_distance verbatim (edge gap, overlap=0) - zero gap math in layer",
+        "ordering": "sort_key_v1: center_x ascending, tie-break (center_y, atom_id)"
+      },
+      "input": "one page TEXT_ATOM set with full (non-truncated) P2 bundle",
+      "output_fields": ["measurement_identity", "geometry_source", "document_id", "page_reference", "params_hash", "bands"],
+      "band_record_fields": ["band_id", "anchor_atom_id", "member_atom_ids", "gaps"],
+      "gap_record_fields": ["seq", "a_id", "b_id", "gap"],
+      "thresholds": "NONE in measurement - uniformity/CV/equispacing judgments are hypothesis-side",
+      "forbidden_outputs": ["is_uniform_run", "is_tick_run", "is_caption_group", "is_table_row", "any is_* boolean"],
+      "version_rule": "any component change => measurement_identity_version++ (no silent v1 update)"
+    }
+  },
+  "provenance_required_fields": ["source_sha", "params_hash", "schema_version", "coordinate_system", "document_id", "page_reference", "pymupdf_version"],
+  "forbidden_identity_fields": ["timestamp", "host", "author", "random_uuid", "runtime_iteration_order"],
+  "forbidden_semantic_tokens": ["is_table_cell", "is_table", "is_figure", "is_caption", "is_axis", "is_chart", "is_tick_run", "is_uniform_run", "is_caption_group", "is_table_row", "MERGE", "KEEP", "REJECT", "score", "confidence", "ranking", "routing", "recommendation", "execution_plan", "fallback", "retry", "override", "correction"],
+  "versions": {
+    "observation_schema_version": "1.0.0",
+    "measurement_identity_version": {"GAP_SEQUENCE_v1": "1.0.0", "bbox_containment_v1": "1.0.0"},
+    "detector_version": "carried per RegionFact source_sha",
+    "query_version": "hypothesis-side; layer does not perceive or record it"
+  },
+  "known_limitations": [
+    "vector drawings (page.get_drawings) not covered - same surface limitation as frozen P1 block layer",
+    "raster content unreachable (no OCR) - presence/bbox only",
+    "P3 style_signature not exposed in v1 (P3 functions not on frozen whitelist)",
+    "P2 truncated artifacts (max_pairwise=2000) expose singles only; GAP_SEQUENCE refuses them"
+  ]
+}

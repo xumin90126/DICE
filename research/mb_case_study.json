@@ -1,0 +1,68 @@
+{
+ "layer": "1 — DICE Engineering / Research Evidence",
+ "document": "M-B Evidence Integration Case Study",
+ "causal_chain": "PH-02 (whole-group predicate REJECTED) -> C2 (column-segment coverage INSUFFICIENT) -> Corpus Discovery/Acquisition (positive diversity still = 1) -> Slicing Failure Impact Ranking (M-B = TOP1) -> M-B Expressability Audit (evidence exists, gap = Consumer/Integration) -> Phase 2 (thin adapter design) -> Phase 2.1 (semantic leakage discovered) -> Phase 2.2 (EIC-1 semantic gate, PASS) -> Phase 3 (frozen replay protocol) -> Phase 3.1 (localization gap, parameter fixation) -> Phase 3.2 (isolated replay PASS)",
+
+ "A_ph02_failure": {
+  "hypothesis": "frozen left_alignment_group geometry can serve directly as column-membership signal via whole-group equidistance predicate to fix target FP (IS11-AMB-135)",
+  "preregistration": "15 param combos x 45 cases; PASS = A=1/1 (FP removed) AND B=0 (no correct-case harm) AND C=0 (no leakage); any miss = REJECTED, no post-hoc tuning",
+  "experimentally_verified": {"A": "0/1 (FP not removed in any of 15/15 combos)", "B_specificity": "7/13 anchors firing - all GT=KEEP_SEPARATE real value columns fired-unchanged", "negative_evidence": "VALUE_COLUMN / prose contamination indistinguishable from positives under whole-group predicate"},
+  "diagnosis": ["whole left_alignment_group misused as research object (page-wide, not local column)","Geometry Fact != Structural Object (alignment membership is geometry, not column semantics)","whole-group aggregation invalid (target column shares alignment with prose margin)","not a threshold-tuning problem (15-combo space exhausted)","M6/M7/M8 = patch accumulation, doesn't fix research-object error"],
+  "rejection_reason": "A=0 (preregistered REJECTED rule); research object structurally cannot bear column-membership semantics; no remedy, no post-hoc tuning",
+  "evidence_level": "EXPERIMENTALLY VERIFIED"},
+
+ "B_c2_not_implemented": {
+  "design": "candidate-column-segment = more localized column-segment object attempting to correct whole-group error",
+  "coverage_audit": {"universe": 545, "numeric_x0_clusters": 138, "negative_clusters": 137, "positive_gt_confirmed": 1, "corpus_discovery": "709 clusters / 10 docs, new INDEX_LIST boundary", "corpus_acquisition": "4 arXiv docs / 80 pages / 131 clusters, new CODE_LINE_NUMBER boundary", "positive_diversity": "still insufficient (GT_CONFIRMED_POSITIVE = 1, new = 0)"},
+  "diagnosis": ["C2 = REQUIRES_REDESIGN (M3 POSSIBLY_REDUNDANT, M5 self-contradictory)","POSITIVE_COVERAGE = INSUFFICIENT","dual block: redesign x coverage"],
+  "decision": "did NOT continue tuning predicates on coverage insufficiency; chose corpus expansion + mechanism redesign over patch accumulation (positive diversity insufficiency is research-object-level, predicates don't fix it)",
+  "evidence_level": "EXPERIMENTALLY VERIFIED"},
+
+ "C_pivot_to_mb": {
+  "impact_ranking": {"rank": "TOP1", "direct": 6, "indirect": 3, "only_real_fp": "AMB-135", "channel_correctness": "8/8 across 3 docs", "med_excluded": "10 cases no tables"},
+  "expressability_audit": {"evidence_exists": true, "blind_vs_resolved_same_class": true, "primary_gap": "Consumer/Integration (IS-11 consumed TLD chunker heuristic, never queried frozen structural facts)", "observation_gap": "documented (drawings) but NOT load-bearing for Type C route"},
+  "mb_definition": "NOT table detector / NOT row-number recognizer / NOT new decision rule; IS: Frozen Geometry -> LSP -> RSC -> EIC-1 -> Existing IS-11 Contract -> Existing Decision",
+  "evidence_level": "EXPERIMENTALLY VERIFIED"},
+
+ "D_phase21_22_semantic_boundary": {
+  "phase21_findings": {
+   "semantic_leakage": "original LSP->different_cell mapping = producer-side semantic upgrade (code-level: TLD different_cell presupposes detected table; LSP difference has no table premise)",
+   "eic1_as_gate": "EIC-1 became sole semantic interpretation boundary",
+   "coexistence_rule": "NEW DECISION POLICY (not existing contract); CONFLICT_CONTRACT_UNRESOLVED",
+   "caption_canary_risk": "fact-confirmed (med p20 band = 4 pseudo-cell fragments) -> MANDATORY SAFETY CANARIES"},
+  "phase22_findings": {
+   "lsp": "structural object (authority = zero semantics)",
+   "rsc": "structural evidence (ceiling: 'local structural organization', != table region)",
+   "eic1": "interpretation candidate (Cell Context Evidence = B: Semantic Interpretation, not fact, not capability; interpretation_status=candidate)",
+   "human_validation": "sole final semantic authority, at reusable pattern level (not instance annotation)",
+   "conflict": "EVIDENCE_CONFLICT (observable + provenance), not winner/fallback/trust",
+   "no_semantic_closure": "formalized (6 forbidden transitions)",
+   "authority_gradient": "L0-L6 fixed",
+   "decision_policy_change_required": "FALSE (EIC = interpretation contract, not decision policy)"},
+  "caption_hard_canary_reason": "caption row indistinguishable from table row at pure Level-2 partition level -> Geometry != Table Semantics -> canary = semantic-boundary regression gate",
+  "evidence_level": "OBSERVED + INFERRED + DESIGN"},
+
+ "E_phase31_localization_gap": {
+  "finding": "raw left_alignment_group has page-wide margin/caption contamination (caption page co-structure=24, cs p3=125; margin groups n=15-24, y_ext 293-393pt pollute every page); co-structure count alone cannot distinguish tables from captions",
+  "research_finding_name": "LOCALIZATION GAP",
+  "fix": "region derivation needs localization constraint (y_ext <= bound) excluding page-wide whole groups - structural recurrence of PH-02 whole-group trap",
+  "parameters_preregistered": {"P_min_members": 2, "P_min_bands": 3, "P_localization": "150pt", "P_min_costructure_band_local": 3, "same_y_band": "True (frozen)"},
+  "verification": {"canary_pair_band_density": "0 across 100/150/200pt bounds", "amb135_target_density": 30, "150pt": "mid-gap (table cols 32-88pt vs caption/margin 293-393pt; margin 62 down / 143 up)", "robustness": "P_localization robust across [100,200]pt"},
+  "key_principle": "load-bearing parameters entirely on canary-boundary side; AMB-135 repair does NOT depend on parameter fine-tuning (density=30 >> threshold 3)",
+  "evidence_level": "EXPERIMENTALLY VERIFIED"},
+
+ "F_phase32_final_result": {
+  "experiment": "frozen 21-row matrix + OFF/ON + determinism double-run",
+  "s_criteria": {"S1": "PASS (AMB-135 MERGE->KEEP_SEPARATE via eic1_single_source)", "S2": "PASS HARD GATE (canaries 414/422 ABSTAIN unchanged)", "S3": "PASS (0 collateral)", "S4": "PASS (8/8 controls unchanged)", "S5": "PASS (0 leakage, 11 admitted all candidate)", "S6": "PASS (hash unchanged + behavioral 10/10)", "S7": "PASS (11/11 provenance 1.0)", "S8": "PASS (21/21 determinism)", "S9": "PASS (21/21 OFF byte-identical; 8 mismatch = tuple/list artifacts)", "S10": "PASS (drift 0)"},
+  "f_criteria_total": 0,
+  "recovery": {"amb135_fp": "fixed", "direct_recovered_6_of_8": ["AMB-130","AMB-457","AMB-467","AMB-483","AMB-505","AMB-514"], "honest_abstain_2_of_8": ["AMB-313 (lag=0)","AMB-462 (lag=1)"], "unsafe_flip": 0, "collateral": 0},
+  "honest_disclosures": [
+   "AMB-262 classification correction (Phase 2/3 labeled 'different_band'; actual case pair same-band -> GT-consistent recovery; earlier measurement was different atoms)",
+   "OFF tuple/list serialization pseudo-mismatch (0 real differences after normalization; 21/21 decisions byte-identical)",
+   "natural conflict coverage = 0 (conflict contract unexercised; synthetic unit test needed)",
+   "AMB-313/462 honest ABSTAIN (partition unresolvable/weak, predicted)",
+   "corpus/descriptive-row coverage limitation (LLaMA/2212/axis PDFs not in available corpus)"],
+  "evidence_level": "EXPERIMENTALLY VERIFIED"},
+
+ "final_state": {"phase_32": "REPLAY_PASS", "frozen_baseline": "INTACT", "production": false, "stop": true}
+}

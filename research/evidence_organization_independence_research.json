@@ -1,0 +1,1654 @@
+{
+  "cross_doc_survey": [
+    {
+      "doc": "is11_med_001",
+      "page": 8,
+      "extent_bbox": [
+        251.12,
+        94.07,
+        419.03,
+        187.91
+      ],
+      "primitive_count": 4,
+      "area": 15756.85,
+      "near_text_count": 154,
+      "near_text_samples": [
+        {
+          "text": "4",
+          "dy": 40.2,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "5",
+          "dy": 51.1,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "6",
+          "dy": 47.8,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_med_001",
+      "page": 8,
+      "extent_bbox": [
+        91.54,
+        94.07,
+        189.04,
+        187.91
+      ],
+      "primitive_count": 3,
+      "area": 9149.67,
+      "near_text_count": 154,
+      "near_text_samples": [
+        {
+          "text": "4",
+          "dy": 40.2,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "5",
+          "dy": 51.1,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "6",
+          "dy": 47.8,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_med_001",
+      "page": 9,
+      "extent_bbox": [
+        93.16,
+        103.07,
+        484.86,
+        280.83
+      ],
+      "primitive_count": 13,
+      "area": 69629.08,
+      "near_text_count": 59,
+      "near_text_samples": [
+        {
+          "text": "N",
+          "dy": 11.6,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "N",
+          "dy": 11.6,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "OH",
+          "dy": 56.7,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_med_001",
+      "page": 11,
+      "extent_bbox": [
+        96.09,
+        135.89,
+        515.91,
+        275.83
+      ],
+      "primitive_count": 15,
+      "area": 58748.94,
+      "near_text_count": 107,
+      "near_text_samples": [
+        {
+          "text": "variances (",
+          "dy": 38.3,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "σ",
+          "dy": 38.3,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "2",
+          "dy": 43.5,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_med_001",
+      "page": 13,
+      "extent_bbox": [
+        163.87,
+        89.76,
+        476.76,
+        274.46
+      ],
+      "primitive_count": 33,
+      "area": 57790.86,
+      "near_text_count": 84,
+      "near_text_samples": [
+        {
+          "text": "RBF",
+          "dy": 27.3,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "Matérn",
+          "dy": 27.4,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "Periodic",
+          "dy": 27.2,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_med_001",
+      "page": 14,
+      "extent_bbox": [
+        129.23,
+        158.6,
+        482.77,
+        370.72
+      ],
+      "primitive_count": 14,
+      "area": 74995.0,
+      "near_text_count": 120,
+      "near_text_samples": [
+        {
+          "text": "Analysis of different low-dimensional de",
+          "dy": 25.4,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "20",
+          "dy": 21.2,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "100",
+          "dy": 21.2,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_med_001",
+      "page": 15,
+      "extent_bbox": [
+        123.71,
+        382.73,
+        525.71,
+        527.59
+      ],
+      "primitive_count": 2,
+      "area": 58232.96,
+      "near_text_count": 131,
+      "near_text_samples": [
+        {
+          "text": "features for entropy, the results in Fig",
+          "dy": 55.0,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "between entropy and both of",
+          "dy": 34.0,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "ϵ",
+          "dy": 34.1,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_med_001",
+      "page": 16,
+      "extent_bbox": [
+        129.23,
+        177.32,
+        482.77,
+        468.99
+      ],
+      "primitive_count": 27,
+      "area": 103116.73,
+      "near_text_count": 109,
+      "near_text_samples": [
+        {
+          "text": "the eigenvalues of Coulomb matrices usin",
+          "dy": 58.8,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "that a highly substituted carbon in an a",
+          "dy": 37.8,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "higher upper bound for",
+          "dy": 16.9,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_med_001",
+      "page": 19,
+      "extent_bbox": [
+        109.39,
+        86.27,
+        524.82,
+        413.82
+      ],
+      "primitive_count": 4,
+      "area": 136076.72,
+      "near_text_count": 92,
+      "near_text_samples": [
+        {
+          "text": "32",
+          "dy": 43.6,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "34",
+          "dy": 21.1,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "−",
+          "dy": 53.2,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_med_001",
+      "page": 20,
+      "extent_bbox": [
+        88.45,
+        127.28,
+        526.03,
+        305.95
+      ],
+      "primitive_count": 16,
+      "area": 78181.38,
+      "near_text_count": 99,
+      "near_text_samples": [
+        {
+          "text": "Data-efficient models of entropy",
+          "dy": 29.9,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "0",
+          "dy": 0.5,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "500",
+          "dy": 0.5,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_med_001",
+      "page": 23,
+      "extent_bbox": [
+        129.23,
+        85.03,
+        482.78,
+        379.66
+      ],
+      "primitive_count": 9,
+      "area": 104163.96,
+      "near_text_count": 81,
+      "near_text_samples": [
+        {
+          "text": "20",
+          "dy": 50.4,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "100",
+          "dy": 47.5,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "200",
+          "dy": 47.5,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_med_001",
+      "page": 24,
+      "extent_bbox": [
+        176.83,
+        144.96,
+        469.99,
+        517.0
+      ],
+      "primitive_count": 2,
+      "area": 109066.48,
+      "near_text_count": 80,
+      "near_text_samples": [
+        {
+          "text": "high-dimensional descriptors were used i",
+          "dy": 47.3,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "for kernel ridge regression models of ZP",
+          "dy": 26.4,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "25%",
+          "dy": 48.6,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_resnet",
+      "page": 1,
+      "extent_bbox": [
+        308.86,
+        224.39,
+        545.14,
+        302.4
+      ],
+      "primitive_count": 10,
+      "area": 18433.31,
+      "near_text_count": 220,
+      "near_text_samples": [
+        {
+          "text": "Microsoft Research",
+          "dy": 43.3,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "{",
+          "dy": 22.3,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "kahe, v-xiangz, v-shren, jiansun",
+          "dy": 29.4,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_resnet",
+      "page": 2,
+      "extent_bbox": [
+        128.96,
+        84.86,
+        204.34,
+        142.05
+      ],
+      "primitive_count": 3,
+      "area": 4310.93,
+      "near_text_count": 155,
+      "near_text_samples": [
+        {
+          "text": "identity",
+          "dy": 18.4,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "weight layer",
+          "dy": 17.9,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "weight layer",
+          "dy": 22.1,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_resnet",
+      "page": 4,
+      "extent_bbox": [
+        238.29,
+        176.24,
+        284.68,
+        581.35
+      ],
+      "primitive_count": 16,
+      "area": 18792.98,
+      "near_text_count": 385,
+      "near_text_samples": [
+        {
+          "text": "7x7 conv, 64, /2",
+          "dy": 16.6,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "pool, /2",
+          "dy": 3.9,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "3x3 conv, 64",
+          "dy": 8.8,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_resnet",
+      "page": 5,
+      "extent_bbox": [
+        84.76,
+        251.4,
+        510.45,
+        389.63
+      ],
+      "primitive_count": 18,
+      "area": 58841.99,
+      "near_text_count": 286,
+      "near_text_samples": [
+        {
+          "text": "conv5 x",
+          "dy": 59.5,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "7",
+          "dy": 59.5,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "×",
+          "dy": 54.9,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_resnet",
+      "page": 6,
+      "extent_bbox": [
+        333.8,
+        72.0,
+        535.93,
+        142.98
+      ],
+      "primitive_count": 6,
+      "area": 14347.33,
+      "near_text_count": 141,
+      "near_text_samples": [
+        {
+          "text": "model",
+          "dy": 10.8,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "top-1 err.",
+          "dy": 10.8,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "top-5 err.",
+          "dy": 10.8,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_resnet",
+      "page": 8,
+      "extent_bbox": [
+        61.95,
+        72.04,
+        495.63,
+        328.79
+      ],
+      "primitive_count": 53,
+      "area": 111348.41,
+      "near_text_count": 207,
+      "near_text_samples": [
+        {
+          "text": "10",
+          "dy": 48.6,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "20",
+          "dy": 4.9,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "error (%)",
+          "dy": 55.6,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_efficientnet",
+      "page": 1,
+      "extent_bbox": [
+        307.44,
+        175.27,
+        539.1,
+        360.29
+      ],
+      "primitive_count": 5,
+      "area": 42860.34,
+      "near_text_count": 303,
+      "near_text_samples": [
+        {
+          "text": "Mingxing Tan",
+          "dy": 22.3,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "1",
+          "dy": 26.6,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "Quoc V. Le",
+          "dy": 22.3,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_efficientnet",
+      "page": 4,
+      "extent_bbox": [
+        87.49,
+        74.62,
+        529.52,
+        184.42
+      ],
+      "primitive_count": 6,
+      "area": 48530.97,
+      "near_text_count": 214,
+      "near_text_samples": [
+        {
+          "text": "EfﬁcientNet: Rethinking Model Scaling fo",
+          "dy": 18.4,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "0",
+          "dy": 4.3,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "2",
+          "dy": 4.3,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_efficientnet",
+      "page": 4,
+      "extent_bbox": [
+        313.29,
+        268.69,
+        535.6,
+        441.39
+      ],
+      "primitive_count": 7,
+      "area": 38391.93,
+      "near_text_count": 360,
+      "near_text_samples": [
+        {
+          "text": "Figure 3.",
+          "dy": 41.6,
+          "x_overlap": false,
+          "has_fig_prefix": true
+        },
+        {
+          "text": "Scaling Up a Baseline Model with Differe",
+          "dy": 41.7,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "w",
+          "dy": 41.5,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_efficientnet",
+      "page": 6,
+      "extent_bbox": [
+        307.44,
+        444.98,
+        532.08,
+        625.39
+      ],
+      "primitive_count": 5,
+      "area": 40525.23,
+      "near_text_count": 380,
+      "near_text_samples": [
+        {
+          "text": "EfﬁcientNet-B6",
+          "dy": 58.6,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "84.0%",
+          "dy": 58.6,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "96.8%",
+          "dy": 58.6,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_efficientnet",
+      "page": 7,
+      "extent_bbox": [
+        104.04,
+        243.49,
+        492.84,
+        455.41
+      ],
+      "primitive_count": 19,
+      "area": 82394.04,
+      "near_text_count": 383,
+      "near_text_samples": [
+        {
+          "text": "Food-101",
+          "dy": 52.0,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "Inception-v4",
+          "dy": 52.0,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "90.8%",
+          "dy": 52.0,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_efficientnet",
+      "page": 8,
+      "extent_bbox": [
+        324.99,
+        242.03,
+        524.5,
+        389.93
+      ],
+      "primitive_count": 7,
+      "area": 29508.02,
+      "near_text_count": 277,
+      "near_text_samples": [
+        {
+          "text": "Figure 7.",
+          "dy": 19.9,
+          "x_overlap": false,
+          "has_fig_prefix": true
+        },
+        {
+          "text": "Class Activation Map (CAM) (",
+          "dy": 19.9,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "Zhou et al.",
+          "dy": 19.9,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_cs_001",
+      "page": 1,
+      "extent_bbox": [
+        124.54,
+        362.33,
+        506.13,
+        678.4
+      ],
+      "primitive_count": 18,
+      "area": 120606.66,
+      "near_text_count": 214,
+      "near_text_samples": [
+        {
+          "text": "and end-task performance, while being si",
+          "dy": 59.2,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "of latency, memory, throughput, and ener",
+          "dy": 48.3,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "1.58-bit LLM defines a new scaling law a",
+          "dy": 37.4,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_cs_001",
+      "page": 4,
+      "extent_bbox": [
+        110.71,
+        72.0,
+        501.28,
+        217.53
+      ],
+      "primitive_count": 14,
+      "area": 56838.83,
+      "near_text_count": 89,
+      "near_text_samples": [
+        {
+          "text": "1.3B",
+          "dy": 26.1,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "3B",
+          "dy": 26.1,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "7B",
+          "dy": 26.1,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "is11_cs_001",
+      "page": 5,
+      "extent_bbox": [
+        110.71,
+        72.0,
+        501.28,
+        217.53
+      ],
+      "primitive_count": 13,
+      "area": 56840.51,
+      "near_text_count": 111,
+      "near_text_samples": [
+        {
+          "text": "BitNet b1.58",
+          "dy": 16.1,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "LLaMA",
+          "dy": 16.1,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "0.0",
+          "dy": 21.4,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 10,
+      "extent_bbox": [
+        173.15,
+        281.92,
+        433.54,
+        572.6
+      ],
+      "primitive_count": 11,
+      "area": 75688.97,
+      "near_text_count": 150,
+      "near_text_samples": [
+        {
+          "text": "The VQA methodology aims to minimize an ",
+          "dy": 58.2,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "J",
+          "dy": 58.6,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "given in Eqn. (20), by optimizing the co",
+          "dy": 58.2,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 12,
+      "extent_bbox": [
+        265.21,
+        131.8,
+        453.86,
+        265.78
+      ],
+      "primitive_count": 15,
+      "area": 25276.68,
+      "near_text_count": 186,
+      "near_text_samples": [
+        {
+          "text": "⟨",
+          "dy": 4.2,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "σ",
+          "dy": 2.8,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "z",
+          "dy": 2.1,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 12,
+      "extent_bbox": [
+        142.87,
+        335.4,
+        441.25,
+        510.73
+      ],
+      "primitive_count": 11,
+      "area": 52313.33,
+      "near_text_count": 237,
+      "near_text_samples": [
+        {
+          "text": "(a) Sketch of two VQ circuits composed o",
+          "dy": 43.7,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "U",
+          "dy": 44.0,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "(",
+          "dy": 44.0,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 12,
+      "extent_bbox": [
+        123.65,
+        598.09,
+        471.63,
+        660.54
+      ],
+      "primitive_count": 13,
+      "area": 21733.64,
+      "near_text_count": 306,
+      "near_text_samples": [
+        {
+          "text": "depth",
+          "dy": 56.1,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "d",
+          "dy": 56.4,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "(b) Example of an ansatz circuit",
+          "dy": 36.6,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 14,
+      "extent_bbox": [
+        220.24,
+        99.45,
+        409.38,
+        234.94
+      ],
+      "primitive_count": 1,
+      "area": 25625.93,
+      "near_text_count": 112,
+      "near_text_samples": [
+        {
+          "text": "14",
+          "dy": 57.2,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "QNPU",
+          "dy": 1.5,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "CPCPCP",
+          "dy": 12.5,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 15,
+      "extent_bbox": [
+        139.04,
+        93.78,
+        274.68,
+        230.45
+      ],
+      "primitive_count": 2,
+      "area": 18536.99,
+      "near_text_count": 144,
+      "near_text_samples": [
+        {
+          "text": "15",
+          "dy": 51.6,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "QNPU",
+          "dy": 1.5,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "CP",
+          "dy": 6.8,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 16,
+      "extent_bbox": [
+        383.17,
+        505.72,
+        445.8,
+        538.11
+      ],
+      "primitive_count": 3,
+      "area": 2028.66,
+      "near_text_count": 133,
+      "near_text_samples": [
+        {
+          "text": "T",
+          "dy": 42.0,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "t",
+          "dy": 41.2,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "=",
+          "dy": 40.5,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 17,
+      "extent_bbox": [
+        238.34,
+        91.31,
+        342.47,
+        175.2
+      ],
+      "primitive_count": 1,
+      "area": 8736.32,
+      "near_text_count": 47,
+      "near_text_samples": [
+        {
+          "text": "17",
+          "dy": 49.1,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "T",
+          "dy": 4.6,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "t",
+          "dy": 3.8,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 17,
+      "extent_bbox": [
+        164.95,
+        334.47,
+        475.03,
+        418.37
+      ],
+      "primitive_count": 1,
+      "area": 26014.69,
+      "near_text_count": 142,
+      "near_text_samples": [
+        {
+          "text": "expectation value",
+          "dy": 45.9,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "⟨",
+          "dy": 39.2,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "σ",
+          "dy": 46.2,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 17,
+      "extent_bbox": [
+        154.3,
+        472.25,
+        481.99,
+        556.15
+      ],
+      "primitive_count": 1,
+      "area": 27491.3,
+      "near_text_count": 126,
+      "near_text_samples": [
+        {
+          "text": "(a) Compiled QNPU for the implementation",
+          "dy": 38.0,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "j",
+          "dy": 38.3,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "DN",
+          "dy": 38.0,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 18,
+      "extent_bbox": [
+        117.2,
+        144.3,
+        283.04,
+        243.8
+      ],
+      "primitive_count": 9,
+      "area": 16503.09,
+      "near_text_count": 212,
+      "near_text_samples": [
+        {
+          "text": "identities, which are available, for exa",
+          "dy": 59.0,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "ISKIT",
+          "dy": 59.6,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "[27]. The scaling of the number of gates",
+          "dy": 59.0,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 18,
+      "extent_bbox": [
+        340.07,
+        75.53,
+        505.91,
+        243.8
+      ],
+      "primitive_count": 8,
+      "area": 27907.69,
+      "near_text_count": 167,
+      "near_text_samples": [
+        {
+          "text": "18",
+          "dy": 33.3,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "identities, which are available, for exa",
+          "dy": 9.7,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "ISKIT",
+          "dy": 9.2,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 19,
+      "extent_bbox": [
+        241.64,
+        124.89,
+        378.13,
+        239.97
+      ],
+      "primitive_count": 2,
+      "area": 15706.66,
+      "near_text_count": 96,
+      "near_text_samples": [
+        {
+          "text": "applying G, all carry bits need to be re",
+          "dy": 39.6,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "|",
+          "dy": 32.8,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "0",
+          "dy": 39.9,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 19,
+      "extent_bbox": [
+        134.07,
+        564.44,
+        504.67,
+        699.92
+      ],
+      "primitive_count": 2,
+      "area": 50210.49,
+      "near_text_count": 150,
+      "near_text_samples": [
+        {
+          "text": "given by lines in Fig. 9, are clearly vi",
+          "dy": 56.4,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "(",
+          "dy": 56.7,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "n",
+          "dy": 56.7,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 23,
+      "extent_bbox": [
+        122.73,
+        274.1,
+        285.2,
+        371.58
+      ],
+      "primitive_count": 5,
+      "area": 15836.11,
+      "near_text_count": 177,
+      "near_text_samples": [
+        {
+          "text": "by an augmented trace distance",
+          "dy": 49.3,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "ε",
+          "dy": 49.6,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "tr",
+          "dy": 48.7,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 23,
+      "extent_bbox": [
+        346.55,
+        274.19,
+        509.01,
+        371.66
+      ],
+      "primitive_count": 6,
+      "area": 15835.77,
+      "near_text_count": 177,
+      "near_text_samples": [
+        {
+          "text": "by an augmented trace distance",
+          "dy": 49.4,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "ε",
+          "dy": 49.7,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "tr",
+          "dy": 48.8,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 24,
+      "extent_bbox": [
+        119.99,
+        143.87,
+        501.83,
+        269.21
+      ],
+      "primitive_count": 13,
+      "area": 47860.7,
+      "near_text_count": 194,
+      "near_text_samples": [
+        {
+          "text": "y",
+          "dy": 15.2,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "FD",
+          "dy": 11.1,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "n",
+          "dy": 17.0,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 24,
+      "extent_bbox": [
+        121.74,
+        344.7,
+        504.32,
+        592.99
+      ],
+      "primitive_count": 32,
+      "area": 94991.28,
+      "near_text_count": 257,
+      "near_text_samples": [
+        {
+          "text": "x",
+          "dy": 48.8,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "k",
+          "dy": 48.1,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "[m]",
+          "dy": 47.0,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 26,
+      "extent_bbox": [
+        114.66,
+        303.4,
+        502.67,
+        426.71
+      ],
+      "primitive_count": 40,
+      "area": 47845.58,
+      "near_text_count": 268,
+      "near_text_samples": [
+        {
+          "text": "from the initial to the final time step,",
+          "dy": 58.7,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "(fine grid) symbols. Mind that a larger ",
+          "dy": 38.8,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "d",
+          "dy": 39.1,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 26,
+      "extent_bbox": [
+        114.66,
+        495.38,
+        277.12,
+        592.85
+      ],
+      "primitive_count": 43,
+      "area": 15835.76,
+      "near_text_count": 359,
+      "near_text_samples": [
+        {
+          "text": "0",
+          "dy": 55.8,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "0",
+          "dy": 55.8,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": ".",
+          "dy": 55.8,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 26,
+      "extent_bbox": [
+        340.21,
+        495.38,
+        502.67,
+        592.85
+      ],
+      "primitive_count": 48,
+      "area": 15835.67,
+      "near_text_count": 359,
+      "near_text_samples": [
+        {
+          "text": "0",
+          "dy": 55.8,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "0",
+          "dy": 55.8,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": ".",
+          "dy": 55.8,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 28,
+      "extent_bbox": [
+        123.73,
+        77.15,
+        503.18,
+        178.35
+      ],
+      "primitive_count": 12,
+      "area": 38398.5,
+      "near_text_count": 125,
+      "near_text_samples": [
+        {
+          "text": "28",
+          "dy": 35.0,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "10",
+          "dy": 2.9,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "−",
+          "dy": 1.3,
+          "x_overlap": true,
+          "has_fig_prefix": false
+        }
+      ]
+    },
+    {
+      "doc": "arxiv_2402.18619",
+      "page": 35,
+      "extent_bbox": [
+        273.12,
+        74.5,
+        335.75,
+        142.12
+      ],
+      "primitive_count": 7,
+      "area": 4234.87,
+      "near_text_count": 138,
+      "near_text_samples": [
+        {
+          "text": "35",
+          "dy": 32.3,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "(a) Permutation operator",
+          "dy": 10.7,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        },
+        {
+          "text": "T",
+          "dy": 12.3,
+          "x_overlap": false,
+          "has_fig_prefix": false
+        }
+      ]
+    }
+  ]
+}

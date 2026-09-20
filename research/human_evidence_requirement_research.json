@@ -1,0 +1,350 @@
+{
+  "research_id": "human_evidence_requirement_research",
+  "date": "2026-09-18",
+  "mode": "READ_ONLY_RESEARCH",
+  "governance": {
+    "FROZEN_BASELINE": "INTACT",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true,
+    "frozen_shas": {
+      "P1_AtomicText": "74d23ec784d65782",
+      "TLD": "022f5c21e872ad9e",
+      "GT": "7349963d0d23b5ef",
+      "layout_analyzer": "8f69f0d206b3e565",
+      "DGF": "f25a5ff41afa1bec",
+      "DEF": "cba9e583517f8967"
+    },
+    "drift": 0
+  },
+  "research_question": "当 Human 需要验证一个文档中的具体关系、归属、边界或语义判断时，究竟需要哪些最小证据，才能在不重新阅读整份文档的情况下完成判断？",
+  "scope": {
+    "in_scope": [
+      "识别跨任务可复用的 Evidence Gap 抽象类型",
+      "识别每个 Evidence Gap 类型对应的 Evidence Function",
+      "确定 Minimum Sufficient Evidence 的结构边界",
+      "区分 Evidence Exists / Organized / Presented / Consumed / Sufficient"
+    ],
+    "out_of_scope": [
+      "案例特定字段设计",
+      "Figure/Table/Formula 特定解决方案",
+      "新检测器/规则/阈值/模块/LLM 提案",
+      "任何代码/数据/算法修改",
+      "任何 Human Validation 重跑"
+    ]
+  },
+  "evidence_base": {
+    "reports_analyzed": 14,
+    "human_tasks_covered": 2,
+    "task_1": {
+      "name": "Text-Drawing Structural Association Judgment",
+      "source": "M-A Human Validation Pilot + A/B Pilot",
+      "n_e0_pilot": 79,
+      "n_p1_ab": 24,
+      "judgment_distribution_e0": { "YES": 61, "NO": 4, "UNCERTAIN": 14 }
+    },
+    "task_2": {
+      "name": "Text-Text Boundary Decision",
+      "source": "Human Boundary Decision Evidence Dependency Audit",
+      "n": 45,
+      "judgment_types": ["MERGE", "KEEP_SEPARATE", "UNKNOWN"]
+    },
+    "documents": 5,
+    "document_types": ["arxiv-style scientific papers only"],
+    "generalization_status": "NOT_DEMONSTRATED (5 papers only, single document type)"
+  },
+  "cross_task_findings": {
+    "finding_1": {
+      "name": "Evidence Exists but Not Used",
+      "m_a_evidence": "4/9 UNCERTAIN = evidence sufficient but not presented (44%); primary bottleneck = Pack completeness; 0/9 = evidence missing",
+      "boundary_evidence": "100% of decision-relevant evidence EXISTS (E4=0%); 64% = existing but not consumed by IS-11",
+      "convergence": "Both tasks show evidence EXISTS but NOT reaching Human/consumer in usable form"
+    },
+    "finding_2": {
+      "name": "Semantic Boundary is the Minority",
+      "m_a_evidence": "5/14 UNCERTAIN = POSSIBLE semantic boundary (36%), 0 CONFIRMED",
+      "boundary_evidence": "0/45 = genuine semantic judgment (E5=0%)",
+      "convergence": "Semantic boundary exists but is NOT the primary blocker; most uncertainty is reducible by evidence improvement"
+    },
+    "finding_3": {
+      "name": "Observation Coverage Gap is Rare but Unfixable",
+      "m_a_evidence": "2/9 UNCERTAIN = true observation gap (DGF=0) (22%)",
+      "boundary_evidence": "0/45 = evidence missing (E4=0%)",
+      "convergence": "True nothing-to-observe is rare; when it occurs, no Pack/aggregation can fix it; requires new detection capability"
+    }
+  },
+  "table_1_human_task_abstraction": [
+    {
+      "task_id": "T1",
+      "abstract_task_type": "STRUCTURAL_ASSOCIATION_JUDGMENT",
+      "question_form": "Is X associated with Y?",
+      "evidence_needed": "Target object + reference object + spatial relation + context",
+      "observed_in": "M-A (text-drawing)",
+      "n": "79+24",
+      "key_property": "Binary structural judgment; does NOT require semantic identity"
+    },
+    {
+      "task_id": "T2",
+      "abstract_task_type": "BOUNDARY_DECISION",
+      "question_form": "Should A and B be merged or separated?",
+      "evidence_needed": "Both objects + same_y context + structural context",
+      "observed_in": "Boundary (text-text)",
+      "n": "45",
+      "key_property": "Merge/separate; requires structural role understanding"
+    },
+    {
+      "task_id": "T3",
+      "abstract_task_type": "DISAMBIGUATION_JUDGMENT",
+      "question_form": "Which of N candidates is X associated with?",
+      "evidence_needed": "Target + multiple candidates + pairwise relations",
+      "observed_in": "M-A multi-drawing (7 pages)",
+      "n": "~7",
+      "key_property": "Ambiguous when distances similar; nearest-heuristic default"
+    },
+    {
+      "task_id": "T4",
+      "abstract_task_type": "ROLE_DISAMBIGUATION_JUDGMENT",
+      "question_form": "What is the semantic role of X?",
+      "evidence_needed": "Target + context + lexical pattern",
+      "observed_in": "M-A caption-vs-reference, label-vs-body",
+      "n": "5",
+      "key_property": "SEMANTIC boundary — cannot resolve from geometry alone"
+    },
+    {
+      "task_id": "T5",
+      "abstract_task_type": "CAPTION_IDENTITY",
+      "status": "REJECTED",
+      "reason": "Too semantic; requires concept definition"
+    },
+    {
+      "task_id": "T6",
+      "abstract_task_type": "KEEP_REJECT",
+      "status": "REJECTED",
+      "reason": "Too algorithmic; Human validates evidence, not algorithm decisions"
+    }
+  ],
+  "table_2_evidence_gap_abstract": [
+    {
+      "gap_id": "G1",
+      "gap_type": "OBSERVATION_COVERAGE_GAP",
+      "definition": "Nothing to observe on the page (DGF=0, no drawing, no raster)",
+      "root_cause": "Figure is on another page; pure text page",
+      "fixable_by_pack": false,
+      "cross_task_evidence": "M-A: 2/9 UNCERTAIN; Boundary: 0/45",
+      "case_count": 2,
+      "fix_requires": "cross-page reference resolution (new detection capability)",
+      "status": "DESIGN_RESEARCH_REQUIRED"
+    },
+    {
+      "gap_id": "G2",
+      "gap_type": "EVIDENCE_ORGANIZATION_GAP",
+      "definition": "Primitives exist (DGF>0) but no usable aggregate formed (DEF=0); OR distinct states conflated",
+      "root_cause": "Aggregation parameters filter out valid primitives; OR state model too coarse",
+      "fixable_by_pack": "PARTIAL",
+      "cross_task_evidence": "M-A: 3/9 UNCERTAIN (2 correctly excluded, 1 possible gap) + 8 conflated-state",
+      "case_count": "4+8",
+      "fix_requires": "aggregation parameter investigation (DESIGN_RESEARCH_REQUIRED); state model FIXED in E1",
+      "status": "PARTIALLY_FIXED (state conflation resolved; aggregation gap open)"
+    },
+    {
+      "gap_id": "G3",
+      "gap_type": "EVIDENCE_PRESENTATION_GAP",
+      "definition": "Evidence exists and is organized, but NOT presented to the Human",
+      "root_cause": "Pack generation logic excludes cases; context hardcoded empty; threshold dual-use",
+      "fixable_by_pack": true,
+      "cross_task_evidence": "M-A: 4/9 UNCERTAIN; Boundary: 64% Consumer Integration (related)",
+      "case_count": "4+16",
+      "fix_requires": "Pack redesign (DONE in E1, FROZEN)",
+      "status": "FIXED (E1 PR1/PR2/PR3, P0 verified)"
+    },
+    {
+      "gap_id": "G4",
+      "gap_type": "CONSUMER_INTEGRATION_GAP",
+      "definition": "Evidence exists, organized, and presented, but consumer does not use it",
+      "root_cause": "Consumer extracts binary signal from rich content; OR Human doesn't view presented evidence",
+      "fixable_by_pack": false,
+      "cross_task_evidence": "Boundary: IS-11 reads P1 text but extracts only binary (64%); M-A P1: usage NOT_OBSERVABLE",
+      "case_count": "29+?",
+      "fix_requires": "consumer redesign (NOT_AUTHORIZED) / UI instrumentation (NOT_OBSERVABLE)",
+      "status": "NOT_AUTHORIZED / NOT_OBSERVABLE"
+    },
+    {
+      "gap_id": "G5",
+      "gap_type": "SEMANTIC_BOUNDARY",
+      "definition": "Evidence is complete and consumed, but judgment remains uncertain due to genuine semantic ambiguity",
+      "root_cause": "Caption vs reference; label vs body text; structural role undeterminable from geometry",
+      "fixable_by_pack": false,
+      "cross_task_evidence": "M-A: 5/14 UNCERTAIN POSSIBLE (0 CONFIRMED); Boundary: 0/45",
+      "case_count": 5,
+      "fix_requires": "NONE — legitimate Human judgment boundary",
+      "status": "NOT_A_GAP_TO_FIX (route to Human Validation)"
+    }
+  ],
+  "gap_hierarchy": "Observation (G1) → Organization (G2) → Presentation (G3) → Consumption (G4) → Semantic (G5)",
+  "gap_frequency_m_a_uncertain": {
+    "G1_observation": { "count": 2, "pct": 14, "fixable": false },
+    "G2_organization": { "count": 3, "pct": 21, "fixable": "PARTIAL" },
+    "G3_presentation": { "count": 4, "pct": 29, "fixable": true, "fixed_in": "E1" },
+    "G4_consumption": { "count": "NOT_OBSERVABLE", "pct": "N/A", "fixable": false },
+    "G5_semantic": { "count": 5, "pct": 36, "fixable": false, "confirmed": 0 }
+  },
+  "candidate_gap_type_evaluation": [
+    { "candidate": "Identity", "supported": false, "maps_to": "G5 (Semantic)", "reason": "What is this? is semantic interpretation, not evidence gap" },
+    { "candidate": "Relation", "supported": true, "maps_to": "G3 (Presentation)", "reason": "Spatial relation is core evidence function; gap = not presented. Overlaps with Spatial" },
+    { "candidate": "Reference", "supported": "PARTIAL", "maps_to": "G1 (Observation)", "reason": "Cross-page reference = specific manifestation of observation gap" },
+    { "candidate": "Context", "supported": true, "maps_to": "G3 (Presentation)", "reason": "Same_y context is core evidence function; gap = not collected/presented" },
+    { "candidate": "Spatial", "supported": true, "maps_to": "G3 (Presentation)", "reason": "Spatial evidence; overlaps with Relation — merge as SPATIAL_RELATION" },
+    { "candidate": "Reading-Order", "supported": false, "maps_to": null, "reason": "P5 exists but was NOT a bottleneck in any observed case" },
+    { "candidate": "Boundary", "supported": false, "maps_to": null, "reason": "Boundary is a Human TASK, not an Evidence Gap" },
+    { "candidate": "Evidence Organization", "supported": true, "maps_to": "G2", "reason": "Supported as distinct gap type" },
+    { "candidate": "Evidence Presentation", "supported": true, "maps_to": "G3", "reason": "Supported as distinct gap type; PRIMARY bottleneck" },
+    { "candidate": "Evidence State", "supported": false, "maps_to": "G2 (function)", "reason": "3-state model is an Evidence FUNCTION, not a gap type" },
+    { "candidate": "Semantic Interpretation", "supported": true, "maps_to": "G5", "reason": "Supported as terminal gap type; MINORITY of uncertainty" }
+  ],
+  "candidate_consolidation": {
+    "input_types": 11,
+    "output_gap_types": 5,
+    "rejected_as_not_gap": ["Identity", "Reading-Order", "Boundary", "Evidence State"],
+    "merged": ["Relation + Spatial → SPATIAL_RELATION function within G3"],
+    "collapsed": ["Reference → manifestation of G1"]
+  },
+  "table_3_evidence_function_vs_field": [
+    { "function_id": "F1", "evidence_function": "LEXICAL_DISCRIMINATION", "served_by": "text content, FIG-prefix pattern", "gap_addressed": "Candidate generation (pre-gap)", "status": "EXISTS (P1)" },
+    { "function_id": "F2", "evidence_function": "SPATIAL_REFERENCE_TARGET", "served_by": "drawing extent bbox (DEF)", "gap_addressed": "G1, G2 (presence/absence)", "status": "EXISTS (DEF)" },
+    { "function_id": "F3", "evidence_function": "PROXIMITY_SIGNAL", "served_by": "text-extent distance", "gap_addressed": "G3 (if not presented)", "status": "EXISTS (consumer-computed)" },
+    { "function_id": "F4", "evidence_function": "POSITIONAL_CONTEXT", "served_by": "vertical ordering", "gap_addressed": "G3 (if not presented)", "status": "EXISTS (consumer-computed)" },
+    { "function_id": "F5", "evidence_function": "ALIGNMENT_SIGNAL", "served_by": "x-overlap", "gap_addressed": "G3 (if not presented)", "status": "EXISTS (consumer-computed)" },
+    { "function_id": "F6", "evidence_function": "TEXT_RECONSTRUCTION", "served_by": "same_y context (P2 same_y_band ±5pt)", "gap_addressed": "G3 (context collection)", "status": "EXISTS (P2); FIXED in E1 (±5pt)" },
+    { "function_id": "F7", "evidence_function": "DRAWING_DENSITY_SIGNAL", "served_by": "primitive_count, area", "gap_addressed": "G2 (extent quality)", "status": "EXISTS (DGF/DEF)" },
+    { "function_id": "F8", "evidence_function": "CAPTION_CONTINUATION", "served_by": "adjacent text, h_gap", "gap_addressed": "G3 (context completeness)", "status": "EXISTS (P2 h_gap)" },
+    { "function_id": "F9", "evidence_function": "MULTI_DRAWING_DISAMBIGUATION", "served_by": "number of extents, other FIG texts", "gap_addressed": "G3 (multi-candidate)", "status": "DERIVABLE (not stored)" },
+    { "function_id": "F10", "evidence_function": "REGION_CONTEXT", "served_by": "P6 region type", "gap_addressed": "G3 (page context)", "status": "EXISTS (P6)" },
+    { "function_id": "F11", "evidence_function": "OBSERVATION_COVERAGE_DISAMBIGUATION", "served_by": "evidence_state 3-state model", "gap_addressed": "G2 (state conflation)", "status": "FIXED in E1 (PR3)" },
+    { "function_id": "F12", "evidence_function": "NEGATIVE_CONTROL", "served_by": "Type A + Type B negatives", "gap_addressed": "Validation (pre-gap)", "status": "EXISTS (case design)" }
+  ],
+  "table_4_minimum_sufficient_evidence": {
+    "required": [
+      { "component": "TARGET_TEXT", "function_served": "F1 (lexical)", "justification": "79/79: text is judgment target" },
+      { "component": "NEAREST_DRAWING_EXTENT", "function_served": "F2 (reference target)", "justification": "Always include, even if >60pt; P0 Pattern A fix", "pre_registered_rule": "PR2 (60pt=candidate-gen-only, FROZEN)" },
+      { "component": "SPATIAL_RELATION", "function_served": "F3, F4, F5", "justification": "72/79: spatial relation is core to association" },
+      { "component": "SAME_Y_CONTEXT", "function_served": "F6 (text reconstruction)", "justification": "P0 Pattern B fix; ±5pt", "pre_registered_rule": "PR1 (±5pt, FROZEN)" }
+    ],
+    "conditional": [
+      { "component": "EVIDENCE_STATE", "function_served": "F11", "condition": "only when state ≠ EXTENT_EXISTS", "pre_registered_rule": "PR3 (3-state, FROZEN)" }
+    ],
+    "not_required": [
+      "all-page extents",
+      "sentence/paragraph context",
+      "cross-page context",
+      "reading order sequence",
+      "region classification",
+      "primitive-level detail"
+    ],
+    "evidence_compression_boundary": {
+      "ends_at": "same_y context + nearest extent + spatial relation",
+      "beyond_is": "Document Reconstruction (Human should NOT need to do)"
+    },
+    "pack_remains_non_semantic": true,
+    "status": "OBJECTIVELY_VERIFIED (P0), HUMAN_UNVERIFIED (P1)"
+  },
+  "sufficiency_ladder": {
+    "L0": "Evidence does not exist (G1)",
+    "L1": "Evidence exists but not organized (G2)",
+    "L2": "Evidence organized but not presented (G3)",
+    "L3": "Evidence presented but not consumed (G4)",
+    "L4": "Evidence consumed but not sufficient (G5 — semantic boundary)",
+    "L5": "Evidence consumed and sufficient → judgment made",
+    "m_a_e0_distribution": { "L5": 65, "L0_to_L4": 14 },
+    "m_a_e1_distribution": { "L3_plus": 74, "L0_to_L1": 5 },
+    "boundary_distribution": { "L1_plus": 45, "stuck_L2_L3": 29 }
+  },
+  "table_5_future_problem_handling_principles": [
+    { "principle_id": "P1", "principle": "Separate Evidence Exists from Evidence Sufficient", "rationale": "100% exists; 64% not consumed", "source": "Boundary audit, P0" },
+    { "principle_id": "P2", "principle": "Separate Pack Content from Human Benefit", "rationale": "P0 improved 27/79; P1 didn't confirm", "source": "P0→P1 translation gap" },
+    { "principle_id": "P3", "principle": "Separate Evidence Sufficient from Association True", "rationale": "SUFFICIENT can lead to NO or UNCERTAIN", "source": "Design gate" },
+    { "principle_id": "P4", "principle": "Separate Search from Insufficiency", "rationale": "7/9 M3=YES had M6=SUFFICIENT", "source": "P1 A/B results" },
+    { "principle_id": "P5", "principle": "Classify UNCERTAIN before interpreting", "rationale": "3-class prevents misreading", "source": "Design gate, P1" },
+    { "principle_id": "P6", "principle": "Require convergent evidence for benefit claims", "rationale": "No single metric suffices", "source": "P1 design gate" },
+    { "principle_id": "P7", "principle": "Separate fixable gaps from unfixable", "rationale": "G3 fixable; G1 unfixable", "source": "Gap diagnostic, P0" },
+    { "principle_id": "P8", "principle": "Pre-register thresholds before use", "rationale": "Prevents post-hoc tuning", "source": "PR1/PR2/PR3" },
+    { "principle_id": "P9", "principle": "Instrument usage before claiming benefit", "rationale": "G4 NOT_OBSERVABLE blocked P1", "source": "P1 Lesson 5" },
+    { "principle_id": "P10", "principle": "Stop when evidence is exhausted", "rationale": "INCONCLUSIVE + STOP is honest", "source": "P1 governance" }
+  ],
+  "cross_case_gap_patterns": [
+    { "pattern": "Extent false-None (Type A, 60pt dual-use)", "gap_type": "G3", "cases": "3 across 3 documents", "fixability": "FIXED (E1 PR2)" },
+    { "pattern": "Context empty for negatives (hardcoded)", "gap_type": "G3", "cases": "16 (8 Type A + 8 Type B)", "fixability": "FIXED (E1 unified)" },
+    { "pattern": "±3pt too narrow (baseline variation)", "gap_type": "G3", "cases": "17 (16 neg + 11 cand)", "fixability": "FIXED (E1 PR1 ±5pt)" },
+    { "pattern": "State conflation (binary → 3-state)", "gap_type": "G2", "cases": "8 (3 PRI_NO_EXT + 3 EXT + 2 NO_VIS)", "fixability": "FIXED (E1 PR3)" },
+    { "pattern": "Cross-page reference (figure elsewhere)", "gap_type": "G1", "cases": "4 across 4 documents", "fixability": "UNFIXABLE (needs cross-page)" },
+    { "pattern": "Aggregation miss (233 primitives, no extent)", "gap_type": "G2", "cases": "1 (efficientnet p2)", "fixability": "DESIGN_RESEARCH_REQUIRED" },
+    { "pattern": "Fig. fragment ambiguity (caption vs ref)", "gap_type": "G5", "cases": "3 across 2 documents", "fixability": "NOT_A_GAP (semantic boundary)" },
+    { "pattern": "Non-FIG text role ambiguity (label vs body)", "gap_type": "G5", "cases": "2 across 1 document", "fixability": "NOT_A_GAP (semantic boundary)" },
+    { "pattern": "Consumer binary extraction (IS-11)", "gap_type": "G4", "cases": "29/45 boundary", "fixability": "NOT_AUTHORIZED (consumer change)" },
+    { "pattern": "Improvement without benefit (MINOR changes)", "gap_type": "G4", "cases": "9/12 P1 E1", "fixability": "NOT_OBSERVABLE (no usage logs)" }
+  ],
+  "over_design_check": {
+    "check_1_per_object_design": { "status": "CLEAN", "detail": "All 5 gap types are object-agnostic" },
+    "check_2_field_capability_confusion": { "status": "CLEAN", "detail": "Function ≠ Field distinction explicit; no new field proposed" },
+    "check_3_distance_relation_confusion": { "status": "CLEAN", "detail": "Proximity = SUPPORTING signal, not rule; no threshold derived" },
+    "check_4_evidence_exists_sufficient_confusion": { "status": "CLEAN", "detail": "5-state ladder separates Exists→Sufficient" },
+    "check_5_single_case_generalization": { "status": "CLEAN", "detail": "G2 aggregation gap = DESIGN_RESEARCH_REQUIRED; abstractions require ≥2 cross-document cases" },
+    "check_6_unimplemented_proposals": { "status": "CLEAN", "detail": "No new detector/rule/threshold/module/LLM proposed" },
+    "check_7_hypothesis_as_requirement": { "status": "CLEAN", "detail": "All findings framed as observed; no system MUST statements" },
+    "overall_risk": "LOW"
+  },
+  "final_questions": {
+    "FQ1_universal_requirement_proven": {
+      "status": "PARTIALLY_SUPPORTED",
+      "objective_supported": "5-type gap taxonomy cross-task validated; Minimum Sufficient Evidence schema P0-verified (27/79 improved, 0 regressions); 12 Evidence Functions abstracted",
+      "human_not_supported": "P1 INCONCLUSIVE; usage NOT_OBSERVABLE; N=24 too small; single Human; 5 documents only",
+      "universal_requires": ["interaction logs", "larger N", "multi-document-type", "multi-human"]
+    },
+    "FQ2_safest_abstraction": {
+      "answer": "5-TYPE_EVIDENCE_GAP_HIERARCHY (G1-G5)",
+      "why": "Cross-task validated, object-agnostic, observational, non-semantic, hierarchical, clear fixability status",
+      "secondary": "5-STATE_SUFFICIENCY_LADDER (L0-L5)"
+    },
+    "FQ3_system_modification_needed_now": {
+      "answer": false,
+      "rationale": "E1 already implemented and frozen; P1 INCONCLUSIVE; no new field/detector/rule justified; G1/G2=DESIGN_RESEARCH_REQUIRED; G4=NOT_AUTHORIZED; G5=NOT_A_GAP_TO_FIX"
+    },
+    "FQ4_new_specific_fields_needed": {
+      "answer": false,
+      "rationale": "All 12 Evidence Functions served by EXISTING fields (P1/P2/P5/P6/DGF/DEF); E1 additions already implemented and frozen; gaps are in organization/presentation/consumption, not missing fields"
+    },
+    "FQ5_next_research_action": {
+      "answer": "NO_NEXT_ACTION_JUSTIFIED",
+      "rationale": "Given STOP=TRUE and all authorization flags FALSE, safest action is to STOP",
+      "documented_prerequisite_for_future": "G4 observability audit (READ-ONLY design-feasibility: what interaction signals are technically capturable without code modification)",
+      "alternative": "G4 observability audit (equally valid if team judges it is not premature)"
+    }
+  },
+  "conclusion": {
+    "HUMAN_EVIDENCE_REQUIREMENT_STATUS": "PARTIALLY_SUPPORTED",
+    "PRIMARY_ABSTRACTION": "5-TYPE_EVIDENCE_GAP_HIERARCHY (G1-G5)",
+    "SECONDARY_ABSTRACTIONS": [
+      "12_EVIDENCE_FUNCTIONS (F1-F12)",
+      "5-STATE_SUFFICIENCY_LADDER (L0-L5)",
+      "MINIMUM_SUFFICIENT_EVIDENCE_SCHEMA (TARGET_TEXT + NEAREST_DRAWING_EXTENT + SPATIAL_RELATION + SAME_Y_CONTEXT + conditional EVIDENCE_STATE)"
+    ],
+    "CASE_SPECIFIC_PATCH_RISK": "LOW",
+    "MINIMUM_SUFFICIENT_EVIDENCE_STATUS": "OBJECTIVELY_VERIFIED (P0), HUMAN_UNVERIFIED (P1)",
+    "SYSTEM_MODIFICATION_NEEDED_NOW": false,
+    "NEW_HUMAN_VALIDATION_NEEDED_NOW": false,
+    "NEXT_RESEARCH_ACTION": "NO_NEXT_ACTION_JUSTIFIED",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "STOP": true
+  },
+  "files_created": [
+    "tmp/human_evidence_requirement_research.md",
+    "tmp/human_evidence_requirement_research.json",
+    "tmp/human_evidence_requirement_case_table.csv"
+  ],
+  "files_modified": 0
+}

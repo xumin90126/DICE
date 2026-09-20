@@ -1,0 +1,107 @@
+{
+ "c2_implications": [
+  "C2 = REQUIRES_REDESIGN unchanged (reinforced: lexical shortcut ascending-consecutive-integers => row-number killed family-level by INDEX_LIST)",
+  "C2-prime boundary must explicitly exclude numbered-list margin numbers (currently auto-excluded by M2/M4)",
+  "no Stop C (no undescribable positive), no Stop D (boundary stable)"
+ ],
+ "corpus_scope": {
+  "documents_in_545_universe": 4,
+  "documents_outside_545_universe": 10,
+  "pages_available_outside_universe": 426,
+  "pages_scanned_cumulative": 333,
+  "pages_scanned_this_round": 294,
+  "total_documents_available": 14,
+  "unenumerable_documents": 0,
+  "universe_definition_modified": false
+ },
+ "coverage_verdict": {
+  "CORPUS_LIMITATION": "CONFIRMED",
+  "NEW_HYPOTHESIS": "DESIGN BLOCKED",
+  "POSITIVE_COVERAGE": "INSUFFICIENT",
+  "PREREGISTRATION": "NOT READY",
+  "rationale": "~333 scanned pages yield exactly 1 true table row-number column setting; corpus dominated by figure/reference/matrix structures; validation requires table-dense corpus acquisition + human GT adjudication",
+  "stop_condition": "Stop A"
+ },
+ "diversity": {
+  "D1_cross_document": false,
+  "D2_cross_page_layout": false,
+  "D3_structural_configurations": false,
+  "D4_neighbor_configurations": false,
+  "D5_spacing_width_patterns": false,
+  "POSITIVE_DIVERSITY": "INSUFFICIENT",
+  "note": "structural diversity rich in negative/boundary families (6 families, 14 docs) but ZERO growth in positives"
+ },
+ "document": "tmp/candidate_column_segment_corpus_discovery.md",
+ "family_distribution": {
+  "AXIS_TICK": 29,
+  "DIGIT_GRID": 135,
+  "INDEX_LIST": 9,
+  "MIXED_ARTIFACT": 199,
+  "OTHER_INT_STRUCT": 206,
+  "VALUE_COLUMN": 131
+ },
+ "frozen_evidence_sufficiency": "ALL observed structures describable by frozen evidence; NEW_OBSERVATION_MEASUREMENT_REQUEST = NONE",
+ "governance": {
+  "ATOMIC_OBSERVATION_MODIFICATION": "NONE",
+  "C2": "REQUIRES_REDESIGN",
+  "CORPUS_LIMITATION": "CONFIRMED",
+  "EXPERIMENT": "NOT AUTHORIZED",
+  "FROZEN_BASELINE": "INTACT",
+  "GT_CONFIRMED_POSITIVE": 1,
+  "GT_MODIFICATION": "NONE",
+  "IMPLEMENTATION": "NOT AUTHORIZED",
+  "NEW_HYPOTHESIS": "DESIGN BLOCKED",
+  "NEW_OBSERVATION_MEASUREMENT_REQUEST": "NONE",
+  "PERCEPTION_PRODUCTION_MODIFICATION": "NONE",
+  "PH02": "REJECTED",
+  "PH02B": "NOT AUTHORIZED",
+  "POSITIVE_COVERAGE": "INSUFFICIENT",
+  "PREREGISTRATION": "NOT READY",
+  "PRODUCTION": "FALSE",
+  "STOP": "TRUE"
+ },
+ "independence_audit": {
+  "same_page_duplicates_counted_as_independent": 0,
+  "same_template_repetitions_marked": "INDEX_LIST 9 clusters = 1 pattern setting"
+ },
+ "near_miss": {
+  "NM-01": "2309.04040 bibliography reference-number columns x9 (SAME_TEMPLATE_REPETITION=1 setting; dy ratio 2.45-8.59 breaks M2; mostly sib=0 breaks M4; right neighbors = reference text)",
+  "NM-02": "2212.12794 p15 TOC section-number column (right neighbors = section titles) + right-aligned page-number column @x526.9 (alignment-reference decision matters)",
+  "NM-03": "med p8 [0,1,2,3,4] isolated ticks (inherited)",
+  "NM-04": "eff p5 [2,3] same-page non-independent (inherited)",
+  "NM-05": "resnet p6 21.59 equidistant VALUE_COLUMN (inherited)"
+ },
+ "phase": "CORPUS DISCOVERY ONLY (fixed protocol declared before scan)",
+ "positives": {
+  "GT_CONFIRMED_POSITIVE": 1,
+  "MANUAL_CANDIDATE_row_index_like": 0,
+  "gt_setting": "is11_efficientnet p5 x0~320.3 (1..9 + prose member; IS11-AMB-135 anchored)",
+  "new_table_row_number_columns_found": 0
+ },
+ "protocol": {
+  "alignment_tol_frozen": 2.0,
+  "min_members": 3,
+  "page_budget": "all pages if doc<=40pp; else first20 + every 2nd (declared upfront)",
+  "semantic_heuristics_in_generation": "NONE"
+ },
+ "recommended_next": [
+  "corpus acquisition authorization (table-dense documents + human adjudication to build GT)",
+  "C2-prime redesign may proceed on paper but stays DESIGN BLOCKED",
+  "no further predicate/threshold work on current corpus"
+ ],
+ "scan": {
+  "documents": [
+   "eng_001(34p,26c)",
+   "mat_001(27p,62c)",
+   "medimg_001(10p,4c)",
+   "nlp_001(26p,70c)",
+   "transformer_001(15p,29c)",
+   "1602.03837(16p,153c)",
+   "1906.11238(17p,94c)",
+   "2309.04040(38p,34c)",
+   "2205.05897(72p,40c)",
+   "2212.12794(61p,197c)"
+  ],
+  "total_clusters": 709
+ }
+}

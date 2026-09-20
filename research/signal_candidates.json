@@ -1,0 +1,716 @@
+[
+  {
+    "signal_id": "SC-01",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, False, False, False)",
+    "source_cases": [
+      "IS11-AMB-279",
+      "IS11-AMB-321",
+      "IS11-AMB-257",
+      "IS11-AMB-318",
+      "IS11-AMB-168",
+      "IS11-AMB-218",
+      "IS11-AMB-163",
+      "IS11-AMB-261",
+      "IS11-AMB-198",
+      "IS11-AMB-267",
+      "IS11-AMB-205",
+      "IS11-AMB-052",
+      "IS11-AMB-323"
+    ],
+    "source_feedback_records": [
+      "FR-GT-IS11-AMB-052",
+      "FR-GT-IS11-AMB-163",
+      "FR-GT-IS11-AMB-168",
+      "FR-GT-IS11-AMB-198",
+      "FR-GT-IS11-AMB-205",
+      "FR-GT-IS11-AMB-218",
+      "FR-GT-IS11-AMB-257",
+      "FR-GT-IS11-AMB-261",
+      "FR-GT-IS11-AMB-267",
+      "FR-GT-IS11-AMB-279",
+      "FR-GT-IS11-AMB-318",
+      "FR-GT-IS11-AMB-321",
+      "FR-GT-IS11-AMB-323",
+      "FR-L5-P722-B2-IS11-AMB-205",
+      "FR-L5-P722-B2-IS11-AMB-168",
+      "FR-L5-P722-B2-IS11-AMB-163",
+      "FR-L5-P722-B1-IS11-AMB-052",
+      "FR-L5-P722-B1-IS11-AMB-205",
+      "FR-L5-P722-B1-IS11-AMB-168",
+      "FR-L5-P722-B1-IS11-AMB-198"
+    ],
+    "record_count": 20,
+    "unique_case_count": 13,
+    "positive_cases": [
+      "IS11-AMB-052",
+      "IS11-AMB-163",
+      "IS11-AMB-168",
+      "IS11-AMB-198",
+      "IS11-AMB-205",
+      "IS11-AMB-218",
+      "IS11-AMB-257",
+      "IS11-AMB-261",
+      "IS11-AMB-267",
+      "IS11-AMB-279",
+      "IS11-AMB-318",
+      "IS11-AMB-321",
+      "IS11-AMB-323"
+    ],
+    "negative_cases": [],
+    "unknown_cases": [],
+    "conflict_cases": [],
+    "has_conflict": false,
+    "has_negative": false,
+    "majority_decision": "KEEP_SEPARATE",
+    "independence": {
+      "independent_count": 4,
+      "total_count": 13,
+      "independence_ratio": 0.308,
+      "same_page_clusters": {
+        "is11_efficientnet_p6": 5,
+        "is11_efficientnet_p7": 4,
+        "is11_efficientnet_p8": 3
+      },
+      "cross_document": true,
+      "document_count": 2,
+      "documents": [
+        "is11_efficientnet",
+        "is11_resnet"
+      ]
+    },
+    "engagement_stats": {
+      "snap_count": 7,
+      "deep_count": 0,
+      "no_interaction_count": 13
+    },
+    "status": "INDEPENDENCE_VERIFIED",
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    }
+  },
+  {
+    "signal_id": "SC-02",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, False, True)",
+    "source_cases": [
+      "IS11-AMB-462",
+      "IS11-AMB-414",
+      "IS11-AMB-262",
+      "IS11-AMB-457",
+      "IS11-AMB-380",
+      "IS11-AMB-422"
+    ],
+    "source_feedback_records": [
+      "FR-GT-IS11-AMB-262",
+      "FR-GT-IS11-AMB-380",
+      "FR-GT-IS11-AMB-414",
+      "FR-GT-IS11-AMB-422",
+      "FR-GT-IS11-AMB-457",
+      "FR-GT-IS11-AMB-462",
+      "FR-L5-P722-B2-IS11-AMB-414",
+      "FR-L5-P722-B2-IS11-AMB-457",
+      "FR-L5-P722-B2-IS11-AMB-462",
+      "FR-L5-P722-B2-IS11-AMB-414",
+      "FR-L5-P722-A-IS11-AMB-422",
+      "FR-L5-P722-A-IS11-AMB-462",
+      "FR-L5-P722-B2-IS11-AMB-262",
+      "FR-L5-P722-B2-IS11-AMB-422",
+      "FR-L5-P722-A-IS11-AMB-457",
+      "FR-L5-P722-A-IS11-AMB-414",
+      "FR-L5-P722-B1-IS11-AMB-462"
+    ],
+    "record_count": 17,
+    "unique_case_count": 6,
+    "positive_cases": [
+      "IS11-AMB-262",
+      "IS11-AMB-380",
+      "IS11-AMB-457",
+      "IS11-AMB-462"
+    ],
+    "negative_cases": [
+      "IS11-AMB-414",
+      "IS11-AMB-422"
+    ],
+    "unknown_cases": [],
+    "conflict_cases": [],
+    "has_conflict": false,
+    "has_negative": true,
+    "majority_decision": "KEEP_SEPARATE",
+    "independence": {
+      "independent_count": 5,
+      "total_count": 6,
+      "independence_ratio": 0.833,
+      "same_page_clusters": {
+        "is11_cs_001_p3": 2
+      },
+      "cross_document": true,
+      "document_count": 3,
+      "documents": [
+        "is11_cs_001",
+        "is11_efficientnet",
+        "is11_med_001"
+      ]
+    },
+    "engagement_stats": {
+      "snap_count": 8,
+      "deep_count": 3,
+      "no_interaction_count": 6
+    },
+    "status": "BOUNDARY_REVIEW_REQUIRED",
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    }
+  },
+  {
+    "signal_id": "SC-03",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, True, False, False, False)",
+    "source_cases": [
+      "IS11-AMB-505",
+      "IS11-AMB-401",
+      "IS11-AMB-467",
+      "IS11-AMB-514",
+      "IS11-AMB-407",
+      "IS11-AMB-483",
+      "IS11-AMB-409"
+    ],
+    "source_feedback_records": [
+      "FR-GT-IS11-AMB-401",
+      "FR-GT-IS11-AMB-407",
+      "FR-GT-IS11-AMB-409",
+      "FR-GT-IS11-AMB-467",
+      "FR-GT-IS11-AMB-483",
+      "FR-GT-IS11-AMB-505",
+      "FR-GT-IS11-AMB-514",
+      "FR-L5-P722-B2-IS11-AMB-505",
+      "FR-L5-P722-B2-IS11-AMB-467",
+      "FR-L5-P722-B2-IS11-AMB-483",
+      "FR-L5-P722-B2-IS11-AMB-467",
+      "FR-L5-P722-A-IS11-AMB-514",
+      "FR-L5-P722-B2-IS11-AMB-505",
+      "FR-L5-P722-B2-IS11-AMB-514",
+      "FR-L5-P722-A-IS11-AMB-467",
+      "FR-L5-P722-A-IS11-AMB-483"
+    ],
+    "record_count": 16,
+    "unique_case_count": 7,
+    "positive_cases": [
+      "IS11-AMB-401",
+      "IS11-AMB-407",
+      "IS11-AMB-409",
+      "IS11-AMB-467",
+      "IS11-AMB-483",
+      "IS11-AMB-505",
+      "IS11-AMB-514"
+    ],
+    "negative_cases": [],
+    "unknown_cases": [],
+    "conflict_cases": [],
+    "has_conflict": false,
+    "has_negative": false,
+    "majority_decision": "KEEP_SEPARATE",
+    "independence": {
+      "independent_count": 2,
+      "total_count": 7,
+      "independence_ratio": 0.286,
+      "same_page_clusters": {
+        "is11_med_001_p19": 3,
+        "is11_cs_001_p3": 4
+      },
+      "cross_document": true,
+      "document_count": 2,
+      "documents": [
+        "is11_cs_001",
+        "is11_med_001"
+      ]
+    },
+    "engagement_stats": {
+      "snap_count": 6,
+      "deep_count": 3,
+      "no_interaction_count": 7
+    },
+    "status": "INDEPENDENCE_VERIFIED",
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    }
+  },
+  {
+    "signal_id": "SC-04",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, True, False, False, False)",
+    "source_cases": [
+      "IS11-AMB-074",
+      "IS11-AMB-346",
+      "IS11-AMB-034",
+      "IS11-AMB-024",
+      "IS11-AMB-350"
+    ],
+    "source_feedback_records": [
+      "FR-GT-IS11-AMB-024",
+      "FR-GT-IS11-AMB-034",
+      "FR-GT-IS11-AMB-074",
+      "FR-GT-IS11-AMB-346",
+      "FR-GT-IS11-AMB-350",
+      "FR-L5-P722-B2-IS11-AMB-350",
+      "FR-L5-P722-B2-IS11-AMB-350",
+      "FR-L5-P722-B2-IS11-AMB-074",
+      "FR-L5-P722-B2-IS11-AMB-350",
+      "FR-L5-P722-B2-IS11-AMB-346",
+      "FR-L5-P722-A-IS11-AMB-024",
+      "FR-L5-P722-A-IS11-AMB-034"
+    ],
+    "record_count": 12,
+    "unique_case_count": 5,
+    "positive_cases": [
+      "IS11-AMB-024",
+      "IS11-AMB-034",
+      "IS11-AMB-074",
+      "IS11-AMB-346",
+      "IS11-AMB-350"
+    ],
+    "negative_cases": [],
+    "unknown_cases": [],
+    "conflict_cases": [],
+    "has_conflict": false,
+    "has_negative": false,
+    "majority_decision": "KEEP_SEPARATE",
+    "independence": {
+      "independent_count": 3,
+      "total_count": 5,
+      "independence_ratio": 0.6,
+      "same_page_clusters": {
+        "is11_resnet_p6": 2,
+        "is11_efficientnet_p9": 2
+      },
+      "cross_document": true,
+      "document_count": 2,
+      "documents": [
+        "is11_efficientnet",
+        "is11_resnet"
+      ]
+    },
+    "engagement_stats": {
+      "snap_count": 3,
+      "deep_count": 4,
+      "no_interaction_count": 5
+    },
+    "status": "INDEPENDENCE_VERIFIED",
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    }
+  },
+  {
+    "signal_id": "SC-05",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, False, True, True, True)",
+    "source_cases": [
+      "IS11-AMB-418",
+      "IS11-AMB-519",
+      "IS11-AMB-375"
+    ],
+    "source_feedback_records": [
+      "FR-GT-IS11-AMB-375",
+      "FR-GT-IS11-AMB-418",
+      "FR-GT-IS11-AMB-519",
+      "FR-L5-P722-B2-IS11-AMB-418",
+      "FR-L5-P722-B2-IS11-AMB-375",
+      "FR-L5-P722-B2-IS11-AMB-519",
+      "FR-L5-P722-A-IS11-AMB-375",
+      "FR-L5-P722-B2-IS11-AMB-375",
+      "FR-L5-P722-A-IS11-AMB-519",
+      "FR-L5-P722-B1-IS11-AMB-418"
+    ],
+    "record_count": 10,
+    "unique_case_count": 3,
+    "positive_cases": [
+      "IS11-AMB-375",
+      "IS11-AMB-418",
+      "IS11-AMB-519"
+    ],
+    "negative_cases": [],
+    "unknown_cases": [
+      "IS11-AMB-375"
+    ],
+    "conflict_cases": [
+      "IS11-AMB-375",
+      "IS11-AMB-418",
+      "IS11-AMB-519"
+    ],
+    "has_conflict": true,
+    "has_negative": false,
+    "majority_decision": "KEEP_SEPARATE",
+    "independence": {
+      "independent_count": 3,
+      "total_count": 3,
+      "independence_ratio": 1.0,
+      "same_page_clusters": {},
+      "cross_document": true,
+      "document_count": 2,
+      "documents": [
+        "is11_cs_001",
+        "is11_med_001"
+      ]
+    },
+    "engagement_stats": {
+      "snap_count": 3,
+      "deep_count": 4,
+      "no_interaction_count": 3
+    },
+    "status": "BOUNDARY_REVIEW_REQUIRED",
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    }
+  },
+  {
+    "signal_id": "SC-06",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(True, True, False, False, False, False)",
+    "source_cases": [
+      "IS11-AMB-101",
+      "IS11-AMB-064",
+      "IS11-AMB-102",
+      "IS11-AMB-032",
+      "IS11-AMB-440"
+    ],
+    "source_feedback_records": [
+      "FR-GT-IS11-AMB-032",
+      "FR-GT-IS11-AMB-064",
+      "FR-GT-IS11-AMB-101",
+      "FR-GT-IS11-AMB-102",
+      "FR-GT-IS11-AMB-440",
+      "FR-L5-P722-B2-IS11-AMB-032",
+      "FR-L5-P722-B2-IS11-AMB-064",
+      "FR-L5-P722-A-IS11-AMB-032"
+    ],
+    "record_count": 8,
+    "unique_case_count": 5,
+    "positive_cases": [
+      "IS11-AMB-032",
+      "IS11-AMB-064",
+      "IS11-AMB-101",
+      "IS11-AMB-102",
+      "IS11-AMB-440"
+    ],
+    "negative_cases": [],
+    "unknown_cases": [
+      "IS11-AMB-032"
+    ],
+    "conflict_cases": [],
+    "has_conflict": false,
+    "has_negative": false,
+    "majority_decision": "KEEP_SEPARATE",
+    "independence": {
+      "independent_count": 4,
+      "total_count": 5,
+      "independence_ratio": 0.8,
+      "same_page_clusters": {
+        "is11_resnet_p11": 2
+      },
+      "cross_document": true,
+      "document_count": 2,
+      "documents": [
+        "is11_cs_001",
+        "is11_resnet"
+      ]
+    },
+    "engagement_stats": {
+      "snap_count": 2,
+      "deep_count": 1,
+      "no_interaction_count": 5
+    },
+    "status": "INDEPENDENCE_VERIFIED",
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    }
+  },
+  {
+    "signal_id": "SC-07",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false
+    },
+    "signature_tuple": "(False, False, False, True, False, False)",
+    "source_cases": [
+      "IS11-AMB-130",
+      "IS11-AMB-313"
+    ],
+    "source_feedback_records": [
+      "FR-GT-IS11-AMB-130",
+      "FR-GT-IS11-AMB-313",
+      "FR-L5-P722-B2-IS11-AMB-313",
+      "FR-L5-P722-B2-IS11-AMB-130",
+      "FR-L5-P722-B1-IS11-AMB-313",
+      "FR-L5-P722-B1-IS11-AMB-130"
+    ],
+    "record_count": 6,
+    "unique_case_count": 2,
+    "positive_cases": [
+      "IS11-AMB-130",
+      "IS11-AMB-313"
+    ],
+    "negative_cases": [],
+    "unknown_cases": [],
+    "conflict_cases": [],
+    "has_conflict": false,
+    "has_negative": false,
+    "majority_decision": "KEEP_SEPARATE",
+    "independence": {
+      "independent_count": 2,
+      "total_count": 2,
+      "independence_ratio": 1.0,
+      "same_page_clusters": {},
+      "cross_document": false,
+      "document_count": 1,
+      "documents": [
+        "is11_efficientnet"
+      ]
+    },
+    "engagement_stats": {
+      "snap_count": 3,
+      "deep_count": 1,
+      "no_interaction_count": 2
+    },
+    "status": "INDEPENDENCE_VERIFIED",
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    }
+  },
+  {
+    "signal_id": "SC-08",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(True, True, False, True, False, True)",
+    "source_cases": [
+      "IS11-AMB-522",
+      "IS11-AMB-530"
+    ],
+    "source_feedback_records": [
+      "FR-GT-IS11-AMB-522",
+      "FR-GT-IS11-AMB-530",
+      "FR-L5-P722-B2-IS11-AMB-522",
+      "FR-L5-P722-A-IS11-AMB-522",
+      "FR-L5-P722-B1-IS11-AMB-530"
+    ],
+    "record_count": 5,
+    "unique_case_count": 2,
+    "positive_cases": [
+      "IS11-AMB-522",
+      "IS11-AMB-530"
+    ],
+    "negative_cases": [],
+    "unknown_cases": [],
+    "conflict_cases": [],
+    "has_conflict": false,
+    "has_negative": false,
+    "majority_decision": "KEEP_SEPARATE",
+    "independence": {
+      "independent_count": 2,
+      "total_count": 2,
+      "independence_ratio": 1.0,
+      "same_page_clusters": {},
+      "cross_document": false,
+      "document_count": 1,
+      "documents": [
+        "is11_cs_001"
+      ]
+    },
+    "engagement_stats": {
+      "snap_count": 3,
+      "deep_count": 0,
+      "no_interaction_count": 2
+    },
+    "status": "INDEPENDENCE_VERIFIED",
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    }
+  },
+  {
+    "signal_id": "SC-09",
+    "signature": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(True, True, False, True, True, True)",
+    "source_cases": [
+      "IS11-AMB-005"
+    ],
+    "source_feedback_records": [
+      "FR-GT-IS11-AMB-005",
+      "FR-L5-P722-B2-IS11-AMB-005",
+      "FR-L5-P722-A-IS11-AMB-005",
+      "FR-L5-P722-B1-IS11-AMB-005"
+    ],
+    "record_count": 4,
+    "unique_case_count": 1,
+    "positive_cases": [
+      "IS11-AMB-005"
+    ],
+    "negative_cases": [
+      "IS11-AMB-005"
+    ],
+    "unknown_cases": [],
+    "conflict_cases": [
+      "IS11-AMB-005"
+    ],
+    "has_conflict": true,
+    "has_negative": true,
+    "majority_decision": "KEEP_SEPARATE",
+    "independence": {
+      "independent_count": 1,
+      "total_count": 1,
+      "independence_ratio": 1.0,
+      "same_page_clusters": {},
+      "cross_document": false,
+      "document_count": 1,
+      "documents": [
+        "is11_resnet"
+      ]
+    },
+    "engagement_stats": {
+      "snap_count": 2,
+      "deep_count": 1,
+      "no_interaction_count": 1
+    },
+    "status": "SINGLE_CASE_NOT_CANDIDATE",
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    }
+  },
+  {
+    "signal_id": "SC-10",
+    "signature": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true
+    },
+    "signature_tuple": "(False, False, True, True, False, True)",
+    "source_cases": [
+      "IS11-AMB-135"
+    ],
+    "source_feedback_records": [
+      "FR-GT-IS11-AMB-135",
+      "FR-L5-P722-A-IS11-AMB-135"
+    ],
+    "record_count": 2,
+    "unique_case_count": 1,
+    "positive_cases": [
+      "IS11-AMB-135"
+    ],
+    "negative_cases": [],
+    "unknown_cases": [],
+    "conflict_cases": [],
+    "has_conflict": false,
+    "has_negative": false,
+    "majority_decision": "KEEP_SEPARATE",
+    "independence": {
+      "independent_count": 1,
+      "total_count": 1,
+      "independence_ratio": 1.0,
+      "same_page_clusters": {},
+      "cross_document": false,
+      "document_count": 1,
+      "documents": [
+        "is11_efficientnet"
+      ]
+    },
+    "engagement_stats": {
+      "snap_count": 1,
+      "deep_count": 0,
+      "no_interaction_count": 1
+    },
+    "status": "SINGLE_CASE_NOT_CANDIDATE",
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    }
+  }
+]

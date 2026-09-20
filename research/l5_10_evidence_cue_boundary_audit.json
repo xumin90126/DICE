@@ -1,0 +1,381 @@
+{
+  "audit_type": "l5_10_evidence_cue_boundary_audit",
+  "audit_date": "2026-09-12",
+  "read_only": true,
+  "governance": {
+    "CODE_MODIFICATION": 0,
+    "UI_MODIFICATION": 0,
+    "GT_MODIFICATION": 0,
+    "TLD_MODIFICATION": 0,
+    "ATOMIC_MODIFICATION": 0,
+    "IS11_DECISION_MODIFICATION": 0,
+    "AGGREGATION_MODIFICATION": 0,
+    "COMPRESSION_MODIFICATION": 0,
+    "L5.5_MODIFICATION": 0,
+    "NEW_PRIMITIVE": 0,
+    "NEW_CONTRACT": 0,
+    "NEW_ARCHITECTURE": 0,
+    "NEW_PATTERN_ENGINE": 0,
+    "PATTERN_REGISTRY": 0,
+    "PATTERN_MINER": 0,
+    "CLASSIFIER": 0,
+    "L5_9": 0,
+    "PRODUCTION": false,
+    "FROZEN_BASELINE": "INTACT",
+    "HUMAN_DATA": "REAL_PILOT_ONLY",
+    "NO_SIMULATION": true,
+    "STOP": true
+  },
+  "research_questions": {
+    "Q1_presentation_vs_reasoning": {
+      "answer": "Presentation/transformation layer",
+      "evidence": "Fixed mapping table, no inference, no learning, no decision"
+    },
+    "Q2_frozen_only": {
+      "answer": "YES for primary cues; PARTIALLY for secondary (trivial computation needed)",
+      "primary_cues_available": "13 sources at 21/21",
+      "secondary_cues_computable": "4 text patterns trivially derivable from frozen P1 text"
+    },
+    "Q3_semantic_interpretation": {
+      "answer": "NO (with safe translations)",
+      "cues_audited": 11,
+      "cues_passing_leakage_check": 11,
+      "forbidden_phrases_found": 0
+    },
+    "Q4_entropy_and_authority": {
+      "answer": "YES — entropy reduced, authority preserved",
+      "current_data_points": "315 (15 fields × 21 cases)",
+      "proposed_data_points": "84 (4 cues × 21 cases)",
+      "useful_ratio_current": "20%",
+      "useful_ratio_proposed": "100%",
+      "judgment_content_in_cues": 0
+    },
+    "Q5_new_primitive": {
+      "answer": "NO",
+      "requires_pattern_engine": false,
+      "requires_classifier": false,
+      "requires_semantic_model": false,
+      "requires_new_capability": false,
+      "requires_new_authority_level": false,
+      "requires_new_primitive": false,
+      "requires_new_contract": false,
+      "requires_new_architecture": false
+    }
+  },
+  "evidence_source_audit": [
+    {
+      "source": "TLD",
+      "field": "is_in_table",
+      "available": "21/21",
+      "provenance": "frozen TLD (022f5c21e872ad9e)",
+      "cue_potential": "HIGH"
+    },
+    {
+      "source": "TLD",
+      "field": "different_cell",
+      "available": "21/21",
+      "provenance": "frozen TLD + IS-11 harness",
+      "cue_potential": "HIGH"
+    },
+    {
+      "source": "TLD",
+      "field": "same_cell",
+      "available": "21/21",
+      "provenance": "frozen TLD + IS-11 harness",
+      "cue_potential": "MEDIUM"
+    },
+    {
+      "source": "SCE",
+      "field": "different_local_partition",
+      "available": "11/21",
+      "provenance": "frozen SCE (phase3.1 params)",
+      "cue_potential": "HIGH (when available)"
+    },
+    {
+      "source": "SCE",
+      "field": "same_structural_region",
+      "available": "11/21",
+      "provenance": "frozen SCE",
+      "cue_potential": "MEDIUM"
+    },
+    {
+      "source": "RSC",
+      "field": "region_forms",
+      "available": "21/21",
+      "provenance": "frozen RSC (phase3.1 params)",
+      "cue_potential": "HIGH"
+    },
+    {
+      "source": "P1",
+      "field": "text_a",
+      "available": "21/21",
+      "provenance": "frozen P1 atomic observation",
+      "cue_potential": "HIGH"
+    },
+    {
+      "source": "P1",
+      "field": "text_b",
+      "available": "21/21",
+      "provenance": "frozen P1 atomic observation",
+      "cue_potential": "HIGH"
+    },
+    {
+      "source": "LC",
+      "field": "line_spans",
+      "available": "21/21",
+      "provenance": "PyMuPDF from frozen PDFs",
+      "cue_potential": "HIGH"
+    },
+    {
+      "source": "LC",
+      "field": "left_neighbor",
+      "available": "17/21",
+      "provenance": "derived from line_spans",
+      "cue_potential": "HIGH"
+    },
+    {
+      "source": "LC",
+      "field": "right_neighbor",
+      "available": "14/21",
+      "provenance": "derived from line_spans",
+      "cue_potential": "HIGH"
+    },
+    {
+      "source": "TP",
+      "field": "starts_with_FIG",
+      "available": "computable (2/21 match)",
+      "provenance": "trivial pattern match on P1 text",
+      "cue_potential": "MEDIUM"
+    },
+    {
+      "source": "TP",
+      "field": "ends_with_period",
+      "available": "computable (2/21 match)",
+      "provenance": "trivial pattern match on P1 text",
+      "cue_potential": "MEDIUM"
+    },
+    {
+      "source": "TP",
+      "field": "is_numeric",
+      "available": "computable (10/21 match)",
+      "provenance": "trivial pattern match on P1 text",
+      "cue_potential": "MEDIUM"
+    }
+  ],
+  "semantic_leakage_audit": [
+    {
+      "cue_id": "CUE-01",
+      "source": "TLD is_in_table",
+      "safe_output": "within a detected multi-column aligned structure",
+      "classification": "A (Structural fact)",
+      "leakage_risk": "LOW",
+      "contains_judgment": false
+    },
+    {
+      "cue_id": "CUE-02",
+      "source": "TLD different_cell",
+      "safe_output": "in different structural positions",
+      "classification": "A (Structural fact)",
+      "leakage_risk": "LOW",
+      "contains_judgment": false
+    },
+    {
+      "cue_id": "CUE-03",
+      "source": "SCE different_local_partition",
+      "safe_output": "assigned to different x-position groups",
+      "classification": "A (Structural fact)",
+      "leakage_risk": "LOW",
+      "contains_judgment": false
+    },
+    {
+      "cue_id": "CUE-04",
+      "source": "RSC region_forms",
+      "safe_output": "multi-column structure was/was not detected",
+      "classification": "A (Structural fact)",
+      "leakage_risk": "LOW",
+      "contains_judgment": false
+    },
+    {
+      "cue_id": "CUE-05",
+      "source": "P1 text pattern",
+      "safe_output": "Text A starts with FIG.",
+      "classification": "A (Structural fact)",
+      "leakage_risk": "LOW",
+      "contains_judgment": false
+    },
+    {
+      "cue_id": "CUE-06",
+      "source": "P1 text pattern",
+      "safe_output": "Text A ends with a period",
+      "classification": "A (Structural fact)",
+      "leakage_risk": "LOW",
+      "contains_judgment": false
+    },
+    {
+      "cue_id": "CUE-07",
+      "source": "P1 text pattern",
+      "safe_output": "Text A is a number",
+      "classification": "A (Structural fact)",
+      "leakage_risk": "LOW",
+      "contains_judgment": false
+    },
+    {
+      "cue_id": "CUE-08",
+      "source": "line_obs_count",
+      "safe_output": "There are N items on this line",
+      "classification": "A (Structural fact)",
+      "leakage_risk": "NONE",
+      "contains_judgment": false
+    },
+    {
+      "cue_id": "CUE-09",
+      "source": "line_spans neighbors",
+      "safe_output": "Text to the left of A: ...",
+      "classification": "A (Structural fact)",
+      "leakage_risk": "NONE",
+      "contains_judgment": false
+    },
+    {
+      "cue_id": "CUE-10",
+      "source": "TLD + line_obs_count",
+      "safe_output": "Within multi-column structure; N items on line",
+      "classification": "A+B",
+      "leakage_risk": "LOW",
+      "contains_judgment": false
+    },
+    {
+      "cue_id": "CUE-11",
+      "source": "TLD=False + line_obs=2",
+      "safe_output": "No multi-column structure; 2 items on line",
+      "classification": "A+B",
+      "leakage_risk": "LOW",
+      "contains_judgment": false
+    }
+  ],
+  "cognitive_load_audit": {
+    "current_fields": 15,
+    "fields_human_used": 5,
+    "fields_to_remove": [
+      "h_gap",
+      "dy",
+      "same_style",
+      "width_a",
+      "width_b",
+      "style_sig_a",
+      "style_sig_b"
+    ],
+    "fields_to_keep": [
+      "text_a",
+      "text_b",
+      "page_image",
+      "A/B_highlight",
+      "line_spans",
+      "line_obs_count",
+      "doc_id",
+      "page_number"
+    ],
+    "cues_to_add": [
+      "structural_position_cue",
+      "multi_column_structure_cue",
+      "text_pattern_cue",
+      "neighbor_context_cue"
+    ],
+    "noise_ratio_current": "80%",
+    "noise_ratio_proposed": "0%"
+  },
+  "three_layer_comparison": {
+    "layer_1_raw": {
+      "description": "Current UI: 15 fields including h_gap, style_sig, width",
+      "data_points": 315,
+      "useful_ratio": "20%",
+      "human_burden": "HIGH — must filter 80% noise"
+    },
+    "layer_2_structural": {
+      "description": "System has but not shown: TLD, SCE, RSC fields",
+      "data_points": 84,
+      "useful_ratio": "100%",
+      "human_burden": "MEDIUM — field names need interpretation",
+      "risk": "Field names carry semantic connotation"
+    },
+    "layer_3_cue": {
+      "description": "Proposed: safe natural-language translation of L2 facts",
+      "data_points": 84,
+      "useful_ratio": "100%",
+      "human_burden": "LOW — natural language, zero noise",
+      "semantic_leakage": "NONE"
+    },
+    "is_layer_3_necessary": true,
+    "reason": "Layer 2 field names carry semantic connotation (cell, table, partition) that creates automation bias risk. Layer 3 performs de-semanticization translation.",
+    "is_layer_3_new_reasoning": false,
+    "reason_not_reasoning": "Fixed mapping table, no inference, no learning, no decision"
+  },
+  "anti_overdesign_check": {
+    "requires_pattern_engine": false,
+    "requires_classifier": false,
+    "requires_semantic_model": false,
+    "requires_new_capability": false,
+    "requires_new_authority_level": false,
+    "requires_new_primitive": false,
+    "requires_new_contract": false,
+    "requires_new_architecture": false,
+    "all_no": true,
+    "stop_condition_triggered": false
+  },
+  "safe_translation_table": [
+    {
+      "internal": "is_in_table=True",
+      "unsafe": "in a table",
+      "safe": "within a detected multi-column aligned structure"
+    },
+    {
+      "internal": "is_in_table=False",
+      "unsafe": "not in a table",
+      "safe": "no multi-column aligned structure detected"
+    },
+    {
+      "internal": "different_cell=True",
+      "unsafe": "in different cells",
+      "safe": "in different structural positions"
+    },
+    {
+      "internal": "same_cell=True",
+      "unsafe": "in the same cell",
+      "safe": "in the same structural position"
+    },
+    {
+      "internal": "different_local_partition=True",
+      "unsafe": "in different partitions",
+      "safe": "assigned to different x-position groups"
+    },
+    {
+      "internal": "region_forms=False",
+      "unsafe": "region not formed",
+      "safe": "no multi-column structure detected around A and B"
+    }
+  ],
+  "counter_evidence": [
+    "A-phase 21/21 correct without cues (page images compensated)",
+    "Average 3.9s/item (fast selection for P01)",
+    "n=1 (cannot verify cue utility)",
+    "MERGE=2 (cannot generalize)",
+    "System!=GT=0 (cannot test automation bias)",
+    "conflict=0 (no contradictory evidence test)",
+    "is_in_table=False in both MERGE and KEEP_SEPARATE (TLD alone insufficient — feature not bug)",
+    "SCE fields only 11/21 (partial coverage)"
+  ],
+  "final_gate": {
+    "result": "PASS",
+    "Q1_presentation_not_reasoning": "PASS",
+    "Q2_frozen_only": "PASS",
+    "Q3_no_semantic_interpretation": "PASS",
+    "Q4_entropy_reduced_authority_preserved": "PASS",
+    "Q5_no_new_primitive": "PASS",
+    "summary": "Evidence Cue is a transformation layer using frozen evidence, free of semantic interpretation, entropy-reducing, authority-preserving, requiring no new primitive."
+  },
+  "evidence_classification": {
+    "audit": "B-class (engineering analysis, single pilot)",
+    "cue_safety": "B-class (structural analysis confirms no leakage, not empirically tested n>1)",
+    "cue_utility": "C-class (hypothesis, not verified)",
+    "translation_table": "B-class (deterministic, traceable, utility not tested)"
+  }
+}

@@ -1,0 +1,10 @@
+case_id,page,text,dgf,def,drawing_exists,extent_exists,neighboring_context,evidence_sufficient,primary_gap,counterfactual_human_judgment
+is11_efficientnet_p3_319_69,3,Figure,4,0,True,False,"Page is text-heavy. ""Figure"" is an in-text reference to a figure on a different ",NO,EVIDENCE_ORGANIZATION_GAP,NO
+is11_efficientnet_p4_66_331,4,Figure,141,2,True,True,"Page has complex vector content. 2 extents formed but text ""Figure"" is not near ",PARTIAL,EVIDENCE_SUFFICIENT_BUT_CURRENT_PACK_INCOMPLETE,YES
+is11_med_001_p18_325_655,18,Figure,0,0,False,False,"Pure text page. ""Figure"" is in-text reference: ""we examine in Figure 8 the corre",NO,OBSERVATION_COVERAGE_GAP,NO
+is11_efficientnet_p2_158_372,2,Figure,233,0,True,False,Large vector content exists (likely architecture diagram) but concentrated in up,PARTIAL,EVIDENCE_ORGANIZATION_GAP,UNKNOWN
+is11_med_001_p15_498_107,15,figure,12338,1,True,True,"Massive vector content (12338 primitives). 1 extent formed but text ""figure"" is ",PARTIAL,EVIDENCE_SUFFICIENT_BUT_CURRENT_PACK_INCOMPLETE,YES
+is11_resnet_p7_321_545,7,Fig. 6 (middle) shows the behaviors of ResNets. Also,53,0,True,False,"53 primitives (horizontal lines, likely table grid or page separators). No exten",NO,EVIDENCE_ORGANIZATION_GAP,NO
+arxiv_2402.18619_p11_72_651,11,"Fig. 3a that connects to the calculation ""wires"" through a c",0,0,False,False,"Pure text page. ""Fig. 3a"" is in-text reference: ""highlighted in grey in Fig. 3a.",NO,OBSERVATION_COVERAGE_GAP,NO
+is11_efficientnet_p6_79_415,6,omit,0,1,False,True,"Same-y context: ""We omit ensemble and multi-crop models (Hu..."" — ""omit"" is body",PARTIAL,EVIDENCE_SUFFICIENT_BUT_CURRENT_PACK_INCOMPLETE,YES
+is11_med_001_p15_244_342,15,max,12338,1,True,True,"Same-y context: ""stemming from the Coulomb matrix denoted as CM(ϵ, max, ..."" — """,PARTIAL,EVIDENCE_SUFFICIENT_BUT_CURRENT_PACK_INCOMPLETE,YES

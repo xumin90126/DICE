@@ -1,0 +1,202 @@
+{
+  "gate_id": "human_review_reduction_boundary_expansion_research",
+  "date": "2026-09-19",
+  "mode": "READ_ONLY_RESEARCH_ONLY",
+  "governance": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_FIELD": "NONE",
+    "NEW_SCHEMA": "NONE",
+    "NEW_OBSERVATION": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_SIGNAL": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  },
+
+  "data_used": {
+    "e4_g5_cases": 18,
+    "sources": ["Evidence Boundary Expansion Research", "Boundary Handoff Learning Research", "M-A Human Validation", "CE2 pair", "Evidence Boundary Structure Research"]
+  },
+
+  "human_contribution_distribution": {
+    "A_ANSWER_ONLY": 0,
+    "B_NEW_EVIDENCE_CANDIDATE": 2,
+    "C_EVIDENCE_RELATION_CANDIDATE": 2,
+    "D_EXTERNAL_KNOWLEDGE": 0,
+    "E_IRREDUCIBLE_SEMANTIC_JUDGMENT": 14,
+    "percentage_irreducible": 77.8
+  },
+
+  "machine_verifiability": {
+    "NO_semantic_interpretation": 10,
+    "NO_semantic_role": 4,
+    "PARTIAL_page_section": 2,
+    "PARTIAL_column_header": 2,
+    "YES_fully_verifiable": 0
+  },
+
+  "boundary_expansion": {
+    "NOT_SUPPORTED": 14,
+    "CONDITIONAL": 4,
+    "SUPPORTED": 0,
+    "percentage_not_supported": 77.8
+  },
+
+  "review_reduction_level": {
+    "L0_not_reusable": 14,
+    "L1_insufficient_evidence": 4,
+    "L2_potential_reduction": 0,
+    "L3_machine_resolvable": 0
+  },
+
+  "result_classification": {
+    "A_answer_not_reusable": 14,
+    "B_evidence_possibly_reusable": 4,
+    "C_evidence_machine_resolution": 0
+  },
+
+  "ce2_analysis": {
+    "ce2_no": {
+      "case_id": "is11_efficientnet_p8_467_415",
+      "judgment": "NO",
+      "contribution": "E_IRREDUCIBLE_SEMANTIC_JUDGMENT",
+      "new_evidence": "NONE",
+      "machine_verifiable": "NO",
+      "boundary_expansion": "NOT_SUPPORTED",
+      "review_level": "L0"
+    },
+    "ce2_yes": {
+      "case_id": "is11_resnet_p6_478_168",
+      "judgment": "YES",
+      "contribution": "E_IRREDUCIBLE_SEMANTIC_JUDGMENT",
+      "new_evidence": "NONE",
+      "machine_verifiable": "NO",
+      "boundary_expansion": "NOT_SUPPORTED",
+      "review_level": "L0"
+    },
+    "finding": "Both CE2 cases: NO new evidence discovered. Different judgments from semantic content of text. G5 boundary cannot be expanded by evidence discovery.",
+    "q9_1_different_evidence": false,
+    "q9_2_semantic_content_explains": true,
+    "q9_3_machine_verifiable": false,
+    "q9_4_evidence_not_incomplete": true,
+    "conclusion": "CE2 DEFINITIVELY CONFIRMS: G5 is genuine, irreducible, cannot be expanded"
+  },
+
+  "evidence_candidates_detail": {
+    "P3_page_section": {
+      "cases": 2,
+      "type": "C_EVIDENCE_RELATION_CANDIDATE",
+      "evidence": "page_section_context (body text vs reference list)",
+      "C1_exists_in_document": true,
+      "C2_expressible": true,
+      "C3_needs_new_observation": false,
+      "C4_depends_on_semantic": "PARTIAL (section is structural, author-name is semantic)",
+      "C5_independently_verifiable": true,
+      "C6_cross_document": false,
+      "classification": "DERIVABLE_EVIDENCE + SEMANTIC_ONLY",
+      "fully_resolves_G5": false
+    },
+    "P4_column_header": {
+      "cases": 2,
+      "type": "B_NEW_EVIDENCE_CANDIDATE",
+      "evidence": "column_header_or_table_title",
+      "C1_exists_in_document": "PARTIAL (may not exist for every table)",
+      "C2_expressible": true,
+      "C3_needs_new_observation": false,
+      "C4_depends_on_semantic": "PARTIAL (header may be ambiguous)",
+      "C5_independently_verifiable": true,
+      "C6_cross_document": true,
+      "classification": "VERIFIABLE_EXISTING_EVIDENCE + SEMANTIC_ONLY",
+      "fully_resolves_G5": false
+    }
+  },
+
+  "four_layer_convergence": {
+    "layer_1": "Evidence Boundary Structure Research — 13 G5 cases, STRUCTURAL_EVIDENCE_NOT_SUFFICIENT",
+    "layer_2": "Evidence Configuration Family Research (CE2) — identical evidence → different judgment, EVIDENCE_FAMILY_CANNOT_DETERMINE_JUDGMENT",
+    "layer_3": "Evidence Boundary Expansion Research — 18/29 E4 (62.1%), no structural expansion possible",
+    "layer_4": "Human Review Reduction Research (this study) — 77.8% irreducible, 0% review reduction, 0% boundary expansion",
+    "convergence": "All four paths confirm: G5 is genuine, irreducible semantic boundary. Human Review is permanent for G5 cases.",
+    "implication": "G5 is a PROPERTY of the task, not a deficiency of the system. DICE should automate G1-G4, hand off G5 to Human."
+  },
+
+  "handoff_vs_reduction": {
+    "human_handoff_improvement": "CONDITIONAL (4/18 cases, B2→B3 possible if evidence reorganized)",
+    "human_review_reduction": "NOT_SUPPORTED (0/18 cases)",
+    "distinction": "Handoff Improvement = make Human's job easier (CONDITIONAL). Review Reduction = eliminate Human's job (NOT_SUPPORTED). These are DIFFERENT goals."
+  },
+
+  "over_design_audit": {
+    "O1_answer_to_rule": false,
+    "O2_answer_to_label": false,
+    "O3_new_detector": false,
+    "O4_new_observation": false,
+    "O5_new_schema": false,
+    "O6_new_evidence_field": false,
+    "O7_one_case_one_patch": false,
+    "O8_new_capability": false,
+    "O9_new_runtime": false,
+    "O10_human_validation_performed": false,
+    "all_false": true,
+    "result": "PASS"
+  },
+
+  "limitations": [
+    {"id": "HRR-L-01", "limitation": "SINGLE HUMAN REVIEWER — evidence discovery may be reviewer-specific"},
+    {"id": "HRR-L-02", "limitation": "NO IMPLEMENTATION TEST — B/C candidates are theoretical"},
+    {"id": "HRR-L-03", "limitation": "L1 CASES ARE PARTIAL — even 4 L1 cases cannot fully resolve G5"},
+    {"id": "HRR-L-04", "limitation": "NO HUMAN TIME DATA — review reduction is structural, not measured"},
+    {"id": "HRR-L-05", "limitation": "CE2 IS SINGLE INSTANCE — more pairs would strengthen"},
+    {"id": "HRR-L-06", "limitation": "SAME DOMAIN — all academic papers, cross-domain untested"},
+    {"id": "HRR-L-07", "limitation": "NO NEW HUMAN VALIDATION — evidence discovery is reviewer-specific"}
+  ],
+
+  "final_questions": {
+    "Q1_answer_vs_evidence": "ANSWER — 77.8% (14/18) are irreducible semantic judgment, not evidence discovery",
+    "Q2_true_new_evidence": "4/18 (22.2%) — PARTIAL only (2 column header + 2 page section)",
+    "Q3_machine_verifiable": "0/18 fully verifiable, 4/18 partially verifiable",
+    "Q4_cross_case_reusable": "2/4 candidates have cross-case recurrence, but all PARTIAL",
+    "Q5_boundary_expansion": "NO — 0/18 SUPPORTED, 4/18 CONDITIONAL, 14/18 NOT_SUPPORTED",
+    "Q6_review_reduction": "NO — 0/18 L2/L3, 4/18 L1 (insufficient), 14/18 L0 (not reusable)",
+    "Q7_human_to_machine": "NO — 0/18 cases can transition from Human-Required to Machine-Resolvable",
+    "Q8_ce2_evidence_diff": "NO — both CE2 cases have NO new evidence; different judgment from semantic content",
+    "Q9_answer_vs_evidence_learning": "ANSWER LEARNING — 77.8% of G5 feedback is Answer (forbidden); Evidence Learning insufficient (22.2% partial)",
+    "Q10_next_step": "STOP — G5 is permanent; Human Review irreducible; no further READ-ONLY research possible"
+  },
+
+  "files_created": [
+    "tmp/human_review_reduction_research.md",
+    "tmp/human_review_reduction_research.json",
+    "tmp/human_review_reduction_case_table.csv"
+  ],
+  "files_modified": 0,
+
+  "conclusion": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_FIELD": "NONE",
+    "NEW_SCHEMA": "NONE",
+    "NEW_OBSERVATION": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_SIGNAL": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  }
+}

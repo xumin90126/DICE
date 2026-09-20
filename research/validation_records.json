@@ -1,0 +1,599 @@
+{
+  "records": [
+    {
+      "validation_id": "dc4172b91450027d",
+      "task_id": "a3582b6af41171bb",
+      "observation_id": "263927b4069ad291",
+      "reviewer_decision": "ACCEPT",
+      "reviewer_reason": "Genuine page heading: 'Contents' is the title of this TOC page, at top (y=111), bold/contrasted. Real heading.",
+      "reviewer_notes": "candidate #1: 'Contents'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 3e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "d654535cec9abe7c",
+      "task_id": "8658be8b4f1587da",
+      "observation_id": "df71954b8f128848",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: section number '1'. Not a heading on this page — references section 1 elsewhere.",
+      "reviewer_notes": "candidate #2: '1'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 2e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "f55f686c8a6fa015",
+      "task_id": "ced01fec786a4683",
+      "observation_id": "bbcbaa69c17bbfc3",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: section title 'Introduction' referenced, not present as heading on this page. Has page number beside it.",
+      "reviewer_notes": "candidate #3: 'Introduction'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 2e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "9b6a3315cf66891a",
+      "task_id": "2ddb379781b8ec55",
+      "observation_id": "bc944a2f89791c67",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: page number '4' (right column). Reference marker, not a heading.",
+      "reviewer_notes": "candidate #4: '2'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 2e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "356a6afcc7c60094",
+      "task_id": "63f6da4929832583",
+      "observation_id": "d327f231dac2ca58",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "Footnote asterisk marker (∗). Not a heading — formula/footnote artifact.",
+      "reviewer_notes": "candidate #5: '∗'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 2e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "a6eb2a02c576ff88",
+      "task_id": "fe8b8b7fa34f67ec",
+      "observation_id": "e7d45d9ff08bb5ad",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "Footnote asterisk marker (∗). Not a heading — formula/footnote artifact.",
+      "reviewer_notes": "candidate #6: '∗'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 2e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "34a993ad777f238b",
+      "task_id": "b18752cbadd5fe96",
+      "observation_id": "4410b3cbf339a871",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: section 2 title 'Dispersive calculation of KL→γ∗γ∗' referenced. Not heading on this page; has page number 4 beside it.",
+      "reviewer_notes": "candidate #7: 'Dispersive calculation of K L → γ'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 2e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "a6d8197d821db7d4",
+      "task_id": "e6e569598d2e1655",
+      "observation_id": "cc4f71d19f5dabae",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "Formula fragment 'γ' within a TOC entry title. Not a standalone heading.",
+      "reviewer_notes": "candidate #8: 'γ'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 2e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "32a0960cf7d7a277",
+      "task_id": "052099f3eac18578",
+      "observation_id": "daebad0044124f00",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: section number '2'. Not a heading — references section 2.",
+      "reviewer_notes": "candidate #9: '2'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "1ee0897a650e1eff",
+      "task_id": "1cc82c1d571205e5",
+      "observation_id": "34a8522d551d6e89",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: page number '4' (right column). Reference marker.",
+      "reviewer_notes": "candidate #10: '4'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 2e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "9eaac3cc8d9fde66",
+      "task_id": "38e12f117270ec3d",
+      "observation_id": "e64f43861517e64d",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: section number '3'. Not a heading.",
+      "reviewer_notes": "candidate #11: '3'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "925c53fae39ceb79",
+      "task_id": "2b2fe7f97c92df32",
+      "observation_id": "9292086eaccdf253",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: section 3 title 'Matching to asymptotic constraints' referenced. Has page number 14 beside it.",
+      "reviewer_notes": "candidate #12: 'Matching to asymptotic constraints'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "b8c02c4a05b82369",
+      "task_id": "8f758f3cb92dd47a",
+      "observation_id": "53de61596c3067b8",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: page number '14'. Reference marker.",
+      "reviewer_notes": "candidate #13: '14'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "fbd2ccc8702b8c7a",
+      "task_id": "64b91a30b0f0632c",
+      "observation_id": "bc5f70bb18e674d3",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: section number '4'. Not a heading.",
+      "reviewer_notes": "candidate #14: '4'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "f5594b066a53b7eb",
+      "task_id": "d11a73eccb11e61b",
+      "observation_id": "b8ed582641e8ad25",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: section 4 title 'Final representation' referenced. Has page number 16 beside it.",
+      "reviewer_notes": "candidate #15: 'Final representation'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "06c38102199543a8",
+      "task_id": "0c924bb5987a3093",
+      "observation_id": "2ea24aa6c0450178",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: page number '16'. Reference marker.",
+      "reviewer_notes": "candidate #16: '16'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "f9bc2f9dc5504bbc",
+      "task_id": "52bdffff27404731",
+      "observation_id": "cae8b2b01736cb5d",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "Formula minus sign '−'. Not a heading — math symbol artifact.",
+      "reviewer_notes": "candidate #17: '−'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "7bb37bda27fddb9a",
+      "task_id": "d7c66dafe9a10903",
+      "observation_id": "b6ae50116fcbbe40",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "Formula plus sign '+'. Not a heading — math symbol artifact.",
+      "reviewer_notes": "candidate #18: '+'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "8e5a62b567469dbc",
+      "task_id": "dc5b8e72c4e966d4",
+      "observation_id": "4c684891b3b41983",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: section 5 title 'Prediction for KL→ℓ+ℓ−' referenced. Has page number 20 beside it.",
+      "reviewer_notes": "candidate #19: 'Prediction for K L → ℓ'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "4737c57a6e58c9d6",
+      "task_id": "ed09086b04d5293c",
+      "observation_id": "cb0c7b505e3795d7",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "Formula fragment 'ℓ' within TOC entry. Not a heading.",
+      "reviewer_notes": "candidate #20: 'ℓ'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "887862246194aca5",
+      "task_id": "8cef9ad3a483e0a9",
+      "observation_id": "86974a4759f027c7",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: section number '5'. Not a heading.",
+      "reviewer_notes": "candidate #21: '5'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "cf434f13e3dbbe78",
+      "task_id": "2197af1e74c5b90c",
+      "observation_id": "09ee119989db27a6",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: page number '20'. Reference marker.",
+      "reviewer_notes": "candidate #22: '20'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "b4a89f7631cea7e7",
+      "task_id": "0ce1f827f088f114",
+      "observation_id": "5b9590f763f483fe",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: section number '6'. Not a heading (title span missing from candidates but number present).",
+      "reviewer_notes": "candidate #23: '6'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "f0e829d115eee540",
+      "task_id": "527e0ce1e25c89c9",
+      "observation_id": "febdea62bb27d0ac",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: page number '24'. Reference marker.",
+      "reviewer_notes": "candidate #24: '24'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "860f5fc7012e2db7",
+      "task_id": "472afa52eb8cd542",
+      "observation_id": "062f4101888f36b6",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: section number '7'. Not a heading.",
+      "reviewer_notes": "candidate #25: '7'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "793a713ce6b90f6d",
+      "task_id": "f4b64ebe632d555d",
+      "observation_id": "d92f3d8804ffdd46",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: section 7 title 'Summary and outlook' referenced. Has page number 26 beside it.",
+      "reviewer_notes": "candidate #26: 'Summary and outlook'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "5d577af5674053db",
+      "task_id": "be67aea833bf6c68",
+      "observation_id": "3c3a70a7e6ded42c",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: page number '26'. Reference marker.",
+      "reviewer_notes": "candidate #27: '26'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "6216fd50a7e77cda",
+      "task_id": "aa599c5d7a7f0d04",
+      "observation_id": "a0321cdd5bf140f6",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: Appendix A title 'Short-distance contribution...' referenced. Has page number 27 beside it. Not heading on this page.",
+      "reviewer_notes": "candidate #28: 'A Short-distance contribution in the Standard Mode'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "78e6205350a33de5",
+      "task_id": "151a4409a444c468",
+      "observation_id": "340a2d33ff25844c",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: page number '27'. Reference marker.",
+      "reviewer_notes": "candidate #29: '27'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "b7851a8f3560e57e",
+      "task_id": "c6ced1f4b3e8f18f",
+      "observation_id": "1eebb92f1e604594",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: Appendix B title 'Dispersive representation of loop functions' referenced. Has page number 28 beside it.",
+      "reviewer_notes": "candidate #30: 'B Dispersive representation of loop functions'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "b6ba65f3223f5dcf",
+      "task_id": "c1348b9508a56126",
+      "observation_id": "29def63ede5db1ff",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: page number '28'. Reference marker.",
+      "reviewer_notes": "candidate #31: '28'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "fd7a8a2febee1049",
+      "task_id": "eaaacd96646cac5d",
+      "observation_id": "241d06f7044b70c4",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: Appendix C title 'Integration kernels' referenced. Has page number 31 beside it. Not heading on this page.",
+      "reviewer_notes": "candidate #32: 'C Integration kernels'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    },
+    {
+      "validation_id": "bdde201bbb91a520",
+      "task_id": "d870cafca72fa510",
+      "observation_id": "25733f7594a40c52",
+      "reviewer_decision": "REJECT",
+      "reviewer_reason": "TOC entry: page number '31'. Reference marker.",
+      "reviewer_notes": "candidate #33: '31'",
+      "timestamp": "2026-09-08T13:16:55+00:00",
+      "duration_seconds": 1e-06,
+      "reviewer_id": "ai_assisted_round1",
+      "revision_status": "ORIGINAL",
+      "supersedes_validation_id": null,
+      "dataset_tag": "HUMAN_VALIDATION",
+      "provenance": {
+        "source": "human_ui",
+        "task_priority": 0
+      }
+    }
+  ],
+  "dataset_tag": "HUMAN_VALIDATION"
+}

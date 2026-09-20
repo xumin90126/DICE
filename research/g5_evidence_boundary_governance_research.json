@@ -1,0 +1,264 @@
+{
+  "gate_id": "g5_evidence_boundary_governance_human_feedback_research",
+  "date": "2026-09-19",
+  "mode": "READ_ONLY_RESEARCH_ONLY",
+  "governance": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "MODEL_TRAINING": false,
+    "EXTERNAL_DATASET_IMPORTED": false,
+    "CAPABILITY_CREATED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_FIELD": "NONE",
+    "NEW_SCHEMA": "NONE",
+    "NEW_OBSERVATION": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_SIGNAL": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "NEXT_RESEARCH_GATE": "NONE",
+    "STOP": true
+  },
+
+  "data_used": {
+    "boundary_cases": 29,
+    "ma_cases": 79,
+    "academic_cases": 70,
+    "nonacademic_cases": 72,
+    "ecf_cases": 50,
+    "sources": ["Evidence Boundary Expansion Research", "M-A Human Validation Pilot", "G1-G5 Cross-Document Validation", "Evidence Configuration Family Research", "Boundary Handoff Learning Research", "Human Review Reduction Research"]
+  },
+
+  "four_state_classification": {
+    "TRUE_G5": {"count": 18, "percentage": 62.1, "source": "E4 (genuine semantic boundary)"},
+    "FALSE_G5": {"count": 11, "percentage": 37.9, "source": "E2 (G2, 6) + E3 (G1, 5)"},
+    "MACHINE_RESOLVABLE": {"count": 0, "percentage": 0, "source": "all 29 were escalated"},
+    "INDETERMINATE": {"count": 0, "percentage": 0, "source": "all 29 classified"}
+  },
+
+  "false_g5_breakdown": {
+    "G1_OBSERVATION_COVERAGE": {
+      "count": 5,
+      "percentage_of_false_g5": 45.5,
+      "cause": "drawing extent not extracted by P1/P2",
+      "fix": "add drawing observation",
+      "after_fix": "case becomes structurally complete → may become MACHINE_RESOLVABLE",
+      "signal": "drawing_extent_present=False",
+      "cases": ["is11_efficientnet_p3_319_69", "is11_med_001_p18_325_655", "is11_efficientnet_p2_158_372", "is11_resnet_p7_321_545", "arxiv_2402.18619_p11_72_651"]
+    },
+    "G2_EVIDENCE_ORGANIZATION": {
+      "count": 6,
+      "percentage_of_false_g5": 54.5,
+      "cause": "page context not organized (4 academic) or drawing-text not linked (2 M-A)",
+      "fix": "reorganize existing evidence",
+      "after_fix": "case becomes PARTIALLY resolved → may still need Human",
+      "signal": "page_section_context missing or drawing exists but not linked",
+      "cases": ["IS11-AMB-375", "IS11-AMB-418", "IS11-AMB-519", "IS11-AMB-005", "is11_efficientnet_p4_66_331", "is11_med_001_p15_498_107"]
+    }
+  },
+
+  "boundary_signal_discovery": {
+    "drawing_extent_present": {
+      "description": "P1/P2 system field indicating whether drawing extent was extracted",
+      "false_signal": "drawing_extent_present=False → FALSE_G5",
+      "false_accuracy": "7/7 = 100% (M-A UNCERTAIN)",
+      "true_signal": "drawing_extent_present=True → TRUE_G5",
+      "true_accuracy": "7/7 = 100% (M-A UNCERTAIN)",
+      "overall_accuracy": "14/14 = 100%",
+      "system_generated": true,
+      "currently_used_for_routing": false,
+      "note": "System produces this signal but does NOT use it for routing"
+    },
+    "semantic_boundary_assessment": {
+      "description": "System-generated assessment of semantic boundary",
+      "false_signal": "NO (no drawing extent) → FALSE_G5",
+      "false_accuracy": "7/7 = 100%",
+      "true_signals": ["YES (standalone Fig. fragment)", "POSSIBLE (non-FIG text)", "NO (text too short)"],
+      "true_accuracy": "7/7 = 100%",
+      "overall_accuracy": "14/14 = 100%",
+      "system_generated": true,
+      "currently_used_for_routing": false
+    },
+    "critical_insight": "The system ALREADY HAS signals to distinguish FALSE_G5 from TRUE_G5 with 100% accuracy on M-A data. It just doesn't USE them for routing. 37.9% of escalations are unnecessary."
+  },
+
+  "ce2_analysis": {
+    "ce2_no": {
+      "case_id": "is11_efficientnet_p8_467_415",
+      "judgment": "NO",
+      "structural_evidence": "FIG=True, EXTENT=True, VR=below, XO=True, dist=25.5",
+      "evidence_sufficiency": "SUFFICIENT",
+      "drawing_extent_present": "True",
+      "state": "TRUE_G5"
+    },
+    "ce2_yes": {
+      "case_id": "is11_resnet_p6_478_168",
+      "judgment": "YES",
+      "structural_evidence": "FIG=True, EXTENT=True, VR=below, XO=True, dist=25.1",
+      "evidence_sufficiency": "SUFFICIENT",
+      "drawing_extent_present": "True",
+      "state": "TRUE_G5"
+    },
+    "evidence_identical": true,
+    "judgment_different": true,
+    "new_evidence_discovered": false,
+    "answer_learnable": false,
+    "boundary_signal_learnable": true,
+    "boundary_signal": "structurally complete evidence (drawing_extent=True, SUFFICIENT) → still results in different judgments → TRUE_G5 → escalate to Human",
+    "key_theoretical_result": "Human Answer ≠ Learning Signal does NOT mean Human Boundary Signal ≠ Learning Signal. CE2 proves both: Answer NOT learnable, Boundary Signal IS learnable."
+  },
+
+  "learning_value": {
+    "L0_answer_only": 0,
+    "L1_improve_handoff": 0,
+    "L2_boundary_signal": 24,
+    "L3_help_machine_identify_boundary": 5,
+    "L4_machine_auto_resolve": 0,
+    "percentage_l2_plus": 100,
+    "percentage_l4": 0,
+    "summary": "100% of boundary cases produce Boundary Signals (L2+). 0% produce Answer Learning (L4). This is the exact distinction: Boundary Signal ≠ Answer."
+  },
+
+  "candidate_boundary_policy": {
+    "current_routing": "System Uncertain → Human (ungoverned)",
+    "candidate_routing": [
+      {"step": 1, "condition": "Evidence Sufficient", "action": "Continue Machine"},
+      {"step": 2, "condition": "Evidence Insufficient but Recoverable (G1/G2)", "action": "Evidence Recovery / Organization → Re-evaluate"},
+      {"step": 3, "condition": "Evidence Structurally Complete but Semantic Boundary (G5)", "action": "Human Required"}
+    ],
+    "signals_available": ["drawing_extent_present (P1/P2 field)", "semantic_boundary_assessment (system-generated)"],
+    "signals_currently_used": false,
+    "potential_escalation_reduction": "37.9% (11/29 boundary cases)",
+    "ma_specific_reduction": "50% (7/14 M-A UNCERTAIN)",
+    "uses_human_answer": false,
+    "writes_human_answer_to_evidence": false,
+    "implementation_authorized": false,
+    "research_level": true
+  },
+
+  "metrics": {
+    "total_cases_approx": 142,
+    "machine_resolvable": 113,
+    "false_g5_candidates": 11,
+    "true_g5": 18,
+    "indeterminate": 0,
+    "human_escalation_rate": 20.4,
+    "false_g5_rate_of_escalated": 37.9,
+    "true_g5_rate_of_escalated": 62.1,
+    "potential_human_review_reduction": 37.9,
+    "boundary_identification_coverage": 100,
+    "boundary_identification_precision": 62.1,
+    "evidence_grounded_boundary_rate": 62.1,
+    "ma_drawing_extent_false_accuracy": 100,
+    "ma_drawing_extent_true_accuracy": 100,
+    "academic_g5_reclassification_rate": 30.8
+  },
+
+  "external_dataset_assessment": {
+    "external_dataset_value": "NOT_JUSTIFIED",
+    "reasons": [
+      "External datasets train layout classification, not Evidence Boundary Governance",
+      "No Evidence Provenance (no evidence chain)",
+      "No Boundary Cases (no structurally-complete-but-semantically-insufficient)",
+      "No Human Escalation information",
+      "Cannot train Boundary Detection",
+      "Domain shift: academic papers ≠ enterprise documents",
+      "P1-P7 are FROZEN — external data cannot improve them",
+      "Key Boundary Signals are system-generated, not from external data"
+    ]
+  },
+
+  "five_layer_convergence": {
+    "layer_1": "Evidence Boundary Structure — 13 G5 cases, 4/13 reclassified as FALSE_G5 (30.8%)",
+    "layer_2": "Evidence Configuration Family (CE2) — Answer NOT learnable, Boundary Signal IS learnable",
+    "layer_3": "Evidence Boundary Expansion — 18/29 TRUE_G5 (62.1%), 11/29 FALSE_G5 (37.9%)",
+    "layer_4": "Human Review Reduction — 77.8% irreducible, 0% review reduction for TRUE_G5",
+    "layer_5": "G5 Evidence Boundary Governance (this study) — 37.9% FALSE_G5, system has signals, Boundary Signal learnable",
+    "convergence": "G5 is genuine (Layers 1-4). BUT 37.9% of escalations are FALSE_G5 (Layer 5). System HAS signals to identify them but doesn't USE them. Correct goal: reduce FALSE_G5 escalation, not eliminate TRUE_G5."
+  },
+
+  "three_distinct_goals": {
+    "goal_1_review_reduction": {"achievable": false, "theoretical": "17.2% if G1 fixed", "practical": "0% (not authorized)"},
+    "goal_2_escalation_reduction": {"achievable": true, "theoretical": "37.9%", "practical": "0% (not implemented)", "signal_exists": true},
+    "goal_3_handoff_improvement": {"achievable": "conditional", "theoretical": "4/18 TRUE_G5 cases B2→B3", "practical": "0% (not authorized)"},
+    "correct_goal": "Goal 2: reduce FALSE_G5 escalation (37.9% achievable if implemented)"
+  },
+
+  "over_design_audit": {
+    "O1_answer_to_rule": false,
+    "O2_answer_to_label": false,
+    "O3_new_detector": false,
+    "O4_new_observation": false,
+    "O5_new_schema": false,
+    "O6_new_evidence_field": false,
+    "O7_one_case_one_patch": false,
+    "O8_new_capability": false,
+    "O9_new_runtime": false,
+    "O10_human_validation": false,
+    "O11_model_training": false,
+    "O12_external_dataset_imported": false,
+    "O13_capability_created": false,
+    "all_false": true,
+    "result": "PASS"
+  },
+
+  "limitations": [
+    {"id": "GBG-L-01", "limitation": "SINGLE HUMAN REVIEWER — signal accuracy may vary"},
+    {"id": "GBG-L-02", "limitation": "drawing_extent_present signal validated on M-A only (14 cases)"},
+    {"id": "GBG-L-03", "limitation": "Academic FALSE_G5 (4 cases) use different signal (page_section, not drawing_extent)"},
+    {"id": "GBG-L-04", "limitation": "NO IMPLEMENTATION TEST — Boundary Policy is research-level"},
+    {"id": "GBG-L-05", "limitation": "SMALL SAMPLE — 14 M-A UNCERTAIN for signal validation"},
+    {"id": "GBG-L-06", "limitation": "NO CROSS-DOMAIN VALIDATION — all academic papers"},
+    {"id": "GBG-L-07", "limitation": "Signals are SYSTEM-GENERATED, not Human Feedback — Human confirms but doesn't create them"}
+  ],
+
+  "final_questions": {
+    "Q1_true_vs_false_g5": "TRUE_G5: 18/29 (62.1%), FALSE_G5: 11/29 (37.9%)",
+    "Q2_false_g5_source": "G1 (5, 45.5%) + G2 (6, 54.5%); no G3/G4",
+    "Q3_boundary_signal": "YES — 100% of cases produce L2+ Boundary Signal",
+    "Q4_reduce_false_g5": "YES — system has signals with 100% accuracy (M-A); 37.9% of escalations are FALSE_G5",
+    "Q5_reduce_escalation": "YES for ESCALATION (37.9%); PARTIAL for REVIEW (17.2% theoretical, 0% practical)",
+    "Q6_ce2_answer_vs_signal": "YES — CE2 proves Answer NOT learnable, Boundary Signal IS learnable",
+    "Q7_continue_research": "SUPPORTED at research level; but no further READ-ONLY research possible",
+    "Q8_external_dataset": "NOT_JUSTIFIED — no Evidence Provenance, no Boundary Cases, no Escalation info",
+    "Q9_evidence_to_routing": "YES at research level — uses Evidence State, not Human Answer; never writes Human Answer to Evidence",
+    "Q10_avoid_all_to_human": "YES with evidence — 37.9% of escalations are FALSE_G5, identifiable by existing signals; not theoretical, based on actual data"
+  },
+
+  "files_created": [
+    "tmp/g5_evidence_boundary_governance_research.md",
+    "tmp/g5_evidence_boundary_governance_research.json",
+    "tmp/g5_evidence_boundary_governance_case_table.csv"
+  ],
+  "files_modified": 0,
+
+  "conclusion": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "MODEL_TRAINING": false,
+    "EXTERNAL_DATASET_IMPORTED": false,
+    "CAPABILITY_CREATED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_FIELD": "NONE",
+    "NEW_SCHEMA": "NONE",
+    "NEW_OBSERVATION": "NONE",
+    "NEW_RULE": "NONE",
+    "NEW_DETECTOR": "NONE",
+    "NEW_SIGNAL": "NONE",
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "NEXT_RESEARCH_GATE": "NONE",
+    "STOP": true
+  }
+}

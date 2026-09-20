@@ -1,0 +1,183 @@
+{
+  "diagnostic_type": "P0 → P1 Translation Gap Diagnostic",
+  "mode": "READ-ONLY / NO MODIFICATION",
+  "date": "2026-09-18",
+  "p0_p1_translation_gap_status": "PARTIALLY_EXPLAINED",
+
+  "revision_events_audit": {
+    "total_raw_events": 134,
+    "total_autosave_events": 0,
+    "total_field_changes": 134,
+    "total_first_selections": 120,
+    "total_actual_revisions": 14,
+    "total_final_judgments": 24,
+    "total_unique_cases": 24,
+    "interpretation": "134 = 120 first-time selections + 14 actual value revisions. NOT 134 judgment changes.",
+    "revisions_by_metric": {"m1": 4, "m3": 1, "m4": 6, "m6": 3},
+    "revisions_by_arm": {"E0": 4, "E1": 10},
+    "cases_with_revisions": 8,
+    "cases_without_revisions": 16,
+    "data_quality": "ACCEPTABLE (revisions are normal Human deliberation)"
+  },
+
+  "p0_p1_join": {
+    "p1_cases": 24,
+    "p0_cases": 79,
+    "p1_in_p0": "24/24",
+    "p1_not_in_p0": "0/24",
+    "join_status": "COMPLETE"
+  },
+
+  "pre_experiment_difficulty": {
+    "e0_arm_historical": {"yes": 7, "no": 2, "uncertain": 3},
+    "e1_arm_historical": {"yes": 4, "no": 2, "uncertain": 6},
+    "imbalance": "E1 has 3 more UNCERTAIN (2x)",
+    "stratum_balance": "BALANCED (4/1/3/2/2 per arm)",
+    "p0_change_type_balance": "BALANCED (3 MAJOR + 2 MODERATE + 7 MINOR per arm)",
+    "extent_availability": {"e0_arm": "9/12", "e1_arm": "9/12"},
+    "context_availability": {"e0_arm": "7/12", "e1_arm": "7/12"},
+    "confounding_risk": "PRESENT (E1 arm inherently harder)"
+  },
+
+  "p0_improvement_exposure": {
+    "total_p1_cases_with_p0_change": "24/24 (100%)",
+    "change_types": {
+      "MAJOR_extent_context_state": 5,
+      "MODERATE_context_state": 4,
+      "MODERATE_context_state_no_extent": 2,
+      "MINOR_state_5pt": 13
+    },
+    "per_arm": {
+      "e0_arm": {"MAJOR": 3, "MODERATE": 2, "MODERATE_no_ext": 1, "MINOR": 7},
+      "e1_arm": {"MAJOR": 1, "MODERATE": 2, "MODERATE_no_ext": 2, "MINOR": 7}
+    },
+    "note": "7/12 E1 cases had only MINOR changes (state+±5pt). Only 1/12 had MAJOR."
+  },
+
+  "p0_p1_alignment": {
+    "type1_improved_benefit": {
+      "count": 1,
+      "percentage": "8.3%",
+      "cases": ["is11_med_001_p23_85_395"]
+    },
+    "type2_improved_unchanged": {
+      "count": 9,
+      "percentage": "75.0%",
+      "interpretation": "Pack improved but no observable Human benefit (dominant pattern)"
+    },
+    "type3_improved_high_burden": {
+      "count": 2,
+      "percentage": "16.7%",
+      "cases": ["is11_efficientnet_p2_158_372", "is11_resnet_p7_321_545"],
+      "interpretation": "Genuine Evidence gap (PRIMITIVES_NO_EXTENT, DEF=0)"
+    },
+    "type4_no_change": {
+      "count": 0,
+      "percentage": "0%"
+    },
+    "verdict": "MISALIGNED — 9/12 E1 cases show improvement without observable benefit"
+  },
+
+  "m3_investigation": {
+    "e0_m3_yes": 7,
+    "e1_m3_yes": 9,
+    "difference": 2,
+    "difference_pp": 16.7,
+    "hypothesis_a_awareness": "Weakly consistent — M3=YES widespread across all change types",
+    "hypothesis_b_harder_cases": "Partially consistent — E1 has 6 historical UNCERTAIN vs 3; +2 comes from S3(n=1) and S4(n=1) — within noise",
+    "hypothesis_c_not_relevant": "Consistent — 7/9 E1 M3=YES have M6=SUFFICIENT (sufficiency ≠ no search)",
+    "hypothesis_d_measurement": "Cannot rule out — M3 may be interpreted broadly",
+    "m3_cause": "INCONCLUSIVE",
+    "within_stratum_comparison": {
+      "S1": {"e0": "3/4", "e1": "3/4", "same": true},
+      "S3": {"e0": "0/1", "e1": "1/1", "diff": "+1"},
+      "S4": {"e0": "0/3", "e1": "1/3", "diff": "+1"},
+      "S5": {"e0": "2/2", "e1": "2/2", "same": true},
+      "S6": {"e0": "2/2", "e1": "2/2", "same": true}
+    }
+  },
+
+  "new_evidence_usage": {
+    "status": "NOT_OBSERVABLE",
+    "event_log_fields": ["case_id", "metric", "new_value", "timestamp"],
+    "missing_tracking": ["evidence_viewed", "scroll_position", "time_per_element", "eye_tracking"],
+    "rule": "Must NOT infer Evidence usage from final judgment"
+  },
+
+  "failure_pattern_check": {
+    "no_systematic_failure": true,
+    "type3_genuine_gap": "2 cases with PRIMITIVES_NO_EXTENT (DEF=0) — genuine absence, not Pack failure",
+    "type2_not_failure": "Improvement without observable benefit ≠ failure",
+    "regression": "NONE",
+    "leakage": "NONE"
+  },
+
+  "semantic_boundary_reassessment": {
+    "total_uncertain": 6,
+    "evidence_insufficient": 1,
+    "possible_semantic_boundary": 0,
+    "not_determinable": 5,
+    "classification_correct": true,
+    "note": "All UNCERTAIN are either EVIDENCE_INSUFFICIENT or NOT_DETERMINABLE. No semantic boundary confirmed."
+  },
+
+  "parallel_split_confounding": {
+    "risk": "PRESENT",
+    "primary_confound": "E1 arm has 2x more historical UNCERTAIN (6 vs 3)",
+    "balanced": ["stratum_counts", "p0_change_types", "extent_availability", "context_availability", "negative_count"],
+    "imbalanced": ["historical_judgment", "document_distribution", "e1_evidence_state"],
+    "impact": "M3 increase (+2) could be partially caused by difficulty imbalance, not Pack content"
+  },
+
+  "p0_vs_p1_translation": {
+    "p0_predicted_benefit_cases": "15/79 (from Counterfactual)",
+    "p1_observed_benefit_cases": "1/12 E1 arm",
+    "translation_rate": "8.3%",
+    "not_contradictory": "P0=content improved (objective), P1=human benefit not confirmed (subjective, small N)",
+    "explanation": "Low translation rate due to: MINOR changes dominant, difficulty confound, M3 construct mismatch, low power"
+  },
+
+  "research_question_answers": {
+    "Q1_134_events": "120 first-selections + 14 actual revisions. NOT 134 judgment changes.",
+    "Q2_difficulty_imbalance": "YES. E1 arm has 6 historical UNCERTAIN vs 3. Confounding factor present.",
+    "Q3_p0_coverage": "24/24 (100%). But 13/24 were MINOR changes, only 5/24 MAJOR.",
+    "Q4_alignment": "NO. 9/12 E1 cases: improved but no observable benefit. 1/12: improved+benefit.",
+    "Q5_m3_increase": "INCONCLUSIVE. Multiple hypotheses partially consistent. +2 from 2 single-case stratum differences.",
+    "Q6_evidence_usage": "NOT_OBSERVABLE. No interaction/visibility tracking.",
+    "Q7_failure_pattern": "NO systematic failure. Type 3 = genuine Evidence gap (DEF=0).",
+    "Q8_continue_optimization": "INCONCLUSIVE. P0 proved improvement, P1 no regression, but no confirmed benefit."
+  },
+
+  "gap_explanation_factors": [
+    {"factor": "CONFOUNDING", "status": "PARTIALLY_EXPLAINS", "detail": "E1 arm 2x more historical UNCERTAIN"},
+    {"factor": "IMPROVEMENT_MAGNITUDE", "status": "PARTIALLY_EXPLAINS", "detail": "13/24 MINOR changes, only 5/24 MAJOR"},
+    {"factor": "CONSTRUCT_MISMATCH", "status": "PARTIALLY_EXPLAINS", "detail": "M3 and M6 measure different constructs; 7/9 M3=YES had M6=SUFFICIENT"},
+    {"factor": "M3_CAUSE", "status": "INCONCLUSIVE", "detail": "Multiple hypotheses, N too small"},
+    {"factor": "EVIDENCE_USAGE", "status": "NOT_OBSERVABLE", "detail": "No interaction logs"}
+  ],
+
+  "limitations": [
+    "N=24 (12 per arm) — very low power",
+    "SINGLE HUMAN — INTER_RATER_RELIABILITY=NOT_AVAILABLE",
+    "PARALLEL SPLIT — within-stratum difficulty confound",
+    "NO INTERACTION LOGS — cannot observe Evidence usage",
+    "M3 CONSTRUCT VALIDITY — may not measure Pack benefit",
+    "CANNOT GENERALIZE — 5 documents, 1 Human, descriptive only"
+  ],
+
+  "governance": {
+    "implementation_authorized": false,
+    "experiment_authorized": false,
+    "human_validation_authorized": false,
+    "m_a_algorithm_unchanged": true,
+    "evidence_pack_unchanged": true,
+    "human_data_unchanged": true,
+    "p0_data_unchanged": true,
+    "p1_data_unchanged": true,
+    "frozen_baseline": "INTACT",
+    "frozen_baseline_drift": 0,
+    "runtime_authority": "ZERO",
+    "production": false,
+    "stop": true
+  }
+}

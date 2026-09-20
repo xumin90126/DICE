@@ -1,0 +1,129 @@
+{
+ "phase": "L5.1 Human Validation Cognitive Load Review",
+ "status": "DESIGN-ONLY / READ-ONLY (no implementation, no experiment, no frozen artifact/schema/code modification)",
+ "research_question": "RQ-L5.1: Can DICE reduce long-term Human Validation cognitive burden via Evidence Aggregation + Evidence Compression, without transferring abstraction work from System to Human?",
+
+ "core_design_principles_fixed": [
+  "Human should validate, not reconstruct",
+  "DICE Pattern should compress evidence for humans, not transfer abstraction work to humans",
+  "Any design requiring Human to find commonality/compare instances/build negative set/discover boundary/construct pattern = potential Human Abstraction Burden, not default-reasonable"],
+
+ "workflows": {
+  "A_instance_validation": {"description": "Observation N -> Human judgment per instance", "current_architecture": true, "single_simple_but_repetitive": true},
+  "B_naive_pattern_validation": {"description": "Many instances -> Pattern candidate -> Human reads prototype+boundary+negative+UNKNOWN+provenance+scope -> Human understands pattern -> validates", "reduces_count_but_increases_per_validation_load": true},
+  "C_minimal_semantic_validation": {"description": "System aggregation+comparison+compression -> Pattern candidate -> Minimal Semantic Claim -> Human answers SUPPORTED/UNSUPPORTED/UNKNOWN", "system_owns_abstraction": true, "human_owns_semantic_authorization": true}},
+
+ "system_vs_human_responsibility": {
+  "system_owns_in_C": ["aggregation","clustering/structural comparison","provenance","evidence summarization","evidence compression","candidate construction","contradiction detection","representative coverage","boundary discovery","negative discovery","UNKNOWN discovery"],
+  "human_owns_in_C": ["semantic interpretation validation","boundary adequacy confirmation (on-demand)","final authorization"],
+  "current_gap": "System aggregation/compression capability ABSENT (L5 review grep 0; no schema/object/process for reusable pattern) [O]"},
+
+ "cognitive_load_model": {
+  "dimensions": [
+   {"id": "C1", "name": "review_count", "observable": true, "status": "design_variable"},
+   {"id": "C2", "name": "evidence_exposure", "observable": true, "status": "design_variable"},
+   {"id": "C3", "name": "evidence_switching", "observable": true, "status": "design_variable"},
+   {"id": "C4", "name": "cross_instance_comparison", "observable": "partial", "status": "design_variable"},
+   {"id": "C5", "name": "abstraction_burden", "observable": false, "status": "design_variable (needs subjective scale)"},
+   {"id": "C6", "name": "decision_complexity", "observable": "partial", "status": "design_variable"},
+   {"id": "C7", "name": "memory_load", "observable": false, "status": "design_variable (needs NASA-TLX)"},
+   {"id": "C8", "name": "interaction_cost", "observable": true, "status": "design_variable"},
+   {"id": "C9", "name": "error_risk", "observable": true, "status": "future_experiment"},
+   {"id": "C10", "name": "fatigue", "observable": "partial", "status": "future_experiment"}],
+  "observable": ["C1","C2","C3","C8","C9"],
+  "design_only": ["C5","C7"],
+  "hvc_expression": "HVC = a*review_count + b*evidence_exposure + g*cross_instance_comparison + d*abstraction_burden + e*interaction_cost + z*decision_complexity + h*error_risk + q*fatigue",
+  "weights_assigned": false,
+  "fake_values": false},
+
+ "simulation_21_cases": {
+  "case_roles": {
+   "positive_target": ["AMB-135"],
+   "direct_recovered": ["AMB-130","AMB-457","AMB-467","AMB-483","AMB-505","AMB-514"],
+   "honest_abstain": ["AMB-313","AMB-462"],
+   "caption_canary": ["AMB-414","AMB-422"],
+   "prose_contamination": ["AMB-519"],
+   "amb262_recovery": ["AMB-262"],
+   "controls_correct": ["AMB-005","AMB-024","AMB-034","AMB-074","AMB-346","AMB-350","AMB-522","AMB-530"]},
+  "workflow_A": {"review_count": 21, "evidence_exposure": 21, "cross_instance_comparison": "0 (implicit if consistency-seeking)", "abstraction_burden": 0, "decision_complexity": "LOW", "at_10000": "unsustainable (fatigue) [I]"},
+  "workflow_B": {"review_count": "3-4 patterns", "evidence_exposure": "30-60 (HIGHER than A!)", "cross_instance_comparison": "HIGH", "abstraction_burden": "HIGH (8/10 tasks)", "decision_complexity": "HIGH", "at_10000": "unsustainable (pattern fatigue) [I]", "key_finding": "evidence_exposure 30-60 > A's 21 = direct evidence of burden transfer [I]"},
+  "workflow_C": {"review_count": "3-4 claims", "evidence_exposure": "3-4 (default, lowest)", "cross_instance_comparison": 0, "abstraction_burden": "0 (IF system trustworthy)", "decision_complexity": "MEDIUM", "at_10000": "potentially sustainable [H, unverified]", "on_demand_expansion": "only when suspicious"},
+  "comparison_verdict": "B not better than A (exposure higher); C optimal by design but depends on unimplemented System capability + unverified burden-transfer mitigation [I]"},
+
+ "abstraction_burden_test": {
+  "workflow_B": {"human_owns": ["commonality","prototype","boundary","negative","UNKNOWN","scope","provenance","pattern_construction"], "count": "8/10", "verdict": "immature design (abstraction not eliminated, transferred)"},
+  "workflow_C_ideal": {"system_owns": ["commonality","prototype","boundary","negative","UNKNOWN","provenance","aggregation","compression"], "human_owns": ["semantic interpretation","boundary adequacy (on-demand)","final authorization"], "verdict": "conforms to 'validate not reconstruct'", "caveat": "System capability absent [O]"}},
+
+ "burden_transfer_redteam": {
+  "counterexample_1": {"claim": "Pattern reduces 90% count but each 10x complex", "applies_to_B": true, "evidence": "B exposure 30-60 > A 21 = burden transfer not reduction [I]", "applies_to_C": false, "reason": "C default exposure 3-4 < A; abstraction=0; BUT requires trustworthy System"},
+  "counterexample_2": {"claim": "System forms pattern but Human must verify System formed it correctly", "applies_to_C": "core risk [I]", "mitigation_design": ["honest summary (conflict/UNKNOWN count)","on-demand verification (Progressive Disclosure)","auditable provenance (Level 4)","independently recomputable summary"], "residual_risk": "silent evidence suppression undetectable at summary level -> needs audit mechanism", "status": "design hypothesis, NOT experimentally verified [H]"},
+  "record": "Workflow B = BURDEN TRANSFER; Workflow C = BURDEN REDUCTION by design IF trustworthy + honest + on-demand-auditable; unverified"},
+
+ "progressive_disclosure": {
+  "level_0_minimal_claim": "1 semantic claim + summary (consistent/conflict/UNKNOWN) + SUPPORTED/UNSUPPORTED/UNKNOWN",
+  "level_1_evidence_summary": "instance count / consistency / conflicts / UNKNOWN / coverage",
+  "level_2_representative": "system-selected prototype + boundary-edge",
+  "level_3_boundary_negative_unknown": "boundary conditions / negative set / UNKNOWN cases",
+  "level_4_full_provenance": "complete source chain L2->LSP->RSC->EIC-1->instance",
+  "default_load": "minimal (Level 0)",
+  "risk": "hiding important evidence if summary dishonest",
+  "mitigation_principle": "Evidence visibility != Evidence authority (not-shown != not-existent; all levels reachable on-demand; summary must be honest; provenance auditable)",
+  "residual_risk": "Human never drills down -> depends on summary honesty -> needs audit mechanism (future)"},
+
+ "long_term_model": {
+  "10_cases": {"A": "tolerable", "B": "not worth abstracting", "C": "simple but System overhead may not pay off"},
+  "100_cases": {"A": "repetition fatigue begins", "B": "pattern fatigue begins", "C": "sustainable; on-demand occasional"},
+  "1000_cases": {"A": "high fatigue throughput decline", "B": "high abstraction fatigue", "C": "sustainable [H] if System reliable"},
+  "10000_cases": {"A": "unsustainable [I]", "B": "unsustainable [I]", "C": "only potentially sustainable [H, unverified]"}},
+
+ "pattern_definition_reevaluation": {
+  "model_1": {"definition": "Human validates Pattern (pattern=validation target)", "verdict": "burden transfer; rejected"},
+  "model_2": {"definition": "Pattern organizes evidence; Human validates semantic claim (pattern=evidence-org/reuse layer, transparent to Human)", "verdict": "more reasonable [D]", "dependencies": ["System aggregation/compression capability (absent)","honest summary mechanism (undesigned)","on-demand audit (unimplemented)"], "counterarguments_addressed": ["Human need not understand pattern internals to judge claim-vs-summary","conflict/UNKNOWN count signals suspicious patterns","claim carries scope; boundary=on-demand"], "nature": "design conclusion, not implementation decision"},
+
+ "minimal_validation_unit": {
+  "candidates": ["Instance","Pattern","Semantic Claim"],
+  "verdict": "Semantic Claim",
+  "rationale": {"small_enough": true, "reusable": true, "falsifiable": true, "provenance_recordable": true, "produces_UNKNOWN": true, "avoids_semantic_closure": true, "enters_subsequent_pattern": true, "preserves_human_controlled_registration": true},
+  "pattern_role": "evidence organization / reuse layer (not validation target)"}},
+
+ "governance_boundary_check": {
+  "authority_ladder": "Observation -> Evidence -> Structural -> Semantic Candidate -> Human Validation (Semantic Claim) -> Validated Pattern -> Capability Candidate -> Human Declaration -> Human Registration -> Capability",
+  "pattern_runtime_authority": "NONE (no routing/selection/ranking/confidence/recommendation/execution)",
+  "claim_to_pattern": "not automatic",
+  "pattern_to_capability": "not automatic (Human Controlled)",
+  "ladder_preserved": true},
+
+ "eight_questions": {
+  "Q1_pattern_reduces_cognitive_load": "Not automatically. Naive Pattern B may INCREASE per-validation load (exposure 30-60>21). Only Workflow C + System compression + Progressive Disclosure reduces by design, UNVERIFIED [H]",
+  "Q2_naive_pattern_abstraction_burden": "YES. Human owns 8/10 abstraction tasks. Violates 'validate not reconstruct'",
+  "Q3_minimal_semantic_more_reasonable": "YES (design level). System owns abstraction; Human owns semantic judgment; lowest default exposure. Depends on unimplemented capability + unverified mitigation",
+  "Q4_representative_boundary_negative_unknown_as_system_managed": "YES. System evidence support objects, not Human mandatory checklist. Evidence visibility != Evidence authority",
+  "Q5_progressive_disclosure_reduces_default_load": "YES (design). Default Level 0 minimal. Risk=hidden evidence; mitigation=honest summary+accessible provenance+on-demand audit. Residual risk=silent suppression",
+  "Q6_minimal_validation_unit": "Semantic Claim (not Instance, not Pattern). Pattern=evidence organization/reuse layer",
+  "Q7_measurable_human_validation_cost": {"observable": ["review_count","default_evidence_exposure","interaction_cost (UI events)","decision_duration","error_rate (vs held-out GT)","drill_down_rate","fatigue_trend (duration/error vs sequence)","NASA-TLX (subjective proxy)"], "future_experiment": "A/B/C workflow x human subjects, fit HVC", "current_data": "none, no fake values"},
+  "Q8_pattern_worth_continuing": "KEEP + REDESIGN. Model 1 rejected (burden transfer); Model 2 retained (pattern=evidence-org layer, validation unit=Semantic Claim, System abstraction, Progressive Disclosure). Not default-KEEP due to prior acceptance — this review negated Model 1"},
+
+ "core_principle_final_judgment": {
+  "statement": "DICE Pattern success criterion is NOT 'fewer cases seen by Human' but 'Human gets sufficient Evidence in fewer/simpler/clearer semantic judgments, without abstraction work transferred to Human'",
+  "holds": true,
+  "supplement": "'sufficient Evidence' = honest summary + on-demand expandable + auditable provenance (not 'show all by default'); abstraction (commonality/boundary/negative/UNKNOWN/scope/provenance) by System; Human only semantic interpretation + final authorization"},
+
+ "new_observation_measurement_request": "NONE (existing frozen Observation sufficient for pattern prerequisites; gap=aggregation/compression layer, not measurement)",
+
+ "gate": {
+  "L5_1_STATUS": "CONDITIONAL PASS",
+  "PATTERN_CONCEPT": "KEEP + REDESIGN (Model 1->Model 2)",
+  "HUMAN_VALIDATION_UNIT": "Semantic Claim",
+  "HUMAN_ABSTRACTION_BURDEN": "IDENTIFIED in B (8/10 on Human); ELIMINATED by design in C (requires System capability)",
+  "PROGRESSIVE_DISCLOSURE": "DESIGN PROPOSED (Level 0-4); reduces default load; residual risk=silent suppression",
+  "EVIDENCE_COMPRESSION": "REQUIRED (System-side; capability absent; design only)",
+  "TOTAL_HUMAN_COST_MODEL": "HVC defined (8 vars, no fake weights)",
+  "LONG_TERM_SUSTAINABILITY": "C only potentially sustainable @10000 (H, unverified); A/B unsustainable @1000+",
+  "NEW_OBSERVATION_MEASUREMENT_REQUEST": "NONE",
+  "IMPLEMENTATION_AUTHORIZATION": "NOT AUTHORIZED",
+  "EXPERIMENT_AUTHORIZATION": "NOT AUTHORIZED",
+  "FROZEN_BASELINE": "INTACT",
+  "STOP": true},
+
+ "frozen_baseline_verify": {"gt_modified": false, "tld_modified": false, "atomic_observation_modified": false, "is11_decision_modified": false, "production_code_modified": false, "schema_modified": false, "html_modified": false}
+}

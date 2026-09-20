@@ -1,0 +1,6077 @@
+{
+  "total_cases": 79,
+  "candidate_count": 63,
+  "negative_count": 16,
+  "render_dpi": 150,
+  "scale": 2.0833333333333335,
+  "pre_registered_params": {
+    "same_y_threshold": 5,
+    "candidate_near_threshold": 60,
+    "evidence_state_model": "3-state"
+  },
+  "cases": [
+    {
+      "case_id": "is11_efficientnet_p4_55_218",
+      "document_id": "is11_efficientnet",
+      "page_reference": 4,
+      "text_content": "Figure 3.",
+      "text_bbox": [
+        54.9,
+        218.1,
+        87.3,
+        227.1
+      ],
+      "extent_bbox": [
+        87.5,
+        74.6,
+        529.5,
+        184.4
+      ],
+      "extent_primitive_count": 6,
+      "extent_area": 48531.0,
+      "spatial_distance": 33.7,
+      "x_overlap": false,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Figure 3. Scaling Up a Baseline Model with Different Network Width ( Scaling Up a Baseline Model with Different Network Width (w), w ), Depth ( Depth (d), d ), and Resolution ( and Resolution (r) r ) ",
+      "context_atoms": [
+        {
+          "text": "Figure",
+          "bbox": [
+            54.9,
+            218.1,
+            78.3,
+            227.1
+          ]
+        },
+        {
+          "text": "3.",
+          "bbox": [
+            80.6,
+            218.1,
+            87.3,
+            227.1
+          ]
+        },
+        {
+          "text": "Scaling Up a Baseline Model with Different Network Width (",
+          "bbox": [
+            87.3,
+            218.0,
+            330.4,
+            227.0
+          ]
+        },
+        {
+          "text": "Scaling",
+          "bbox": [
+            89.6,
+            218.0,
+            117.5,
+            227.0
+          ]
+        },
+        {
+          "text": "Up",
+          "bbox": [
+            120.6,
+            218.0,
+            132.1,
+            227.0
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 1,
+      "page_image": "is11_efficientnet_p4.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_efficientnet_p8_55_213",
+      "document_id": "is11_efficientnet",
+      "page_reference": 8,
+      "text_content": "Figure 7.",
+      "text_bbox": [
+        54.9,
+        213.2,
+        87.3,
+        222.2
+      ],
+      "extent_bbox": [
+        325.0,
+        242.0,
+        524.5,
+        389.9
+      ],
+      "extent_primitive_count": 7,
+      "extent_area": 29508.0,
+      "spatial_distance": 19.9,
+      "x_overlap": false,
+      "vertical_ordering": "above",
+      "pattern_type": "caption_like",
+      "context_text": "Figure 7. Class Activation Map (CAM) ( Class Activation Map (CAM) (Zhou Zhou et al. et al., , 2016 2016) ) for Models with different scaling methods- for Models with different scaling methods- Our com",
+      "context_atoms": [
+        {
+          "text": "Figure",
+          "bbox": [
+            54.9,
+            213.2,
+            78.3,
+            222.2
+          ]
+        },
+        {
+          "text": "7.",
+          "bbox": [
+            80.6,
+            213.2,
+            87.3,
+            222.2
+          ]
+        },
+        {
+          "text": "Class Activation Map (CAM) (",
+          "bbox": [
+            87.3,
+            213.1,
+            205.2,
+            222.1
+          ]
+        },
+        {
+          "text": "Class",
+          "bbox": [
+            89.6,
+            213.1,
+            110.0,
+            222.1
+          ]
+        },
+        {
+          "text": "Activation",
+          "bbox": [
+            111.8,
+            213.1,
+            151.4,
+            222.1
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 2,
+      "page_image": "is11_efficientnet_p8.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_resnet_p6_478_168",
+      "document_id": "is11_resnet",
+      "page_reference": 6,
+      "text_content": "Fig.",
+      "text_bbox": [
+        478.5,
+        168.1,
+        492.7,
+        177.0
+      ],
+      "extent_bbox": [
+        333.8,
+        72.0,
+        535.9,
+        143.0
+      ],
+      "extent_primitive_count": 6,
+      "extent_area": 14347.3,
+      "spatial_distance": 25.1,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "building block (on 56 building block (on 56×56 × 56 feature maps) as in Fig. 3 for ResNet- feature maps) as in 3 for ResNet-",
+      "context_atoms": [
+        {
+          "text": "building block (on 56",
+          "bbox": [
+            308.9,
+            168.1,
+            387.5,
+            177.0
+          ]
+        },
+        {
+          "text": "building",
+          "bbox": [
+            308.9,
+            168.1,
+            338.6,
+            177.0
+          ]
+        },
+        {
+          "text": "block",
+          "bbox": [
+            341.3,
+            168.1,
+            361.2,
+            177.0
+          ]
+        },
+        {
+          "text": "(on",
+          "bbox": [
+            363.9,
+            168.1,
+            375.9,
+            177.0
+          ]
+        },
+        {
+          "text": "56×56",
+          "bbox": [
+            378.6,
+            167.7,
+            403.7,
+            177.0
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 3,
+      "page_image": "is11_resnet_p6.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_med_001_p13_85_307",
+      "document_id": "is11_med_001",
+      "page_reference": 13,
+      "text_content": "FIG. 4:",
+      "text_bbox": [
+        85.0,
+        306.5,
+        122.6,
+        318.5
+      ],
+      "extent_bbox": [
+        163.9,
+        89.8,
+        476.8,
+        274.5
+      ],
+      "extent_primitive_count": 33,
+      "extent_area": 57790.9,
+      "spatial_distance": 32.1,
+      "x_overlap": false,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "FIG. 4: Schematic diagram of the kernel construction algorithm used  Schematic diagram of the kernel construction algorithm used in this work to",
+      "context_atoms": [
+        {
+          "text": "FIG.",
+          "bbox": [
+            85.0,
+            306.5,
+            109.3,
+            318.5
+          ]
+        },
+        {
+          "text": "4:",
+          "bbox": [
+            113.5,
+            306.5,
+            122.6,
+            318.5
+          ]
+        },
+        {
+          "text": "Schematic diagram of the kernel construction algorithm used ",
+          "bbox": [
+            132.5,
+            306.5,
+            527.1,
+            318.5
+          ]
+        },
+        {
+          "text": "Schematic",
+          "bbox": [
+            132.5,
+            306.5,
+            184.2,
+            318.5
+          ]
+        },
+        {
+          "text": "diagram",
+          "bbox": [
+            188.4,
+            306.5,
+            230.0,
+            318.5
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 4,
+      "page_image": "is11_med_001_p13.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_resnet_p2_87_158",
+      "document_id": "is11_resnet",
+      "page_reference": 2,
+      "text_content": "Figure 2. Residual learning: a building block.",
+      "text_bbox": [
+        86.6,
+        158.2,
+        249.9,
+        167.1
+      ],
+      "extent_bbox": [
+        129.0,
+        84.9,
+        204.3,
+        142.1
+      ],
+      "extent_primitive_count": 3,
+      "extent_area": 4310.9,
+      "spatial_distance": 16.1,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Figure 2. Residual learning: a building block. the residual learning principle is generic, and we expect th the residual learning principle is generic, and we expect that",
+      "context_atoms": [
+        {
+          "text": "Figure",
+          "bbox": [
+            86.6,
+            158.2,
+            110.0,
+            167.1
+          ]
+        },
+        {
+          "text": "2.",
+          "bbox": [
+            112.3,
+            158.2,
+            119.0,
+            167.1
+          ]
+        },
+        {
+          "text": "Residual",
+          "bbox": [
+            121.2,
+            158.2,
+            152.6,
+            167.1
+          ]
+        },
+        {
+          "text": "learning:",
+          "bbox": [
+            154.9,
+            158.2,
+            186.7,
+            167.1
+          ]
+        },
+        {
+          "text": "a",
+          "bbox": [
+            189.5,
+            158.2,
+            193.5,
+            167.1
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 5,
+      "page_image": "is11_resnet_p2.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_efficientnet_p8_328_261",
+      "document_id": "is11_efficientnet",
+      "page_reference": 8,
+      "text_content": "Accuracy(%)",
+      "text_bbox": [
+        327.7,
+        260.5,
+        336.6,
+        301.1
+      ],
+      "extent_bbox": [
+        325.0,
+        242.0,
+        524.5,
+        389.9
+      ],
+      "extent_primitive_count": 7,
+      "extent_area": 29508.0,
+      "spatial_distance": 0,
+      "x_overlap": true,
+      "vertical_ordering": "inside",
+      "pattern_type": "type_b_negative",
+      "context_text": "ImageNet Top-1 Accuracy(%) 82 82",
+      "context_atoms": [
+        {
+          "text": "ImageNet Top-1 Accuracy(%)",
+          "bbox": [
+            327.7,
+            260.5,
+            336.6,
+            354.1
+          ]
+        },
+        {
+          "text": "82",
+          "bbox": [
+            338.5,
+            260.7,
+            345.5,
+            267.9
+          ]
+        },
+        {
+          "text": "82",
+          "bbox": [
+            338.5,
+            260.7,
+            345.5,
+            267.9
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "negative_type": "type_b",
+      "review_order": 6,
+      "page_image": "is11_efficientnet_p8.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_efficientnet_p3_319_69",
+      "document_id": "is11_efficientnet",
+      "page_reference": 3,
+      "text_content": "Figure",
+      "text_bbox": [
+        318.7,
+        69.4,
+        345.2,
+        79.5
+      ],
+      "extent_bbox": null,
+      "extent_primitive_count": 0,
+      "extent_area": 0,
+      "spatial_distance": -1,
+      "x_overlap": false,
+      "vertical_ordering": "none",
+      "pattern_type": "type_a_negative",
+      "context_text": "( (Zhang Zhang et al. et al., , 2018 2018; ; Ma et al. Ma et al., , 2018 2018). ). Recently, neural archi- Recently, neural archi- i i. . Figure 2 2(a) (a) illustrate a representative ConvNet, where i",
+      "context_atoms": [
+        {
+          "text": "(",
+          "bbox": [
+            55.1,
+            69.5,
+            58.4,
+            79.4
+          ]
+        },
+        {
+          "text": "(Zhang",
+          "bbox": [
+            55.1,
+            69.5,
+            83.3,
+            79.4
+          ]
+        },
+        {
+          "text": "Zhang et al.",
+          "bbox": [
+            58.4,
+            69.5,
+            104.9,
+            79.4
+          ]
+        },
+        {
+          "text": "et",
+          "bbox": [
+            85.8,
+            69.5,
+            92.9,
+            79.4
+          ]
+        },
+        {
+          "text": "al.,",
+          "bbox": [
+            95.4,
+            69.5,
+            107.3,
+            79.4
+          ]
+        }
+      ],
+      "evidence_state": "PRIMITIVES_NO_EXTENT",
+      "negative_type": "type_a",
+      "review_order": 7,
+      "page_image": "is11_efficientnet_p3.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p15_498_182",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 15,
+      "text_content": ", with",
+      "text_bbox": [
+        498.3,
+        181.9,
+        520.6,
+        192.7
+      ],
+      "extent_bbox": [
+        139.0,
+        93.8,
+        274.7,
+        230.4
+      ],
+      "extent_primitive_count": 2,
+      "extent_area": 18537.0,
+      "spatial_distance": 0,
+      "x_overlap": false,
+      "vertical_ordering": "inside",
+      "pattern_type": "type_b_negative",
+      "context_text": "| |0⟩ 0 ⟩ P P (b) Evaluation of external source term (b) Evaluation of external source term f f by by ⟨ ⟨u|f⟩, u | f ⟩ with",
+      "context_atoms": [
+        {
+          "text": "|",
+          "bbox": [
+            154.8,
+            183.4,
+            157.6,
+            200.7
+          ]
+        },
+        {
+          "text": "|0⟩",
+          "bbox": [
+            154.8,
+            183.4,
+            166.4,
+            200.7
+          ]
+        },
+        {
+          "text": "0",
+          "bbox": [
+            157.6,
+            183.6,
+            162.6,
+            193.6
+          ]
+        },
+        {
+          "text": "⟩",
+          "bbox": [
+            162.6,
+            183.4,
+            166.4,
+            200.7
+          ]
+        },
+        {
+          "text": "P",
+          "bbox": [
+            176.1,
+            178.5,
+            182.4,
+            188.5
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "negative_type": "type_b",
+      "review_order": 8,
+      "page_image": "arxiv_2402.18619_p15.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_med_001_p16_85_484",
+      "document_id": "is11_med_001",
+      "page_reference": 16,
+      "text_content": "FIG. 7:",
+      "text_bbox": [
+        85.0,
+        484.3,
+        122.8,
+        496.2
+      ],
+      "extent_bbox": [
+        129.2,
+        177.3,
+        482.8,
+        469.0
+      ],
+      "extent_primitive_count": 27,
+      "extent_area": 103116.7,
+      "spatial_distance": 15.3,
+      "x_overlap": false,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "FIG. 7: Visual demonstration of the Gershgorin circle theorem on the Visual demonstration of the Gershgorin circle theorem on the Coulomb ma-",
+      "context_atoms": [
+        {
+          "text": "FIG.",
+          "bbox": [
+            85.0,
+            484.3,
+            109.3,
+            496.2
+          ]
+        },
+        {
+          "text": "7:",
+          "bbox": [
+            113.7,
+            484.3,
+            122.8,
+            496.2
+          ]
+        },
+        {
+          "text": "Visual demonstration of the Gershgorin circle theorem on the",
+          "bbox": [
+            133.4,
+            484.3,
+            527.1,
+            496.2
+          ]
+        },
+        {
+          "text": "Visual",
+          "bbox": [
+            133.4,
+            484.3,
+            165.6,
+            496.2
+          ]
+        },
+        {
+          "text": "demonstration",
+          "bbox": [
+            170.0,
+            484.3,
+            243.6,
+            496.2
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 9,
+      "page_image": "is11_med_001_p16.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p14_72_243",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 14,
+      "text_content": "Fig. 4: Exemplary quantum circuit of the discrete Laplacian in the Hadamard test",
+      "text_bbox": [
+        72.0,
+        243.5,
+        523.3,
+        255.5
+      ],
+      "extent_bbox": [
+        220.2,
+        99.5,
+        409.4,
+        234.9
+      ],
+      "extent_primitive_count": 1,
+      "extent_area": 25625.9,
+      "spatial_distance": 8.5,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Fig. 4: Exemplary quantum circuit of the discrete Laplacian in the Hadamard test configuration. The example",
+      "context_atoms": [
+        {
+          "text": "Fig.",
+          "bbox": [
+            72.0,
+            243.5,
+            87.8,
+            255.5
+          ]
+        },
+        {
+          "text": "4:",
+          "bbox": [
+            91.3,
+            243.5,
+            99.1,
+            255.5
+          ]
+        },
+        {
+          "text": "Exemplary",
+          "bbox": [
+            102.6,
+            243.5,
+            146.2,
+            255.5
+          ]
+        },
+        {
+          "text": "quantum",
+          "bbox": [
+            149.7,
+            243.5,
+            184.6,
+            255.5
+          ]
+        },
+        {
+          "text": "circuit",
+          "bbox": [
+            188.1,
+            243.5,
+            213.6,
+            255.5
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 10,
+      "page_image": "arxiv_2402.18619_p14.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p17_184_561",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 17,
+      "text_content": "the",
+      "text_bbox": [
+        184.3,
+        561.2,
+        195.2,
+        572.0
+      ],
+      "extent_bbox": [
+        154.3,
+        472.2,
+        482.0,
+        556.1
+      ],
+      "extent_primitive_count": 1,
+      "extent_area": 27491.3,
+      "spatial_distance": 5.1,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "type_b_negative",
+      "context_text": "(b) Compiled QNPU for the implementation of (b) Compiled QNPU for implementation of j jN N used to realize Neumann boundary conditions, cf. Eqn. (20). used to realize Neumann boundary conditions, cf. ",
+      "context_atoms": [
+        {
+          "text": "(b) Compiled QNPU for the implementation of",
+          "bbox": [
+            89.2,
+            561.2,
+            265.3,
+            572.0
+          ]
+        },
+        {
+          "text": "(b)",
+          "bbox": [
+            89.2,
+            561.2,
+            99.7,
+            572.0
+          ]
+        },
+        {
+          "text": "Compiled",
+          "bbox": [
+            102.8,
+            561.2,
+            138.2,
+            572.0
+          ]
+        },
+        {
+          "text": "QNPU",
+          "bbox": [
+            141.6,
+            561.2,
+            167.3,
+            572.0
+          ]
+        },
+        {
+          "text": "for",
+          "bbox": [
+            170.7,
+            561.2,
+            181.1,
+            572.0
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "negative_type": "type_b",
+      "review_order": 11,
+      "page_image": "arxiv_2402.18619_p17.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p24_72_646",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 24,
+      "text_content": "Fig. 13: Comparisons of VQA-result (lines) and FD-results (symbols) for the stea",
+      "text_bbox": [
+        72.0,
+        646.1,
+        523.3,
+        658.1
+      ],
+      "extent_bbox": [
+        121.7,
+        344.7,
+        504.3,
+        593.0
+      ],
+      "extent_primitive_count": 32,
+      "extent_area": 94991.3,
+      "spatial_distance": 53.1,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Fig. 13: Comparisons of VQA-result (lines) and FD-results (symbols) for the steady heat conduction in",
+      "context_atoms": [
+        {
+          "text": "Fig.",
+          "bbox": [
+            72.0,
+            646.1,
+            87.8,
+            658.1
+          ]
+        },
+        {
+          "text": "13:",
+          "bbox": [
+            93.0,
+            646.1,
+            105.7,
+            658.1
+          ]
+        },
+        {
+          "text": "Comparisons",
+          "bbox": [
+            110.9,
+            646.1,
+            163.5,
+            658.1
+          ]
+        },
+        {
+          "text": "of",
+          "bbox": [
+            168.7,
+            646.1,
+            177.0,
+            658.1
+          ]
+        },
+        {
+          "text": "VQA-result",
+          "bbox": [
+            182.4,
+            646.1,
+            230.7,
+            658.1
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 12,
+      "page_image": "arxiv_2402.18619_p24.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_resnet_p8_50_328",
+      "document_id": "is11_resnet",
+      "page_reference": 8,
+      "text_content": "Figure 7. Standard deviations (std) of layer responses on CIFAR-",
+      "text_bbox": [
+        50.1,
+        328.3,
+        286.4,
+        337.3
+      ],
+      "extent_bbox": [
+        62.0,
+        72.0,
+        495.6,
+        328.8
+      ],
+      "extent_primitive_count": 53,
+      "extent_area": 111348.4,
+      "spatial_distance": -265.2,
+      "x_overlap": true,
+      "vertical_ordering": "above",
+      "pattern_type": "caption_like",
+      "context_text": "Figure 7. Standard deviations (std) of layer responses on CIFAR- ResNet-101 ResNet-101 48.4 48.4 27.2 27.2",
+      "context_atoms": [
+        {
+          "text": "Figure",
+          "bbox": [
+            50.1,
+            328.3,
+            73.5,
+            337.3
+          ]
+        },
+        {
+          "text": "7.",
+          "bbox": [
+            76.1,
+            328.3,
+            82.8,
+            337.3
+          ]
+        },
+        {
+          "text": "Standard",
+          "bbox": [
+            85.4,
+            328.3,
+            117.3,
+            337.3
+          ]
+        },
+        {
+          "text": "deviations",
+          "bbox": [
+            119.9,
+            328.3,
+            156.5,
+            337.3
+          ]
+        },
+        {
+          "text": "(std)",
+          "bbox": [
+            159.1,
+            328.3,
+            175.5,
+            337.3
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 13,
+      "page_image": "is11_resnet_p8.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_457_234",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 28,
+      "text_content": "Fig.",
+      "text_bbox": [
+        456.7,
+        233.6,
+        472.4,
+        245.6
+      ],
+      "extent_bbox": [
+        123.7,
+        77.2,
+        503.2,
+        178.3
+      ],
+      "extent_primitive_count": 12,
+      "extent_area": 38398.5,
+      "spatial_distance": 55.2,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "Fig. 15: Temporal evolution of the deviation measure Fig. 15: Temporal evolution of the deviation measure ε εl l for the results displayed in Fig. 14. for the results displayed in 14.",
+      "context_atoms": [
+        {
+          "text": "Fig. 15: Temporal evolution of the deviation measure",
+          "bbox": [
+            106.9,
+            233.6,
+            325.5,
+            245.6
+          ]
+        },
+        {
+          "text": "Fig.",
+          "bbox": [
+            106.9,
+            233.6,
+            122.7,
+            245.6
+          ]
+        },
+        {
+          "text": "15:",
+          "bbox": [
+            126.2,
+            233.6,
+            138.9,
+            245.6
+          ]
+        },
+        {
+          "text": "Temporal",
+          "bbox": [
+            142.4,
+            233.6,
+            180.4,
+            245.6
+          ]
+        },
+        {
+          "text": "evolution",
+          "bbox": [
+            183.9,
+            233.6,
+            221.1,
+            245.6
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 14,
+      "page_image": "arxiv_2402.18619_p28.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p17_121_581",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 17,
+      "text_content": "Fig. 8: Illustration of the novel boundary correction QNPUs for a",
+      "text_bbox": [
+        120.6,
+        580.6,
+        392.1,
+        592.6
+      ],
+      "extent_bbox": [
+        154.3,
+        472.2,
+        482.0,
+        556.1
+      ],
+      "extent_primitive_count": 1,
+      "extent_area": 27491.3,
+      "spatial_distance": 24.5,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Fig. 8: Illustration of the novel boundary correction QNPUs for a n n = 6 = 6 qubits setup. qubits setup.",
+      "context_atoms": [
+        {
+          "text": "Fig.",
+          "bbox": [
+            120.6,
+            580.6,
+            136.4,
+            592.6
+          ]
+        },
+        {
+          "text": "8:",
+          "bbox": [
+            139.9,
+            580.6,
+            147.6,
+            592.6
+          ]
+        },
+        {
+          "text": "Illustration",
+          "bbox": [
+            151.1,
+            580.6,
+            194.8,
+            592.6
+          ]
+        },
+        {
+          "text": "of",
+          "bbox": [
+            198.3,
+            580.6,
+            206.6,
+            592.6
+          ]
+        },
+        {
+          "text": "the",
+          "bbox": [
+            210.1,
+            580.6,
+            222.3,
+            592.6
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 15,
+      "page_image": "arxiv_2402.18619_p17.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_346_73",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 18,
+      "text_content": "scaling",
+      "text_bbox": [
+        345.8,
+        73.3,
+        374.0,
+        85.3
+      ],
+      "extent_bbox": [
+        340.1,
+        75.5,
+        505.9,
+        243.8
+      ],
+      "extent_primitive_count": 8,
+      "extent_area": 27907.7,
+      "spatial_distance": -9.7,
+      "x_overlap": true,
+      "vertical_ordering": "above",
+      "pattern_type": "type_b_negative",
+      "context_text": "identities, which are available, for example, in Q identities, which are available, for example, in QISKIT ISKIT [27]. The scaling of the number of gates involved in [27]. The of the number of gates i",
+      "context_atoms": [
+        {
+          "text": "identities, which are available, for example, in Q",
+          "bbox": [
+            72.0,
+            73.3,
+            276.2,
+            85.3
+          ]
+        },
+        {
+          "text": "identities,",
+          "bbox": [
+            72.0,
+            73.3,
+            111.0,
+            85.3
+          ]
+        },
+        {
+          "text": "which",
+          "bbox": [
+            115.0,
+            73.3,
+            139.3,
+            85.3
+          ]
+        },
+        {
+          "text": "are",
+          "bbox": [
+            143.3,
+            73.3,
+            155.5,
+            85.3
+          ]
+        },
+        {
+          "text": "available,",
+          "bbox": [
+            159.4,
+            73.3,
+            197.4,
+            85.3
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "negative_type": "type_b",
+      "review_order": 16,
+      "page_image": "arxiv_2402.18619_p18.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_efficientnet_p8_307_390",
+      "document_id": "is11_efficientnet",
+      "page_reference": 8,
+      "text_content": "Figure 8.",
+      "text_bbox": [
+        306.9,
+        389.6,
+        339.3,
+        398.6
+      ],
+      "extent_bbox": [
+        325.0,
+        242.0,
+        524.5,
+        389.9
+      ],
+      "extent_primitive_count": 7,
+      "extent_area": 29508.0,
+      "spatial_distance": -156.6,
+      "x_overlap": true,
+      "vertical_ordering": "above",
+      "pattern_type": "caption_like",
+      "context_text": "Figure 8. Scaling Up EfﬁcientNet-B0 with Different Methods. Scaling Up EfﬁcientNet-B0 with Different Methods.",
+      "context_atoms": [
+        {
+          "text": "Figure",
+          "bbox": [
+            306.9,
+            389.6,
+            330.4,
+            398.6
+          ]
+        },
+        {
+          "text": "8.",
+          "bbox": [
+            332.6,
+            389.6,
+            339.3,
+            398.6
+          ]
+        },
+        {
+          "text": "Scaling Up EfﬁcientNet-B0 with Different Methods.",
+          "bbox": [
+            339.3,
+            389.6,
+            538.6,
+            398.5
+          ]
+        },
+        {
+          "text": "Scaling",
+          "bbox": [
+            341.6,
+            389.6,
+            369.5,
+            398.5
+          ]
+        },
+        {
+          "text": "Up",
+          "bbox": [
+            371.7,
+            389.6,
+            383.2,
+            398.5
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 17,
+      "page_image": "is11_efficientnet_p8.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_479_214",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 28,
+      "text_content": "Fig.",
+      "text_bbox": [
+        478.8,
+        214.1,
+        493.0,
+        224.9
+      ],
+      "extent_bbox": [
+        123.7,
+        77.2,
+        503.2,
+        178.3
+      ],
+      "extent_primitive_count": 12,
+      "extent_area": 38398.5,
+      "spatial_distance": 35.7,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "(a) Evolution for coarse-grid results displayed in Fig. 14a- (a) Evolution for coarse-grid results displayed in Fig. 14a-c. (b) Evolution of fine-grid results displayed in Fig. 14d. (b) Evolution of f",
+      "context_atoms": [
+        {
+          "text": "(a) Evolution for coarse-grid results displayed in Fig. 14a-",
+          "bbox": [
+            74.8,
+            214.1,
+            295.9,
+            224.9
+          ]
+        },
+        {
+          "text": "(a)",
+          "bbox": [
+            74.8,
+            214.1,
+            84.7,
+            224.9
+          ]
+        },
+        {
+          "text": "Evolution",
+          "bbox": [
+            87.7,
+            214.1,
+            122.9,
+            224.9
+          ]
+        },
+        {
+          "text": "for",
+          "bbox": [
+            125.9,
+            214.1,
+            136.3,
+            224.9
+          ]
+        },
+        {
+          "text": "coarse-grid",
+          "bbox": [
+            139.3,
+            214.1,
+            179.7,
+            224.9
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 18,
+      "page_image": "arxiv_2402.18619_p28.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_efficientnet_p4_66_331",
+      "document_id": "is11_efficientnet",
+      "page_reference": 4,
+      "text_content": "Figure",
+      "text_bbox": [
+        65.9,
+        330.8,
+        92.5,
+        340.9
+      ],
+      "extent_bbox": [
+        313.3,
+        268.7,
+        535.6,
+        441.4
+      ],
+      "extent_primitive_count": 7,
+      "extent_area": 38391.9,
+      "spatial_distance": 0,
+      "x_overlap": false,
+      "vertical_ordering": "inside",
+      "pattern_type": "type_a_negative",
+      "context_text": "in Figure in 3 3 (left) show that the accuracy quickly saturates (left) show that the accuracy quickly saturates",
+      "context_atoms": [
+        {
+          "text": "in Figure",
+          "bbox": [
+            55.4,
+            330.8,
+            92.5,
+            340.9
+          ]
+        },
+        {
+          "text": "in",
+          "bbox": [
+            55.4,
+            330.8,
+            63.4,
+            340.9
+          ]
+        },
+        {
+          "text": "3",
+          "bbox": [
+            92.5,
+            330.8,
+            100.1,
+            340.9
+          ]
+        },
+        {
+          "text": "3",
+          "bbox": [
+            95.1,
+            330.8,
+            100.1,
+            340.9
+          ]
+        },
+        {
+          "text": "(left) show that the accuracy quickly saturates",
+          "bbox": [
+            100.1,
+            330.8,
+            289.4,
+            340.9
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "negative_type": "type_a",
+      "review_order": 19,
+      "page_image": "is11_efficientnet_p4.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_cs_001_p5_292_225",
+      "document_id": "is11_cs_001",
+      "page_reference": 5,
+      "text_content": "compared to",
+      "text_bbox": [
+        291.5,
+        224.7,
+        342.3,
+        234.5
+      ],
+      "extent_bbox": [
+        110.7,
+        72.0,
+        501.3,
+        217.5
+      ],
+      "extent_primitive_count": 13,
+      "extent_area": 56840.5,
+      "spatial_distance": 7.1,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "type_b_negative",
+      "context_text": "Figure 3: Energy consumption of Figure 3: Energy consumption of BitNet b1.58 BitNet b1.58 compared to LLaMA LLM LLaMA LLM at 7nm process nodes. On at 7nm process nodes. On",
+      "context_atoms": [
+        {
+          "text": "Figure 3: Energy consumption of",
+          "bbox": [
+            108.0,
+            224.7,
+            237.7,
+            234.5
+          ]
+        },
+        {
+          "text": "Figure",
+          "bbox": [
+            108.0,
+            224.7,
+            133.5,
+            234.5
+          ]
+        },
+        {
+          "text": "3:",
+          "bbox": [
+            135.8,
+            224.7,
+            143.4,
+            234.5
+          ]
+        },
+        {
+          "text": "Energy",
+          "bbox": [
+            146.4,
+            224.7,
+            174.4,
+            234.5
+          ]
+        },
+        {
+          "text": "consumption",
+          "bbox": [
+            176.8,
+            224.7,
+            227.2,
+            234.5
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "negative_type": "type_b",
+      "review_order": 20,
+      "page_image": "is11_cs_001_p5.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_efficientnet_p6_511_629",
+      "document_id": "is11_efficientnet",
+      "page_reference": 6,
+      "text_content": "Figure",
+      "text_bbox": [
+        511.2,
+        628.6,
+        535.1,
+        637.7
+      ],
+      "extent_bbox": [
+        307.4,
+        445.0,
+        532.1,
+        625.4
+      ],
+      "extent_primitive_count": 5,
+      "extent_area": 40525.2,
+      "spatial_distance": 3.2,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "Figure 5. Figure 5. FLOPS vs. ImageNet Accuracy – FLOPS vs. ImageNet Accuracy – Similar to Figure Similar to 1 1",
+      "context_atoms": [
+        {
+          "text": "Figure 5.",
+          "bbox": [
+            306.9,
+            628.7,
+            339.3,
+            637.7
+          ]
+        },
+        {
+          "text": "Figure",
+          "bbox": [
+            306.9,
+            628.7,
+            330.4,
+            637.7
+          ]
+        },
+        {
+          "text": "5.",
+          "bbox": [
+            332.6,
+            628.7,
+            339.3,
+            637.7
+          ]
+        },
+        {
+          "text": "FLOPS vs. ImageNet Accuracy –",
+          "bbox": [
+            339.3,
+            628.6,
+            469.7,
+            637.6
+          ]
+        },
+        {
+          "text": "FLOPS",
+          "bbox": [
+            341.6,
+            628.6,
+            370.5,
+            637.6
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 21,
+      "page_image": "is11_efficientnet_p6.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p10_132_629",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 10,
+      "text_content": "Fig.",
+      "text_bbox": [
+        131.8,
+        629.5,
+        147.6,
+        641.5
+      ],
+      "extent_bbox": [
+        173.2,
+        281.9,
+        433.5,
+        572.6
+      ],
+      "extent_primitive_count": 11,
+      "extent_area": 75689.0,
+      "spatial_distance": 56.9,
+      "x_overlap": false,
+      "vertical_ordering": "below",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "shaded box in Fig. 2, whereas the optimization process runs  shaded box in 2, whereas the optimization process runs on the classical hardware that controls the process",
+      "context_atoms": [
+        {
+          "text": "shaded box in Fig. 2, whereas the optimization process runs ",
+          "bbox": [
+            72.0,
+            629.5,
+            523.3,
+            641.5
+          ]
+        },
+        {
+          "text": "shaded",
+          "bbox": [
+            72.0,
+            629.5,
+            99.7,
+            641.5
+          ]
+        },
+        {
+          "text": "box",
+          "bbox": [
+            102.8,
+            629.5,
+            117.8,
+            641.5
+          ]
+        },
+        {
+          "text": "in",
+          "bbox": [
+            120.9,
+            629.5,
+            128.7,
+            641.5
+          ]
+        },
+        {
+          "text": "2,",
+          "bbox": [
+            150.7,
+            629.5,
+            158.2,
+            641.5
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 22,
+      "page_image": "arxiv_2402.18619_p10.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_resnet_p1_309_305",
+      "document_id": "is11_resnet",
+      "page_reference": 1,
+      "text_content": "Figure 1. Training error (left) and test error (right) on CIFAR-10",
+      "text_bbox": [
+        308.9,
+        304.9,
+        545.1,
+        313.9
+      ],
+      "extent_bbox": [
+        308.9,
+        224.4,
+        545.1,
+        302.4
+      ],
+      "extent_primitive_count": 10,
+      "extent_area": 18433.3,
+      "spatial_distance": 2.5,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "stead of learning unreferenced functions. We provide com- stead of learning unreferenced functions. We provide com- Figure 1. Training error (left) and test error (right) on CIFAR-10",
+      "context_atoms": [
+        {
+          "text": "stead of learning unreferenced functions. We provide com-",
+          "bbox": [
+            50.1,
+            305.8,
+            286.4,
+            315.8
+          ]
+        },
+        {
+          "text": "stead",
+          "bbox": [
+            50.1,
+            305.8,
+            71.1,
+            315.8
+          ]
+        },
+        {
+          "text": "of",
+          "bbox": [
+            74.0,
+            305.8,
+            81.7,
+            315.8
+          ]
+        },
+        {
+          "text": "learning",
+          "bbox": [
+            84.6,
+            305.8,
+            118.4,
+            315.8
+          ]
+        },
+        {
+          "text": "unreferenced",
+          "bbox": [
+            121.2,
+            305.8,
+            173.0,
+            315.8
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 23,
+      "page_image": "is11_resnet_p1.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_147_496",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 19,
+      "text_content": "Fig.",
+      "text_bbox": [
+        147.0,
+        496.0,
+        162.8,
+        508.0
+      ],
+      "extent_bbox": [
+        134.1,
+        564.4,
+        504.7,
+        699.9
+      ],
+      "extent_primitive_count": 2,
+      "extent_area": 50210.5,
+      "spatial_distance": 56.4,
+      "x_overlap": true,
+      "vertical_ordering": "above",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "given by lines in Fig. 9, are clearly visible but, of course given by lines in 9, are clearly visible but, of course, come at the expense of additional ( (n n − −2) 2) carry carry",
+      "context_atoms": [
+        {
+          "text": "given by lines in Fig. 9, are clearly visible but, of course",
+          "bbox": [
+            72.0,
+            496.0,
+            462.5,
+            508.0
+          ]
+        },
+        {
+          "text": "given",
+          "bbox": [
+            72.0,
+            496.0,
+            93.7,
+            508.0
+          ]
+        },
+        {
+          "text": "by",
+          "bbox": [
+            97.9,
+            496.0,
+            107.9,
+            508.0
+          ]
+        },
+        {
+          "text": "lines",
+          "bbox": [
+            112.1,
+            496.0,
+            130.9,
+            508.0
+          ]
+        },
+        {
+          "text": "in",
+          "bbox": [
+            135.1,
+            496.0,
+            142.8,
+            508.0
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 24,
+      "page_image": "arxiv_2402.18619_p19.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_256_214",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 28,
+      "text_content": "Fig.",
+      "text_bbox": [
+        256.4,
+        214.1,
+        270.6,
+        224.9
+      ],
+      "extent_bbox": [
+        123.7,
+        77.2,
+        503.2,
+        178.3
+      ],
+      "extent_primitive_count": 12,
+      "extent_area": 38398.5,
+      "spatial_distance": 35.7,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "(a) Evolution for coarse-grid results displayed in Fig. 14a- (a) Evolution for coarse-grid results displayed in 14a-c. (b) Evolution of fine-grid results displayed in Fig. 14d. (b) Evolution of fine-g",
+      "context_atoms": [
+        {
+          "text": "(a) Evolution for coarse-grid results displayed in Fig. 14a-",
+          "bbox": [
+            74.8,
+            214.1,
+            295.9,
+            224.9
+          ]
+        },
+        {
+          "text": "(a)",
+          "bbox": [
+            74.8,
+            214.1,
+            84.7,
+            224.9
+          ]
+        },
+        {
+          "text": "Evolution",
+          "bbox": [
+            87.7,
+            214.1,
+            122.9,
+            224.9
+          ]
+        },
+        {
+          "text": "for",
+          "bbox": [
+            125.9,
+            214.1,
+            136.3,
+            224.9
+          ]
+        },
+        {
+          "text": "coarse-grid",
+          "bbox": [
+            139.3,
+            214.1,
+            179.7,
+            224.9
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 25,
+      "page_image": "arxiv_2402.18619_p28.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p12_180_706",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 12,
+      "text_content": "Fig. 3: Illustration of the employed nested VQA circuits.",
+      "text_bbox": [
+        180.1,
+        706.2,
+        415.2,
+        718.2
+      ],
+      "extent_bbox": [
+        123.7,
+        598.1,
+        471.6,
+        660.5
+      ],
+      "extent_primitive_count": 13,
+      "extent_area": 21733.6,
+      "spatial_distance": 45.7,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Fig. 3: Illustration of the employed nested VQA circuits.",
+      "context_atoms": [
+        {
+          "text": "Fig.",
+          "bbox": [
+            180.1,
+            706.2,
+            195.8,
+            718.2
+          ]
+        },
+        {
+          "text": "3:",
+          "bbox": [
+            199.3,
+            706.2,
+            207.1,
+            718.2
+          ]
+        },
+        {
+          "text": "Illustration",
+          "bbox": [
+            210.6,
+            706.2,
+            254.3,
+            718.2
+          ]
+        },
+        {
+          "text": "of",
+          "bbox": [
+            257.8,
+            706.2,
+            266.1,
+            718.2
+          ]
+        },
+        {
+          "text": "the",
+          "bbox": [
+            269.6,
+            706.2,
+            281.7,
+            718.2
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 26,
+      "page_image": "arxiv_2402.18619_p12.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p26_327_253",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 26,
+      "text_content": "Fig.",
+      "text_bbox": [
+        327.4,
+        252.6,
+        343.2,
+        264.6
+      ],
+      "extent_bbox": [
+        114.7,
+        303.4,
+        502.7,
+        426.7
+      ],
+      "extent_primitive_count": 40,
+      "extent_area": 47845.6,
+      "spatial_distance": 38.8,
+      "x_overlap": true,
+      "vertical_ordering": "above",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "(fine grid) symbols. Mind that a larger scatter of depth (fine grid) symbols. Mind that a larger scatter of depth d d, , cf. Fig. 3b, is seen for the employed ansatz cf. 3b, is seen for the employed a",
+      "context_atoms": [
+        {
+          "text": "(fine grid) symbols. Mind that a larger scatter of depth",
+          "bbox": [
+            72.0,
+            252.6,
+            298.6,
+            264.6
+          ]
+        },
+        {
+          "text": "(fine",
+          "bbox": [
+            72.0,
+            252.6,
+            90.3,
+            264.6
+          ]
+        },
+        {
+          "text": "grid)",
+          "bbox": [
+            93.9,
+            252.6,
+            113.3,
+            264.6
+          ]
+        },
+        {
+          "text": "symbols.",
+          "bbox": [
+            116.9,
+            252.6,
+            152.6,
+            264.6
+          ]
+        },
+        {
+          "text": "Mind",
+          "bbox": [
+            156.3,
+            252.6,
+            177.9,
+            264.6
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 27,
+      "page_image": "arxiv_2402.18619_p26.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_339_297",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 19,
+      "text_content": "Fig.",
+      "text_bbox": [
+        338.6,
+        296.7,
+        354.4,
+        308.7
+      ],
+      "extent_bbox": [
+        241.6,
+        124.9,
+        378.1,
+        240.0
+      ],
+      "extent_primitive_count": 2,
+      "extent_area": 15706.7,
+      "spatial_distance": 56.8,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "Applying this concept to the transformation circuit Applying this concept to the transformation circuit T Tt outlined in Fig. 7 allows to derive a shallower alternative outlined in 7 allows to derive ",
+      "context_atoms": [
+        {
+          "text": "Applying this concept to the transformation circuit",
+          "bbox": [
+            72.0,
+            296.7,
+            276.9,
+            308.7
+          ]
+        },
+        {
+          "text": "Applying",
+          "bbox": [
+            72.0,
+            296.7,
+            109.6,
+            308.7
+          ]
+        },
+        {
+          "text": "this",
+          "bbox": [
+            112.6,
+            296.7,
+            127.0,
+            308.7
+          ]
+        },
+        {
+          "text": "concept",
+          "bbox": [
+            130.0,
+            296.7,
+            161.0,
+            308.7
+          ]
+        },
+        {
+          "text": "to",
+          "bbox": [
+            163.9,
+            296.7,
+            171.7,
+            308.7
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 28,
+      "page_image": "arxiv_2402.18619_p19.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_efficientnet_p8_467_415",
+      "document_id": "is11_efficientnet",
+      "page_reference": 8,
+      "text_content": "Figure",
+      "text_bbox": [
+        467.3,
+        415.5,
+        492.5,
+        424.4
+      ],
+      "extent_bbox": [
+        325.0,
+        242.0,
+        524.5,
+        389.9
+      ],
+      "extent_primitive_count": 7,
+      "extent_area": 29508.0,
+      "spatial_distance": 25.5,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "Table 7. Table 7. Scaled Models Used in Figure Scaled Models Used in 7 7. .",
+      "context_atoms": [
+        {
+          "text": "Table 7.",
+          "bbox": [
+            344.6,
+            415.6,
+            373.3,
+            424.5
+          ]
+        },
+        {
+          "text": "Table",
+          "bbox": [
+            344.6,
+            415.6,
+            364.3,
+            424.5
+          ]
+        },
+        {
+          "text": "7.",
+          "bbox": [
+            366.5,
+            415.6,
+            373.3,
+            424.5
+          ]
+        },
+        {
+          "text": "Scaled Models Used in Figure",
+          "bbox": [
+            373.3,
+            415.5,
+            492.5,
+            424.4
+          ]
+        },
+        {
+          "text": "Scaled",
+          "bbox": [
+            379.1,
+            415.5,
+            404.0,
+            424.4
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 29,
+      "page_image": "is11_efficientnet_p8.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_efficientnet_p4_307_448",
+      "document_id": "is11_efficientnet",
+      "page_reference": 4,
+      "text_content": "Figure 4.",
+      "text_bbox": [
+        306.9,
+        448.3,
+        339.3,
+        457.3
+      ],
+      "extent_bbox": [
+        313.3,
+        268.7,
+        535.6,
+        441.4
+      ],
+      "extent_primitive_count": 7,
+      "extent_area": 38391.9,
+      "spatial_distance": 6.9,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "600x600, are also widely used in object detection ConvNets 600x600, are also widely used in object detection ConvNets Figure 4. Scaling Network Width for Different Baseline Net- Scaling Network Width ",
+      "context_atoms": [
+        {
+          "text": "600x600, are also widely used in object detection ConvNets",
+          "bbox": [
+            55.4,
+            449.5,
+            289.4,
+            459.4
+          ]
+        },
+        {
+          "text": "600x600,",
+          "bbox": [
+            55.4,
+            449.5,
+            92.0,
+            459.4
+          ]
+        },
+        {
+          "text": "are",
+          "bbox": [
+            94.5,
+            449.5,
+            106.4,
+            459.4
+          ]
+        },
+        {
+          "text": "also",
+          "bbox": [
+            108.8,
+            449.5,
+            124.5,
+            459.4
+          ]
+        },
+        {
+          "text": "widely",
+          "bbox": [
+            127.0,
+            449.5,
+            153.6,
+            459.4
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 30,
+      "page_image": "is11_efficientnet_p4.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_432_93",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 18,
+      "text_content": "Fig.",
+      "text_bbox": [
+        432.0,
+        93.2,
+        447.8,
+        105.2
+      ],
+      "extent_bbox": [
+        340.1,
+        75.5,
+        505.9,
+        243.8
+      ],
+      "extent_primitive_count": 8,
+      "extent_area": 27907.7,
+      "spatial_distance": 0,
+      "x_overlap": true,
+      "vertical_ordering": "inside",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "the the SO4 SO4 ansatz with respect to the number of qubits ansatz with respect to the number of qubits n n and the depth and the depth d d is reported in Fig. 9a. It is observed is reported in 9a. It",
+      "context_atoms": [
+        {
+          "text": "the",
+          "bbox": [
+            72.0,
+            93.2,
+            84.2,
+            105.2
+          ]
+        },
+        {
+          "text": "the",
+          "bbox": [
+            72.0,
+            93.2,
+            84.2,
+            105.2
+          ]
+        },
+        {
+          "text": "SO4",
+          "bbox": [
+            84.2,
+            94.7,
+            105.2,
+            104.6
+          ]
+        },
+        {
+          "text": "SO4",
+          "bbox": [
+            88.0,
+            94.7,
+            105.2,
+            104.6
+          ]
+        },
+        {
+          "text": "ansatz with respect to the number of qubits",
+          "bbox": [
+            105.2,
+            93.2,
+            289.9,
+            105.2
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 31,
+      "page_image": "arxiv_2402.18619_p18.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_cs_001_p4_108_225",
+      "document_id": "is11_cs_001",
+      "page_reference": 4,
+      "text_content": "Figure 2: Decoding latency (Left) and memory consumption (Right) of",
+      "text_bbox": [
+        108.0,
+        224.5,
+        400.7,
+        234.6
+      ],
+      "extent_bbox": [
+        110.7,
+        72.0,
+        501.3,
+        217.5
+      ],
+      "extent_primitive_count": 14,
+      "extent_area": 56838.8,
+      "spatial_distance": 7.0,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Figure 2: Decoding latency (Left) and memory consumption (Right) of BitNet b1.58 BitNet b1.58 varying the varying the",
+      "context_atoms": [
+        {
+          "text": "Figure",
+          "bbox": [
+            108.0,
+            224.5,
+            134.5,
+            234.6
+          ]
+        },
+        {
+          "text": "2:",
+          "bbox": [
+            137.4,
+            224.5,
+            145.3,
+            234.6
+          ]
+        },
+        {
+          "text": "Decoding",
+          "bbox": [
+            149.2,
+            224.5,
+            188.7,
+            234.6
+          ]
+        },
+        {
+          "text": "latency",
+          "bbox": [
+            191.6,
+            224.5,
+            220.8,
+            234.6
+          ]
+        },
+        {
+          "text": "(Left)",
+          "bbox": [
+            223.7,
+            224.5,
+            247.4,
+            234.6
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 32,
+      "page_image": "is11_cs_001_p4.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_resnet_p6_309_157",
+      "document_id": "is11_resnet",
+      "page_reference": 6,
+      "text_content": "Figure 5. A deeper residual function",
+      "text_bbox": [
+        308.9,
+        157.1,
+        445.4,
+        166.1
+      ],
+      "extent_bbox": [
+        333.8,
+        72.0,
+        535.9,
+        143.0
+      ],
+      "extent_primitive_count": 6,
+      "extent_area": 14347.3,
+      "spatial_distance": 14.1,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "24.19 24.19 7.40 7.40 Figure 5. A deeper residual function F F for ImageNet. Left: a for ImageNet. Left: a",
+      "context_atoms": [
+        {
+          "text": "24.19",
+          "bbox": [
+            170.2,
+            161.6,
+            190.4,
+            170.6
+          ]
+        },
+        {
+          "text": "24.19",
+          "bbox": [
+            170.2,
+            161.6,
+            190.4,
+            170.6
+          ]
+        },
+        {
+          "text": "7.40",
+          "bbox": [
+            217.6,
+            161.6,
+            233.3,
+            170.6
+          ]
+        },
+        {
+          "text": "7.40",
+          "bbox": [
+            217.6,
+            161.6,
+            233.3,
+            170.6
+          ]
+        },
+        {
+          "text": "Figure",
+          "bbox": [
+            308.9,
+            157.1,
+            332.3,
+            166.1
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 33,
+      "page_image": "is11_resnet_p6.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_resnet_p5_50_392",
+      "document_id": "is11_resnet",
+      "page_reference": 5,
+      "text_content": "Figure 4. Training on",
+      "text_bbox": [
+        50.1,
+        392.4,
+        126.4,
+        401.3
+      ],
+      "extent_bbox": [
+        84.8,
+        251.4,
+        510.4,
+        389.6
+      ],
+      "extent_primitive_count": 18,
+      "extent_area": 58842.0,
+      "spatial_distance": 2.7,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Figure 4. Training on ImageNet ImageNet. . Thin curves denote training error, and bold curves denote  Thin curves denote training error, and bold curves denote validation error of the center crops. Le",
+      "context_atoms": [
+        {
+          "text": "Figure",
+          "bbox": [
+            50.1,
+            392.4,
+            73.5,
+            401.3
+          ]
+        },
+        {
+          "text": "4.",
+          "bbox": [
+            75.7,
+            392.4,
+            82.5,
+            401.3
+          ]
+        },
+        {
+          "text": "Training",
+          "bbox": [
+            84.7,
+            392.4,
+            115.2,
+            401.3
+          ]
+        },
+        {
+          "text": "on",
+          "bbox": [
+            117.4,
+            392.4,
+            126.4,
+            401.3
+          ]
+        },
+        {
+          "text": "ImageNet",
+          "bbox": [
+            126.4,
+            392.3,
+            165.9,
+            401.3
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 34,
+      "page_image": "is11_resnet_p5.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_207_82",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 28,
+      "text_content": "Fig. 14b",
+      "text_bbox": [
+        207.2,
+        82.3,
+        241.4,
+        94.3
+      ],
+      "extent_bbox": [
+        123.7,
+        77.2,
+        503.2,
+        178.3
+      ],
+      "extent_primitive_count": 12,
+      "extent_area": 38398.5,
+      "spatial_distance": 0,
+      "x_overlap": true,
+      "vertical_ordering": "inside",
+      "pattern_type": "subfigure_label",
+      "context_text": "10 Fig. 14a Fig. 14a Fig. 14b 10 10−2 − 2",
+      "context_atoms": [
+        {
+          "text": "10",
+          "bbox": [
+            99.8,
+            78.1,
+            109.8,
+            88.0
+          ]
+        },
+        {
+          "text": "Fig. 14a",
+          "bbox": [
+            151.9,
+            82.3,
+            185.6,
+            94.3
+          ]
+        },
+        {
+          "text": "Fig.",
+          "bbox": [
+            151.9,
+            82.3,
+            167.7,
+            94.3
+          ]
+        },
+        {
+          "text": "14a",
+          "bbox": [
+            171.2,
+            82.3,
+            185.6,
+            94.3
+          ]
+        },
+        {
+          "text": "Fig.",
+          "bbox": [
+            207.2,
+            82.3,
+            223.0,
+            94.3
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 35,
+      "page_image": "arxiv_2402.18619_p28.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p10_72_581",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 10,
+      "text_content": "Fig. 2: Sketch of the hybrid VQA optimization (time dependencies in the optimiza",
+      "text_bbox": [
+        72.0,
+        580.9,
+        523.3,
+        592.9
+      ],
+      "extent_bbox": [
+        173.2,
+        281.9,
+        433.5,
+        572.6
+      ],
+      "extent_primitive_count": 11,
+      "extent_area": 75689.0,
+      "spatial_distance": 8.3,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Fig. 2: Sketch of the hybrid VQA optimization (time dependencies in the optimization step are suppressed for",
+      "context_atoms": [
+        {
+          "text": "Fig.",
+          "bbox": [
+            72.0,
+            580.9,
+            87.8,
+            592.9
+          ]
+        },
+        {
+          "text": "2:",
+          "bbox": [
+            91.0,
+            580.9,
+            98.8,
+            592.9
+          ]
+        },
+        {
+          "text": "Sketch",
+          "bbox": [
+            102.1,
+            580.9,
+            129.1,
+            592.9
+          ]
+        },
+        {
+          "text": "of",
+          "bbox": [
+            132.3,
+            580.9,
+            140.7,
+            592.9
+          ]
+        },
+        {
+          "text": "the",
+          "bbox": [
+            143.9,
+            580.9,
+            156.1,
+            592.9
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 36,
+      "page_image": "arxiv_2402.18619_p10.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_resnet_p4_309_134",
+      "document_id": "is11_resnet",
+      "page_reference": 4,
+      "text_content": "Fig. 3). When the dimensions increase (dotted line shortcuts",
+      "text_bbox": [
+        308.9,
+        134.2,
+        545.1,
+        144.2
+      ],
+      "extent_bbox": [
+        238.3,
+        176.2,
+        284.7,
+        581.4
+      ],
+      "extent_primitive_count": 16,
+      "extent_area": 18793.0,
+      "spatial_distance": 32.1,
+      "x_overlap": false,
+      "vertical_ordering": "above",
+      "pattern_type": "reference_like",
+      "context_text": "output output pool, /2 pool, /2 Fig. 3). When the dimensions increase (dotted line shortcuts",
+      "context_atoms": [
+        {
+          "text": "output",
+          "bbox": [
+            52.7,
+            133.7,
+            67.4,
+            138.6
+          ]
+        },
+        {
+          "text": "output",
+          "bbox": [
+            52.7,
+            133.7,
+            66.3,
+            138.6
+          ]
+        },
+        {
+          "text": "pool, /2",
+          "bbox": [
+            90.1,
+            129.4,
+            105.7,
+            134.3
+          ]
+        },
+        {
+          "text": "pool,",
+          "bbox": [
+            90.1,
+            129.4,
+            100.2,
+            134.3
+          ]
+        },
+        {
+          "text": "/2",
+          "bbox": [
+            101.3,
+            129.4,
+            105.7,
+            134.3
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 37,
+      "page_image": "is11_resnet_p4.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_efficientnet_p7_55_455",
+      "document_id": "is11_efficientnet",
+      "page_reference": 7,
+      "text_content": "Figure 6.",
+      "text_bbox": [
+        54.9,
+        455.1,
+        87.3,
+        464.1
+      ],
+      "extent_bbox": [
+        104.0,
+        243.5,
+        492.8,
+        455.4
+      ],
+      "extent_primitive_count": 19,
+      "extent_area": 82394.0,
+      "spatial_distance": -220.6,
+      "x_overlap": false,
+      "vertical_ordering": "above",
+      "pattern_type": "caption_like",
+      "context_text": "Figure 6. Model Parameters vs. Transfer Learning Accuracy – Model Parameters vs. Transfer Learning Accuracy – All models are pretrained on ImageNet and ﬁnetuned on new da All models are pretrained on ",
+      "context_atoms": [
+        {
+          "text": "Figure",
+          "bbox": [
+            54.9,
+            455.1,
+            78.3,
+            464.1
+          ]
+        },
+        {
+          "text": "6.",
+          "bbox": [
+            80.6,
+            455.1,
+            87.3,
+            464.1
+          ]
+        },
+        {
+          "text": "Model Parameters vs. Transfer Learning Accuracy –",
+          "bbox": [
+            87.3,
+            455.1,
+            290.2,
+            464.0
+          ]
+        },
+        {
+          "text": "Model",
+          "bbox": [
+            89.6,
+            455.1,
+            114.0,
+            464.0
+          ]
+        },
+        {
+          "text": "Parameters",
+          "bbox": [
+            115.9,
+            455.1,
+            160.2,
+            464.0
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 38,
+      "page_image": "is11_efficientnet_p7.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_cs_001_p5_108_225",
+      "document_id": "is11_cs_001",
+      "page_reference": 5,
+      "text_content": "Figure 3: Energy consumption of",
+      "text_bbox": [
+        108.0,
+        224.7,
+        237.7,
+        234.5
+      ],
+      "extent_bbox": [
+        110.7,
+        72.0,
+        501.3,
+        217.5
+      ],
+      "extent_primitive_count": 13,
+      "extent_area": 56840.5,
+      "spatial_distance": 7.1,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Figure 3: Energy consumption of BitNet b1.58 BitNet b1.58 compared to compared to LLaMA LLM LLaMA LLM at 7nm process nodes. On at 7nm process nodes. On",
+      "context_atoms": [
+        {
+          "text": "Figure",
+          "bbox": [
+            108.0,
+            224.7,
+            133.5,
+            234.5
+          ]
+        },
+        {
+          "text": "3:",
+          "bbox": [
+            135.8,
+            224.7,
+            143.4,
+            234.5
+          ]
+        },
+        {
+          "text": "Energy",
+          "bbox": [
+            146.4,
+            224.7,
+            174.4,
+            234.5
+          ]
+        },
+        {
+          "text": "consumption",
+          "bbox": [
+            176.8,
+            224.7,
+            227.2,
+            234.5
+          ]
+        },
+        {
+          "text": "of",
+          "bbox": [
+            229.6,
+            224.7,
+            237.7,
+            234.5
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 39,
+      "page_image": "is11_cs_001_p5.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_458_160",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 28,
+      "text_content": "Fig. 14d",
+      "text_bbox": [
+        458.4,
+        160.0,
+        492.6,
+        172.0
+      ],
+      "extent_bbox": [
+        123.7,
+        77.2,
+        503.2,
+        178.3
+      ],
+      "extent_primitive_count": 12,
+      "extent_area": 38398.5,
+      "spatial_distance": 0,
+      "x_overlap": true,
+      "vertical_ordering": "inside",
+      "pattern_type": "subfigure_label",
+      "context_text": "Fig. 14d",
+      "context_atoms": [
+        {
+          "text": "Fig.",
+          "bbox": [
+            458.4,
+            160.0,
+            474.1,
+            172.0
+          ]
+        },
+        {
+          "text": "14d",
+          "bbox": [
+            477.6,
+            160.0,
+            492.6,
+            172.0
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 40,
+      "page_image": "arxiv_2402.18619_p28.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_resnet_p4_464_620",
+      "document_id": "is11_resnet",
+      "page_reference": 4,
+      "text_content": "Fig.",
+      "text_bbox": [
+        463.7,
+        619.8,
+        479.4,
+        629.7
+      ],
+      "extent_bbox": [
+        238.3,
+        176.2,
+        284.7,
+        581.4
+      ],
+      "extent_primitive_count": 16,
+      "extent_area": 18793.0,
+      "spatial_distance": 38.4,
+      "x_overlap": false,
+      "vertical_ordering": "below",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "plain nets. The 34-layer plain net is in Fig. 3 (middle). Th plain nets. The 34-layer plain net is in 3 (middle). The",
+      "context_atoms": [
+        {
+          "text": "plain nets. The 34-layer plain net is in Fig. 3 (middle). Th",
+          "bbox": [
+            308.9,
+            619.8,
+            545.1,
+            629.7
+          ]
+        },
+        {
+          "text": "plain",
+          "bbox": [
+            308.9,
+            619.8,
+            328.8,
+            629.7
+          ]
+        },
+        {
+          "text": "nets.",
+          "bbox": [
+            331.3,
+            619.8,
+            349.9,
+            629.7
+          ]
+        },
+        {
+          "text": "The",
+          "bbox": [
+            353.2,
+            619.8,
+            368.7,
+            629.7
+          ]
+        },
+        {
+          "text": "34-layer",
+          "bbox": [
+            371.2,
+            619.8,
+            404.4,
+            629.7
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 41,
+      "page_image": "is11_resnet_p4.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_med_001_p9_85_321",
+      "document_id": "is11_med_001",
+      "page_reference": 9,
+      "text_content": "FIG. 2:",
+      "text_bbox": [
+        85.0,
+        321.3,
+        123.7,
+        333.2
+      ],
+      "extent_bbox": [
+        93.2,
+        103.1,
+        484.9,
+        280.8
+      ],
+      "extent_primitive_count": 13,
+      "extent_area": 69629.1,
+      "spatial_distance": 40.4,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "FIG. 2: Schematic diagram of the algorithm used in the present work  Schematic diagram of the algorithm used in the present work for training",
+      "context_atoms": [
+        {
+          "text": "FIG.",
+          "bbox": [
+            85.0,
+            321.3,
+            109.3,
+            333.2
+          ]
+        },
+        {
+          "text": "2:",
+          "bbox": [
+            114.5,
+            321.3,
+            123.7,
+            333.2
+          ]
+        },
+        {
+          "text": "Schematic diagram of the algorithm used in the present work ",
+          "bbox": [
+            136.7,
+            321.3,
+            527.1,
+            333.2
+          ]
+        },
+        {
+          "text": "Schematic",
+          "bbox": [
+            136.7,
+            321.3,
+            188.4,
+            333.2
+          ]
+        },
+        {
+          "text": "diagram",
+          "bbox": [
+            193.6,
+            321.3,
+            235.2,
+            333.2
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 42,
+      "page_image": "is11_med_001_p9.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_med_001_p19_85_454",
+      "document_id": "is11_med_001",
+      "page_reference": 19,
+      "text_content": "FIG. 8:",
+      "text_bbox": [
+        85.0,
+        453.9,
+        123.0,
+        465.8
+      ],
+      "extent_bbox": [
+        109.4,
+        86.3,
+        524.8,
+        413.8
+      ],
+      "extent_primitive_count": 4,
+      "extent_area": 136076.7,
+      "spatial_distance": 40.0,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "FIG. 8: Correlation of entropy with AUC (upper left panel) and Correlation of entropy with AUC (upper left panel) and ⟨ ⟨fatom, f atom , f fmolecule⟩for molecule ⟩ for",
+      "context_atoms": [
+        {
+          "text": "FIG.",
+          "bbox": [
+            85.0,
+            453.9,
+            109.3,
+            465.8
+          ]
+        },
+        {
+          "text": "8:",
+          "bbox": [
+            113.9,
+            453.9,
+            123.0,
+            465.8
+          ]
+        },
+        {
+          "text": "Correlation of entropy with AUC (upper left panel) and",
+          "bbox": [
+            134.0,
+            453.9,
+            426.1,
+            465.8
+          ]
+        },
+        {
+          "text": "Correlation",
+          "bbox": [
+            134.0,
+            453.9,
+            191.9,
+            465.8
+          ]
+        },
+        {
+          "text": "of",
+          "bbox": [
+            196.4,
+            453.9,
+            205.8,
+            465.8
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 43,
+      "page_image": "is11_med_001_p19.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_med_001_p20_85_340",
+      "document_id": "is11_med_001",
+      "page_reference": 20,
+      "text_content": "FIG. 9:",
+      "text_bbox": [
+        85.0,
+        340.5,
+        125.3,
+        352.4
+      ],
+      "extent_bbox": [
+        88.5,
+        127.3,
+        526.0,
+        305.9
+      ],
+      "extent_primitive_count": 16,
+      "extent_area": 78181.4,
+      "spatial_distance": 34.6,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "FIG. 9: Left: Left: BIC values for models with different kernels. BIC values for models with different kernels. Right: Right: Learning Learning",
+      "context_atoms": [
+        {
+          "text": "FIG.",
+          "bbox": [
+            85.0,
+            340.5,
+            109.3,
+            352.4
+          ]
+        },
+        {
+          "text": "9:",
+          "bbox": [
+            116.2,
+            340.5,
+            125.3,
+            352.4
+          ]
+        },
+        {
+          "text": "Left:",
+          "bbox": [
+            143.5,
+            340.5,
+            167.4,
+            352.4
+          ]
+        },
+        {
+          "text": "Left:",
+          "bbox": [
+            143.5,
+            340.5,
+            167.4,
+            352.4
+          ]
+        },
+        {
+          "text": "BIC values for models with different kernels.",
+          "bbox": [
+            178.6,
+            340.5,
+            424.9,
+            352.4
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 44,
+      "page_image": "is11_med_001_p20.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_med_001_p18_325_655",
+      "document_id": "is11_med_001",
+      "page_reference": 18,
+      "text_content": "Figure",
+      "text_bbox": [
+        324.8,
+        654.7,
+        357.8,
+        666.7
+      ],
+      "extent_bbox": null,
+      "extent_primitive_count": 0,
+      "extent_area": 0,
+      "spatial_distance": -1,
+      "x_overlap": false,
+      "vertical_ordering": "none",
+      "pattern_type": "type_a_negative",
+      "context_text": "AUC( AUC(fmolecule(x|µ f molecule ( x | µ = = M Mii, ii , σ σ2 2 = ( = (P P | |Mij|)2). M ij | ) 2 ) . Figure 8 shows that entropy is particu- 8 shows that entropy is particu-",
+      "context_atoms": [
+        {
+          "text": "AUC(",
+          "bbox": [
+            85.0,
+            654.7,
+            115.3,
+            666.7
+          ]
+        },
+        {
+          "text": "AUC(fmolecule(x|µ",
+          "bbox": [
+            85.0,
+            654.6,
+            175.1,
+            667.6
+          ]
+        },
+        {
+          "text": "f",
+          "bbox": [
+            115.3,
+            654.7,
+            121.0,
+            666.7
+          ]
+        },
+        {
+          "text": "molecule",
+          "bbox": [
+            121.0,
+            659.6,
+            153.0,
+            667.6
+          ]
+        },
+        {
+          "text": "(",
+          "bbox": [
+            153.5,
+            654.7,
+            158.1,
+            666.7
+          ]
+        }
+      ],
+      "evidence_state": "NO_VISUAL_EVIDENCE",
+      "negative_type": "type_a",
+      "review_order": 45,
+      "page_image": "is11_med_001_p18.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_152_82",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 28,
+      "text_content": "Fig. 14a",
+      "text_bbox": [
+        151.9,
+        82.3,
+        185.6,
+        94.3
+      ],
+      "extent_bbox": [
+        123.7,
+        77.2,
+        503.2,
+        178.3
+      ],
+      "extent_primitive_count": 12,
+      "extent_area": 38398.5,
+      "spatial_distance": 0,
+      "x_overlap": true,
+      "vertical_ordering": "inside",
+      "pattern_type": "subfigure_label",
+      "context_text": "10 Fig. 14a Fig. 14b Fig. 14b 10 10−2 − 2",
+      "context_atoms": [
+        {
+          "text": "10",
+          "bbox": [
+            99.8,
+            78.1,
+            109.8,
+            88.0
+          ]
+        },
+        {
+          "text": "Fig.",
+          "bbox": [
+            151.9,
+            82.3,
+            167.7,
+            94.3
+          ]
+        },
+        {
+          "text": "14a",
+          "bbox": [
+            171.2,
+            82.3,
+            185.6,
+            94.3
+          ]
+        },
+        {
+          "text": "Fig. 14b",
+          "bbox": [
+            207.2,
+            82.3,
+            241.4,
+            94.3
+          ]
+        },
+        {
+          "text": "Fig.",
+          "bbox": [
+            207.2,
+            82.3,
+            223.0,
+            94.3
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 46,
+      "page_image": "arxiv_2402.18619_p28.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_med_001_p11_85_291",
+      "document_id": "is11_med_001",
+      "page_reference": 11,
+      "text_content": "FIG. 3:",
+      "text_bbox": [
+        85.0,
+        291.1,
+        124.2,
+        303.1
+      ],
+      "extent_bbox": [
+        96.1,
+        135.9,
+        515.9,
+        275.8
+      ],
+      "extent_primitive_count": 15,
+      "extent_area": 58748.9,
+      "spatial_distance": 15.3,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "FIG. 3: Left: Molecular probability density function for two isomers Left: Molecular probability density function for two isomers of C C7H10O2 7 H 10 O 2",
+      "context_atoms": [
+        {
+          "text": "FIG.",
+          "bbox": [
+            85.0,
+            291.1,
+            109.3,
+            303.1
+          ]
+        },
+        {
+          "text": "3:",
+          "bbox": [
+            115.1,
+            291.1,
+            124.2,
+            303.1
+          ]
+        },
+        {
+          "text": "Left: Molecular probability density function for two isomers",
+          "bbox": [
+            139.0,
+            291.1,
+            476.5,
+            303.1
+          ]
+        },
+        {
+          "text": "Left:",
+          "bbox": [
+            139.0,
+            291.1,
+            162.9,
+            303.1
+          ]
+        },
+        {
+          "text": "Molecular",
+          "bbox": [
+            171.8,
+            291.1,
+            222.2,
+            303.1
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 47,
+      "page_image": "is11_med_001_p11.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_efficientnet_p2_158_372",
+      "document_id": "is11_efficientnet",
+      "page_reference": 2,
+      "text_content": "Figure",
+      "text_bbox": [
+        157.8,
+        371.6,
+        183.8,
+        381.5
+      ],
+      "extent_bbox": null,
+      "extent_primitive_count": 0,
+      "extent_area": 0,
+      "spatial_distance": -1,
+      "x_overlap": false,
+      "vertical_ordering": "none",
+      "pattern_type": "type_a_negative",
+      "context_text": "the original small model. Figure the original small model. 2 2 illustrates the difference illustrates the difference ConvNet Accuracy: ConvNet Accuracy: Since AlexNet ( Since AlexNet (Krizhevsky Krizh",
+      "context_atoms": [
+        {
+          "text": "the original small model. Figure",
+          "bbox": [
+            55.4,
+            371.6,
+            183.8,
+            381.5
+          ]
+        },
+        {
+          "text": "the",
+          "bbox": [
+            55.4,
+            371.6,
+            67.6,
+            381.5
+          ]
+        },
+        {
+          "text": "original",
+          "bbox": [
+            70.1,
+            371.6,
+            101.0,
+            381.5
+          ]
+        },
+        {
+          "text": "small",
+          "bbox": [
+            103.4,
+            371.6,
+            125.0,
+            381.5
+          ]
+        },
+        {
+          "text": "model.",
+          "bbox": [
+            127.4,
+            371.6,
+            154.8,
+            381.5
+          ]
+        }
+      ],
+      "evidence_state": "PRIMITIVES_NO_EXTENT",
+      "negative_type": "type_a",
+      "review_order": 48,
+      "page_image": "is11_efficientnet_p2.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_efficientnet_p6_307_629",
+      "document_id": "is11_efficientnet",
+      "page_reference": 6,
+      "text_content": "Figure 5.",
+      "text_bbox": [
+        306.9,
+        628.7,
+        339.3,
+        637.7
+      ],
+      "extent_bbox": [
+        307.4,
+        445.0,
+        532.1,
+        625.4
+      ],
+      "extent_primitive_count": 5,
+      "extent_area": 40525.2,
+      "spatial_distance": 3.3,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Figure 5. FLOPS vs. ImageNet Accuracy – FLOPS vs. ImageNet Accuracy – Similar to Figure Similar to Figure 1 1",
+      "context_atoms": [
+        {
+          "text": "Figure",
+          "bbox": [
+            306.9,
+            628.7,
+            330.4,
+            637.7
+          ]
+        },
+        {
+          "text": "5.",
+          "bbox": [
+            332.6,
+            628.7,
+            339.3,
+            637.7
+          ]
+        },
+        {
+          "text": "FLOPS vs. ImageNet Accuracy –",
+          "bbox": [
+            339.3,
+            628.6,
+            469.7,
+            637.6
+          ]
+        },
+        {
+          "text": "FLOPS",
+          "bbox": [
+            341.6,
+            628.6,
+            370.5,
+            637.6
+          ]
+        },
+        {
+          "text": "vs.",
+          "bbox": [
+            372.9,
+            628.6,
+            383.1,
+            637.6
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 49,
+      "page_image": "is11_efficientnet_p6.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p18_134_293",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 18,
+      "text_content": "Fig. 9: Gate complexity of the employed QNPUs and ansatz gate compilations.",
+      "text_bbox": [
+        133.7,
+        293.2,
+        461.6,
+        305.2
+      ],
+      "extent_bbox": [
+        117.2,
+        144.3,
+        283.0,
+        243.8
+      ],
+      "extent_primitive_count": 9,
+      "extent_area": 16503.1,
+      "spatial_distance": 49.4,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Fig. 9: Gate complexity of the employed QNPUs and ansatz gate compilations.",
+      "context_atoms": [
+        {
+          "text": "Fig.",
+          "bbox": [
+            133.7,
+            293.2,
+            149.5,
+            305.2
+          ]
+        },
+        {
+          "text": "9:",
+          "bbox": [
+            153.0,
+            293.2,
+            160.7,
+            305.2
+          ]
+        },
+        {
+          "text": "Gate",
+          "bbox": [
+            164.2,
+            293.2,
+            183.0,
+            305.2
+          ]
+        },
+        {
+          "text": "complexity",
+          "bbox": [
+            186.5,
+            293.2,
+            231.2,
+            305.2
+          ]
+        },
+        {
+          "text": "of",
+          "bbox": [
+            234.7,
+            293.2,
+            243.0,
+            305.2
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 50,
+      "page_image": "arxiv_2402.18619_p18.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_med_001_p15_498_107",
+      "document_id": "is11_med_001",
+      "page_reference": 15,
+      "text_content": "figure",
+      "text_bbox": [
+        498.4,
+        106.6,
+        527.0,
+        118.5
+      ],
+      "extent_bbox": [
+        123.7,
+        382.7,
+        525.7,
+        527.6
+      ],
+      "extent_primitive_count": 2,
+      "extent_area": 58233.0,
+      "spatial_distance": 264.2,
+      "x_overlap": true,
+      "vertical_ordering": "above",
+      "pattern_type": "type_a_negative",
+      "context_text": "under the curve under the curve AUC( AUC(fmolecule), f molecule ) , and five inner products and five inner products ⟨ ⟨fHCNOF, f HCNOF , f fmolecule⟩. molecule ⟩ . The figure The",
+      "context_atoms": [
+        {
+          "text": "under the curve",
+          "bbox": [
+            85.0,
+            106.6,
+            166.2,
+            118.5
+          ]
+        },
+        {
+          "text": "under",
+          "bbox": [
+            85.0,
+            106.6,
+            114.3,
+            118.5
+          ]
+        },
+        {
+          "text": "the",
+          "bbox": [
+            118.5,
+            106.6,
+            134.8,
+            118.5
+          ]
+        },
+        {
+          "text": "curve",
+          "bbox": [
+            138.9,
+            106.6,
+            166.2,
+            118.5
+          ]
+        },
+        {
+          "text": "AUC(",
+          "bbox": [
+            166.2,
+            106.6,
+            200.7,
+            118.5
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "negative_type": "type_a",
+      "review_order": 51,
+      "page_image": "is11_med_001_p15.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_107_234",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 28,
+      "text_content": "Fig. 15: Temporal evolution of the deviation measure",
+      "text_bbox": [
+        106.9,
+        233.6,
+        325.5,
+        245.6
+      ],
+      "extent_bbox": [
+        123.7,
+        77.2,
+        503.2,
+        178.3
+      ],
+      "extent_primitive_count": 12,
+      "extent_area": 38398.5,
+      "spatial_distance": 55.2,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Fig. 15: Temporal evolution of the deviation measure ε εl l for the results displayed in Fig. 14. for the results displayed in Fig. 14.",
+      "context_atoms": [
+        {
+          "text": "Fig.",
+          "bbox": [
+            106.9,
+            233.6,
+            122.7,
+            245.6
+          ]
+        },
+        {
+          "text": "15:",
+          "bbox": [
+            126.2,
+            233.6,
+            138.9,
+            245.6
+          ]
+        },
+        {
+          "text": "Temporal",
+          "bbox": [
+            142.4,
+            233.6,
+            180.4,
+            245.6
+          ]
+        },
+        {
+          "text": "evolution",
+          "bbox": [
+            183.9,
+            233.6,
+            221.1,
+            245.6
+          ]
+        },
+        {
+          "text": "of",
+          "bbox": [
+            224.6,
+            233.6,
+            232.9,
+            245.6
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 52,
+      "page_image": "arxiv_2402.18619_p28.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_efficientnet_p6_79_415",
+      "document_id": "is11_efficientnet",
+      "page_reference": 6,
+      "text_content": "omit",
+      "text_bbox": [
+        79.5,
+        414.8,
+        94.7,
+        423.1
+      ],
+      "extent_bbox": [
+        307.4,
+        445.0,
+        532.1,
+        625.4
+      ],
+      "extent_primitive_count": 5,
+      "extent_area": 40525.2,
+      "spatial_distance": 21.9,
+      "x_overlap": false,
+      "vertical_ordering": "above",
+      "pattern_type": "type_b_negative",
+      "context_text": "We omit ensemble and multi-crop models ( We ensemble and multi-crop models (Hu Hu et al. et al., , 2018 2018), ), or models pretrained on 3.5B Instagram images ( or models pretrained on 3.5B Instagram",
+      "context_atoms": [
+        {
+          "text": "We omit ensemble and multi-crop models (",
+          "bbox": [
+            66.6,
+            414.8,
+            209.7,
+            423.1
+          ]
+        },
+        {
+          "text": "We",
+          "bbox": [
+            66.6,
+            414.8,
+            77.4,
+            423.1
+          ]
+        },
+        {
+          "text": "ensemble",
+          "bbox": [
+            96.7,
+            414.8,
+            128.0,
+            423.1
+          ]
+        },
+        {
+          "text": "and",
+          "bbox": [
+            130.0,
+            414.8,
+            142.0,
+            423.1
+          ]
+        },
+        {
+          "text": "multi-crop",
+          "bbox": [
+            144.0,
+            414.8,
+            178.9,
+            423.1
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "negative_type": "type_b",
+      "review_order": 53,
+      "page_image": "is11_efficientnet_p6.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_efficientnet_p1_307_364",
+      "document_id": "is11_efficientnet",
+      "page_reference": 1,
+      "text_content": "Figure 1.",
+      "text_bbox": [
+        306.9,
+        363.6,
+        339.3,
+        372.6
+      ],
+      "extent_bbox": [
+        307.4,
+        175.3,
+        539.1,
+        360.3
+      ],
+      "extent_primitive_count": 5,
+      "extent_area": 42860.3,
+      "spatial_distance": 3.3,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "ture search to design a new baseline network ture search to design a new baseline network Figure 1. Model Size vs. ImageNet Accuracy. Model Size vs. ImageNet Accuracy. All numbers are All numbers are",
+      "context_atoms": [
+        {
+          "text": "ture search to design a new baseline network",
+          "bbox": [
+            75.4,
+            367.6,
+            269.8,
+            377.7
+          ]
+        },
+        {
+          "text": "ture",
+          "bbox": [
+            75.4,
+            367.6,
+            91.2,
+            377.7
+          ]
+        },
+        {
+          "text": "search",
+          "bbox": [
+            95.5,
+            367.6,
+            121.5,
+            377.7
+          ]
+        },
+        {
+          "text": "to",
+          "bbox": [
+            125.8,
+            367.6,
+            133.8,
+            377.7
+          ]
+        },
+        {
+          "text": "design",
+          "bbox": [
+            138.1,
+            367.6,
+            164.6,
+            377.7
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 54,
+      "page_image": "is11_efficientnet_p1.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p10_183_252",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 10,
+      "text_content": "Fig.",
+      "text_bbox": [
+        182.8,
+        251.5,
+        198.6,
+        263.5
+      ],
+      "extent_bbox": [
+        173.2,
+        281.9,
+        433.5,
+        572.6
+      ],
+      "extent_primitive_count": 11,
+      "extent_area": 75689.0,
+      "spatial_distance": 18.4,
+      "x_overlap": true,
+      "vertical_ordering": "above",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "hardware, as displayed in Fig. 2. The function hardware, as displayed in 2. The function J Jl l is evaluated on the quantum device, as illustrated by the is evaluated on the quantum device, as illustr",
+      "context_atoms": [
+        {
+          "text": "hardware, as displayed in Fig. 2. The function",
+          "bbox": [
+            72.0,
+            251.5,
+            266.8,
+            263.5
+          ]
+        },
+        {
+          "text": "hardware,",
+          "bbox": [
+            72.0,
+            251.5,
+            111.5,
+            263.5
+          ]
+        },
+        {
+          "text": "as",
+          "bbox": [
+            115.7,
+            251.5,
+            124.0,
+            263.5
+          ]
+        },
+        {
+          "text": "displayed",
+          "bbox": [
+            128.3,
+            251.5,
+            166.5,
+            263.5
+          ]
+        },
+        {
+          "text": "in",
+          "bbox": [
+            170.8,
+            251.5,
+            178.5,
+            263.5
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 55,
+      "page_image": "arxiv_2402.18619_p10.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_med_001_p15_85_574",
+      "document_id": "is11_med_001",
+      "page_reference": 15,
+      "text_content": "FIG. 6: Entropy as a function of the largest eigenvalue (",
+      "text_bbox": [
+        85.0,
+        573.5,
+        379.8,
+        585.5
+      ],
+      "extent_bbox": [
+        123.7,
+        382.7,
+        525.7,
+        527.6
+      ],
+      "extent_primitive_count": 2,
+      "extent_area": 58233.0,
+      "spatial_distance": 46.0,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "FIG. 6: Entropy as a function of the largest eigenvalue (ϵmax) ϵ max ) of the Coulomb matrix of the Coulomb matrix",
+      "context_atoms": [
+        {
+          "text": "FIG.",
+          "bbox": [
+            85.0,
+            573.5,
+            109.3,
+            585.5
+          ]
+        },
+        {
+          "text": "6:",
+          "bbox": [
+            113.3,
+            573.5,
+            122.5,
+            585.5
+          ]
+        },
+        {
+          "text": "Entropy",
+          "bbox": [
+            131.9,
+            573.5,
+            173.3,
+            585.5
+          ]
+        },
+        {
+          "text": "as",
+          "bbox": [
+            177.3,
+            573.5,
+            187.8,
+            585.5
+          ]
+        },
+        {
+          "text": "a",
+          "bbox": [
+            191.8,
+            573.5,
+            197.7,
+            585.5
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 56,
+      "page_image": "is11_med_001_p15.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_72_733",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 19,
+      "text_content": "Fig. 11: Alternative implementations of the forward (",
+      "text_bbox": [
+        72.0,
+        733.0,
+        289.6,
+        745.1
+      ],
+      "extent_bbox": [
+        134.1,
+        564.4,
+        504.7,
+        699.9
+      ],
+      "extent_primitive_count": 2,
+      "extent_area": 50210.5,
+      "spatial_distance": 33.1,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Fig. 11: Alternative implementations of the forward (Tt, T , T ˜Tt) ˜ ) and backward ( and backward (T T † † , , ˜ T ˜T † † ) transformation introduced ) transformation introduced",
+      "context_atoms": [
+        {
+          "text": "Fig.",
+          "bbox": [
+            72.0,
+            733.0,
+            87.8,
+            745.1
+          ]
+        },
+        {
+          "text": "11:",
+          "bbox": [
+            91.1,
+            733.0,
+            103.8,
+            745.1
+          ]
+        },
+        {
+          "text": "Alternative",
+          "bbox": [
+            107.1,
+            733.0,
+            151.5,
+            745.1
+          ]
+        },
+        {
+          "text": "implementations",
+          "bbox": [
+            154.8,
+            733.0,
+            221.2,
+            745.1
+          ]
+        },
+        {
+          "text": "of",
+          "bbox": [
+            224.5,
+            733.0,
+            232.8,
+            745.1
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 57,
+      "page_image": "arxiv_2402.18619_p19.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_efficientnet_p4_188_461",
+      "document_id": "is11_efficientnet",
+      "page_reference": 4,
+      "text_content": "Figure",
+      "text_bbox": [
+        188.5,
+        461.5,
+        214.0,
+        471.3
+      ],
+      "extent_bbox": [
+        313.3,
+        268.7,
+        535.6,
+        441.4
+      ],
+      "extent_primitive_count": 7,
+      "extent_area": 38391.9,
+      "spatial_distance": 20.1,
+      "x_overlap": false,
+      "vertical_ordering": "below",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "( (He He et al. et al., , 2017 2017; ; Lin et al. Lin et al., , 2017 2017). ). Figure 3 3 (right) shows the (right) shows the works works. . Each dot in a line denotes a model with different width Eac",
+      "context_atoms": [
+        {
+          "text": "(",
+          "bbox": [
+            55.1,
+            461.5,
+            58.4,
+            471.3
+          ]
+        },
+        {
+          "text": "(He",
+          "bbox": [
+            55.1,
+            461.5,
+            69.8,
+            471.3
+          ]
+        },
+        {
+          "text": "He et al.",
+          "bbox": [
+            58.4,
+            461.5,
+            91.1,
+            471.3
+          ]
+        },
+        {
+          "text": "et",
+          "bbox": [
+            72.1,
+            461.5,
+            79.2,
+            471.3
+          ]
+        },
+        {
+          "text": "al.,",
+          "bbox": [
+            81.6,
+            461.5,
+            93.5,
+            471.3
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 58,
+      "page_image": "is11_efficientnet_p4.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p28_152_95",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 28,
+      "text_content": "Fig. 14c",
+      "text_bbox": [
+        151.9,
+        94.5,
+        185.6,
+        106.6
+      ],
+      "extent_bbox": [
+        123.7,
+        77.2,
+        503.2,
+        178.3
+      ],
+      "extent_primitive_count": 12,
+      "extent_area": 38398.5,
+      "spatial_distance": 0,
+      "x_overlap": true,
+      "vertical_ordering": "inside",
+      "pattern_type": "subfigure_label",
+      "context_text": "Fig. 14c",
+      "context_atoms": [
+        {
+          "text": "Fig.",
+          "bbox": [
+            151.9,
+            94.5,
+            167.7,
+            106.6
+          ]
+        },
+        {
+          "text": "14c",
+          "bbox": [
+            171.2,
+            94.5,
+            185.6,
+            106.6
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 59,
+      "page_image": "arxiv_2402.18619_p28.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_med_001_p8_85_211",
+      "document_id": "is11_med_001",
+      "page_reference": 8,
+      "text_content": "FIG. 1: Schematic diagram illustrating the use of GCN to create molecular descri",
+      "text_bbox": [
+        85.0,
+        210.8,
+        527.1,
+        222.8
+      ],
+      "extent_bbox": [
+        251.1,
+        94.1,
+        419.0,
+        187.9
+      ],
+      "extent_primitive_count": 4,
+      "extent_area": 15756.9,
+      "spatial_distance": 22.9,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "FIG. 1: Schematic diagram illustrating the use of GCN to create molecular descriptor",
+      "context_atoms": [
+        {
+          "text": "FIG.",
+          "bbox": [
+            85.0,
+            210.8,
+            109.3,
+            222.8
+          ]
+        },
+        {
+          "text": "1:",
+          "bbox": [
+            113.0,
+            210.8,
+            122.2,
+            222.8
+          ]
+        },
+        {
+          "text": "Schematic",
+          "bbox": [
+            131.0,
+            210.8,
+            182.7,
+            222.8
+          ]
+        },
+        {
+          "text": "diagram",
+          "bbox": [
+            186.4,
+            210.8,
+            228.0,
+            222.8
+          ]
+        },
+        {
+          "text": "illustrating",
+          "bbox": [
+            231.8,
+            210.8,
+            287.8,
+            222.8
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 60,
+      "page_image": "is11_med_001_p8.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_med_001_p23_85_395",
+      "document_id": "is11_med_001",
+      "page_reference": 23,
+      "text_content": "FIG. 11: Comparison of the present results (squares) of ZPVE with the results of",
+      "text_bbox": [
+        85.0,
+        394.9,
+        527.1,
+        406.9
+      ],
+      "extent_bbox": [
+        129.2,
+        85.0,
+        482.8,
+        379.7
+      ],
+      "extent_primitive_count": 9,
+      "extent_area": 104164.0,
+      "spatial_distance": 15.3,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "FIG. 11: Comparison of the present results (squares) of ZPVE with the results of Lilien-",
+      "context_atoms": [
+        {
+          "text": "FIG.",
+          "bbox": [
+            85.0,
+            394.9,
+            109.3,
+            406.9
+          ]
+        },
+        {
+          "text": "11:",
+          "bbox": [
+            112.1,
+            394.9,
+            127.1,
+            406.9
+          ]
+        },
+        {
+          "text": "Comparison",
+          "bbox": [
+            134.5,
+            394.9,
+            195.7,
+            406.9
+          ]
+        },
+        {
+          "text": "of",
+          "bbox": [
+            198.5,
+            394.9,
+            207.9,
+            406.9
+          ]
+        },
+        {
+          "text": "the",
+          "bbox": [
+            210.7,
+            394.9,
+            226.9,
+            406.9
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 61,
+      "page_image": "is11_med_001_p23.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_resnet_p4_50_633",
+      "document_id": "is11_resnet",
+      "page_reference": 4,
+      "text_content": "Figure 3. Example network architectures for ImageNet.",
+      "text_bbox": [
+        50.1,
+        632.9,
+        250.2,
+        641.9
+      ],
+      "extent_bbox": [
+        238.3,
+        176.2,
+        284.7,
+        581.4
+      ],
+      "extent_primitive_count": 16,
+      "extent_area": 18793.0,
+      "spatial_distance": 51.6,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Figure 3. Example network architectures for ImageNet. Left Left: : the the 18-layer plain net is of a similar form. See Table 1 for de- 18-layer plain net is of a similar form. See Table 1 for de-",
+      "context_atoms": [
+        {
+          "text": "Figure",
+          "bbox": [
+            50.1,
+            632.9,
+            73.5,
+            641.9
+          ]
+        },
+        {
+          "text": "3.",
+          "bbox": [
+            76.0,
+            632.9,
+            82.7,
+            641.9
+          ]
+        },
+        {
+          "text": "Example",
+          "bbox": [
+            85.2,
+            632.9,
+            117.1,
+            641.9
+          ]
+        },
+        {
+          "text": "network",
+          "bbox": [
+            119.6,
+            632.9,
+            148.9,
+            641.9
+          ]
+        },
+        {
+          "text": "architectures",
+          "bbox": [
+            151.4,
+            632.9,
+            197.2,
+            641.9
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 62,
+      "page_image": "is11_resnet_p4.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p17_72_184",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 17,
+      "text_content": "Fig. 7: Six qubit example of the permutation operator",
+      "text_bbox": [
+        72.0,
+        183.7,
+        290.8,
+        195.7
+      ],
+      "extent_bbox": [
+        238.3,
+        91.3,
+        342.5,
+        175.2
+      ],
+      "extent_primitive_count": 1,
+      "extent_area": 8736.3,
+      "spatial_distance": 8.5,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Fig. 7: Six qubit example of the permutation operator T Tt represented by a sequence of multi-controlled Toffoli represented by a sequence of multi-controlled Toffoli",
+      "context_atoms": [
+        {
+          "text": "Fig.",
+          "bbox": [
+            72.0,
+            183.7,
+            87.8,
+            195.7
+          ]
+        },
+        {
+          "text": "7:",
+          "bbox": [
+            91.0,
+            183.7,
+            98.8,
+            195.7
+          ]
+        },
+        {
+          "text": "Six",
+          "bbox": [
+            102.1,
+            183.7,
+            115.3,
+            195.7
+          ]
+        },
+        {
+          "text": "qubit",
+          "bbox": [
+            118.6,
+            183.7,
+            139.1,
+            195.7
+          ]
+        },
+        {
+          "text": "example",
+          "bbox": [
+            142.3,
+            183.7,
+            175.9,
+            195.7
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 63,
+      "page_image": "arxiv_2402.18619_p17.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_resnet_p7_321_545",
+      "document_id": "is11_resnet",
+      "page_reference": 7,
+      "text_content": "Fig. 6 (middle) shows the behaviors of ResNets. Also",
+      "text_bbox": [
+        320.8,
+        544.6,
+        545.1,
+        554.6
+      ],
+      "extent_bbox": null,
+      "extent_primitive_count": 0,
+      "extent_area": 0,
+      "spatial_distance": -1,
+      "x_overlap": false,
+      "vertical_ordering": "none",
+      "pattern_type": "type_a_negative",
+      "context_text": "lutions on the feature maps of sizes lutions on the feature maps of sizes { {32, 32 , 16 16, , 8 8} } respectively, respectively, Fig. 6 (middle) shows the behaviors of ResNets. Also",
+      "context_atoms": [
+        {
+          "text": "lutions on the feature maps of sizes",
+          "bbox": [
+            50.1,
+            540.4,
+            188.7,
+            550.3
+          ]
+        },
+        {
+          "text": "lutions",
+          "bbox": [
+            50.1,
+            540.4,
+            77.2,
+            550.3
+          ]
+        },
+        {
+          "text": "on",
+          "bbox": [
+            79.4,
+            540.4,
+            89.4,
+            550.3
+          ]
+        },
+        {
+          "text": "the",
+          "bbox": [
+            91.5,
+            540.4,
+            103.7,
+            550.3
+          ]
+        },
+        {
+          "text": "feature",
+          "bbox": [
+            105.9,
+            540.4,
+            133.5,
+            550.3
+          ]
+        }
+      ],
+      "evidence_state": "PRIMITIVES_NO_EXTENT",
+      "negative_type": "type_a",
+      "review_order": 64,
+      "page_image": "is11_resnet_p7.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p11_72_651",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 11,
+      "text_content": "Fig. 3a that connects to the calculation “wires” through a control port (CP).",
+      "text_bbox": [
+        72.0,
+        651.2,
+        384.9,
+        663.2
+      ],
+      "extent_bbox": null,
+      "extent_primitive_count": 0,
+      "extent_area": 0,
+      "spatial_distance": -1,
+      "x_overlap": false,
+      "vertical_ordering": "none",
+      "pattern_type": "type_a_negative",
+      "context_text": "Fig. 3a that connects to the calculation “wires” through a control port (CP).",
+      "context_atoms": [
+        {
+          "text": "Fig.",
+          "bbox": [
+            72.0,
+            651.2,
+            87.8,
+            663.2
+          ]
+        },
+        {
+          "text": "3a",
+          "bbox": [
+            91.3,
+            651.2,
+            100.7,
+            663.2
+          ]
+        },
+        {
+          "text": "that",
+          "bbox": [
+            104.2,
+            651.2,
+            119.1,
+            663.2
+          ]
+        },
+        {
+          "text": "connects",
+          "bbox": [
+            122.6,
+            651.2,
+            157.4,
+            663.2
+          ]
+        },
+        {
+          "text": "to",
+          "bbox": [
+            160.9,
+            651.2,
+            168.7,
+            663.2
+          ]
+        }
+      ],
+      "evidence_state": "NO_VISUAL_EVIDENCE",
+      "negative_type": "type_a",
+      "review_order": 65,
+      "page_image": "arxiv_2402.18619_p11.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_resnet_p4_320_146",
+      "document_id": "is11_resnet",
+      "page_reference": 4,
+      "text_content": "Fig.",
+      "text_bbox": [
+        319.8,
+        146.1,
+        335.6,
+        156.1
+      ],
+      "extent_bbox": [
+        238.3,
+        176.2,
+        284.7,
+        581.4
+      ],
+      "extent_primitive_count": 16,
+      "extent_area": 18793.0,
+      "spatial_distance": 20.1,
+      "x_overlap": false,
+      "vertical_ordering": "above",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "3x3 conv, 128 3x3 conv, 128 in Fig. 3), we consider two options: (A) The shortcut still in 3), we consider two options: (A) The shortcut still",
+      "context_atoms": [
+        {
+          "text": "3x3 conv, 128",
+          "bbox": [
+            84.2,
+            142.1,
+            111.5,
+            147.0
+          ]
+        },
+        {
+          "text": "3x3",
+          "bbox": [
+            84.2,
+            142.1,
+            91.3,
+            147.0
+          ]
+        },
+        {
+          "text": "conv,",
+          "bbox": [
+            92.4,
+            142.1,
+            103.0,
+            147.0
+          ]
+        },
+        {
+          "text": "128",
+          "bbox": [
+            104.2,
+            142.1,
+            111.5,
+            147.0
+          ]
+        },
+        {
+          "text": "in Fig. 3), we consider two options: (A) The shortcut still",
+          "bbox": [
+            308.9,
+            146.1,
+            545.1,
+            156.1
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 66,
+      "page_image": "is11_resnet_p4.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_resnet_p5_359_225",
+      "document_id": "is11_resnet",
+      "page_reference": 5,
+      "text_content": "Fig.",
+      "text_bbox": [
+        359.1,
+        224.7,
+        373.2,
+        233.6
+      ],
+      "extent_bbox": [
+        84.8,
+        251.4,
+        510.4,
+        389.6
+      ],
+      "extent_primitive_count": 18,
+      "extent_area": 58842.0,
+      "spatial_distance": 17.8,
+      "x_overlap": true,
+      "vertical_ordering": "above",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "Table 1. Architectures for ImageNet. Building blocks are sho Table 1. Architectures for ImageNet. Building blocks are shown in brackets (see also 5), with the numbers of blocks stacked. Down-",
+      "context_atoms": [
+        {
+          "text": "Table 1. Architectures for ImageNet. Building blocks are sho",
+          "bbox": [
+            50.1,
+            224.7,
+            545.1,
+            233.6
+          ]
+        },
+        {
+          "text": "Table",
+          "bbox": [
+            50.1,
+            224.7,
+            69.8,
+            233.6
+          ]
+        },
+        {
+          "text": "1.",
+          "bbox": [
+            72.2,
+            224.7,
+            78.9,
+            233.6
+          ]
+        },
+        {
+          "text": "Architectures",
+          "bbox": [
+            81.3,
+            224.7,
+            129.6,
+            233.6
+          ]
+        },
+        {
+          "text": "for",
+          "bbox": [
+            131.9,
+            224.7,
+            142.4,
+            233.6
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 67,
+      "page_image": "is11_resnet_p5.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_resnet_p1_435_316",
+      "document_id": "is11_resnet",
+      "page_reference": 1,
+      "text_content": "networks.",
+      "text_bbox": [
+        435.1,
+        315.9,
+        470.2,
+        324.8
+      ],
+      "extent_bbox": [
+        308.9,
+        224.4,
+        545.1,
+        302.4
+      ],
+      "extent_primitive_count": 10,
+      "extent_area": 18433.3,
+      "spatial_distance": 13.5,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "type_b_negative",
+      "context_text": "prehensive empirical evidence showing that these residual prehensive empirical evidence showing that these residual with 20-layer and 56-layer “plain” networks. The deeper netw with 20-layer and 56-la",
+      "context_atoms": [
+        {
+          "text": "prehensive empirical evidence showing that these residual",
+          "bbox": [
+            50.1,
+            317.8,
+            286.4,
+            327.7
+          ]
+        },
+        {
+          "text": "prehensive",
+          "bbox": [
+            50.1,
+            317.8,
+            92.9,
+            327.7
+          ]
+        },
+        {
+          "text": "empirical",
+          "bbox": [
+            96.1,
+            317.8,
+            134.3,
+            327.7
+          ]
+        },
+        {
+          "text": "evidence",
+          "bbox": [
+            137.4,
+            317.8,
+            172.2,
+            327.7
+          ]
+        },
+        {
+          "text": "showing",
+          "bbox": [
+            175.3,
+            317.8,
+            208.6,
+            327.7
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "negative_type": "type_b",
+      "review_order": 68,
+      "page_image": "is11_resnet_p1.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p16_172_568",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 16,
+      "text_content": "Fig. 6: Matrices and their corresponding circuits for 2-qubits.",
+      "text_bbox": [
+        171.6,
+        568.3,
+        423.6,
+        580.3
+      ],
+      "extent_bbox": [
+        383.2,
+        505.7,
+        445.8,
+        538.1
+      ],
+      "extent_primitive_count": 3,
+      "extent_area": 2028.7,
+      "spatial_distance": 30.2,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Fig. 6: Matrices and their corresponding circuits for 2-qubits.",
+      "context_atoms": [
+        {
+          "text": "Fig.",
+          "bbox": [
+            171.6,
+            568.3,
+            187.4,
+            580.3
+          ]
+        },
+        {
+          "text": "6:",
+          "bbox": [
+            190.9,
+            568.3,
+            198.6,
+            580.3
+          ]
+        },
+        {
+          "text": "Matrices",
+          "bbox": [
+            202.1,
+            568.3,
+            237.0,
+            580.3
+          ]
+        },
+        {
+          "text": "and",
+          "bbox": [
+            240.5,
+            568.3,
+            254.9,
+            580.3
+          ]
+        },
+        {
+          "text": "their",
+          "bbox": [
+            258.4,
+            568.3,
+            276.6,
+            580.3
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 69,
+      "page_image": "arxiv_2402.18619_p16.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p15_74_275",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 15,
+      "text_content": "Fig. 5: External contributions on the Hadamard test. The displayed example refer",
+      "text_bbox": [
+        73.5,
+        274.8,
+        433.4,
+        286.8
+      ],
+      "extent_bbox": [
+        139.0,
+        93.8,
+        274.7,
+        230.4
+      ],
+      "extent_primitive_count": 2,
+      "extent_area": 18537.0,
+      "spatial_distance": 44.4,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Fig. 5: External contributions on the Hadamard test. The displayed example refers to Np = 64 = 64, , n n = 6 = 6 qubits. qubits.",
+      "context_atoms": [
+        {
+          "text": "Fig.",
+          "bbox": [
+            73.5,
+            274.8,
+            89.3,
+            286.8
+          ]
+        },
+        {
+          "text": "5:",
+          "bbox": [
+            92.8,
+            274.8,
+            100.5,
+            286.8
+          ]
+        },
+        {
+          "text": "External",
+          "bbox": [
+            104.0,
+            274.8,
+            137.8,
+            286.8
+          ]
+        },
+        {
+          "text": "contributions",
+          "bbox": [
+            141.2,
+            274.8,
+            193.6,
+            286.8
+          ]
+        },
+        {
+          "text": "on",
+          "bbox": [
+            197.1,
+            274.8,
+            207.1,
+            286.8
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 70,
+      "page_image": "arxiv_2402.18619_p15.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p10_72_729",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 10,
+      "text_content": "Figure 3a describes two equivalent options of the general layout of circuits on ",
+      "text_bbox": [
+        72.0,
+        729.1,
+        523.3,
+        741.1
+      ],
+      "extent_bbox": [
+        173.2,
+        281.9,
+        433.5,
+        572.6
+      ],
+      "extent_primitive_count": 11,
+      "extent_area": 75689.0,
+      "spatial_distance": 156.5,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "type_a_negative",
+      "context_text": "Figure 3a describes two equivalent options of the general layout of circuits on the quantum device. Grossly",
+      "context_atoms": [
+        {
+          "text": "Figure",
+          "bbox": [
+            72.0,
+            729.1,
+            98.0,
+            741.1
+          ]
+        },
+        {
+          "text": "3a",
+          "bbox": [
+            102.1,
+            729.1,
+            111.5,
+            741.1
+          ]
+        },
+        {
+          "text": "describes",
+          "bbox": [
+            115.5,
+            729.1,
+            152.6,
+            741.1
+          ]
+        },
+        {
+          "text": "two",
+          "bbox": [
+            156.7,
+            729.1,
+            171.5,
+            741.1
+          ]
+        },
+        {
+          "text": "equivalent",
+          "bbox": [
+            175.6,
+            729.1,
+            216.6,
+            741.1
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "negative_type": "type_a",
+      "review_order": 71,
+      "page_image": "arxiv_2402.18619_p10.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_72_248",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 19,
+      "text_content": "Fig. 10: Equivalent networks using a deep qubit-saving implementation (left) and",
+      "text_bbox": [
+        72.0,
+        248.5,
+        523.3,
+        260.5
+      ],
+      "extent_bbox": [
+        241.6,
+        124.9,
+        378.1,
+        240.0
+      ],
+      "extent_primitive_count": 2,
+      "extent_area": 15706.7,
+      "spatial_distance": 8.5,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "Fig. 10: Equivalent networks using a deep qubit-saving implementation (left) and a shallow circuit depth",
+      "context_atoms": [
+        {
+          "text": "Fig.",
+          "bbox": [
+            72.0,
+            248.5,
+            87.8,
+            260.5
+          ]
+        },
+        {
+          "text": "10:",
+          "bbox": [
+            92.8,
+            248.5,
+            105.5,
+            260.5
+          ]
+        },
+        {
+          "text": "Equivalent",
+          "bbox": [
+            110.5,
+            248.5,
+            153.1,
+            260.5
+          ]
+        },
+        {
+          "text": "networks",
+          "bbox": [
+            158.1,
+            248.5,
+            194.5,
+            260.5
+          ]
+        },
+        {
+          "text": "using",
+          "bbox": [
+            199.5,
+            248.5,
+            221.1,
+            260.5
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 72,
+      "page_image": "arxiv_2402.18619_p19.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_med_001_p14_85_386",
+      "document_id": "is11_med_001",
+      "page_reference": 14,
+      "text_content": "FIG. 5:",
+      "text_bbox": [
+        85.0,
+        386.0,
+        124.8,
+        397.9
+      ],
+      "extent_bbox": [
+        129.2,
+        158.6,
+        482.8,
+        370.7
+      ],
+      "extent_primitive_count": 14,
+      "extent_area": 74995.0,
+      "spatial_distance": 15.3,
+      "x_overlap": false,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "FIG. 5: Test MAE of GP regression of entropy trained with different  Test MAE of GP regression of entropy trained with different combina-",
+      "context_atoms": [
+        {
+          "text": "FIG.",
+          "bbox": [
+            85.0,
+            386.0,
+            109.3,
+            397.9
+          ]
+        },
+        {
+          "text": "5:",
+          "bbox": [
+            115.7,
+            386.0,
+            124.8,
+            397.9
+          ]
+        },
+        {
+          "text": "Test MAE of GP regression of entropy trained with different ",
+          "bbox": [
+            141.3,
+            386.0,
+            527.1,
+            397.9
+          ]
+        },
+        {
+          "text": "Test",
+          "bbox": [
+            141.3,
+            386.0,
+            163.1,
+            397.9
+          ]
+        },
+        {
+          "text": "MAE",
+          "bbox": [
+            169.5,
+            386.0,
+            196.9,
+            397.9
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 73,
+      "page_image": "is11_med_001_p14.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_resnet_p1_412_338",
+      "document_id": "is11_resnet",
+      "page_reference": 1,
+      "text_content": "Fig.",
+      "text_bbox": [
+        411.7,
+        337.8,
+        425.9,
+        346.7
+      ],
+      "extent_bbox": [
+        308.9,
+        224.4,
+        545.1,
+        302.4
+      ],
+      "extent_primitive_count": 10,
+      "extent_area": 18433.3,
+      "spatial_distance": 35.4,
+      "x_overlap": true,
+      "vertical_ordering": "below",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "considerably increased depth. On the ImageNet dataset we considerably increased depth. On the ImageNet dataset we on ImageNet is presented in Fig. 4. on ImageNet is presented in 4.",
+      "context_atoms": [
+        {
+          "text": "considerably increased depth. On the ImageNet dataset we",
+          "bbox": [
+            50.1,
+            341.7,
+            286.4,
+            351.6
+          ]
+        },
+        {
+          "text": "considerably",
+          "bbox": [
+            50.1,
+            341.7,
+            101.4,
+            351.6
+          ]
+        },
+        {
+          "text": "increased",
+          "bbox": [
+            104.0,
+            341.7,
+            142.4,
+            351.6
+          ]
+        },
+        {
+          "text": "depth.",
+          "bbox": [
+            145.0,
+            341.7,
+            169.7,
+            351.6
+          ]
+        },
+        {
+          "text": "On",
+          "bbox": [
+            173.1,
+            341.7,
+            185.3,
+            351.6
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 74,
+      "page_image": "is11_resnet_p1.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_med_001_p15_244_342",
+      "document_id": "is11_med_001",
+      "page_reference": 15,
+      "text_content": "max",
+      "text_bbox": [
+        243.6,
+        341.6,
+        259.4,
+        349.6
+      ],
+      "extent_bbox": [
+        123.7,
+        382.7,
+        525.7,
+        527.6
+      ],
+      "extent_primitive_count": 2,
+      "extent_area": 58233.0,
+      "spatial_distance": 33.1,
+      "x_overlap": true,
+      "vertical_ordering": "above",
+      "pattern_type": "type_b_negative",
+      "context_text": "between entropy and both of between entropy and both of ϵ ϵmax and and σ σ. . These correlation can be rationalized using These correlation can be rationalized using",
+      "context_atoms": [
+        {
+          "text": "between entropy and both of",
+          "bbox": [
+            85.0,
+            336.7,
+            234.6,
+            348.7
+          ]
+        },
+        {
+          "text": "between",
+          "bbox": [
+            85.0,
+            336.7,
+            126.3,
+            348.7
+          ]
+        },
+        {
+          "text": "entropy",
+          "bbox": [
+            130.7,
+            336.7,
+            169.4,
+            348.7
+          ]
+        },
+        {
+          "text": "and",
+          "bbox": [
+            173.8,
+            336.7,
+            192.7,
+            348.7
+          ]
+        },
+        {
+          "text": "both",
+          "bbox": [
+            197.0,
+            336.7,
+            220.8,
+            348.7
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "negative_type": "type_b",
+      "review_order": 75,
+      "page_image": "is11_med_001_p15.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "arxiv_2402.18619_p19_83_745",
+      "document_id": "arxiv_2402.18619",
+      "page_reference": 19,
+      "text_content": "Fig.",
+      "text_bbox": [
+        83.2,
+        745.0,
+        99.0,
+        757.0
+      ],
+      "extent_bbox": [
+        134.1,
+        564.4,
+        504.7,
+        699.9
+      ],
+      "extent_primitive_count": 2,
+      "extent_area": 50210.5,
+      "spatial_distance": 45.1,
+      "x_overlap": false,
+      "vertical_ordering": "below",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "in Fig. 7. in 7.",
+      "context_atoms": [
+        {
+          "text": "in Fig. 7.",
+          "bbox": [
+            72.0,
+            745.0,
+            110.0,
+            757.0
+          ]
+        },
+        {
+          "text": "in",
+          "bbox": [
+            72.0,
+            745.0,
+            79.8,
+            757.0
+          ]
+        },
+        {
+          "text": "7.",
+          "bbox": [
+            102.5,
+            745.0,
+            110.0,
+            757.0
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 76,
+      "page_image": "arxiv_2402.18619_p19.png",
+      "page_image_width": 1241,
+      "page_image_height": 1754,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_med_001_p24_85_572",
+      "document_id": "is11_med_001",
+      "page_reference": 24,
+      "text_content": "FIG. 12:",
+      "text_bbox": [
+        85.0,
+        571.8,
+        128.7,
+        583.7
+      ],
+      "extent_bbox": [
+        176.8,
+        145.0,
+        470.0,
+        517.0
+      ],
+      "extent_primitive_count": 2,
+      "extent_area": 109066.5,
+      "spatial_distance": 54.8,
+      "x_overlap": false,
+      "vertical_ordering": "below",
+      "pattern_type": "caption_like",
+      "context_text": "FIG. 12: Distribution of errors for predictions of entropy (upper) an Distribution of errors for predictions of entropy (upper) and ZPVE (lower)",
+      "context_atoms": [
+        {
+          "text": "FIG.",
+          "bbox": [
+            85.0,
+            571.8,
+            109.3,
+            583.7
+          ]
+        },
+        {
+          "text": "12:",
+          "bbox": [
+            113.7,
+            571.8,
+            128.7,
+            583.7
+          ]
+        },
+        {
+          "text": "Distribution of errors for predictions of entropy (upper) an",
+          "bbox": [
+            139.1,
+            571.8,
+            527.1,
+            583.7
+          ]
+        },
+        {
+          "text": "Distribution",
+          "bbox": [
+            139.1,
+            571.8,
+            201.5,
+            583.7
+          ]
+        },
+        {
+          "text": "of",
+          "bbox": [
+            205.8,
+            571.8,
+            215.3,
+            583.7
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 77,
+      "page_image": "is11_med_001_p24.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_cs_001_p1_108_651",
+      "document_id": "is11_cs_001",
+      "page_reference": 1,
+      "text_content": "Figure 1: 1-bit LLMs (e.g.,",
+      "text_bbox": [
+        108.0,
+        651.3,
+        215.0,
+        661.2
+      ],
+      "extent_bbox": [
+        124.5,
+        362.3,
+        506.1,
+        678.4
+      ],
+      "extent_primitive_count": 18,
+      "extent_area": 120606.7,
+      "spatial_distance": 0,
+      "x_overlap": true,
+      "vertical_ordering": "inside",
+      "pattern_type": "caption_like",
+      "context_text": "Figure 1: 1-bit LLMs (e.g., BitNet b1.58 BitNet b1.58) ) provide a Pareto solution to reduce inference cost (latenc provide a Pareto solution to reduce inference cost (latency,",
+      "context_atoms": [
+        {
+          "text": "Figure",
+          "bbox": [
+            108.0,
+            651.3,
+            133.7,
+            661.2
+          ]
+        },
+        {
+          "text": "1:",
+          "bbox": [
+            136.2,
+            651.3,
+            143.8,
+            661.2
+          ]
+        },
+        {
+          "text": "1-bit",
+          "bbox": [
+            146.9,
+            651.3,
+            165.5,
+            661.2
+          ]
+        },
+        {
+          "text": "LLMs",
+          "bbox": [
+            168.0,
+            651.3,
+            192.6,
+            661.2
+          ]
+        },
+        {
+          "text": "(e.g.,",
+          "bbox": [
+            195.1,
+            651.3,
+            215.0,
+            661.2
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 78,
+      "page_image": "is11_cs_001_p1.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    },
+    {
+      "case_id": "is11_med_001_p15_261_316",
+      "document_id": "is11_med_001",
+      "page_reference": 15,
+      "text_content": "Figs.",
+      "text_bbox": [
+        261.4,
+        315.8,
+        286.1,
+        327.8
+      ],
+      "extent_bbox": [
+        123.7,
+        382.7,
+        525.7,
+        527.6
+      ],
+      "extent_primitive_count": 2,
+      "extent_area": 58233.0,
+      "spatial_distance": 55.0,
+      "x_overlap": true,
+      "vertical_ordering": "above",
+      "pattern_type": "ambiguous_fragment",
+      "context_text": "features for entropy, the results in Figs. 6 illustrate that features for entropy, the results in 6 illustrate that there exist strong correlations",
+      "context_atoms": [
+        {
+          "text": "features for entropy, the results in Figs. 6 illustrate that",
+          "bbox": [
+            85.0,
+            315.8,
+            527.1,
+            327.8
+          ]
+        },
+        {
+          "text": "features",
+          "bbox": [
+            85.0,
+            315.8,
+            125.1,
+            327.8
+          ]
+        },
+        {
+          "text": "for",
+          "bbox": [
+            128.8,
+            315.8,
+            142.8,
+            327.8
+          ]
+        },
+        {
+          "text": "entropy,",
+          "bbox": [
+            146.4,
+            315.8,
+            187.4,
+            327.8
+          ]
+        },
+        {
+          "text": "the",
+          "bbox": [
+            191.1,
+            315.8,
+            207.4,
+            327.8
+          ]
+        }
+      ],
+      "evidence_state": "EXTENT_EXISTS",
+      "review_order": 79,
+      "page_image": "is11_med_001_p15.png",
+      "page_image_width": 1275,
+      "page_image_height": 1650,
+      "page_scale": 2.0833333333333335
+    }
+  ]
+}

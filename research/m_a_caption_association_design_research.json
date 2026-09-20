@@ -1,0 +1,36 @@
+{
+  "caption_like_not_near": {
+    "total": 18,
+    "no_drawings_on_page": 3,
+    "drawings_no_extent": 4,
+    "extent_far": 11
+  },
+  "vertical_ordering": {
+    "below": 39,
+    "above": 5,
+    "inside": 1,
+    "below_pct": 87,
+    "above_pct": 11,
+    "inside_pct": 2
+  },
+  "lexical_forms": {
+    "caption_like": {
+      "total": 62,
+      "near": 44,
+      "near_pct": 71
+    },
+    "ambiguous_fragment": {
+      "total": 220,
+      "near": 63,
+      "near_pct": 29
+    },
+    "reference_like": {
+      "total": 0,
+      "note": "P1 atom splitting prevents detection at span level"
+    }
+  },
+  "multi_drawing_boundary": {
+    "multi_draw_pages": 9,
+    "multi_with_2plus_fig": 7
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "batch": 4,
+  "total_batches": 4,
+  "cases": [
+    {
+      "case_id": "IND-AMB-195",
+      "page": 26,
+      "text_a": "a",
+      "text_b": "Creative",
+      "page_context": ">>> Page 26 of 45  [TEXT A]\n>>> Figures and legends  [TEXT A]\n>>> Figure 1. Ad hoc construct design to slow down functional dynamics enabled the capturing  [TEXT A]\n>>> of group I intron splicing and folding intermediates. (A) Schematic representation of group I  [TEXT A]\n>>> introns highlighting the engineering strategies that enabled cryo-EM investigation of catalytic  [TEXT A]\n>>> intermediates, i.e. insertion of IGS, addition of 5’- and 3’-splice analogues, and active site mutations  [TEXT A]\n>>> (G264A). Folding intermediates have been obtained by modulating the refolding conditions, as  [TEXT A]\n>>> indicated in the inset (concentration of magnesium, Mg2+, and temperature, T). (B) Representative  [TEXT A]\n>>> analytical PAGE gel of the G264A group I intron sample (TETG264A) used for cryoEM. (C) PAGE gels  [TEXT A]\n>>> confirming activity of the IGS-engineered group I intron. The top gel displays the first step of splicing  [TEXT A]\n>>> reaction, the bottom gel the second step of splicing reaction. S, S1 and S2 indicate fluorescently  [TEXT A]\n>>> labeled substrates, P indicates the product of the reaction, TET indicates the intron. (D) Superposition  [TEXT A]\n>>> of co-transcriptionally folded group I intron structures formed in the first step of splicing, and  [TEXT A]\n>>> displaying the P1 helix (depicted in orange, for the 5’-exon moiety, and blue, for the intron 5’-end  [TEXT A]\n>>> moiety) in the relaxed (PDB id: 8HD6), intermediate (abbreviated as Int, PDB id: 8HD7), and docked  [TEXT A]\n>>> (PDB id: 8I7N) states. The distance between the 5’-splice site and the G-binding site (in green) in  [TEXT A]\n>>> depicted with dashed black line for the relaxed (62 Å) and docked (4 Å) state. The left and right  [TEXT A]\n>>> subpanels are rotated 180° degree with respect to one another. (E) Superposition of the misfolded  [TEXT A]\n>>> (M, PDB id: 7XSK) intermediate and native (N, PDB id: 7XSN, in grey) states of group I intron. For  [TEXT A]\n>>> the M-state, the P7 helix is in green, the P8 helix is in salmon, the P3 helix is in yellow, the J7/8 helix  [TEXT A]\n>>> is in dark blue, the J7/3 helix is in purple and the P9 helix is in grey. Panel B has been adapted from  [TEXT A]\n>>> Extended Data Figure 7 panel A from (Luo et al., 2023). Top panel C was reprinted with permission  [TEXT A]\n>>> from Supplementary Figure 1 panel A from Zhang, X., et al. (2023), Nucleic Acids Research, which  [TEXT A]\n>>> was  [TEXT A]\n    published\n    under\n>>> a  [TEXT A]\n>>> Creative  [TEXT A]\n    Commons\n>>> Attribution-Non-Commercial  [TEXT A]\n    License\n>>> (https://creativecommons.org/licenses/by-nc/4.0/). Further reproductions must adhere to the terms  [TEXT A]\n>>> of this license (Zhang et al., 2023). Bottom panel C is reproduced from Supplementary Figure 1,  [TEXT A]\n>>> panel A from Li, S., et al. (Li et al., 2023).  [TEXT A]"
+    },
+    {
+      "case_id": "IND-AMB-197",
+      "page": 26,
+      "text_a": "Commons",
+      "text_b": "Attribution-Non-Commercial",
+      "page_context": "    Page 26 of 45\n    Figures and legends\n    Figure 1. Ad hoc construct design to slow down functional dynamics enabled the capturing\n    of group I intron splicing and folding intermediates. (A) Schematic representation of group I\n    introns highlighting the engineering strategies that enabled cryo-EM investigation of catalytic\n    intermediates, i.e. insertion of IGS, addition of 5’- and 3’-splice analogues, and active site mutations\n    (G264A). Folding intermediates have been obtained by modulating the refolding conditions, as\n    indicated in the inset (concentration of magnesium, Mg2+, and temperature, T). (B) Representative\n    analytical PAGE gel of the G264A group I intron sample (TETG264A) used for cryoEM. (C) PAGE gels\n    confirming activity of the IGS-engineered group I intron. The top gel displays the first step of splicing\n    reaction, the bottom gel the second step of splicing reaction. S, S1 and S2 indicate fluorescently\n    labeled substrates, P indicates the product of the reaction, TET indicates the intron. (D) Superposition\n    of co-transcriptionally folded group I intron structures formed in the first step of splicing, and\n    displaying the P1 helix (depicted in orange, for the 5’-exon moiety, and blue, for the intron 5’-end\n    moiety) in the relaxed (PDB id: 8HD6), intermediate (abbreviated as Int, PDB id: 8HD7), and docked\n    (PDB id: 8I7N) states. The distance between the 5’-splice site and the G-binding site (in green) in\n    depicted with dashed black line for the relaxed (62 Å) and docked (4 Å) state. The left and right\n    subpanels are rotated 180° degree with respect to one another. (E) Superposition of the misfolded\n    (M, PDB id: 7XSK) intermediate and native (N, PDB id: 7XSN, in grey) states of group I intron. For\n    the M-state, the P7 helix is in green, the P8 helix is in salmon, the P3 helix is in yellow, the J7/8 helix\n    is in dark blue, the J7/3 helix is in purple and the P9 helix is in grey. Panel B has been adapted from\n    Extended Data Figure 7 panel A from (Luo et al., 2023). Top panel C was reprinted with permission\n    from Supplementary Figure 1 panel A from Zhang, X., et al. (2023), Nucleic Acids Research, which\n    was\n    published\n    under\n    a\n    Creative\n>>> Commons  [TEXT A]\n>>> Attribution-Non-Commercial  [TEXT B]\n    License\n    (https://creativecommons.org/licenses/by-nc/4.0/). Further reproductions must adhere to the terms\n    of this license (Zhang et al., 2023). Bottom panel C is reproduced from Supplementary Figure 1,\n    panel A from Li, S., et al. (Li et al., 2023)."
+    },
+    {
+      "case_id": "IND-AMB-201",
+      "page": 32,
+      "text_a": "al.,",
+      "text_b": "2025).",
+      "page_context": "    Page 32 of 45\n    Figure 7. Integration of cryo-EM with SAXS and NMR enabled the visualization of apo- and\n    ligand-bound D43 aptazyme dynamics. (A) Denaturing gel electrophoresis of purified D43 (left\n    panel) and refolded D43 (right panel). (B) Superposition of the cryo-EM structures of holo-D43 (PDB\n    ID: 8T5O; shown in blue) and apo-D43 (PDB ID: 8TKJ; shown in orange), which differ by an RMSD\n    of 1.4 Å. The three modules of the D43 aptazyme are labelled, as the ribozyme module, aptamer\n    module, and communication module (CM), respectively. The inset shows a zoomed view into the CM\n    in holo-D43 and apo-D43, along with the distances between G48-U100 and G49-C99. The increase\n    in the distance between G48-U100 and loss of planarity in G49-C99 lead to breakage of base pairing\n    in apo-D43. (C) The location and extent of the NMR chemical shift perturbations (left panel) and\n    intensity ratio differences (right panel) as indicated by the size and color of spheres. Large changes\n    in both chemical shift and peak intensity are observed within the CM, most notably the G48•U100\n    wobble pair. (D) Kratky plot for apo-D43 and holo-D43 from SAXS/WAXS experiments and as back-\n    calculated from the cryo-EM structures (PDB ids 8TKJ and 8T5O, respectively). The plot was\n    generated using BioXTAS RAW 2.4.1 (Hopkins, 2024). Panels A and C are reproduced with\n    permission from Supplementary Figure S1 panels B and D and from Figure 3 panel B, respectively,\n    from Stagno, J. R., et al. (2025), Nucleic Acids Research, with permission from Nucleic Acids\n    Research\n    (Stagno\n    et\n>>> al.,  [TEXT A]\n>>> 2025).  [TEXT B]\n    They\n    are\n    not\n    covered\n    by\n    the\n    CC-BY\n    4.0\n    [https://creativecommons.org/licenses/by/4.0/] license and further reproduction of this panel would\n    need permission from the copyright holder.\""
+    },
+    {
+      "case_id": "IND-AMB-200",
+      "page": 32,
+      "text_a": "et",
+      "text_b": "al.,",
+      "page_context": "    Page 32 of 45\n    Figure 7. Integration of cryo-EM with SAXS and NMR enabled the visualization of apo- and\n    ligand-bound D43 aptazyme dynamics. (A) Denaturing gel electrophoresis of purified D43 (left\n    panel) and refolded D43 (right panel). (B) Superposition of the cryo-EM structures of holo-D43 (PDB\n    ID: 8T5O; shown in blue) and apo-D43 (PDB ID: 8TKJ; shown in orange), which differ by an RMSD\n    of 1.4 Å. The three modules of the D43 aptazyme are labelled, as the ribozyme module, aptamer\n>>> module, and communication module (CM), respectively. The inset shows a zoomed view into the CM  [TEXT A]\n>>> in holo-D43 and apo-D43, along with the distances between G48-U100 and G49-C99. The increase  [TEXT A]\n>>> in the distance between G48-U100 and loss of planarity in G49-C99 lead to breakage of base pairing  [TEXT A]\n    in apo-D43. (C) The location and extent of the NMR chemical shift perturbations (left panel) and\n    intensity ratio differences (right panel) as indicated by the size and color of spheres. Large changes\n    in both chemical shift and peak intensity are observed within the CM, most notably the G48•U100\n    wobble pair. (D) Kratky plot for apo-D43 and holo-D43 from SAXS/WAXS experiments and as back-\n    calculated from the cryo-EM structures (PDB ids 8TKJ and 8T5O, respectively). The plot was\n    generated using BioXTAS RAW 2.4.1 (Hopkins, 2024). Panels A and C are reproduced with\n    permission from Supplementary Figure S1 panels B and D and from Figure 3 panel B, respectively,\n>>> from Stagno, J. R., et al. (2025), Nucleic Acids Research, with permission from Nucleic Acids  [TEXT A]\n    Research\n    (Stagno\n>>> et  [TEXT A]\n>>> al.,  [TEXT B]\n    2025).\n    They\n    are\n    not\n    covered\n    by\n    the\n    CC-BY\n    4.0\n    [https://creativecommons.org/licenses/by/4.0/] license and further reproduction of this panel would\n    need permission from the copyright holder.\""
+    },
+    {
+      "case_id": "IND-AMB-202",
+      "page": 32,
+      "text_a": "2025).",
+      "text_b": "They",
+      "page_context": "    Page 32 of 45\n    Figure 7. Integration of cryo-EM with SAXS and NMR enabled the visualization of apo- and\n    ligand-bound D43 aptazyme dynamics. (A) Denaturing gel electrophoresis of purified D43 (left\n    panel) and refolded D43 (right panel). (B) Superposition of the cryo-EM structures of holo-D43 (PDB\n    ID: 8T5O; shown in blue) and apo-D43 (PDB ID: 8TKJ; shown in orange), which differ by an RMSD\n    of 1.4 Å. The three modules of the D43 aptazyme are labelled, as the ribozyme module, aptamer\n    module, and communication module (CM), respectively. The inset shows a zoomed view into the CM\n    in holo-D43 and apo-D43, along with the distances between G48-U100 and G49-C99. The increase\n    in the distance between G48-U100 and loss of planarity in G49-C99 lead to breakage of base pairing\n    in apo-D43. (C) The location and extent of the NMR chemical shift perturbations (left panel) and\n    intensity ratio differences (right panel) as indicated by the size and color of spheres. Large changes\n    in both chemical shift and peak intensity are observed within the CM, most notably the G48•U100\n    wobble pair. (D) Kratky plot for apo-D43 and holo-D43 from SAXS/WAXS experiments and as back-\n    calculated from the cryo-EM structures (PDB ids 8TKJ and 8T5O, respectively). The plot was\n    generated using BioXTAS RAW 2.4.1 (Hopkins, 2024). Panels A and C are reproduced with\n    permission from Supplementary Figure S1 panels B and D and from Figure 3 panel B, respectively,\n    from Stagno, J. R., et al. (2025), Nucleic Acids Research, with permission from Nucleic Acids\n    Research\n    (Stagno\n    et\n    al.,\n>>> 2025).  [TEXT A]\n>>> They  [TEXT B]\n    are\n    not\n    covered\n    by\n    the\n    CC-BY\n    4.0\n    [https://creativecommons.org/licenses/by/4.0/] license and further reproduction of this panel would\n    need permission from the copyright holder.\""
+    },
+    {
+      "case_id": "IND-AMB-240",
+      "page": 34,
+      "text_a": "232",
+      "text_b": "25 mM",
+      "page_context": "    Page 34 of 45\n    synthetase\n    5.\n    SARS-CoV-2\n    SL5\n    124\n    40\n    50 mM Na–\n    HEPES, pH\n    8.0, 10 mM\n    MgCl2\n    Denaturing\n    purification\n    Chemical\n    probing\n    200 mesh\n    Cu R2/1 and\n    300 mesh\n    Cu R1.2/1.3\n    Quantifoil\n    CryoSPARC\n    4.7\n    N/A\n    N/A\n    SARS-CoV-1\n    SL5\n    143\n    46\n    50 mM Na–\n    HEPES, pH\n    8.0, 10 mM\n    MgCl2\n    Denaturing\n    purification\n    Chemical\n    probing\n    300 mesh\n    Cu R1.2/1.3\n    Quantifoil\n    CryoSPARC\n    7.1\n    N/A\n    N/A\n    MERS SL5\n    135\n    43\n    50 mM Na–\n    HEPES, pH\n    8.0, 10 mM\n    MgCl2"
+    },
+    {
+      "case_id": "IND-AMB-247",
+      "page": 35,
+      "text_a": "121",
+      "text_b": "40 mM Hepes",
+      "page_context": "    Page 35 of 45\n    6HBC\n    (pH 8.0),\n    50 mM KCl\n    and 5 mM\n    MgCl2\n    purification\n    1.2/1.3\n    ProtoChips\n    critical for\n    compaction into\n    the native\n    conformation of\n    the\n    nanostructure\n    RNA origami\n    nanostructure\n    16HS\n    1.832\n    ~600\n    25 mM\n    HEPES buffer\n    (pH 8.0),\n    50 mM KCl\n    and 5 mM\n    MgCl2\n    Non-\n    denaturing\n    purification\n    Negative staining\n    300 mesh\n    Au-flat\n    1.2/1.3\n    ProtoChips\n    IPET cryo-EM\n    3D\n    reconstruction\n    23-27\n    Movement of\n    the 5HT\n    domains\n    N/A\n    RNA origami\n    nanostructure\n    Traptamer\n    374\n>>> 121  [TEXT A]\n>>> 40 mM Hepes  [TEXT B]\n    pH 7.5, 50\n    mM KCl, and"
+    },
+    {
+      "case_id": "IND-AMB-211",
+      "page": 33,
+      "text_a": "~450",
+      "text_b": "150",
+      "page_context": "    Page 33 of 45\n    Tables\n    1\n    Table 1. Key properties of the targets discussed in the case studies.\n    2\n    3\n    Case\n    study\n    RNA\n    Specimen\n    RNA\n    length\n    (nt)\n    Molecular\n    Weight\n    (kDa)\n    RNA folding\n    buffer\n    Purification\n    method\n    Biochemical\n    characterisation\n    Grid\n    Data\n    processing\n    Resolution\n    (Å)\n    Dynamics\n    Functional\n    implications of\n    dynamics\n    1.\n    Tetrahymena\n    group I intron\n>>> ~450  [TEXT A]\n>>> 150  [TEXT B]\n    40 mM Tris–\n    HCl, pH 7.0–\n    7.9, 0.01%\n    TritonX-100,\n    6–20 mM\n    MgCl2, 2 mM\n    spermidine,\n    10 mM DTT\n    Non-\n    denaturing\n    purification\n    Splicing assay\n    200 mesh\n    Au R2/1"
+    },
+    {
+      "case_id": "IND-AMB-254",
+      "page": 35,
+      "text_a": "3.0-3.2",
+      "text_b": "Dynamics of",
+      "page_context": "    Page 35 of 45\n    6HBC\n    (pH 8.0),\n    50 mM KCl\n    and 5 mM\n    MgCl2\n    purification\n    1.2/1.3\n    ProtoChips\n    critical for\n    compaction into\n    the native\n    conformation of\n    the\n    nanostructure\n    RNA origami\n    nanostructure\n    16HS\n    1.832\n    ~600\n    25 mM\n    HEPES buffer\n    (pH 8.0),\n    50 mM KCl\n    and 5 mM\n    MgCl2\n    Non-\n    denaturing\n    purification\n    Negative staining\n    300 mesh\n    Au-flat\n    1.2/1.3\n    ProtoChips\n    IPET cryo-EM\n    3D\n    reconstruction\n    23-27\n    Movement of\n    the 5HT\n    domains\n    N/A\n    RNA origami\n    nanostructure\n    Traptamer\n    374\n    121\n    40 mM Hepes\n    pH 7.5, 50\n    mM KCl, and"
+    },
+    {
+      "case_id": "IND-AMB-223",
+      "page": 34,
+      "text_a": "5.",
+      "text_b": "SARS-CoV-2",
+      "page_context": "    Page 34 of 45\n    synthetase\n>>> 5.  [TEXT A]\n>>> SARS-CoV-2  [TEXT B]\n    SL5\n    124\n    40\n    50 mM Na–\n    HEPES, pH\n    8.0, 10 mM\n    MgCl2\n    Denaturing\n    purification\n    Chemical\n    probing\n    200 mesh\n    Cu R2/1 and\n    300 mesh\n    Cu R1.2/1.3\n    Quantifoil\n    CryoSPARC\n    4.7\n    N/A\n    N/A\n    SARS-CoV-1\n    SL5\n    143\n    46\n    50 mM Na–\n    HEPES, pH\n    8.0, 10 mM\n    MgCl2\n    Denaturing\n    purification\n    Chemical\n    probing\n    300 mesh\n    Cu R1.2/1.3\n    Quantifoil\n    CryoSPARC\n    7.1\n    N/A\n    N/A\n    MERS SL5\n    135\n    43\n    50 mM Na–\n    HEPES, pH\n    8.0, 10 mM\n    MgCl2"
+    },
+    {
+      "case_id": "IND-AMB-231",
+      "page": 34,
+      "text_a": "43",
+      "text_b": "50 mM Na–",
+      "page_context": "    Page 34 of 45\n    synthetase\n    5.\n    SARS-CoV-2\n    SL5\n    124\n    40\n>>> 50 mM Na–  [TEXT B]\n    HEPES, pH\n    8.0, 10 mM\n    MgCl2\n    Denaturing\n    purification\n    Chemical\n    probing\n    200 mesh\n    Cu R2/1 and\n    300 mesh\n    Cu R1.2/1.3\n    Quantifoil\n    CryoSPARC\n    4.7\n    N/A\n    N/A\n    SARS-CoV-1\n    SL5\n>>> 143  [TEXT A]\n    46\n>>> 50 mM Na–  [TEXT B]\n    HEPES, pH\n    8.0, 10 mM\n    MgCl2\n    Denaturing\n    purification\n    Chemical\n    probing\n    300 mesh\n    Cu R1.2/1.3\n    Quantifoil\n    CryoSPARC\n    7.1\n    N/A\n    N/A\n    MERS SL5\n    135\n>>> 43  [TEXT A]\n>>> 50 mM Na–  [TEXT B]\n    HEPES, pH\n    8.0, 10 mM\n    MgCl2"
+    },
+    {
+      "case_id": "IND-AMB-234",
+      "page": 34,
+      "text_a": "6.5",
+      "text_b": "N/A",
+      "page_context": "    Page 34 of 45\n    synthetase\n    5.\n    SARS-CoV-2\n    SL5\n    124\n    40\n    50 mM Na–\n    HEPES, pH\n    8.0, 10 mM\n    MgCl2\n    Denaturing\n    purification\n    Chemical\n    probing\n    200 mesh\n    Cu R2/1 and\n    300 mesh\n    Cu R1.2/1.3\n    Quantifoil\n    CryoSPARC\n    4.7\n>>> N/A  [TEXT B]\n>>> N/A  [TEXT B]\n    SARS-CoV-1\n    SL5\n    143\n    46\n    50 mM Na–\n    HEPES, pH\n    8.0, 10 mM\n    MgCl2\n    Denaturing\n    purification\n    Chemical\n    probing\n    300 mesh\n    Cu R1.2/1.3\n    Quantifoil\n    CryoSPARC\n    7.1\n>>> N/A  [TEXT B]\n>>> N/A  [TEXT B]\n    MERS SL5\n    135\n    43\n    50 mM Na–\n    HEPES, pH\n    8.0, 10 mM\n    MgCl2"
+    },
+    {
+      "case_id": "IND-AMB-235",
+      "page": 34,
+      "text_a": "6.",
+      "text_b": "RNA",
+      "page_context": "    Page 34 of 45\n    synthetase\n    5.\n    SARS-CoV-2\n    SL5\n    124\n    40\n    50 mM Na–\n    HEPES, pH\n    8.0, 10 mM\n    MgCl2\n    Denaturing\n    purification\n    Chemical\n    probing\n    200 mesh\n    Cu R2/1 and\n    300 mesh\n    Cu R1.2/1.3\n    Quantifoil\n    CryoSPARC\n    4.7\n    N/A\n    N/A\n    SARS-CoV-1\n    SL5\n    143\n    46\n    50 mM Na–\n    HEPES, pH\n    8.0, 10 mM\n    MgCl2\n    Denaturing\n    purification\n    Chemical\n    probing\n    300 mesh\n    Cu R1.2/1.3\n    Quantifoil\n    CryoSPARC\n    7.1\n    N/A\n    N/A\n    MERS SL5\n    135\n    43\n    50 mM Na–\n    HEPES, pH\n    8.0, 10 mM\n    MgCl2"
+    },
+    {
+      "case_id": "IND-AMB-251",
+      "page": 35,
+      "text_a": "124",
+      "text_b": "~40",
+      "page_context": "    Page 35 of 45\n    6HBC\n    (pH 8.0),\n    50 mM KCl\n    and 5 mM\n    MgCl2\n    purification\n    1.2/1.3\n    ProtoChips\n    critical for\n    compaction into\n    the native\n    conformation of\n    the\n    nanostructure\n    RNA origami\n    nanostructure\n    16HS\n    1.832\n    ~600\n    25 mM\n    HEPES buffer\n    (pH 8.0),\n    50 mM KCl\n    and 5 mM\n    MgCl2\n    Non-\n    denaturing\n    purification\n    Negative staining\n    300 mesh\n    Au-flat\n    1.2/1.3\n    ProtoChips\n    IPET cryo-EM\n    3D\n    reconstruction\n    23-27\n    Movement of\n    the 5HT\n    domains\n    N/A\n    RNA origami\n    nanostructure\n    Traptamer\n    374\n    121\n    40 mM Hepes\n    pH 7.5, 50\n    mM KCl, and"
+    },
+    {
+      "case_id": "IND-AMB-221",
+      "page": 33,
+      "text_a": "55",
+      "text_b": "50 mM Na-",
+      "page_context": "    Page 33 of 45\n    Tables\n    1\n    Table 1. Key properties of the targets discussed in the case studies.\n    2\n    3\n    Case\n    study\n    RNA\n    Specimen\n    RNA\n    length\n    (nt)\n    Molecular\n    Weight\n    (kDa)\n    RNA folding\n    buffer\n    Purification\n    method\n    Biochemical\n    characterisation\n    Grid\n    Data\n    processing\n    Resolution\n    (Å)\n    Dynamics\n    Functional\n    implications of\n    dynamics\n    1.\n    Tetrahymena\n    group I intron\n    ~450\n    150\n    40 mM Tris–\n    HCl, pH 7.0–\n    7.9, 0.01%\n    TritonX-100,\n    6–20 mM\n    MgCl2, 2 mM\n    spermidine,\n    10 mM DTT\n    Non-\n    denaturing\n    purification\n    Splicing assay\n    200 mesh\n    Au R2/1"
+    }
+  ]
+}

@@ -1,0 +1,533 @@
+{
+  "metadata": {
+    "purpose": "G-C1 corpus sufficiency count (pre-evaluation gate)",
+    "counting_definition_frozen_before_run": true,
+    "definition": "figure-context := NOT in_table AND (OBS-A on either fragment OR caption-block membership (block contains caption-label or continuation block <=14pt same-column no-new-label) OR OBS-C both fragments); control := NOT figure-context",
+    "firewall": "count used ONLY for G-C1 gate; never shown to reviewers; sample frozen before counting; no case included/excluded by this output",
+    "re_run_after_incident_fix": true,
+    "incident_reference": "tmp/phase3_is14_incident_log.md — first count INVALID (OBS-C implementation error: greedy run-expansion stalled on single-gap windows); observer fixed (thresholds unchanged), validated on med_001 p19 ground-truth ticks + negative control, then re-run"
+  },
+  "g_c1_counts": {
+    "sample_size": 54,
+    "figure_context_cases": 3,
+    "control_cases": 21,
+    "table_domain_cases": 30,
+    "required_figure_context": 15,
+    "required_control": 20
+  },
+  "figure_type_counts": {
+    "obs_a": 0,
+    "caption_block": 1,
+    "tick_run": 2
+  },
+  "by_document": {
+    "PH3-ASTRO-001": {
+      "figure_context": 0,
+      "control": 8
+    },
+    "PH3-BIO-001": {
+      "figure_context": 0,
+      "control": 8
+    },
+    "PH3-EARTH-001": {
+      "figure_context": 0,
+      "control": 9
+    },
+    "PH3-EARTH-002": {
+      "figure_context": 3,
+      "control": 9
+    },
+    "PH3-MED-001": {
+      "figure_context": 0,
+      "control": 17
+    }
+  },
+  "case_detail": [
+    {
+      "case_id": "IS14-AMB-002",
+      "doc_id": "PH3-ASTRO-001",
+      "page": 1,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "amplitudes",
+      "text_b": "would"
+    },
+    {
+      "case_id": "IS14-AMB-005",
+      "doc_id": "PH3-ASTRO-001",
+      "page": 1,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "R E V I E W",
+      "text_b": "L E T T E R S"
+    },
+    {
+      "case_id": "IS14-AMB-006",
+      "doc_id": "PH3-ASTRO-001",
+      "page": 1,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-018",
+      "doc_id": "PH3-ASTRO-001",
+      "page": 6,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-019",
+      "doc_id": "PH3-ASTRO-001",
+      "page": 6,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-026",
+      "doc_id": "PH3-ASTRO-001",
+      "page": 7,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "R E V I E W",
+      "text_b": "L E T T E R S"
+    },
+    {
+      "case_id": "IS14-AMB-029",
+      "doc_id": "PH3-ASTRO-001",
+      "page": 8,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "and",
+      "text_b": "significantly"
+    },
+    {
+      "case_id": "IS14-AMB-060",
+      "doc_id": "PH3-ASTRO-001",
+      "page": 15,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "P H Y S I C A L",
+      "text_b": "R E V I E W"
+    },
+    {
+      "case_id": "IS14-AMB-089",
+      "doc_id": "PH3-EARTH-001",
+      "page": 10,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-1013",
+      "doc_id": "PH3-MED-001",
+      "page": 41,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-1040",
+      "doc_id": "PH3-MED-001",
+      "page": 43,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-1042",
+      "doc_id": "PH3-MED-001",
+      "page": 43,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-1056",
+      "doc_id": "PH3-MED-001",
+      "page": 43,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-1070",
+      "doc_id": "PH3-MED-001",
+      "page": 43,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-1132",
+      "doc_id": "PH3-MED-001",
+      "page": 45,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-1136",
+      "doc_id": "PH3-MED-001",
+      "page": 45,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-1184",
+      "doc_id": "PH3-MED-001",
+      "page": 46,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-1246",
+      "doc_id": "PH3-MED-001",
+      "page": 49,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-1253",
+      "doc_id": "PH3-MED-001",
+      "page": 50,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-1270",
+      "doc_id": "PH3-MED-001",
+      "page": 51,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-150",
+      "doc_id": "PH3-EARTH-001",
+      "page": 11,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "Mareki Honma",
+      "text_b": "https:"
+    },
+    {
+      "case_id": "IS14-AMB-160",
+      "doc_id": "PH3-EARTH-001",
+      "page": 11,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "Mansour Karami",
+      "text_b": "https:"
+    },
+    {
+      "case_id": "IS14-AMB-167",
+      "doc_id": "PH3-EARTH-001",
+      "page": 11,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "Motoki Kino",
+      "text_b": "https:"
+    },
+    {
+      "case_id": "IS14-AMB-210",
+      "doc_id": "PH3-EARTH-001",
+      "page": 12,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "Alexander W. Raymond",
+      "text_b": "https:"
+    },
+    {
+      "case_id": "IS14-AMB-224",
+      "doc_id": "PH3-EARTH-001",
+      "page": 12,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "Des Small",
+      "text_b": "https:"
+    },
+    {
+      "case_id": "IS14-AMB-236",
+      "doc_id": "PH3-EARTH-001",
+      "page": 12,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "Daniel R. van Rossum",
+      "text_b": "https:"
+    },
+    {
+      "case_id": "IS14-AMB-278",
+      "doc_id": "PH3-EARTH-001",
+      "page": 12,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "Rurik A. Primiani",
+      "text_b": "https:"
+    },
+    {
+      "case_id": "IS14-AMB-285",
+      "doc_id": "PH3-EARTH-001",
+      "page": 13,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "Nathan Whitehorn",
+      "text_b": "https:"
+    },
+    {
+      "case_id": "IS14-AMB-301",
+      "doc_id": "PH3-EARTH-002",
+      "page": 15,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-340",
+      "doc_id": "PH3-EARTH-002",
+      "page": 16,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "5.3",
+      "text_b": "Evaluation metrics"
+    },
+    {
+      "case_id": "IS14-AMB-343",
+      "doc_id": "PH3-EARTH-002",
+      "page": 16,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "Statistical methodology",
+      "text_b": ". . . . . . . . . . . . . . . . . . . . "
+    },
+    {
+      "case_id": "IS14-AMB-346",
+      "doc_id": "PH3-EARTH-002",
+      "page": 16,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "5.4.3",
+      "text_b": "Confidence intervals for RMSEs"
+    },
+    {
+      "case_id": "IS14-AMB-373",
+      "doc_id": "PH3-EARTH-002",
+      "page": 16,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "Relationship between autoregressive trai",
+      "text_b": ". . . . . ."
+    },
+    {
+      "case_id": "IS14-AMB-418",
+      "doc_id": "PH3-EARTH-002",
+      "page": 19,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-437",
+      "doc_id": "PH3-EARTH-002",
+      "page": 19,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-443",
+      "doc_id": "PH3-EARTH-002",
+      "page": 19,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-478",
+      "doc_id": "PH3-EARTH-002",
+      "page": 31,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "indexes the variable, and for atmospheri",
+      "text_b": "E.g."
+    },
+    {
+      "case_id": "IS14-AMB-491",
+      "doc_id": "PH3-EARTH-002",
+      "page": 36,
+      "in_table": false,
+      "figure_context": true,
+      "reasons": [
+        "tick_run"
+      ],
+      "text_a": "2020",
+      "text_b": "2021"
+    },
+    {
+      "case_id": "IS14-AMB-518",
+      "doc_id": "PH3-EARTH-002",
+      "page": 46,
+      "in_table": false,
+      "figure_context": true,
+      "reasons": [
+        "caption_block:continuation_of_caption_block_123|continuation_of_caption_block_123"
+      ],
+      "text_a": "GraphCast (00z/12z)",
+      "text_b": "Pangu-Weather (00z/12z)"
+    },
+    {
+      "case_id": "IS14-AMB-535",
+      "doc_id": "PH3-EARTH-002",
+      "page": 50,
+      "in_table": false,
+      "figure_context": true,
+      "reasons": [
+        "tick_run"
+      ],
+      "text_a": "155",
+      "text_b": "183"
+    },
+    {
+      "case_id": "IS14-AMB-635",
+      "doc_id": "PH3-BIO-001",
+      "page": 30,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "=",
+      "text_b": "∫𝑝(𝑠|𝑌= 1)𝑃(𝑌= 1) 𝑑𝑠"
+    },
+    {
+      "case_id": "IS14-AMB-703",
+      "doc_id": "PH3-BIO-001",
+      "page": 110,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-705",
+      "doc_id": "PH3-BIO-001",
+      "page": 110,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-708",
+      "doc_id": "PH3-BIO-001",
+      "page": 110,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-714",
+      "doc_id": "PH3-BIO-001",
+      "page": 110,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-726",
+      "doc_id": "PH3-BIO-001",
+      "page": 110,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-743",
+      "doc_id": "PH3-BIO-001",
+      "page": 111,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-752",
+      "doc_id": "PH3-BIO-001",
+      "page": 115,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "4.",
+      "text_b": "Jain S, White M, Radivojac P."
+    },
+    {
+      "case_id": "IS14-AMB-772",
+      "doc_id": "PH3-MED-001",
+      "page": 9,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-862",
+      "doc_id": "PH3-MED-001",
+      "page": 31,
+      "in_table": false,
+      "figure_context": false,
+      "reasons": [],
+      "text_a": "13.",
+      "text_b": "Tran M, Latifoltojar A, Neves JB, et al."
+    },
+    {
+      "case_id": "IS14-AMB-877",
+      "doc_id": "PH3-MED-001",
+      "page": 32,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-930",
+      "doc_id": "PH3-MED-001",
+      "page": 35,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-969",
+      "doc_id": "PH3-MED-001",
+      "page": 38,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    },
+    {
+      "case_id": "IS14-AMB-999",
+      "doc_id": "PH3-MED-001",
+      "page": 40,
+      "in_table": true,
+      "figure_context": false,
+      "reason": "table domain (IS-11)"
+    }
+  ]
+}

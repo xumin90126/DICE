@@ -1,0 +1,25 @@
+{
+  "font_size_equality_tolerance": 0.15,
+  "font_size_normalization_decimals": 1,
+  "font_family_suffix_patterns": [
+    "-BoldItalic",
+    "-BoldOblique",
+    "-BoldMT",
+    "-ItalicMT",
+    "-ObliqueMT",
+    "-Bold",
+    "-bold",
+    "-Italic",
+    "-italic",
+    "-Oblique",
+    "-oblique",
+    "-Regular",
+    "-Roman",
+    "-MT",
+    "-Black",
+    "-Heavy",
+    "-Light",
+    "-Medium"
+  ],
+  "cross_validate_font_name": true
+}

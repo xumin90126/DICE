@@ -1,0 +1,199 @@
+{
+  "gate_id": "human_evidence_binding_reusability_gate",
+  "date": "2026-09-18",
+  "mode": "READ_ONLY_NO_IMPLEMENTATION",
+  "governance": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "DESIGN_IMPLEMENTATION": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  },
+
+  "data_used": {
+    "ma_human_validation": "79 cases (61 YES, 4 NO, 14 UNCERTAIN, 5 documents)",
+    "heb_design_research": "Scheme B (Judgment + Evidence ID), H1-H4 classification",
+    "ma_p0_counterfactual": "E1 evidence states (74 EXTENT_EXISTS, 5 partial)",
+    "evidence_boundary_structure": "13 G5 cases, Structure A"
+  },
+
+  "provenance_analysis": {
+    "PROVENANCE_COMPLETE": 74,
+    "PROVENANCE_PARTIAL": 5,
+    "NOT_DEMONSTRATED": 0,
+    "result": "YES — Evidence ID sufficient for Provenance (93.7% complete)"
+  },
+
+  "cross_case_alignment": {
+    "cases_with_match": 72,
+    "cases_consistent_group": 57,
+    "cases_inconsistent_group": 15,
+    "unique_config": 7,
+    "alignment_fields": ["case_type", "fig_prefix", "e1_evidence_state", "vertical_relation", "x_overlap"],
+    "no_new_fields": true,
+    "no_llm": true,
+    "no_embedding": true,
+    "result": "YES — Evidence Configuration aligns across cases (91.1% matchable)"
+  },
+
+  "level_classification": {
+    "Level_1_CASE_SPECIFIC": {"count": 14, "percentage": 17.7, "description": "UNCERTAIN/G5 boundary — no definitive judgment"},
+    "Level_2_EVIDENCE_LINKED": {"count": 20, "percentage": 25.3, "description": "Single instance or inconsistent group"},
+    "Level_3_REPEATED_INSTANCE": {"count": 8, "percentage": 10.1, "description": "Repeated but limited"},
+    "Level_4_SIGNAL_CANDIDATE": {"count": 37, "percentage": 46.8, "description": "Cross-document + consistent + provenance"},
+    "Level_5_CAPABILITY": {"count": 0, "percentage": 0, "description": "NOT_AUTHORIZED"}
+  },
+
+  "human_added_value": {
+    "A_confirmed_existing_evidence": {"count": 21, "percentage": 26.6},
+    "B_semantic_validation": {"count": 40, "percentage": 50.6},
+    "C_new_observation": {"count": 4, "percentage": 5.1},
+    "D_external_knowledge": {"count": 0, "percentage": 0},
+    "E_cannot_bind_boundary": {"count": 14, "percentage": 17.7},
+    "primary_value": "B (semantic validation) — 50.6%",
+    "no_external_knowledge": true
+  },
+
+  "burden_analysis": {
+    "FREE_TEXT_REQUIRED": false,
+    "RULE_AUTHORING_REQUIRED": false,
+    "SEMANTIC_LABEL_AUTHORING_REQUIRED": false,
+    "EVIDENCE_ANCHOR_REQUIRED": true,
+    "LOW_BURDEN_DESIGN_SUPPORTED": true,
+    "ACTUAL_HUMAN_TIME": "NOT_DEMONSTRATED (no time data)"
+  },
+
+  "reusable_signal_candidate": {
+    "total_candidates": 37,
+    "groups": [
+      {
+        "name": "caption_like + FIG=YES + EXTENT_EXISTS → YES",
+        "cases": 34,
+        "documents": 5,
+        "judgment_consistency": "100% (34/34 YES)",
+        "provenance_complete": "34/34",
+        "C1_evidence_linked": true,
+        "C2_provenance_complete": true,
+        "C3_repeated": true,
+        "C4_consistent": true,
+        "C5_config_comparable": true,
+        "C6_not_case_specific": true,
+        "C7_no_free_text": true,
+        "C8_no_semantic_label": true,
+        "all_c1_c8_met": true,
+        "status": "REUSABLE_SIGNAL_CANDIDATE"
+      },
+      {
+        "name": "Type_B_negative + FIG=NO + EXTENT_EXISTS → YES",
+        "cases": 3,
+        "documents": 3,
+        "judgment_consistency": "100% (3/3 YES)",
+        "provenance_complete": "3/3",
+        "C1_evidence_linked": true,
+        "C2_provenance_complete": true,
+        "C3_repeated": true,
+        "C4_consistent": true,
+        "C5_config_comparable": true,
+        "C6_not_case_specific": true,
+        "C7_no_free_text": true,
+        "C8_no_semantic_label": true,
+        "all_c1_c8_met": true,
+        "status": "REUSABLE_SIGNAL_CANDIDATE (CONDITIONAL — limited sample)"
+      }
+    ],
+    "critical_caveats": [
+      "Candidate ≠ validated signal",
+      "Candidate ≠ rule",
+      "Candidate ≠ capability",
+      "'FIG-prefix + nearby = Caption' is FORBIDDEN",
+      "Multi-reviewer validation NOT authorized",
+      "No automatic learning or generalization"
+    ]
+  },
+
+  "evidence_distillation": {
+    "D0_no_structure": 14,
+    "D1_repeated_instance": 20,
+    "D2_compressible_config": 8,
+    "D3_reusable_signal_candidate": 37,
+    "D4_capability": 0,
+    "max_level_reached": "D3",
+    "d4_authorized": false,
+    "natural_emergence": true,
+    "no_clustering_algorithm": true,
+    "no_similarity_score": true,
+    "no_llm": true,
+    "result": "YES — Evidence Distillation emerged to D3 (maximum allowed)"
+  },
+
+  "one_case_one_patch_risk": {
+    "risk": false,
+    "reason": "37 cases form patterns (not patches); five-level hierarchy prevents single-case→rule; Level 5 FORBIDDEN"
+  },
+
+  "over_design_audit": {
+    "O1_new_schema": false,
+    "O2_new_evidence_layer": false,
+    "O3_new_semantic_layer": false,
+    "O4_required_explanation": false,
+    "O5_required_rule": false,
+    "O6_required_semantic_label": false,
+    "O7_used_llm": false,
+    "O8_used_embedding": false,
+    "O9_created_automatic_rule": false,
+    "O10_created_capability": false,
+    "all_false": true,
+    "over_design_risk": "NONE"
+  },
+
+  "limitations": [
+    {"id": "RB-L-01", "limitation": "SINGLE HUMAN REVIEWER — inter-rater UNKNOWN", "impact": "34 caption_like consistency may be reviewer-specific"},
+    {"id": "RB-L-02", "limitation": "SINGLE TASK (T1) — T2/T3 not tested", "impact": "Cross-task generalization UNKNOWN"},
+    {"id": "RB-L-03", "limitation": "NO TIME MEASUREMENT", "impact": "Actual Human speed = NOT_DEMONSTRATED"},
+    {"id": "RB-L-04", "limitation": "P1 INCONCLUSIVE", "impact": "No Human-level benefit demonstrated"},
+    {"id": "RB-L-05", "limitation": "CANDIDATE ≠ VALIDATED SIGNAL", "impact": "37 candidates need multi-reviewer validation"},
+    {"id": "RB-L-06", "limitation": "NO BOUNDARY IDENTIFICATION", "impact": "When does caption_like pattern fail? Unknown"},
+    {"id": "RB-L-07", "limitation": "NO IMPLEMENTATION TEST", "impact": "Actual binding behavior unverified"},
+    {"id": "RB-L-08", "limitation": "EXACT-MATCH GROUPING ONLY", "impact": "Similar-but-not-identical configs not grouped"}
+  ],
+
+  "final_questions": {
+    "Q1_evidence_id_provenance": "YES — 93.7% PROVENANCE_COMPLETE",
+    "Q2_evidence_config_alignment": "YES — 91.1% matchable using existing fields only",
+    "Q3_human_judgment_as_validation": "YES — 82.3% definitive judgments evidence-linked",
+    "Q4_human_needs_free_text": "NO — 0/79 require free text",
+    "Q5_human_needs_semantic_categories": "NO — 0/79 require semantic label authoring",
+    "Q6_repeated_evidence_instance": "YES — 72/79 have cross-case match; 37 reach Level 4",
+    "Q7_reusable_signal_candidate": "YES (CANDIDATE) — 37 cases meet ALL C1-C8; but Candidate ≠ validated signal",
+    "Q8_evidence_distillation": "YES — D3 reached (maximum allowed); D4 FORBIDDEN",
+    "Q9_one_case_one_patch_risk": "NO — five-level hierarchy prevents single-case→rule",
+    "Q10_next_phase_design_gate": "CONDITIONAL — structural conditions MET; validation conditions NOT MET (needs multi-reviewer)"
+  },
+
+  "files_created": [
+    "tmp/human_evidence_binding_reusability_gate.md",
+    "tmp/human_evidence_binding_reusability_gate.json",
+    "tmp/human_evidence_binding_reusability_case_table.csv"
+  ],
+  "files_modified": 0,
+
+  "conclusion": {
+    "RESEARCH_STATUS": "COMPLETE",
+    "SYSTEM_MODIFIED": false,
+    "DESIGN_IMPLEMENTATION": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "HUMAN_VALIDATION_AUTHORIZED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "NEW_CAPABILITY": "NONE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "research_question": "Why can Signal 3 not distinguish CLEAR from BOUNDARY? Is it A (Evidence Organization Gap), B (Deterministic Derivation Gap), C (Observation Gap), or D (Human Semantic Gap)?",
+  "signal_3_frozen": {
+    "definition": "line_obs_count >= 3 AND NOT has_fig_prefix → KEEP_SEPARATE",
+    "features": [
+      "line_obs_count (E3, derivable)",
+      "has_fig_prefix (E3, derivable)"
+    ],
+    "output_space": [
+      "KEEP_SEPARATE",
+      "UNCOVERED"
+    ],
+    "modified": false
+  },
+  "boundary_case_matrix": {
+    "clearly_supported": 38,
+    "clearly_unsupported": 2,
+    "boundary": 4,
+    "conflict": 0,
+    "unknown": 1,
+    "boundary_cases": [
+      {
+        "case_id": "IS11-AMB-005",
+        "line_obs": 3,
+        "period_cap": true,
+        "reviewer_a": "KEEP",
+        "reviewer_b": "MERGE",
+        "p722": "KEEP(3.4s)",
+        "reason": "sentence vs paragraph"
+      },
+      {
+        "case_id": "IS11-AMB-375",
+        "line_obs": 3,
+        "period_cap": true,
+        "reviewer_a": "KEEP",
+        "reviewer_b": "MERGE",
+        "p722": "UNKNOWN(31.3s)",
+        "reason": "citation + sentence boundary"
+      },
+      {
+        "case_id": "IS11-AMB-418",
+        "line_obs": 7,
+        "period_cap": true,
+        "reviewer_a": "KEEP",
+        "reviewer_b": "MERGE",
+        "p722": "KEEP(12.2s)",
+        "reason": "sentence vs caption paragraph"
+      },
+      {
+        "case_id": "IS11-AMB-519",
+        "line_obs": 2,
+        "period_cap": true,
+        "reviewer_a": "KEEP",
+        "reviewer_b": "MERGE",
+        "p722": "KEEP(2.0s)",
+        "reason": "sentence vs paragraph (uncovered by S3)"
+      }
+    ]
+  },
+  "amb024_vs_amb375_comparison": {
+    "amb024_clear": {
+      "text_a": "28.54",
+      "text_b": "10.02",
+      "line_obs": 3,
+      "has_fig": false,
+      "period_end": false,
+      "cap_start": false,
+      "period_cap": false,
+      "tld_is_in_table": true,
+      "tld_different_cell": true,
+      "h_gap": 25.0,
+      "reviewer": "A=B=KEEP"
+    },
+    "amb375_boundary": {
+      "text_a": "[23].",
+      "text_b": "Each",
+      "line_obs": 3,
+      "has_fig": false,
+      "period_end": true,
+      "cap_start": true,
+      "period_cap": true,
+      "tld_is_in_table": false,
+      "tld_different_cell": false,
+      "h_gap": 9.7,
+      "reviewer": "A=KEEP, B=MERGE"
+    },
+    "signal_3_features_identical": true,
+    "key_differences": [
+      "period_end (N vs Y)",
+      "cap_start (N vs Y)",
+      "TLD is_in_table (True vs False)",
+      "h_gap (25.0 vs 9.7)"
+    ],
+    "conclusion": "period_end + cap_start perfectly distinguishes CLEAR from BOUNDARY; TLD and h_gap also differ but less reliably"
+  },
+  "evidence_dependency_analysis": {
+    "period_end": {
+      "exists_in_P1": true,
+      "derivable": true,
+      "derivation": "text_a.rstrip().endswith('.')",
+      "category": "E3",
+      "in_signal_3": false
+    },
+    "cap_start": {
+      "exists_in_P1": true,
+      "derivable": true,
+      "derivation": "text_b[0].isupper()",
+      "category": "E3",
+      "in_signal_3": false
+    },
+    "text_content_type": {
+      "exists_in_P1": true,
+      "derivable": true,
+      "derivation": "length + digit check",
+      "category": "E3",
+      "in_signal_3": false,
+      "discrimination": "PARTIAL (AMB-375 is short/short but BOUNDARY)"
+    },
+    "tld_is_in_table": {
+      "exists": true,
+      "derivable": true,
+      "category": "E1",
+      "in_signal_3": false,
+      "reliability": "LOW (false positive on AMB-005)"
+    },
+    "h_gap": {
+      "exists_in_P2": true,
+      "derivable": true,
+      "category": "E1",
+      "in_signal_3": false,
+      "discrimination": "OVERLAPPING ranges (CLEAR 8.1-45.6, BOUNDARY 8.6-33.9)"
+    }
+  },
+  "text_content_type_audit": {
+    "derivable_from_existing_evidence": true,
+    "category": "E3 (Derived)",
+    "discrimination_power": "PARTIAL — AMB-375 is short/short but BOUNDARY, same as CLEAR short/short cases",
+    "period_cap_better": true,
+    "period_cap_discrimination": "PERFECT (4/4 BOUNDARY, 0/38 CLEAR)",
+    "note": "TEXT_CONTENT_TYPE cannot distinguish AMB-375 from CLEAR short/short cases; period+cap can"
+  },
+  "period_cap_discrimination": {
+    "feature": "period_end=True AND cap_start=True",
+    "derivation": "period_end = text_a.endswith(\".\"), cap_start = text_b[0].isupper()",
+    "category": "E3 (Derived from P1 text)",
+    "boundary_cases_with_feature": "4/4 (100%)",
+    "clear_cases_with_feature": "0/38 (0%)",
+    "unsupported_cases_with_feature": "0/2 (0%)",
+    "unknown_cases_with_feature": "0/1 (0%)",
+    "discrimination": "PERFECT on current 45 cases",
+    "caveats": [
+      "n=4 BOUNDARY cases — too few for generalization",
+      "NOT in Signal 3 feature set",
+      "Adding = MODIFYING Signal 3 (forbidden)"
+    ],
+    "semantic_leakage_in_derivation": 0,
+    "semantic_leakage_in_interpretation": "non-zero (period+cap → sentence boundary → KEEP/MERGE is semantic)"
+  },
+  "semantic_leakage_test": {
+    "feature_derivation": {
+      "period_end": "PURE STRING CHECK",
+      "cap_start": "PURE STRING CHECK",
+      "leakage": 0
+    },
+    "boundary_identification": {
+      "period+cap → BOUNDARY": "STRUCTURAL (no semantic)",
+      "leakage": 0
+    },
+    "boundary_resolution": {
+      "BOUNDARY → KEEP/MERGE": "SEMANTIC INTERPRETATION REQUIRED",
+      "leakage": "non-zero"
+    },
+    "semantic_interpretation_required": true,
+    "note": "Features are structural (E3). Interpretation of what they mean for KEEP/MERGE is semantic (E5). Reviewer disagreement (50/50) confirms this is PERSISTENT_HUMAN_SEMANTIC_BOUNDARY."
+  },
+  "unknown_analysis": {
+    "amb032": {
+      "root_cause": "A. Evidence Missing (TLD gap, participant uncertainty)",
+      "tld_correct": true,
+      "reviewer_agreement": true,
+      "period_cap": false,
+      "s3_issue": "NO — Consumer/Integration Gap, not S3 boundary",
+      "expressible": false
+    },
+    "amb375": {
+      "root_cause": "C. Semantic Ambiguity (sentence vs paragraph)",
+      "period_cap": true,
+      "reviewer_disagreement": true,
+      "s3_issue": "YES — S3 overcommits",
+      "expressible": "PARTIALLY (if period+cap added)"
+    },
+    "unknown_boundary_not_expressible": false,
+    "note": "For BOUNDARY cases (period+cap=True), UNKNOWN could be expressed if feature added. For AMB-032 (no period+cap), UNKNOWN is NOT expressible from existing evidence."
+  },
+  "counterfactual_test": {
+    "boundary_cases": [
+      {
+        "case_id": "IS11-AMB-005",
+        "state_a": "Machine has period+cap but cant interpret",
+        "state_b": "Human reveals disagreement",
+        "info_gain": ">0",
+        "classification": "PERSISTENT_HUMAN_SEMANTIC_BOUNDARY"
+      },
+      {
+        "case_id": "IS11-AMB-375",
+        "state_a": "Machine has period+cap but cant interpret",
+        "state_b": "Human reveals disagreement + UNKNOWN",
+        "info_gain": ">0",
+        "classification": "PERSISTENT_HUMAN_SEMANTIC_BOUNDARY"
+      },
+      {
+        "case_id": "IS11-AMB-418",
+        "state_a": "Machine has period+cap but cant interpret",
+        "state_b": "Human reveals disagreement",
+        "info_gain": ">0",
+        "classification": "PERSISTENT_HUMAN_SEMANTIC_BOUNDARY"
+      },
+      {
+        "case_id": "IS11-AMB-519",
+        "state_a": "Machine has period+cap but cant interpret",
+        "state_b": "Human reveals disagreement",
+        "info_gain": ">0",
+        "classification": "PERSISTENT_HUMAN_SEMANTIC_BOUNDARY"
+      }
+    ],
+    "unknown_case": {
+      "case_id": "IS11-AMB-032",
+      "state_a": "Machine has TLD=True but participant cant verify",
+      "state_b": "Reviewers agree KEEP",
+      "info_gain": 0,
+      "classification": "EVIDENCE_ORGANIZATION_GAIN"
+    }
+  },
+  "boundary_expressibility": {
+    "boundary_not_expressible": false,
+    "derivable_feature_exists": true,
+    "feature": "period_end + cap_start",
+    "boundary_identification_expressible": true,
+    "boundary_resolution_expressible": false,
+    "note": "A derivable feature (period+cap) CAN identify BOUNDARY. But resolving BOUNDARY (KEEP vs MERGE) requires Human semantic judgment."
+  },
+  "four_way_classification": {
+    "A_evidence_organization_gap": {
+      "applicable": "PARTIAL",
+      "reason": "Text exists in P1 but period+cap not organized as decision input; TLD false positive on AMB-005"
+    },
+    "B_deterministic_derivation_gap": {
+      "applicable": "YES (PRIMARY)",
+      "reason": "period_end and cap_start ARE derivable from P1 (trivial string checks), NOT currently computed, PERFECTLY discriminate BOUNDARY (4/4) from CLEAR (0/38)"
+    },
+    "C_observation_gap": {
+      "applicable": "NO",
+      "reason": "All evidence in P1 text, no new observation needed"
+    },
+    "D_human_semantic_gap": {
+      "applicable": "YES (SECONDARY)",
+      "reason": "Even with BOUNDARY identified, KEEP/MERGE requires semantic interpretation; reviewer disagreement 50/50"
+    },
+    "primary": "B. DETERMINISTIC_DERIVATION_GAP",
+    "secondary": "D. HUMAN_SEMANTIC_GAP",
+    "explanation": "Proximate cause: Signal 3 lacks derivable features (period+cap). Ultimate cause: even with features, KEEP/MERGE is semantic. B is solvable (features derivable), D is not (Human disagreement)."
+  },
+  "signal_3_final_status": "RETAIN_AS_L3_CANDIDATE",
+  "l4_readiness": {
+    "l4_candidate_ready": false,
+    "reasons": [
+      "Signal 3 lacks boundary identification feature (period+cap not included, cannot modify)",
+      "Even if boundary identified, KEEP/MERGE is semantic (reviewer disagreement)",
+      "Signal 3 has no UNKNOWN output",
+      "Signal 3 has no CONFLICT output",
+      "n=4 BOUNDARY cases too few for generalization",
+      "No future cases for validation"
+    ]
+  },
+  "final_output_matrix": {
+    "Evidence Grounding": "PASS",
+    "Information Gain": ">0 (rule level)",
+    "Novelty": "PARTIAL",
+    "Supported Cases": "38 (84%)",
+    "Unsupported Cases": "2 (4%)",
+    "Boundary Cases": "4 (9%)",
+    "Conflict Cases": "0 direct, 4 boundary-level",
+    "UNKNOWN Cases": "1 (2%) + 1 dual",
+    "Boundary Overcommit": "TRUE (4 cases)",
+    "Cross-document support": "YES (4 docs)",
+    "Reviewer consistency": "FAIL (4/4 boundary disagreement)",
+    "Reusability potential": "MODERATE",
+    "L4 Candidate": "FALSE",
+    "Boundary Expressible": "PARTIALLY (period+cap derivable, not in S3)",
+    "UNKNOWN Expressible": "NO (no UNKNOWN output)"
+  },
+  "final_questions": {
+    "q1_core_difference": "period_end + cap_start — BOUNDARY cases have sentence-ending period + capital-starting next text; CLEAR cases do not",
+    "q2_exists_in_evidence": "YES — derivable from P1 text (trivial string checks)",
+    "q3_organization_or_derivation": "Derivation (B) — features derivable but not computed",
+    "q4_new_observation": "NO — all evidence in P1 text",
+    "q5_human_semantic_info": "YES — for BOUNDARY resolution (KEEP/MERGE), not for BOUNDARY identification",
+    "q6_unknown_expressible": "PARTIALLY — for BOUNDARY cases (if period+cap added), not for AMB-032",
+    "q7_verifiable_boundary": "YES — period+cap is verifiable boundary marker (4/4 vs 0/38), but NOT in Signal 3",
+    "q8_retain_signal3": "YES — RETAIN_AS_L3_CANDIDATE (core ability real, boundary gap identifiable)",
+    "q9_l4_ready": "NO — lacks boundary feature, no UNKNOWN output, semantic resolution needed",
+    "q10_need_llm_architecture": "NO — all NO (features deterministic, no new observation/architecture/engine needed)"
+  },
+  "future_research_route": {
+    "primary": "B. DETERMINISTIC_DERIVATION_GAP → offline derivation audit (compute period+cap discrimination, validate on more data)",
+    "secondary": "D. HUMAN_SEMANTIC_GAP → consider L4 Human Validation (only after B resolved, minimal feedback [suitable/unsuitable/uncertain])",
+    "constraints": [
+      "Cannot modify Signal 3",
+      "Cannot implement",
+      "Cannot add features",
+      "Need future independent cases for validation"
+    ]
+  },
+  "anti_overdesign": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "P2_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "IS11_MODIFICATION": false,
+    "GT_MODIFICATION": false,
+    "EXPERIMENT_MODIFICATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "NEW_SIGNAL": false,
+    "NEW_OBSERVATION": false,
+    "NEW_LLM_PIPELINE": false,
+    "RUNTIME_CHANGE": false,
+    "CAPABILITY_CHANGE": false,
+    "FROZEN_BASELINE_DRIFT": 0,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "FORMAL_LEARNING": false,
+    "STOP": true
+  },
+  "governance": {
+    "DICE_CORE_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "P2_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "IS11_MODIFICATION": false,
+    "GT_MODIFICATION": false,
+    "EXPERIMENT_MODIFICATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "LLM": false,
+    "RUNTIME_CHANGE": false,
+    "CAPABILITY_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "FORMAL_LEARNING": false,
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  },
+  "stop": true
+}

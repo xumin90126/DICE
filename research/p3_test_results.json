@@ -1,0 +1,276 @@
+{
+  "test_set": [
+    {
+      "case": "rm501_p2",
+      "pdf": "RM501-P4-英文（单页）V26.1.pdf",
+      "page": 2,
+      "total": 168,
+      "with_font_metadata": 168,
+      "bold_count": 34,
+      "italic_count": 0,
+      "superscript_count": 0,
+      "distinct_signatures": 6,
+      "sample_signatures": [
+        "ArialMT|7.0|0|0|-|0|-",
+        "Arial|7.3|1|0|-|0|-",
+        "Arial|8.0|1|0|-|0|-",
+        "Arial|10.0|1|0|-|0|-"
+      ]
+    },
+    {
+      "case": "dc201_p5",
+      "pdf": "DC201-C1-英文（单页）V26.1.pdf",
+      "page": 5,
+      "total": 157,
+      "with_font_metadata": 157,
+      "bold_count": 31,
+      "italic_count": 0,
+      "superscript_count": 0,
+      "distinct_signatures": 7,
+      "sample_signatures": [
+        "ArialMT|7.0|0|0|-|0|-",
+        "ArialMT|8.0|0|0|-|0|-",
+        "Arial|8.0|1|0|-|0|-",
+        "Arial|5.5|1|0|-|0|-"
+      ]
+    },
+    {
+      "case": "normal_body",
+      "pdf": "C216-英文（单页）V26.1.pdf",
+      "page": 3,
+      "total": 51,
+      "with_font_metadata": 51,
+      "bold_count": 10,
+      "italic_count": 1,
+      "superscript_count": 0,
+      "distinct_signatures": 8,
+      "sample_signatures": [
+        "Arial|8.0|0|1|-|0|-",
+        "ArialMT|7.0|0|0|-|0|-",
+        "ArialMT|8.0|0|0|-|0|-",
+        "Arial|10.0|1|0|-|0|-"
+      ]
+    },
+    {
+      "case": "different_sizes",
+      "pdf": "RM501-P4-英文（单页）V26.1.pdf",
+      "page": 1,
+      "total": 46,
+      "with_font_metadata": 46,
+      "bold_count": 15,
+      "italic_count": 0,
+      "superscript_count": 0,
+      "distinct_signatures": 6,
+      "sample_signatures": [
+        "ArialMT|7.0|0|0|-|0|-",
+        "ArialMT|8.0|0|0|-|0|-",
+        "Arial|10.0|1|0|-|0|-",
+        "Arial|8.0|1|0|-|0|-"
+      ]
+    },
+    {
+      "case": "bold_text",
+      "pdf": "RM501-P4-英文（单页）V26.1.pdf",
+      "page": 2,
+      "total": 168,
+      "with_font_metadata": 168,
+      "bold_count": 34,
+      "italic_count": 0,
+      "superscript_count": 0,
+      "distinct_signatures": 6,
+      "sample_signatures": [
+        "ArialMT|7.0|0|0|-|0|-",
+        "Arial|7.3|1|0|-|0|-",
+        "Arial|8.0|1|0|-|0|-",
+        "Arial|10.0|1|0|-|0|-"
+      ]
+    },
+    {
+      "case": "italic_text",
+      "pdf": "arxiv_bio.pdf",
+      "page": 1,
+      "total": 131,
+      "with_font_metadata": 131,
+      "bold_count": 11,
+      "italic_count": 77,
+      "superscript_count": 47,
+      "distinct_signatures": 27,
+      "sample_signatures": [
+        "CMBSY10|17.2|1|1|-|0|-",
+        "Times|20.0|0|0|-|0|-",
+        "CMR10|10.9|0|0|-|1|-",
+        "CMSY8|8.0|0|1|-|1|-"
+      ]
+    },
+    {
+      "case": "different_fonts",
+      "pdf": "arxiv_bio.pdf",
+      "page": 3,
+      "total": 394,
+      "with_font_metadata": 394,
+      "bold_count": 3,
+      "italic_count": 197,
+      "superscript_count": 92,
+      "distinct_signatures": 27,
+      "sample_signatures": [
+        "SFRM1000|10.0|0|0|-|0|-",
+        "CMEX10|10.9|0|0|-|1|-",
+        "CMEX10|10.9|0|0|-|0|-",
+        "SFBX1000|10.0|1|0|-|0|-"
+      ]
+    },
+    {
+      "case": "chinese",
+      "pdf": "C216-英文（单页）V26.1.pdf",
+      "page": 1,
+      "total": 5,
+      "with_font_metadata": 5,
+      "bold_count": 5,
+      "italic_count": 0,
+      "superscript_count": 0,
+      "distinct_signatures": 3,
+      "sample_signatures": [
+        "Arial|16.0|1|0|-|0|-",
+        "Arial|10.0|1|0|-|0|-",
+        "Arial|13.0|1|0|-|0|-"
+      ]
+    },
+    {
+      "case": "greek_mu",
+      "pdf": "RM501-P4-英文（单页）V26.1.pdf",
+      "page": 1,
+      "total": 46,
+      "with_font_metadata": 46,
+      "bold_count": 15,
+      "italic_count": 0,
+      "superscript_count": 0,
+      "distinct_signatures": 6,
+      "sample_signatures": [
+        "ArialMT|7.0|0|0|-|0|-",
+        "ArialMT|8.0|0|0|-|0|-",
+        "Arial|10.0|1|0|-|0|-",
+        "Arial|8.0|1|0|-|0|-"
+      ]
+    },
+    {
+      "case": "special_arrow",
+      "pdf": "C216-英文（单页）V26.1.pdf",
+      "page": 3,
+      "total": 51,
+      "with_font_metadata": 51,
+      "bold_count": 10,
+      "italic_count": 1,
+      "superscript_count": 0,
+      "distinct_signatures": 8,
+      "sample_signatures": [
+        "Arial|8.0|0|1|-|0|-",
+        "ArialMT|7.0|0|0|-|0|-",
+        "ArialMT|8.0|0|0|-|0|-",
+        "Arial|10.0|1|0|-|0|-"
+      ]
+    },
+    {
+      "case": "table_text",
+      "pdf": "DC201-C1-英文（单页）V26.1.pdf",
+      "page": 5,
+      "total": 157,
+      "with_font_metadata": 157,
+      "bold_count": 31,
+      "italic_count": 0,
+      "superscript_count": 0,
+      "distinct_signatures": 7,
+      "sample_signatures": [
+        "ArialMT|7.0|0|0|-|0|-",
+        "ArialMT|8.0|0|0|-|0|-",
+        "Arial|8.0|1|0|-|0|-",
+        "Arial|5.5|1|0|-|0|-"
+      ]
+    },
+    {
+      "case": "same_style_multi",
+      "pdf": "C216-英文（单页）V26.1.pdf",
+      "page": 3,
+      "total": 51,
+      "with_font_metadata": 51,
+      "bold_count": 10,
+      "italic_count": 1,
+      "superscript_count": 0,
+      "distinct_signatures": 8,
+      "sample_signatures": [
+        "Arial|8.0|0|1|-|0|-",
+        "ArialMT|7.0|0|0|-|0|-",
+        "ArialMT|8.0|0|0|-|0|-",
+        "Arial|10.0|1|0|-|0|-"
+      ]
+    },
+    {
+      "case": "superscript",
+      "pdf": "arxiv_bio.pdf",
+      "page": 5,
+      "total": 397,
+      "with_font_metadata": 397,
+      "bold_count": 11,
+      "italic_count": 197,
+      "superscript_count": 99,
+      "distinct_signatures": 19,
+      "sample_signatures": [
+        "SFBX1095|10.9|1|0|-|0|-",
+        "CMR10|10.9|0|0|-|1|-",
+        "CMSY8|8.0|0|1|-|1|-",
+        "CMR8|8.0|0|0|-|1|-"
+      ]
+    },
+    {
+      "case": "unknown_flags",
+      "pdf": "arxiv_bio.pdf",
+      "page": 3,
+      "total": 394,
+      "with_font_metadata": 394,
+      "bold_count": 3,
+      "italic_count": 197,
+      "superscript_count": 92,
+      "distinct_signatures": 27,
+      "sample_signatures": [
+        "SFRM1000|10.0|0|0|-|0|-",
+        "CMEX10|10.9|0|0|-|1|-",
+        "CMEX10|10.9|0|0|-|0|-",
+        "SFBX1000|10.0|1|0|-|0|-"
+      ]
+    },
+    {
+      "case": "missing_metadata",
+      "pdf": "C216-英文（单页）V26.1.pdf",
+      "page": 1,
+      "total": 5,
+      "with_font_metadata": 5,
+      "bold_count": 5,
+      "italic_count": 0,
+      "superscript_count": 0,
+      "distinct_signatures": 3,
+      "sample_signatures": [
+        "Arial|16.0|1|0|-|0|-",
+        "Arial|10.0|1|0|-|0|-",
+        "Arial|13.0|1|0|-|0|-"
+      ]
+    }
+  ],
+  "metrics": {
+    "1_total_observations": 168,
+    "2_style_completeness": 1.0,
+    "3_font_completeness": 1.0,
+    "4_font_size_completeness": 1.0,
+    "5_bold_completeness": 1.0,
+    "6_provenance_rate": 1.0,
+    "7_style_signature_determinism": true,
+    "8_style_comparison_consistency": true,
+    "9_unicode_verification": true,
+    "10_missing_metadata_handling": true,
+    "11_rm501_position_step": {
+      "verdict": "PASS — Position and Step styles separately preserved",
+      "position_sig": "Arial|7.3|1|0|-|0|-",
+      "step_sig": "Arial|7.0|1|0|-|0|-",
+      "same_signature": false,
+      "size_delta": 0.3
+    }
+  }
+}

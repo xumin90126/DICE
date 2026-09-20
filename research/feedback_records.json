@@ -1,0 +1,3248 @@
+[
+  {
+    "record_id": "FR-GT-IS11-AMB-005",
+    "case_id": "IS11-AMB-005",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 1
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "wrong_hash",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": true,
+    "adjudicated": true
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-024",
+    "case_id": "IS11-AMB-024",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 6
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-032",
+    "case_id": "IS11-AMB-032",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 6
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-034",
+    "case_id": "IS11-AMB-034",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 6
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-052",
+    "case_id": "IS11-AMB-052",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 7
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-064",
+    "case_id": "IS11-AMB-064",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 8
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-074",
+    "case_id": "IS11-AMB-074",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 8
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-101",
+    "case_id": "IS11-AMB-101",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 11
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-102",
+    "case_id": "IS11-AMB-102",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 11
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-130",
+    "case_id": "IS11-AMB-130",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_efficientnet",
+      "page": 5
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-135",
+    "case_id": "IS11-AMB-135",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "MERGE",
+      "document_id": "is11_efficientnet",
+      "page": 5
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-163",
+    "case_id": "IS11-AMB-163",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 6
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-168",
+    "case_id": "IS11-AMB-168",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 6
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-198",
+    "case_id": "IS11-AMB-198",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 6
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-205",
+    "case_id": "IS11-AMB-205",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 6
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-218",
+    "case_id": "IS11-AMB-218",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 6
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-257",
+    "case_id": "IS11-AMB-257",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 7
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-261",
+    "case_id": "IS11-AMB-261",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 7
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-262",
+    "case_id": "IS11-AMB-262",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_efficientnet",
+      "page": 7
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-267",
+    "case_id": "IS11-AMB-267",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 7
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-279",
+    "case_id": "IS11-AMB-279",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 7
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-313",
+    "case_id": "IS11-AMB-313",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_efficientnet",
+      "page": 8
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-318",
+    "case_id": "IS11-AMB-318",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 8
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-321",
+    "case_id": "IS11-AMB-321",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 8
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-323",
+    "case_id": "IS11-AMB-323",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 8
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-346",
+    "case_id": "IS11-AMB-346",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 9
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-350",
+    "case_id": "IS11-AMB-350",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 9
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-375",
+    "case_id": "IS11-AMB-375",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 6
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": true,
+    "adjudicated": true
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-380",
+    "case_id": "IS11-AMB-380",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 13
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-401",
+    "case_id": "IS11-AMB-401",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 19
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-407",
+    "case_id": "IS11-AMB-407",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 19
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-409",
+    "case_id": "IS11-AMB-409",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 19
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-414",
+    "case_id": "IS11-AMB-414",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "MERGE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 20
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-418",
+    "case_id": "IS11-AMB-418",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 20
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": true,
+    "adjudicated": true
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-422",
+    "case_id": "IS11-AMB-422",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "MERGE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 24
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-440",
+    "case_id": "IS11-AMB-440",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-457",
+    "case_id": "IS11-AMB-457",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-462",
+    "case_id": "IS11-AMB-462",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-467",
+    "case_id": "IS11-AMB-467",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-483",
+    "case_id": "IS11-AMB-483",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-505",
+    "case_id": "IS11-AMB-505",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-514",
+    "case_id": "IS11-AMB-514",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-519",
+    "case_id": "IS11-AMB-519",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": true,
+    "adjudicated": true
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-522",
+    "case_id": "IS11-AMB-522",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_cs_001",
+      "page": 4
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-GT-IS11-AMB-530",
+    "case_id": "IS11-AMB-530",
+    "source": "GT",
+    "human_id": "GT_REVIEWER",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_cs_001",
+      "page": 5
+    },
+    "evidence_viewed": null,
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "GT",
+      "experiment_condition": null,
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-414",
+    "case_id": "IS11-AMB-414",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "MERGE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 20
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 9715,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-505",
+    "case_id": "IS11-AMB-505",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 7639,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-032",
+    "case_id": "IS11-AMB-032",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "UNKNOWN",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 6
+    },
+    "evidence_viewed": {
+      "levels_viewed": 2,
+      "fields_expanded": [
+        "h_gap",
+        "dy",
+        "same_style",
+        "width_a",
+        "width_b",
+        "style_sig_a",
+        "style_sig_b"
+      ],
+      "expansion_count": 7,
+      "decision_time_ms": 45892,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-005",
+    "case_id": "IS11-AMB-005",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 1
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 3422,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": true,
+    "adjudicated": true
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-350",
+    "case_id": "IS11-AMB-350",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 9
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 6202,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-418",
+    "case_id": "IS11-AMB-418",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 20
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 12225,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": true,
+    "adjudicated": true
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-467",
+    "case_id": "IS11-AMB-467",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 2898,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-457",
+    "case_id": "IS11-AMB-457",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 3677,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-462",
+    "case_id": "IS11-AMB-462",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 4744,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-375",
+    "case_id": "IS11-AMB-375",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "UNKNOWN",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 6
+    },
+    "evidence_viewed": {
+      "levels_viewed": 2,
+      "fields_expanded": [
+        "h_gap",
+        "dy",
+        "same_style",
+        "width_a",
+        "width_b",
+        "style_sig_a",
+        "style_sig_b"
+      ],
+      "expansion_count": 7,
+      "decision_time_ms": 31291,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": true,
+    "adjudicated": true
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-483",
+    "case_id": "IS11-AMB-483",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 7658,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-350",
+    "case_id": "IS11-AMB-350",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 9
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 3287,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-519",
+    "case_id": "IS11-AMB-519",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 2021,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": true,
+    "adjudicated": true
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-522",
+    "case_id": "IS11-AMB-522",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_cs_001",
+      "page": 4
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1996,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-313",
+    "case_id": "IS11-AMB-313",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_efficientnet",
+      "page": 8
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 3861,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-467",
+    "case_id": "IS11-AMB-467",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1109,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-130",
+    "case_id": "IS11-AMB-130",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_efficientnet",
+      "page": 5
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1128,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-205",
+    "case_id": "IS11-AMB-205",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 6
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1387,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-168",
+    "case_id": "IS11-AMB-168",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 6
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 970,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-414",
+    "case_id": "IS11-AMB-414",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "MERGE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 20
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 2181,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-514",
+    "case_id": "IS11-AMB-514",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 4067,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "A",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-375",
+    "case_id": "IS11-AMB-375",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 6
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 8147,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "A",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": true,
+    "adjudicated": true
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-422",
+    "case_id": "IS11-AMB-422",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "MERGE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 24
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 2537,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "A",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-462",
+    "case_id": "IS11-AMB-462",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1482,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "A",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-005",
+    "case_id": "IS11-AMB-005",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "MERGE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 1
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1554,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "A",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": true,
+    "adjudicated": true
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-074",
+    "case_id": "IS11-AMB-074",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 8
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 3069,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-375",
+    "case_id": "IS11-AMB-375",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 6
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 3517,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": true,
+    "adjudicated": true
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-505",
+    "case_id": "IS11-AMB-505",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 2166,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-514",
+    "case_id": "IS11-AMB-514",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 962,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-350",
+    "case_id": "IS11-AMB-350",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 9
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1158,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-262",
+    "case_id": "IS11-AMB-262",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_efficientnet",
+      "page": 7
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 2616,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-422",
+    "case_id": "IS11-AMB-422",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "MERGE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 24
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1307,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-064",
+    "case_id": "IS11-AMB-064",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 8
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 2574,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-346",
+    "case_id": "IS11-AMB-346",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 9
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 4045,
+      "engagement_level": "DEEP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B2-IS11-AMB-163",
+    "case_id": "IS11-AMB-163",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 6
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 2045,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B2",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-467",
+    "case_id": "IS11-AMB-467",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 2004,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "A",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-457",
+    "case_id": "IS11-AMB-457",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 992,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "A",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-032",
+    "case_id": "IS11-AMB-032",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 6
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1828,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "A",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-483",
+    "case_id": "IS11-AMB-483",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1562,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "A",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-414",
+    "case_id": "IS11-AMB-414",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "MERGE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 20
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1572,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "A",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-519",
+    "case_id": "IS11-AMB-519",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1555,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "A",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": true,
+    "adjudicated": true
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-135",
+    "case_id": "IS11-AMB-135",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": true,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "MERGE",
+      "document_id": "is11_efficientnet",
+      "page": 5
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 2236,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "A",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-024",
+    "case_id": "IS11-AMB-024",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 6
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1449,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "A",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-522",
+    "case_id": "IS11-AMB-522",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_cs_001",
+      "page": 4
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1508,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "A",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-A-IS11-AMB-034",
+    "case_id": "IS11-AMB-034",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": true,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 6
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1174,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "A",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-052",
+    "case_id": "IS11-AMB-052",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 7
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 2895,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B1",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-205",
+    "case_id": "IS11-AMB-205",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 6
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1146,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B1",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-530",
+    "case_id": "IS11-AMB-530",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_cs_001",
+      "page": 5
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1285,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B1",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-168",
+    "case_id": "IS11-AMB-168",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 6
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1025,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B1",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-462",
+    "case_id": "IS11-AMB-462",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_cs_001",
+      "page": 3
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 713,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B1",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-313",
+    "case_id": "IS11-AMB-313",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_efficientnet",
+      "page": 8
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1665,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B1",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-198",
+    "case_id": "IS11-AMB-198",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": false,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_efficientnet",
+      "page": 6
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 2949,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B1",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-130",
+    "case_id": "IS11-AMB-130",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": false,
+      "text_b_starts_capital": false,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_efficientnet",
+      "page": 5
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1161,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B1",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": false,
+    "adjudicated": false
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-005",
+    "case_id": "IS11-AMB-005",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": true,
+      "different_cell": true,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "KEEP_SEPARATE",
+      "document_id": "is11_resnet",
+      "page": 1
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 2524,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B1",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": true,
+    "adjudicated": true
+  },
+  {
+    "record_id": "FR-L5-P722-B1-IS11-AMB-418",
+    "case_id": "IS11-AMB-418",
+    "source": "L5",
+    "human_id": "P722",
+    "human_decision": "KEEP_SEPARATE",
+    "evidence_snapshot": {
+      "is_in_table": false,
+      "different_cell": false,
+      "is01_a": false,
+      "is02_b": true,
+      "text_a_ends_period": true,
+      "text_b_starts_capital": true,
+      "machine_decision": "INSUFFICIENT_EVIDENCE",
+      "document_id": "is11_med_001",
+      "page": 20
+    },
+    "evidence_viewed": {
+      "levels_viewed": 1,
+      "fields_expanded": [],
+      "expansion_count": 0,
+      "decision_time_ms": 1852,
+      "engagement_level": "SNAP"
+    },
+    "provenance": {
+      "machine_eval_hash": "437aa665210ccd04",
+      "tld_hash": "022f5c21e872ad9e",
+      "gt_hash": "7349963d0d23b5ef",
+      "source": "L5_P722",
+      "experiment_condition": "B1",
+      "timestamp": "2026-09-13T14:30:56.419276+00:00"
+    },
+    "conflict": true,
+    "adjudicated": true
+  }
+]

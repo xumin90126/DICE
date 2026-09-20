@@ -1,0 +1,136 @@
+{
+  "contract": "tmp/ph02_column_membership_experiment_contract.md",
+  "experiment": "PH-02 Column-Membership Guard GT Replay",
+  "integrity": {
+    "all_ok": true,
+    "checks": [
+      {
+        "actual": "388e7939d334458e194dd4d805f6cafa0b975ce4f78d6b1137a965dd13d5554c",
+        "expected": "388e7939d334458e194dd4d805f6cafa0b975ce4f78d6b1137a965dd13d5554c",
+        "file": "perception/sandbox/geometry/geometry_engine.py",
+        "ok": true,
+        "source": "layer_registry:p2_engine"
+      },
+      {
+        "actual": "74d23ec784d657825780b35627f1b766ad87bd4dd74d88bbe4d560941f3b724a",
+        "expected": "74d23ec784d657825780b35627f1b766ad87bd4dd74d88bbe4d560941f3b724a",
+        "file": "perception/sandbox/observations/atomic_text.py",
+        "ok": true,
+        "source": "layer_registry:p1_extract"
+      },
+      {
+        "actual": "7ef3629e5a9b819c59724b8e94a831d10a94e875c8b9534d750a7dcfa849196b",
+        "expected": "7ef3629e5a9b819c59724b8e94a831d10a94e875c8b9534d750a7dcfa849196b",
+        "file": "perception/sandbox/geometry/geometry_config.py",
+        "ok": true,
+        "source": "layer_registry:p2_config"
+      },
+      {
+        "actual": "7731377cb8468c9171efdc89f03c1d60f11e1372e3671c64c80c77d6da7524da",
+        "expected": "7731377cb8468c9171efdc89f03c1d60f11e1372e3671c64c80c77d6da7524da",
+        "file": "perception/sandbox/geometry/geometry_observation.py",
+        "ok": true,
+        "source": "layer_registry:p2_shape"
+      },
+      {
+        "actual": "55b9a23850398acc7a89d9164ada6a5788a0bd1777b3f2f520960db2febbb2b2",
+        "expected": "55b9a23850398acc7a89d9164ada6a5788a0bd1777b3f2f520960db2febbb2b2",
+        "file": "perception/sandbox/span/span_config.py",
+        "ok": true,
+        "source": "layer_registry:p4_span_config"
+      },
+      {
+        "actual": "57214c742503779fce8c6843cbe8d4964a62428541a55b5eb95d7f408e10e9eb",
+        "expected": "57214c742503779fce8c6843cbe8d4964a62428541a55b5eb95d7f408e10e9eb",
+        "file": "perception/sandbox/region/region_engine.py",
+        "ok": true,
+        "source": "layer_registry:p6_region_engine"
+      },
+      {
+        "actual": "022f5c21e872ad9e737ddadb10a3f9eb8ff0ddd31333dacd6f30610cfbd8d79b",
+        "expected": "022f5c21e872ad9e737ddadb10a3f9eb8ff0ddd31333dacd6f30610cfbd8d79b",
+        "file": "chunker/table_line_detector.py",
+        "ok": true,
+        "source": "layer_registry:table_line_detector"
+      },
+      {
+        "actual": "6 intact",
+        "expected": "6 intact",
+        "file": "P7.1 manifest (6 files)",
+        "ok": true,
+        "source": "tmp/perception/p7/p7_1_freeze_hashes.json"
+      },
+      {
+        "actual": "8 intact",
+        "expected": "8 intact",
+        "file": "P7.2 manifest (8 files)",
+        "ok": true,
+        "source": "tmp/perception/p7/p7_2_freeze_hashes.json"
+      },
+      {
+        "actual": "7349963d0d23b5efc8c092ad45b8f301c39ca13a9c3bef8952aff809d0286959",
+        "expected": "7349963d0d23b5efc8c092ad45b8f301c39ca13a9c3bef8952aff809d0286959",
+        "file": "tmp/is11_semantic_ground_truth.json",
+        "ok": true,
+        "source": "parsed from tmp/is11_human_review_report.md"
+      },
+      {
+        "actual": "1e0651b6810ecba34a3dbc5b5b0209226f889004607c1f203540a48d64e5a93a",
+        "expected": "1e0651b6810ecba34a3dbc5b5b0209226f889004607c1f203540a48d64e5a93a",
+        "file": "/tmp/is11_independent_corpus/resnet_001.pdf",
+        "ok": true,
+        "source": "sampling_frame"
+      },
+      {
+        "actual": "af6b1bd620f81bfaea81edf8227484588e1fcc2427d6b5020fa17454d7566c70",
+        "expected": "af6b1bd620f81bfaea81edf8227484588e1fcc2427d6b5020fa17454d7566c70",
+        "file": "/tmp/is11_independent_corpus/efficientnet_001.pdf",
+        "ok": true,
+        "source": "sampling_frame"
+      },
+      {
+        "actual": "ead90f6b62e6e57cd22cba195b12a2d73a5f75112a3328db73838b871aff9760",
+        "expected": "ead90f6b62e6e57cd22cba195b12a2d73a5f75112a3328db73838b871aff9760",
+        "file": "/tmp/is11_independent_corpus/med_001.pdf",
+        "ok": true,
+        "source": "sampling_frame"
+      },
+      {
+        "actual": "bcd625e89f95c39dc9143af4174978fcf2467eb9659d86f8da448d7d9366c332",
+        "expected": "bcd625e89f95c39dc9143af4174978fcf2467eb9659d86f8da448d7d9366c332",
+        "file": "/tmp/is11_independent_corpus/cs_001.pdf",
+        "ok": true,
+        "source": "sampling_frame"
+      }
+    ],
+    "expected_sources": {}
+  },
+  "parameter_grid": {
+    "DISTINCTNESS_FLOOR": 0.5,
+    "N": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "NUMERIC_RE_v1": "^[+-]?\\d[\\d.,]*\\s*%?$",
+    "R_max": [
+      2.0,
+      2.5,
+      3.0
+    ],
+    "alignment": "frozen left_alignment_group (P2 compute_pairwise, alignment_tolerance=2.0)"
+  },
+  "runs_summary": {
+    "A_all_15_corrected": false,
+    "B_all_zero": true,
+    "C_all_zero": false,
+    "N_values_fully_safe": [],
+    "gt_merge_geometry_only_also_clean": true,
+    "gt_merge_immunity_all_15": true,
+    "n_safe_N": 0,
+    "robust_ge_3_of_5": false,
+    "verdict": "REJECTED"
+  }
+}

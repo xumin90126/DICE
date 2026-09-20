@@ -1,0 +1,52 @@
+{
+  "spec_metadata": {
+    "spec_id": "CAP-UNSPSC-MATCH.validation_spec",
+    "artifact_type": "validation_specification",
+    "paradigm": "declarative contract check (Observation-only, aligned with L2.2 Validation Capability)",
+    "validation_output_nature": "PASS/FAIL observation — NOT an approval action, NOT a registration trigger",
+    "registration_authority": "Human-only (validation PASS is a necessary condition, NOT sufficient authorization)"
+  },
+
+  "dimensions": [
+    {
+      "dimension": "structure",
+      "label": "Structural validation",
+      "checks": [
+        "id conforms to CAP-XXX naming (CAP-<DOMAIN>-<ACTION>)",
+        "all required five-layer fields present (Identity / Strategy / Definition / Evidence / Evolution)",
+        "Definition layer contains all six fields (positive_boundary / negative_boundary / activation_rule / conflict_resolution / exclusion_rules / validation_criteria)",
+        "schema structures are well-formed"
+      ]
+    },
+    {
+      "dimension": "semantic",
+      "label": "Semantic validation",
+      "checks": [
+        "positive_boundary and negative_boundary are mutually consistent",
+        "activation_rule is self-consistent",
+        "conflict_resolution referenced rival (CAP-CATALOG-EXTRACT) actually exists",
+        "no dangling references"
+      ]
+    },
+    {
+      "dimension": "authority_leakage",
+      "label": "Authority leakage validation",
+      "checks": [
+        "contract contains NO decision / selection / routing / execution / governance / metrics field",
+        "NO priority / score / confidence / ranking / recommendation numeric fields",
+        "implementation_ids is empty",
+        "pattern_ids is empty"
+      ]
+    },
+    {
+      "dimension": "evidence",
+      "label": "Evidence validation",
+      "checks": [
+        "evidence references are traceable (empty list is legal at PROPOSED status)",
+        "cross_doc_success_rate ∈ [0, 1]",
+        "status is a legal initial value (PROPOSED)",
+        "maturity is auto-computed (LOW at registration time)"
+      ]
+    }
+  ]
+}

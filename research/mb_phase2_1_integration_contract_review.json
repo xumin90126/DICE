@@ -1,0 +1,239 @@
+{
+ "anchors_drift_verified": 0,
+ "architecture_principles_verified": [
+  "TLD not replaced",
+  "Geometry not modified",
+  "LSP holds no table semantic authority",
+  "IS-11 decision logic not rewritten",
+  "M-B adds one evidence producer only"
+ ],
+ "architecture_type": "Type B (New Research Object: LSP) with Type A path (pure consumer integration); NOT Type C (no observation request); Type D risk present in Phase 2 as written and intercepted by this review",
+ "atomic_observation_modified": false,
+ "canonical_case_count": 9,
+ "canonical_cases": [
+  "AMB-135 (FP, eff p5)",
+  "AMB-130 (eff p5)",
+  "AMB-313 (eff p8)",
+  "AMB-457 (cs p3)",
+  "AMB-462 (cs p3)",
+  "AMB-467 (cs p3)",
+  "AMB-483 (cs p3)",
+  "AMB-505 (cs p3)",
+  "AMB-514 (cs p3)"
+ ],
+ "caption_canary_status": {
+  "canaries": [
+   {
+    "baseline": "abstain",
+    "case": "AMB-414",
+    "doc_page": "med p20",
+    "flip_point": "IS-11 consumer decision (different_cell-context -> KEEP overrides base INSUFFICIENT_EVIDENCE)",
+    "frozen_facts": "'FIG. 9:'@85.04 lag=15 (PROSE margin group, lag_x=[85,87], y-ext=393pt) band=4; 'Left:'@143.46 lag=1; band members = [Left:@143.5, 'BIC values...'@178.6, Right:@439.1, Learning@482.0] - caption row presents FOUR pseudo-cell fragments at Level-2, indistinguishable from a table row by partition geometry alone",
+    "gt": "MERGE",
+    "id": "M-A-1"
+   },
+   {
+    "baseline": "abstain",
+    "case": "AMB-422",
+    "doc_page": "med p24",
+    "flip_point": "same",
+    "frozen_facts": "'FIG. 12:'@85.04 lag=6 (margin group, y-ext=612pt) band=1; 'Distribution of errors...'@139.12 lag=2 band=1 - same structural class",
+    "gt": "MERGE",
+    "id": "M-A-2"
+   }
+  ],
+  "designation": "MANDATORY SAFETY CANARIES (not ordinary negative controls)",
+  "failure_path": [
+   "caption label and continuation start at different x0 -> different LSPs trivially (signal is nearly content-free)",
+   "should NOT be interpreted as table cells because caption 'columns' are prose continuations without cross-band column stability - BUT this distinction is NOT obtainable at pure Level-2 partition level",
+   "adapter ON -> different_partition context likely produced",
+   "consumer contract maps to KEEP",
+   "flip abstain->KEEP vs GT=MERGE = WRONG"
+  ],
+  "flip_allowed": false,
+  "safety_rule": "any MERGE/ABSTAIN -> KEEP on either canary = M-B SAFETY FAILURE, not offsettable by aggregate accuracy"
+ },
+ "coexistence_contract": {
+  "authority_check": "no priority/score/winner/override/fallback-retry/correction permitted - direction correct but must be reviewed as part of the extension, not silently effective",
+  "classification": "NEW DECISION POLICY (Case B) - no existing multi-source contract in harness (single TLD producer)",
+  "conflict_contract": "CONFLICT_CONTRACT_UNRESOLVED - who detects (admission composition point) / who records (provenance log) / who decides (consumer falls back to frozen 9.3 base) must be explicitly authored in the same contract extension before replay",
+  "rule_as_designed": "agree->admit / single-source->admit / conflict->abstain"
+ },
+ "experiment_authorized": false,
+ "frozen_baseline": "INTACT",
+ "frozen_baseline_drift": 0,
+ "gt_modified": false,
+ "hypothesized_impact_only": [
+  "FP suppression",
+  "C-abstain reduction",
+  "slicing accuracy improvement",
+  "table recovery - ALL remain HYPOTHESES; no result may be pre-claimed"
+ ],
+ "implementation_authorized": false,
+ "is11_decision_modified": false,
+ "layer_audit": [
+  {
+   "allowed": "bbox/x/y/gap/alignment",
+   "forbidden": "table/cell semantics",
+   "layer": "Geometry (frozen)",
+   "verdict": "PASS"
+  },
+  {
+   "allowed": "measured relation",
+   "forbidden": "decision",
+   "layer": "Atomic Observation",
+   "verdict": "PASS"
+  },
+  {
+   "allowed": "partition membership/scope/relation",
+   "forbidden": "row-number/table/cell labels",
+   "layer": "LSP",
+   "verdict": "PASS"
+  },
+  {
+   "allowed": "structural relation (same_region/different_partition)",
+   "forbidden": "confidence/score/is_in_table/different_cell",
+   "layer": "Structural Context Evidence",
+   "verdict": "FAIL (1 leak) -> corrected design PASS"
+  },
+  {
+   "allowed": "existing interpretation",
+   "forbidden": "new authority",
+   "layer": "IS-11",
+   "verdict": "PASS (decision fn untouched)"
+  }
+ ],
+ "layer_registry": "7/7",
+ "lsp_forbidden_outputs": [
+  "is_table",
+  "is_cell",
+  "is_row",
+  "is_column",
+  "is_header",
+  "is_row_number",
+  "table_id",
+  "cell_id",
+  "semantic_role",
+  "is_numeric_column",
+  "is_caption",
+  "is_code"
+ ],
+ "lsp_formal_definition": "LSP = a structural partition: set of atoms within a local spatial scope sharing one frozen structural relation (alignment-axis membership); carries membership, spatial scope (bbox union), relation identity, continuity/adjacency descriptors, provenance; pure function of frozen store",
+ "lsp_meaning_boundary": "ends at membership + scope + relation identity + local continuity/adjacency; no role interpretation",
+ "lsp_object_class": "Structural Object (not Geometry Object, not Semantic Object)",
+ "lsp_semantic_status": "STRUCTURAL_OBJECT_NON_SEMANTIC",
+ "lsp_to_cell_mapping": {
+  "answer": "NO by default",
+  "code_audit": {
+   "consumer": "experimental_c_decision (L261-279): different_cell->KEEP, same_cell->MERGE, else frozen 9.3 base - UNCHANGED",
+   "key_finding": "TLD different_cell PRESUPPOSES a detected table; LSP difference within a co-structured region has NO table-determination premise",
+   "tld_different_cell_derivation": "tmp/is11_machine_evaluation.py L140-258: is_in_table = candidate center inside TLD-detected table bbox; cell = (row_idx,col_idx) from vline rows x columns WITHIN detected table (proximity fallback dist<30); different_cell = both cells exist and differ, OR exactly one candidate in table (L241-245 loose disjunct, pre-existing)"
+  },
+  "minimal_correction": "adapter emits StructuralContextEvidence ONLY; partition->cell-context mapping must become an explicitly authored + separately authorized IS-11 CONTRACT EXTENSION (NEW DECISION POLICY) - the single semantic gate of the integration",
+  "phase2_leak": "Phase 2 walkthrough emitted is11_obs-shaped {is_in_table:T, different_cell:T} from the adapter = producer-side semantic upgrade (1 leak)",
+  "question": "does LSP_A != LSP_B imply different_cell?",
+  "verdict": "SEMANTIC_MAPPING_GAP = TRUE"
+ },
+ "minimal_required_corrections": [
+  {
+   "id": "C1",
+   "must": true,
+   "what": "remove is11_obs-shaped emission from Design B; adapter emits StructuralContextEvidence only; 'Structural Context -> IS-11 observation' mapping (different_partition -> cell-context equivalent) authored as explicit IS-11 CONTRACT EXTENSION + NEW DECISION POLICY, separately reviewed and authorized before replay"
+  },
+  {
+   "id": "C2",
+   "must": true,
+   "what": "author CONFLICT_CONTRACT (detector = admission composition point; recorder = provenance log; decider = consumer base-protocol fallback) in the same extension; resolves CONFLICT_CONTRACT_UNRESOLVED"
+  },
+  {
+   "id": "C3",
+   "must": true,
+   "what": "explicit hierarchy: Geometry -> LSP -> Regional Structural Context -> Cell Context -> IS-11, one named mapping contract per arrow; delete direct LSP->different_cell edge"
+  },
+  {
+   "id": "C4",
+   "must": true,
+   "what": "caption canaries formally upgraded to MANDATORY SAFETY CANARIES (flip = SAFETY FAILURE, non-offsettable)"
+  },
+  {
+   "id": "C5",
+   "record": true,
+   "what": "AMB-313 lag=0 derivation-failure possibility + weak-membership honest expectations (130/462)"
+  },
+  {
+   "id": "C6",
+   "record": true,
+   "what": "red-team guardrails written into contract extension clauses"
+  }
+ ],
+ "next_step": "REDESIGN (C1-C3 minimal contract corrections, design-only) -> then ISOLATED REPLAY AUTHORIZATION REVIEW (M-B Phase 3)",
+ "off_path_isolation": {
+  "OFF": "adapter not invoked -> is11_obs single-source (TLD) -> no new fields/ordering/serialization/GT/TLD/decision changes -> byte-identical",
+  "ON": "only adds Frozen Geometry -> LSP -> Structural Context Evidence (read-only derivation); frozen artifacts untouched",
+  "implementation_review_required": "flag gate must wrap the ENTIRE added path (no partial emission when OFF)",
+  "rollback": "FLAG_OFF",
+  "verdict": "PASS (design-level)"
+ },
+ "perception_modified": false,
+ "ph02_revival_check": "PASS - LSP is a single-relation partition index (no thresholds, no coherence scoring, no decision); PH-02 object was the WHOLE group as decision substrate + multi-predicate conjunction; different research-object layer",
+ "phase": "M-B-2.1",
+ "production": false,
+ "q1_reconciliation": {
+  "answer": 9,
+  "excluded": [
+   {
+    "case": "AMB-262 (eff p7)",
+    "reason": "same_y_band=False (BELOW, v_gap=17.61) - not a same-row pair; cell-context route inapplicable (vertical-neighbor mechanism)"
+   },
+   {
+    "case": "AMB-519 (cs p3)",
+    "reason": "prose pair, band=1, margin group lag=24 - CC-04 column-blind mechanism, not cell-context"
+   }
+  ],
+  "method": "per-case reconciliation from machine-eval per-case records + M-B expressability audit atom-level facts + Phase 2 list; NO count-backwards",
+  "question": "M-B DIRECT = 8 or 9?",
+  "weak_membership_notes": [
+   "AMB-313 ('Test Size' lag=0 -> LSP derivation may fail; recovery uncertain)",
+   "AMB-130 (lag 3/2)",
+   "AMB-462 (lag 1/8)"
+  ]
+ },
+ "q2_mechanism_boundary": {
+  "caveats": "AMB-313 partition derivation may fail (lag=0); weak-membership cases 130/462 may yield insufficient context - honest per-case attribution required (H2)",
+  "no_new_measurement_needed": true,
+  "per_case_gap": "9/9 = C (Consumer/Integration Gap): atom-level facts verified present (same_band + partition structures on both sides), LSP constructible, IS-11 does not consume"
+ },
+ "reconciliation_status": "PASS",
+ "red_team_guardrails": [
+  "LSP defined ONLY by contract-enumerated frozen single relations; never by 'table-likeness' (LSP = locally coherent spatial partition, never table-like cluster)",
+  "any new relation/predicate = CONTRACT REVISION through governance gate, not adapter code change",
+  "forbidden-fields enforced at schema level (presence = REJECT)",
+  "mapping contract = the ONLY semantic gate; any second semantic entry point = BLOCK",
+  "patch-accumulation entry point EXISTS (M6/M7 accretion) - guardrails are mandatory contract clauses"
+ ],
+ "replay_authorization_preconditions": {
+  "canonical_cases_verified": true,
+  "caption_canaries_protected": "DESIGN-YES (C4 formalization)",
+  "frozen_drift": 0,
+  "lsp_semantic_boundary": "PASS (after C1)",
+  "lsp_to_is11_mapping": "PENDING (contract extension C1 must be authored + authorized)",
+  "off_isolation": "PASS",
+  "overall": "BLOCKED FOR REPLAY until C1-C3 authored and authorized; then M-B Phase 3 Isolated Replay minimal set = 1 FP + 2 caption canaries + highest-risk boundary negatives + selected correct controls (NOT full corpus)",
+  "semantic_leakage": "1 -> 0 after corrections; BLOCKED until",
+  "tld_coexistence": "PENDING (C2 conflict contract)"
+ },
+ "risks": [
+  "different_partition signal is nearly content-free (any same-band different-x0 pair qualifies) - large leakage surface without a table-region gate; this is why the mapping contract must be explicit",
+  "caption canary risk is fact-confirmed (not hypothetical)",
+  "TOC 3-zone co-structure (hardest confusable from audit)",
+  "AMB-313 lag=0 -> partition derivation may fail",
+  "coexistence/conflict contract if implemented as implicit rule -> authority regression",
+  "region parameters (member counts/tolerances) remain preregistration slots - no values fixed in review phase"
+ ],
+ "scope": "READ-ONLY integration contract review + semantic boundary review of tmp/mb_phase2_minimal_consumer_integration_design.md; code-level mapping audit of tmp/is11_machine_evaluation.py; fact-level canary trace",
+ "semantic_leakage_count": 1,
+ "semantic_leakage_detail": "Phase 2 as written: adapter emitting is11_obs-shaped fields (is_in_table/different_cell) = producer-side semantic upgrade. After minimal correction (StructuralContextEvidence-only adapter + explicit mapping contract) = 0. Replay BLOCKED until corrected.",
+ "status": "CONDITIONAL_PASS",
+ "stop": true,
+ "tld_modified": false
+}

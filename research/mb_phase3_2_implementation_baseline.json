@@ -1,0 +1,64 @@
+{
+ "frozen_anchors": {
+  "p1_extract": {
+   "path": "perception/sandbox/observations/atomic_text.py",
+   "expected_sha": "74d23ec784d65782",
+   "actual_sha": "74d23ec784d65782",
+   "drift": false
+  },
+  "p2_engine": {
+   "path": "perception/sandbox/geometry/geometry_engine.py",
+   "expected_sha": "388e7939d334458e",
+   "actual_sha": "388e7939d334458e",
+   "drift": false
+  },
+  "p2_config": {
+   "path": "perception/sandbox/geometry/geometry_config.py",
+   "expected_sha": "7ef3629e5a9b819c",
+   "actual_sha": "7ef3629e5a9b819c",
+   "drift": false
+  },
+  "p2_shape": {
+   "path": "perception/sandbox/geometry/geometry_observation.py",
+   "expected_sha": "7731377cb8468c91",
+   "actual_sha": "7731377cb8468c91",
+   "drift": false
+  },
+  "p4_span_config": {
+   "path": "perception/sandbox/span/span_config.py",
+   "expected_sha": "55b9a23850398acc",
+   "actual_sha": "55b9a23850398acc",
+   "drift": false
+  },
+  "p6_region_engine": {
+   "path": "perception/sandbox/region/region_engine.py",
+   "expected_sha": "57214c742503779f",
+   "actual_sha": "57214c742503779f",
+   "drift": false
+  },
+  "table_line_detector": {
+   "path": "chunker/table_line_detector.py",
+   "expected_sha": "022f5c21e872ad9e",
+   "actual_sha": "022f5c21e872ad9e",
+   "drift": false
+  }
+ },
+ "anchors_drift": 0,
+ "harness_sha": "b41494020b491b92c76b39cd435f2cd97845202c0b176df8c5ca69ba5008cab7",
+ "tld_sha": "022f5c21e872ad9e737ddadb10a3f9eb8ff0ddd31333dacd6f30610cfbd8d79b",
+ "gt_sha": "7349963d0d23b5efc8c092ad45b8f301c39ca13a9c3bef8952aff809d0286959",
+ "sampling_sha": "97980845b5bbd277b0b733aeb9891b42b7cd5317d33b4ebdfb33735373705b4d",
+ "registered_detectors": {
+  "p6_region_engine": {
+   "source_sha": "57214c742503779fce8c6843cbe8d4964a62428541a55b5eb95d7f408e10e9eb",
+   "status": "registered",
+   "invoked_by_layer": false
+  },
+  "table_line_detector": {
+   "source_sha": "022f5c21e872ad9e737ddadb10a3f9eb8ff0ddd31333dacd6f30610cfbd8d79b",
+   "status": "registered",
+   "invoked_by_layer": false
+  }
+ },
+ "frozen_baseline_intact": true
+}

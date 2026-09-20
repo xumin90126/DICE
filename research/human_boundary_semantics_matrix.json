@@ -1,0 +1,162 @@
+{
+  "document": "Human Boundary Semantics Matrix",
+  "type": "READ-ONLY design matrix",
+  "version": "1.0",
+  "frozen_baseline": "INTACT",
+  "round1_evidence": {
+    "sample": "20/43",
+    "completion": "20/20",
+    "raw_gt_accuracy": "19/20 = 95.0%",
+    "gt_disputed": "AMB-026",
+    "adversarial_resolution": "PASS",
+    "human_cost": "INVALID",
+    "information_gain": "SUPPORTED (limited to tested cases)",
+    "reviewer": "single (reviewer_1)",
+    "inter_reviewer_agreement": "NOT MEASURED"
+  },
+  "three_boundary_layers": {
+    "layer_1_geometric_boundary": {
+      "definition": "两个 geometric span 是否在物理位置上属于同一连续文本区域",
+      "input": ["bbox", "gap", "dy", "font_family", "font_size", "style_signature", "line_obs_count"],
+      "output": "MERGE / SEPARATE",
+      "authority": "P4 (machine, frozen v2)",
+      "auto_decide": true,
+      "human_role": "none (DETERMINISTIC range)",
+      "p4_relation": "P4 is sole authority",
+      "p71_relation": "P7.1 receives P4 spans as input",
+      "p72_relation": "P7.2 does not process this layer"
+    },
+    "layer_2_semantic_text_unit_boundary": {
+      "definition": "两个 span 是否属于同一个有意义的文本单元（句子、短语、标题文本）",
+      "input": ["text_content", "syntactic_structure", "punctuation", "semantic_continuity", "layer_1_geometry"],
+      "output": "SAME_TEXT_UNIT / DIFFERENT_TEXT_UNIT / CANNOT_DETERMINE",
+      "authority": "Human (via P7.2 Validation)",
+      "auto_decide": false,
+      "human_role": "yes (Human reads text, judges semantic continuity)",
+      "p4_relation": "P4 does not participate (geometry-only contract forbids text analysis)",
+      "p71_relation": "P7.1 does not judge inter-span semantic relations",
+      "p72_relation": "P7.2 is the execution channel (ValidationTask → Record → Evidence)",
+      "amb_026_position": "AMB-026 belongs here — sentence boundary requires text reading"
+    },
+    "layer_3_document_structure_boundary": {
+      "definition": "span 属于什么文档结构角色（heading/body/table/formula/caption/column/procedure）",
+      "input": ["page_layout", "visual_pattern", "region_type_p6", "reading_order_p5", "layer_1_geometry", "layer_2_semantics"],
+      "output": "HEADING / BODY / TABLE_CELL / FORMULA / CAPTION / FOOTER / UNKNOWN",
+      "authority": "P7.1 (StructureHypothesis, machine PROPOSE) + Human (Validation)",
+      "auto_decide": "partial — P7.1 can PROPOSE, Human validates",
+      "human_role": "yes (validates P7.1 hypothesis)",
+      "p4_relation": "P4 provides span as input",
+      "p71_relation": "P7.1 is primary machine authority",
+      "p72_relation": "P7.2 validates P7.1 hypothesis",
+      "formula_wide_position": "6 FORMULA_FRAGMENT_WIDE cases span Layer 2+3"
+    }
+  },
+  "human_decision_semantics": {
+    "MERGE": {
+      "meaning": "Human judges two spans belong to same text unit",
+      "evidence_output": "ValidatedEvidence: A and B are SAME_TEXT_UNIT",
+      "impact_on_p4": "none (P4 span not modified)",
+      "boundary_layer": "Layer 2"
+    },
+    "KEEP_SEPARATE": {
+      "meaning": "Human judges two spans do NOT belong to same text unit",
+      "evidence_output": "none (recorded as REJECT)",
+      "impact_on_p4": "none (P4 already KEEP_SEPARATE)",
+      "boundary_layer": "Layer 2"
+    },
+    "CANNOT_DETERMINE": {
+      "meaning": "Human cannot determine boundary with available evidence",
+      "evidence_output": "none (recorded as NEED_REVIEW)",
+      "impact_on_p4": "none (P4 default maintained)",
+      "boundary_layer": "Layer 2",
+      "note": "NOT system failure — represents genuine cognitive uncertainty"
+    }
+  },
+  "round1_boundary_type_classification": {
+    "geometry_approximable": {
+      "case_count": 13,
+      "modes": ["TOC_SECTION_NUMBER_TITLE", "APPENDIX_LETTER_TITLE"],
+      "human_info_sources": ["NUMBER_PATTERN", "READABLE_TEXT_B", "PAGE_CONTEXT"],
+      "human_decisions": "all MERGE",
+      "machine_resolvable_potential": "yes (if geometric guard found, but needs Gate verification)",
+      "primary_layer": "Layer 2 (with Layer 1 geometry input)"
+    },
+    "visual_context": {
+      "case_count": 6,
+      "modes": ["FORMULA_FRAGMENT_WIDE"],
+      "human_info_sources": ["SYMBOL_PATTERN", "FORMULA_PAGE_CONTEXT"],
+      "human_decisions": "all KEEP_SEPARATE",
+      "machine_resolvable_potential": "partial (line_obs>15 already DETERMINISTIC_BLOCK; line_obs<=15 needs visual context)",
+      "primary_layer": "Layer 3 (with Layer 2 symbol recognition)"
+    },
+    "pure_semantic": {
+      "case_count": 1,
+      "modes": ["BODY_TEXT_CONTINUATION"],
+      "human_info_sources": ["READABLE_TEXT_A", "READABLE_TEXT_B", "PUNCTUATION_BOUNDARY", "SENTENCE_START_B"],
+      "human_decisions": "KEEP_SEPARATE",
+      "machine_resolvable_potential": "no (requires syntactic analysis, P4 contract forbids)",
+      "primary_layer": "Layer 2 (pure semantic)",
+      "note": "AMB-026 — likely permanent Human-owned Boundary"
+    }
+  },
+  "boundary_shrinkage": {
+    "concept": "某些 ambiguity 类型从 Human 判断逐渐变为 machine 可确定性判断的过程",
+    "conditions": [
+      "G1: >= 20 independent cases per mode",
+      "G2: cross-document generalization (>= 3 docs)",
+      "G3: machine replication FP rate < 5%",
+      "G4: stable geometric feature relationship",
+      "G5: adversarial robustness",
+      "G6: inter-reviewer agreement >= 80%",
+      "G7: no known semantic counterexample",
+      "G8: regression pass",
+      "G9: authority/provenance preserved"
+    ],
+    "current_gate_status": {
+      "G1": "NOT MET (max 12 cases per mode)",
+      "G2": "PARTIAL (TOC_NUM_TITLE across 3 docs; others < 3)",
+      "G3": "NOT TESTED (P4 v3 not implemented)",
+      "G4": "PARTIAL (P4 v3 has candidate features, irreducible FP exists)",
+      "G5": "MET (AMB-018, AMB-040 correct)",
+      "G6": "NOT MET (single reviewer)",
+      "G7": "NOT MET (AMB-026 is known counterexample)",
+      "G8": "NOT TESTED",
+      "G9": "MET (provenance complete)",
+      "overall": "NOT PASSED (2/9 gates) — no Machine Boundary Promotion allowed"
+    }
+  },
+  "human_owned_boundary_candidates": {
+    "body_text_continuation": {
+      "human_owned": "likely permanent",
+      "reason": "requires syntactic analysis (sentence boundary), P4 contract forbids text content analysis"
+    },
+    "formula_wide_low_density": {
+      "human_owned": "possible (line_obs <= 15)",
+      "reason": "needs page-level visual context, P4 geometry insufficient"
+    },
+    "toc_section_number_title": {
+      "human_owned": "no (potentially machine-resolvable)",
+      "reason": "geometric features + text pattern may combine (needs Gate verification)"
+    }
+  },
+  "human_workload_growth": {
+    "risk": "document volume → ambiguous cases → human workload → system becomes human-dependent",
+    "principle": "Human workload should NOT scale linearly with corpus size",
+    "strategies": {
+      "boundary_shrinkage": "verified ambiguity types move from Human to machine",
+      "document_type_capability": "same-type documents share AMBIGUOUS pattern → verify once",
+      "ambiguous_dedup": "same pattern reviewed only once",
+      "human_owned_isolation": "permanent Human-owned Boundary fixed, does not grow"
+    },
+    "workload_formula": "Human Workload(N) = sum(mode_i) x (new_document_types + unverified_ambiguity_count) → converges to constant"
+  },
+  "authorization": {
+    "implementation": "NOT AUTHORIZED",
+    "p7_3": "NOT AUTHORIZED",
+    "p4_v3": "NOT AUTHORIZED (suspended)",
+    "timer_fix": "NOT AUTHORIZED (design only)",
+    "gt_modification": "NOT AUTHORIZED (GT_DISPUTED preserved)",
+    "sample_expansion": "NOT AUTHORIZED",
+    "frozen_baseline": "INTACT"
+  }
+}

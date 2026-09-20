@@ -1,0 +1,1432 @@
+{
+  "schema_version": "L5.7_v1",
+  "contract_version": "L5.4_v1",
+  "source": "frozen L5.5 output (mb_phase3_2_isolated_replay_results.json)",
+  "judgment_options": [
+    "KEEP_SEPARATE",
+    "MERGE",
+    "UNKNOWN"
+  ],
+  "latin_square_orders": [
+    [
+      "A",
+      "B",
+      "C"
+    ],
+    [
+      "B",
+      "C",
+      "A"
+    ],
+    [
+      "C",
+      "A",
+      "B"
+    ]
+  ],
+  "total_cases": 21,
+  "total_groups": 3,
+  "workflows": {
+    "A": {
+      "description": "Instance Validation: per-instance judgment, no abstraction",
+      "item_count": 21,
+      "items": [
+        {
+          "item_id": "A|IS11-AMB-005",
+          "workflow": "A",
+          "case_id": "IS11-AMB-005",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "region_not_formed",
+            "region_forms": false,
+            "pair_band_co_density": 0,
+            "pair_band": 67,
+            "pair_y": 539.09,
+            "lsp_a": "lsp|p1|x308.9",
+            "lsp_b": null,
+            "n_local_lsps": 1,
+            "different_local_partition": null,
+            "same_structural_region": null,
+            "interpretation_status": "none"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-024",
+          "workflow": "A",
+          "case_id": "IS11-AMB-024",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "partition_unresolvable",
+            "region_forms": true,
+            "pair_band_co_density": 9,
+            "pair_band": 16,
+            "pair_y": 129.93,
+            "lsp_a": "lsp|p6|x170.2",
+            "lsp_b": null,
+            "n_local_lsps": 56,
+            "different_local_partition": null,
+            "same_structural_region": null,
+            "interpretation_status": "none"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-034",
+          "workflow": "A",
+          "case_id": "IS11-AMB-034",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "admitted",
+            "region_forms": true,
+            "pair_band_co_density": 18,
+            "pair_band": 39,
+            "pair_y": 310.4,
+            "lsp_a": "lsp|p6|x199.5",
+            "lsp_b": "lsp|p6|x246.9",
+            "n_local_lsps": 56,
+            "different_local_partition": true,
+            "same_structural_region": true,
+            "interpretation_status": "candidate"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-074",
+          "workflow": "A",
+          "case_id": "IS11-AMB-074",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "partition_unresolvable",
+            "region_forms": true,
+            "pair_band_co_density": 7,
+            "pair_band": 40,
+            "pair_y": 317.98,
+            "lsp_a": null,
+            "lsp_b": null,
+            "n_local_lsps": 29,
+            "different_local_partition": null,
+            "same_structural_region": null,
+            "interpretation_status": "none"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-130",
+          "workflow": "A",
+          "case_id": "IS11-AMB-130",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "admitted",
+            "region_forms": true,
+            "pair_band_co_density": 3,
+            "pair_band": 14,
+            "pair_y": 112.09,
+            "lsp_a": "lsp|p5|x428.1",
+            "lsp_b": "lsp|p5|x469.8",
+            "n_local_lsps": 44,
+            "different_local_partition": true,
+            "same_structural_region": true,
+            "interpretation_status": "candidate"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-135",
+          "workflow": "A",
+          "case_id": "IS11-AMB-135",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "admitted",
+            "region_forms": true,
+            "pair_band_co_density": 30,
+            "pair_band": 20,
+            "pair_y": 161.95,
+            "lsp_a": "lsp|p5|x319.9",
+            "lsp_b": "lsp|p5|x354.1",
+            "n_local_lsps": 44,
+            "different_local_partition": true,
+            "same_structural_region": true,
+            "interpretation_status": "candidate"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-262",
+          "workflow": "A",
+          "case_id": "IS11-AMB-262",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "admitted",
+            "region_forms": true,
+            "pair_band_co_density": 41,
+            "pair_band": 18,
+            "pair_y": 147.45,
+            "lsp_a": "lsp|p7|x187.4",
+            "lsp_b": "lsp|p7|x213.1",
+            "n_local_lsps": 57,
+            "different_local_partition": true,
+            "same_structural_region": true,
+            "interpretation_status": "candidate"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-313",
+          "workflow": "A",
+          "case_id": "IS11-AMB-313",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "region_not_formed",
+            "region_forms": false,
+            "pair_band_co_density": 0,
+            "pair_band": 34,
+            "pair_y": 275.31,
+            "lsp_a": null,
+            "lsp_b": null,
+            "n_local_lsps": 31,
+            "different_local_partition": null,
+            "same_structural_region": null,
+            "interpretation_status": "none"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-346",
+          "workflow": "A",
+          "case_id": "IS11-AMB-346",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "admitted",
+            "region_forms": true,
+            "pair_band_co_density": 26,
+            "pair_band": 61,
+            "pair_y": 487.12,
+            "lsp_a": "lsp|p9|x240.9",
+            "lsp_b": "lsp|p9|x266.5",
+            "n_local_lsps": 34,
+            "different_local_partition": true,
+            "same_structural_region": true,
+            "interpretation_status": "candidate"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-350",
+          "workflow": "A",
+          "case_id": "IS11-AMB-350",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "admitted",
+            "region_forms": true,
+            "pair_band_co_density": 26,
+            "pair_band": 62,
+            "pair_y": 495.54,
+            "lsp_a": "lsp|p9|x145.3",
+            "lsp_b": "lsp|p9|x169.6",
+            "n_local_lsps": 34,
+            "different_local_partition": true,
+            "same_structural_region": true,
+            "interpretation_status": "candidate"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-414",
+          "workflow": "A",
+          "case_id": "IS11-AMB-414",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "region_not_formed",
+            "region_forms": false,
+            "pair_band_co_density": 0,
+            "pair_band": 43,
+            "pair_y": 346.48,
+            "lsp_a": "lsp|p20|x85.0",
+            "lsp_b": null,
+            "n_local_lsps": 9,
+            "different_local_partition": null,
+            "same_structural_region": null,
+            "interpretation_status": "none"
+          },
+          "_gt_hidden": "MERGE"
+        },
+        {
+          "item_id": "A|IS11-AMB-422",
+          "workflow": "A",
+          "case_id": "IS11-AMB-422",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "region_not_formed",
+            "region_forms": false,
+            "pair_band_co_density": 0,
+            "pair_band": 72,
+            "pair_y": 577.74,
+            "lsp_a": "lsp|p24|x85.0",
+            "lsp_b": null,
+            "n_local_lsps": 1,
+            "different_local_partition": null,
+            "same_structural_region": null,
+            "interpretation_status": "none"
+          },
+          "_gt_hidden": "MERGE"
+        },
+        {
+          "item_id": "A|IS11-AMB-457",
+          "workflow": "A",
+          "case_id": "IS11-AMB-457",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "admitted",
+            "region_forms": true,
+            "pair_band_co_density": 6,
+            "pair_band": 28,
+            "pair_y": 221.09,
+            "lsp_a": "lsp|p3|x130.0",
+            "lsp_b": "lsp|p3|x201.5",
+            "n_local_lsps": 24,
+            "different_local_partition": true,
+            "same_structural_region": true,
+            "interpretation_status": "candidate"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-462",
+          "workflow": "A",
+          "case_id": "IS11-AMB-462",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "partition_unresolvable",
+            "region_forms": true,
+            "pair_band_co_density": 6,
+            "pair_band": 28,
+            "pair_y": 221.09,
+            "lsp_a": null,
+            "lsp_b": "lsp|p3|x462.3",
+            "n_local_lsps": 24,
+            "different_local_partition": null,
+            "same_structural_region": null,
+            "interpretation_status": "none"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-467",
+          "workflow": "A",
+          "case_id": "IS11-AMB-467",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "admitted",
+            "region_forms": true,
+            "pair_band_co_density": 14,
+            "pair_band": 30,
+            "pair_y": 237.3,
+            "lsp_a": "lsp|p3|x310.8",
+            "lsp_b": "lsp|p3|x340.2",
+            "n_local_lsps": 24,
+            "different_local_partition": true,
+            "same_structural_region": true,
+            "interpretation_status": "candidate"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-483",
+          "workflow": "A",
+          "case_id": "IS11-AMB-483",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "admitted",
+            "region_forms": true,
+            "pair_band_co_density": 17,
+            "pair_band": 33,
+            "pair_y": 264.32,
+            "lsp_a": "lsp|p3|x276.4",
+            "lsp_b": "lsp|p3|x310.8",
+            "n_local_lsps": 24,
+            "different_local_partition": true,
+            "same_structural_region": true,
+            "interpretation_status": "candidate"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-505",
+          "workflow": "A",
+          "case_id": "IS11-AMB-505",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "admitted",
+            "region_forms": true,
+            "pair_band_co_density": 14,
+            "pair_band": 38,
+            "pair_y": 302.16,
+            "lsp_a": "lsp|p3|x237.9",
+            "lsp_b": "lsp|p3|x276.4",
+            "n_local_lsps": 24,
+            "different_local_partition": true,
+            "same_structural_region": true,
+            "interpretation_status": "candidate"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-514",
+          "workflow": "A",
+          "case_id": "IS11-AMB-514",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "admitted",
+            "region_forms": true,
+            "pair_band_co_density": 17,
+            "pair_band": 39,
+            "pair_y": 313.07,
+            "lsp_a": "lsp|p3|x310.8",
+            "lsp_b": "lsp|p3|x340.2",
+            "n_local_lsps": 24,
+            "different_local_partition": true,
+            "same_structural_region": true,
+            "interpretation_status": "candidate"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-519",
+          "workflow": "A",
+          "case_id": "IS11-AMB-519",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "region_not_formed",
+            "region_forms": false,
+            "pair_band_co_density": 0,
+            "pair_band": 53,
+            "pair_y": 425.54,
+            "lsp_a": "lsp|p3|x107.5",
+            "lsp_b": "lsp|p3|x279.3",
+            "n_local_lsps": 24,
+            "different_local_partition": null,
+            "same_structural_region": null,
+            "interpretation_status": "none"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-522",
+          "workflow": "A",
+          "case_id": "IS11-AMB-522",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "partition_unresolvable",
+            "region_forms": true,
+            "pair_band_co_density": 3,
+            "pair_band": 34,
+            "pair_y": 268.13,
+            "lsp_a": "lsp|p4|x234.7",
+            "lsp_b": null,
+            "n_local_lsps": 6,
+            "different_local_partition": null,
+            "same_structural_region": null,
+            "interpretation_status": "none"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        },
+        {
+          "item_id": "A|IS11-AMB-530",
+          "workflow": "A",
+          "case_id": "IS11-AMB-530",
+          "task": "Judge whether the two atoms belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "evidence_presented": {
+            "sce_status": "region_not_formed",
+            "region_forms": false,
+            "pair_band_co_density": 0,
+            "pair_band": 35,
+            "pair_y": 278.58,
+            "lsp_a": null,
+            "lsp_b": "lsp|p5|x330.1",
+            "n_local_lsps": 11,
+            "different_local_partition": null,
+            "same_structural_region": null,
+            "interpretation_status": "none"
+          },
+          "_gt_hidden": "KEEP_SEPARATE"
+        }
+      ]
+    },
+    "B": {
+      "description": "Naive Pattern Validation: per-group, all members shown, Human does abstraction",
+      "item_count": 3,
+      "items": [
+        {
+          "item_id": "B|grp|16bfcb76b820",
+          "workflow": "B",
+          "group_id": "grp|16bfcb76b820",
+          "task": "Examine these instances, find their commonality, and judge whether they belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "grouping_hint": "These instances have been pre-grouped by structural signature. You must determine the semantic meaning yourself.",
+          "member_count": 6,
+          "evidence_presented": [
+            {
+              "case_id": "IS11-AMB-005",
+              "sce_status": "region_not_formed",
+              "region_forms": false,
+              "pair_band_co_density": 0,
+              "pair_band": 67,
+              "pair_y": 539.09,
+              "lsp_a": "lsp|p1|x308.9",
+              "lsp_b": null,
+              "n_local_lsps": 1,
+              "different_local_partition": null,
+              "same_structural_region": null,
+              "interpretation_status": "none",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-313",
+              "sce_status": "region_not_formed",
+              "region_forms": false,
+              "pair_band_co_density": 0,
+              "pair_band": 34,
+              "pair_y": 275.31,
+              "lsp_a": null,
+              "lsp_b": null,
+              "n_local_lsps": 31,
+              "different_local_partition": null,
+              "same_structural_region": null,
+              "interpretation_status": "none",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-414",
+              "sce_status": "region_not_formed",
+              "region_forms": false,
+              "pair_band_co_density": 0,
+              "pair_band": 43,
+              "pair_y": 346.48,
+              "lsp_a": "lsp|p20|x85.0",
+              "lsp_b": null,
+              "n_local_lsps": 9,
+              "different_local_partition": null,
+              "same_structural_region": null,
+              "interpretation_status": "none",
+              "_gt_hidden": "MERGE"
+            },
+            {
+              "case_id": "IS11-AMB-422",
+              "sce_status": "region_not_formed",
+              "region_forms": false,
+              "pair_band_co_density": 0,
+              "pair_band": 72,
+              "pair_y": 577.74,
+              "lsp_a": "lsp|p24|x85.0",
+              "lsp_b": null,
+              "n_local_lsps": 1,
+              "different_local_partition": null,
+              "same_structural_region": null,
+              "interpretation_status": "none",
+              "_gt_hidden": "MERGE"
+            },
+            {
+              "case_id": "IS11-AMB-519",
+              "sce_status": "region_not_formed",
+              "region_forms": false,
+              "pair_band_co_density": 0,
+              "pair_band": 53,
+              "pair_y": 425.54,
+              "lsp_a": "lsp|p3|x107.5",
+              "lsp_b": "lsp|p3|x279.3",
+              "n_local_lsps": 24,
+              "different_local_partition": null,
+              "same_structural_region": null,
+              "interpretation_status": "none",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-530",
+              "sce_status": "region_not_formed",
+              "region_forms": false,
+              "pair_band_co_density": 0,
+              "pair_band": 35,
+              "pair_y": 278.58,
+              "lsp_a": null,
+              "lsp_b": "lsp|p5|x330.1",
+              "n_local_lsps": 11,
+              "different_local_partition": null,
+              "same_structural_region": null,
+              "interpretation_status": "none",
+              "_gt_hidden": "KEEP_SEPARATE"
+            }
+          ]
+        },
+        {
+          "item_id": "B|grp|885e943771cd",
+          "workflow": "B",
+          "group_id": "grp|885e943771cd",
+          "task": "Examine these instances, find their commonality, and judge whether they belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "grouping_hint": "These instances have been pre-grouped by structural signature. You must determine the semantic meaning yourself.",
+          "member_count": 4,
+          "evidence_presented": [
+            {
+              "case_id": "IS11-AMB-024",
+              "sce_status": "partition_unresolvable",
+              "region_forms": true,
+              "pair_band_co_density": 9,
+              "pair_band": 16,
+              "pair_y": 129.93,
+              "lsp_a": "lsp|p6|x170.2",
+              "lsp_b": null,
+              "n_local_lsps": 56,
+              "different_local_partition": null,
+              "same_structural_region": null,
+              "interpretation_status": "none",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-074",
+              "sce_status": "partition_unresolvable",
+              "region_forms": true,
+              "pair_band_co_density": 7,
+              "pair_band": 40,
+              "pair_y": 317.98,
+              "lsp_a": null,
+              "lsp_b": null,
+              "n_local_lsps": 29,
+              "different_local_partition": null,
+              "same_structural_region": null,
+              "interpretation_status": "none",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-462",
+              "sce_status": "partition_unresolvable",
+              "region_forms": true,
+              "pair_band_co_density": 6,
+              "pair_band": 28,
+              "pair_y": 221.09,
+              "lsp_a": null,
+              "lsp_b": "lsp|p3|x462.3",
+              "n_local_lsps": 24,
+              "different_local_partition": null,
+              "same_structural_region": null,
+              "interpretation_status": "none",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-522",
+              "sce_status": "partition_unresolvable",
+              "region_forms": true,
+              "pair_band_co_density": 3,
+              "pair_band": 34,
+              "pair_y": 268.13,
+              "lsp_a": "lsp|p4|x234.7",
+              "lsp_b": null,
+              "n_local_lsps": 6,
+              "different_local_partition": null,
+              "same_structural_region": null,
+              "interpretation_status": "none",
+              "_gt_hidden": "KEEP_SEPARATE"
+            }
+          ]
+        },
+        {
+          "item_id": "B|grp|1ad8a7b55945",
+          "workflow": "B",
+          "group_id": "grp|1ad8a7b55945",
+          "task": "Examine these instances, find their commonality, and judge whether they belong to the same semantic unit.",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "grouping_hint": "These instances have been pre-grouped by structural signature. You must determine the semantic meaning yourself.",
+          "member_count": 11,
+          "evidence_presented": [
+            {
+              "case_id": "IS11-AMB-034",
+              "sce_status": "admitted",
+              "region_forms": true,
+              "pair_band_co_density": 18,
+              "pair_band": 39,
+              "pair_y": 310.4,
+              "lsp_a": "lsp|p6|x199.5",
+              "lsp_b": "lsp|p6|x246.9",
+              "n_local_lsps": 56,
+              "different_local_partition": true,
+              "same_structural_region": true,
+              "interpretation_status": "candidate",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-130",
+              "sce_status": "admitted",
+              "region_forms": true,
+              "pair_band_co_density": 3,
+              "pair_band": 14,
+              "pair_y": 112.09,
+              "lsp_a": "lsp|p5|x428.1",
+              "lsp_b": "lsp|p5|x469.8",
+              "n_local_lsps": 44,
+              "different_local_partition": true,
+              "same_structural_region": true,
+              "interpretation_status": "candidate",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-135",
+              "sce_status": "admitted",
+              "region_forms": true,
+              "pair_band_co_density": 30,
+              "pair_band": 20,
+              "pair_y": 161.95,
+              "lsp_a": "lsp|p5|x319.9",
+              "lsp_b": "lsp|p5|x354.1",
+              "n_local_lsps": 44,
+              "different_local_partition": true,
+              "same_structural_region": true,
+              "interpretation_status": "candidate",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-262",
+              "sce_status": "admitted",
+              "region_forms": true,
+              "pair_band_co_density": 41,
+              "pair_band": 18,
+              "pair_y": 147.45,
+              "lsp_a": "lsp|p7|x187.4",
+              "lsp_b": "lsp|p7|x213.1",
+              "n_local_lsps": 57,
+              "different_local_partition": true,
+              "same_structural_region": true,
+              "interpretation_status": "candidate",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-346",
+              "sce_status": "admitted",
+              "region_forms": true,
+              "pair_band_co_density": 26,
+              "pair_band": 61,
+              "pair_y": 487.12,
+              "lsp_a": "lsp|p9|x240.9",
+              "lsp_b": "lsp|p9|x266.5",
+              "n_local_lsps": 34,
+              "different_local_partition": true,
+              "same_structural_region": true,
+              "interpretation_status": "candidate",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-350",
+              "sce_status": "admitted",
+              "region_forms": true,
+              "pair_band_co_density": 26,
+              "pair_band": 62,
+              "pair_y": 495.54,
+              "lsp_a": "lsp|p9|x145.3",
+              "lsp_b": "lsp|p9|x169.6",
+              "n_local_lsps": 34,
+              "different_local_partition": true,
+              "same_structural_region": true,
+              "interpretation_status": "candidate",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-457",
+              "sce_status": "admitted",
+              "region_forms": true,
+              "pair_band_co_density": 6,
+              "pair_band": 28,
+              "pair_y": 221.09,
+              "lsp_a": "lsp|p3|x130.0",
+              "lsp_b": "lsp|p3|x201.5",
+              "n_local_lsps": 24,
+              "different_local_partition": true,
+              "same_structural_region": true,
+              "interpretation_status": "candidate",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-467",
+              "sce_status": "admitted",
+              "region_forms": true,
+              "pair_band_co_density": 14,
+              "pair_band": 30,
+              "pair_y": 237.3,
+              "lsp_a": "lsp|p3|x310.8",
+              "lsp_b": "lsp|p3|x340.2",
+              "n_local_lsps": 24,
+              "different_local_partition": true,
+              "same_structural_region": true,
+              "interpretation_status": "candidate",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-483",
+              "sce_status": "admitted",
+              "region_forms": true,
+              "pair_band_co_density": 17,
+              "pair_band": 33,
+              "pair_y": 264.32,
+              "lsp_a": "lsp|p3|x276.4",
+              "lsp_b": "lsp|p3|x310.8",
+              "n_local_lsps": 24,
+              "different_local_partition": true,
+              "same_structural_region": true,
+              "interpretation_status": "candidate",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-505",
+              "sce_status": "admitted",
+              "region_forms": true,
+              "pair_band_co_density": 14,
+              "pair_band": 38,
+              "pair_y": 302.16,
+              "lsp_a": "lsp|p3|x237.9",
+              "lsp_b": "lsp|p3|x276.4",
+              "n_local_lsps": 24,
+              "different_local_partition": true,
+              "same_structural_region": true,
+              "interpretation_status": "candidate",
+              "_gt_hidden": "KEEP_SEPARATE"
+            },
+            {
+              "case_id": "IS11-AMB-514",
+              "sce_status": "admitted",
+              "region_forms": true,
+              "pair_band_co_density": 17,
+              "pair_band": 39,
+              "pair_y": 313.07,
+              "lsp_a": "lsp|p3|x310.8",
+              "lsp_b": "lsp|p3|x340.2",
+              "n_local_lsps": 24,
+              "different_local_partition": true,
+              "same_structural_region": true,
+              "interpretation_status": "candidate",
+              "_gt_hidden": "KEEP_SEPARATE"
+            }
+          ]
+        }
+      ]
+    },
+    "C": {
+      "description": "Minimal Semantic Validation: per-claim, compressed, System did abstraction",
+      "item_count": 3,
+      "items": [
+        {
+          "item_id": "C|grp|16bfcb76b820",
+          "workflow": "C",
+          "group_id": "grp|16bfcb76b820",
+          "task": "Validate this Semantic Claim Candidate: is it SUPPORTED, UNSUPPORTED, or UNKNOWN?",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "default_exposure": {
+            "claim_text": "6 instances have region-not-formed structural context (density=0); EIC-1 produced no candidate",
+            "interpretation_status": "UNKNOWN",
+            "claim_type": "insufficient_evidence_report",
+            "summary": {
+              "member_count": 6,
+              "consistent_count": 0,
+              "unknown_count": 6,
+              "conflict_count": 0,
+              "coverage_count": 6,
+              "grouping_criteria": "structural_signature_from_frozen_P2_and_EIC1",
+              "candidate_interpretations": []
+            },
+            "note": "This is a CANDIDATE, not a conclusion. You may reject it."
+          },
+          "progressive_disclosure": {
+            "level_1_summary": "Already shown in default_exposure",
+            "level_2_member_refs": [
+              "IS11-AMB-005",
+              "IS11-AMB-313",
+              "IS11-AMB-414",
+              "IS11-AMB-422",
+              "IS11-AMB-519",
+              "IS11-AMB-530"
+            ],
+            "level_3_boundary_negative_unknown": {
+              "has_candidate": false,
+              "sce_status": "region_not_formed",
+              "non_positive": true
+            },
+            "level_4_full_provenance": [
+              {
+                "case_id": "IS11-AMB-005",
+                "sce_status": "region_not_formed",
+                "region_forms": false,
+                "pair_band_co_density": 0,
+                "pair_band": 67,
+                "pair_y": 539.09,
+                "lsp_a": "lsp|p1|x308.9",
+                "lsp_b": null,
+                "n_local_lsps": 1,
+                "different_local_partition": null,
+                "same_structural_region": null,
+                "interpretation_status": "none",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-313",
+                "sce_status": "region_not_formed",
+                "region_forms": false,
+                "pair_band_co_density": 0,
+                "pair_band": 34,
+                "pair_y": 275.31,
+                "lsp_a": null,
+                "lsp_b": null,
+                "n_local_lsps": 31,
+                "different_local_partition": null,
+                "same_structural_region": null,
+                "interpretation_status": "none",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-414",
+                "sce_status": "region_not_formed",
+                "region_forms": false,
+                "pair_band_co_density": 0,
+                "pair_band": 43,
+                "pair_y": 346.48,
+                "lsp_a": "lsp|p20|x85.0",
+                "lsp_b": null,
+                "n_local_lsps": 9,
+                "different_local_partition": null,
+                "same_structural_region": null,
+                "interpretation_status": "none",
+                "_gt_hidden": "MERGE"
+              },
+              {
+                "case_id": "IS11-AMB-422",
+                "sce_status": "region_not_formed",
+                "region_forms": false,
+                "pair_band_co_density": 0,
+                "pair_band": 72,
+                "pair_y": 577.74,
+                "lsp_a": "lsp|p24|x85.0",
+                "lsp_b": null,
+                "n_local_lsps": 1,
+                "different_local_partition": null,
+                "same_structural_region": null,
+                "interpretation_status": "none",
+                "_gt_hidden": "MERGE"
+              },
+              {
+                "case_id": "IS11-AMB-519",
+                "sce_status": "region_not_formed",
+                "region_forms": false,
+                "pair_band_co_density": 0,
+                "pair_band": 53,
+                "pair_y": 425.54,
+                "lsp_a": "lsp|p3|x107.5",
+                "lsp_b": "lsp|p3|x279.3",
+                "n_local_lsps": 24,
+                "different_local_partition": null,
+                "same_structural_region": null,
+                "interpretation_status": "none",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-530",
+                "sce_status": "region_not_formed",
+                "region_forms": false,
+                "pair_band_co_density": 0,
+                "pair_band": 35,
+                "pair_y": 278.58,
+                "lsp_a": null,
+                "lsp_b": "lsp|p5|x330.1",
+                "n_local_lsps": 11,
+                "different_local_partition": null,
+                "same_structural_region": null,
+                "interpretation_status": "none",
+                "_gt_hidden": "KEEP_SEPARATE"
+              }
+            ]
+          },
+          "expansion_tracking": {
+            "default_exposure_shown": true,
+            "level_2_requested": false,
+            "level_3_requested": false,
+            "level_4_requested": false,
+            "expansion_count": 0
+          }
+        },
+        {
+          "item_id": "C|grp|885e943771cd",
+          "workflow": "C",
+          "group_id": "grp|885e943771cd",
+          "task": "Validate this Semantic Claim Candidate: is it SUPPORTED, UNSUPPORTED, or UNKNOWN?",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "default_exposure": {
+            "claim_text": "4 instances have partition-unresolvable structural context; EIC-1 produced no candidate (INSUFFICIENT_EVIDENCE)",
+            "interpretation_status": "UNKNOWN",
+            "claim_type": "insufficient_evidence_report",
+            "summary": {
+              "member_count": 4,
+              "consistent_count": 0,
+              "unknown_count": 4,
+              "conflict_count": 0,
+              "coverage_count": 4,
+              "grouping_criteria": "structural_signature_from_frozen_P2_and_EIC1",
+              "candidate_interpretations": []
+            },
+            "note": "This is a CANDIDATE, not a conclusion. You may reject it."
+          },
+          "progressive_disclosure": {
+            "level_1_summary": "Already shown in default_exposure",
+            "level_2_member_refs": [
+              "IS11-AMB-024",
+              "IS11-AMB-074",
+              "IS11-AMB-462",
+              "IS11-AMB-522"
+            ],
+            "level_3_boundary_negative_unknown": {
+              "has_candidate": false,
+              "sce_status": "partition_unresolvable",
+              "non_positive": true
+            },
+            "level_4_full_provenance": [
+              {
+                "case_id": "IS11-AMB-024",
+                "sce_status": "partition_unresolvable",
+                "region_forms": true,
+                "pair_band_co_density": 9,
+                "pair_band": 16,
+                "pair_y": 129.93,
+                "lsp_a": "lsp|p6|x170.2",
+                "lsp_b": null,
+                "n_local_lsps": 56,
+                "different_local_partition": null,
+                "same_structural_region": null,
+                "interpretation_status": "none",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-074",
+                "sce_status": "partition_unresolvable",
+                "region_forms": true,
+                "pair_band_co_density": 7,
+                "pair_band": 40,
+                "pair_y": 317.98,
+                "lsp_a": null,
+                "lsp_b": null,
+                "n_local_lsps": 29,
+                "different_local_partition": null,
+                "same_structural_region": null,
+                "interpretation_status": "none",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-462",
+                "sce_status": "partition_unresolvable",
+                "region_forms": true,
+                "pair_band_co_density": 6,
+                "pair_band": 28,
+                "pair_y": 221.09,
+                "lsp_a": null,
+                "lsp_b": "lsp|p3|x462.3",
+                "n_local_lsps": 24,
+                "different_local_partition": null,
+                "same_structural_region": null,
+                "interpretation_status": "none",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-522",
+                "sce_status": "partition_unresolvable",
+                "region_forms": true,
+                "pair_band_co_density": 3,
+                "pair_band": 34,
+                "pair_y": 268.13,
+                "lsp_a": "lsp|p4|x234.7",
+                "lsp_b": null,
+                "n_local_lsps": 6,
+                "different_local_partition": null,
+                "same_structural_region": null,
+                "interpretation_status": "none",
+                "_gt_hidden": "KEEP_SEPARATE"
+              }
+            ]
+          },
+          "expansion_tracking": {
+            "default_exposure_shown": true,
+            "level_2_requested": false,
+            "level_3_requested": false,
+            "level_4_requested": false,
+            "expansion_count": 0
+          }
+        },
+        {
+          "item_id": "C|grp|1ad8a7b55945",
+          "workflow": "C",
+          "group_id": "grp|1ad8a7b55945",
+          "task": "Validate this Semantic Claim Candidate: is it SUPPORTED, UNSUPPORTED, or UNKNOWN?",
+          "judgment_options": [
+            "KEEP_SEPARATE",
+            "MERGE",
+            "UNKNOWN"
+          ],
+          "default_exposure": {
+            "claim_text": "11 instances with structural signature (sce_status=admitted, different_local_partition=True, same_structural_region=True, pairwise_same_y_band=True) have EIC-1 governed candidate interpretation: different_cell_candidate (interpretation_status=candidate)",
+            "interpretation_status": "candidate",
+            "claim_type": "aggregation_of_existing_governed_candidates",
+            "summary": {
+              "member_count": 11,
+              "consistent_count": 11,
+              "unknown_count": 0,
+              "conflict_count": 0,
+              "coverage_count": 11,
+              "grouping_criteria": "structural_signature_from_frozen_P2_and_EIC1",
+              "candidate_interpretations": [
+                "different_cell_candidate"
+              ]
+            },
+            "note": "This is a CANDIDATE, not a conclusion. You may reject it."
+          },
+          "progressive_disclosure": {
+            "level_1_summary": "Already shown in default_exposure",
+            "level_2_member_refs": [
+              "IS11-AMB-034",
+              "IS11-AMB-130",
+              "IS11-AMB-135",
+              "IS11-AMB-262",
+              "IS11-AMB-346",
+              "IS11-AMB-350",
+              "IS11-AMB-457",
+              "IS11-AMB-467",
+              "IS11-AMB-483",
+              "IS11-AMB-505",
+              "IS11-AMB-514"
+            ],
+            "level_3_boundary_negative_unknown": {
+              "has_candidate": true,
+              "sce_status": "admitted",
+              "non_positive": false
+            },
+            "level_4_full_provenance": [
+              {
+                "case_id": "IS11-AMB-034",
+                "sce_status": "admitted",
+                "region_forms": true,
+                "pair_band_co_density": 18,
+                "pair_band": 39,
+                "pair_y": 310.4,
+                "lsp_a": "lsp|p6|x199.5",
+                "lsp_b": "lsp|p6|x246.9",
+                "n_local_lsps": 56,
+                "different_local_partition": true,
+                "same_structural_region": true,
+                "interpretation_status": "candidate",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-130",
+                "sce_status": "admitted",
+                "region_forms": true,
+                "pair_band_co_density": 3,
+                "pair_band": 14,
+                "pair_y": 112.09,
+                "lsp_a": "lsp|p5|x428.1",
+                "lsp_b": "lsp|p5|x469.8",
+                "n_local_lsps": 44,
+                "different_local_partition": true,
+                "same_structural_region": true,
+                "interpretation_status": "candidate",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-135",
+                "sce_status": "admitted",
+                "region_forms": true,
+                "pair_band_co_density": 30,
+                "pair_band": 20,
+                "pair_y": 161.95,
+                "lsp_a": "lsp|p5|x319.9",
+                "lsp_b": "lsp|p5|x354.1",
+                "n_local_lsps": 44,
+                "different_local_partition": true,
+                "same_structural_region": true,
+                "interpretation_status": "candidate",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-262",
+                "sce_status": "admitted",
+                "region_forms": true,
+                "pair_band_co_density": 41,
+                "pair_band": 18,
+                "pair_y": 147.45,
+                "lsp_a": "lsp|p7|x187.4",
+                "lsp_b": "lsp|p7|x213.1",
+                "n_local_lsps": 57,
+                "different_local_partition": true,
+                "same_structural_region": true,
+                "interpretation_status": "candidate",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-346",
+                "sce_status": "admitted",
+                "region_forms": true,
+                "pair_band_co_density": 26,
+                "pair_band": 61,
+                "pair_y": 487.12,
+                "lsp_a": "lsp|p9|x240.9",
+                "lsp_b": "lsp|p9|x266.5",
+                "n_local_lsps": 34,
+                "different_local_partition": true,
+                "same_structural_region": true,
+                "interpretation_status": "candidate",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-350",
+                "sce_status": "admitted",
+                "region_forms": true,
+                "pair_band_co_density": 26,
+                "pair_band": 62,
+                "pair_y": 495.54,
+                "lsp_a": "lsp|p9|x145.3",
+                "lsp_b": "lsp|p9|x169.6",
+                "n_local_lsps": 34,
+                "different_local_partition": true,
+                "same_structural_region": true,
+                "interpretation_status": "candidate",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-457",
+                "sce_status": "admitted",
+                "region_forms": true,
+                "pair_band_co_density": 6,
+                "pair_band": 28,
+                "pair_y": 221.09,
+                "lsp_a": "lsp|p3|x130.0",
+                "lsp_b": "lsp|p3|x201.5",
+                "n_local_lsps": 24,
+                "different_local_partition": true,
+                "same_structural_region": true,
+                "interpretation_status": "candidate",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-467",
+                "sce_status": "admitted",
+                "region_forms": true,
+                "pair_band_co_density": 14,
+                "pair_band": 30,
+                "pair_y": 237.3,
+                "lsp_a": "lsp|p3|x310.8",
+                "lsp_b": "lsp|p3|x340.2",
+                "n_local_lsps": 24,
+                "different_local_partition": true,
+                "same_structural_region": true,
+                "interpretation_status": "candidate",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-483",
+                "sce_status": "admitted",
+                "region_forms": true,
+                "pair_band_co_density": 17,
+                "pair_band": 33,
+                "pair_y": 264.32,
+                "lsp_a": "lsp|p3|x276.4",
+                "lsp_b": "lsp|p3|x310.8",
+                "n_local_lsps": 24,
+                "different_local_partition": true,
+                "same_structural_region": true,
+                "interpretation_status": "candidate",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-505",
+                "sce_status": "admitted",
+                "region_forms": true,
+                "pair_band_co_density": 14,
+                "pair_band": 38,
+                "pair_y": 302.16,
+                "lsp_a": "lsp|p3|x237.9",
+                "lsp_b": "lsp|p3|x276.4",
+                "n_local_lsps": 24,
+                "different_local_partition": true,
+                "same_structural_region": true,
+                "interpretation_status": "candidate",
+                "_gt_hidden": "KEEP_SEPARATE"
+              },
+              {
+                "case_id": "IS11-AMB-514",
+                "sce_status": "admitted",
+                "region_forms": true,
+                "pair_band_co_density": 17,
+                "pair_band": 39,
+                "pair_y": 313.07,
+                "lsp_a": "lsp|p3|x310.8",
+                "lsp_b": "lsp|p3|x340.2",
+                "n_local_lsps": 24,
+                "different_local_partition": true,
+                "same_structural_region": true,
+                "interpretation_status": "candidate",
+                "_gt_hidden": "KEEP_SEPARATE"
+              }
+            ]
+          },
+          "expansion_tracking": {
+            "default_exposure_shown": true,
+            "level_2_requested": false,
+            "level_3_requested": false,
+            "level_4_requested": false,
+            "expansion_count": 0
+          }
+        }
+      ]
+    }
+  },
+  "fairness_check": {
+    "same_task": true,
+    "same_material": true,
+    "same_gt": true,
+    "same_judgment_options": true,
+    "C_claim_is_candidate": true,
+    "C_claim_no_answer_leak": true
+  },
+  "behavioral_tracking": {
+    "ABSTRACTION_BEHAVIOR": "cross-instance comparison / commonality / prototype",
+    "REVISIT_BEHAVIOR": "frequent return to previous evidence",
+    "EXPANSION_BEHAVIOR": "expand beyond default (C only)"
+  },
+  "note": "Materials generated from frozen L5.5. NO human judgments included. Requires real human participant.",
+  "validation": {
+    "same_judgment_options": true,
+    "C_no_answer_leak": true,
+    "C_leaks": [],
+    "C_claim_is_candidate": true,
+    "A_gt_set": "{'MERGE', 'KEEP_SEPARATE'}",
+    "B_shows_all_members": true,
+    "C_level4_recoverable": true,
+    "C_shows_negative": true,
+    "_all_pass": true
+  }
+}

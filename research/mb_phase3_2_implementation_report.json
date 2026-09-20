@@ -1,0 +1,1821 @@
+{
+ "phase": "M-B Phase 3.2",
+ "status": "REPLAY_PASS",
+ "experiment_type": "PRE-REGISTERED / CONTROLLED / FALSIFIABLE / ISOLATED",
+ "implementation": {
+  "adapter": "tmp/mb_eic1_adapter.py (~180 lines, structural only, frozen params, forbidden-field assertions)",
+  "runner": "tmp/mb_phase3_2_replay.py (~150 lines, imports harness UNMODIFIED via importlib)",
+  "harness_modified": false,
+  "harness_sha_pre": "b41494020b491b92",
+  "harness_sha_post": "b41494020b491b92",
+  "decision_function_modified": false,
+  "frozen_artifacts_touched": false
+ },
+ "baseline_integrity": {
+  "harness_sha_match": true,
+  "tld_sha_match": true,
+  "gt_sha_match": true,
+  "anchors_drift": 0,
+  "frozen_baseline": "INTACT"
+ },
+ "off_path": {
+  "decisions_vs_archived": "21/21 byte-identical",
+  "observations_vs_archived": "21/21 match after tuple/list normalization",
+  "apparent_mismatches": 8,
+  "mismatch_root_cause": "tuple-vs-list serialization artifact (harness returns (row_idx,col_idx) tuples; archived JSON has lists); 0 real value differences; all decision-relevant booleans identical",
+  "S9": "PASS"
+ },
+ "on_path_evidence_states": {
+  "tld_only_or_neither": 10,
+  "eic1_single_source": 8,
+  "agree": 3,
+  "evidence_conflict": 0
+ },
+ "matrix_results": [
+  {
+   "case_id": "IS11-AMB-005",
+   "class": "D_CORRECT_MIXED",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "KEEP_SEPARATE",
+   "off_decision": "KEEP_SEPARATE",
+   "off_outcome": "TN",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "tld_only_or_neither",
+   "decision_changed": false,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "tables_detected": 1,
+     "a_in_table": true,
+     "b_in_table": true,
+     "a_cell": [
+      36,
+      1
+     ],
+     "b_cell": [
+      36,
+      2
+     ]
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.04,
+    "atom_b_match_dist": 0.01,
+    "sce_status": "region_not_formed",
+    "rsc": {
+     "region_id": "rsc|p|band67",
+     "pair_band": 67,
+     "pair_y": 539.09,
+     "local_partitions_co_occurring": 0,
+     "region_forms": false,
+     "co_occurring_partition_ids": [],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": null,
+    "n_local_lsps": 1,
+    "pair_band_co_density": 0,
+    "lsp_a": "lsp|p1|x308.9",
+    "lsp_b": null
+   }
+  },
+  {
+   "case_id": "IS11-AMB-024",
+   "class": "D_CORRECT",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "KEEP_SEPARATE",
+   "off_decision": "KEEP_SEPARATE",
+   "off_outcome": "TN",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "tld_only_or_neither",
+   "decision_changed": false,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "tables_detected": 1,
+     "a_in_table": true,
+     "b_in_table": true,
+     "a_cell": [
+      3,
+      1
+     ],
+     "b_cell": [
+      3,
+      2
+     ]
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.05,
+    "atom_b_match_dist": 0.06,
+    "sce_status": "partition_unresolvable",
+    "rsc": {
+     "region_id": "rsc|p|band16",
+     "pair_band": 16,
+     "pair_y": 129.93,
+     "local_partitions_co_occurring": 9,
+     "region_forms": true,
+     "co_occurring_partition_ids": [
+      "lsp|p6|x170.2",
+      "lsp|p6|x170.2",
+      "lsp|p6|x170.2",
+      "lsp|p6|x170.2",
+      "lsp|p6|x170.2",
+      "lsp|p6|x170.2",
+      "lsp|p6|x170.2",
+      "lsp|p6|x170.2",
+      "lsp|p6|x96.4"
+     ],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": null,
+    "n_local_lsps": 56,
+    "pair_band_co_density": 9,
+    "lsp_a": "lsp|p6|x170.2",
+    "lsp_b": null
+   }
+  },
+  {
+   "case_id": "IS11-AMB-034",
+   "class": "D_CORRECT_VALUE_COLUMN",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "KEEP_SEPARATE",
+   "off_decision": "KEEP_SEPARATE",
+   "off_outcome": "TN",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "agree",
+   "decision_changed": false,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "tables_detected": 1,
+     "a_in_table": true,
+     "b_in_table": true,
+     "a_cell": [
+      31,
+      1
+     ],
+     "b_cell": [
+      31,
+      2
+     ],
+     "sources": [
+      "tld",
+      "eic1_agree"
+     ]
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.01,
+    "atom_b_match_dist": 0.01,
+    "sce_status": "admitted",
+    "rsc": {
+     "region_id": "rsc|p|band39",
+     "pair_band": 39,
+     "pair_y": 310.4,
+     "local_partitions_co_occurring": 18,
+     "region_forms": true,
+     "co_occurring_partition_ids": [
+      "lsp|p6|x67.1",
+      "lsp|p6|x67.1",
+      "lsp|p6|x246.9",
+      "lsp|p6|x67.1",
+      "lsp|p6|x67.1",
+      "lsp|p6|x67.1",
+      "lsp|p6|x199.5",
+      "lsp|p6|x67.1",
+      "lsp|p6|x199.5",
+      "lsp|p6|x67.1",
+      "lsp|p6|x199.5",
+      "lsp|p6|x67.1",
+      "lsp|p6|x199.5",
+      "lsp|p6|x67.1",
+      "lsp|p6|x199.5",
+      "lsp|p6|x67.1",
+      "lsp|p6|x199.5",
+      "lsp|p6|x246.9"
+     ],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": {
+     "case_ref": "134baaaba524570e|b1a1b0d4ab319994",
+     "atom_a_partition": "lsp|p6|x199.5",
+     "atom_b_partition": "lsp|p6|x246.9",
+     "same_structural_region": true,
+     "different_local_partition": true,
+     "same_local_partition": false,
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band39",
+     "pairwise_same_y_band": true,
+     "provenance": {
+      "lsp_a": "lsp|p6|x199.5",
+      "lsp_b": "lsp|p6|x246.9",
+      "rsc": "rsc|p|band39",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     },
+     "source": "geometry_structural_context_adapter.v0"
+    },
+    "n_local_lsps": 56,
+    "pair_band_co_density": 18,
+    "lsp_a": "lsp|p6|x199.5",
+    "lsp_b": "lsp|p6|x246.9"
+   }
+  },
+  {
+   "case_id": "IS11-AMB-074",
+   "class": "D_CORRECT",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "KEEP_SEPARATE",
+   "off_decision": "KEEP_SEPARATE",
+   "off_outcome": "TN",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "tld_only_or_neither",
+   "decision_changed": false,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "tables_detected": 1,
+     "a_in_table": true,
+     "b_in_table": true,
+     "a_cell": [
+      32,
+      1
+     ],
+     "b_cell": [
+      32,
+      2
+     ]
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.04,
+    "atom_b_match_dist": 0.02,
+    "sce_status": "partition_unresolvable",
+    "rsc": {
+     "region_id": "rsc|p|band40",
+     "pair_band": 40,
+     "pair_y": 317.98,
+     "local_partitions_co_occurring": 7,
+     "region_forms": true,
+     "co_occurring_partition_ids": [
+      "lsp|p8|x68.7",
+      "lsp|p8|x68.7",
+      "lsp|p8|x68.7",
+      "lsp|p8|x68.7",
+      "lsp|p8|x68.7",
+      "lsp|p8|x68.7",
+      "lsp|p8|x68.7"
+     ],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": null,
+    "n_local_lsps": 29,
+    "pair_band_co_density": 7,
+    "lsp_a": null,
+    "lsp_b": null
+   }
+  },
+  {
+   "case_id": "IS11-AMB-130",
+   "class": "A2_DIRECT_RECOVERY",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "INSUFFICIENT_EVIDENCE",
+   "off_decision": "INSUFFICIENT_EVIDENCE",
+   "off_outcome": "ABSTAIN",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "eic1_single_source",
+   "decision_changed": true,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "source": "eic1",
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band14",
+     "provenance": {
+      "lsp_a": "lsp|p5|x428.1",
+      "lsp_b": "lsp|p5|x469.8",
+      "rsc": "rsc|p|band14",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     }
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.04,
+    "atom_b_match_dist": 0.01,
+    "sce_status": "admitted",
+    "rsc": {
+     "region_id": "rsc|p|band14",
+     "pair_band": 14,
+     "pair_y": 112.09,
+     "local_partitions_co_occurring": 3,
+     "region_forms": true,
+     "co_occurring_partition_ids": [
+      "lsp|p5|x428.1",
+      "lsp|p5|x428.1",
+      "lsp|p5|x428.1"
+     ],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": {
+     "case_ref": "2337fe153c78184d|facb881fc3b93099",
+     "atom_a_partition": "lsp|p5|x428.1",
+     "atom_b_partition": "lsp|p5|x469.8",
+     "same_structural_region": true,
+     "different_local_partition": true,
+     "same_local_partition": false,
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band14",
+     "pairwise_same_y_band": true,
+     "provenance": {
+      "lsp_a": "lsp|p5|x428.1",
+      "lsp_b": "lsp|p5|x469.8",
+      "rsc": "rsc|p|band14",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     },
+     "source": "geometry_structural_context_adapter.v0"
+    },
+    "n_local_lsps": 44,
+    "pair_band_co_density": 3,
+    "lsp_a": "lsp|p5|x428.1",
+    "lsp_b": "lsp|p5|x469.8"
+   }
+  },
+  {
+   "case_id": "IS11-AMB-135",
+   "class": "A1_POSITIVE_REPAIR",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "MERGE",
+   "off_decision": "MERGE",
+   "off_outcome": "FP",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "eic1_single_source",
+   "decision_changed": true,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "source": "eic1",
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band20",
+     "provenance": {
+      "lsp_a": "lsp|p5|x319.9",
+      "lsp_b": "lsp|p5|x354.1",
+      "rsc": "rsc|p|band20",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     }
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.01,
+    "atom_b_match_dist": 0.0,
+    "sce_status": "admitted",
+    "rsc": {
+     "region_id": "rsc|p|band20",
+     "pair_band": 20,
+     "pair_y": 161.95,
+     "local_partitions_co_occurring": 30,
+     "region_forms": true,
+     "co_occurring_partition_ids": [
+      "lsp|p5|x179.8",
+      "lsp|p5|x432.3",
+      "lsp|p5|x447.4",
+      "lsp|p5|x446.9",
+      "lsp|p5|x319.9",
+      "lsp|p5|x446.9",
+      "lsp|p5|x319.9",
+      "lsp|p5|x354.1",
+      "lsp|p5|x446.9",
+      "lsp|p5|x319.9",
+      "lsp|p5|x354.1",
+      "lsp|p5|x446.9",
+      "lsp|p5|x319.9",
+      "lsp|p5|x354.1",
+      "lsp|p5|x446.9",
+      "lsp|p5|x319.9",
+      "lsp|p5|x354.1",
+      "lsp|p5|x446.9",
+      "lsp|p5|x478.2",
+      "lsp|p5|x319.9",
+      "lsp|p5|x354.1",
+      "lsp|p5|x446.9",
+      "lsp|p5|x478.2",
+      "lsp|p5|x319.9",
+      "lsp|p5|x354.1",
+      "lsp|p5|x446.9",
+      "lsp|p5|x478.2",
+      "lsp|p5|x319.9",
+      "lsp|p5|x446.9",
+      "lsp|p5|x320.4"
+     ],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": {
+     "case_ref": "4fd52b331c166ab6|7479fc1724485b75",
+     "atom_a_partition": "lsp|p5|x319.9",
+     "atom_b_partition": "lsp|p5|x354.1",
+     "same_structural_region": true,
+     "different_local_partition": true,
+     "same_local_partition": false,
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band20",
+     "pairwise_same_y_band": true,
+     "provenance": {
+      "lsp_a": "lsp|p5|x319.9",
+      "lsp_b": "lsp|p5|x354.1",
+      "rsc": "rsc|p|band20",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     },
+     "source": "geometry_structural_context_adapter.v0"
+    },
+    "n_local_lsps": 44,
+    "pair_band_co_density": 30,
+    "lsp_a": "lsp|p5|x319.9",
+    "lsp_b": "lsp|p5|x354.1"
+   }
+  },
+  {
+   "case_id": "IS11-AMB-262",
+   "class": "C_NEG_DIFFERENT_BAND",
+   "safety": "MEDIUM",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "INSUFFICIENT_EVIDENCE",
+   "off_decision": "INSUFFICIENT_EVIDENCE",
+   "off_outcome": "ABSTAIN",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "eic1_single_source",
+   "decision_changed": true,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "source": "eic1",
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band18",
+     "provenance": {
+      "lsp_a": "lsp|p7|x187.4",
+      "lsp_b": "lsp|p7|x213.1",
+      "rsc": "rsc|p|band18",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     }
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.01,
+    "atom_b_match_dist": 0.03,
+    "sce_status": "admitted",
+    "rsc": {
+     "region_id": "rsc|p|band18",
+     "pair_band": 18,
+     "pair_y": 147.45,
+     "local_partitions_co_occurring": 41,
+     "region_forms": true,
+     "co_occurring_partition_ids": [
+      "lsp|p7|x61.2",
+      "lsp|p7|x187.4",
+      "lsp|p7|x420.2",
+      "lsp|p7|x471.4",
+      "lsp|p7|x501.5",
+      "lsp|p7|x61.2",
+      "lsp|p7|x187.4",
+      "lsp|p7|x420.2",
+      "lsp|p7|x471.4",
+      "lsp|p7|x501.5",
+      "lsp|p7|x61.2",
+      "lsp|p7|x187.4",
+      "lsp|p7|x293.6",
+      "lsp|p7|x420.2",
+      "lsp|p7|x471.4",
+      "lsp|p7|x61.2",
+      "lsp|p7|x187.4",
+      "lsp|p7|x293.6",
+      "lsp|p7|x420.2",
+      "lsp|p7|x471.4",
+      "lsp|p7|x61.2",
+      "lsp|p7|x187.4",
+      "lsp|p7|x293.6",
+      "lsp|p7|x420.2",
+      "lsp|p7|x471.4",
+      "lsp|p7|x61.2",
+      "lsp|p7|x187.4",
+      "lsp|p7|x293.6",
+      "lsp|p7|x420.2",
+      "lsp|p7|x471.4",
+      "lsp|p7|x61.2",
+      "lsp|p7|x187.4",
+      "lsp|p7|x293.6",
+      "lsp|p7|x420.2",
+      "lsp|p7|x471.4",
+      "lsp|p7|x501.5",
+      "lsp|p7|x61.2",
+      "lsp|p7|x188.6",
+      "lsp|p7|x337.3",
+      "lsp|p7|x156.4",
+      "lsp|p7|x364.8"
+     ],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": {
+     "case_ref": "0f8606ace33beaae|5185f5c0ef973036",
+     "atom_a_partition": "lsp|p7|x187.4",
+     "atom_b_partition": "lsp|p7|x213.1",
+     "same_structural_region": true,
+     "different_local_partition": true,
+     "same_local_partition": false,
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band18",
+     "pairwise_same_y_band": true,
+     "provenance": {
+      "lsp_a": "lsp|p7|x187.4",
+      "lsp_b": "lsp|p7|x213.1",
+      "rsc": "rsc|p|band18",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     },
+     "source": "geometry_structural_context_adapter.v0"
+    },
+    "n_local_lsps": 57,
+    "pair_band_co_density": 41,
+    "lsp_a": "lsp|p7|x187.4",
+    "lsp_b": "lsp|p7|x213.1"
+   }
+  },
+  {
+   "case_id": "IS11-AMB-313",
+   "class": "A2_DIRECT_RECOVERY_WEAK",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "INSUFFICIENT_EVIDENCE",
+   "off_decision": "INSUFFICIENT_EVIDENCE",
+   "off_outcome": "ABSTAIN",
+   "on_decision": "INSUFFICIENT_EVIDENCE",
+   "on_outcome": "ABSTAIN",
+   "on_evidence_state": "tld_only_or_neither",
+   "decision_changed": false,
+   "on_is11_obs": {
+    "is_in_table": false,
+    "same_cell": false,
+    "different_cell": false,
+    "table_info": {
+     "tables_detected": 0,
+     "reason": "no tables detected"
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.03,
+    "atom_b_match_dist": 0.05,
+    "sce_status": "region_not_formed",
+    "rsc": {
+     "region_id": "rsc|p|band34",
+     "pair_band": 34,
+     "pair_y": 275.31,
+     "local_partitions_co_occurring": 0,
+     "region_forms": false,
+     "co_occurring_partition_ids": [],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": null,
+    "n_local_lsps": 31,
+    "pair_band_co_density": 0,
+    "lsp_a": null,
+    "lsp_b": null
+   }
+  },
+  {
+   "case_id": "IS11-AMB-346",
+   "class": "D_CORRECT_AGREE_SITE",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "KEEP_SEPARATE",
+   "off_decision": "KEEP_SEPARATE",
+   "off_outcome": "TN",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "agree",
+   "decision_changed": false,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "tables_detected": 1,
+     "a_in_table": true,
+     "b_in_table": true,
+     "a_cell": [
+      40,
+      6
+     ],
+     "b_cell": [
+      40,
+      7
+     ],
+     "sources": [
+      "tld",
+      "eic1_agree"
+     ]
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.06,
+    "atom_b_match_dist": 0.03,
+    "sce_status": "admitted",
+    "rsc": {
+     "region_id": "rsc|p|band61",
+     "pair_band": 61,
+     "pair_y": 487.12,
+     "local_partitions_co_occurring": 26,
+     "region_forms": true,
+     "co_occurring_partition_ids": [
+      "lsp|p9|x266.5",
+      "lsp|p9|x96.9",
+      "lsp|p9|x121.1",
+      "lsp|p9|x145.3",
+      "lsp|p9|x169.6",
+      "lsp|p9|x193.8",
+      "lsp|p9|x218.0",
+      "lsp|p9|x240.9",
+      "lsp|p9|x265.7",
+      "lsp|p9|x96.9",
+      "lsp|p9|x121.1",
+      "lsp|p9|x145.3",
+      "lsp|p9|x169.6",
+      "lsp|p9|x193.8",
+      "lsp|p9|x218.0",
+      "lsp|p9|x240.9",
+      "lsp|p9|x265.7",
+      "lsp|p9|x96.9",
+      "lsp|p9|x121.1",
+      "lsp|p9|x145.3",
+      "lsp|p9|x169.6",
+      "lsp|p9|x193.8",
+      "lsp|p9|x218.0",
+      "lsp|p9|x240.9",
+      "lsp|p9|x265.7",
+      "lsp|p9|x242.3"
+     ],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": {
+     "case_ref": "6b8bc73b57ddb06a|f9d1d27a4531179f",
+     "atom_a_partition": "lsp|p9|x240.9",
+     "atom_b_partition": "lsp|p9|x266.5",
+     "same_structural_region": true,
+     "different_local_partition": true,
+     "same_local_partition": false,
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band61",
+     "pairwise_same_y_band": true,
+     "provenance": {
+      "lsp_a": "lsp|p9|x240.9",
+      "lsp_b": "lsp|p9|x266.5",
+      "rsc": "rsc|p|band61",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     },
+     "source": "geometry_structural_context_adapter.v0"
+    },
+    "n_local_lsps": 34,
+    "pair_band_co_density": 26,
+    "lsp_a": "lsp|p9|x240.9",
+    "lsp_b": "lsp|p9|x266.5"
+   }
+  },
+  {
+   "case_id": "IS11-AMB-350",
+   "class": "D_CORRECT_AGREE_SITE",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "KEEP_SEPARATE",
+   "off_decision": "KEEP_SEPARATE",
+   "off_outcome": "TN",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "agree",
+   "decision_changed": false,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "tables_detected": 1,
+     "a_in_table": true,
+     "b_in_table": true,
+     "a_cell": [
+      40,
+      2
+     ],
+     "b_cell": [
+      40,
+      3
+     ],
+     "sources": [
+      "tld",
+      "eic1_agree"
+     ]
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.04,
+    "atom_b_match_dist": 0.05,
+    "sce_status": "admitted",
+    "rsc": {
+     "region_id": "rsc|p|band62",
+     "pair_band": 62,
+     "pair_y": 495.54,
+     "local_partitions_co_occurring": 26,
+     "region_forms": true,
+     "co_occurring_partition_ids": [
+      "lsp|p9|x266.5",
+      "lsp|p9|x96.9",
+      "lsp|p9|x121.1",
+      "lsp|p9|x145.3",
+      "lsp|p9|x169.6",
+      "lsp|p9|x193.8",
+      "lsp|p9|x218.0",
+      "lsp|p9|x240.9",
+      "lsp|p9|x265.7",
+      "lsp|p9|x96.9",
+      "lsp|p9|x121.1",
+      "lsp|p9|x145.3",
+      "lsp|p9|x169.6",
+      "lsp|p9|x193.8",
+      "lsp|p9|x218.0",
+      "lsp|p9|x240.9",
+      "lsp|p9|x265.7",
+      "lsp|p9|x96.9",
+      "lsp|p9|x121.1",
+      "lsp|p9|x145.3",
+      "lsp|p9|x169.6",
+      "lsp|p9|x193.8",
+      "lsp|p9|x218.0",
+      "lsp|p9|x240.9",
+      "lsp|p9|x265.7",
+      "lsp|p9|x242.3"
+     ],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": {
+     "case_ref": "72d14ad612940b10|48670daf8cfac002",
+     "atom_a_partition": "lsp|p9|x145.3",
+     "atom_b_partition": "lsp|p9|x169.6",
+     "same_structural_region": true,
+     "different_local_partition": true,
+     "same_local_partition": false,
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band62",
+     "pairwise_same_y_band": true,
+     "provenance": {
+      "lsp_a": "lsp|p9|x145.3",
+      "lsp_b": "lsp|p9|x169.6",
+      "rsc": "rsc|p|band62",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     },
+     "source": "geometry_structural_context_adapter.v0"
+    },
+    "n_local_lsps": 34,
+    "pair_band_co_density": 26,
+    "lsp_a": "lsp|p9|x145.3",
+    "lsp_b": "lsp|p9|x169.6"
+   }
+  },
+  {
+   "case_id": "IS11-AMB-414",
+   "class": "B_SAFETY_CANARY",
+   "safety": "CRITICAL",
+   "gt": "MERGE",
+   "baseline_archived": "INSUFFICIENT_EVIDENCE",
+   "off_decision": "INSUFFICIENT_EVIDENCE",
+   "off_outcome": "ABSTAIN",
+   "on_decision": "INSUFFICIENT_EVIDENCE",
+   "on_outcome": "ABSTAIN",
+   "on_evidence_state": "tld_only_or_neither",
+   "decision_changed": false,
+   "on_is11_obs": {
+    "is_in_table": false,
+    "same_cell": false,
+    "different_cell": false,
+    "table_info": {
+     "tables_detected": 0,
+     "reason": "no tables detected"
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.07,
+    "atom_b_match_dist": 0.07,
+    "sce_status": "region_not_formed",
+    "rsc": {
+     "region_id": "rsc|p|band43",
+     "pair_band": 43,
+     "pair_y": 346.48,
+     "local_partitions_co_occurring": 0,
+     "region_forms": false,
+     "co_occurring_partition_ids": [],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": null,
+    "n_local_lsps": 9,
+    "pair_band_co_density": 0,
+    "lsp_a": "lsp|p20|x85.0",
+    "lsp_b": null
+   }
+  },
+  {
+   "case_id": "IS11-AMB-422",
+   "class": "B_SAFETY_CANARY",
+   "safety": "CRITICAL",
+   "gt": "MERGE",
+   "baseline_archived": "INSUFFICIENT_EVIDENCE",
+   "off_decision": "INSUFFICIENT_EVIDENCE",
+   "off_outcome": "ABSTAIN",
+   "on_decision": "INSUFFICIENT_EVIDENCE",
+   "on_outcome": "ABSTAIN",
+   "on_evidence_state": "tld_only_or_neither",
+   "decision_changed": false,
+   "on_is11_obs": {
+    "is_in_table": false,
+    "same_cell": false,
+    "different_cell": false,
+    "table_info": {
+     "tables_detected": 0,
+     "reason": "no tables detected"
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.02,
+    "atom_b_match_dist": 0.03,
+    "sce_status": "region_not_formed",
+    "rsc": {
+     "region_id": "rsc|p|band72",
+     "pair_band": 72,
+     "pair_y": 577.74,
+     "local_partitions_co_occurring": 0,
+     "region_forms": false,
+     "co_occurring_partition_ids": [],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": null,
+    "n_local_lsps": 1,
+    "pair_band_co_density": 0,
+    "lsp_a": "lsp|p24|x85.0",
+    "lsp_b": null
+   }
+  },
+  {
+   "case_id": "IS11-AMB-457",
+   "class": "A2_DIRECT_RECOVERY",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "INSUFFICIENT_EVIDENCE",
+   "off_decision": "INSUFFICIENT_EVIDENCE",
+   "off_outcome": "ABSTAIN",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "eic1_single_source",
+   "decision_changed": true,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "source": "eic1",
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band28",
+     "provenance": {
+      "lsp_a": "lsp|p3|x130.0",
+      "lsp_b": "lsp|p3|x201.5",
+      "rsc": "rsc|p|band28",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     }
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.04,
+    "atom_b_match_dist": 0.01,
+    "sce_status": "admitted",
+    "rsc": {
+     "region_id": "rsc|p|band28",
+     "pair_band": 28,
+     "pair_y": 221.09,
+     "local_partitions_co_occurring": 6,
+     "region_forms": true,
+     "co_occurring_partition_ids": [
+      "lsp|p3|x201.5",
+      "lsp|p3|x201.5",
+      "lsp|p3|x201.5",
+      "lsp|p3|x462.5",
+      "lsp|p3|x131.0",
+      "lsp|p3|x369.6"
+     ],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": {
+     "case_ref": "c30608b7dd60b527|34b3bdd577c50bab",
+     "atom_a_partition": "lsp|p3|x130.0",
+     "atom_b_partition": "lsp|p3|x201.5",
+     "same_structural_region": true,
+     "different_local_partition": true,
+     "same_local_partition": false,
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band28",
+     "pairwise_same_y_band": true,
+     "provenance": {
+      "lsp_a": "lsp|p3|x130.0",
+      "lsp_b": "lsp|p3|x201.5",
+      "rsc": "rsc|p|band28",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     },
+     "source": "geometry_structural_context_adapter.v0"
+    },
+    "n_local_lsps": 24,
+    "pair_band_co_density": 6,
+    "lsp_a": "lsp|p3|x130.0",
+    "lsp_b": "lsp|p3|x201.5"
+   }
+  },
+  {
+   "case_id": "IS11-AMB-462",
+   "class": "A2_DIRECT_RECOVERY",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "INSUFFICIENT_EVIDENCE",
+   "off_decision": "INSUFFICIENT_EVIDENCE",
+   "off_outcome": "ABSTAIN",
+   "on_decision": "INSUFFICIENT_EVIDENCE",
+   "on_outcome": "ABSTAIN",
+   "on_evidence_state": "tld_only_or_neither",
+   "decision_changed": false,
+   "on_is11_obs": {
+    "is_in_table": false,
+    "same_cell": false,
+    "different_cell": false,
+    "table_info": {
+     "tables_detected": 1,
+     "a_in_table": false,
+     "b_in_table": false,
+     "a_cell": null,
+     "b_cell": null
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.01,
+    "atom_b_match_dist": 0.04,
+    "sce_status": "partition_unresolvable",
+    "rsc": {
+     "region_id": "rsc|p|band28",
+     "pair_band": 28,
+     "pair_y": 221.09,
+     "local_partitions_co_occurring": 6,
+     "region_forms": true,
+     "co_occurring_partition_ids": [
+      "lsp|p3|x201.5",
+      "lsp|p3|x201.5",
+      "lsp|p3|x201.5",
+      "lsp|p3|x462.5",
+      "lsp|p3|x131.0",
+      "lsp|p3|x369.6"
+     ],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": null,
+    "n_local_lsps": 24,
+    "pair_band_co_density": 6,
+    "lsp_a": null,
+    "lsp_b": "lsp|p3|x462.3"
+   }
+  },
+  {
+   "case_id": "IS11-AMB-467",
+   "class": "A2_DIRECT_RECOVERY",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "INSUFFICIENT_EVIDENCE",
+   "off_decision": "INSUFFICIENT_EVIDENCE",
+   "off_outcome": "ABSTAIN",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "eic1_single_source",
+   "decision_changed": true,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "source": "eic1",
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band30",
+     "provenance": {
+      "lsp_a": "lsp|p3|x310.8",
+      "lsp_b": "lsp|p3|x340.2",
+      "rsc": "rsc|p|band30",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     }
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.01,
+    "atom_b_match_dist": 0.03,
+    "sce_status": "admitted",
+    "rsc": {
+     "region_id": "rsc|p|band30",
+     "pair_band": 30,
+     "pair_y": 237.3,
+     "local_partitions_co_occurring": 14,
+     "region_forms": true,
+     "co_occurring_partition_ids": [
+      "lsp|p3|x340.2",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x239.2",
+      "lsp|p3|x430.7",
+      "lsp|p3|x463.0",
+      "lsp|p3|x462.5",
+      "lsp|p3|x277.1",
+      "lsp|p3|x131.0",
+      "lsp|p3|x369.6"
+     ],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": {
+     "case_ref": "39b4ce5ed6c410be|267f6a69a11959db",
+     "atom_a_partition": "lsp|p3|x310.8",
+     "atom_b_partition": "lsp|p3|x340.2",
+     "same_structural_region": true,
+     "different_local_partition": true,
+     "same_local_partition": false,
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band30",
+     "pairwise_same_y_band": true,
+     "provenance": {
+      "lsp_a": "lsp|p3|x310.8",
+      "lsp_b": "lsp|p3|x340.2",
+      "rsc": "rsc|p|band30",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     },
+     "source": "geometry_structural_context_adapter.v0"
+    },
+    "n_local_lsps": 24,
+    "pair_band_co_density": 14,
+    "lsp_a": "lsp|p3|x310.8",
+    "lsp_b": "lsp|p3|x340.2"
+   }
+  },
+  {
+   "case_id": "IS11-AMB-483",
+   "class": "A2_DIRECT_RECOVERY",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "INSUFFICIENT_EVIDENCE",
+   "off_decision": "INSUFFICIENT_EVIDENCE",
+   "off_outcome": "ABSTAIN",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "eic1_single_source",
+   "decision_changed": true,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "source": "eic1",
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band33",
+     "provenance": {
+      "lsp_a": "lsp|p3|x276.4",
+      "lsp_b": "lsp|p3|x310.8",
+      "rsc": "rsc|p|band33",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     }
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.04,
+    "atom_b_match_dist": 0.03,
+    "sce_status": "admitted",
+    "rsc": {
+     "region_id": "rsc|p|band33",
+     "pair_band": 33,
+     "pair_y": 264.32,
+     "local_partitions_co_occurring": 17,
+     "region_forms": true,
+     "co_occurring_partition_ids": [
+      "lsp|p3|x201.5",
+      "lsp|p3|x340.2",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x201.5",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x201.5",
+      "lsp|p3|x310.8",
+      "lsp|p3|x239.2",
+      "lsp|p3|x430.7",
+      "lsp|p3|x463.0",
+      "lsp|p3|x462.5",
+      "lsp|p3|x277.1",
+      "lsp|p3|x131.0",
+      "lsp|p3|x369.6"
+     ],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": {
+     "case_ref": "8f3362d1c9fd5030|4a9945d47b15eb0a",
+     "atom_a_partition": "lsp|p3|x276.4",
+     "atom_b_partition": "lsp|p3|x310.8",
+     "same_structural_region": true,
+     "different_local_partition": true,
+     "same_local_partition": false,
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band33",
+     "pairwise_same_y_band": true,
+     "provenance": {
+      "lsp_a": "lsp|p3|x276.4",
+      "lsp_b": "lsp|p3|x310.8",
+      "rsc": "rsc|p|band33",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     },
+     "source": "geometry_structural_context_adapter.v0"
+    },
+    "n_local_lsps": 24,
+    "pair_band_co_density": 17,
+    "lsp_a": "lsp|p3|x276.4",
+    "lsp_b": "lsp|p3|x310.8"
+   }
+  },
+  {
+   "case_id": "IS11-AMB-505",
+   "class": "A2_DIRECT_RECOVERY",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "INSUFFICIENT_EVIDENCE",
+   "off_decision": "INSUFFICIENT_EVIDENCE",
+   "off_outcome": "ABSTAIN",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "eic1_single_source",
+   "decision_changed": true,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "source": "eic1",
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band38",
+     "provenance": {
+      "lsp_a": "lsp|p3|x237.9",
+      "lsp_b": "lsp|p3|x276.4",
+      "rsc": "rsc|p|band38",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     }
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.02,
+    "atom_b_match_dist": 0.03,
+    "sce_status": "admitted",
+    "rsc": {
+     "region_id": "rsc|p|band38",
+     "pair_band": 38,
+     "pair_y": 302.16,
+     "local_partitions_co_occurring": 14,
+     "region_forms": true,
+     "co_occurring_partition_ids": [
+      "lsp|p3|x340.2",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x239.2",
+      "lsp|p3|x430.7",
+      "lsp|p3|x463.0",
+      "lsp|p3|x462.5",
+      "lsp|p3|x277.1",
+      "lsp|p3|x131.0",
+      "lsp|p3|x369.6"
+     ],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": {
+     "case_ref": "4fae33d2040aab66|0fc3d9cf802bcf14",
+     "atom_a_partition": "lsp|p3|x237.9",
+     "atom_b_partition": "lsp|p3|x276.4",
+     "same_structural_region": true,
+     "different_local_partition": true,
+     "same_local_partition": false,
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band38",
+     "pairwise_same_y_band": true,
+     "provenance": {
+      "lsp_a": "lsp|p3|x237.9",
+      "lsp_b": "lsp|p3|x276.4",
+      "rsc": "rsc|p|band38",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     },
+     "source": "geometry_structural_context_adapter.v0"
+    },
+    "n_local_lsps": 24,
+    "pair_band_co_density": 14,
+    "lsp_a": "lsp|p3|x237.9",
+    "lsp_b": "lsp|p3|x276.4"
+   }
+  },
+  {
+   "case_id": "IS11-AMB-514",
+   "class": "A2_DIRECT_RECOVERY",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "INSUFFICIENT_EVIDENCE",
+   "off_decision": "INSUFFICIENT_EVIDENCE",
+   "off_outcome": "ABSTAIN",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "eic1_single_source",
+   "decision_changed": true,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "source": "eic1",
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band39",
+     "provenance": {
+      "lsp_a": "lsp|p3|x310.8",
+      "lsp_b": "lsp|p3|x340.2",
+      "rsc": "rsc|p|band39",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     }
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.04,
+    "atom_b_match_dist": 0.06,
+    "sce_status": "admitted",
+    "rsc": {
+     "region_id": "rsc|p|band39",
+     "pair_band": 39,
+     "pair_y": 313.07,
+     "local_partitions_co_occurring": 17,
+     "region_forms": true,
+     "co_occurring_partition_ids": [
+      "lsp|p3|x201.5",
+      "lsp|p3|x340.2",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x201.5",
+      "lsp|p3|x310.8",
+      "lsp|p3|x201.5",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x310.8",
+      "lsp|p3|x239.2",
+      "lsp|p3|x430.7",
+      "lsp|p3|x463.0",
+      "lsp|p3|x462.5",
+      "lsp|p3|x277.1",
+      "lsp|p3|x131.0",
+      "lsp|p3|x369.6"
+     ],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": {
+     "case_ref": "9cb3c6c9babe08b2|3dd2603216402bab",
+     "atom_a_partition": "lsp|p3|x310.8",
+     "atom_b_partition": "lsp|p3|x340.2",
+     "same_structural_region": true,
+     "different_local_partition": true,
+     "same_local_partition": false,
+     "interpretation_status": "candidate",
+     "region_ref": "rsc|p|band39",
+     "pairwise_same_y_band": true,
+     "provenance": {
+      "lsp_a": "lsp|p3|x310.8",
+      "lsp_b": "lsp|p3|x340.2",
+      "rsc": "rsc|p|band39",
+      "source": "eic1_v0",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3",
+      "chain": [
+       "L2_geometry",
+       "LSP",
+       "RSC",
+       "EIC1"
+      ]
+     },
+     "source": "geometry_structural_context_adapter.v0"
+    },
+    "n_local_lsps": 24,
+    "pair_band_co_density": 17,
+    "lsp_a": "lsp|p3|x310.8",
+    "lsp_b": "lsp|p3|x340.2"
+   }
+  },
+  {
+   "case_id": "IS11-AMB-519",
+   "class": "C_NEG_PROSE",
+   "safety": "MEDIUM",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "INSUFFICIENT_EVIDENCE",
+   "off_decision": "INSUFFICIENT_EVIDENCE",
+   "off_outcome": "ABSTAIN",
+   "on_decision": "INSUFFICIENT_EVIDENCE",
+   "on_outcome": "ABSTAIN",
+   "on_evidence_state": "tld_only_or_neither",
+   "decision_changed": false,
+   "on_is11_obs": {
+    "is_in_table": false,
+    "same_cell": false,
+    "different_cell": false,
+    "table_info": {
+     "tables_detected": 1,
+     "a_in_table": false,
+     "b_in_table": false,
+     "a_cell": null,
+     "b_cell": null
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.03,
+    "atom_b_match_dist": 0.02,
+    "sce_status": "region_not_formed",
+    "rsc": {
+     "region_id": "rsc|p|band53",
+     "pair_band": 53,
+     "pair_y": 425.54,
+     "local_partitions_co_occurring": 0,
+     "region_forms": false,
+     "co_occurring_partition_ids": [],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": null,
+    "n_local_lsps": 24,
+    "pair_band_co_density": 0,
+    "lsp_a": "lsp|p3|x107.5",
+    "lsp_b": "lsp|p3|x279.3"
+   }
+  },
+  {
+   "case_id": "IS11-AMB-522",
+   "class": "D_CORRECT_AGREE_SITE",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "KEEP_SEPARATE",
+   "off_decision": "KEEP_SEPARATE",
+   "off_outcome": "TN",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "tld_only_or_neither",
+   "decision_changed": false,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "tables_detected": 1,
+     "a_in_table": true,
+     "b_in_table": true,
+     "a_cell": [
+      18,
+      1
+     ],
+     "b_cell": [
+      18,
+      2
+     ]
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.04,
+    "atom_b_match_dist": 0.04,
+    "sce_status": "partition_unresolvable",
+    "rsc": {
+     "region_id": "rsc|p|band34",
+     "pair_band": 34,
+     "pair_y": 268.13,
+     "local_partitions_co_occurring": 3,
+     "region_forms": true,
+     "co_occurring_partition_ids": [
+      "lsp|p4|x158.6",
+      "lsp|p4|x158.6",
+      "lsp|p4|x158.6"
+     ],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": null,
+    "n_local_lsps": 6,
+    "pair_band_co_density": 3,
+    "lsp_a": "lsp|p4|x234.7",
+    "lsp_b": null
+   }
+  },
+  {
+   "case_id": "IS11-AMB-530",
+   "class": "D_CORRECT_AGREE_SITE",
+   "safety": "HIGH",
+   "gt": "KEEP_SEPARATE",
+   "baseline_archived": "KEEP_SEPARATE",
+   "off_decision": "KEEP_SEPARATE",
+   "off_outcome": "TN",
+   "on_decision": "KEEP_SEPARATE",
+   "on_outcome": "TN",
+   "on_evidence_state": "tld_only_or_neither",
+   "decision_changed": false,
+   "on_is11_obs": {
+    "is_in_table": true,
+    "same_cell": false,
+    "different_cell": true,
+    "table_info": {
+     "tables_detected": 2,
+     "a_in_table": true,
+     "b_in_table": true,
+     "a_cell": [
+      0,
+      3
+     ],
+     "b_cell": [
+      0,
+      4
+     ]
+    }
+   },
+   "eic1_detail": {
+    "atom_a_match_dist": 0.04,
+    "atom_b_match_dist": 0.02,
+    "sce_status": "region_not_formed",
+    "rsc": {
+     "region_id": "rsc|p|band35",
+     "pair_band": 35,
+     "pair_y": 278.58,
+     "local_partitions_co_occurring": 0,
+     "region_forms": false,
+     "co_occurring_partition_ids": [],
+     "ceiling_statement": "local_structural_co_organization",
+     "provenance": {
+      "source": "frozen_p2",
+      "params_hash": "phase3.1_frozen:Pmem2_Pband3_Ploc150_Pcostr3"
+     }
+    },
+    "sce": null,
+    "n_local_lsps": 11,
+    "pair_band_co_density": 0,
+    "lsp_a": null,
+    "lsp_b": "lsp|p5|x330.1"
+   }
+  }
+ ],
+ "s_criteria": {
+  "S1_amb135_corrected": {
+   "pass": true,
+   "detail": "MERGE->KEEP_SEPARATE via eic1_single_source, contract chain complete, GT-consistent"
+  },
+  "S2_canary_0_flips": {
+   "pass": true,
+   "hard_gate": true,
+   "detail": "AMB-414/422 both ABSTAIN unchanged; localization constraint held (pair-band density=0)"
+  },
+  "S3_negative_collateral_0": {
+   "pass": true,
+   "detail": "0 GT-inconsistent changes; AMB-519 unchanged; AMB-262 GT-consistent recovery"
+  },
+  "S4_correct_controls_unchanged": {
+   "pass": true,
+   "detail": "8/8 unchanged (005/024/034/074/346/350/522/530)"
+  },
+  "S5_semantic_leakage_0": {
+   "pass": true,
+   "detail": "11 admitted records, all interpretation_status=candidate, 0 forbidden fields, assertions held"
+  },
+  "S6_decision_policy_change_0": {
+   "pass": true,
+   "detail": "harness hash unchanged + behavioral invariance 10/10 + 0 new branches in decision function"
+  },
+  "S7_provenance_1_0": {
+   "pass": true,
+   "detail": "11/11 quadruple complete (source/artifact/input/trace)"
+  },
+  "S8_determinism": {
+   "pass": true,
+   "detail": "21/21 double-run byte-identical"
+  },
+  "S9_off_byte_identical": {
+   "pass": true,
+   "detail": "21/21 decisions; 8 apparent mismatches = tuple/list serialization artifacts"
+  },
+  "S10_frozen_drift_0": {
+   "pass": true,
+   "detail": "anchors 0/7, GT/TLD/harness hashes match"
+  },
+  "all_pass": true
+ },
+ "f_criteria": {
+  "F1_semantic_leakage": 0,
+  "F2_decision_policy_change": 0,
+  "F3_caption_safety": 0,
+  "F4_negative_collateral": 0,
+  "F5_provenance": 0,
+  "F6_determinism": 0,
+  "F7_off_path_drift": 0,
+  "F8_integration_contract": 0,
+  "F9_eic1_boundary": 0,
+  "F10_conflict_handling": 0,
+  "total_failures": 0
+ },
+ "recovery_summary": {
+  "amb135_fp": "fixed (MERGE->KEEP_SEPARATE)",
+  "direct_recovered": [
+   "AMB-130",
+   "AMB-457",
+   "AMB-467",
+   "AMB-483",
+   "AMB-505",
+   "AMB-514"
+  ],
+  "direct_honest_abstain": [
+   "AMB-313 (lag=0 partition unresolvable)",
+   "AMB-462 (lag=1 weak membership)"
+  ],
+  "amb262": "recovered GT-consistent (Phase 3 'different_band' label corrected by actual case pair)",
+  "canaries_safe": [
+   "AMB-414",
+   "AMB-422"
+  ],
+  "controls_unchanged": 8
+ },
+ "independent_audit": {
+  "performed": true,
+  "file_diff": "harness/TLD/GT/anchors all hash-unchanged",
+  "decision_function_hash": "b41494020b49 unchanged",
+  "semantic_leakage_check": "0 (11 admitted, all candidate, 0 forbidden)",
+  "canary_safety_check": "0 flips",
+  "decision_invariance": "behavioral 10/10",
+  "provenance_check": "11/11 complete",
+  "determinism_check": "21/21",
+  "off_check": "21/21 decisions byte-identical",
+  "verdict": "PASS (consistent with runner self-report)"
+ },
+ "honest_disclosures": [
+  "AMB-262 classification correction: Phase 2/3 labeled 'different_band' (same_y_band=False from earlier atom measurement); actual sampling-frame case pair is same-band with different x0 partitions (lsp x187.4 vs x213.1, co_density=41) -> EIC-1 correctly fires -> KEEP_SEPARATE (GT-consistent). Earlier measurement was for different atoms; replay corrected the classification. NOT a failure.",
+  "OFF 'mismatches': 8/21 is11_observation appeared to mismatch archived; all confirmed tuple-vs-list serialization artifacts (harness returns tuples, archived JSON has lists). After normalization: 0 real differences; decisions 21/21 byte-identical. S9 PASS.",
+  "Conflict path untested by natural cases: 0 evidence_conflict occurred (TLD-blind pages = EIC targets; TLD-active pages = agree). Conflict contract (EVIDENCE_CONFLICT->all-False) not exercised; synthetic unit test needed (as Phase 3 sec.11 predicted). Honest coverage gap, not failure.",
+  "AMB-313 (lag=0) + AMB-462 (lag=1): honest ABSTAIN (partition unresolvable / weak membership) - predicted in Phase 3.",
+  "Descriptive rows: arXiv 1910.10683 p1/p14 checked (region_forms=False, no context). LLaMA code-line / 2212 TOC / axis-tick specific PDFs not in available corpus; boundary coverage via in-frame negatives (519/034/005) + arXiv descriptive."
+ ],
+ "descriptive_boundary_check": {
+  "arxiv_1910.10683_p1_abstract": {
+   "region_forms": false,
+   "co_density": 2,
+   "verdict": "no context produced (safe)"
+  },
+  "arxiv_1910.10683_p14_references": {
+   "region_forms": false,
+   "co_density": 1,
+   "verdict": "no context produced (safe)"
+  }
+ },
+ "scientific_claim": "在当前冻结测试框架中，验证了该 minimal Consumer Integration 能够处理已识别的结构切片失败模式。",
+ "scientific_claim_boundary": "GT-confirmed positive = 1; mechanism validation != generalization proof; no claims of universal vector table recovery / table detection / row-number recognition / cross-document generalization / production readiness",
+ "implementation_authorized": true,
+ "experiment_authorized": true,
+ "gt_modified": false,
+ "atomic_observation_modified": false,
+ "tld_modified": false,
+ "is11_decision_modified": false,
+ "perception_modified": false,
+ "frozen_baseline_intact": true,
+ "production": false,
+ "next_step": "requires human decision; do not autonomously proceed",
+ "stop": true
+}

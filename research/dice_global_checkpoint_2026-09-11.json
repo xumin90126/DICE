@@ -1,0 +1,92 @@
+{
+ "checkpoint": "DICE Global Research Checkpoint 2026-09-11",
+ "task_type": "AUDIT / STATE CONSOLIDATION / ASSET INVENTORY (no experiments)",
+
+ "A_system_positioning": {
+  "DICE": "Capability Layer = governed operationalization of validated knowledge",
+  "pipeline": "Document -> Evidence -> Human Validation -> Capability -> Transfer/Runtime",
+  "rag_vs_dice": "RAG = retrieval; DICE = governed operationalization of validated knowledge",
+  "not": "not table detector / not OCR / not parser / not classifier"},
+
+ "B_governance": {
+  "runtime_authority": "ZERO",
+  "capability_registration": "Human Controlled (L5 reusable pattern level)",
+  "production": false,
+  "frozen_baseline": "INTACT"},
+
+ "C_frozen_state": {
+  "anchors_drift": "0/7",
+  "frozen_sources": ["p1_extract","p2_engine","p2_config","p2_shape","p4_span_config","p6_region_engine","table_line_detector"],
+  "gt_sha": "7349963d0d23b5ef",
+  "tld_sha": "022f5c21e872ad9e",
+  "harness_sha": "b41494020b491b92",
+  "atomic_observation_layer": "7 sources, layer_registry intact",
+  "registered_detectors": ["p6_region_engine","table_line_detector"],
+  "status": "INTACT"},
+
+ "D_closed_research_lines": [
+  {"line": "PH-02", "final_status": "REJECTED", "reason": "15/15 A=0; whole-group research object structurally cannot bear column-membership semantics; no remedy"},
+  {"line": "C2", "final_status": "REQUIRES_REDESIGN / NOT IMPLEMENTED", "reason": "POSITIVE_COVERAGE=INSUFFICIENT; positive diversity=1; dual block (redesign x coverage)"},
+  {"line": "M-B", "final_status": "CLOSED / PASS", "reason": "Phase 3.2 REPLAY_PASS; S1-S10 ALL PASS; F1-F10=0; preregistered mechanism validation complete"}],
+ "reopen_forbidden": ["M-B Phase 4","M-B-1","M6","M7","M8","M9","new predicate","new threshold tuning","new replay expansion"],
+
+ "E_open_research_questions": [
+  {"id": "OQ1", "question": "conflict contract natural-case coverage = 0 (synthetic unit test not run)", "evidence_sufficiency": "PARTIAL", "research_value": "MEDIUM", "risk": "LOW", "experiment_readiness": "design-ready, NOT authorized"},
+  {"id": "OQ2", "question": "L5 Human Validation (reusable pattern level) not occurred", "evidence_sufficiency": "INSUFFICIENT", "research_value": "HIGH", "risk": "MEDIUM", "experiment_readiness": "NOT READY (requires pattern abstraction work)"},
+  {"id": "OQ3", "question": "cross-document generalization", "evidence_sufficiency": "INSUFFICIENT (GT positive=1)", "research_value": "HIGH but NOT actionable", "risk": "HIGH (over-claim risk)", "experiment_readiness": "NOT READY"},
+  {"id": "OQ4", "question": "AMB-313/462 partition derivation via alternative frozen relations", "evidence_sufficiency": "PARTIAL", "research_value": "LOW-MEDIUM", "risk": "LOW", "experiment_readiness": "design-only"}],
+ "principle": "insufficient evidence marked INSUFFICIENT, no new rules self-proposed; CURRENT_STATE = STABLE CHECKPOINT",
+
+ "F_experimental_artifacts": [
+  {"file": "tmp/mb_eic1_adapter.py", "purpose": "EIC-1 LSP+RSC+SCE derivation (read-only)", "status": "experimental isolated", "production_dependency": "NONE", "allowed_usage": "isolated experiment replay only"},
+  {"file": "tmp/mb_phase3_2_replay.py", "purpose": "OFF/ON replay runner (importlib harness unmodified)", "status": "experimental isolated", "production_dependency": "NONE", "allowed_usage": "isolated experiment replay only"},
+  {"file": "tmp/mb_phase3_2_*.json", "purpose": "replay results/baseline/report", "status": "experimental data", "production_dependency": "NONE", "allowed_usage": "audit reference only"},
+  {"file": "tmp/mb_phase3_1_*.md/json", "purpose": "parameter fixation record", "status": "design record", "production_dependency": "NONE", "allowed_usage": "reference only"},
+  {"file": "tmp/mb_phase3_*design.md/json", "purpose": "Phase 3 frozen matrix design", "status": "design record", "production_dependency": "NONE", "allowed_usage": "reference only"},
+  {"file": "tmp/mb_phase2*/2.1*/2.2*", "purpose": "contract/review design", "status": "design record", "production_dependency": "NONE", "allowed_usage": "reference only"},
+  {"file": "tmp/mb_case_study / dice_* (7 files)", "purpose": "evidence consolidation / paper materials", "status": "documentation", "production_dependency": "NONE", "allowed_usage": "reference only"}],
+ "experimental_artifact_isolation": "PASS",
+ "isolation_evidence": ["experimental code only in tmp/","not imported by perception/ chunker/ production (grep 0 hits)","adapter read-only over frozen store (no mutation)","replay imports harness via importlib (file unmodified)","only write = tmp/ results JSON","no frozen runtime/harness/IS-11 decision/GT/TLD/Atomic Observation/capability registration change","no new production dependency"],
+
+ "G_scientific_claim_boundary": {
+  "mechanism_validation_not_generalization": true,
+  "gt_confirmed_positive": 1,
+  "natural_conflict_coverage": 0,
+  "production_readiness": false,
+  "generalization": "NOT VERIFIED",
+  "allowed_claim": "在当前冻结测试框架中，验证了该 minimal Consumer Integration 能够处理已识别的结构切片失败模式",
+  "forbidden_claims": ["universal vector table recovery","universal table detection","row-number recognition","cross-document generalization","universal method","production readiness"]},
+
+ "H_research_integrity": {
+  "failure_preservation": "PH-02 REJECTED / C2 INSUFFICIENT / Phase 2.1 CONDITIONAL_PASS / honest ABSTAIN (313/462) all archived, not deleted",
+  "discrepancy_log": "7 entries (D1-D7) in tmp/dice_evidence_discrepancy_log.md, OLD->AUDIT->CORRECTED->REASON->TIMING, history not overwritten",
+  "historical_corrections": ["DIRECT 6->8->9","eff/cs 5+3->3+7","AMB-262 classification","OFF pseudo-mismatch","AMB-135 '4' identity","group enumeration scope","FP 3->1"],
+  "evidence_provenance": "EIC-1 11/11 records quadruple complete; frozen source sha verifiable per-item",
+  "experiment_reproducibility": "determinism 21/21 double-run byte-identical; frozen baseline drift=0; OFF byte-identical; independently reproducible"},
+
+ "closure_audit": {
+  "cross_check_11_assets": "CLEAN (no new conflicts beyond documented discrepancies)",
+  "phase_ordering": "OK",
+  "direct_count_consistent": "9 (canonical, phase2.1)",
+  "phase32_verdict_consistent": "REPLAY_PASS across assets",
+  "gt_positive_1_present": true,
+  "over_claim_check": "all 'over-claim' matches in forbidden-list context (禁止声称/禁止写成), not actual claims",
+  "production_flags": "all False",
+  "discrepancy_log_preserved": "D1-D7 all preserved",
+  "pass_not_misinterpreted_as_generalization": true,
+  "temporary_artifacts_not_treated_as_production": true},
+
+ "final_gate": {
+  "M_B": "CLOSED / PASS",
+  "current_experiment": "NONE",
+  "new_experiments": 0, "new_parameters": 0, "new_predicates": 0,
+  "gt_modified": false, "tld_modified": false, "atomic_observation_modified": false,
+  "is11_decision_modified": false, "production_code_modified": false,
+  "experimental_artifact_isolation": "PASS",
+  "frozen_baseline": "INTACT",
+  "production": false,
+  "generalization": "NOT VERIFIED",
+  "gt_positive": 1,
+  "current_state": "STABLE CHECKPOINT",
+  "stop": true}
+}

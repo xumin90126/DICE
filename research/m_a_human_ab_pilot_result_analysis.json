@@ -1,0 +1,218 @@
+{
+  "analysis_type": "READ-ONLY EXPERIMENT RESULT ANALYSIS",
+  "date": "2026-09-18",
+  "experiment": "M-A Human A/B Evidence Sufficiency Pilot",
+  "sample": {"n_total": 24, "n_e0": 12, "n_e1": 12, "design": "parallel_case_split", "single_human": true},
+
+  "data_integrity_audit": {
+    "status": "PASS",
+    "total_cases": 24,
+    "unique_case_ids": 24,
+    "duplicates": 0,
+    "e0_arm": 12,
+    "e1_arm": 12,
+    "missing_judgments": 0,
+    "case_id_mismatch": 0,
+    "sampling_frame_match": "24/24",
+    "total_revision_events": 134,
+    "m5_values": ["NOT_AVAILABLE"]
+  },
+
+  "blinding_leakage_audit": {
+    "status": "PASS",
+    "forbidden_fields_in_pack": "NONE",
+    "forbidden_fields_in_results": "NONE",
+    "visible_version_labels_in_html": "NONE",
+    "non_visible_comments": "JS comments contain E0/E1 (NON_VISIBLE_IMPLEMENTATION_COMMENT)",
+    "css_false_positive": "#e0e0e0 is CSS hex color, not version label",
+    "blinding_status": "PARTIAL",
+    "data_contamination": "NONE",
+    "semantic_leakage": "NONE"
+  },
+
+  "e0_vs_e1_comparison": {
+    "M1_association_judgment": {
+      "yes": {"e0": 6, "e1": 5, "diff": -1},
+      "no": {"e0": 3, "e1": 4, "diff": 1},
+      "uncertain": {"e0": 3, "e1": 3, "diff": 0},
+      "type": "HUMAN_JUDGMENT_DISTRIBUTION",
+      "not_accuracy": true
+    },
+    "M2_pdf_reopen": {
+      "e0_yes": 1, "e0_rate": "8.3%",
+      "e1_yes": 0, "e1_rate": "0.0%",
+      "diff": -1, "diff_pp": -8.3,
+      "interpretation": "slight improvement (1 case)"
+    },
+    "M3_additional_document_search": {
+      "e0_yes": 7, "e0_rate": "58.3%",
+      "e1_yes": 9, "e1_rate": "75.0%",
+      "diff": 2, "diff_pp": 16.7,
+      "interpretation": "INCREASED — opposite of hypothesis"
+    },
+    "M4_reconstruction_burden": {
+      "L0": {"e0": 0, "e1": 1, "diff": 1},
+      "L1": {"e0": 3, "e1": 2, "diff": -1},
+      "L2": {"e0": 6, "e1": 7, "diff": 1},
+      "L3": {"e0": 0, "e1": 0, "diff": 0},
+      "L4": {"e0": 3, "e1": 2, "diff": -1},
+      "L3_L4": {"e0": 3, "e1": 2, "diff": -1},
+      "L0_L1": {"e0": 3, "e1": 3, "diff": 0},
+      "interpretation": "mixed — L4 improved, L2 worsened, no convergent pattern"
+    },
+    "M5_time_to_judgment": {
+      "status": "NOT_AVAILABLE",
+      "analyzed": false
+    },
+    "M6_evidence_sufficiency": {
+      "sufficient": {"e0": 9, "e1": 9, "diff": 0},
+      "insufficient": {"e0": 1, "e1": 0, "diff": -1},
+      "uncertain": {"e0": 2, "e1": 3, "diff": 1},
+      "interpretation": "no clear improvement"
+    }
+  },
+
+  "uncertain_analysis": {
+    "e0_uncertain": 3,
+    "e1_uncertain": 3,
+    "diff": 0,
+    "e0_breakdown": {"EVIDENCE_INSUFFICIENT": 1, "POSSIBLE_SEMANTIC_BOUNDARY": 0, "NOT_DETERMINABLE": 2},
+    "e1_breakdown": {"EVIDENCE_INSUFFICIENT": 0, "POSSIBLE_SEMANTIC_BOUNDARY": 0, "NOT_DETERMINABLE": 3},
+    "e0_cases": [
+      {"case_id": "is11_med_001_p18_325_655", "m4": 4, "m6": "insufficient", "class": "EVIDENCE_INSUFFICIENT"},
+      {"case_id": "is11_med_001_p15_498_107", "m4": 4, "m6": "uncertain", "class": "NOT_DETERMINABLE"},
+      {"case_id": "arxiv_2402.18619_p10_72_729", "m4": 4, "m6": "uncertain", "class": "NOT_DETERMINABLE"}
+    ],
+    "e1_cases": [
+      {"case_id": "is11_efficientnet_p2_158_372", "m4": 4, "m6": "uncertain", "class": "NOT_DETERMINABLE"},
+      {"case_id": "is11_resnet_p7_321_545", "m4": 4, "m6": "uncertain", "class": "NOT_DETERMINABLE"},
+      {"case_id": "arxiv_2402.18619_p18_346_73", "m4": 2, "m6": "uncertain", "class": "NOT_DETERMINABLE"}
+    ],
+    "note": "Remaining UNCERTAIN are Type A negatives with DEF=0 (genuine no drawing on page)"
+  },
+
+  "stratified_analysis": {
+    "S1_COMPLETE_YES": {
+      "n": 8, "e0": 4, "e1": 4,
+      "e0": {"m1": {"yes": 4}, "m4": [1,2,2,2], "m6": {"sufficient": 4}, "pdf_reopen": 0},
+      "e1": {"m1": {"yes": 4}, "m4": [1,1,0,2], "m6": {"sufficient": 4}, "pdf_reopen": 0},
+      "regression": "NO REGRESSION",
+      "note": "E1 maintained all YES + SUFFICIENT"
+    },
+    "S3_COMPLETE_UNCERTAIN": {
+      "n": 2, "e0": 1, "e1": 1,
+      "e0": {"case": "arxiv_2402.18619_p19_147_496", "m1": "no", "m4": 2, "m6": "sufficient"},
+      "e1": {"case": "is11_resnet_p4_464_620", "m1": "yes", "m4": 2, "m6": "sufficient"},
+      "note": "Both resolved to definitive. Different cases, n=1 per arm."
+    },
+    "S4_TYPE_A_NEGATIVE": {
+      "n": 6, "e0": 3, "e1": 3,
+      "e0": {"m1": {"uncertain": 3}, "m4": [4,4,4], "m6": {"insufficient": 1, "uncertain": 2}},
+      "e1": {"m1": {"uncertain": 2, "no": 1}, "m4": [4,4,2], "m6": {"uncertain": 2, "sufficient": 1}},
+      "note": "Partial improvement — 1 NO, 1 L2, 1 SUFFICIENT. But 2 still L4 (DEF=0 pages)."
+    },
+    "S5_TYPE_B_NEGATIVE": {
+      "n": 4, "e0": 2, "e1": 2,
+      "e0": {"m1": {"yes": 2}, "m4": [1,1], "m6": {"sufficient": 2}},
+      "e1": {"m1": {"no": 1, "uncertain": 1}, "m4": [2,2], "m6": {"sufficient": 1, "uncertain": 1}},
+      "note": "E1 more conservative. Counterintuitive but n=2, different cases."
+    },
+    "S6_NO_JUDGMENT": {
+      "n": 4, "e0": 2, "e1": 2,
+      "e0": {"m1": {"no": 2}, "m4": [2,2], "m6": {"sufficient": 2}},
+      "e1": {"m1": {"no": 2}, "m4": [2,2], "m6": {"sufficient": 2}},
+      "leakage_check": "PASS — no YES induced"
+    }
+  },
+
+  "negative_control_analysis": {
+    "type_a": {"e0": {"uncertain": 3}, "e1": {"uncertain": 2, "no": 1}},
+    "type_b": {"e0": {"yes": 2}, "e1": {"no": 1, "uncertain": 1}},
+    "reporting": "HUMAN_JUDGMENT_DISTRIBUTION",
+    "not_fpr": true,
+    "not_machine_accuracy": true,
+    "note": "N=3 and N=2 too small for conclusions"
+  },
+
+  "consistency_check": {
+    "improvements": ["M2 (-1 case)", "M4 L4 (-1 case)", "M6 INSUFFICIENT (-1 case)"],
+    "worsening": ["M3 (+2 cases)", "M6 UNCERTAIN (+1 case)"],
+    "unchanged": ["M1 UNCERTAIN (0)", "M4 L0+L1 (0)", "M6 SUFFICIENT (0)"],
+    "convergence": "NO convergent improvement pattern",
+    "largest_effect": "M3 worsening (+2 cases, +16.7pp)"
+  },
+
+  "regression_check": {
+    "e1_regression": "FALSE",
+    "s1_regression": "NO (YES=4/4, SUFFICIENT=4/4 maintained)",
+    "s6_leakage": "NO (NO=2/2 maintained)"
+  },
+
+  "p0_vs_p1_relationship": {
+    "p0_counterfactual": "Proved Evidence Pack CONTENT improved (4 gaps resolved)",
+    "p1_human_ab": "Did NOT confirm Human-level burden reduction",
+    "not_contradictory": "P0=content improved, P1=human benefit not confirmed",
+    "possible_explanations": [
+      "N=24 too small to detect effect",
+      "Parallel split adds case-level noise",
+      "E1 may increase search awareness",
+      "Genuine lack of human-perceived benefit"
+    ]
+  },
+
+  "research_question_answers": {
+    "Q1_pdf_reopen": "YES, marginally (-1 case, -8.3pp). E0 already low.",
+    "Q2_document_search": "NO. E1 INCREASED search (+2 cases, +16.7pp). Opposite of hypothesis.",
+    "Q3_reconstruction_burden": "INCONCLUSIVE. Mixed: L4 improved, L2 worsened, no convergence.",
+    "Q4_evidence_sufficiency": "NO clear improvement. SUFFICIENT unchanged (9→9).",
+    "Q5_uncertain_composition": "Count unchanged (3→3). E1 eliminated 1 EVIDENCE_INSUFFICIENT, gained 1 NOT_DETERMINABLE.",
+    "Q6_regression": "NO regression. S1 and S6 maintained.",
+    "Q7_contamination": "NO contamination, leakage, or mismatch detected.",
+    "Q8_verdict": "INCONCLUSIVE"
+  },
+
+  "evidence_pack_human_benefit": "INCONCLUSIVE",
+  "verdict_rationale": [
+    "No convergent improvement across M2/M3/M4/M6",
+    "M3 worsened significantly (+2 cases, +16.7pp) — opposite of hypothesis",
+    "UNCERTAIN count unchanged (3→3)",
+    "SUFFICIENT count unchanged (9→9)",
+    "Improvements are all 1-case effects (within noise)",
+    "S1 regression test PASSED, S6 leakage test PASSED",
+    "P0 proved content improvement, P1 did not confirm human benefit",
+    "N=24, single-human, parallel split — limited power"
+  ],
+
+  "limitations": [
+    "N=24 (12 per arm) — very small, descriptive only",
+    "SINGLE HUMAN REVIEWER — INTER_RATER_RELIABILITY=NOT_AVAILABLE, MULTI_HUMAN_GENERALIZATION=NOT_TESTED",
+    "PARALLEL SPLIT — different cases in each arm, adds noise",
+    "M3 counterintuitive result — cannot determine if genuine or noise",
+    "M5 NOT_AVAILABLE — no timing data",
+    "No cognitive load measure (no NASA-TLX)",
+    "5 documents only — cannot generalize",
+    "P0 vs P1 gap requires further investigation"
+  ],
+
+  "effect_size": {
+    "largest_improvement": "M2 PDF Reopen (-1 case, -8.3pp)",
+    "largest_worsening": "M3 Document Search (+2 cases, +16.7pp)",
+    "max_effect_magnitude": 2,
+    "statistical_significance": "NOT_CLAIMED",
+    "label": "PILOT EVIDENCE"
+  },
+
+  "governance": {
+    "implementation_authorized": false,
+    "experiment_authorized": false,
+    "human_validation_authorized": false,
+    "human_data_modified": false,
+    "evidence_pack_modified": false,
+    "m_a_algorithm_modified": false,
+    "frozen_baseline": "INTACT",
+    "frozen_baseline_drift": 0,
+    "runtime_authority": "ZERO",
+    "production": false,
+    "stop": true
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "total_unique_cases": 79,
+  "total_review_events": 80,
+  "final_judgments": 79,
+  "yes": 61,
+  "no": 4,
+  "uncertain": 14,
+  "sum_check": 79,
+  "count_consistency": true,
+  "duplicate_cases": [],
+  "revision_cases": [
+    {
+      "case_id": "arxiv_2402.18619_p28_152_82",
+      "original_judgment": "uncertain",
+      "final_judgment": "yes",
+      "revision_count": 1
+    }
+  ],
+  "case_type_counts": {
+    "caption_like": 39,
+    "ambiguous_fragment": 19,
+    "subfigure_label": 4,
+    "reference_like": 1,
+    "Type A negative": 8,
+    "Type B negative": 8
+  },
+  "case_type_overlap": "MUTUALLY_EXCLUSIVE (pattern_type and negative_type never co-occur on same case for type classification; negative_type overrides pattern_type)",
+  "case_type_system": "MUTUALLY_EXCLUSIVE (6 primary types, no overlap in classification)",
+  "crosstab": {
+    "caption_like": {
+      "yes": 39
+    },
+    "ambiguous_fragment": {
+      "yes": 12,
+      "uncertain": 3,
+      "no": 4
+    },
+    "subfigure_label": {
+      "yes": 4
+    },
+    "reference_like": {
+      "yes": 1
+    },
+    "Type A negative": {
+      "uncertain": 7,
+      "yes": 1
+    },
+    "Type B negative": {
+      "yes": 4,
+      "uncertain": 4
+    }
+  },
+  "association_validity": {
+    "numerator": 56,
+    "denominator": 63,
+    "value": 88.9,
+    "formula": "YES / candidate_total"
+  },
+  "negative_control_metrics": {
+    "total": 16,
+    "yes": 5,
+    "no": 0,
+    "uncertain": 11,
+    "fpr": 31.2,
+    "fpr_formula": "YES / neg_total (includes UNCERTAIN in denominator)",
+    "fpr_excl_unc": 100.0,
+    "fpr_excl_unc_formula": "YES / (YES + NO) (excludes UNCERTAIN)"
+  },
+  "boundary_rate": {
+    "numerator": 14,
+    "denominator": 79,
+    "value": 17.7,
+    "formula": "UNCERTAIN / unique_cases"
+  },
+  "root_cause": "C: revision counted as extra event. Case arxiv_2402.18619_p28_152_82 has 2 events (original uncertain + revision to yes). Previous summary counted 80 events instead of 79 unique cases. subfigure_label was also miscounted as 5 instead of 4.",
+  "algorithm_modified": false,
+  "human_data_modified": false,
+  "frozen_baseline_drift": 0
+}

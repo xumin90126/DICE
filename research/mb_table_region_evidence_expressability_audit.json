@@ -1,0 +1,706 @@
+{
+ "atomic_observation_modified": false,
+ "case_facts_data": [
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "INSUFFICIENT_EVIDENCE",
+   "a": {
+    "band_n": 9,
+    "found": true,
+    "lag_n": 8,
+    "lag_yext": 405.9,
+    "text": "Models",
+    "x0": 131.0
+   },
+   "b": {
+    "band_n": 9,
+    "found": true,
+    "lag_n": 3,
+    "lag_yext": 48.8,
+    "text": "Size",
+    "x0": 202.5
+   },
+   "case_id": "IS11-AMB-457",
+   "doc": "is11_cs_001",
+   "gt": "KEEP_SEPARATE",
+   "page": 3,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 40.45,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "INSUFFICIENT_EVIDENCE",
+   "a": {
+    "band_n": 9,
+    "found": true,
+    "lag_n": 1,
+    "lag_yext": 0.0,
+    "text": "WGe",
+    "x0": 428.4
+   },
+   "b": {
+    "band_n": 9,
+    "found": true,
+    "lag_n": 8,
+    "lag_yext": 318.6,
+    "text": "Avg.",
+    "x0": 462.5
+   },
+   "case_id": "IS11-AMB-462",
+   "doc": "is11_cs_001",
+   "gt": "KEEP_SEPARATE",
+   "page": 3,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 11.95,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "INSUFFICIENT_EVIDENCE",
+   "a": {
+    "band_n": 9,
+    "found": true,
+    "lag_n": 6,
+    "lag_yext": 64.9,
+    "text": "37.0",
+    "x0": 310.8
+   },
+   "b": {
+    "band_n": 9,
+    "found": true,
+    "lag_n": 8,
+    "lag_yext": 433.0,
+    "text": "60.0",
+    "x0": 340.2
+   },
+   "case_id": "IS11-AMB-467",
+   "doc": "is11_cs_001",
+   "gt": "KEEP_SEPARATE",
+   "page": 3,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 11.95,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "INSUFFICIENT_EVIDENCE",
+   "a": {
+    "band_n": 9,
+    "found": true,
+    "lag_n": 7,
+    "lag_yext": 329.5,
+    "text": "23.5",
+    "x0": 277.1
+   },
+   "b": {
+    "band_n": 9,
+    "found": true,
+    "lag_n": 6,
+    "lag_yext": 75.8,
+    "text": "38.5",
+    "x0": 310.8
+   },
+   "case_id": "IS11-AMB-483",
+   "doc": "is11_cs_001",
+   "gt": "KEEP_SEPARATE",
+   "page": 3,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 16.24,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "INSUFFICIENT_EVIDENCE",
+   "a": {
+    "band_n": 9,
+    "found": true,
+    "lag_n": 8,
+    "lag_yext": 177.3,
+    "text": "61.4",
+    "x0": 239.2
+   },
+   "b": {
+    "band_n": 9,
+    "found": true,
+    "lag_n": 7,
+    "lag_yext": 329.5,
+    "text": "28.3",
+    "x0": 277.1
+   },
+   "case_id": "IS11-AMB-505",
+   "doc": "is11_cs_001",
+   "gt": "KEEP_SEPARATE",
+   "page": 3,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 20.53,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "INSUFFICIENT_EVIDENCE",
+   "a": {
+    "band_n": 9,
+    "found": true,
+    "lag_n": 6,
+    "lag_yext": 64.9,
+    "text": "44.2",
+    "x0": 310.8
+   },
+   "b": {
+    "band_n": 9,
+    "found": true,
+    "lag_n": 8,
+    "lag_yext": 433.0,
+    "text": "63.5",
+    "x0": 340.2
+   },
+   "case_id": "IS11-AMB-514",
+   "doc": "is11_cs_001",
+   "gt": "KEEP_SEPARATE",
+   "page": 3,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 11.95,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "INSUFFICIENT_EVIDENCE",
+   "a": {
+    "band_n": 1,
+    "found": true,
+    "lag_n": 24,
+    "lag_yext": 318.7,
+    "text": "facto backbone f",
+    "x0": 108.0
+   },
+   "b": {
+    "band_n": 1,
+    "found": true,
+    "lag_n": 2,
+    "lag_yext": 108.5,
+    "text": "To embrace the o",
+    "x0": 282.4
+   },
+   "case_id": "IS11-AMB-519",
+   "doc": "is11_cs_001",
+   "gt": "KEEP_SEPARATE",
+   "page": 3,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 8.55,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "KEEP_SEPARATE",
+   "a": {
+    "band_n": 3,
+    "found": true,
+    "lag_n": 2,
+    "lag_yext": 10.9,
+    "text": "Size",
+    "x0": 234.7
+   },
+   "b": {
+    "band_n": 3,
+    "found": true,
+    "lag_n": 1,
+    "lag_yext": 0.0,
+    "text": "Max Batch Size",
+    "x0": 271.8
+   },
+   "case_id": "IS11-AMB-522",
+   "doc": "is11_cs_001",
+   "gt": "KEEP_SEPARATE",
+   "page": 4,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 19.92,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "KEEP_SEPARATE",
+   "a": {
+    "band_n": 7,
+    "found": true,
+    "lag_n": 2,
+    "lag_yext": 10.3,
+    "text": "PIQA",
+    "x0": 295.1
+   },
+   "b": {
+    "band_n": 7,
+    "found": true,
+    "lag_n": 4,
+    "lag_yext": 255.3,
+    "text": "SciQ",
+    "x0": 331.0
+   },
+   "case_id": "IS11-AMB-530",
+   "doc": "is11_cs_001",
+   "gt": "KEEP_SEPARATE",
+   "page": 5,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 12.27,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "INSUFFICIENT_EVIDENCE",
+   "a": {
+    "band_n": 4,
+    "found": true,
+    "lag_n": 3,
+    "lag_yext": 18.1,
+    "text": "Resolution",
+    "x0": 428.1
+   },
+   "b": {
+    "band_n": 4,
+    "found": true,
+    "lag_n": 2,
+    "lag_yext": 316.4,
+    "text": "#Channels",
+    "x0": 469.8
+   },
+   "case_id": "IS11-AMB-130",
+   "doc": "is11_efficientnet",
+   "gt": "KEEP_SEPARATE",
+   "page": 5,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 9.06,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "MERGE",
+   "C": "MERGE",
+   "a": {
+    "band_n": 6,
+    "found": true,
+    "lag_n": 14,
+    "lag_yext": 520.9,
+    "text": "4",
+    "x0": 521.0
+   },
+   "b": {
+    "band_n": 6,
+    "found": true,
+    "lag_n": 6,
+    "lag_yext": 54.3,
+    "text": "MBConv6, k5x5",
+    "x0": 354.1
+   },
+   "case_id": "IS11-AMB-135",
+   "doc": "is11_efficientnet",
+   "gt": "KEEP_SEPARATE",
+   "page": 5,
+   "pairwise": {
+    "direction": "RIGHT_OF",
+    "horizontal_distance": 116.44,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "INSUFFICIENT_EVIDENCE",
+   "a": {
+    "band_n": 12,
+    "found": true,
+    "lag_n": 8,
+    "lag_yext": 95.2,
+    "text": "41M",
+    "x0": 188.6
+   },
+   "b": {
+    "band_n": 12,
+    "found": true,
+    "lag_n": 17,
+    "lag_yext": 268.8,
+    "text": "EfﬁcientNet-B5",
+    "x0": 213.4
+   },
+   "case_id": "IS11-AMB-262",
+   "doc": "is11_efficientnet",
+   "gt": "KEEP_SEPARATE",
+   "page": 7,
+   "pairwise": {
+    "direction": "BELOW",
+    "horizontal_distance": 12.03,
+    "same_x_band": false,
+    "same_y_band": false,
+    "vertical_distance": 17.61
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "INSUFFICIENT_EVIDENCE",
+   "a": {
+    "band_n": 3,
+    "found": true,
+    "lag_n": 0,
+    "lag_yext": 0,
+    "text": "Test Size",
+    "x0": 224.9
+   },
+   "b": {
+    "band_n": 3,
+    "found": true,
+    "lag_n": 1,
+    "lag_yext": 0.0,
+    "text": "#Classes",
+    "x0": 258.9
+   },
+   "case_id": "IS11-AMB-313",
+   "doc": "is11_efficientnet",
+   "gt": "KEEP_SEPARATE",
+   "page": 8,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 8.44,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "KEEP_SEPARATE",
+   "a": {
+    "band_n": 8,
+    "found": true,
+    "lag_n": 4,
+    "lag_yext": 89.7,
+    "text": "83.95",
+    "x0": 242.3
+   },
+   "b": {
+    "band_n": 8,
+    "found": true,
+    "lag_n": 4,
+    "lag_yext": 53.7,
+    "text": "84.26",
+    "x0": 266.5
+   },
+   "case_id": "IS11-AMB-346",
+   "doc": "is11_efficientnet",
+   "gt": "KEEP_SEPARATE",
+   "page": 9,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 8.42,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "KEEP_SEPARATE",
+   "a": {
+    "band_n": 9,
+    "found": true,
+    "lag_n": 3,
+    "lag_yext": 29.2,
+    "text": "80.16",
+    "x0": 145.3
+   },
+   "b": {
+    "band_n": 9,
+    "found": true,
+    "lag_n": 3,
+    "lag_yext": 29.2,
+    "text": "81.72",
+    "x0": 169.6
+   },
+   "case_id": "IS11-AMB-350",
+   "doc": "is11_efficientnet",
+   "gt": "KEEP_SEPARATE",
+   "page": 9,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 8.43,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "KEEP_SEPARATE",
+   "a": {
+    "band_n": 2,
+    "found": true,
+    "lag_n": 30,
+    "lag_yext": 449.6,
+    "text": "unsurprising) an",
+    "x0": 308.9
+   },
+   "b": {
+    "band_n": 2,
+    "found": true,
+    "lag_n": 2,
+    "lag_yext": 135.7,
+    "text": "Unexpectedly,",
+    "x0": 488.1
+   },
+   "case_id": "IS11-AMB-005",
+   "doc": "is11_resnet",
+   "gt": "KEEP_SEPARATE",
+   "page": 1,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 10.02,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "KEEP_SEPARATE",
+   "a": {
+    "band_n": 2,
+    "found": true,
+    "lag_n": 8,
+    "lag_yext": 111.6,
+    "text": "28.54",
+    "x0": 170.2
+   },
+   "b": {
+    "band_n": 2,
+    "found": true,
+    "lag_n": 0,
+    "lag_yext": 0,
+    "text": "10.02",
+    "x0": 215.3
+   },
+   "case_id": "IS11-AMB-024",
+   "doc": "is11_resnet",
+   "gt": "KEEP_SEPARATE",
+   "page": 6,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 24.98,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "KEEP_SEPARATE",
+   "a": {
+    "band_n": 2,
+    "found": true,
+    "lag_n": 6,
+    "lag_yext": 60.6,
+    "text": "21.59",
+    "x0": 199.5
+   },
+   "b": {
+    "band_n": 2,
+    "found": true,
+    "lag_n": 9,
+    "lag_yext": 158.6,
+    "text": "5.71",
+    "x0": 246.9
+   },
+   "case_id": "IS11-AMB-034",
+   "doc": "is11_resnet",
+   "gt": "KEEP_SEPARATE",
+   "page": 6,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 27.23,
+    "same_x_band": false,
+    "same_y_band": false,
+    "vertical_distance": 15.54
+   }
+  },
+  {
+   "B": "INSUFFICIENT_EVIDENCE",
+   "C": "KEEP_SEPARATE",
+   "a": {
+    "band_n": 8,
+    "found": true,
+    "lag_n": 1,
+    "lag_yext": 0.0,
+    "text": "41.5",
+    "x0": 413.0
+   },
+   "b": {
+    "band_n": 8,
+    "found": true,
+    "lag_n": 2,
+    "lag_yext": 111.1,
+    "text": "21.2",
+    "x0": 474.4
+   },
+   "case_id": "IS11-AMB-074",
+   "doc": "is11_resnet",
+   "gt": "KEEP_SEPARATE",
+   "page": 8,
+   "pairwise": {
+    "direction": "LEFT_OF",
+    "horizontal_distance": 45.64,
+    "same_x_band": false,
+    "same_y_band": true,
+    "vertical_distance": 0.0
+   }
+  }
+ ],
+ "cases_examined": {
+  "controls_resolved_8": [
+   "AMB-005 (res p1)",
+   "AMB-024/034 (res p6)",
+   "AMB-074 (res p8)",
+   "AMB-346/350 (eff p9)",
+   "AMB-522/530 (cs p4/p5)"
+  ],
+  "direct_cases_8": [
+   "AMB-135 (FP)",
+   "AMB-130 (eff p5 header, lag 3/2 band 4)",
+   "AMB-313 (eff p8 header, lag 0/1 band 3)",
+   "AMB-457/462/467/483/505/514 (cs p3, lag 6-8 band 9 numeric/header pairs)"
+  ],
+  "fp_case": "IS11-AMB-135 (eff p5): a='4'@x0=320.35 lag=10 members ('i',122.0;'1'..'9'@134.8-207.2;contaminating '1'@263.4) b='MBConv6, k5x5'@x0=354.14 lag=6 (operator column) pairwise same_y_band=True h_gap=30.02 v_gap=0 -> 'same region + different partition' FULLY EXPRESSIBLE in frozen facts",
+  "out_of_scope_2": [
+   "AMB-262 (eff p7: same_y_band=False, BELOW v=17.6 - not a same-row case)",
+   "AMB-519 (cs p3 prose pair, band=1, lag=24 margin group - CC-04 column-blind mechanism)"
+  ]
+ },
+ "consumer_gap": {
+  "evidence": "IS-11 consumer wired to TLD (chunker heuristic) instead of observation layer; no consumer queries frozen P2 structural facts; blind pages carry the same fact classes as resolved pages",
+  "primary": true
+ },
+ "correct_vs_blind_comparison": {
+  "finding": "NO observable Level-1 difference between resolved and blind cases: same fact class (same_y_band + aligned member groups on both sides). e.g. resolved '83.95' lag=4 band=8 (eff p9) vs blind '37.0' lag=6 band=9 (cs p3). The difference is entirely TLD-internal (lexical value regexes tuned to lab-unit corpora, fragment thresholds) - a CONSUMER gap, not an evidence gap."
+ },
+ "evidence_inventory": {
+  "absent": [
+   "line geometry (vector drawings) - documented limitation: schema known_limitations[0] 'page.get_drawings not covered'",
+   "rectangle geometry (same)",
+   "NTB channel = raster image blocks only (eff p5/6/7/9,res,cs,med = 0; eff p8 = 12 images)"
+  ],
+  "available": [
+   "TEXT_ATOM bbox/x0/x1/center",
+   "same_y_band_members/same_x_band_members",
+   "left/right/top/bottom/center_alignment_group",
+   "spatial_cluster_members/x_projection_overlap",
+   "frozen compute_pairwise (same_y_band,h_gap,v_gap,direction)",
+   "provenance per atom",
+   "RegionFact surface (Case A; no registered artifact on audited pages)"
+  ],
+  "tld_input_surface": "rebuild_page_lines visual text rows + _VALUE_RE lab-unit lexical regex + >=3-fragment/70% column-stability heuristics - a chunker-side consumer, NOT the observation layer"
+ },
+ "experiment_authorized": false,
+ "expressability_by_page": {
+  "cs_p3": "EXPRESSIBLE for 6/7 cases (lag 6-8 + band 9); AMB-519 prose pair out of scope",
+  "eff_p5": "EXPRESSIBLE (12 column clusters >=3 members in table zone y=118-210; FP pair partition facts complete)",
+  "eff_p6": "EXPRESSIBLE (no failing case to verify against; structure class same)",
+  "eff_p7": "EXPRESSIBLE page-level; AMB-262 pair out of cell-context scope (different band)",
+  "eff_p8": "PARTIALLY_EXPRESSIBLE for header pair (lag 0/1 - column membership weak, band+region context needed)",
+  "eff_p9_res_p1_p6_p8_cs_p4_p5": "EXPRESSIBLE (controls, resolved 8/8)",
+  "med_p20": "non-table observable (no multi-column co-structure)"
+ },
+ "frozen_baseline_intact": true,
+ "gt_modified": false,
+ "implementation_authorized": false,
+ "negative_boundary_analysis": {
+  "TOC": "hardest confusable (3 x-zones co-structure); dot-leader center instability + title width variance observable but closest to boundary - formal exclusion is experiment-side preregistration",
+  "axis_ticks": "single column stacks - observable",
+  "code_line_numbers": "single column + no parallel column co-structure (sib=0) - observable",
+  "prose_margin_groups": "lag=24-30 on plain prose (res p1 AMB-005, cs p3 AMB-519) - the PH-02 whole-group trap is REAL; band_n=1-2 + wide variable fragments distinguish; must express as local partitions, never whole groups",
+  "reference_numbers": "single column + long prose right neighbors - observable",
+  "value_columns": "structurally SAME class as row-index columns at Level 2 - by design not distinguished; role semantics stay in experiment/human layer"
+ },
+ "next_step": {
+  "content": "minimal Table Region Evidence construction experiment design: frozen P2 facts -> local (band∩column) cell-partition context; preregistered aggregation parameters; falsified by 45-case GT replay with the 8/8 resolved set as regression control; requires separate next-stage authorization",
+  "type": "DESIGN-ONLY"
+ },
+ "observation_gap": {
+  "new_request": "NONE",
+  "vector_drawings": "documented absent (known_limitations[0]); NOT load-bearing for Type C text-alignment route"
+ },
+ "overall_verdict": "EXPRESSIBLE",
+ "pages_examined": [
+  "eff p5",
+  "eff p6",
+  "eff p7",
+  "eff p8",
+  "eff p9*",
+  "res p1*",
+  "res p6*",
+  "res p8*",
+  "cs p3",
+  "cs p4*",
+  "cs p5*",
+  "med p20 (non-table control)"
+ ],
+ "production": false,
+ "q_answers": {
+  "Q1": "YES - M-B is closer to root cause: evidence exists and matches resolved-case structure; PH-02 attacked adjudication predicate form and failed",
+  "Q2": "Primary = Consumer/Integration Gap; secondary = Research-Object Gap (constructible, trap identified); Observation Gap real but non-load-bearing",
+  "Q3": "DESIGN-ONLY minimal Table Region Evidence construction experiment",
+  "Q4": "N/A - NEW_OBSERVATION_MEASUREMENT_REQUEST = NONE (line geometry recorded as optional future surface, not on the minimal path)",
+  "Q5": "IS11-AMB-135 (FP->0 via already-present suppress facts) + 8 DIRECT cases -> grounded decisions + 8/8 proven channel = expected abstention 18->~10 with known-correct decision rule"
+ },
+ "research_object_assessment": {
+  "blocking": false,
+  "intermediate_layer": "co-structured local region (>=2 distinct x0 alignment structures + overlapping y-extent + same_y_band crossing) -> local (band ∩ column) partitions -> cell-context; constructible from frozen facts; decision object is the LOCAL partition, never the whole group",
+  "mismatch_trap": "CONFIRMED REAL (page-margin groups on prose)",
+  "missing": "aggregation parameters (grouping/banding/region tolerances, min members) = MISSING_PARAMETER, experiment-side preregistration, NOT new observation"
+ },
+ "research_question": "RQ-MB: do frozen P2/P5 + Atomic Observation evidence already contain sufficient detector/source-backed geometric facts to express vector-table region/row/column/cell-like partition WITHOUT new observation measurement?",
+ "scope": "READ-ONLY expressability audit; Level1 geometry facts vs Level2 structural evidence vs Level3 table interpretation; 12 pages; FP case + blind abstains + 8/8 resolved controls + non-table controls",
+ "slicing_impact": {
+  "direct_cases": 8,
+  "estimated_abstention": "C abstains 18 -> ~10 (estimate, to be falsified by GT replay)",
+  "fp_elimination": "IS11-AMB-135 suppress evidence already present (in-region + different-partition)",
+  "out_of_scope": "AMB-262 (different band), AMB-519 (prose), med 8 (no tables; M-A/M-H/M-F scope)",
+  "proven_channel": "same cell-context decision rule 8/8 correct on detected tables (IS-11 experiment)"
+ },
+ "stop": true
+}

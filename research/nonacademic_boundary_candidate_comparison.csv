@@ -1,0 +1,4 @@
+Domain,Total_Cases,G1,G2,G3,G4,Potential_G5,Indeterminate,G5_Dominant_Reason
+Biotech,37,4,28,5,0,0,0,G2_DOMINATES (table structure)
+Finance/Education,35,8,17,10,0,0,0,G2_DOMINATES (table structure) + G3 (presentation)
+TOTAL_NON_ACADEMIC,72,12,45,15,0,0,0,G2_DOMINATES

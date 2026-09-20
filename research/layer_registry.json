@@ -1,0 +1,70 @@
+{
+  "layer": "atomic_observation",
+  "observation_schema_version": "1.0.0",
+  "authority": "tmp/atomic_observation_implementation_contract.md",
+  "coordinate_system": "pymupdf_page_1.26.x_y_down",
+  "pymupdf_version": "1.26.5",
+  "frozen_sources": {
+    "p1_extract": {"path": "perception/sandbox/observations/atomic_text.py", "sha256": "74d23ec784d657825780b35627f1b766ad87bd4dd74d88bbe4d560941f3b724a", "functions": ["extract_pdf_observations", "extract_page_observations", "_round_bbox", "pymupdf_version"]},
+    "p2_engine": {"path": "perception/sandbox/geometry/geometry_engine.py", "sha256": "388e7939d334458e194dd4d805f6cafa0b975ce4f78d6b1137a965dd13d5554c", "functions": ["compute_single", "compute_pairwise", "compute_page_bundle"]},
+    "p2_config": {"path": "perception/sandbox/geometry/geometry_config.py", "sha256": "7ef3629e5a9b819c59724b8e94a831d10a94e875c8b9534d750a7dcfa849196b", "note": "GeometryConfig frozen dataclass: y_band_tolerance=3.0, x_band_tolerance=3.0, alignment_tolerance=2.0"},
+    "p2_shape": {"path": "perception/sandbox/geometry/geometry_observation.py", "sha256": "7731377cb8468c9171efdc89f03c1d60f11e1372e3671c64c80c77d6da7524da", "note": "serialized dataclass shape anchor"},
+    "p4_span_config": {"path": "perception/sandbox/span/span_config.py", "sha256": "55b9a23850398acc7a89d9164ada6a5788a0bd1777b3f2f520960db2febbb2b2", "note": "semantic reference only - never called by layer"},
+    "p6_region_engine": {"path": "perception/sandbox/region/region_engine.py", "sha256": "57214c742503779fce8c6843cbe8d4964a62428541a55b5eb95d7f408e10e9eb", "note": "detector anchor for P6-produced RegionFacts; layer never invokes it"},
+    "table_line_detector": {"path": "chunker/table_line_detector.py", "sha256": "022f5c21e872ad9e737ddadb10a3f9eb8ff0ddd31333dacd6f30610cfbd8d79b", "note": "registered detector identity; layer never invokes it"}
+  },
+  "geometry_sources": {
+    "case_a_p1": "p1_artifact:{sha256}",
+    "case_a_p2": "p2_artifact:{sha256}",
+    "case_a_p6": "p6_artifact:{sha256}",
+    "case_b_p1": "frozen:atomic_text.py@74d23ec784d657825780b35627f1b766ad87bd4dd74d88bbe4d560941f3b724a",
+    "case_b_p2": "frozen:geometry_engine.py@388e7939d334458e194dd4d805f6cafa0b975ce4f78d6b1137a965dd13d5554c@cfg:geometry_config.py@7ef3629e5a9b819c59724b8e94a831d10a94e875c8b9534d750a7dcfa849196b",
+    "shape_anchor": "serialized-shape:geometry_observation.py@7731377cb8468c9171efdc89f03c1d60f11e1372e3671c64c80c77d6da7524da",
+    "relation_exception": "layer:relation_def@bbox_containment_v1",
+    "measurement_exception": "layer:measurement_identity@GAP_SEQUENCE_v1"
+  },
+  "registered_detectors": {
+    "p6_region_engine": {"source_sha": "57214c742503779fce8c6843cbe8d4964a62428541a55b5eb95d7f408e10e9eb", "status": "registered", "invoked_by_layer": false},
+    "table_line_detector": {"source_sha": "022f5c21e872ad9e737ddadb10a3f9eb8ff0ddd31333dacd6f30610cfbd8d79b", "status": "registered", "invoked_by_layer": false}
+  },
+  "frozen_function_whitelist": ["extract_pdf_observations", "extract_page_observations", "compute_single", "compute_pairwise", "compute_page_bundle", "_round_bbox", "pymupdf_version"],
+  "frozen_call_rules": {"compute_page_bundle": {"max_pairwise": null, "reason": "truncation must never masquerade as full observation universe"}},
+  "measurement_identities": {
+    "GAP_SEQUENCE_v1": {
+      "version": "1.0.0",
+      "grouping": "frozen same_y_band neighborhood sets (anchor U members), unique frozensets",
+      "gap": "frozen compute_pairwise().horizontal_distance verbatim",
+      "sort_key": "v1: (center_x asc, center_y asc, atom_id asc)",
+      "thresholds": "none"
+    },
+    "bbox_containment_v1": {
+      "version": "1.0.0",
+      "definition": "atom bbox center within region bbox, inclusive edges"
+    }
+  },
+  "artifact_manifest": {
+    "RM501-P4": {
+      "p1_atomic": {"path": "tmp/perception/p1/rm501_p2_atomic_observations.json", "sha256": "bb2bdf8ac3480899894db5ba3593a1d905267edae6845c9de924693b39da2a28", "truncated": false, "covers_page": 2},
+      "p2_geometry": {"path": "tmp/perception/p2/rm501_p2_geometry_observations.json", "sha256": "7c892548a22394be5d1123853c7c5b0f6fe143d1da36f7851186ceda3331e0f5", "truncated": true, "max_pairwise": 2000, "covers_page": 2}
+    },
+    "DC201-C1": {
+      "p6_regions": {"path": "tmp/perception/p6/dc201_p5_regions.json", "sha256": "ca174a1c246d6883986d76318813d0962d7f16e6b8111027280eb2de81cd83e2", "covers_page": 5}
+    }
+  },
+  "case_b_test_documents": {
+    "PH3-EARTH-001": {"path": "/tmp/phase3_is14_corpus/1906.11238.pdf", "sha256": " VERIFY_AT_RUNTIME ", "note": "read-only use for determinism/smoke verification"}
+  },
+  "versions": {
+    "observation_schema_version": "1.0.0",
+    "measurement_identity_versions": {"GAP_SEQUENCE_v1": "1.0.0", "bbox_containment_v1": "1.0.0"},
+    "detector_versions": "per RegionFact source_sha",
+    "query_version": "hypothesis-side; layer does not perceive it"
+  },
+  "forbidden_content": ["is_table_cell", "is_table", "is_figure", "is_caption", "is_axis", "is_chart", "is_tick_run", "is_uniform_run", "is_caption_group", "is_table_row", "MERGE", "KEEP", "REJECT", "score", "confidence", "ranking", "routing", "recommendation", "execution_plan", "fallback", "retry", "override", "correction", "timestamp", "host", "author"],
+  "declarations": {
+    "observation_is_not_interpretation": true,
+    "observation_is_not_decision": true,
+    "observation_is_not_capability": true,
+    "layer_does_not_own_runtime_authority": true
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "file_type": "cs1_future_case_repaired_set",
+    "date": "2026-09-12",
+    "design_only": true,
+    "experiment_authorization": "NOT_GRANTED",
+    "signal_id": "CS1-DIFFERENT_TABLE_COLUMNS",
+    "evidence_signature": "TLD is_in_table=True AND different_cell=True",
+    "independence_level": "C (same-doc, cross-page)",
+    "generalization_strength": "INSUFFICIENT",
+    "future_case_count": 1,
+    "minimum_required": 10,
+    "status": "INSUFFICIENT"
+  },
+  "past_cs1_pages": [
+    [
+      "is11_cs_001",
+      3
+    ],
+    [
+      "is11_cs_001",
+      4
+    ],
+    [
+      "is11_cs_001",
+      5
+    ],
+    [
+      "is11_efficientnet",
+      5
+    ],
+    [
+      "is11_efficientnet",
+      7
+    ],
+    [
+      "is11_efficientnet",
+      9
+    ],
+    [
+      "is11_resnet",
+      1
+    ],
+    [
+      "is11_resnet",
+      2
+    ],
+    [
+      "is11_resnet",
+      4
+    ],
+    [
+      "is11_resnet",
+      5
+    ],
+    [
+      "is11_resnet",
+      6
+    ],
+    [
+      "is11_resnet",
+      8
+    ],
+    [
+      "is11_resnet",
+      10
+    ],
+    [
+      "is11_resnet",
+      11
+    ]
+  ],
+  "past_cs1_docs": [
+    "is11_resnet",
+    "is11_efficientnet",
+    "is11_cs_001"
+  ],
+  "search_summary": {
+    "total_non_past_candidates": 190,
+    "total_non_past_pages": 15,
+    "tld_computed": 190,
+    "cs1_matched": 3,
+    "near_duplicates_removed": 2,
+    "independent_future_cases": 1,
+    "novel_document_cases": 0
+  },
+  "future_cases": [
+    {
+      "case_id": "IS11-AMB-124",
+      "doc_id": "is11_efficientnet",
+      "page": 2,
+      "text_a": "(b) width scaling",
+      "text_b": "(c) depth scaling",
+      "is_in_table": true,
+      "different_cell": true,
+      "independence_level": "C",
+      "is_novel_doc": false,
+      "near_duplicates_removed": [
+        "IS11-AMB-125",
+        "IS11-AMB-126"
+      ]
+    }
+  ]
+}

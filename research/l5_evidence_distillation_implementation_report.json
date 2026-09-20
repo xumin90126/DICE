@@ -1,0 +1,248 @@
+{
+  "report_type": "implementation_report",
+  "report_date": "2026-09-12",
+  "scope": "Experiment implementation (3-condition UI, recording, integrity tests, internal dry run)",
+  "authorization": "IMPLEMENTATION_AUTHORIZED = TRUE (this round)",
+  "mode": "READ-ONLY on frozen baseline; experiment code in tmp/ only",
+  "implementation_scope": {
+    "built": [
+      "3-condition UI (A/B1/B2) with progressive disclosure and Evidence Cue",
+      "Experiment server (port 8091) with autosave + raw events",
+      "Case dataset (30 cases, 6 types: P/N/B/C/S/U)",
+      "Latin Square counterbalancing (3 groups)",
+      "Automation bias instrumentation (WCAR/COR/EIR/CFR)",
+      "Full recording schema (decision + effort + automation bias + raw events)"
+    ],
+    "not_modified": [
+      "P1-P7 (all perception layers)",
+      "TLD",
+      "Atomic Observation",
+      "Aggregation",
+      "Evidence Compression",
+      "SCE",
+      "RSC",
+      "IS-11 decision logic",
+      "Capability Registry",
+      "Capability Runtime",
+      "Frozen Capability Table",
+      "GT",
+      "historical experiment results"
+    ]
+  },
+  "files": {
+    "new": [
+      "tmp/l5_evidence_distillation_experiment/experiment_server.py",
+      "tmp/l5_evidence_distillation_experiment/app/experiment_ui.html",
+      "tmp/l5_evidence_distillation_experiment/data/experiment_cases.json",
+      "tmp/l5_evidence_distillation_experiment/data/experiment_cases_embedded.json",
+      "tmp/l5_evidence_distillation_experiment/recording/experiment_results_live.json",
+      "tmp/l5_evidence_distillation_experiment/recording/raw_events.jsonl",
+      "tmp/l5_evidence_distillation_experiment/recording/complete_DRYRUN_001.json"
+    ],
+    "modified_outside_tmp": []
+  },
+  "frozen_baseline": {
+    "status": "INTACT",
+    "drift": 0,
+    "sources_checked": 7,
+    "gt_hash": "7349963d0d23b5ef",
+    "tld_hash": "022f5c21e872ad9e",
+    "production_modifications": 0
+  },
+  "condition_integrity": {
+    "status": "PASS",
+    "a_fields": 15,
+    "b1_main": 8,
+    "b1_hidden": 7,
+    "b1_cues": 0,
+    "b2_main": 8,
+    "b2_hidden": 7,
+    "b2_cues": 4,
+    "b1_main_equals_b2_main": true,
+    "b1_hidden_equals_b2_hidden": true,
+    "same_style": "HIDDEN_NOT_DELETED (progressive disclosure)"
+  },
+  "evidence_integrity": {
+    "status": "PASS",
+    "underlying_evidence_identical": true,
+    "no_new_observation": true,
+    "no_deleted_evidence": true
+  },
+  "cue_integrity": {
+    "status": "PASS",
+    "cues_audited": 7,
+    "individual_checks": 182,
+    "all_semantic_authority_zero": true,
+    "all_judgment_leakage_false": true,
+    "all_provenance_traceable": true,
+    "all_deterministic": true,
+    "forbidden_phrases_found": 0
+  },
+  "case_integrity": {
+    "status": "PASS",
+    "total_cases": 30,
+    "types": {
+      "P": 17,
+      "N": 5,
+      "B": 4,
+      "C": 2,
+      "S": 4,
+      "U": 2
+    },
+    "conflict_cases": 4,
+    "minimums_met": {
+      "P": true,
+      "N": true,
+      "B": true,
+      "C": true,
+      "S": true,
+      "U": true
+    },
+    "key_cases": {
+      "AMB-313": {
+        "type": [
+          "C",
+          "S"
+        ],
+        "conflict": true,
+        "verified": true
+      },
+      "AMB-462": {
+        "type": [
+          "C",
+          "S"
+        ],
+        "conflict": true,
+        "verified": true
+      },
+      "AMB-414": {
+        "type": [
+          "P"
+        ],
+        "gt": "MERGE",
+        "reclassified": true,
+        "verified": true
+      },
+      "AMB-422": {
+        "type": [
+          "P"
+        ],
+        "gt": "MERGE",
+        "reclassified": true,
+        "verified": true
+      }
+    }
+  },
+  "automation_bias_instrumentation": {
+    "status": "PASS",
+    "fields": [
+      "cue_conflict",
+      "cue_direction",
+      "cue_followed",
+      "evidence_inspected",
+      "cue_inspected",
+      "override",
+      "override_correct",
+      "final_correct",
+      "automation_bias_event"
+    ],
+    "metrics_computable": [
+      "WCAR",
+      "COR",
+      "EIR",
+      "CFR"
+    ]
+  },
+  "counterbalancing": {
+    "status": "PASS",
+    "method": "Latin Square 3-group",
+    "group_0": "A → B1 → B2",
+    "group_1": "B1 → B2 → A",
+    "group_2": "B2 → A → B1",
+    "recorded": [
+      "condition_order",
+      "order_group",
+      "case_order",
+      "condition"
+    ]
+  },
+  "recording_integrity": {
+    "status": "PASS",
+    "autosave": true,
+    "raw_events": true,
+    "localStorage": true,
+    "completion": true,
+    "export_fields_all_present": true
+  },
+  "gt_hidden": {
+    "status": "PASS",
+    "gt_not_displayed_to_user": true,
+    "gt_stored_in_records_for_analysis": true
+  },
+  "dry_run": {
+    "status": "PASS",
+    "participant": "DRYRUN_001",
+    "total_judgments": 30,
+    "conditions_tested": [
+      "B1",
+      "B2",
+      "A"
+    ],
+    "condition_distribution": {
+      "B1": 10,
+      "B2": 10,
+      "A": 10
+    },
+    "conflict_cases_recorded": 4,
+    "raw_events_logged": 31,
+    "export_fields_verified": true,
+    "dryrun_separation": true
+  },
+  "known_limitations": [
+    "9 of 30 cases lack TLD evidence (Cue 1/2 absent)",
+    "9 of 30 cases lack page images",
+    "Conflict cases = 4 (target was ≥5)",
+    "No matched case sets (X/Y/Z) for full Latin Square",
+    "n=1 dry run only",
+    "Progressive disclosure tracking is binary",
+    "No within-session time trend analysis",
+    "Image interaction tracking is click-count only",
+    "cross_instance_comparison not tracked",
+    "n=15 minimum is exploratory (NO_STATISTICAL_GENERALIZATION)"
+  ],
+  "implementation_gate": {
+    "IMPLEMENTATION_STATUS": "PASS",
+    "UI_INTEGRITY": "PASS",
+    "CONDITION_INTEGRITY": "PASS",
+    "INFORMATION_EQUIVALENCE": "PASS",
+    "EVIDENCE_INTEGRITY": "PASS",
+    "CUE_BOUNDARY": "PASS",
+    "PROVENANCE": "PASS",
+    "CASE_INTEGRITY": "PASS",
+    "UNKNOWN_SUPPORT": "PASS",
+    "AUTOMATION_BIAS_INSTRUMENTATION": "PASS",
+    "COUNTERBALANCING": "PASS",
+    "RECORDING_INTEGRITY": "PASS",
+    "GT_HIDDEN": "PASS",
+    "DRY_RUN": "PASS",
+    "FROZEN_BASELINE": "INTACT",
+    "PRODUCTION": "FALSE",
+    "RUNTIME_AUTHORITY": "ZERO",
+    "HUMAN_EXPERIMENT_DATA": "DRYRUN_ONLY",
+    "ITERATIVE_LEARNING": "INSUFFICIENT_EVIDENCE",
+    "STOP": "TRUE"
+  },
+  "hard_constraints_honored": {
+    "no_participant_recruitment": true,
+    "no_formal_experiment_start": true,
+    "no_participant_data_upload": true,
+    "no_frozen_baseline_modification": true,
+    "no_learning_engine_activation": true,
+    "no_human_effort_reduction_conclusion": true
+  },
+  "access": {
+    "experiment_url": "http://127.0.0.1:8091/",
+    "cases_api": "http://127.0.0.1:8091/api/cases",
+    "results_api": "http://127.0.0.1:8091/api/results"
+  }
+}

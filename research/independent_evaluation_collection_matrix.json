@@ -1,0 +1,183 @@
+{
+  "document": "Independent Evaluation Data Collection Integrity Matrix",
+  "type": "EXECUTED collection integrity matrix (not design-only)",
+  "version": "1.0",
+  "phase": "Independent Evaluation Data Collection — Controlled Execution",
+  "phase_constraint": "DATA COLLECTION ONLY",
+  "creation_timestamp": "2026-09-09T00:15:00",
+  
+  "status": {
+    "DATA_COLLECTION_STATUS": "COMPLETE",
+    "CANDIDATE_UNIVERSE_FREEZE": "TRUE",
+    "SAMPLING_FRAME_FREEZE": "TRUE",
+    "EVALUATION_SET_FREEZE": "TRUE",
+    "SEMANTIC_GT_FREEZE": "TRUE",
+    "PROVENANCE_AUDIT": "PASS",
+    "IS_01_IS_02_EXECUTION": "NOT AUTHORIZED",
+    "MACHINE_EVALUATION": "NOT AUTHORIZED",
+    "P7_3": "NOT AUTHORIZED",
+    "IMPLEMENTATION": "NOT AUTHORIZED",
+    "FROZEN_BASELINE": "INTACT",
+    "STOP": "TRUE"
+  },
+  
+  "corpus": {
+    "total_pdfs": 4,
+    "all_independent": true,
+    "pipeline": "Frozen P1-P6 (unmodified production code)",
+    "p4_span_config_frozen": true,
+    "pdfs": [
+      {
+        "doc_id": "ind_arxiv_2402",
+        "independence_status": "INDEPENDENT",
+        "contamination_vectors": [],
+        "ambiguous_cases_generated": 4,
+        "sampled_cases": 4
+      },
+      {
+        "doc_id": "ind_arxiv_bio2",
+        "independence_status": "INDEPENDENT",
+        "contamination_vectors": [],
+        "ambiguous_cases_generated": 103,
+        "sampled_cases": 25
+      },
+      {
+        "doc_id": "ind_qbio_genomics",
+        "independence_status": "INDEPENDENT",
+        "contamination_vectors": [],
+        "ambiguous_cases_generated": 85,
+        "sampled_cases": 23
+      },
+      {
+        "doc_id": "ind_qbio_rna",
+        "independence_status": "INDEPENDENT",
+        "contamination_vectors": [],
+        "ambiguous_cases_generated": 62,
+        "sampled_cases": 17
+      }
+    ]
+  },
+  
+  "candidate_universe": {
+    "total_ambiguous_cases": 254,
+    "pages_covered": 121,
+    "freeze": "TRUE",
+    "is01_computed": false,
+    "is02_computed": false,
+    "ambiguity_mode_computed": false,
+    "ground_truth_label_computed": false
+  },
+  
+  "sampling_frame": {
+    "total_sampled": 69,
+    "seed": 20240908,
+    "stratification_type": "geometry-only",
+    "strata_dimensions": ["gap_bins", "w_b_bins", "line_obs_bins", "w_a_bins"],
+    "text_pattern_criteria": 0,
+    "is_feature_criteria": 0,
+    "freeze": "TRUE"
+  },
+  
+  "human_review": {
+    "reviewers": 2,
+    "protocol": "BLIND",
+    "blind_fields_allowed": ["case_id", "page", "text_a", "text_b", "page_context"],
+    "blind_fields_blocked": ["is01", "is02", "bbox", "gap", "w_a", "w_b", "line_obs", "p4_decision", "geometric_state", "machine_prediction", "round1_data", "dice_concepts"],
+    "reviewer_a_total": 69,
+    "reviewer_b_total": 69,
+    "reviewer_a_decisions": {"MERGE": 24, "KEEP_SEPARATE": 45, "CANNOT_DETERMINE": 0},
+    "reviewer_b_decisions": {"MERGE": 25, "KEEP_SEPARATE": 44, "CANNOT_DETERMINE": 0},
+    "adjudicator_cases": 1,
+    "adjudicator_blind": true
+  },
+  
+  "agreement_metrics": {
+    "common_cases": 69,
+    "simple_agreement": 0.9855,
+    "simple_agreement_pct": "98.6%",
+    "cohens_kappa": 0.968,
+    "kappa_interpretation": "Strong agreement (>=0.80)",
+    "agreed": 68,
+    "disagreements": 1,
+    "both_cannot_determine": 0,
+    "adjudicated": 1,
+    "kappa_gate_threshold": 0.60,
+    "kappa_gate_pass": true
+  },
+  
+  "semantic_gt": {
+    "total_cases": 69,
+    "usable_gt": 69,
+    "unresolved": 0,
+    "usable_rate": 1.0,
+    "by_label": {"MERGE": 24, "KEEP_SEPARATE": 45},
+    "by_level": {"LEVEL_2_AGREED": 68, "LEVEL_2_ADJUDICATED": 1},
+    "freeze": "TRUE",
+    "is01_is02_computed": false,
+    "machine_prediction_computed": false,
+    "gt_source": "human_semantic_judgment (NOT geometry-based)"
+  },
+  
+  "provenance_audit": {
+    "overall": "PASS",
+    "checks_total": 9,
+    "checks_passed": 9,
+    "checks_failed": 0,
+    "checks": [
+      {"check": "IS-01/IS-02 not computed", "pass": true, "violations": 0},
+      {"check": "No machine metrics computed", "pass": true, "violations": 0},
+      {"check": "Blind packages contain only allowed fields", "pass": true, "leaked_fields": 0},
+      {"check": "No Round 1 data referenced in code", "pass": true, "references": 0},
+      {"check": "Sampling frame geometry-only stratification", "pass": true, "text_criteria": 0, "geo_criteria": 2},
+      {"check": "GT frozen, no machine computation", "pass": true, "is_computed": false, "machine_computed": false, "freeze": "FROZEN"},
+      {"check": "Reviewer results contain only decision/reason", "pass": true, "leaked_fields": 0},
+      {"check": "No machine prediction files exist", "pass": true, "files_existing": 0},
+      {"check": "Adjudicator was blind", "pass": true, "extra_fields": 0}
+    ]
+  },
+  
+  "boundary_protection": {
+    "layer_a_corpus_preprocessing": {"status": "ALLOWED", "executed": true},
+    "layer_b_experimental_feature_observation": {"status": "NOT EXECUTED", "reason": "IS-01/IS-02 forbidden until after GT freeze"},
+    "layer_c_decision_leakage": {"status": "FORBIDDEN", "violations": 0},
+    "blind_protocol_enforced": true,
+    "gt_independence_verified": true
+  },
+  
+  "frozen_baseline_verification": {
+    "p7_1_drift": 0,
+    "p7_2_drift": 0,
+    "p1_p6_changed": 0,
+    "frozen_730_hash": "a10b368e",
+    "span_rules_hash": "1c8e3830",
+    "span_observation_hash": "87e8c0bc",
+    "calibration_filter_hash": "6ab1ee78",
+    "production_files_modified_during_session": 0,
+    "overall": "INTACT"
+  },
+  
+  "stop_conditions": {
+    "reviewer_saw_is_or_machine": false,
+    "sampling_based_on_text_patterns": false,
+    "gt_modified_after_machine_prediction": false,
+    "kappa_below_threshold": false,
+    "stop_triggered": false,
+    "stop_reason": "Phase complete, awaiting human authorization for next phase"
+  },
+  
+  "known_limitations": {
+    "is01_text_number_pattern": "FROZEN, known limitation: doesn't distinguish heading vs equation number",
+    "is02_text_readable_title": "FROZEN, known limitation: cos/sin/and/are match (3 chars > 2)",
+    "timer_implementation": "NOT AUTHORIZED in this phase. Round 1 timer bug documented but not fixed."
+  },
+  
+  "next_authorized_steps": "NONE — IS-01/IS-02 execution, machine evaluation, P7.3, and implementation are all NOT AUTHORIZED. Manual human review required to authorize next phase.",
+  
+  "pre_registered_gates": {
+    "gates_defined": "G1-G12",
+    "g7_precision_threshold": 0.95,
+    "g8_recall_threshold": 0.80,
+    "gates_set_before_results": true,
+    "note": "Gates must be set BEFORE any machine evaluation results are generated"
+  }
+}

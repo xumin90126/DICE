@@ -1,0 +1,11 @@
+{
+  "capability_id": "CAP-NAME-QTY-PAIR",
+  "attribute_name": "component_quantity",
+  "strategy": {
+    "kind": "deterministic_regex",
+    "pattern": "(?P<value>-?\\d+(?:\\.\\d+)?)\\s*(?P<unit>\\u03bcl|\\u00b5l|\\u00b5L|ul)",
+    "capture_value_group": "value",
+    "capture_unit_group": "unit",
+    "unit_normalization": "unit_canon"
+  }
+}

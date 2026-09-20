@@ -1,0 +1,303 @@
+{
+  "research_question": "Can P2 geometry deterministically express Table Structure?",
+  "p2_frozen_verification": {
+    "p2_engine": {
+      "path": "perception/sandbox/geometry/geometry_engine.py",
+      "sha256": "388e7939d334458e",
+      "expected": "388e7939d334458e",
+      "verified": true
+    },
+    "p2_config": {
+      "path": "perception/sandbox/geometry/geometry_config.py",
+      "sha256": "7ef3629e5a9b819c",
+      "expected": "7ef3629e5a9b819c",
+      "verified": true
+    },
+    "p2_schema": {
+      "path": "perception/sandbox/geometry/geometry_observation.py",
+      "sha256": "7731377cb8468c91",
+      "expected": "7731377cb8468c91",
+      "verified": true
+    },
+    "frozen_params": {
+      "y_band_tolerance": 3.0,
+      "x_band_tolerance": 3.0,
+      "alignment_tolerance": 2.0,
+      "overlap_tolerance": 0.5,
+      "horizontal_distance_threshold": 12.0,
+      "vertical_distance_threshold": 12.0,
+      "iou_tolerance": 0.001,
+      "containment_ratio_threshold": 0.95
+    }
+  },
+  "p2_level1_facts": {
+    "single_observation": [
+      "bbox",
+      "width",
+      "height",
+      "center_x",
+      "center_y",
+      "normalized_x",
+      "normalized_y",
+      "same_y_band_members",
+      "same_x_band_members",
+      "left_alignment_group",
+      "right_alignment_group",
+      "top_alignment_group",
+      "bottom_alignment_group",
+      "center_alignment_group",
+      "spatial_cluster_members",
+      "x_projection_overlap_count"
+    ],
+    "pairwise_relation": [
+      "direction",
+      "horizontal_distance",
+      "vertical_distance",
+      "horizontal_overlap",
+      "vertical_overlap",
+      "bbox_overlap_area",
+      "iou",
+      "left_alignment",
+      "right_alignment",
+      "top_alignment",
+      "bottom_alignment",
+      "center_alignment",
+      "same_y_band",
+      "same_x_band"
+    ],
+    "all_semantic_free": true,
+    "design_principle": "Pure geometric facts, not interpretations. NO semantic classification."
+  },
+  "p2_derivability_matrix": {
+    "G1_SameBandSeparatedPair": {
+      "derivable": true,
+      "inputs": "same_y_band=True AND h_gap>0 AND v_overlap>0",
+      "semantic_leakage": "NONE",
+      "safe": true,
+      "authority": 0,
+      "distinguishes_table_from_prose": false
+    },
+    "G2_XAlignedCluster": {
+      "derivable": true,
+      "inputs": "left_alignment OR right_alignment",
+      "semantic_leakage": "NONE (but page-wide, PH-02 lesson)",
+      "safe": true,
+      "authority": 0,
+      "distinguishes_table_from_prose": false
+    },
+    "G3_YAlignedCluster": {
+      "derivable": true,
+      "inputs": "same_y_band",
+      "semantic_leakage": "NONE",
+      "safe": true,
+      "authority": 0,
+      "distinguishes_table_from_prose": false
+    },
+    "G4_LocalGridCandidate": {
+      "derivable": true,
+      "inputs": "same_y_band AND same_style AND line_obs>=3",
+      "semantic_leakage": "PARTIAL — true for prose (3/4) and figure (1/2)",
+      "safe": false,
+      "authority": 0,
+      "distinguishes_table_from_prose": false
+    },
+    "G5_LocalRowCandidate": {
+      "derivable": true,
+      "inputs": "same_y_band AND h_gap>0",
+      "semantic_leakage": "PARTIAL — true for ALL same-y pairs (table, prose, figure)",
+      "safe": false,
+      "authority": 0,
+      "distinguishes_table_from_prose": false
+    },
+    "G6_LocalColumnCandidate": {
+      "derivable": true,
+      "inputs": "(left/right alignment) AND v_gap>0",
+      "semantic_leakage": "NONE",
+      "safe": true,
+      "authority": 0,
+      "distinguishes_table_from_prose": "N/A (requires vertical pair, not same-y scope)"
+    },
+    "SameTableRow": {
+      "derivable": false,
+      "reason": "requires table membership"
+    },
+    "DifferentTableColumn": {
+      "derivable": false,
+      "reason": "requires table membership"
+    },
+    "SameTableCell": {
+      "derivable": false,
+      "reason": "requires cell assignment"
+    },
+    "TableHeader": {
+      "derivable": false,
+      "reason": "requires header detection"
+    },
+    "TableBody": {
+      "derivable": false,
+      "reason": "requires body detection"
+    },
+    "TableMembership": {
+      "derivable": false,
+      "reason": "NOT EXPRESSIBLE FROM P2 ALONE — P2 geometry identical for table/prose/figure"
+    }
+  },
+  "counterexample_tests": {
+    "case1_figure_caption": {
+      "case": "AMB-414 (FIG. 9: / Left:)",
+      "g1": true,
+      "g4": true,
+      "g5": true,
+      "is_table": false,
+      "finding": "P2 geometry for Figure Caption is IDENTICAL to Table. G1, G4, G5 cannot distinguish."
+    },
+    "case2_prose": {
+      "case": "AMB-005 (prose sentence boundary)",
+      "g1": true,
+      "g4": true,
+      "g5": true,
+      "is_table": false,
+      "finding": "P2 geometry for Prose is IDENTICAL to Table. G1, G4, G5 cannot distinguish."
+    },
+    "case3_multicolumn": {
+      "case": "hypothetical multi-column text",
+      "g1": true,
+      "g5": true,
+      "is_table": false,
+      "finding": "Multi-column prose produces IDENTICAL P2 geometry to table. P2 has no independent table membership evidence."
+    },
+    "conclusion": "G1, G4, G5 are TRUE for ALL 545 pairs (Table=539, Prose=4, Figure=2). P2 cannot distinguish Table from non-Table."
+  },
+  "p2_vs_tld_comparison": {
+    "p2_provides": [
+      "bbox",
+      "alignment",
+      "distance",
+      "overlap",
+      "bands",
+      "direction",
+      "alignment_groups",
+      "spatial_clusters",
+      "x_projection_overlap"
+    ],
+    "tld_provides": [
+      "tables_detected",
+      "is_in_table",
+      "a_in_table/b_in_table",
+      "same_cell",
+      "different_cell",
+      "a_cell/b_cell",
+      "table_boundaries"
+    ],
+    "tld_only_critical_facts": [
+      "table_membership",
+      "cell_assignment",
+      "table_boundaries"
+    ],
+    "p2_only_facts": [
+      "bbox",
+      "alignment",
+      "distance",
+      "overlap",
+      "bands",
+      "direction"
+    ],
+    "overlap": "TLD uses P2 alignment/same_y_band for row/column, but adds heuristics",
+    "tld_not_pure_p2_derivation": true,
+    "tld_additional_heuristics": [
+      "visual line reconstruction",
+      "_VALUE_RE regex",
+      "fragment count/column stability thresholds"
+    ],
+    "tld_information_overlap": "PARTIAL"
+  },
+  "critical_question_answer": {
+    "question": "Is TLD creating new Structural Evidence, or organizing P2 Geometry?",
+    "answer": "BOTH, but primarily INTERPRETING",
+    "detail": {
+      "row_column_detection": "ORGANIZES P2 alignment facts",
+      "table_membership": "CREATES new structural fact (not in P2)",
+      "cell_assignment": "CREATES new structural fact (not in P2)",
+      "visual_line_reconstruction": "USES additional heuristics (not in P2)"
+    },
+    "conclusion": "TLD is primarily a STRUCTURAL INTERPRETATION / DETECTION layer. P2 is a STRUCTURAL EVIDENCE SOURCE."
+  },
+  "m_b_dependency": "HYBRID",
+  "ph02_relation": "P2 granularity sufficient, locality insufficient",
+  "minimum_safe_structural_fact": {
+    "fact": "SAME_BAND_SEPARATED_PAIR (G1)",
+    "definition": "same_y_band=True AND h_gap>0 AND v_overlap>0",
+    "deterministic": true,
+    "semantic_leakage": "NONE",
+    "authority": 0,
+    "limitation": "Does NOT distinguish table from prose/figure"
+  },
+  "final_questions": {
+    "q1_p2_direct_facts": "bbox, width, height, center, alignment, distance, overlap, bands, direction, alignment groups, spatial clusters",
+    "q2_level2_relations": "G1-G6 (SameBandSeparatedPair, XAligned, YAligned, LocalGridCandidate, LocalRowCandidate, LocalColumnCandidate)",
+    "q3_level3_interpretations": "NONE — no table/row/column/cell/header/body expressible from P2",
+    "q4_semantic_leakage": "G4 and G5 — true for table, prose, AND figure",
+    "q5_row_structure": "PARTIAL — row candidate yes, table row no",
+    "q6_column_structure": "PARTIAL — column candidate yes (vertical), table column no. Page-wide groups are heterogeneous.",
+    "q7_cell_structure": "NO — requires cell assignment",
+    "q8_table_membership": "NO — NOT EXPRESSIBLE FROM P2 ALONE",
+    "q9_header": "NO — requires header detection",
+    "q10_tld_adds": "Table membership, cell assignment, table boundaries — 3 critical facts not in P2",
+    "q11_m_b_dependency": "HYBRID — uses P2 for diagnosis, consumer uses TLD",
+    "q12_ph02_relation": "P2 granularity sufficient, locality insufficient (page-wide groups)",
+    "q13_minimum_safe": "G1 SameBandSeparatedPair (pure geometry, no leakage, but not table-specific)",
+    "q14_new_observation": "NO — P2 provides all geometry, TLD provides interpretation",
+    "q15_modify_tld": "NO — FROZEN",
+    "q16_llm": "NO",
+    "q17_document_discourse": "NO"
+  },
+  "retrospective_vs_generalizable": {
+    "all_level2_retrospectively_derivable": true,
+    "any_generalizable": false,
+    "reason": "No independent corpus validation. 545 pairs are from one sampling frame."
+  },
+  "final_status": "P2_STRUCTURAL_EXPRESSIBILITY_PARTIALLY_SUPPORTED",
+  "minimum_safe_structural_fact_value": "SAME_BAND_SEPARATED_PAIR (G1)",
+  "tld_information_overlap": "PARTIAL",
+  "p2_tld_relation": "EVIDENCE_SOURCE → INTERPRETATION_LAYER",
+  "primary_bottleneck": "D (Consumer Integration) — P2 evidence exists, IS-11 does not use it. But P2 alone CANNOT replace TLD (no table membership).",
+  "recommended_next_step": "READ-ONLY audit of TLD visual line heuristics — understand what TLD adds beyond P2",
+  "governance": {
+    "DICE_CORE_MODIFICATION": false,
+    "P2_MODIFICATION": false,
+    "P1_P7_MODIFICATION": false,
+    "TLD_MODIFICATION": false,
+    "IS11_MODIFICATION": false,
+    "M_B_MODIFICATION": false,
+    "PH02_MODIFICATION": false,
+    "GT_MODIFICATION": false,
+    "SIGNAL_MODIFICATION": false,
+    "EVIDENCE_CUE_MODIFICATION": false,
+    "LLM": false,
+    "NEW_OBSERVATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "RUNTIME_CHANGE": false,
+    "CAPABILITY_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "FROZEN_EXPERIMENT": "INTACT",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "EXPERIMENT_AUTHORIZED": false,
+    "FORMAL_EXPERIMENT": "NOT_STARTED",
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "p2_engine_hash": "388e7939d334458e",
+    "p2_config_hash": "7ef3629e5a9b819c",
+    "p2_schema_hash": "7731377cb8468c91",
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_p2_engine": "388e7939d334458e",
+    "expected_p2_config": "7ef3629e5a9b819c",
+    "expected_p2_schema": "7731377cb8468c91",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  },
+  "stop": true
+}

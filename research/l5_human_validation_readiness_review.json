@@ -1,0 +1,113 @@
+{
+ "phase": "L5 Human Validation Readiness Review",
+ "status": "DESIGN / ARCHITECTURE REVIEW ONLY",
+ "research_question": "Can DICE's Human Validation validate reusable Interpretation Patterns / Capability Boundaries, rather than degrading to instance-by-instance annotation?",
+
+ "current_architecture_inventory": {
+  "validation_object_actual": "instance-level (ValidationTask keyed by observation_id + document_id + page_number)",
+  "validation_record_saves": "verdict (ACCEPT/REJECT/NEED_REVIEW) + reason + notes + timestamp + duration + reviewer_id + revision_status + supersedes + provenance — NO pattern/negative-set/boundary/scope fields",
+  "capability_candidate_observation": "ABSENT (grep 0 hits across codebase)",
+  "document_span": "ABSENT (grep 0 hits)",
+  "reusable_pattern_expression": "ABSENT — no schema, no object, no process",
+  "human_review_ui_instance_bias": "PRESENT — review_interface presents one candidate at a time (index/total), Accept/Reject/Need Review per candidate",
+  "instance_level_bias_location": "ValidationTask key construction (document|page|observation_id) + review_interface per-candidate presentation loop",
+  "frozen_capability_table": "22 static DICE 1.0 capabilities; L3_SKILL_ROUTES = human-authored static mapping, NOT auto-learned, NOT derived from validation",
+  "table_tablecell_in_p71": "BLOCKED (structure_config: 'waits for Table Cell Geometry observation') — EIC-1 cell-context candidate has NO corresponding hypothesis type in frozen P7.1/P7.2",
+  "eic1_sce_home": "tmp/ experimental artifact only; no architecture归宿 in P7.1/P7.2"},
+
+ "authority_ladder": ["Observation (L1/L2 frozen source-backed)", "Evidence (L2/L3 frozen fact)", "Structural Interpretation (L3 derived non-semantic)", "Semantic Interpretation (L4 EIC-1 candidate governed)", "Human Validation (L5 currently=instance verdict; design target=pattern validation)", "Capability (L6 static human-authored NOT auto-derived)"],
+ "authority_principle": "higher semantic authority requires stronger evidence + stronger validation; L4 not auto-L5; L5 not auto-L6",
+
+ "candidate_evaluation": {
+  "A_document_instance": {"reusability": "LOW", "human_burden": "HIGH", "verdict": "insufficient — pure instance labeling = anti-pattern"},
+  "B_evidence_instance": {"reusability": "LOW", "human_burden": "HIGH", "verdict": "insufficient — same as A"},
+  "C_interpretation_candidate": {"reusability": "LOW-MEDIUM", "human_burden": "HIGH", "verdict": "insufficient — still instance-bound (per-pair/per-region)"},
+  "D_interpretation_pattern": {"reusability": "HIGH", "human_burden": "LOW (1 validation -> many)", "falsifiability": "HIGH (negative set)", "negative_evidence": "structured", "boundary": "explicit", "risk_overreach": "MEDIUM manageable", "compatibility": "NO (schema absent)", "cross_document": "YES", "verdict": "MOST EVIDENCE-SUPPORTED — DESIGN CONCLUSION not implementation"},
+  "E_capability_boundary": {"reusability": "HIGHEST", "verdict": "premature — downstream of D; cannot jump without D; overreach risk HIGH"},
+  "why_others_insufficient": "A/B = instance labeling anti-pattern (no reuse, burden scales, no negative/boundary); C = instance-bound with extra chain; E = premature without D"},
+
+ "recommended_object": {
+  "candidate": "D — Interpretation Pattern",
+  "nature": "DESIGN CONCLUSION, not implementation decision",
+  "ten_components": [
+   {"component": "positive structural conditions", "status": "READY (EIC-1 preconditions Phase 3.1 frozen)"},
+   {"component": "negative examples", "status": "READY (caption/code/TOC/value-column/margin from M-B audit)"},
+   {"component": "boundary conditions", "status": "PARTIAL (localization; scope needs definition)"},
+   {"component": "evidence provenance", "status": "READY (EIC-1 chain 11/11)"},
+   {"component": "interpretation statement", "status": "READY (EIC-1 candidate status)"},
+   {"component": "scope", "status": "NEEDS DESIGN"},
+   {"component": "UNKNOWN/insufficient condition", "status": "READY (313/462 honest ABSTAIN)"},
+   {"component": "human decision", "status": "NEEDS DESIGN (pattern-level not task-level)"},
+   {"component": "ValidationRecord (pattern-level)", "status": "NEEDS DESIGN"},
+   {"component": "reuse condition", "status": "NEEDS DESIGN"}],
+  "ready_count": "5/10 ready, 5/10 need design"},
+
+ "feasibility_check_with_real_cases": {
+  "analysis_only_not_rule": true,
+  "pattern_covers": "AMB-135 + 6 DIRECT (130/457/467/483/505/514) + 8 controls = ~15 instances per 1 pattern validation",
+  "negative_set": "AMB-414/422 (caption), AMB-519 (prose), AMB-034 (value-column)",
+  "unknown_set": "AMB-313/462 (lag=0/1)",
+  "amb262": "covered (same-band different partition, GT-consistent)",
+  "feasibility": "YES — 1 pattern ~15 instances; human burden 1 vs 15",
+  "caveat": "GT-confirmed positive=1; positive diversity insufficient; pattern generalization NOT verified (framework only)"},
+
+ "anti_pattern_audit": [
+  {"risk": "Human Validation -> instance labeling", "present": true, "evidence": "ValidationTask per-instance + review_interface per-candidate"},
+  {"risk": "Human Validation -> rule authoring", "present": false},
+  {"risk": "Human Validation -> hidden if/else", "present": false},
+  {"risk": "Human Validation -> runtime authority", "present": false},
+  {"risk": "Human Validation -> automatic capability registration", "present": false},
+  {"risk": "Positive example only", "present": true, "evidence": "ValidationRecord has no negative-set field"},
+  {"risk": "No negative evidence", "present": true, "evidence": "no structured negative set in schema"},
+  {"risk": "No boundary", "present": true, "evidence": "no scope/boundary field"},
+  {"risk": "No UNKNOWN state", "present": "PARTIAL", "evidence": "NEED_REVIEW exists but per-instance not pattern-level"},
+  {"risk": "Validation -> executable behavior", "present": false}],
+ "risks_present_count": 4,
+
+ "human_burden_model": {
+  "model": "Many Instances -> Repeated Evidence Pattern -> One Human Validation -> Reusable Pattern -> Many New Instances",
+  "one_validation_covers_many_when": "instances share same structural configuration (same EIC-1 preconditions)",
+  "cannot_when": "instances have different structures (caption vs table vs code)",
+  "retain_unknown_when": "evidence insufficient to form pattern (positive diversity=1)",
+  "not_worth_abstracting_when": "pattern covers only 1 instance (no reuse benefit)"},
+
+ "pattern_overgeneralization_prevention": [
+  {"mechanism": "scope", "status": "needs definition"},
+  {"mechanism": "boundary", "status": "partial (localization)"},
+  {"mechanism": "negative set", "status": "ingredients exist, no schema"},
+  {"mechanism": "provenance", "status": "ready (EIC-1 chain)"},
+  {"mechanism": "validation context", "status": "needs definition"},
+  {"mechanism": "version", "status": "needs definition"},
+  {"mechanism": "supersession", "status": "needs definition"},
+  {"mechanism": "revalidation trigger", "status": "needs definition"}],
+
+ "pattern_validation_vs_capability": {
+  "pattern_validation_not_capability_registration": true,
+  "flow": "Pattern Validation -> Validated Knowledge/Interpretation -> Capability Candidate -> Human Controlled Registration -> Capability",
+  "frozen_capability_table_nature": "static DICE 1.0 human-authored routing, NOT derived from pattern validation",
+  "new_capability_requires": "pattern validated -> capability candidate proposed -> human registration decision -> capability table entry (governed, non-automatic)",
+  "capability_registration": "Human Controlled"},
+
+ "paper_value_assessment": [
+  {"topic": "Human Validation as reusable pattern validation", "novelty": "HIGH", "evidence_strength": "MEDIUM", "current_support": "PARTIAL (M-B)", "missing_evidence": "no pattern schema/instance validated", "overclaim_risk": "MEDIUM"},
+  {"topic": "Evidence -> Interpretation boundary", "novelty": "HIGH", "evidence_strength": "HIGH", "current_support": "STRONG (Phase 2.1/2.2)", "missing_evidence": "L5 not occurred", "overclaim_risk": "LOW"},
+  {"topic": "No Semantic Closure", "novelty": "HIGH", "evidence_strength": "HIGH", "current_support": "STRONG", "missing_evidence": "-", "overclaim_risk": "LOW"},
+  {"topic": "Evidence Quality + Error Containment", "novelty": "HIGH", "evidence_strength": "HIGH", "current_support": "STRONG (Phase 3.2)", "missing_evidence": "-", "overclaim_risk": "LOW"},
+  {"topic": "Honest ABSTAIN", "novelty": "MEDIUM-HIGH", "evidence_strength": "HIGH", "current_support": "STRONG", "missing_evidence": "-", "overclaim_risk": "LOW"},
+  {"topic": "Negative evidence as validation input", "novelty": "HIGH", "evidence_strength": "MEDIUM", "current_support": "PARTIAL", "missing_evidence": "no pattern-level negative schema", "overclaim_risk": "MEDIUM"},
+  {"topic": "Research-object revision", "novelty": "HIGH", "evidence_strength": "HIGH", "current_support": "STRONG", "missing_evidence": "-", "overclaim_risk": "LOW"},
+  {"topic": "Consumer Integration vs Observation Gap", "novelty": "HIGH", "evidence_strength": "HIGH", "current_support": "STRONG", "missing_evidence": "-", "overclaim_risk": "LOW"}],
+
+ "final_judgments": {
+  "A_l5_design_readiness": "CONDITIONAL READY",
+  "A_reason": "pattern ingredients 5/10 ready from M-B; pattern object/schema/abstraction layer ABSENT in current architecture (grep 0); ValidationTask structurally instance-level; 4 anti-pattern risks PRESENT; TABLE/TABLE_CELL BLOCKED in P7.1 (EIC-1 candidate has no architecture home); design work required before any L5 validation",
+  "B_minimal_research_object": "Interpretation Pattern (Candidate D) — most evidence-supported; DESIGN CONCLUSION not implementation decision; 5/10 components ready, 5/10 need design; does not jump to E (capability boundary) as premature",
+  "C_new_observation_measurement": "NO",
+  "C_reason": "existing frozen Observation (P1/P2 geometry + Atomic Observation) sufficient to express all pattern prerequisites (M-B Expressability Audit + Phase 3.2 proven); gap is pattern abstraction layer + human validation process, not observation"},
+
+ "new_observation_measurement_request": "NONE",
+ "implementation_authorized": false,
+ "experiment_authorized": false,
+ "gt_modified": false, "tld_modified": false, "atomic_observation_modified": false,
+ "is11_decision_modified": false, "production_code_modified": false,
+ "frozen_baseline_intact": true, "production": false, "stop": true}

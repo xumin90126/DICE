@@ -1,0 +1,313 @@
+{
+  "gate_id": "g5_boundary_generalization_v2",
+  "date": "2026-09-20",
+  "mode": "READ_ONLY_RESEARCH",
+  "governance": {
+    "STATUS": "COMPLETE",
+    "GATE": "G5_BOUNDARY_GENERALIZATION_V2",
+    "SYSTEM_MODIFIED": false,
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "MODEL_TRAINING": false,
+    "EXTERNAL_DATASET_IMPORTED": false,
+    "CAPABILITY_CREATED": false,
+    "FROZEN_BASELINE": "INTACT",
+    "BASELINE_DRIFT": 0,
+    "RUNTIME_AUTHORITY": "ZERO",
+    "PRODUCTION": false,
+    "STOP": true
+  },
+
+  "combined_g5_set": {
+    "original_true_g5": 18,
+    "new_true_g5": 16,
+    "combined_total": 34,
+    "document_count": 6,
+    "pattern_count": 4,
+    "documents": {
+      "arxiv_2402.18619": 16,
+      "is11_resnet": 7,
+      "is11_efficientnet": 5,
+      "ind_arxiv_bio2": 2,
+      "is11_cs_001": 2,
+      "is11_med_001": 2
+    }
+  },
+
+  "metrics": {
+    "NEW_TRUE_G5_COUNT": 16,
+    "CROSS_DOCUMENT_G5": 6,
+    "PATTERN_REPLICATION_RATE": "2/4 (50%)",
+    "NEW_PATTERN_COUNT": 0,
+    "CE2_NEW_CASE_COUNT": 12,
+    "CE2_NEW_TRUE_G5_COUNT": 12,
+    "CE2_COUNTEREXAMPLE_COUNT": 0,
+    "STRUCTURAL_EVIDENCE_SUFFICIENT": "34/34 (100%)",
+    "SEMANTIC_BOUNDARY_PRESENT": "34/34 (100%)",
+    "MACHINE_RESOLVABLE": 65,
+    "INDETERMINATE": 0
+  },
+
+  "pattern_analysis": {
+    "P1_CAPTION_VS_REFERENCE": {
+      "historical_count": 10,
+      "new_count": 12,
+      "total": 22,
+      "document_count": 4,
+      "documents": ["arxiv_2402.18619", "is11_resnet", "is11_efficientnet", "is11_med_001"],
+      "ce2_like_count": 14,
+      "evidence_structure": "fig_prefix=True + drawing_extent=True + spatial_relation + proximity",
+      "semantic_boundary_structure": "Structural Claim: text-drawing association. Semantic Identity UNRESOLVED: caption vs reference.",
+      "cross_document": true,
+      "cross_case": true,
+      "repeated": true,
+      "new_variation": false,
+      "replicated": true,
+      "max_document_ratio": "59% (arxiv_2402.18619)"
+    },
+    "P2_TEXT_ROLE": {
+      "historical_count": 4,
+      "new_count": 4,
+      "total": 8,
+      "document_count": 5,
+      "documents": ["arxiv_2402.18619", "is11_efficientnet", "is11_med_001", "is11_resnet", "is11_cs_001"],
+      "ce2_like_count": 0,
+      "evidence_structure": "fig_prefix=False + drawing_extent=True + spatial_relation",
+      "semantic_boundary_structure": "Structural Claim: text-drawing association. Semantic Identity UNRESOLVED: text role (axis/annotation/body).",
+      "cross_document": true,
+      "cross_case": true,
+      "repeated": true,
+      "new_variation": true,
+      "new_variation_description": "NP2: Type_B_negative with fig_prefix=False (no lexical signal) — stronger form of P2, same boundary type",
+      "replicated": true,
+      "max_document_ratio": "38% (arxiv_2402.18619)"
+    },
+    "P3_AUTHOR_NAME": {
+      "historical_count": 2,
+      "new_count": 0,
+      "total": 2,
+      "document_count": 1,
+      "documents": ["ind_arxiv_bio2"],
+      "ce2_like_count": 0,
+      "evidence_structure": "text position + text format (text-text boundary)",
+      "semantic_boundary_structure": "Structural Claim: text exists in context. Semantic Identity UNRESOLVED: author name vs fragment (requires world knowledge).",
+      "cross_document": false,
+      "cross_case": true,
+      "repeated": true,
+      "new_variation": false,
+      "replicated": false,
+      "max_document_ratio": "100% (ind_arxiv_bio2)"
+    },
+    "P4_COLUMN_TYPE": {
+      "historical_count": 2,
+      "new_count": 0,
+      "total": 2,
+      "document_count": 2,
+      "documents": ["is11_resnet", "is11_cs_001"],
+      "ce2_like_count": 0,
+      "evidence_structure": "column position + cell values (table boundary)",
+      "semantic_boundary_structure": "Structural Claim: column exists. Semantic Identity UNRESOLVED: row-number vs data-value.",
+      "cross_document": true,
+      "cross_case": true,
+      "repeated": true,
+      "new_variation": false,
+      "replicated": false,
+      "max_document_ratio": "50%",
+      "note": "Cross-document technically yes, but 1 case per document — insufficient sample"
+    }
+  },
+
+  "boundary_structure_verification": {
+    "expected_structure": "Structural Evidence (complete) → Structural Claim (supported) → Semantic Identity (unresolved) → TRUE_G5",
+    "structural_evidence_sufficient": "34/34 (100%)",
+    "semantic_boundary_present": "34/34 (100%)",
+    "drawing_extent_false_count": 0,
+    "structure_holds_all": true,
+    "finding": "Boundary structure is STABLE across all 34 cases, 4 patterns, 6 documents. No TRUE_G5 has drawing_extent=False."
+  },
+
+  "ce2_analysis": {
+    "ce2_total": 14,
+    "ce2_original": 2,
+    "ce2_new": 12,
+    "ce2_true_g5": 14,
+    "ce2_counterexample_count": 0,
+    "ce2_document_count": 4,
+    "config_groups": [
+      {
+        "config": "fig=True|dep=True|VR=below|XO=True|type=ambiguous_fragment",
+        "cases": 6,
+        "judgments": ["YES", "NO"],
+        "documents": 3,
+        "evidence_identical": true,
+        "judgment_different": true,
+        "all_true_g5": true
+      },
+      {
+        "config": "fig=True|dep=True|VR=below|XO=False|type=ambiguous_fragment",
+        "cases": 3,
+        "judgments": ["YES", "NO"],
+        "documents": 2,
+        "evidence_identical": true,
+        "judgment_different": true,
+        "all_true_g5": true
+      },
+      {
+        "config": "fig=True|dep=True|VR=above|XO=True|type=ambiguous_fragment",
+        "cases": 3,
+        "judgments": ["YES", "NO"],
+        "documents": 3,
+        "evidence_identical": true,
+        "judgment_different": true,
+        "all_true_g5": true
+      }
+    ],
+    "Q1_new_ce2_true_g5": "YES in current sample — 12/12 new CE2-like = TRUE_G5. Cannot claim 'always'.",
+    "Q2_evidence_identical": "YES — within each config group, structural evidence is identical.",
+    "Q3_judgment_different": "YES — all 3 groups have both YES and NO judgments.",
+    "Q4_difference_source": "semantic content — structural evidence identical, differentiator must be semantic.",
+    "Q5_counterexample": "0 counterexamples in n=14. Cannot claim universal. Can only state: no counterexample observed in current sample.",
+    "strict_claim": "CE2-like is a strong G5 indicator in current sample (n=14, 0 counterexamples). Its generalization boundary is unknown."
+  },
+
+  "cross_document_validation": {
+    "total_documents": 6,
+    "max_document_ratio": "47.1% (arxiv_2402.18619)",
+    "single_document_dominant": false,
+    "p1_cross_document": "YES — 4 docs, max 59%",
+    "p2_cross_document": "YES — 5 docs, max 38%",
+    "p3_cross_document": "NO — 1 doc (ind_arxiv_bio2), 100%",
+    "p4_cross_document": "YES but insufficient — 2 docs, 1 case each",
+    "finding": "Cross-document stable for P1+P2 (dominant). Not stable for P3. Insufficient for P4."
+  },
+
+  "new_pattern_check": {
+    "new_boundary_pattern": 0,
+    "new_semantic_boundary": 0,
+    "new_evidence_structure": 0,
+    "new_human_requirement": 0,
+    "new_task_type": 0,
+    "np2_is_new_pattern": false,
+    "np2_description": "Sub-variant of P2 (same boundary type, stronger form: no lexical signal)",
+    "finding": "All 34 TRUE_G5 fit existing P1-P4. G5 boundary space appears narrow."
+  },
+
+  "three_state_distinction": {
+    "state_1_evidence_insufficient": {
+      "description": "G1/G2/G3/G4 gap exists. After fixing, may become machine-resolvable.",
+      "G1_observation_coverage": 32,
+      "G2_evidence_organization": 70,
+      "G3_evidence_presentation": 28,
+      "G4_consumer_integration": 12,
+      "total": 142,
+      "percentage": "57.7%"
+    },
+    "state_2_machine_resolvable": {
+      "description": "Structural evidence sufficient for machine. No semantic boundary.",
+      "from_generalization_v1": 64,
+      "from_human_validation": 1,
+      "total": 65,
+      "percentage": "26.4%"
+    },
+    "state_3_semantic_boundary_true_g5": {
+      "description": "Evidence complete. Semantic identity unresolved. Human required.",
+      "original": 18,
+      "new": 16,
+      "total": 34,
+      "percentage": "13.8%"
+    },
+    "total_cases_examined": 241,
+    "key_question": "Human intervention needed when State 3 reached: Evidence Sufficient + Semantic Boundary.",
+    "finding": "TRUE_G5 is 13.8% of all cases — minority but stable state with observable structure."
+  },
+
+  "descriptive_vs_deployable": {
+    "descriptive_supported": [
+      "Multiple documents exhibit same boundary structure (6 docs, 34 cases)",
+      "Dominant patterns P1+P2 replicate across documents (P1: 4 docs, P2: 5 docs)",
+      "CE2-like pattern observed (14 cases, 0 counterexample in n=14)",
+      "Boundary structure stable (34/34 Structural Evidence Complete + Semantic Unresolved)"
+    ],
+    "deployable_not_supported": [
+      "Automatic TRUE_G5 detection for arbitrary new cases — NOT implemented, NOT claimed",
+      "Automatic routing to Human — NOT implemented, NOT claimed",
+      "Universal CE2=TRUE_G5 claim — NOT claimed (n=14, no counterexample ≠ universal)",
+      "P3/P4 generalization — NOT supported (P3 single-doc, P4 insufficient)"
+    ]
+  },
+
+  "qa_answers": {
+    "Q1_g5_replicate_on_new": "YES for P1+P2 (dominant, 88.2%). NO for P3+P4 (minority, 11.8%). PARTIAL replication.",
+    "Q2_cross_document_stable": "YES for P1 (4 docs) and P2 (5 docs). NO for P3 (1 doc). INSUFFICIENT for P4 (1 case/doc).",
+    "Q3_historical_pattern_replicate": "P1: REPLICATED (12 new). P2: REPLICATED (4 new, with NP2 variant). P3: NOT REPLICATED. P4: NOT REPLICATED. Rate: 2/4 = 50%.",
+    "Q4_new_pattern": "NO. NEW_BOUNDARY_PATTERN=0. All fit P1-P4. NP2 is P2 sub-variant.",
+    "Q5_stable_structure": "YES. Structural Evidence Sufficient (34/34) + Semantic Boundary Present (34/34). Structure 100% stable.",
+    "Q6_machine_recognize_boundary": "DESCRIPTIVELY YES: three-state distinction observable and stable. DEPLOYABLY NO: no mechanism designed or implemented."
+  },
+
+  "generalization_status": {
+    "status": "CONDITIONALLY_SUPPORTED",
+    "core_criteria": {
+      "multiple_independent_documents": {"target": ">=3", "actual": 6, "result": "PASS"},
+      "multiple_new_cases": {"target": ">=3", "actual": 16, "result": "PASS"},
+      "at_least_one_pattern_repeated": {"target": ">=1", "actual": 2, "result": "PASS"},
+      "boundary_structure_stable": {"target": "all", "actual": "34/34", "result": "PASS"},
+      "sufficient_new_true_g5": {"target": ">=3", "actual": 16, "result": "PASS"}
+    },
+    "limitations": [
+      {"id": "L1", "limitation": "P3 NOT replicated (0 new, 1 doc) — may be document/domain-specific"},
+      {"id": "L2", "limitation": "P4 NOT replicated (0 new, 2 docs, 1 case each) — insufficient sample"},
+      {"id": "L3", "limitation": "CE2 sample limited (n=14) — cannot claim universal, 0 counterexample but small n"},
+      {"id": "L4", "limitation": "Academic domain only — cross-domain G5 untested"},
+      {"id": "L5", "limitation": "arxiv_2402.18619 concentration (47.1%) — not >50% but significant"},
+      {"id": "L6", "limitation": "No new pattern discovered — boundary may be narrow OR data may lack diversity"},
+      {"id": "L7", "limitation": "No deployable mechanism — descriptive only, not deployable auto-classification"}
+    ],
+    "reason": "All 5 core criteria pass. P1 (dominant, 64.7%) replicates across 4 docs. P2 (second, 23.5%) replicates across 5 docs. Boundary structure 100% stable. BUT P3/P4 not replicated, CE2 n=14 limited, academic domain only, no deployable mechanism."
+  },
+
+  "over_design_audit": {
+    "all_false": true,
+    "checks": 20,
+    "result": "PASS"
+  },
+
+  "capability_expansion_status": {
+    "g5_boundary_identification": "DONE (descriptive)",
+    "human_teaching": "NOT_STARTED",
+    "validated_evidence": "NOT_STARTED",
+    "capability_eligibility": "NOT_STARTED",
+    "capability_learning": "NOT_STARTED",
+    "capability_registration": "NOT_STARTED",
+    "replay": "NOT_STARTED",
+    "shadow_execution": "NOT_STARTED",
+    "controlled_rollout": "NOT_STARTED",
+    "note": "This gate only validates G5 boundary structure. No capability created, learned, or registered."
+  },
+
+  "files_created": [
+    "tmp/g5_boundary_generalization_v2.md",
+    "tmp/g5_boundary_generalization_v2.json",
+    "tmp/g5_boundary_generalization_v2.csv"
+  ],
+  "files_modified": 0,
+
+  "final_status": {
+    "STATUS": "COMPLETE",
+    "GATE": "G5_BOUNDARY_GENERALIZATION_V2",
+    "G5_GENERALIZATION_STATUS": "CONDITIONALLY_SUPPORTED",
+    "NEW_TRUE_G5_COUNT": 16,
+    "CROSS_DOCUMENT_G5": 6,
+    "PATTERN_REPLICATION_RATE": "2/4 (50%)",
+    "NEW_PATTERN_COUNT": 0,
+    "CE2_NEW_CASE_COUNT": 12,
+    "CE2_NEW_TRUE_G5_COUNT": 12,
+    "CE2_COUNTEREXAMPLE_COUNT": 0,
+    "STRUCTURAL_EVIDENCE_SUFFICIENT": "34/34 (100%)",
+    "SEMANTIC_BOUNDARY_PRESENT": "34/34 (100%)",
+    "MACHINE_RESOLVABLE": 65,
+    "INDETERMINATE": 0,
+    "SYSTEM_MODIFIED": false,
+    "FROZEN_BASELINE_INTACT": true,
+    "STOP": true
+  }
+}

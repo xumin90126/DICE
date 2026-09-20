@@ -1,0 +1,638 @@
+{
+  "audit_status": "INSUFFICIENT EVIDENCE",
+  "metadata": {
+    "audit_name": "HVA-02 Human Feedback Value Decomposition & Reusability Audit",
+    "date": "2026-09-17",
+    "mode": "READ-ONLY RESEARCH AUDIT / NO IMPLEMENTATION / FROZEN INTACT / STOP",
+    "predecessors": "HVA-01, DCE-05/06/07, L5 Learning Signal Audit, Info Gain Audit, Feedback Reuse Audit",
+    "feedback_instances_analyzed": 176,
+    "signal_candidates_analyzed": 8
+  },
+  "executive_summary": {
+    "reusable_signal": "INSUFFICIENT EVIDENCE",
+    "highest_reuse_level": "R4 (with counterexamples — NOT validated)",
+    "boundary_signal": "PARTIAL",
+    "primary_bottleneck": "MIXED (Feedback Generalization + Future Validation)",
+    "tld_relationship": "INDEPENDENT",
+    "learning_level": "L3",
+    "key_finding": "Human Feedback has been CAPTURED but not REUSED. 5 candidates exist, none reached L4. Stability-Novelty Paradox: stable signals redundant, novel signals unstable. Only cross-document signal (period+capital) has 33% FP on P7.",
+    "stop": true
+  },
+  "current_human_feedback_loop": {
+    "sources": {
+      "gt_reviewer_rationales": 94,
+      "l5_experiment_judgments": 55,
+      "pilot_judgments": 27,
+      "total": 176
+    },
+    "feedback_taxonomy": {
+      "BOUNDARY_CONFIRMATION": {
+        "count": 116,
+        "pct": 91,
+        "description": "Human confirms Machine existing evidence"
+      },
+      "CONFLICT_SIGNAL": {
+        "count": 4,
+        "pct": 3,
+        "description": "Reviewer disagreement"
+      },
+      "HUMAN_ONLY_INFORMATION": {
+        "count": 4,
+        "pct": 3,
+        "description": "Free-text feedback with novel info"
+      },
+      "EVIDENCE_SUFFICIENCY_SIGNAL": {
+        "count": 2,
+        "pct": 2,
+        "description": "Human signals evidence insufficiency"
+      },
+      "BOUNDARY_CORRECTION": {
+        "count": 1,
+        "pct": 1,
+        "description": "Human corrects Machine error"
+      }
+    },
+    "key_observation": "91% of feedback is REDUNDANT CONFIRMATION. Only 9% contains potentially new information."
+  },
+  "v1_review_value": {
+    "Type_A": {
+      "count": 24,
+      "pct": 53,
+      "v1": "LOW",
+      "reason": "Machine correct, human confirms <3s"
+    },
+    "Type_D_LOW": {
+      "count": 15,
+      "pct": 33,
+      "v1": "LOW-MEDIUM",
+      "reason": "Human resolves quickly"
+    },
+    "Type_E": {
+      "count": 5,
+      "pct": 11,
+      "v1": "MEDIUM-HIGH",
+      "reason": "Genuine boundary"
+    },
+    "Type_B": {
+      "count": 1,
+      "pct": 2,
+      "v1": "LOW",
+      "reason": "Human corrects trivially"
+    },
+    "summary": "Only 5/45 (11%) have genuine Review Value. 87% could be resolved without human."
+  },
+  "v2_feedback_information_gain": {
+    "f_type_distribution": {
+      "F0": {
+        "count": 55,
+        "pct": 59,
+        "description": "Answer only, no rationale"
+      },
+      "F2": {
+        "count": 78,
+        "pct": 83,
+        "description": "Confirms existing evidence (TLD/P1)"
+      },
+      "F3": {
+        "count": 12,
+        "pct": 13,
+        "description": "Reveals period+capital relation (existing P1, system ignores)"
+      },
+      "F4": {
+        "count": 4,
+        "pct": 4,
+        "description": "Adjudicated — exposes sentence vs paragraph boundary"
+      }
+    },
+    "key_finding": "F3/F4 (15%) are the ONLY feedback with potential new information. All 4 F4 cases share SAME pattern: period_end + cap_start.",
+    "high_gain_cases": [
+      "IS11-AMB-032 (B2 UNKNOWN, distillation gap)",
+      "IS11-AMB-375 (adjudicated, B2 UNKNOWN)",
+      "IS11-AMB-005 (adjudicated)",
+      "IS11-AMB-418 (adjudicated)",
+      "IS11-AMB-519 (adjudicated)"
+    ]
+  },
+  "v3_reusable_signal_potential": {
+    "signal_candidates": [
+      {
+        "signal_id": "SIG-01",
+        "name": "TABLE_NUMERIC_DIFF_CELL → SPLIT",
+        "source_cases": "9 IS-11 + 17 total",
+        "feedback_type": "F2",
+        "value_type": "Review/Reuse",
+        "evidence_grounded": "YES",
+        "evidence_source": "TLD (different_cell)",
+        "new_information": "NO",
+        "interpretation_level": "L2",
+        "recurrence_same_page": 5,
+        "recurrence_same_doc": 3,
+        "recurrence_cross_doc": 3,
+        "future_validation": "LOW (1 future case)",
+        "reuse_level": "R3",
+        "current_status": "CANDIDATE",
+        "reason": "Stable but redundant (LOW info gain). Machine already has TLD evidence. Ceiling effect. 5 cases on resnet p6 = NOT 5 independent."
+      },
+      {
+        "signal_id": "SIG-02",
+        "name": "SENTENCE_BOUNDARY_PERIOD_CAPITAL → SPLIT",
+        "source_cases": "4 IS-11 adjudicated + 15 P7",
+        "feedback_type": "F3/F4",
+        "value_type": "Boundary",
+        "evidence_grounded": "PARTIAL",
+        "evidence_source": "P1 (text_a, text_b)",
+        "new_information": "YES (boundary)",
+        "interpretation_level": "L3-L4",
+        "recurrence_same_page": 0,
+        "recurrence_same_doc": 3,
+        "recurrence_cross_doc": 7,
+        "future_validation": "MEDIUM (15 P7 cases)",
+        "reuse_level": "R4",
+        "current_status": "CANDIDATE (with counterexamples)",
+        "reason": "Cross-doc recurrence BUT 5/15 P7 FP (33%). Boundary unstable (reviewer disagreement). Period+capital NECESSARY but NOT SUFFICIENT."
+      },
+      {
+        "signal_id": "SIG-03",
+        "name": "FIGURE_CAPTION → MERGE",
+        "source_cases": "2 IS-11",
+        "feedback_type": "F2",
+        "value_type": "Review",
+        "evidence_grounded": "YES",
+        "evidence_source": "P1 (fig prefix)",
+        "new_information": "NO",
+        "interpretation_level": "L2",
+        "recurrence_same_page": 1,
+        "recurrence_same_doc": 1,
+        "recurrence_cross_doc": 1,
+        "future_validation": "LOW",
+        "reuse_level": "R2",
+        "current_status": "CANDIDATE",
+        "reason": "Stable but 1 doc only, LOW info gain."
+      },
+      {
+        "signal_id": "SIG-04",
+        "name": "MIXED_NUMERIC_TEXT → SPLIT",
+        "source_cases": "5 IS-11",
+        "feedback_type": "F2",
+        "value_type": "Review",
+        "evidence_grounded": "YES",
+        "evidence_source": "P1 (IS-01/IS-02)",
+        "new_information": "NO",
+        "interpretation_level": "L2",
+        "recurrence_same_page": 0,
+        "recurrence_same_doc": 4,
+        "recurrence_cross_doc": 4,
+        "future_validation": "LOW",
+        "reuse_level": "R3",
+        "current_status": "CANDIDATE",
+        "reason": "Stable but VERY LOW info gain (redundant). No negatives (ceiling)."
+      },
+      {
+        "signal_id": "SIG-05",
+        "name": "TABLE_DIFF_CELL_NON_NUMERIC → SPLIT",
+        "source_cases": "4 IS-11",
+        "feedback_type": "F2",
+        "value_type": "Review",
+        "evidence_grounded": "YES",
+        "evidence_source": "TLD (different_cell)",
+        "new_information": "NO",
+        "interpretation_level": "L2",
+        "recurrence_same_page": 2,
+        "recurrence_same_doc": 2,
+        "recurrence_cross_doc": 2,
+        "future_validation": "LOW",
+        "reuse_level": "R3",
+        "current_status": "CANDIDATE",
+        "reason": "Stable but redundant, ceiling effect."
+      },
+      {
+        "signal_id": "SIG-06",
+        "name": "DCE-02 PERIOD+CAPITAL (expanded validation)",
+        "source_cases": "4 IS-11 + 15 P7",
+        "feedback_type": "F3/F4",
+        "value_type": "Boundary",
+        "evidence_grounded": "YES",
+        "evidence_source": "P1 (period+capital)",
+        "new_information": "YES (boundary)",
+        "interpretation_level": "L3",
+        "recurrence_cross_doc": 7,
+        "future_validation": "MEDIUM (15 P7)",
+        "reuse_level": "R4",
+        "current_status": "NOT_REUSABLE",
+        "reason": "33% FP on P7. Pattern is corpus-specific. NOT generalizable."
+      },
+      {
+        "signal_id": "SIG-07",
+        "name": "AMB-032 Evidence Distillation Gap",
+        "source_cases": "1 IS-11",
+        "feedback_type": "F2→F4",
+        "value_type": "Distillation",
+        "evidence_grounded": "YES",
+        "evidence_source": "TLD (different_cell)",
+        "new_information": "YES (distillation gap)",
+        "interpretation_level": "L3",
+        "recurrence_cross_doc": 1,
+        "future_validation": "NONE",
+        "reuse_level": "R1",
+        "current_status": "NOT_REUSABLE",
+        "reason": "One-off. Reveals B2 doesnt expose TLD info. Not a reusable signal, its a system presentation issue."
+      },
+      {
+        "signal_id": "SIG-08",
+        "name": "AMB-375 Genuine Boundary",
+        "source_cases": "1 IS-11",
+        "feedback_type": "F4",
+        "value_type": "Boundary",
+        "evidence_grounded": "PARTIAL",
+        "evidence_source": "P1 (period+capital)",
+        "new_information": "YES (boundary)",
+        "interpretation_level": "L4",
+        "recurrence_cross_doc": 3,
+        "future_validation": "MEDIUM (15 P7)",
+        "reuse_level": "R2",
+        "current_status": "CANDIDATE (unstable)",
+        "reason": "Genuine boundary but reviewer disagreement. Unstable. P7 has 5 counterexamples."
+      }
+    ],
+    "reuse_level_distribution": {
+      "R0": 0,
+      "R1": 1,
+      "R2": 2,
+      "R3": 3,
+      "R4": 2,
+      "R5": 0,
+      "R6": 0
+    },
+    "key_finding": "No signal reached R5 or R6. Highest is R4 but with 33% false positives."
+  },
+  "v4_boundary_value": {
+    "boundary_types": {
+      "sentence_vs_paragraph": {
+        "cases": "4 IS-11 + 15 P7",
+        "evidence": "P1 text (period+capital)",
+        "stable": false,
+        "reusable": false,
+        "reason": "Reviewer disagreement (3/3) + 5/15 P7 FP. Boundary is genuine but UNSTABLE."
+      },
+      "figure_caption_vs_body": {
+        "cases": "2 IS-11",
+        "evidence": "P1 (fig prefix)",
+        "stable": true,
+        "reusable": "PARTIAL (1 doc)",
+        "reason": "Stable but only 1 document, LOW info gain."
+      },
+      "evidence_distillation_boundary": {
+        "cases": "1 (AMB-032)",
+        "evidence": "TLD+B2",
+        "stable": "UNKNOWN (1 case)",
+        "reusable": false,
+        "reason": "One-off observation. System presentation issue."
+      }
+    },
+    "abstention_boundary": {
+      "AMB-032": "B2 UNKNOWN — evidence distillation gap (NOT judgment boundary)",
+      "AMB-375": "B2 UNKNOWN — genuine abstention boundary (period+capital insufficient)",
+      "key_finding": "AMB-375 reveals genuine abstention boundary but it is UNSTABLE."
+    }
+  },
+  "amb032_analysis": {
+    "machine_evidence": "TLD correct (different_cell=True)",
+    "human_a": "KEEP_SEPARATE (1.8s, 0 expansions)",
+    "human_b2": "UNKNOWN (45.9s, 7 expansions)",
+    "feedback_type": "F2→F4 (distillation gap)",
+    "new_information": "YES — B2 fails to expose TLD different_cell",
+    "evidence_grounded": "YES — TLD has info, B2 doesnt expose it",
+    "repeated": "NO — only 1 case",
+    "cross_document": "NO — 1 case, 1 doc",
+    "future_validation": "NONE",
+    "four_way": {
+      "A_new_evidence": "NO",
+      "B_new_interpretation": "NO",
+      "C_better_distillation": "YES",
+      "D_reusable_knowledge": "NO"
+    },
+    "reuse_level": "R1 (local only)",
+    "verdict": "One-off useful feedback (NOT reusable signal). L3 Evidence Distillation Value."
+  },
+  "amb375_analysis": {
+    "machine_evidence": "ABSTAIN (IS-01=False, IS-02=True, mixed)",
+    "reviewer_a": "KEEP_SEPARATE (sentence boundary)",
+    "reviewer_b": "MERGE (paragraph flow)",
+    "adjudicator": "KEEP_SEPARATE (period+capital)",
+    "human_a": "KEEP_SEPARATE (8.1s, 0 exp)",
+    "human_b2": "UNKNOWN (31.3s, 7 exp) + KEEP_SEPARATE (3.5s, 0 exp, cue followed)",
+    "feedback_type": "F4 (boundary)",
+    "new_information": "YES — exposes sentence vs paragraph boundary",
+    "evidence_grounded": "PARTIAL — period+capital detectable but INSUFFICIENT",
+    "repeated": "YES — AMB-005, AMB-418, AMB-519 (same pattern)",
+    "cross_document": "YES — 3 IS-11 docs + 4 P7 docs = 7 docs",
+    "future_validation": "MEDIUM — 15 P7 cases, but 5 are counterexamples (MERGE)",
+    "four_way": {
+      "A_new_evidence": "NO",
+      "B_new_interpretation": "YES",
+      "C_better_distillation": "UNKNOWN",
+      "D_reusable_knowledge": "NO"
+    },
+    "reuse_level": "R2 (repeated) to R4 (cross-doc) but NOT R5 (not stable)",
+    "verdict": "Potential reusable signal BUT unstable. Boundary is genuine but not universal."
+  },
+  "amb135_counterexample": {
+    "machine_error": "FP (TLD page-global contamination)",
+    "human_correction": "KEEP_SEPARATE (2.2s, snap)",
+    "why_no_reusable_signal": [
+      "Human correction is VISUAL, not evidence-based",
+      "TLD failure mechanism identified (DCE-06) but UNFIXABLE (DCE-07)",
+      "Correction is case-specific (page layout)",
+      "No generalizable rule can be extracted"
+    ],
+    "four_way": {
+      "A": "NO",
+      "B": "NO",
+      "C": "NO",
+      "D": "NO"
+    },
+    "verdict": "Type B (Machine Error / Low Reuse). Case-specific and unfixable."
+  },
+  "amb313_462_analysis": {
+    "AMB-313": {
+      "classification": "EVIDENCE PERCEPTION FAILURE (TLD Mechanism 1)",
+      "human_behavior": "Snap judgment (3.9s, override=True)",
+      "is_learning_opportunity": false,
+      "reason": "Human uses page visual. System doesnt have page visual. Cannot learn."
+    },
+    "AMB-462": {
+      "classification": "EVIDENCE PERCEPTION FAILURE (TLD Mechanism 2)",
+      "human_behavior": "Snap judgment (2.3s, override=True)",
+      "is_learning_opportunity": false,
+      "reason": "Human uses page visual. text_ratio=0.163 inherent. DCE-07 cant fix."
+    },
+    "verdict": "Both are Evidence Perception Failure (L1), NOT Feedback Learning Opportunity (L3/L4)."
+  },
+  "cross_case_recurrence": {
+    "sig02_period_capital": {
+      "is11": {
+        "cases": 4,
+        "keep_separate": 4,
+        "merge": 0,
+        "adjudicated": 4,
+        "precision": "100%"
+      },
+      "p7": {
+        "cases": 15,
+        "keep_separate": 10,
+        "merge": 5,
+        "precision": "67%"
+      },
+      "combined": {
+        "cases": 19,
+        "keep_separate": 14,
+        "merge": 5,
+        "precision": "74%"
+      },
+      "cross_document": true,
+      "documents": 7,
+      "independent": true,
+      "counterexamples": "5/15 P7 MERGE (33% FP)",
+      "conclusion": "NOT universal. Period+capital is NECESSARY but NOT SUFFICIENT."
+    },
+    "independence_warning": "SIG-01 has 5 cases on resnet page 6 — NOT 5 independent examples. Same table, same page. Counts as 1 independent observation."
+  },
+  "cross_document_recurrence": {
+    "SIG-01": {
+      "documents": 3,
+      "independent": "PARTIAL (55% on resnet p6)",
+      "counterexamples": "NO (ceiling)"
+    },
+    "SIG-02": {
+      "documents": 7,
+      "independent": "YES",
+      "counterexamples": "YES (5/15 P7 MERGE)"
+    },
+    "SIG-03": {
+      "documents": 1,
+      "independent": "NO",
+      "counterexamples": "NO"
+    },
+    "SIG-04": {
+      "documents": 4,
+      "independent": "YES",
+      "counterexamples": "NO (ceiling)"
+    },
+    "SIG-05": {
+      "documents": 2,
+      "independent": "YES",
+      "counterexamples": "NO (ceiling)"
+    },
+    "key_finding": "Only SIG-02 has cross-document recurrence with counterexamples. All others either lack independence or have ceiling effect."
+  },
+  "future_validation_availability": {
+    "SIG-01": {
+      "future_cases": 1,
+      "feasibility": "LOW",
+      "counterexamples": "NO but ceiling"
+    },
+    "SIG-02": {
+      "future_cases": 15,
+      "feasibility": "MEDIUM",
+      "counterexamples": "YES (5 MERGE)"
+    },
+    "SIG-03": {
+      "future_cases": 0,
+      "feasibility": "NONE",
+      "counterexamples": "NO"
+    },
+    "SIG-04": {
+      "future_cases": 0,
+      "feasibility": "NONE",
+      "counterexamples": "NO"
+    },
+    "SIG-05": {
+      "future_cases": 0,
+      "feasibility": "NONE",
+      "counterexamples": "NO"
+    },
+    "SIG-07": {
+      "future_cases": 0,
+      "feasibility": "NONE",
+      "counterexamples": "N/A"
+    },
+    "SIG-08": {
+      "future_cases": 15,
+      "feasibility": "MEDIUM",
+      "counterexamples": "YES (5 MERGE)"
+    },
+    "key_finding": "Only SIG-02/SIG-08 have meaningful future cases (15 P7). But 5/15 are counterexamples. No signal has future cases WITHOUT counterexamples."
+  },
+  "tld_feedback_value_matrix": {
+    "tld_correct_low": 24,
+    "tld_correct_medium": 1,
+    "tld_correct_high": 1,
+    "tld_wrong_low": 1,
+    "tld_wrong_medium": 0,
+    "tld_wrong_high": 0,
+    "tld_missing_low": 12,
+    "tld_missing_medium": 0,
+    "tld_missing_high": 3,
+    "key_finding": "HIGH feedback value does NOT concentrate on TLD failure. Highest-value case (AMB-032) has TLD CORRECT. TLD failure cases all produce snap judgments.",
+    "conclusion": "TLD = Independent Evidence Quality Problem. NOT the human learning bottleneck."
+  },
+  "case_selection_feedback_value": {
+    "content_type_vs_value": {
+      "TABLE_NUMERIC": {
+        "count": 20,
+        "high_value": 0,
+        "medium": 0,
+        "low": 20
+      },
+      "TABLE_TEXT": {
+        "count": 20,
+        "high_value": 1,
+        "medium": 0,
+        "low": 19
+      },
+      "PROSE": {
+        "count": 3,
+        "high_value": 3,
+        "medium": 0,
+        "low": 0
+      },
+      "FIGURE": {
+        "count": 2,
+        "high_value": 1,
+        "medium": 0,
+        "low": 1
+      }
+    },
+    "critical_finding": "100% of HIGH-value cases are PROSE or non-table content. 0/40 TABLE cases have HIGH reuse value. Current selection (88% TABLE) systematically EXCLUDES highest-value content.",
+    "p7_potential": {
+      "BODY_TEXT_CONTINUATION": {
+        "count": 27,
+        "potential_high": true,
+        "reason": "Sentence/paragraph boundaries"
+      },
+      "REFERENCE_LIST_ENTRY": {
+        "count": 16,
+        "potential_high": "POSSIBLE",
+        "reason": "Citation format boundaries"
+      },
+      "OTHER_AMBIGUOUS": {
+        "count": 9,
+        "potential_high": "POSSIBLE",
+        "reason": "Cross-category boundaries"
+      },
+      "MERGE": {
+        "count": 24,
+        "potential_high": true,
+        "reason": "Harder cases, more boundaries"
+      }
+    },
+    "p7_caveat": "P7 human review data incomplete (all labels UNKNOWN). Cannot confirm without human review."
+  },
+  "four_layer_value_summary": {
+    "V1_review_value": {
+      "HIGH": 5,
+      "MEDIUM": 0,
+      "LOW": 39,
+      "NONE": 1
+    },
+    "V2_info_gain": {
+      "HIGH": 7,
+      "MEDIUM": 0,
+      "LOW": 38,
+      "NONE": 0
+    },
+    "V3_reuse_potential": {
+      "HIGH": 0,
+      "MEDIUM": 2,
+      "LOW": 6,
+      "NONE": 37
+    },
+    "V4_boundary_value": {
+      "HIGH": 1,
+      "MEDIUM": 3,
+      "LOW": 0,
+      "NONE": 41
+    },
+    "key_gap": "Gap between V1/V2 (human can provide value) and V3/V4 (value can be reused) is the core problem."
+  },
+  "failure_missing_evidence": {
+    "ceiling_effect": "96% KEEP_SEPARATE, 0 negative cases, 0 CONFLICT, 0 UNKNOWN in candidates",
+    "stability_novelty_paradox": "Stable signals redundant (Machine has evidence). Novel signals unstable (reviewer disagreement).",
+    "image_confound": "Human always sees page image. Corrections often visual-based. n=1 participant.",
+    "no_future_cases": "0 independent future cases for most signals. Only SIG-02 has 15 P7 but with counterexamples.",
+    "content_type_bias": "IS-11 88% TABLE → 0/40 TABLE have HIGH reuse. 100% HIGH-value are PROSE/FIGURE."
+  },
+  "final_research_judgment": {
+    "Q1_reusable_signal_exists": "INSUFFICIENT EVIDENCE",
+    "Q1_reason": "No signal reached R5/R6. Highest R4 has 33% FP. All stable signals redundant. All novel signals unstable. 0 future cases without counterexamples.",
+    "Q2_why_not": "MIXED — (1) Feedback itself limited (91% redundant). (2) System doesnt distill evidence for human (AMB-032). (3) Not enough repeated cases (4 adjudicated, all same pattern).",
+    "Q3_bottleneck_ranking": [
+      "FEEDBACK_GENERALIZATION (primary)",
+      "FUTURE_VALIDATION (secondary)",
+      "CASE_SELECTION (tertiary)",
+      "EVIDENCE_DISTILLATION (tertiary)",
+      "FEEDBACK_CAPTURE (not bottleneck)"
+    ],
+    "Q4_amb032_amb375": {
+      "AMB-032": "One-off useful feedback (NOT reusable signal). L3 Evidence Distillation Value. R1.",
+      "AMB-375": "Potential reusable signal BUT unstable. R2-R4 but NOT R5. Boundary genuine but not universal."
+    },
+    "Q5_next_step": "VALIDATION not engineering. No signal reached R5. Cannot skip to engineering. Need P7 human review + more participants + image-free test."
+  },
+  "next_route_recommendation": {
+    "route": "ROUTE_E_MIXED",
+    "L2_case_selection": "Redesign to include PROSE/BOUNDARY content (P7 BODY_TEXT, REFERENCE). 100% HIGH-value are non-table.",
+    "L3_evidence_distillation": "Redesign B2 to expose TLD structural info. AMB-032 proves B2 fails. B2 slower than A.",
+    "L4_feedback_generalization": "Address Stability-Novelty Paradox. Need diverse cases, more participants, image-free test.",
+    "L1_tld": "Independent problem, NOT primary. DCE-07 closed locality route.",
+    "note": "Does NOT authorize implementation. Identifies future research focus."
+  },
+  "anti_overdesign_gate": {
+    "new_observation_needed": false,
+    "new_module_needed": false,
+    "new_engine_needed": false,
+    "llm_needed": false,
+    "forbidden_escalations": [
+      "Feedback Generalization → Learning Engine",
+      "Stability-Novelty Paradox → Pattern Engine",
+      "Evidence Distillation Gap → Evidence Organization Engine",
+      "Boundary Instability → LLM",
+      "Case Selection → Intelligent Case Selector"
+    ]
+  },
+  "final_gate": {
+    "hva02_status": "INSUFFICIENT EVIDENCE",
+    "reusable_signal": "INSUFFICIENT EVIDENCE",
+    "highest_reuse_level": "R4 (with counterexamples — NOT validated)",
+    "boundary_signal": "PARTIAL",
+    "primary_bottleneck": "MIXED (Feedback Generalization + Future Validation)",
+    "tld_relationship": "INDEPENDENT",
+    "learning_level": "L3",
+    "engineering_required": false,
+    "experiment_required": "NOT_YET",
+    "implementation_authorized": false,
+    "experiment_authorized": false,
+    "dice_core_modification": false,
+    "p1_p7_modification": false,
+    "tld_modification": false,
+    "is11_modification": false,
+    "m_b_modification": false,
+    "gt_modification": false,
+    "llm": false,
+    "new_observation": false,
+    "new_module": false,
+    "new_engine": false,
+    "runtime_change": false,
+    "capability_change": false,
+    "frozen_baseline": "INTACT",
+    "production": false,
+    "stop": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "expected_tld": "022f5c21e872ad9e",
+    "expected_gt": "7349963d0d23b5ef",
+    "drift": "0/7 INTACT"
+  }
+}

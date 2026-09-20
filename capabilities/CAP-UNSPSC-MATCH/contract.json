@@ -1,0 +1,151 @@
+{
+  "package_metadata": {
+    "package_id": "CAP-UNSPSC-MATCH",
+    "artifact_type": "declarative_capability_package",
+    "lifecycle_phase": "PROPOSED",
+    "design_authority": "Human (design proposal + design review + implementation design review)",
+    "registration_status": "NONE",
+    "runtime_authority": "ZERO",
+    "production": false,
+    "frozen_baseline": "INTACT",
+    "provenance": {
+      "design_proposal": "phase10_first_capability_design_proposal.md",
+      "design_review": "phase10_first_capability_design_review.md",
+      "implementation_design_review": "phase10_capability_implementation_design_review.md"
+    },
+    "note_pc1": "layer is a FREE-FORM string field on the Capability dataclass (NOT an enum). The value 'extraction_rule' reuses an existing convention; no new layer value is introduced."
+  },
+
+  "identity": {
+    "id": "CAP-UNSPSC-MATCH",
+    "name": "UnspscProductClassificationMatching",
+    "layer": "extraction_rule",
+    "description": "Maps laboratory product records (name / description / catalog number) to UNSPSC classification codes. Derives the 8-digit UNSPSC code (Segment-Family-Class-Commodity) from the product's semantic features. Distinct from catalog number extraction (CAP-CATALOG-EXTRACT): this capability classifies by semantic category, not by alphanumeric pattern.",
+    "scope": {
+      "problem_space": "Classification of laboratory product records into the UNSPSC taxonomy",
+      "vocabulary": {},
+      "unspsc_domain": "laboratory_products"
+    }
+  },
+
+  "strategy": {
+    "input_schema": {
+      "fields": {
+        "product_name": { "type": "str", "required": true },
+        "product_description": { "type": "str", "required": false },
+        "catalog_number": { "type": "str", "required": false }
+      },
+      "constraints": { "min_content_length": 1 }
+    },
+    "output_schema": {
+      "fields": {
+        "unspsc_code": { "type": "str", "required": true },
+        "segment": { "type": "str", "required": true },
+        "family": { "type": "str", "required": true },
+        "class": { "type": "str", "required": true },
+        "commodity": { "type": "str", "required": true },
+        "match_basis": { "type": "str", "required": false }
+      }
+    },
+    "execution_strategy": "UNSPSC MATCH: Identify semantic features of a laboratory product record and map them to the UNSPSC taxonomy. Describes WHAT to derive, not HOW (no if-else procedure, no scoring, no ranking).",
+    "evidence_requirements": {
+      "min_pattern_matches": 0,
+      "min_content_length": 1,
+      "validation_gate": "cross_document_unspsc_accuracy"
+    },
+    "pattern_ids": [],
+    "implementation_ids": []
+  },
+
+  "definition": {
+    "positive_boundary": {
+      "definition": "Classification of a laboratory product record into the UNSPSC taxonomy, deriving an 8-digit code from the product's semantic identity (what the product IS, not how it is cataloged).",
+      "core_structure": "product identity → UNSPSC semantic category",
+      "input_forms": ["product_name", "product_description", "catalog_number"],
+      "output_forms": ["unspsc_code", "segment", "family", "class", "commodity"],
+      "domain_scope": "laboratory products (reagents, consumables, instruments, equipment)"
+    },
+    "negative_boundary": {
+      "exclusions": [
+        {
+          "domain": "Catalog number extraction",
+          "belongs_to": "CAP-CATALOG-EXTRACT",
+          "reason": "Extracting alphanumeric catalog/part numbers is a pattern-matching task, NOT semantic classification."
+        },
+        {
+          "domain": "Document section detection",
+          "belongs_to": "chapter_handler layer capabilities",
+          "reason": "Detecting storage/safety/procedure SECTIONS is structural, NOT product classification."
+        },
+        {
+          "domain": "Non-laboratory product classification",
+          "belongs_to": "NONE (out of scope)",
+          "reason": "General commercial product classification is outside the declared domain_scope."
+        }
+      ]
+    },
+    "activation_rule": {
+      "type": "semantic_presence",
+      "trigger": "laboratory product identity signals present in input",
+      "no_doc_class": true,
+      "note": "Activation is a semantic observation, NOT a Runtime decision."
+    },
+    "conflict_resolution": {
+      "conflicts": [
+        {
+          "rival": "CAP-CATALOG-EXTRACT",
+          "resolution": "Orthogonal: UNSPSC MATCH classifies semantic category; CATALOG EXTRACT extracts number patterns. No mutual exclusion; both may apply to the same input without conflict."
+        }
+      ],
+      "note_d_priority": "No numeric default_priority is introduced (Design Decision D-PRIORITY)."
+    },
+    "exclusion_rules": {
+      "hard_exclusions": ["non-laboratory product", "structural section detection"],
+      "soft_exclusions": ["ambiguous product name with no laboratory context"]
+    },
+    "validation_criteria": {
+      "primary_metrics": ["unspsc_match_accuracy"],
+      "pass_condition": "cross_document unspsc accuracy ≥ threshold (to be set at verification)",
+      "review_questions": [
+        "Does the derived UNSPSC code match the ground-truth taxonomy?",
+        "Is the match semantically grounded (not pattern-based)?"
+      ]
+    }
+  },
+
+  "evidence": {
+    "status": "PROPOSED",
+    "maturity": "LOW",
+    "maturity_score": 0.0,
+    "source_evidence_ids": [],
+    "source_pattern_ids": [],
+    "documents_tested": [],
+    "cross_doc_success_rate": 0.0,
+    "evidence_note": "Evidence is EMPTY at PROPOSED status. All fields are populated by the Feedback Loop after verification, NOT hand-hardcoded. Evidence is a declaration of what is needed for promotion to BETA/ACTIVE, NOT a performance guarantee."
+  },
+
+  "evolution": {
+    "version": 1,
+    "epoch": 1,
+    "previous_version_id": "",
+    "evolution_ids": [],
+    "validation_history": [],
+    "evolution_history": [],
+    "enhancement_signals": []
+  },
+
+  "authority_declaration": {
+    "decision": false,
+    "selection": false,
+    "routing": false,
+    "execution": false,
+    "governance": false,
+    "metrics": false,
+    "recommendation": false,
+    "ranking": false,
+    "score": false,
+    "confidence": false,
+    "priority": false,
+    "authority_increment": "ZERO"
+  }
+}

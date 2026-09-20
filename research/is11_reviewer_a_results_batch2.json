@@ -1,0 +1,161 @@
+{
+  "reviewer_id": "A",
+  "batch": "A2",
+  "total_cases": 22,
+  "results": [
+    {
+      "case_id": "IS11-AMB-321",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 6 (Transfer Learning Datasets), '8,144' is the Train Size and '8,041' is the Test Size for Stanford Cars — two different table cells/columns in the same row.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-323",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 6, '2,040' is the Train Size and '6,149' is the Test Size for Flowers — two different table cells/columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-346",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "83.95 and 84.26 are two distinct accuracy values (differ by only 0.31, too small for a top-1/top-5 pair) representing separate model results in adjacent table cells.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-350",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "80.16 and 81.72 are two distinct accuracy values for separate models, occupying different table cells in the appendix results table.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-375",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'[23].' is the terminal fragment of the sentence ending 'developed by Rupp et al. [23].', while 'Each' begins the next sentence 'Each molecule is represented...' — a sentence boundary, hence different semantic units.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-380",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In the FIG. 4 kernel-construction diagram, 'RBF' and 'Matérn' are two distinct base-kernel list items in Layer 1, not a single phrase.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-401",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "0.70 and 0.75 are two adjacent axis tick labels on the AUC axis of FIG. 8 — separate tick marks, not one label.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-407",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "1.35 and 1.40 are two adjacent axis tick labels on the fC axis of FIG. 8 — separate tick marks.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-409",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "0.65 and 0.70 are two adjacent axis tick labels on the fO axis of FIG. 8 — separate tick marks.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-414",
+      "reviewer_id": "A",
+      "label": "MERGE",
+      "rationale": "'FIG. 9:' and 'Left:' are both prefix fragments of the same figure caption ('FIG. 9: Left: BIC values for models with different kernels. Right: ...'), forming one continuous caption unit.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-418",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'...illustrated in the left panel.' ends one sentence, while 'The' starts the next sentence 'The shaded area is the standard deviation...' — a sentence boundary between different semantic units.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-422",
+      "reviewer_id": "A",
+      "label": "MERGE",
+      "rationale": "'FIG. 12:' and 'Distribution of errors for predictions of entropy (upper) and ZPVE (lower)' are the label and body of the same figure caption, forming one continuous caption unit.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-440",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 1, '700M' is the Size column value and '0.80 (2.60x)' is the Memory column value — two different cells/columns in the BitNet b1.58 row.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-457",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'Models' and 'Size' are two adjacent column headers in Table 1/Table 2 — different columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-462",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'WGe' and 'Avg.' are two adjacent column headers in Table 2 — different columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-467",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 2, '37.0' is the HS score and '60.0' is the BQ score for LLaMA 700M — two different cells/columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-483",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 2, '23.5' is the ARCc score and '38.5' is the HS score for LLaMA 1.3B — two different cells/columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-505",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 2, '61.4' is the ARCe score and '28.3' is the ARCc score for BitNet 3B — two different cells/columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-514",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 2, '44.2' is the HS score and '63.5' is the BQ score for BitNet 3.9B — two different cells/columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-519",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'facto backbone for open-source LLMs.' ends the sentence about LLaMA architecture, while 'To embrace the open-source community, our design' begins the next sentence — a sentence boundary between different semantic units.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-522",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'Size' and 'Max Batch Size' are two adjacent column headers in Table 3 — different columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-530",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'PIQA' and 'SciQ' are two adjacent benchmark column headers in Table 4 — different columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    }
+  ]
+}

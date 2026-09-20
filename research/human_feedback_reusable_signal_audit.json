@@ -1,0 +1,455 @@
+{
+  "metadata": {
+    "audit_type": "human_feedback_reusable_signal_audit",
+    "audit_date": "2026-09-12",
+    "mode": "READ-ONLY / DESIGN & EVIDENCE AUDIT",
+    "objective": "Judge whether DICE has achieved Human Feedback → Machine Learning → Future Reuse → Human Review Reduction",
+    "no_core_modification": true,
+    "no_runtime_modification": true,
+    "no_frozen_baseline_modification": true,
+    "no_new_module": true,
+    "no_new_engine": true,
+    "no_ml_training": true,
+    "no_formal_experiment": true
+  },
+  "executive_verdict": {
+    "answer": "NOT YET IMPLEMENTED",
+    "summary": "DICE has feedback capture (L1) and partial evidence linkage (L2), but no signal validation workflow, no reuse mechanism, no measured review reduction. Current DICE = C1 + C2, not C3.",
+    "current_level": "L1→L2 (transitional)",
+    "target_level": "L5→L6",
+    "gap": "3-4 levels: L3 automated discovery, L4 validation, L5 reuse, L6 measurement"
+  },
+  "current_loop": {
+    "document": {
+      "status": "EXISTS",
+      "evidence": "4 PDFs, 60 pages"
+    },
+    "evidence": {
+      "status": "EXISTS",
+      "evidence": "P1-P6, TLD, geometry, style, text"
+    },
+    "candidate": {
+      "status": "EXISTS",
+      "evidence": "545 candidates, 48 working set"
+    },
+    "human_review": {
+      "status": "EXISTS",
+      "evidence": "2 reviewers × 45 + 48-case GT + P722 55 decisions"
+    },
+    "feedback_capture": {
+      "status": "EXISTS",
+      "evidence": "4 free-text + 90 rationales + 93 GT rationales"
+    },
+    "evidence_linkage": {
+      "status": "PARTIAL",
+      "evidence": "CS1: 47% TLD-linked, CS2: 100%, CS3: 100%"
+    },
+    "reusable_signal_extraction": {
+      "status": "PARTIAL",
+      "evidence": "4 candidates identified manually, no automation"
+    },
+    "human_validation_of_signal": {
+      "status": "MISSING",
+      "evidence": "No validation workflow"
+    },
+    "future_case_reuse": {
+      "status": "MISSING",
+      "evidence": "No reuse mechanism"
+    },
+    "measured_human_reduction": {
+      "status": "MISSING",
+      "evidence": "No baseline, no comparison"
+    },
+    "quality_preservation": {
+      "status": "MISSING",
+      "evidence": "Cannot measure without reuse"
+    },
+    "error_containment": {
+      "status": "MISSING",
+      "evidence": "Cannot measure without reuse"
+    },
+    "boundary_preservation": {
+      "status": "MISSING",
+      "evidence": "Cannot measure without reuse"
+    },
+    "summary": "4 EXISTS, 2 PARTIAL, 7 MISSING"
+  },
+  "audit_a_feedback_content": {
+    "feedback_inventory": [
+      {
+        "source": "P01 Pilot",
+        "count": 4,
+        "type": "free-text",
+        "content": "不同表格列, 句子边界, 同一内容单元, UI feedback"
+      },
+      {
+        "source": "Reviewer A",
+        "count": 45,
+        "type": "rationale",
+        "content": "table columns, sentence boundary, figure caption"
+      },
+      {
+        "source": "Reviewer B",
+        "count": 45,
+        "type": "rationale",
+        "content": "table columns, sentence boundary, figure caption"
+      },
+      {
+        "source": "GT Adjudication",
+        "count": 45,
+        "type": "rationale",
+        "content": "Adjudication explanation"
+      },
+      {
+        "source": "48-case GT",
+        "count": 48,
+        "type": "rationale",
+        "content": "GT rationale"
+      },
+      {
+        "source": "P722 Experiment",
+        "count": 55,
+        "type": "decision-only",
+        "content": "No free-text captured"
+      }
+    ],
+    "total_feedback_instances": 242,
+    "total_with_explanation": 187,
+    "decision_vs_explanation_vs_signal": {
+      "decision": "KEEP_SEPARATE / MERGE / UNKNOWN — not reusable signal",
+      "explanation": "why the decision was made — candidate signal source",
+      "reusable_signal": "validated knowledge applicable to future cases — NOT YET EXISTING"
+    },
+    "feedback_evidence_mapping": [
+      {
+        "feedback": "不同表格列",
+        "evidence_exists": true,
+        "evidence_linkable": true,
+        "cross_case_repeatable": true,
+        "evidence": "TLD is_in_table + different_cell"
+      },
+      {
+        "feedback": "句子边界",
+        "evidence_exists": true,
+        "evidence_linkable": true,
+        "cross_case_repeatable": true,
+        "evidence": "text_a period + text_b capital"
+      },
+      {
+        "feedback": "图注连续性",
+        "evidence_exists": true,
+        "evidence_linkable": true,
+        "cross_case_repeatable": true,
+        "evidence": "\"FIG\" marker in text_a"
+      },
+      {
+        "feedback": "章节标题",
+        "evidence_exists": true,
+        "evidence_linkable": true,
+        "cross_case_repeatable": false,
+        "evidence": "digit + title (2 cases, 1 doc)"
+      }
+    ]
+  },
+  "audit_b_candidate_signals": [
+    {
+      "signal_id": "CS1",
+      "name": "DIFFERENT_TABLE_COLUMNS",
+      "evidence": "TLD is_in_table=True + different_cell=True",
+      "cases": 51,
+      "documents": 4,
+      "gt_distribution": {
+        "KEEP_SEPARATE": 49,
+        "MERGE": 2
+      },
+      "evidence_coverage": "24/51 (47%)",
+      "seven_point_check": {
+        "evidence_backed": true,
+        "repeatable": true,
+        "cross_document": true,
+        "human_verifiable": true,
+        "boundary_preservable": "PARTIAL — cannot express UNKNOWN/CONFLICT",
+        "future_applicable": true
+      },
+      "status": "CANDIDATE (not validated)"
+    },
+    {
+      "signal_id": "CS2",
+      "name": "SENTENCE_BOUNDARY",
+      "evidence": "text_a ends with period + text_b starts with capital",
+      "cases": 20,
+      "documents": 4,
+      "gt_distribution": {
+        "KEEP_SEPARATE": 20
+      },
+      "evidence_coverage": "20/20 (100%)",
+      "seven_point_check": {
+        "evidence_backed": true,
+        "repeatable": true,
+        "cross_document": true,
+        "human_verifiable": true,
+        "boundary_preservable": "PARTIAL — binary, no UNKNOWN",
+        "future_applicable": true
+      },
+      "status": "CANDIDATE (not validated)"
+    },
+    {
+      "signal_id": "CS3",
+      "name": "FIGURE_CAPTION_CONTINUITY",
+      "evidence": "\"FIG\" marker in text_a",
+      "cases": 12,
+      "documents": 2,
+      "gt_distribution": {
+        "MERGE": 11,
+        "KEEP_SEPARATE": 1
+      },
+      "evidence_coverage": "12/12 (100%)",
+      "seven_point_check": {
+        "evidence_backed": true,
+        "repeatable": true,
+        "cross_document": "PARTIAL — only 2 docs",
+        "human_verifiable": true,
+        "boundary_preservable": "PARTIAL — FIG appears in both captions and in-text refs",
+        "future_applicable": true
+      },
+      "status": "CANDIDATE (not validated)",
+      "counter_evidence": "AMB-063: \"(Fig. 6, right).\" / \"Its test error...\" → KEEP_SEPARATE (in-text reference, not caption)"
+    },
+    {
+      "signal_id": "CS4",
+      "name": "SECTION_HEADER",
+      "evidence": "text_a is single digit + text_b is title",
+      "cases": 2,
+      "documents": 1,
+      "gt_distribution": {
+        "MERGE": 2
+      },
+      "evidence_coverage": "2/2 (100%)",
+      "seven_point_check": {
+        "evidence_backed": true,
+        "repeatable": "WEAK — only 2 cases",
+        "cross_document": false,
+        "human_verifiable": true,
+        "boundary_preservable": "PARTIAL",
+        "future_applicable": true
+      },
+      "status": "WEAK CANDIDATE"
+    }
+  ],
+  "audit_c_learning_distinction": {
+    "c1_evidence_compression": {
+      "status": "IMPLEMENTED (L5.5)",
+      "what_it_does": "Reduces 21→3 groups, less information to read",
+      "what_it_doesnt": "Does NOT reduce review count",
+      "is_learning": false
+    },
+    "c2_evidence_distillation": {
+      "status": "IMPLEMENTED (L5.10)",
+      "what_it_does": "Raw Evidence → Cue, easier to understand, may reduce time",
+      "what_it_doesnt": "Does NOT reduce review count, no knowledge inheritance",
+      "is_learning": false
+    },
+    "c3_reusable_learning": {
+      "status": "NOT IMPLEMENTED",
+      "what_it_does": "Feedback → Signal → Future Reuse → Review↓",
+      "what_is_missing": [
+        "signal validation workflow",
+        "reuse mechanism",
+        "measured reduction",
+        "boundary expression"
+      ],
+      "is_learning": true
+    },
+    "current_dice": "C1 + C2 (NOT C3)",
+    "key_insight": "Distillation Gap ≠ Learning Gap. Cue reduces time (E1) but not review count (E3)."
+  },
+  "audit_d_minimum_loop": {
+    "best_candidate": "CS1 (DIFFERENT_TABLE_COLUMNS)",
+    "reason": "51 cases, 4 docs, TLD evidence, human feedback explicitly mentions it",
+    "but": "No currently valid reusable signal",
+    "blockers": [
+      "No validation workflow",
+      "No reuse mechanism",
+      "No baseline comparison",
+      "Evidence coverage incomplete (47%)",
+      "Boundary expression missing",
+      "n=1 participant",
+      "Image confound"
+    ],
+    "what_would_be_needed": [
+      "Signal validation protocol (document)",
+      "Reuse experiment design (document)",
+      "10-20 new cases from 545 pool",
+      "Measurement framework"
+    ]
+  },
+  "audit_e_counterfactual": {
+    "cs1": {
+      "e1_faster": true,
+      "e2_still_rejudge": true,
+      "e3_inherit_skip": false,
+      "classification": "Evidence Helpfulness (not Learning)"
+    },
+    "cs2": {
+      "e1_faster": true,
+      "e2_still_rejudge": true,
+      "e3_inherit_skip": false,
+      "classification": "Evidence Helpfulness (not Learning)"
+    },
+    "cs3": {
+      "e1_faster": true,
+      "e2_still_rejudge": true,
+      "e3_inherit_skip": false,
+      "classification": "Evidence Helpfulness (not Learning)"
+    },
+    "summary": "All candidates achieve E1 (faster) but NOT E3 (skip review). This is C2 (Distillation), not C3 (Learning)."
+  },
+  "audit_f_automation_bias": {
+    "cs1_risk": "TLD diff_cell → blind KEEP_SEPARATE. No MERGE case with diff_cell=True in corpus (untested).",
+    "cs2_risk": "period+capital → blind KEEP_SEPARATE. AMB-387 counter-evidence: colon-ending → MERGE.",
+    "cs3_risk": "\"FIG\" → blind MERGE. AMB-063 counter-evidence: in-text reference → KEEP_SEPARATE.",
+    "over_generalization_risk": "One feedback → applied to ALL future matched cases → blind acceptance",
+    "mitigation_required": [
+      "UNKNOWN preservation",
+      "CONFLICT detection",
+      "Human override capability"
+    ]
+  },
+  "maturity_model": {
+    "L0": {
+      "description": "Human-only decision",
+      "status": "PASSED"
+    },
+    "L1": {
+      "description": "Feedback captured",
+      "status": "CURRENT",
+      "evidence": "4 free-text + 90 rationales + 55 decisions"
+    },
+    "L2": {
+      "description": "Feedback evidence-linked",
+      "status": "PARTIAL",
+      "evidence": "CS1: 47%, CS2: 100%, CS3: 100% — manual only"
+    },
+    "L3": {
+      "description": "Reusable candidate discovered",
+      "status": "PARTIAL (manual)",
+      "evidence": "4 candidates by manual analysis, no automation"
+    },
+    "L4": {
+      "description": "Human validates reusable signal",
+      "status": "MISSING",
+      "evidence": "No validation workflow"
+    },
+    "L5": {
+      "description": "Validated knowledge reused",
+      "status": "MISSING",
+      "evidence": "No reuse mechanism"
+    },
+    "L6": {
+      "description": "Reuse reduces Human effort",
+      "status": "MISSING",
+      "evidence": "No measurement"
+    },
+    "L7": {
+      "description": "Repeated iterative improvement",
+      "status": "MISSING",
+      "evidence": "No iteration"
+    },
+    "current_level": "L1→L2 (transitional)"
+  },
+  "core_question_answer": {
+    "implemented": "NO",
+    "components": {
+      "feedback_capture": "IMPLEMENTED",
+      "reusable_signal": "PARTIAL (manual candidates)",
+      "human_validation_of_signal": "MISSING",
+      "future_case_reuse": "MISSING",
+      "measured_human_reduction": "MISSING",
+      "quality_preservation": "MISSING",
+      "error_containment": "MISSING",
+      "boundary_preservation": "MISSING"
+    },
+    "distance_to_closed_loop": "3-4 levels (L3→L4→L5→L6)",
+    "real_gap": [
+      "Signal validation workflow — no mechanism for Human to validate signal applicability",
+      "Reuse mechanism — no way to apply validated signal to future cases",
+      "Measurement framework — no baseline comparison",
+      "Boundary expression — signals cannot express UNKNOWN/CONFLICT",
+      "Cross-participant verification — n=1"
+    ]
+  },
+  "smallest_next_experiment": {
+    "name": "CS1 Signal Validation + Reuse Pilot",
+    "design_only": true,
+    "not_authorized": true,
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Signal Definition",
+        "description": "Define CS1 as candidate signal (not rule), authority=0"
+      },
+      {
+        "phase": 2,
+        "name": "Human Validation",
+        "description": "10 TLD-matched cases, Human validates signal applicability, record validated/rejected/uncertain"
+      },
+      {
+        "phase": 3,
+        "name": "Reuse Test",
+        "description": "10 NEW cases, Condition A (Reuse OFF) vs B (Reuse ON), measure time/accuracy/UNKNOWN"
+      },
+      {
+        "phase": 4,
+        "name": "Measurement",
+        "description": "FRR, review reduction, quality preservation, boundary preservation"
+      }
+    ],
+    "metrics": [
+      "review_time",
+      "decision_accuracy",
+      "unknown_preservation",
+      "override_rate",
+      "FRR"
+    ],
+    "what_it_tests": [
+      "signal reduces time",
+      "signal maintains quality",
+      "signal preserves boundary",
+      "signal avoids automation bias"
+    ],
+    "what_it_doesnt_test": [
+      "cross-participant stability",
+      "long-term iteration",
+      "error propagation",
+      "cross-corpus generalization"
+    ]
+  },
+  "anti_overdesign_gate": {
+    "need_new_core_module": false,
+    "need_new_signal_object": false,
+    "need_pattern_engine": false,
+    "need_learning_engine": false,
+    "need_ml_training": false,
+    "need_evidence_layer_modification": false,
+    "need_human_validation_schema_modification": false,
+    "need_runtime_modification": false,
+    "justification": "All signal validation and reuse can be expressed as research metadata and manual protocol. No DICE system modification needed."
+  },
+  "governance": {
+    "CORE_MODIFICATION": false,
+    "NEW_MODULE": false,
+    "NEW_ENGINE": false,
+    "ML_TRAINING": false,
+    "RUNTIME_CHANGE": false,
+    "FROZEN_BASELINE": "INTACT",
+    "EXPERIMENT_AUTHORIZATION": "NOT_GRANTED",
+    "STOP": true
+  },
+  "frozen_baseline_verification": {
+    "tld_hash": "022f5c21e872ad9e",
+    "gt_hash": "7349963d0d23b5ef",
+    "l5_5_aggregation_hash": "d017bddceb9a512a",
+    "l5_5_compression_hash": "79c8d5f079f43882",
+    "is11_machine_eval_hash": "b41494020b491b92"
+  }
+}

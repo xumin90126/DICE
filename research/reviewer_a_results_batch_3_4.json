@@ -1,0 +1,167 @@
+[
+  {
+    "case_id": "IND-AMB-118",
+    "decision": "KEEP_SEPARATE",
+    "reason": "These are two distinct column headers in Table 1 — 'N unique traces' and 'ROIs' label separate data columns and are independent table headers."
+  },
+  {
+    "case_id": "IND-AMB-119",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'ROIs' and 'Figures used' are two separate column headers in Table 1, each labeling a different data column."
+  },
+  {
+    "case_id": "IND-AMB-122",
+    "decision": "KEEP_SEPARATE",
+    "reason": "In the table row for traces flybrain.ecsv, '332,537' is the value under 'N unique traces' and '211' is the value under 'ROIs' — they occupy different columns and are separate data cells."
+  },
+  {
+    "case_id": "IND-AMB-132",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'33' is a numeric value in the ROIs column and '1, 4, S1, S2, S4' is a figure-reference list in the 'Figures used' column — different table cells in different columns."
+  },
+  {
+    "case_id": "IND-AMB-126",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'11' is a numeric value (ROIs column) and '2, 3, 4, S3, S4' is a figure-reference list (Figures used column) — separate cells in different columns of the table."
+  },
+  {
+    "case_id": "IND-AMB-129",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'traces KC ABp.ecsv' is a post-processed trace file name and 'KC-' (part of the label 'KC-α′β′') is a cell-type label — they belong to different columns (Post-processed table vs Label) in the table structure."
+  },
+  {
+    "case_id": "IND-AMB-130",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'40' is a numeric value in the ROIs column and '1, 4, S1, S2, S4' is a figure-reference list in the 'Figures used' column — separate cells in different columns."
+  },
+  {
+    "case_id": "IND-AMB-134",
+    "decision": "KEEP_SEPARATE",
+    "reason": "').' closes the sentence 'coefficient of determination (R2).' introducing an equation, while 'Profiles' appears later as a distinct section heading — they are independent text units at different positions in the document."
+  },
+  {
+    "case_id": "IND-AMB-138",
+    "decision": "MERGE",
+    "reason": "'[4]' is the reference number and the following text is the full bibliographic citation for that reference — a reference number and its citation belong together as one bibliography entry."
+  },
+  {
+    "case_id": "IND-AMB-139",
+    "decision": "MERGE",
+    "reason": "'[5]' is the reference number and the following text is the corresponding bibliographic citation — they form a single reference entry."
+  },
+  {
+    "case_id": "IND-AMB-185",
+    "decision": "MERGE",
+    "reason": "'[51]' is the reference number and 'P.G. de Gennes.' begins the bibliographic citation — a reference number and its citation form one unit."
+  },
+  {
+    "case_id": "IND-AMB-167",
+    "decision": "MERGE",
+    "reason": "'[33]' is the reference number and the following text begins the corresponding bibliographic citation — they form a single reference entry."
+  },
+  {
+    "case_id": "IND-AMB-125",
+    "decision": "KEEP_SEPARATE",
+    "reason": "In Table 1, 'traces non KC.ecsv' is a trace file name in the 'Trace table' column and 'non-KC' is a cell-type label in the 'Cell-type' column — they occupy different columns in the same row."
+  },
+  {
+    "case_id": "IND-AMB-152",
+    "decision": "MERGE",
+    "reason": "'[18]' is the reference number and the following text begins the bibliographic citation — they form a single reference entry in the bibliography."
+  },
+  {
+    "case_id": "IND-AMB-188",
+    "decision": "MERGE",
+    "reason": "'[54]' is the reference number and the following text begins the corresponding bibliographic citation — they form one reference entry."
+  },
+  {
+    "case_id": "IND-AMB-175",
+    "decision": "MERGE",
+    "reason": "'[41]' is the reference number and the following text begins the bibliographic citation — a reference number and its citation belong together as one entry."
+  },
+  {
+    "case_id": "IND-AMB-193",
+    "decision": "MERGE",
+    "reason": "'was' and 'published' are consecutive words in the same sentence (part of a license statement such as '...was published under a Creative Commons...') — they belong together as one continuous phrase."
+  },
+  {
+    "case_id": "IND-AMB-194",
+    "decision": "MERGE",
+    "reason": "'published' and 'under' are consecutive words in the same license-statement sentence ('...was published under a Creative Commons...') — they form one continuous phrase."
+  },
+  {
+    "case_id": "IND-AMB-195",
+    "decision": "MERGE",
+    "reason": "'a' and 'Creative' are consecutive words in the same license statement sentence ('...under a Creative Commons...') on page 26 — they belong together as part of one continuous phrase."
+  },
+  {
+    "case_id": "IND-AMB-197",
+    "decision": "MERGE",
+    "reason": "'Commons' and 'Attribution-Non-Commercial' are consecutive parts of the Creative Commons license name ('Creative Commons Attribution-Non-Commercial') — they form one continuous license designation."
+  },
+  {
+    "case_id": "IND-AMB-201",
+    "decision": "MERGE",
+    "reason": "'al.,' and '2025).' are consecutive parts of the same citation '(Stagno et al., 2025).' — they belong together as one citation unit."
+  },
+  {
+    "case_id": "IND-AMB-200",
+    "decision": "MERGE",
+    "reason": "'et' and 'al.,' are consecutive parts of 'et al.,' within the citation '(Stagno et al., 2025).' — they form one continuous citation fragment."
+  },
+  {
+    "case_id": "IND-AMB-202",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'2025).' closes the citation '(Stagno et al., 2025).' and 'They' begins a new sentence ('They are not covered by the CC-BY 4.0...') — these are independent text units marking a sentence boundary."
+  },
+  {
+    "case_id": "IND-AMB-240",
+    "decision": "KEEP_SEPARATE",
+    "reason": "In the table on page 34, '232' is a numeric value (molecular weight or length) and '25 mM' is part of a buffer concentration description — they occupy different columns in the table."
+  },
+  {
+    "case_id": "IND-AMB-247",
+    "decision": "KEEP_SEPARATE",
+    "reason": "In the table, '121' is a numeric value (molecular weight) and '40 mM Hepes' begins the RNA folding buffer description — they are in different columns of the same table row."
+  },
+  {
+    "case_id": "IND-AMB-211",
+    "decision": "KEEP_SEPARATE",
+    "reason": "In Table 1, '~450' is the RNA length (nt) value and '150' is the Molecular Weight (kDa) value — they occupy two different columns in the same table row."
+  },
+  {
+    "case_id": "IND-AMB-254",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'3.0-3.2' is a resolution (Å) value and 'Dynamics of' begins the Dynamics column description — they are in different columns of the table."
+  },
+  {
+    "case_id": "IND-AMB-223",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'5.' is the case study number and 'SARS-CoV-2' is the RNA specimen name — they occupy separate columns ('Case study' vs 'RNA Specimen') in the table."
+  },
+  {
+    "case_id": "IND-AMB-231",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'43' is a molecular weight value and '50 mM Na–' begins the RNA folding buffer — they are in different columns of the same table row."
+  },
+  {
+    "case_id": "IND-AMB-234",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'6.5' is a resolution (Å) value and 'N/A' is a dynamics or functional-implications value — they occupy different columns in the table."
+  },
+  {
+    "case_id": "IND-AMB-235",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'6.' is a case study number and 'RNA' begins the RNA specimen name — they occupy separate columns ('Case study' vs 'RNA Specimen') in the table."
+  },
+  {
+    "case_id": "IND-AMB-251",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'124' is an RNA length (nt) value and '~40' is a molecular weight (kDa) value — they occupy two different columns in the same table row."
+  },
+  {
+    "case_id": "IND-AMB-221",
+    "decision": "KEEP_SEPARATE",
+    "reason": "'55' is a molecular weight value and '50 mM Na-' begins the RNA folding buffer description — they are in different columns of the table."
+  }
+]

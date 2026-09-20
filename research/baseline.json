@@ -1,0 +1,1262 @@
+[
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      308.9,
+      534.1,
+      478.1,
+      544.1
+    ],
+    "bbox_b": [
+      488.1,
+      534.1,
+      545.1,
+      544.1
+    ],
+    "case_id": "IS11-AMB-005",
+    "document_id": "is11_resnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": true,
+    "obs_a_id": "410e3e3c7e28c149",
+    "obs_b_id": "bc2119c552088f3d",
+    "page": 1,
+    "text_a": "unsurprising) and then degrades rapidly.",
+    "text_b": "Unexpectedly,"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      170.2,
+      125.4,
+      190.4,
+      134.4
+    ],
+    "bbox_b": [
+      215.3,
+      125.4,
+      235.5,
+      134.4
+    ],
+    "case_id": "IS11-AMB-024",
+    "document_id": "is11_resnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": true,
+    "is02_b": false,
+    "obs_a_id": "ff039eb621122aca",
+    "obs_b_id": "309b6861a41c7635",
+    "page": 6,
+    "text_a": "28.54",
+    "text_b": "10.02"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      208.1,
+      269.4,
+      211.1,
+      278.3
+    ],
+    "bbox_b": [
+      245.0,
+      269.4,
+      260.6,
+      278.3
+    ],
+    "case_id": "IS11-AMB-032",
+    "document_id": "is11_resnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "e08ff6f8c3e534e6",
+    "obs_b_id": "40fdaeabef31a237",
+    "page": 6,
+    "text_a": "-",
+    "text_b": "8.43"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      199.5,
+      305.9,
+      219.7,
+      314.9
+    ],
+    "bbox_b": [
+      246.9,
+      305.9,
+      262.6,
+      314.9
+    ],
+    "case_id": "IS11-AMB-034",
+    "document_id": "is11_resnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": true,
+    "is02_b": false,
+    "obs_a_id": "134baaaba524570e",
+    "obs_b_id": "b1a1b0d4ab319994",
+    "page": 6,
+    "text_a": "21.59",
+    "text_b": "5.71"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      437.6,
+      183.9,
+      462.2,
+      193.3
+    ],
+    "bbox_b": [
+      477.6,
+      183.9,
+      493.9,
+      193.3
+    ],
+    "case_id": "IS11-AMB-052",
+    "document_id": "is11_resnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "2f46381754f2c020",
+    "obs_b_id": "b9466c5c6f336aee",
+    "page": 7,
+    "text_a": "0.46M",
+    "text_b": "7.51"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      343.6,
+      213.8,
+      388.7,
+      222.8
+    ],
+    "bbox_b": [
+      415.8,
+      213.8,
+      438.8,
+      222.8
+    ],
+    "case_id": "IS11-AMB-064",
+    "document_id": "is11_resnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "532e1fc55287aaaf",
+    "obs_b_id": "f0d4cf39e3f5c2d4",
+    "page": 8,
+    "text_a": "training data",
+    "text_b": "07+12"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      413.0,
+      313.5,
+      428.7,
+      322.5
+    ],
+    "bbox_b": [
+      474.4,
+      313.5,
+      490.0,
+      322.5
+    ],
+    "case_id": "IS11-AMB-074",
+    "document_id": "is11_resnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": true,
+    "is02_b": false,
+    "obs_a_id": "d5c27baf886b75dc",
+    "obs_b_id": "11b07ad361bbdc93",
+    "page": 8,
+    "text_a": "41.5",
+    "text_b": "21.2"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      473.8,
+      408.0,
+      476.8,
+      416.9
+    ],
+    "bbox_b": [
+      503.5,
+      408.0,
+      519.2,
+      416.9
+    ],
+    "case_id": "IS11-AMB-101",
+    "document_id": "is11_resnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "de1b28447bdb7d6f",
+    "obs_b_id": "e249b8f3c5afbb62",
+    "page": 11,
+    "text_a": "-",
+    "text_b": "43.9"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      334.8,
+      421.5,
+      447.1,
+      430.5
+    ],
+    "bbox_b": [
+      467.5,
+      421.5,
+      483.1,
+      430.5
+    ],
+    "case_id": "IS11-AMB-102",
+    "document_id": "is11_resnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "cd6eb919167b56b9",
+    "obs_b_id": "b23d34fc69ca65fa",
+    "page": 11,
+    "text_a": "our single model (ILSVRC\u201915)",
+    "text_b": "60.5"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      428.1,
+      108.3,
+      460.8,
+      115.9
+    ],
+    "bbox_b": [
+      469.8,
+      108.3,
+      501.7,
+      115.9
+    ],
+    "case_id": "IS11-AMB-130",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": true,
+    "obs_a_id": "2337fe153c78184d",
+    "obs_b_id": "facb881fc3b93099",
+    "page": 5,
+    "text_a": "Resolution",
+    "text_b": "#Channels"
+  },
+  {
+    "baseline_b": "MERGE",
+    "baseline_b_error_type": "FP",
+    "bbox_a": [
+      320.4,
+      158.2,
+      324.1,
+      165.7
+    ],
+    "bbox_b": [
+      354.1,
+      158.2,
+      404.6,
+      165.7
+    ],
+    "case_id": "IS11-AMB-135",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "MERGE",
+    "experimental_c_error_type": "FP",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": true,
+    "is02_b": true,
+    "obs_a_id": "4fd52b331c166ab6",
+    "obs_b_id": "7479fc1724485b75",
+    "page": 5,
+    "text_a": "4",
+    "text_b": "MBConv6, k5x5"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      266.2,
+      198.7,
+      287.5,
+      207.0
+    ],
+    "bbox_b": [
+      313.3,
+      198.7,
+      328.9,
+      207.0
+    ],
+    "case_id": "IS11-AMB-163",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "2902ccaa1c158219",
+    "obs_b_id": "1476af49a0802c19",
+    "page": 6,
+    "text_a": "93.9%",
+    "text_b": "34M"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      373.0,
+      208.6,
+      387.5,
+      216.9
+    ],
+    "bbox_b": [
+      432.7,
+      208.6,
+      448.6,
+      216.9
+    ],
+    "case_id": "IS11-AMB-168",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "580c3508c9fa7037",
+    "obs_b_id": "d0a21827d7828e83",
+    "page": 6,
+    "text_a": "3.0x",
+    "text_b": "5.7B"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      219.2,
+      340.1,
+      240.6,
+      348.4
+    ],
+    "bbox_b": [
+      266.2,
+      340.1,
+      287.5,
+      348.4
+    ],
+    "case_id": "IS11-AMB-198",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "3b55d2382d0f4048",
+    "obs_b_id": "ab23072930d294e9",
+    "page": 6,
+    "text_a": "82.9%",
+    "text_b": "96.2%"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      266.2,
+      364.1,
+      287.5,
+      372.4
+    ],
+    "bbox_b": [
+      311.2,
+      364.1,
+      331.0,
+      372.4
+    ],
+    "case_id": "IS11-AMB-205",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "b6d3775b748df23f",
+    "obs_b_id": "0619b6c1985e31d8",
+    "page": 6,
+    "text_a": "96.5%",
+    "text_b": "155M"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      216.3,
+      533.6,
+      231.2,
+      541.3
+    ],
+    "bbox_b": [
+      251.9,
+      533.6,
+      272.0,
+      541.3
+    ],
+    "case_id": "IS11-AMB-218",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "62364d5edb93953a",
+    "obs_b_id": "f330d09457e337d4",
+    "page": 6,
+    "text_a": "1.2B",
+    "text_b": "76.8%"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      338.7,
+      135.9,
+      355.2,
+      142.7
+    ],
+    "bbox_b": [
+      365.3,
+      135.9,
+      382.8,
+      142.7
+    ],
+    "case_id": "IS11-AMB-257",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "9b460942c165abeb",
+    "obs_b_id": "61dafcdb174841ea",
+    "page": 7,
+    "text_a": "Gpipe",
+    "text_b": "91.3%"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      116.4,
+      144.1,
+      151.0,
+      150.8
+    ],
+    "bbox_b": [
+      159.1,
+      144.1,
+      176.6,
+      150.8
+    ],
+    "case_id": "IS11-AMB-261",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "bd9d1bcc67dfefbc",
+    "obs_b_id": "5025c1697e685963",
+    "page": 7,
+    "text_a": "Inception-v4",
+    "text_b": "81.8%"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      188.6,
+      144.1,
+      201.4,
+      150.8
+    ],
+    "bbox_b": [
+      213.4,
+      144.1,
+      256.5,
+      150.8
+    ],
+    "case_id": "IS11-AMB-262",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": true,
+    "obs_a_id": "0f8606ace33beaae",
+    "obs_b_id": "5185f5c0ef973036",
+    "page": 7,
+    "text_a": "41M",
+    "text_b": "Ef\ufb01cientNet-B5"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      365.3,
+      144.1,
+      382.8,
+      150.8
+    ],
+    "bbox_b": [
+      393.7,
+      144.1,
+      409.9,
+      150.8
+    ],
+    "case_id": "IS11-AMB-267",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "5a10b6c660d178b7",
+    "obs_b_id": "04dc9e087d934197",
+    "page": 7,
+    "text_a": "83.6%",
+    "text_b": "556M"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      213.4,
+      160.4,
+      256.5,
+      167.2
+    ],
+    "bbox_b": [
+      264.6,
+      160.4,
+      282.1,
+      167.2
+    ],
+    "case_id": "IS11-AMB-279",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "fd620c97e0cedf3f",
+    "obs_b_id": "7e6cc1bc0e64ce29",
+    "page": 7,
+    "text_a": "Ef\ufb01cientNet-B5",
+    "text_b": "98.5%"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      224.9,
+      271.8,
+      250.4,
+      278.8
+    ],
+    "bbox_b": [
+      258.9,
+      271.8,
+      283.5,
+      278.8
+    ],
+    "case_id": "IS11-AMB-313",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": true,
+    "obs_a_id": "1c1e6075f12fc14c",
+    "obs_b_id": "1a67a1426d433cea",
+    "page": 8,
+    "text_a": "Test Size",
+    "text_b": "#Classes"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      157.2,
+      301.0,
+      159.5,
+      308.0
+    ],
+    "bbox_b": [
+      192.4,
+      301.0,
+      211.7,
+      308.0
+    ],
+    "case_id": "IS11-AMB-318",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "52d5ad8649f65b24",
+    "obs_b_id": "224eca852461a5e2",
+    "page": 8,
+    "text_a": ")",
+    "text_b": "47,386"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      194.2,
+      309.4,
+      210.0,
+      316.5
+    ],
+    "bbox_b": [
+      229.8,
+      309.4,
+      245.6,
+      316.5
+    ],
+    "case_id": "IS11-AMB-321",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "0fb2b7be296ac0a3",
+    "obs_b_id": "a8147887d8a71792",
+    "page": 8,
+    "text_a": "8,144",
+    "text_b": "8,041"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      194.2,
+      317.9,
+      210.0,
+      324.9
+    ],
+    "bbox_b": [
+      229.8,
+      317.9,
+      245.6,
+      324.9
+    ],
+    "case_id": "IS11-AMB-323",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "a485a20060d65367",
+    "obs_b_id": "5ec8fa61f6976c77",
+    "page": 8,
+    "text_a": "2,040",
+    "text_b": "6,149"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      242.3,
+      483.6,
+      258.1,
+      490.6
+    ],
+    "bbox_b": [
+      266.5,
+      483.6,
+      282.3,
+      490.6
+    ],
+    "case_id": "IS11-AMB-346",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": true,
+    "is02_b": false,
+    "obs_a_id": "6b8bc73b57ddb06a",
+    "obs_b_id": "f9d1d27a4531179f",
+    "page": 9,
+    "text_a": "83.95",
+    "text_b": "84.26"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      145.3,
+      492.0,
+      161.1,
+      499.1
+    ],
+    "bbox_b": [
+      169.6,
+      492.0,
+      185.4,
+      499.1
+    ],
+    "case_id": "IS11-AMB-350",
+    "document_id": "is11_efficientnet",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": true,
+    "is02_b": false,
+    "obs_a_id": "72d14ad612940b10",
+    "obs_b_id": "48670daf8cfac002",
+    "page": 9,
+    "text_a": "80.16",
+    "text_b": "81.72"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      470.7,
+      121.5,
+      492.2,
+      133.5
+    ],
+    "bbox_b": [
+      501.9,
+      121.5,
+      527.1,
+      133.5
+    ],
+    "case_id": "IS11-AMB-375",
+    "document_id": "is11_med_001",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": true,
+    "obs_a_id": "bf179e5206d28731",
+    "obs_b_id": "16015c25837c31aa",
+    "page": 6,
+    "text_a": "[23].",
+    "text_b": "Each"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      199.4,
+      107.2,
+      218.0,
+      117.0
+    ],
+    "bbox_b": [
+      248.6,
+      107.3,
+      276.9,
+      117.2
+    ],
+    "case_id": "IS11-AMB-380",
+    "document_id": "is11_med_001",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": true,
+    "obs_a_id": "2a151f998ecd3dff",
+    "obs_b_id": "2b8365f923da0e27",
+    "page": 13,
+    "text_a": "RBF",
+    "text_b": "Mat\u00e9rn"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      333.4,
+      237.2,
+      349.1,
+      249.0
+    ],
+    "bbox_b": [
+      375.8,
+      237.2,
+      391.6,
+      249.0
+    ],
+    "case_id": "IS11-AMB-401",
+    "document_id": "is11_med_001",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": true,
+    "is02_b": false,
+    "obs_a_id": "3c80635ae6f541ff",
+    "obs_b_id": "26afedb6cc809423",
+    "page": 19,
+    "text_a": "0.70",
+    "text_b": "0.75"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      191.1,
+      414.5,
+      206.9,
+      426.3
+    ],
+    "bbox_b": [
+      235.9,
+      414.5,
+      251.7,
+      426.3
+    ],
+    "case_id": "IS11-AMB-407",
+    "document_id": "is11_med_001",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": true,
+    "is02_b": false,
+    "obs_a_id": "8427fd3ea606ff9b",
+    "obs_b_id": "f5cb34ae71fc068b",
+    "page": 19,
+    "text_a": "1.35",
+    "text_b": "1.40"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      323.4,
+      414.5,
+      339.2,
+      426.3
+    ],
+    "bbox_b": [
+      369.6,
+      414.5,
+      385.4,
+      426.3
+    ],
+    "case_id": "IS11-AMB-409",
+    "document_id": "is11_med_001",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": true,
+    "is02_b": false,
+    "obs_a_id": "ef22586cde9bb6a2",
+    "obs_b_id": "609a9d5492db208b",
+    "page": 19,
+    "text_a": "0.65",
+    "text_b": "0.70"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_MERGE_GT",
+    "bbox_a": [
+      85.0,
+      340.5,
+      125.3,
+      352.4
+    ],
+    "bbox_b": [
+      143.5,
+      340.5,
+      167.4,
+      352.4
+    ],
+    "case_id": "IS11-AMB-414",
+    "document_id": "is11_med_001",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_MERGE_GT",
+    "gt": "MERGE",
+    "is01_a": false,
+    "is02_b": true,
+    "obs_a_id": "86bef2df1f932996",
+    "obs_b_id": "3b0dc43c949cf57f",
+    "page": 20,
+    "text_a": "FIG. 9:",
+    "text_b": "Left:"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      170.6,
+      382.3,
+      496.0,
+      394.3
+    ],
+    "bbox_b": [
+      506.9,
+      382.3,
+      527.1,
+      394.3
+    ],
+    "case_id": "IS11-AMB-418",
+    "document_id": "is11_med_001",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": true,
+    "obs_a_id": "2105c12047dd10df",
+    "obs_b_id": "74aa0e81f64bbd31",
+    "page": 20,
+    "text_a": "), but with the different kernels illustrated in the left panel.",
+    "text_b": "The"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_MERGE_GT",
+    "bbox_a": [
+      85.0,
+      571.8,
+      128.7,
+      583.7
+    ],
+    "bbox_b": [
+      139.1,
+      571.8,
+      527.1,
+      583.7
+    ],
+    "case_id": "IS11-AMB-422",
+    "document_id": "is11_med_001",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_MERGE_GT",
+    "gt": "MERGE",
+    "is01_a": false,
+    "is02_b": true,
+    "obs_a_id": "bfa9aad5c83db11b",
+    "obs_b_id": "ebec46e5d4cf47eb",
+    "page": 24,
+    "text_a": "FIG. 12:",
+    "text_b": "Distribution of errors for predictions of entropy (upper) and ZPVE (lower)"
+  },
+  {
+    "baseline_b": "KEEP_SEPARATE",
+    "baseline_b_error_type": "NONE",
+    "bbox_a": [
+      227.6,
+      102.8,
+      251.4,
+      112.8
+    ],
+    "bbox_b": [
+      279.3,
+      102.8,
+      328.3,
+      112.8
+    ],
+    "case_id": "IS11-AMB-440",
+    "document_id": "is11_cs_001",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": false,
+    "obs_a_id": "a974b8dbcc57f155",
+    "obs_b_id": "01cc8f7b3405a9a3",
+    "page": 3,
+    "text_a": "700M",
+    "text_b": "0.80 (2.60x)"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      131.0,
+      216.1,
+      162.0,
+      226.1
+    ],
+    "bbox_b": [
+      202.5,
+      216.1,
+      219.6,
+      226.1
+    ],
+    "case_id": "IS11-AMB-457",
+    "document_id": "is11_cs_001",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": true,
+    "obs_a_id": "c30608b7dd60b527",
+    "obs_b_id": "34b3bdd577c50bab",
+    "page": 3,
+    "text_a": "Models",
+    "text_b": "Size"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      428.4,
+      216.1,
+      450.5,
+      226.1
+    ],
+    "bbox_b": [
+      462.5,
+      216.1,
+      481.0,
+      226.1
+    ],
+    "case_id": "IS11-AMB-462",
+    "document_id": "is11_cs_001",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": true,
+    "obs_a_id": "6a71788ebaf96b93",
+    "obs_b_id": "eaf308e589bcd10e",
+    "page": 3,
+    "text_a": "WGe",
+    "text_b": "Avg."
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      310.8,
+      232.3,
+      328.3,
+      242.3
+    ],
+    "bbox_b": [
+      340.2,
+      232.3,
+      357.6,
+      242.3
+    ],
+    "case_id": "IS11-AMB-467",
+    "document_id": "is11_cs_001",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": true,
+    "is02_b": false,
+    "obs_a_id": "39b4ce5ed6c410be",
+    "obs_b_id": "267f6a69a11959db",
+    "page": 3,
+    "text_a": "37.0",
+    "text_b": "60.0"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      277.1,
+      259.3,
+      294.6,
+      269.3
+    ],
+    "bbox_b": [
+      310.8,
+      259.3,
+      328.3,
+      269.3
+    ],
+    "case_id": "IS11-AMB-483",
+    "document_id": "is11_cs_001",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": true,
+    "is02_b": false,
+    "obs_a_id": "8f3362d1c9fd5030",
+    "obs_b_id": "4a9945d47b15eb0a",
+    "page": 3,
+    "text_a": "23.5",
+    "text_b": "38.5"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      239.2,
+      297.2,
+      256.6,
+      307.1
+    ],
+    "bbox_b": [
+      277.1,
+      297.2,
+      294.6,
+      307.1
+    ],
+    "case_id": "IS11-AMB-505",
+    "document_id": "is11_cs_001",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": true,
+    "is02_b": false,
+    "obs_a_id": "4fae33d2040aab66",
+    "obs_b_id": "0fc3d9cf802bcf14",
+    "page": 3,
+    "text_a": "61.4",
+    "text_b": "28.3"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      310.8,
+      308.1,
+      328.3,
+      318.1
+    ],
+    "bbox_b": [
+      340.2,
+      308.1,
+      357.6,
+      318.1
+    ],
+    "case_id": "IS11-AMB-514",
+    "document_id": "is11_cs_001",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": true,
+    "is02_b": false,
+    "obs_a_id": "9cb3c6c9babe08b2",
+    "obs_b_id": "3dd2603216402bab",
+    "page": 3,
+    "text_a": "44.2",
+    "text_b": "63.5"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      108.0,
+      420.5,
+      273.9,
+      430.6
+    ],
+    "bbox_b": [
+      282.4,
+      420.5,
+      504.0,
+      430.6
+    ],
+    "case_id": "IS11-AMB-519",
+    "document_id": "is11_cs_001",
+    "experimental_c": "INSUFFICIENT_EVIDENCE",
+    "experimental_c_error_type": "ABSTAIN_ON_KEEP_GT",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": true,
+    "obs_a_id": "408a799ef3296a96",
+    "obs_b_id": "ada74a6d26d67194",
+    "page": 3,
+    "text_a": "facto backbone for open-source LLMs.",
+    "text_b": "To embrace the open-source community, our design"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      234.7,
+      263.1,
+      251.9,
+      273.1
+    ],
+    "bbox_b": [
+      271.8,
+      263.1,
+      338.2,
+      273.1
+    ],
+    "case_id": "IS11-AMB-522",
+    "document_id": "is11_cs_001",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": true,
+    "obs_a_id": "26ea571d5198e8de",
+    "obs_b_id": "2d831468e376a323",
+    "page": 4,
+    "text_a": "Size",
+    "text_b": "Max Batch Size"
+  },
+  {
+    "baseline_b": "INSUFFICIENT_EVIDENCE",
+    "baseline_b_error_type": "ABSTAIN_ON_KEEP_GT",
+    "bbox_a": [
+      295.1,
+      273.9,
+      318.8,
+      283.3
+    ],
+    "bbox_b": [
+      331.0,
+      273.9,
+      350.5,
+      283.3
+    ],
+    "case_id": "IS11-AMB-530",
+    "document_id": "is11_cs_001",
+    "experimental_c": "KEEP_SEPARATE",
+    "experimental_c_error_type": "NONE",
+    "gt": "KEEP_SEPARATE",
+    "is01_a": false,
+    "is02_b": true,
+    "obs_a_id": "397f536659015410",
+    "obs_b_id": "35892215144891db",
+    "page": 5,
+    "text_a": "PIQA",
+    "text_b": "SciQ"
+  }
+]

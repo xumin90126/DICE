@@ -1,0 +1,322 @@
+{
+  "reviewer_id": "A",
+  "review_timestamp": "2026-09-09T23:17:13",
+  "total_cases": 45,
+  "results": [
+    {
+      "case_id": "IS11-AMB-005",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "text_a ends a sentence with a period after 'degrades rapidly' and text_b starts a new sentence with 'Unexpectedly,'; these are two different sentences in running prose, not parts of the same semantic unit.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-024",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In the error-rate table, '28.54' is the top-1 error and '10.02' is the top-5 error for plain-34, occupying two different table columns.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-032",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 3, '-' is the missing top-1 error and '8.43' is the top-5 error for VGG, two distinct table cells in different columns.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-034",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'21.59' and '5.71' are the top-1 and top-5 error values for a ResNet row, residing in two separate table columns.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-052",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 6, '0.46M' is the #params column and '7.51' is the error (%) column for ResNet-32, two different table columns.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-064",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'training data' is a column header label and '07+12' is a data value in an adjacent column; they belong to different table cells.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-074",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 8, '41.5' is the mAP@.5 value and '21.2' is the mAP@[.5,.95] value for VGG-16, two separate table columns.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-101",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'-' is a missing-value placeholder in one table cell and '43.9' is a numeric metric in an adjacent cell, belonging to different columns.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-102",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'our single model (ILSVRC'15)' is a method/system label in one column and '60.5' is a numeric result metric in an adjacent column; different table cells.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-130",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'Resolution' and '#Channels' are two distinct column headers in the Table 1 header row, representing different table columns.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-135",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 1, '4' is the stage index and 'MBConv6, k5x5' is the operator type, two separate columns in the architecture table.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-163",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 2, '93.9%' is the Top-5 accuracy and '34M' is the #Params for DenseNet-264, two different table columns.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-168",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 2, '3.0x' is the param ratio-to-EfficientNet and '5.7B' is the #FLOPs for Inception-v3, two separate table columns.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-198",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'82.9%' is the Top-1 accuracy and '96.2%' is the Top-5 accuracy in Table 2, two distinct table columns for the same model row.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-205",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 2, '96.5%' is the Top-5 accuracy and '155M' is the #Params for AmoebaNet-C, two different table columns.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-218",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'1.2B' is a #FLOPs value and '76.8%' is a Top-1 accuracy; these belong to different table columns (and likely different rows), not the same cell.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-257",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 5, 'Gpipe' is a model name and '91.3%' is its accuracy value, occupying two separate table columns.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-261",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 5, 'Inception-v4' is a model name and '81.8%' is its accuracy value, two distinct table columns.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-262",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'41M' is the #Param value for Inception-v4 in the comparison column group and 'EfficientNet-B5' is a model name in the adjacent 'Our Model' column group; different table cells.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-267",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 5, '83.6%' is the accuracy and '556M' is the #Params for GPipe, two separate table columns.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-279",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'EfficientNet-B5' is a model name and '98.5%' is its accuracy value in Table 5, two distinct table columns.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-313",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'Test Size' and '#Classes' are two different column headers in the Table 6 header row, representing separate table columns.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-318",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "')' is the closing parenthesis of the dataset citation 'Birdsnap (Berg et al., 2014)' in the Dataset column, while '47,386' is the Train Size value in an adjacent column; different table cells.",
+      "review_timestamp": "2026-09-09T23:30:00"
+    },
+    {
+      "case_id": "IS11-AMB-321",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 6 (Transfer Learning Datasets), '8,144' is the Train Size and '8,041' is the Test Size for Stanford Cars — two different table cells/columns in the same row.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-323",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 6, '2,040' is the Train Size and '6,149' is the Test Size for Flowers — two different table cells/columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-346",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "83.95 and 84.26 are two distinct accuracy values (differ by only 0.31, too small for a top-1/top-5 pair) representing separate model results in adjacent table cells.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-350",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "80.16 and 81.72 are two distinct accuracy values for separate models, occupying different table cells in the appendix results table.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-375",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'[23].' is the terminal fragment of the sentence ending 'developed by Rupp et al. [23].', while 'Each' begins the next sentence 'Each molecule is represented...' — a sentence boundary, hence different semantic units.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-380",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In the FIG. 4 kernel-construction diagram, 'RBF' and 'Matérn' are two distinct base-kernel list items in Layer 1, not a single phrase.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-401",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "0.70 and 0.75 are two adjacent axis tick labels on the AUC axis of FIG. 8 — separate tick marks, not one label.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-407",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "1.35 and 1.40 are two adjacent axis tick labels on the fC axis of FIG. 8 — separate tick marks.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-409",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "0.65 and 0.70 are two adjacent axis tick labels on the fO axis of FIG. 8 — separate tick marks.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-414",
+      "reviewer_id": "A",
+      "label": "MERGE",
+      "rationale": "'FIG. 9:' and 'Left:' are both prefix fragments of the same figure caption ('FIG. 9: Left: BIC values for models with different kernels. Right: ...'), forming one continuous caption unit.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-418",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'...illustrated in the left panel.' ends one sentence, while 'The' starts the next sentence 'The shaded area is the standard deviation...' — a sentence boundary between different semantic units.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-422",
+      "reviewer_id": "A",
+      "label": "MERGE",
+      "rationale": "'FIG. 12:' and 'Distribution of errors for predictions of entropy (upper) and ZPVE (lower)' are the label and body of the same figure caption, forming one continuous caption unit.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-440",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 1, '700M' is the Size column value and '0.80 (2.60x)' is the Memory column value — two different cells/columns in the BitNet b1.58 row.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-457",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'Models' and 'Size' are two adjacent column headers in Table 1/Table 2 — different columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-462",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'WGe' and 'Avg.' are two adjacent column headers in Table 2 — different columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-467",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 2, '37.0' is the HS score and '60.0' is the BQ score for LLaMA 700M — two different cells/columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-483",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 2, '23.5' is the ARCc score and '38.5' is the HS score for LLaMA 1.3B — two different cells/columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-505",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 2, '61.4' is the ARCe score and '28.3' is the ARCc score for BitNet 3B — two different cells/columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-514",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "In Table 2, '44.2' is the HS score and '63.5' is the BQ score for BitNet 3.9B — two different cells/columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-519",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'facto backbone for open-source LLMs.' ends the sentence about LLaMA architecture, while 'To embrace the open-source community, our design' begins the next sentence — a sentence boundary between different semantic units.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-522",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'Size' and 'Max Batch Size' are two adjacent column headers in Table 3 — different columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    },
+    {
+      "case_id": "IS11-AMB-530",
+      "reviewer_id": "A",
+      "label": "KEEP_SEPARATE",
+      "rationale": "'PIQA' and 'SciQ' are two adjacent benchmark column headers in Table 4 — different columns.",
+      "review_timestamp": "2026-09-09T23:35:00"
+    }
+  ]
+}

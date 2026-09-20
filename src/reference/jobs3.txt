@@ -1,0 +1,16 @@
+Unstructured-IO|unstructured|main|unstructured/partition/pdf.py|unstructured/pdf.py
+Unstructured-IO|unstructured|main|unstructured/partition/strategies.py|unstructured/strategies.py
+Unstructured-IO|unstructured|main|unstructured/partition/text_type.py|unstructured/text_type.py
+Unstructured-IO|unstructured|main|unstructured/documents/elements.py|unstructured/elements.py
+Unstructured-IO|unstructured|main|unstructured/partition/pdf_image/pdf_image_utils.py|unstructured/pdf_image_utils.py
+Unstructured-IO|unstructured|main|unstructured/partition/pdf_image/ocr.py|unstructured/ocr.py
+Unstructured-IO|unstructured|main|unstructured/partition/pdf_image/table.py|unstructured/table.py
+opendatalab|MinerU|master|mineru/model/layout/pp_doclayoutv2.py|mineru/pp_doclayoutv2.py
+opendatalab|MinerU|master|mineru/utils/magic_model_utils.py|mineru/magic_model_utils.py
+opendatalab|MinerU|master|mineru/utils/visual_magic_model_utils.py|mineru/visual_magic_model_utils.py
+datalab-to|marker|master|marker/converters/pdf.py|marker/pdf.py
+datalab-to|marker|master|marker/models.py|marker/models.py
+datalab-to|marker|master|marker/settings.py|marker/settings.py
+datalab-to|marker|master|marker/util.py|marker/util.py
+datalab-to|marker|master|marker/converters/__init__.py|marker/converters_init.py
+datalab-to|marker|master|marker/output.py|marker/output.py

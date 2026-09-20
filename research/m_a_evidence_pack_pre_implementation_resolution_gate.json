@@ -1,0 +1,183 @@
+{
+  "pre_implementation_resolution": "READY",
+  "design_ready": "TRUE (CONDITIONAL on implementation authorization)",
+  "pr_results": {
+    "PR1_same_y_parameter": {
+      "decision": "5PT",
+      "rationale": "±3pt causes total context loss for 1 case ('max'); ±5pt resolves without adjacent-line noise",
+      "measurement": {
+        "total_cases": 79,
+        "coverage_3pt": "98.7% (1/79 empty)",
+        "coverage_5pt": "100.0% (0/79 empty)",
+        "cases_where_3pt_ne_5pt": 17,
+        "same_line_verified": "17/17 cases — ±5pt-only atoms are same-line",
+        "adjacent_line_contamination": "0/17 cases",
+        "critical_case": "is11_med_001_p15_244_342 ('max'): ±3pt=0, ±5pt=19",
+        "potential_noise": "3 caption cases get table-row numbers (truncated, low impact)"
+      },
+      "status": "PRE_REGISTERED",
+      "note": "Evidence Collection parameter, NOT semantic threshold"
+    },
+    "PR2_distance_rule": {
+      "decision": "SEPARATED",
+      "rationale": "60pt conflated candidate generation and pack inclusion; separating fixes false 'no drawing' message",
+      "roles": {
+        "candidate_generation": "60pt (historical, unchanged)",
+        "pack_inclusion": "ALWAYS include nearest extent (no threshold)"
+      },
+      "nearest_extent_always_included": true,
+      "near_far_classification": "NOT_REQUIRED (distance shown as number)",
+      "60pt_status": "HISTORICAL_ONLY (not pre-registered, not an association threshold)",
+      "status": "PRE_REGISTERED"
+    },
+    "PR3_evidence_state": {
+      "decision": "3-STATE MODEL",
+      "states": [
+        "NO_VISUAL_EVIDENCE (DGF=0, DEF=0)",
+        "PRIMITIVES_NO_EXTENT (DGF>0, DEF=0)",
+        "EXTENT_EXISTS (DEF>0, distance as number)"
+      ],
+      "why_3_not_4": "Merged EXTENT_NEAR and EXTENT_FAR into EXTENT_EXISTS; distance shown as number, not state label; reduces semantic leakage",
+      "state_distribution": {
+        "NO_VISUAL_EVIDENCE": 2,
+        "PRIMITIVES_NO_EXTENT": 3,
+        "EXTENT_EXISTS": 71
+      },
+      "semantic_leakage": false,
+      "state_determinability": "FULLY_DETERMINABLE (from existing DGF/DEF facts)",
+      "status": "PRE_REGISTERED"
+    }
+  },
+  "gate_resolution": {
+    "G1_drawing_extent_policy": {
+      "previous": "CONDITIONAL",
+      "resolved": "CONDITIONAL",
+      "reason": "PR2 resolved role separation; 60pt candidate threshold may need review"
+    },
+    "G2_context_scope": {
+      "previous": "CONDITIONAL",
+      "resolved": "CONDITIONAL",
+      "reason": "same_y confirmed sufficient; 2 inconclusive Type_B cases untested"
+    },
+    "G3_same_y_policy": {
+      "previous": "CONDITIONAL",
+      "resolved": "PASS",
+      "reason": "PR1: ±5pt justified by full-corpus measurement"
+    },
+    "G4_negative_control_context": {
+      "previous": "FAIL",
+      "resolved": "PASS",
+      "condition": "unified pipeline implementation",
+      "reason": "Unified pipeline ensures all cases get same evidence collection"
+    },
+    "G5_evidence_state": {
+      "previous": "FAIL",
+      "resolved": "PASS",
+      "condition": "3-state model implementation",
+      "reason": "3-state model replaces misleading binary extent=None"
+    },
+    "G6_human_reconstruction_boundary": {
+      "previous": "CONDITIONAL",
+      "resolved": "CONDITIONAL",
+      "reason": "Boundary defined; 3 semantic boundary cases exist beyond evidence"
+    },
+    "G7_minimum_sufficient_evidence": {
+      "previous": "CONDITIONAL",
+      "resolved": "PASS",
+      "reason": "Schema finalized: 4 REQUIRED + 1 CONDITIONAL"
+    },
+    "G8_case_type_consistency": {
+      "previous": "FAIL",
+      "resolved": "PASS",
+      "condition": "unified pipeline implementation",
+      "reason": "Case type only affects evaluation, not collection"
+    },
+    "G9_m_a_boundary": {
+      "previous": "PASS",
+      "resolved": "PASS",
+      "reason": "Pack remains non-semantic"
+    },
+    "G10_implementation_scope": {
+      "previous": "PASS",
+      "resolved": "PASS",
+      "reason": "Scope clearly defined"
+    }
+  },
+  "gate_summary": {
+    "pass": 7,
+    "conditional": 3,
+    "fail": 0
+  },
+  "final_evidence_pack_schema": {
+    "TARGET_TEXT": "REQUIRED",
+    "NEAREST_DRAWING_EXTENT": "REQUIRED",
+    "SPATIAL_RELATION": "REQUIRED",
+    "SAME_Y_CONTEXT": "REQUIRED",
+    "EVIDENCE_STATE": "CONDITIONAL",
+    "ALL_PAGE_EXTENTS": "NOT_REQUIRED",
+    "SENTENCE_CONTEXT": "NOT_REQUIRED",
+    "PARAGRAPH_CONTEXT": "NOT_REQUIRED",
+    "CROSS_PAGE_CONTEXT": "NOT_REQUIRED"
+  },
+  "pack_remains_non_semantic": true,
+  "human_reconstruction_burden": {
+    "current": "PAGE_CONTEXT / MULTI_SENTENCE_CONTEXT (for negatives)",
+    "desired": "LOCAL_CONTEXT_ONLY (for all cases)",
+    "status": "REDUCED (with complete Pack, not claiming LOW_COGNITIVE_LOAD)"
+  },
+  "pre_registration_record": {
+    "PR1": {
+      "parameter": "same_y_threshold = ±5pt",
+      "registered": "2026-09-17",
+      "status": "PRE_REGISTERED",
+      "frozen": true
+    },
+    "PR2": {
+      "parameter": "distance_rule_separation (60pt candidate only; pack always includes nearest)",
+      "registered": "2026-09-17",
+      "status": "PRE_REGISTERED",
+      "frozen": true
+    },
+    "PR3": {
+      "parameter": "evidence_state_3_state (NO_VISUAL_EVIDENCE / PRIMITIVES_NO_EXTENT / EXTENT_EXISTS)",
+      "registered": "2026-09-17",
+      "status": "PRE_REGISTERED",
+      "frozen": true
+    }
+  },
+  "implementation_scope": {
+    "authorized": false,
+    "files_likely_affected": [
+      "tmp/m_a_human_review_pilot/generate_data.py",
+      "tmp/m_a_human_review_pilot/assets/app.js"
+    ],
+    "files_must_remain_frozen": [
+      "perception/sandbox/observations/atomic_text.py (P1)",
+      "tmp/perception/atomic_observation/drawing_geometry.py (DGF)",
+      "tmp/perception/atomic_observation/drawing_extent.py (DEF)",
+      "chunker/table_line_detector.py (TLD)",
+      "chunker/layout_analyzer.py",
+      "tmp/is11_semantic_ground_truth.json (GT)"
+    ]
+  },
+  "design_gaps": [
+    "DG1: Unify evidence collection pipeline (remove hardcoded empty context for negatives)",
+    "DG2: Store nearest extent for Type A (even if >60pt, instead of None)",
+    "DG3: Add 3-state evidence_state model to generate_data.py and app.js",
+    "DG4: Update same_y threshold from ±3pt to ±5pt",
+    "DG5: Separate 60pt candidate generation from pack inclusion"
+  ],
+  "governance": {
+    "implementation_authorized": false,
+    "experiment_authorized": false,
+    "human_validation_authorized": false,
+    "human_feedback": "NOT_AUTHORIZED",
+    "l3": "NOT_AUTHORIZED",
+    "capability": "NOT_AUTHORIZED",
+    "runtime_authority": "ZERO",
+    "production": false,
+    "frozen_baseline": "INTACT",
+    "frozen_drift": 0,
+    "stop": true
+  }
+}

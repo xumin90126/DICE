@@ -1,0 +1,34 @@
+{
+  "audit_type": "Measurement Integrity + GT Dispute",
+  "data_integrity": {
+    "case_records": "PASS (20/20 unique, all from original 43 pool)",
+    "decision_records": "PASS (all valid decisions, no duplicates, no overrides)",
+    "duration_measurement": "INVALID (start_time_ms reset by /api/case pre-fetch in submitDecision)",
+    "ground_truth_integrity": "DISPUTED (AMB-026 GT is geometry-based, Human decision is semantically correct)"
+  },
+  "human_feasibility": {
+    "completion": "20/20",
+    "MERGE": 13,
+    "KEEP_SEPARATE": 7,
+    "CANNOT_DETERMINE": 0,
+    "raw_gt_accuracy": "19/20 = 95.0%",
+    "resolved_accuracy": "19/20 = 95.0%",
+    "excluding_disputed_amb026": "19/19 = 100.0%",
+    "alternative_semantic_hypothetical": "20/20 = 100.0% (HYPOTHETICAL / NOT OFFICIAL)",
+    "adversarial_resolution": "PASS (AMB-018=MERGE✅, AMB-040=KEEP_SEPARATE✅)"
+  },
+  "information_gain": "SUPPORTED (adversarial cases resolved, but claim limited to tested cases only)",
+  "human_cost": "INVALID (original duration_ms broken; inter-decision gap is APPROXIMATE ONLY, conflates navigation+thinking+submit)",
+  "inter_decision_gap_stats": {
+    "note": "APPROXIMATE ONLY — conflates case navigation, image load, human thinking, human decision, API submit. Not isolable.",
+    "N": 19,
+    "median_s": 5.5,
+    "p75_s": 28.6,
+    "p95_s": 51.0,
+    "total_session_s": 307.1,
+    "avg_per_case_s": 15.4
+  },
+  "overall": "EMPIRICALLY_SUPPORTED",
+  "implementation": "NOT AUTHORIZED",
+  "p7_3": "NOT AUTHORIZED"
+}

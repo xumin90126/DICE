@@ -1,0 +1,106 @@
+{
+  "snapshot_time": "2026-09-11-l5.5",
+  "purpose": "L5.5 implementation feasibility baseline (before any code)",
+  "frozen_files": {
+    "p1_extract": {
+      "path": "perception/sandbox/observations/atomic_text.py",
+      "expected_sha256": "74d23ec784d657825780b35627f1b766ad87bd4dd74d88bbe4d560941f3b724a",
+      "actual_sha256": "74d23ec784d657825780b35627f1b766ad87bd4dd74d88bbe4d560941f3b724a",
+      "drift": false
+    },
+    "p2_engine": {
+      "path": "perception/sandbox/geometry/geometry_engine.py",
+      "expected_sha256": "388e7939d334458e194dd4d805f6cafa0b975ce4f78d6b1137a965dd13d5554c",
+      "actual_sha256": "388e7939d334458e194dd4d805f6cafa0b975ce4f78d6b1137a965dd13d5554c",
+      "drift": false
+    },
+    "p2_config": {
+      "path": "perception/sandbox/geometry/geometry_config.py",
+      "expected_sha256": "7ef3629e5a9b819c59724b8e94a831d10a94e875c8b9534d750a7dcfa849196b",
+      "actual_sha256": "7ef3629e5a9b819c59724b8e94a831d10a94e875c8b9534d750a7dcfa849196b",
+      "drift": false
+    },
+    "p2_shape": {
+      "path": "perception/sandbox/geometry/geometry_observation.py",
+      "expected_sha256": "7731377cb8468c9171efdc89f03c1d60f11e1372e3671c64c80c77d6da7524da",
+      "actual_sha256": "7731377cb8468c9171efdc89f03c1d60f11e1372e3671c64c80c77d6da7524da",
+      "drift": false
+    },
+    "p4_span_config": {
+      "path": "perception/sandbox/span/span_config.py",
+      "expected_sha256": "55b9a23850398acc7a89d9164ada6a5788a0bd1777b3f2f520960db2febbb2b2",
+      "actual_sha256": "55b9a23850398acc7a89d9164ada6a5788a0bd1777b3f2f520960db2febbb2b2",
+      "drift": false
+    },
+    "p6_region_engine": {
+      "path": "perception/sandbox/region/region_engine.py",
+      "expected_sha256": "57214c742503779fce8c6843cbe8d4964a62428541a55b5eb95d7f408e10e9eb",
+      "actual_sha256": "57214c742503779fce8c6843cbe8d4964a62428541a55b5eb95d7f408e10e9eb",
+      "drift": false
+    },
+    "table_line_detector": {
+      "path": "chunker/table_line_detector.py",
+      "expected_sha256": "022f5c21e872ad9e737ddadb10a3f9eb8ff0ddd31333dacd6f30610cfbd8d79b",
+      "actual_sha256": "022f5c21e872ad9e737ddadb10a3f9eb8ff0ddd31333dacd6f30610cfbd8d79b",
+      "drift": false
+    }
+  },
+  "frozen_hashes": {
+    "gt": {
+      "path": "tmp/is11_semantic_ground_truth.json",
+      "sha256": "7349963d0d23b5efc8c092ad45b8f301c39ca13a9c3bef8952aff809d0286959"
+    },
+    "tld": {
+      "path": "chunker/table_line_detector.py",
+      "sha256": "022f5c21e872ad9e737ddadb10a3f9eb8ff0ddd31333dacd6f30610cfbd8d79b"
+    },
+    "is11_decision": {
+      "path": "tmp/is11_machine_evaluation.py",
+      "sha256": "b41494020b491b92c76b39cd435f2cd97845202c0b176df8c5ca69ba5008cab7"
+    },
+    "eic1_adapter": {
+      "path": "tmp/mb_eic1_adapter.py",
+      "sha256": "d9b6a4b184c063b335fc44245c82276e4561155ebd20058ffcd36f422b105d93"
+    },
+    "replay_results": {
+      "path": "tmp/mb_phase3_2_isolated_replay_results.json",
+      "sha256": "790157ee76c82db1bb5f0b45f2bcd0a5cff8806103a9a34a37d655eb34f66738"
+    },
+    "sampling_frame": {
+      "path": "tmp/is11_independent_sampling_frame.json",
+      "sha256": "97980845b5bbd277b0b733aeb9891b42b7cd5317d33b4ebdfb33735373705b4d"
+    }
+  },
+  "atomic_observation_hash": {
+    "layer_registry": "216d5b1b42c8d4e002dfd3b06fa4657dbd37318bc59592532c75435d05d928b8",
+    "frozen_sources_count": 7
+  },
+  "drift_count": 0,
+  "contract_version": "L5.4_v1",
+  "input_contract": {
+    "aggregation_input": "frozen P2 structural features + EIC-1 structural context (from mb_eic1_adapter.py)",
+    "compression_input": "aggregation output + per-instance EIC-1 candidate + provenance + IS-11 INSUFFICIENT_EVIDENCE",
+    "forbidden_fields": [
+      "is_table",
+      "is_cell",
+      "is_row",
+      "is_column",
+      "is_header",
+      "is_row_number",
+      "code_line",
+      "semantic_role",
+      "table_id",
+      "cell_id",
+      "score",
+      "confidence",
+      "recommendation",
+      "merge_candidate",
+      "keep_candidate",
+      "decision",
+      "priority",
+      "winner"
+    ],
+    "authority": 0,
+    "semantic_interpretation": "FORBIDDEN"
+  }
+}

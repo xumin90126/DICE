@@ -1,0 +1,486 @@
+{
+  "audit_type": "human_feedback_signal_reusability_audit",
+  "audit_date": "2026-09-12",
+  "read_only": true,
+  "design_only": true,
+  "governance": {
+    "CODE_MODIFICATION": 0,
+    "UI_MODIFICATION": 0,
+    "DATA_MUTATION": 0,
+    "GT_MODIFICATION": 0,
+    "TLD_MODIFICATION": 0,
+    "ATOMIC_MODIFICATION": 0,
+    "AGGREGATION_MODIFICATION": 0,
+    "COMPRESSION_MODIFICATION": 0,
+    "VALIDATION_RECORD_MODIFICATION": 0,
+    "NEW_PRIMITIVE": 0,
+    "NEW_CONTRACT": 0,
+    "NEW_ARCHITECTURE": 0,
+    "PATTERN_ENGINE": 0,
+    "FEEDBACK_ENGINE": 0,
+    "LEARNING_ENGINE": 0,
+    "ML_TRAINING": 0,
+    "LLM_FINE_TUNING": 0,
+    "SIGNAL_OBJECT": 0,
+    "NEW_SCHEMA": 0,
+    "PRODUCTION": false,
+    "FROZEN_BASELINE": "INTACT",
+    "IMPLEMENTATION_AUTHORIZED": false,
+    "STOP": true
+  },
+  "executive_conclusion": {
+    "answer": "PARTIAL",
+    "summary": "One candidate (CS1) reaches R3 (Repeated + Evidence-linked), two reach R2. None reach R5 (Human-validated). Candidate evidence exists but validated reusable signal does not.",
+    "key_limitations": [
+      "n=1 participant — cross-participant validation NOT AVAILABLE",
+      "image confound — cannot distinguish image-grounded from evidence-grounded",
+      "TLD false negatives (AMB-313, AMB-462) — evidence linkage incomplete",
+      "all candidates have Semantic Leap risk — cannot convert to rules",
+      "no validation workflow — cannot upgrade to Validated Reusable Knowledge"
+    ]
+  },
+  "feedback_inventory": {
+    "total_judgments": 27,
+    "direct_decision_only": 23,
+    "voice_feedbacks": 4,
+    "explicit_corrections": 0,
+    "uncertainty_unknown": 0,
+    "voice_feedbacks_detail": [
+      {
+        "id": "FB1",
+        "workflow": "B",
+        "item": "B|grp|16bfcb76b820",
+        "decision": "KEEP_SEPARATE",
+        "time": 132.9,
+        "type": "per-instance analysis"
+      },
+      {
+        "id": "FB2",
+        "workflow": "B",
+        "item": "B|grp|885e943771cd",
+        "decision": "KEEP_SEPARATE",
+        "time": 66.5,
+        "type": "group-level table columns"
+      },
+      {
+        "id": "FB3",
+        "workflow": "B",
+        "item": "B|grp|1ad8a7b55945",
+        "decision": "KEEP_SEPARATE",
+        "time": 73.8,
+        "type": "group-level table columns"
+      },
+      {
+        "id": "FB4",
+        "workflow": "C",
+        "item": "C|grp|16bfcb76b820",
+        "decision": "KEEP_SEPARATE",
+        "time": 116.5,
+        "type": "UI feedback + boundary observation"
+      }
+    ]
+  },
+  "feedback_evidence_mapping": [
+    {
+      "feedback": "表格中同一行的不同列数据",
+      "cases": [
+        "AMB-024",
+        "AMB-074",
+        "AMB-462",
+        "AMB-522"
+      ],
+      "evidence": "TLD is_in_table=True, different_cell=True (3/4 supported)",
+      "linkage": "EVIDENCE_SUPPORTED (3/4), EVIDENCE_UNSUPPORTED (1/4: AMB-462 TLD false negative)"
+    },
+    {
+      "feedback": "同一个表格中的不同列的名称",
+      "cases": [
+        "AMB-313",
+        "AMB-530"
+      ],
+      "evidence": "TLD: AMB-530 supported, AMB-313 false negative",
+      "linkage": "PARTIALLY_SUPPORTED (1/2)"
+    },
+    {
+      "feedback": "前一句话的后半部分",
+      "cases": [
+        "AMB-005",
+        "AMB-519"
+      ],
+      "evidence": "text_a ends with period, text_b starts with capital",
+      "linkage": "EVIDENCE_SUPPORTED (text pattern)"
+    },
+    {
+      "feedback": "认可他们是同一内容单元",
+      "cases": [
+        "AMB-414",
+        "AMB-422"
+      ],
+      "evidence": "text_a starts with FIG.",
+      "linkage": "PARTIALLY_SUPPORTED (text pattern only, no structural evidence)"
+    },
+    {
+      "feedback": "类别还是不一样的",
+      "cases": [
+        "grp|16bfcb76b820 (6 members)"
+      ],
+      "evidence": "group contains 3 semantic categories",
+      "linkage": "EVIDENCE_SUPPORTED (boundary observation)"
+    }
+  ],
+  "candidate_signals": [
+    {
+      "candidate_id": "CS1",
+      "name": "DIFFERENT_TABLE_COLUMNS",
+      "feedback_examples": [
+        "表格中同一行的不同列数据",
+        "不同列的名称",
+        "同一表格中的内容"
+      ],
+      "feedback_sources": [
+        "FB1",
+        "FB2",
+        "FB3"
+      ],
+      "case_count": 17,
+      "document_count": 3,
+      "evidence_linkage": "TLD is_in_table + different_cell (15/17 supported)",
+      "evidence_type": "Structural (TLD)",
+      "semantic_stability": "HIGH",
+      "negative_evidence": "2 TLD false negatives (AMB-313, AMB-462); no is_in_table=True + MERGE case in corpus",
+      "boundary_evidence": "is_in_table=False appears in both MERGE (captions) and KEEP_SEPARATE (sentences)",
+      "cross_document": true,
+      "cross_participant": "NOT_AVAILABLE (n=1)",
+      "image_grounded_confound": true,
+      "reusability_status": "REPEATED_CANDIDATE (R3)",
+      "semantic_leap_risk": "HIGH — if converted to decision rule",
+      "safe_interpretation": "A and B are in different structural positions within a multi-column aligned structure"
+    },
+    {
+      "candidate_id": "CS2",
+      "name": "SENTENCE_BOUNDARY",
+      "feedback_examples": [
+        "前一句话的后半部分和后一句话的前半部分"
+      ],
+      "feedback_sources": [
+        "FB1"
+      ],
+      "case_count": 2,
+      "document_count": 2,
+      "evidence_linkage": "text_a ends with period, text_b starts with capital (2/2)",
+      "evidence_type": "Text pattern (P1 text)",
+      "semantic_stability": "MEDIUM",
+      "negative_evidence": "NOT TESTABLE (no MERGE case with period-ending text_a)",
+      "boundary_evidence": "AMB-005 has table confound (is_in_table=True)",
+      "cross_document": true,
+      "cross_participant": "NOT_AVAILABLE (n=1)",
+      "image_grounded_confound": true,
+      "reusability_status": "REPEATED_CANDIDATE (R2)",
+      "semantic_leap_risk": "MEDIUM",
+      "safe_interpretation": "A ends with a period, B starts with a capital — they may span a sentence boundary"
+    },
+    {
+      "candidate_id": "CS3",
+      "name": "FIGURE_CAPTION_CONTINUITY",
+      "feedback_examples": [
+        "认可他们是同一内容单元",
+        "认可他们是同一语义单元"
+      ],
+      "feedback_sources": [
+        "FB1"
+      ],
+      "case_count": 2,
+      "document_count": 1,
+      "evidence_linkage": "text_a starts with FIG. (2/2)",
+      "evidence_type": "Text pattern (P1 text)",
+      "semantic_stability": "MEDIUM",
+      "negative_evidence": "NOT TESTABLE (no KEEP_SEPARATE case with FIG. prefix)",
+      "boundary_evidence": "None",
+      "cross_document": false,
+      "cross_participant": "NOT_AVAILABLE (n=1)",
+      "image_grounded_confound": true,
+      "reusability_status": "REPEATED_CANDIDATE (R2)",
+      "semantic_leap_risk": "MEDIUM",
+      "safe_interpretation": "A starts with FIG. and B follows — they may form a continuous caption"
+    },
+    {
+      "candidate_id": "CS4",
+      "name": "CATEGORY_HETEROGENEITY",
+      "feedback_examples": [
+        "每一个处的类别还是不一样的"
+      ],
+      "feedback_sources": [
+        "FB4"
+      ],
+      "case_count": 1,
+      "document_count": 1,
+      "evidence_linkage": "group contains 3 semantic categories (2 sentence, 2 table, 2 caption)",
+      "evidence_type": "Boundary observation",
+      "semantic_stability": "N/A",
+      "negative_evidence": "N/A",
+      "boundary_evidence": "structural grouping != semantic grouping",
+      "cross_document": false,
+      "cross_participant": "NOT_AVAILABLE (n=1)",
+      "image_grounded_confound": false,
+      "reusability_status": "ONE-OFF (R1)",
+      "semantic_leap_risk": "NONE (boundary observation, not decision signal)",
+      "safe_interpretation": "Structural group contains multiple semantic categories — aggregation has limitation"
+    }
+  ],
+  "signal_recurrence_analysis": {
+    "cs1": {
+      "keyword_recurrence": {
+        "表格": 3,
+        "不同列": 3,
+        "名称": 2,
+        "数据": 2
+      },
+      "feedback_recurrence": "3/4 feedbacks",
+      "case_recurrence": "17/21 cases",
+      "evidence_recurrence": "TLD=True in 15/17",
+      "document_recurrence": "3 documents",
+      "keyword_vs_signal": "Likely evidence-grounded but cannot confirm due to image confound",
+      "confound": "Human always saw page image showing table visually"
+    },
+    "cs2": {
+      "keyword_recurrence": {
+        "前一句话": 1,
+        "后一句话": 1
+      },
+      "feedback_recurrence": "1/4 feedbacks (2 instances)",
+      "case_recurrence": "2/21 cases",
+      "evidence_recurrence": "Period+capital in 2/2",
+      "keyword_vs_signal": "Insufficient data to distinguish"
+    },
+    "cs3": {
+      "keyword_recurrence": {
+        "同一内容单元": 1,
+        "同一语义": 1
+      },
+      "feedback_recurrence": "1/4 feedbacks (2 instances)",
+      "case_recurrence": "2/21 cases",
+      "evidence_recurrence": "FIG. prefix in 2/2",
+      "keyword_vs_signal": "Insufficient data to distinguish"
+    }
+  },
+  "semantic_leap_audit": [
+    {
+      "candidate": "CS1",
+      "human_said": "表格中同一行的不同列数据",
+      "safe": "A and B are in different structural positions",
+      "leap": "if is_in_table AND different_cell then KEEP_SEPARATE",
+      "verdict": "SEMANTIC LEAP"
+    },
+    {
+      "candidate": "CS2",
+      "human_said": "前一句话的后半部分",
+      "safe": "A ends with period, B starts with capital",
+      "leap": "if text_a ends with period then KEEP_SEPARATE",
+      "verdict": "SEMANTIC LEAP"
+    },
+    {
+      "candidate": "CS3",
+      "human_said": "认可他们是同一内容单元",
+      "safe": "A starts with FIG., B follows",
+      "leap": "if text_a starts with FIG. then MERGE",
+      "verdict": "SEMANTIC LEAP"
+    },
+    {
+      "candidate": "CS4",
+      "human_said": "类别还是不一样的",
+      "safe": "Structural group contains multiple semantic categories",
+      "leap": "N/A (boundary observation)",
+      "verdict": "SAFE"
+    }
+  ],
+  "reusability_level": {
+    "cs1": {
+      "level": "R3",
+      "justification": "Repeated + Evidence-linked candidate",
+      "blockers": [
+        "n=1",
+        "image confound",
+        "TLD false negatives",
+        "no validation workflow"
+      ]
+    },
+    "cs2": {
+      "level": "R2",
+      "justification": "Repeated feedback expression",
+      "blockers": [
+        "only 2 cases",
+        "no negative evidence",
+        "image confound"
+      ]
+    },
+    "cs3": {
+      "level": "R2",
+      "justification": "Repeated feedback expression",
+      "blockers": [
+        "only 2 cases",
+        "1 document",
+        "no negative evidence"
+      ]
+    },
+    "cs4": {
+      "level": "R1",
+      "justification": "One-off feedback",
+      "blockers": [
+        "single observation"
+      ]
+    },
+    "overall_dice_position": "R3 (for CS1 only)"
+  },
+  "learning_readiness": {
+    "feedback_capture": "IMPLEMENTED",
+    "evidence_linkage": "PARTIAL",
+    "signal_candidate_discovery": "PARTIAL (manual analysis, no automation)",
+    "human_validation": "MISSING",
+    "reuse": "MISSING",
+    "measured_improvement": "MISSING",
+    "learning_true": false,
+    "current_state": "Storage + Manual Candidate Discovery"
+  },
+  "validation_record_sufficiency": {
+    "fields_present": [
+      "feedback_text",
+      "case_id",
+      "decision",
+      "time_seconds"
+    ],
+    "fields_partial": [
+      "provenance_chain"
+    ],
+    "fields_missing": [
+      "evidence_refs",
+      "signal_type",
+      "signal_status",
+      "scope",
+      "boundary",
+      "recurrence_count",
+      "validation_status"
+    ],
+    "sufficient_for_audit": true,
+    "sufficient_for_implementation": false,
+    "gap_type": "PROCESS (not schema) — no extraction/validation/reuse mechanism",
+    "schema_change_needed": false
+  },
+  "next_evidence_required": {
+    "r3_to_r4": [
+      {
+        "priority": 1,
+        "evidence": "n>3 participants on same 21 cases",
+        "reason": "Verify CS1 recurrence is not participant-specific"
+      },
+      {
+        "priority": 2,
+        "evidence": "Image-free condition (evidence cues only)",
+        "reason": "Distinguish image-grounded from evidence-grounded"
+      },
+      {
+        "priority": 3,
+        "evidence": "TLD false negative resolution",
+        "reason": "Ensure evidence linkage is complete"
+      }
+    ],
+    "r4_to_r5": [
+      {
+        "priority": 4,
+        "evidence": "Validation workflow",
+        "reason": "Grant reusable semantic authority"
+      },
+      {
+        "priority": 5,
+        "evidence": "Negative cases (is_in_table=True + MERGE)",
+        "reason": "Test false positive rate"
+      },
+      {
+        "priority": 6,
+        "evidence": "Conflict cases",
+        "reason": "Test override behavior"
+      }
+    ],
+    "r5_to_r6": [
+      {
+        "priority": 7,
+        "evidence": "New case corpus",
+        "reason": "Test generalization"
+      },
+      {
+        "priority": 8,
+        "evidence": "Reuse mechanism",
+        "reason": "Apply validated knowledge"
+      }
+    ],
+    "r6_to_r7": [
+      {
+        "priority": 9,
+        "evidence": "Baseline comparison",
+        "reason": "Measure effort reduction"
+      },
+      {
+        "priority": 10,
+        "evidence": "Quality measurement",
+        "reason": "Prove quality maintained"
+      }
+    ],
+    "minimum_for_automated_extraction": "n>3 + cross-participant recurrence + image-free test + 1 negative case"
+  },
+  "anti_overdesign_gate": {
+    "G1_feedback_engine": {
+      "answer": "NO",
+      "justification": "3 candidates identified manually; no automation needed at R3"
+    },
+    "G2_signal_object": {
+      "answer": "NO",
+      "justification": "Candidates expressed as audit findings; no object until R5"
+    },
+    "G3_pattern": {
+      "answer": "NO",
+      "justification": "CS1 is candidate not pattern; patterns need n>10 + statistics"
+    },
+    "G4_ml_llm_extraction": {
+      "answer": "NO",
+      "justification": "Manual analysis sufficient at current scale"
+    },
+    "G5_new_schema": {
+      "answer": "NO",
+      "justification": "ValidationRecord sufficient; gap is process not schema"
+    },
+    "G6_new_human_workflow": {
+      "answer": "NO",
+      "justification": "Validation workflow is FUTURE_CANDIDATE for R4->R5"
+    },
+    "G7_existing_sufficient": {
+      "answer": "YES for audit; NO for implementation",
+      "note": "Process gap, not data gap"
+    },
+    "G8_min_evidence_for_automation": {
+      "answer": "n>3 + cross-participant recurrence + image-free test + negative case"
+    }
+  },
+  "final_designation": {
+    "cs1": "Potential Reusable Signal Candidate (NOT Reusable Knowledge)",
+    "cs2": "Potential Reusable Signal Candidate (weaker, R2)",
+    "cs3": "Potential Reusable Signal Candidate (weaker, R2)",
+    "cs4": "Boundary Observation (not a decision signal)"
+  },
+  "evidence_classification": {
+    "audit": "B-class (engineering analysis based on real pilot data)",
+    "cs1_existence": "B-class (derived from P01, real feedback)",
+    "cs1_reusability": "C-class (hypothesis, not validated, blocked by n=1 + image confound)",
+    "cs2_cs3": "C-class (insufficient recurrence, only 2 cases each)",
+    "cs4": "B-class (directly observed in feedback)"
+  },
+  "pilot_limitations": {
+    "n": 1,
+    "judgments": 27,
+    "voice_feedbacks": 4,
+    "merge_cases": 2,
+    "conflict": 0,
+    "system_ne_gt": 0,
+    "unknown": 0,
+    "image_confound": true,
+    "tld_false_negatives": 2
+  }
+}
