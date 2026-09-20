@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+<rect width="960" height="540" fill="#FFFFFF"/>
+<defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/></marker></defs>
+<text x="480" y="35" font-size="18" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Why G5 Is a Boundary, Not a Failure</text>
+<text x="480" y="56" font-size="11" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Structural evidence is complete but semantic identity remains unresolved</text>
+<rect x="55" y="90" width="190" height="90" fill="#D1FAE5" stroke="#059669" stroke-width="2" rx="6"/>
+<text x="150.0" y="118" font-size="11" font-weight="bold" fill="#059669" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Structural Evidence</text>
+<text x="150.0" y="133" font-size="11" font-weight="bold" fill="#059669" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">complete</text>
+<text x="150.0" y="146" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">All structural facts</text>
+<text x="150.0" y="159" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">present and correct</text>
+<line x1="248" y1="135.0" x2="273" y2="135.0" stroke="#059669" stroke-width="2" marker-end="url(#arrowhead)"/>
+<rect x="275" y="90" width="190" height="90" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" rx="6"/>
+<text x="370.0" y="118" font-size="11" font-weight="bold" fill="#2563EB" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Structural Claim</text>
+<text x="370.0" y="133" font-size="11" font-weight="bold" fill="#2563EB" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">supported</text>
+<text x="370.0" y="146" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Facts support the</text>
+<text x="370.0" y="159" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">relationship claim</text>
+<line x1="468" y1="135.0" x2="493" y2="135.0" stroke="#2563EB" stroke-width="2" marker-end="url(#arrowhead)"/>
+<rect x="495" y="90" width="190" height="90" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" rx="6"/>
+<text x="590.0" y="118" font-size="11" font-weight="bold" fill="#F59E0B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Semantic Identity</text>
+<text x="590.0" y="133" font-size="11" font-weight="bold" fill="#F59E0B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">unresolved</text>
+<text x="590.0" y="146" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Same evidence can</text>
+<text x="590.0" y="159" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">support different reads</text>
+<line x1="688" y1="135.0" x2="713" y2="135.0" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrowhead)"/>
+<rect x="715" y="90" width="190" height="90" fill="#E0E7FF" stroke="#1E3A8A" stroke-width="2" rx="6"/>
+<text x="810.0" y="118" font-size="11" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Human Semantic</text>
+<text x="810.0" y="133" font-size="11" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Judgment</text>
+<text x="810.0" y="146" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Minimal validation</text>
+<text x="810.0" y="159" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">at the boundary</text>
+<text x="480" y="215" font-size="12" font-weight="bold" fill="#F59E0B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">G1 passed  G2 passed  G3 passed  G4 passed  —  yet task cannot be completed</text>
+<rect x="55" y="240" width="430" height="150" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" rx="6"/>
+<text x="75" y="265" font-size="13" font-weight="bold" fill="#1E3A8A" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Example: Caption vs Reference</text>
+<text x="75" y="288" font-size="11" font-weight="normal" fill="#475569" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">A text label is adjacent to a drawing.</text>
+<text x="75" y="312" font-size="11" font-weight="bold" fill="#475569" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Structural evidence:</text>
+<text x="85" y="330" font-size="10" font-weight="normal" fill="#475569" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Near the drawing (proximity OK)</text>
+<text x="85" y="346" font-size="10" font-weight="normal" fill="#475569" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Aligned with it (alignment OK)</text>
+<text x="85" y="362" font-size="10" font-weight="normal" fill="#475569" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Shares formatting (style OK)</text>
+<text x="75" y="382" font-size="11" font-weight="bold" fill="#F59E0B" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Association is supported. But:</text>
+<rect x="515" y="240" width="410" height="150" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" rx="6"/>
+<text x="720" y="265" font-size="13" font-weight="bold" fill="#F59E0B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">The Semantic Question</text>
+<text x="720" y="290" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Does this text describe this</text>
+<text x="720" y="307" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">drawing (caption)?</text>
+<text x="720" y="327" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Or reference another drawing</text>
+<text x="720" y="344" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">(reference)?</text>
+<text x="720" y="370" font-size="11" font-weight="bold" fill="#F59E0B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Same Evidence</text>
+<text x="720" y="384" font-size="11" font-weight="bold" fill="#F59E0B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Different Judgment</text>
+<rect x="55" y="410" width="870" height="55" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" rx="6"/>
+<text x="490" y="435" font-size="12" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">G5 is not machine failure.</text>
+<text x="490" y="452" font-size="12" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">It is the recognition that structural evidence does not uniquely determine semantic identity.</text>
+<text x="480" y="500" font-size="9" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Figure 5. G5 represents an evidence boundary where structural evidence</text>
+<text x="480" y="515" font-size="9" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">is complete but semantic identity remains unresolved.</text>
+</svg>

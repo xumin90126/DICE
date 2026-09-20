@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" width="960" height="620">
+<rect width="960" height="620" fill="#FFFFFF"/>
+<text x="480" y="35" font-size="18" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">G1-G5 Evidence Problem Framework</text>
+<text x="480" y="56" font-size="11" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Locating evidence-related limitations (70 cases, 13 documents, 23 problem types)</text>
+
+<!-- G1 -->
+<rect x="80" y="80" width="800" height="55" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" rx="6"/>
+<rect x="80" y="80" width="65" height="55" fill="#3B82F6" rx="6"/>
+<text x="112" y="115" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">G1</text>
+<text x="165" y="102" font-size="13" font-weight="bold" fill="#3B82F6" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Observation Coverage</text>
+<text x="165" y="120" font-size="10" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Required evidence not yet observed.</text>
+
+<!-- G2 -->
+<rect x="80" y="145" width="800" height="55" fill="#EDE9FE" stroke="#6366F1" stroke-width="2" rx="6"/>
+<rect x="80" y="145" width="65" height="55" fill="#6366F1" rx="6"/>
+<text x="112" y="180" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">G2</text>
+<text x="165" y="167" font-size="13" font-weight="bold" fill="#6366F1" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Evidence Organization</text>
+<text x="165" y="185" font-size="10" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Evidence exists but not correctly organized.</text>
+
+<!-- G3 -->
+<rect x="80" y="210" width="800" height="55" fill="#E0F2FE" stroke="#8B5CF6" stroke-width="2" rx="6"/>
+<rect x="80" y="210" width="65" height="55" fill="#8B5CF6" rx="6"/>
+<text x="112" y="245" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">G3</text>
+<text x="165" y="232" font-size="13" font-weight="bold" fill="#8B5CF6" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Evidence Presentation</text>
+<text x="165" y="250" font-size="10" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Organized, but not in a usable form.</text>
+
+<!-- G4 -->
+<rect x="80" y="275" width="800" height="55" fill="#E0F2FE" stroke="#0EA5E9" stroke-width="2" rx="6"/>
+<rect x="80" y="275" width="65" height="55" fill="#0EA5E9" rx="6"/>
+<text x="112" y="310" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">G4</text>
+<text x="165" y="297" font-size="13" font-weight="bold" fill="#0EA5E9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Consumer Integration</text>
+<text x="165" y="315" font-size="10" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Presentable, but not integrated downstream.</text>
+
+<!-- Divider between G1-G4 and G5 -->
+<line x1="80" y1="340" x2="880" y2="340" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="6"/>
+
+<!-- G5 -->
+<rect x="80" y="355" width="800" height="55" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" rx="6"/>
+<rect x="80" y="355" width="65" height="55" fill="#F59E0B" rx="6"/>
+<text x="112" y="390" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">G5</text>
+<text x="165" y="377" font-size="13" font-weight="bold" fill="#F59E0B" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Semantic Boundary</text>
+<text x="165" y="395" font-size="10" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Complete, but semantic identity unresolved.</text>
+
+<!-- Core distinction boxes (below G5, no overlap) -->
+<rect x="80" y="440" width="380" height="80" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" rx="6"/>
+<text x="270" y="465" font-size="13" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">G1-G4: Evidence Recovery</text>
+<text x="270" y="485" font-size="10" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Missing, disorganized,</text>
+<text x="270" y="500" font-size="10" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">inaccessible, or unused.</text>
+
+<rect x="500" y="440" width="380" height="80" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" rx="6"/>
+<text x="690" y="465" font-size="13" font-weight="bold" fill="#F59E0B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">G5: Evidence Boundary</text>
+<text x="690" y="485" font-size="10" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Structurally complete but</text>
+<text x="690" y="500" font-size="10" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">semantically insufficient.</text>
+
+<!-- Terminology note -->
+<rect x="80" y="540" width="800" height="50" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" rx="6"/>
+<text x="480" y="562" font-size="10" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Note: Research Framework G1-G5 is distinct from Guardrail G1-G4 (src/guardrails.py).</text>
+<text x="480" y="578" font-size="10" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">See docs/dice-description.md for details.</text>
+
+<text x="480" y="610" font-size="9" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Figure 4. The G1-G5 framework for locating evidence-related limitations.</text>
+</svg>

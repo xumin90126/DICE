@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" width="1000" height="580">
+<rect width="1000" height="580" fill="#FFFFFF"/>
+<defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/></marker></defs>
+<text x="500" y="35" font-size="18" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Research Map</text>
+<text x="500" y="56" font-size="11" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Current experimental trajectory from document observation to capability expansion</text>
+
+<!-- Main flow: wider label area (140px) to prevent title overflow -->
+<rect x="240" y="85" width="560" height="42" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" rx="6"/>
+<rect x="240" y="85" width="140" height="42" fill="#CBD5E1" rx="6"/>
+<text x="310" y="112" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Document</text>
+<text x="395" y="112" font-size="10" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Enterprise PDFs (datasheets, manuals)</text>
+
+<rect x="240" y="135" width="560" height="42" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" rx="6"/>
+<rect x="240" y="135" width="140" height="42" fill="#2563EB" rx="6"/>
+<text x="310" y="162" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Observation</text>
+<text x="395" y="162" font-size="10" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">22 frozen capabilities (declarative, PROPOSED)</text>
+
+<rect x="240" y="185" width="560" height="42" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" rx="6"/>
+<rect x="240" y="185" width="140" height="42" fill="#2563EB" rx="6"/>
+<text x="310" y="212" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Evidence</text>
+<text x="395" y="212" font-size="10" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Candidate evidence from observations</text>
+
+<rect x="240" y="235" width="560" height="42" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" rx="6"/>
+<rect x="240" y="235" width="140" height="42" fill="#2563EB" rx="6"/>
+<text x="310" y="262" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Sufficiency</text>
+<text x="395" y="262" font-size="10" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">65 SUFFICIENT / 55 INSUFFICIENT / 13 BOUNDARY</text>
+
+<rect x="240" y="285" width="560" height="42" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" rx="6"/>
+<rect x="240" y="285" width="140" height="42" fill="#F59E0B" rx="6"/>
+<text x="310" y="312" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Boundary</text>
+<text x="395" y="312" font-size="10" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">G5 Semantic Boundary (CONDITIONALLY_SUPPORTED)</text>
+
+<rect x="240" y="335" width="560" height="42" fill="#E0E7FF" stroke="#1E3A8A" stroke-width="2" rx="6"/>
+<rect x="240" y="335" width="140" height="42" fill="#1E3A8A" rx="6"/>
+<text x="310" y="362" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Human</text>
+<text x="395" y="362" font-size="10" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Human Validation (YES/NO adjudication)</text>
+
+<rect x="240" y="385" width="560" height="42" fill="#D1FAE5" stroke="#059669" stroke-width="2" rx="6"/>
+<rect x="240" y="385" width="140" height="42" fill="#059669" rx="6"/>
+<text x="310" y="412" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Capability</text>
+<text x="395" y="412" font-size="10" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Frozen Registry (22 declarative contracts)</text>
+
+<rect x="240" y="435" width="560" height="42" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1" rx="6"/>
+<rect x="240" y="435" width="140" height="42" fill="#94A3B8" rx="6"/>
+<text x="310" y="462" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Expansion</text>
+<text x="395" y="462" font-size="10" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">FUTURE_RESEARCH (not yet implemented)</text>
+
+<!-- Left panel: Research Stages -->
+<rect x="20" y="85" width="200" height="392" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" rx="6"/>
+<text x="120" y="108" font-size="11" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Research Stages</text>
+<line x1="30" y1="118" x2="210" y2="118" stroke="#CBD5E1" stroke-width="1"/>
+<text x="35" y="138" font-size="9" font-weight="bold" fill="#2563EB" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Phase 1-2</text>
+<text x="35" y="152" font-size="8" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Document understanding</text>
+<text x="35" y="163" font-size="8" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">and evidence quality</text>
+<text x="35" y="200" font-size="9" font-weight="bold" fill="#2563EB" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Phase 3</text>
+<text x="35" y="214" font-size="8" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Evidence sufficiency</text>
+<text x="35" y="225" font-size="8" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">analysis</text>
+<text x="35" y="262" font-size="9" font-weight="bold" fill="#2563EB" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Phase 4</text>
+<text x="35" y="276" font-size="8" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Evidence boundary</text>
+<text x="35" y="287" font-size="8" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">discovery</text>
+<text x="35" y="324" font-size="9" font-weight="bold" fill="#2563EB" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Phase 5</text>
+<text x="35" y="338" font-size="8" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">G5 formalization</text>
+<text x="35" y="375" font-size="9" font-weight="bold" fill="#2563EB" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Phase 6</text>
+<text x="35" y="389" font-size="8" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Capability expansion</text>
+<text x="35" y="400" font-size="8" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">(future)</text>
+
+<!-- Right panel: Key Numbers -->
+<rect x="820" y="85" width="160" height="392" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" rx="6"/>
+<text x="900" y="108" font-size="11" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Key Numbers</text>
+<line x1="830" y1="118" x2="970" y2="118" stroke="#CBD5E1" stroke-width="1"/>
+<text x="835" y="140" font-size="15" font-weight="bold" fill="#2563EB" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">22</text>
+<text x="870" y="140" font-size="9" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Frozen capabilities</text>
+<text x="835" y="188" font-size="15" font-weight="bold" fill="#2563EB" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">70</text>
+<text x="870" y="188" font-size="9" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">G1-G5 cases</text>
+<text x="835" y="236" font-size="15" font-weight="bold" fill="#2563EB" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">13</text>
+<text x="870" y="236" font-size="9" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Documents tested</text>
+<text x="835" y="284" font-size="15" font-weight="bold" fill="#2563EB" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">149</text>
+<text x="870" y="284" font-size="9" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Sufficiency cases</text>
+<text x="835" y="332" font-size="15" font-weight="bold" fill="#2563EB" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">65</text>
+<text x="870" y="332" font-size="9" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Sufficient (L5)</text>
+<text x="835" y="380" font-size="15" font-weight="bold" fill="#2563EB" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">55</text>
+<text x="870" y="380" font-size="9" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Insufficient</text>
+<text x="835" y="428" font-size="15" font-weight="bold" fill="#2563EB" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">13</text>
+<text x="870" y="428" font-size="9" font-weight="normal" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">G5 boundary cases</text>
+
+<text x="500" y="545" font-size="9" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Figure 7. Research map summarizing the progression from document observation</text>
+<text x="500" y="557" font-size="9" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">to evidence boundaries, human validation, capability, and future expansion.</text>
+</svg>

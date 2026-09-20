@@ -4,7 +4,7 @@
 
 **Status: CONDITIONALLY_SUPPORTED**
 
-The evidence boundary concept - the threshold between sufficient and insufficient evidence for a capability assertion - has been validated on a public arXiv corpus (IS-11 experiment, 45 cases). The boundary generalizes across document types but has not been validated on all document classes.
+The evidence boundary concept — the threshold between sufficient and insufficient evidence for a capability assertion — has been validated on a public arXiv corpus (IS-11 experiment, 45 cases). The boundary generalizes across document types but has not been validated on all document classes.
 
 ## G5 Boundary Generalization
 
@@ -15,9 +15,22 @@ G5 (the highest boundary generalization grade) has been tested on arXiv-sourced 
 ## Key Findings (from IS-11 Stage 4)
 
 - FP = 1 (false positive rate is low)
-- Recall = 0 (conservative - no false negatives)
+- Recall = 0 (conservative — no false negatives)
 - Coverage improved from 42.2% to 60.0% (+17.8 pp)
 - All 8 newly-resolvable cases matched ground truth
+
+## Current Status Summary
+
+| Area | Status |
+|---|---|
+| Evidence Boundary | CONDITIONALLY_SUPPORTED |
+| G5 Generalization | CONDITIONALLY_SUPPORTED |
+| Automatic Boundary Detection | NOT_IMPLEMENTED |
+| Capability Expansion | FUTURE_RESEARCH |
+| Production Runtime | FALSE |
+| Runtime Authority | ZERO |
+| Capability Registration | HUMAN_CONTROLLED |
+| Frozen Baseline | INTACT |
 
 ## What is NOT implemented
 

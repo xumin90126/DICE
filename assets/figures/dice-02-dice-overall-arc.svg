@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 420" width="1080" height="420">
+<rect width="1080" height="420" fill="#FFFFFF"/>
+<defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/></marker></defs>
+<text x="540" y="35" font-size="18" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">DICE Overall Architecture</text>
+<text x="540" y="56" font-size="11" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">From document evidence to governed capability</text>
+<rect x="35" y="90" width="130" height="100" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" rx="6"/>
+<text x="100.0" y="115" font-size="12" font-weight="bold" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Document</text>
+<text x="100.0" y="142" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Unstructured</text>
+<text x="100.0" y="155" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">enterprise PDFs</text>
+<line x1="168" y1="140.0" x2="183" y2="140.0" stroke="#2563EB" stroke-width="2" marker-end="url(#arrowhead)"/>
+<rect x="185" y="90" width="130" height="100" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" rx="6"/>
+<text x="250.0" y="115" font-size="12" font-weight="bold" fill="#2563EB" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Observation</text>
+<text x="250.0" y="142" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Extract atomic facts:</text>
+<text x="250.0" y="155" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">text, geometry, structure</text>
+<line x1="318" y1="140.0" x2="333" y2="140.0" stroke="#2563EB" stroke-width="2" marker-end="url(#arrowhead)"/>
+<rect x="335" y="90" width="130" height="100" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" rx="6"/>
+<text x="400.0" y="115" font-size="12" font-weight="bold" fill="#2563EB" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Candidate</text>
+<text x="400.0" y="130" font-size="12" font-weight="bold" fill="#2563EB" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Evidence</text>
+<text x="400.0" y="142" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Organize and rank</text>
+<text x="400.0" y="155" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">observations</text>
+<line x1="468" y1="140.0" x2="483" y2="140.0" stroke="#2563EB" stroke-width="2" marker-end="url(#arrowhead)"/>
+<rect x="485" y="90" width="130" height="100" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" rx="6"/>
+<text x="550.0" y="115" font-size="12" font-weight="bold" fill="#2563EB" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Evidence</text>
+<text x="550.0" y="130" font-size="12" font-weight="bold" fill="#2563EB" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Sufficiency</text>
+<text x="550.0" y="142" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Determine completeness</text>
+<text x="550.0" y="155" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">and adequacy</text>
+<line x1="618" y1="140.0" x2="633" y2="140.0" stroke="#2563EB" stroke-width="2" marker-end="url(#arrowhead)"/>
+<rect x="635" y="90" width="130" height="100" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" rx="6"/>
+<text x="700.0" y="115" font-size="12" font-weight="bold" fill="#F59E0B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Human</text>
+<text x="700.0" y="130" font-size="12" font-weight="bold" fill="#F59E0B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Validation</text>
+<text x="700.0" y="142" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Expert review</text>
+<text x="700.0" y="155" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">at boundary</text>
+<line x1="768" y1="140.0" x2="783" y2="140.0" stroke="#2563EB" stroke-width="2" marker-end="url(#arrowhead)"/>
+<rect x="785" y="90" width="130" height="100" fill="#D1FAE5" stroke="#059669" stroke-width="2" rx="6"/>
+<text x="850.0" y="115" font-size="12" font-weight="bold" fill="#059669" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Capability</text>
+<text x="850.0" y="142" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Reusable knowledge</text>
+<text x="850.0" y="155" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">artifacts</text>
+<line x1="918" y1="140.0" x2="933" y2="140.0" stroke="#2563EB" stroke-width="2" marker-end="url(#arrowhead)"/>
+<rect x="935" y="90" width="130" height="100" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1" rx="6"/>
+<text x="1000.0" y="115" font-size="12" font-weight="bold" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Governed</text>
+<text x="1000.0" y="130" font-size="12" font-weight="bold" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Runtime</text>
+<text x="1000.0" y="142" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Target architecture</text>
+<text x="1000.0" y="155" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">(Future)</text>
+<rect x="35" y="230" width="1010" height="130" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" rx="6"/>
+<text x="55" y="258" font-size="14" font-weight="bold" fill="#1E3A8A" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Current Governance State</text>
+<rect x="55" y="275" width="220" height="65" fill="#FFFFFF" stroke="#DC2626" stroke-width="1" rx="6"/>
+<text x="165" y="298" font-size="10" font-weight="bold" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Runtime Authority</text>
+<text x="165" y="322" font-size="14" font-weight="bold" fill="#DC2626" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">ZERO</text>
+<rect x="300" y="275" width="220" height="65" fill="#FFFFFF" stroke="#2563EB" stroke-width="1" rx="6"/>
+<text x="410" y="298" font-size="10" font-weight="bold" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Capability Registration</text>
+<text x="410" y="322" font-size="14" font-weight="bold" fill="#2563EB" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">HUMAN_CONTROLLED</text>
+<rect x="545" y="275" width="220" height="65" fill="#FFFFFF" stroke="#DC2626" stroke-width="1" rx="6"/>
+<text x="655" y="298" font-size="10" font-weight="bold" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Production</text>
+<text x="655" y="322" font-size="14" font-weight="bold" fill="#DC2626" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">FALSE</text>
+<rect x="790" y="275" width="220" height="65" fill="#FFFFFF" stroke="#059669" stroke-width="1" rx="6"/>
+<text x="900" y="298" font-size="10" font-weight="bold" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Frozen Baseline</text>
+<text x="900" y="322" font-size="14" font-weight="bold" fill="#059669" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">INTACT</text>
+<text x="540" y="405" font-size="9" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Figure 2. DICE overall architecture from document evidence to governed capability.</text>
+</svg>

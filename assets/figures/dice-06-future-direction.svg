@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560">
+<rect width="960" height="560" fill="#FFFFFF"/>
+<defs>
+  <marker id="ah" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/></marker>
+  <marker id="ah-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#059669"/></marker>
+  <marker id="ah-dark" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#1E3A8A"/></marker>
+  <marker id="ah-amber" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#F59E0B"/></marker>
+  <marker id="ah-gray" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#94A3B8"/></marker>
+</defs>
+<text x="480" y="35" font-size="18" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Future Direction</text>
+<text x="480" y="56" font-size="11" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">From human-validated evidence toward governed capability expansion</text>
+
+<!-- Row 1: 4 boxes centered on canvas. Box=130px, gap=20px, total=4*130+3*20=580px. Start=(960-580)/2=190 -->
+<!-- Box 1: Human Validation -->
+<rect x="190" y="90" width="130" height="85" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" rx="6"/>
+<text x="255" y="115" font-size="11" font-weight="bold" fill="#2563EB" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Human</text>
+<text x="255" y="130" font-size="11" font-weight="bold" fill="#2563EB" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Validation</text>
+<text x="255" y="150" font-size="8" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Minimal semantic</text>
+<text x="255" y="162" font-size="8" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">validation at boundary</text>
+<line x1="325" y1="132" x2="343" y2="132" stroke="#2563EB" stroke-width="2" marker-end="url(#ah)"/>
+
+<!-- Box 2: Validated Evidence -->
+<rect x="345" y="90" width="130" height="85" fill="#D1FAE5" stroke="#059669" stroke-width="2" rx="6"/>
+<text x="410" y="115" font-size="11" font-weight="bold" fill="#059669" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Validated</text>
+<text x="410" y="130" font-size="11" font-weight="bold" fill="#059669" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Evidence</text>
+<text x="410" y="150" font-size="8" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Human-confirmed</text>
+<text x="410" y="162" font-size="8" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">evidence packaged</text>
+<line x1="480" y1="132" x2="498" y2="132" stroke="#059669" stroke-width="2" marker-end="url(#ah-green)"/>
+
+<!-- Box 3: Capability -->
+<rect x="500" y="90" width="130" height="85" fill="#E0E7FF" stroke="#1E3A8A" stroke-width="2" rx="6"/>
+<text x="565" y="118" font-size="11" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Capability</text>
+<text x="565" y="140" font-size="8" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Declarative, reusable</text>
+<text x="565" y="152" font-size="8" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">artifact (22 frozen)</text>
+<line x1="635" y1="132" x2="653" y2="132" stroke="#1E3A8A" stroke-width="2" marker-end="url(#ah-dark)"/>
+
+<!-- Box 4: Machine Use -->
+<rect x="655" y="90" width="130" height="85" fill="#F8FAFC" stroke="#475569" stroke-width="1" rx="6"/>
+<text x="720" y="115" font-size="11" font-weight="bold" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Machine</text>
+<text x="720" y="130" font-size="11" font-weight="bold" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Use</text>
+<text x="720" y="150" font-size="8" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Apply capability</text>
+<text x="720" y="162" font-size="8" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">when pattern matches</text>
+
+<!-- Down arrow from Machine Use to New Boundary -->
+<line x1="720" y1="178" x2="720" y2="218" stroke="#475569" stroke-width="2" marker-end="url(#ah)"/>
+
+<!-- Row 2: 3 boxes, right-to-left. Box 5 at x=655, Box 6 at x=500, Box 7 at x=345 -->
+<!-- Box 5: New Boundary / Unknown -->
+<rect x="655" y="220" width="130" height="85" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" rx="6"/>
+<text x="720" y="245" font-size="11" font-weight="bold" fill="#F59E0B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">New Boundary</text>
+<text x="720" y="260" font-size="11" font-weight="bold" fill="#F59E0B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">/ Unknown</text>
+<text x="720" y="280" font-size="8" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">System encounters</text>
+<text x="720" y="292" font-size="8" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">unresolvable case</text>
+<!-- Left arrow from New Boundary to Human Review -->
+<line x1="650" y1="262" x2="632" y2="262" stroke="#F59E0B" stroke-width="2" marker-end="url(#ah-amber)"/>
+
+<!-- Box 6: Human Review -->
+<rect x="500" y="220" width="130" height="85" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" rx="6"/>
+<text x="565" y="245" font-size="11" font-weight="bold" fill="#2563EB" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Human</text>
+<text x="565" y="260" font-size="11" font-weight="bold" fill="#2563EB" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Review</text>
+<text x="565" y="280" font-size="8" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Escalate to human</text>
+<text x="565" y="292" font-size="8" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">at new boundary</text>
+<!-- Left arrow from Human Review to Capability Expansion -->
+<line x1="495" y1="262" x2="477" y2="262" stroke="#2563EB" stroke-width="2" marker-end="url(#ah)"/>
+
+<!-- Box 7: Capability Expansion -->
+<rect x="345" y="220" width="130" height="85" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1" rx="6"/>
+<text x="410" y="245" font-size="11" font-weight="bold" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Capability</text>
+<text x="410" y="260" font-size="11" font-weight="bold" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Expansion</text>
+<text x="410" y="280" font-size="8" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">New capability</text>
+<text x="410" y="292" font-size="8" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">registered</text>
+
+<!-- Loop-back arrow: from Capability Expansion left side → down → left → up → right to Human Validation left side -->
+<!-- Capability Expansion left edge at x=345, y=262. Go left to x=140, up to y=132, right to x=185 -->
+<path d="M 345 262 L 140 262 L 140 132 L 185 132" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="5" marker-end="url(#ah-gray)"/>
+<text x="125" y="200" font-size="9" font-style="italic" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" transform="rotate(-90 125 200)">cycle repeats</text>
+
+<!-- Center label -->
+<text x="480" y="340" font-size="14" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Governed Capability Expansion</text>
+<text x="480" y="358" font-size="10" font-style="italic" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Capabilities grow through human-validated evidence, not autonomous learning.</text>
+
+<!-- Status box -->
+<rect x="80" y="380" width="800" height="80" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" rx="6"/>
+<text x="100" y="405" font-size="11" font-weight="bold" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Current Status:</text>
+<text x="210" y="405" font-size="10" font-weight="bold" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Capability Expansion = FUTURE_RESEARCH</text>
+<text x="520" y="405" font-size="10" font-weight="bold" fill="#DC2626" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Runtime Authority = ZERO</text>
+<text x="100" y="425" font-size="10" font-weight="normal" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">No automatic capability learning implemented.</text>
+<text x="100" y="442" font-size="10" font-weight="normal" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Capabilities are human-declared, not machine-learned.</text>
+
+<text x="480" y="540" font-size="9" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Figure 6. Future research direction: governed capability expansion.</text>
+</svg>
