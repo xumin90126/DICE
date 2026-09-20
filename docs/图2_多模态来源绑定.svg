@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520">
+<rect width="1200" height="520" fill="#FFFFFF"/>
+<defs>
+  <marker id="ah" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/></marker>
+  <marker id="ah-v" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/></marker>
+  <marker id="ah-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#059669"/></marker>
+  <marker id="ah-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#DC2626"/></marker>
+  <marker id="ah-amber" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#F59E0B"/></marker>
+  <marker id="ah-gray" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#94A3B8"/></marker>
+</defs>
+<text x="600" y="35" font-size="18" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">图2  多模态来源绑定</text>
+<text x="600" y="58" font-size="12" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">文档中文本、版面位置与视觉特征的联合建模</text>
+<rect x="50" y="90" width="300" height="350" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" rx="6"/>
+<text x="200" y="115" font-size="14" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">原始文档</text>
+<rect x="70" y="135" width="120" height="50" fill="#DBEAFE" stroke="#2563EB" stroke-width="1" rx="6"/>
+<text x="130" y="165" font-size="11" font-weight="bold" fill="#2563EB" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">文本块</text>
+<rect x="210" y="135" width="120" height="50" fill="#E0F2FE" stroke="#0EA5E9" stroke-width="1" rx="6"/>
+<text x="270" y="165" font-size="11" font-weight="bold" fill="#0EA5E9" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">表格区域</text>
+<rect x="70" y="200" width="120" height="50" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1" rx="6"/>
+<text x="130" y="230" font-size="11" font-weight="bold" fill="#F59E0B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">图像/图形</text>
+<rect x="210" y="200" width="120" height="50" fill="#EDE9FE" stroke="#6366F1" stroke-width="1" rx="6"/>
+<text x="270" y="230" font-size="11" font-weight="bold" fill="#6366F1" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">标题/页眉</text>
+<rect x="70" y="265" width="260" height="50" fill="#FEF2F2" stroke="#DC2626" stroke-width="1" rx="6"/>
+<text x="200" y="295" font-size="11" font-weight="bold" fill="#DC2626" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">多栏布局 / 嵌套结构</text>
+<text x="200" y="340" font-size="10" font-weight="italic" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">真实企业文档混合多种模态</text>
+<text x="200" y="358" font-size="10" font-weight="italic" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">信息呈现依赖版式与空间关系</text>
+<text x="200" y="376" font-size="10" font-weight="italic" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">阅读顺序 ≠ 文本顺序</text>
+<text x="200" y="394" font-size="10" font-weight="italic" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">跨段落语义关联普遍存在</text>
+<text x="200" y="412" font-size="10" font-weight="italic" fill="#DC2626" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">来源信息（章节/条件/约束）易丢失</text>
+<line x1="355" y1="160" x2="420" y2="160" stroke="#94A3B8" stroke-width="1" marker-end="url(#ah)"/>
+<line x1="355" y1="225" x2="420" y2="225" stroke="#94A3B8" stroke-width="1" marker-end="url(#ah)"/>
+<rect x="420" y="90" width="360" height="350" fill="#FFFFFF" stroke="#2563EB" stroke-width="2" rx="6"/>
+<text x="600" y="115" font-size="14" font-weight="bold" fill="#1E3A8A" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">多模态来源绑定</text>
+<line x1="430" y1="125" x2="770" y2="125" stroke="#2563EB" stroke-width="1"/>
+<rect x="440" y="140" width="320" height="55" fill="#DBEAFE" stroke="#2563EB" stroke-width="1" rx="6"/>
+<rect x="440" y="140" width="80" height="55" fill="#2563EB" stroke="#2563EB" stroke-width="0" rx="6"/>
+<text x="480" y="173" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">文本特征</text>
+<text x="530" y="173" font-size="10" font-weight="normal" fill="#475569" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">语义内容 / 词序列 / 实体</text>
+<rect x="440" y="205" width="320" height="55" fill="#E0F2FE" stroke="#0EA5E9" stroke-width="1" rx="6"/>
+<rect x="440" y="205" width="80" height="55" fill="#0EA5E9" stroke="#0EA5E9" stroke-width="0" rx="6"/>
+<text x="480" y="238" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">版面特征</text>
+<text x="530" y="238" font-size="10" font-weight="normal" fill="#475569" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">坐标位置 / 空间关系 / 阅读顺序</text>
+<rect x="440" y="270" width="320" height="55" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1" rx="6"/>
+<rect x="440" y="270" width="80" height="55" fill="#F59E0B" stroke="#F59E0B" stroke-width="0" rx="6"/>
+<text x="480" y="303" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">视觉特征</text>
+<text x="530" y="303" font-size="10" font-weight="normal" fill="#475569" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">字体 / 颜色 / 图像区域 / 图表</text>
+<rect x="440" y="335" width="320" height="55" fill="#EDE9FE" stroke="#6366F1" stroke-width="1" rx="6"/>
+<rect x="440" y="335" width="80" height="55" fill="#6366F1" stroke="#6366F1" stroke-width="0" rx="6"/>
+<text x="480" y="368" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">结构特征</text>
+<text x="530" y="368" font-size="10" font-weight="normal" fill="#475569" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">层级关系 / 表格结构 / 标题层级</text>
+<rect x="440" y="405" width="320" height="30" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" rx="6"/>
+<text x="600" y="425" font-size="10" font-weight="bold" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">统一联合建模 → 结构化证据候选</text>
+<line x1="785" y1="250" x2="850" y2="250" stroke="#2563EB" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="850" y="90" width="300" height="350" fill="#D1FAE5" stroke="#059669" stroke-width="2" rx="6"/>
+<text x="1000" y="115" font-size="14" font-weight="bold" fill="#059669" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">结构化证据候选</text>
+<rect x="870" y="140" width="260" height="62" fill="#FFFFFF" stroke="#059669" stroke-width="1" rx="6"/>
+<text x="1000" y="162" font-size="11" font-weight="bold" fill="#059669" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">来源可追溯</text>
+<text x="1000" y="180" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">每个事实标注出处</text>
+<text x="1000" y="193" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">（章节 / 页码 / 坐标）</text>
+<rect x="870" y="212" width="260" height="62" fill="#FFFFFF" stroke="#059669" stroke-width="1" rx="6"/>
+<text x="1000" y="234" font-size="11" font-weight="bold" fill="#059669" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">上下文保留</text>
+<text x="1000" y="252" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">保留条件与约束</text>
+<text x="1000" y="265" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">（何种条件下成立）</text>
+<rect x="870" y="284" width="260" height="62" fill="#FFFFFF" stroke="#059669" stroke-width="1" rx="6"/>
+<text x="1000" y="306" font-size="11" font-weight="bold" fill="#059669" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">空间关系</text>
+<text x="1000" y="324" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">表格行列关系</text>
+<text x="1000" y="337" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">图文邻接关系</text>
+<rect x="870" y="356" width="260" height="62" fill="#FFFFFF" stroke="#059669" stroke-width="1" rx="6"/>
+<text x="1000" y="378" font-size="11" font-weight="bold" fill="#059669" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">一致性可查</text>
+<text x="1000" y="396" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">可检测跨段落</text>
+<text x="1000" y="409" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">冲突与矛盾</text>
+<text x="600" y="500" font-size="10" font-weight="normal" fill="#94A3B8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif">图2  多模态来源绑定：文本、版面位置与视觉特征在统一框架下联合建模</text>
+</svg>
